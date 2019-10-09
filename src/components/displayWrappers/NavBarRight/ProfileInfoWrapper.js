@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import ProfileInfoNavBar from '../primitive/ProfileInfoNavBar'
+import ProfileInfoNavBar from '../../primitive/ProfileInfoNavBar'
 
 const Wrapper = (props) => {
     return (

@@ -1,3 +1,5 @@
+//This is used to display either the profile name or email in the top right of the nav bar (nav bar right)
+
 import React from 'react'
 import styled from 'styled-components'
 
