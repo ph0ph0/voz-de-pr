@@ -1,39 +1,95 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots DisplayWrappers|NavBar/NavBarCentre C 1`] = `
+<div
+  className="sc-bwzfXH kuCEjS"
+  placeholder="Search Causes"
+>
+  <input
+    className="sc-bdVaJa hRHmjZ sc-bwzfXH kuCEjS"
+    placeholder="Search Causes"
+    placeholer="Search Causes"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|NavBar/NavBarCentre C&P 1`] = `
+<div
+  className="sc-bwzfXH kuCEjS"
+  placeholder="Search Causes and Posts"
+>
+  <input
+    className="sc-bdVaJa hRHmjZ sc-bwzfXH kuCEjS"
+    placeholder="Search Causes and Posts"
+    placeholer="Search Causes and Posts"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|NavBar/NavBarCentre P 1`] = `
+<div
+  className="sc-bwzfXH kuCEjS"
+  placeholder="Search Posts"
+>
+  <input
+    className="sc-bdVaJa hRHmjZ sc-bwzfXH kuCEjS"
+    placeholder="Search Posts"
+    placeholer="Search Posts"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|NavBar/NavBarCentre Standard 1`] = `
+<div
+  className="sc-bwzfXH kuCEjS"
+  placeholder="Search"
+>
+  <input
+    className="sc-bdVaJa hRHmjZ sc-bwzfXH kuCEjS"
+    placeholder="Search"
+    placeholer="Search"
+    type="text"
+  />
+</div>
+`;
+
 exports[`Storyshots DisplayWrappers|NavBar/NavBarRight Standard 1`] = `
 <div
-  className="sc-gzVnrw gulBGX"
+  className="sc-dnqmqq jCWLOE"
 >
   <div
-    className="sc-bwzfXH eLusHn"
+    className="sc-bxivhb dyYEUU"
   >
     <button
-      className="sc-bdVaJa jZSIRE"
+      className="sc-htpNat kpRQrk"
       secondary={true}
     >
       SIGN UP
     </button>
     <button
-      className="sc-bdVaJa cPUMWO"
+      className="sc-htpNat dvtAjB"
     >
       LOG IN
     </button>
   </div>
   <div
-    className="sc-bZQynM cFVPuF"
+    className="sc-htoDjs czCAWw"
   >
     <div
-      className="sc-EHOje lgDbyj"
+      className="sc-gzVnrw gOvDYE"
     >
       <img
-        className="sc-ifAKCX drujAA"
+        className="sc-bZQynM hhXPhy"
       />
     </div>
     <div
-      className="sc-bxivhb gZoNOC"
+      className="sc-EHOje iUlrzR"
     >
       <div
-        className="sc-htpNat kxjYAS"
+        className="sc-ifAKCX iVLAQB"
         fontSize="16px"
         height="50%"
         paddingTop="15px"
@@ -42,7 +98,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarRight Standard 1`] = `
         James Wheeler
       </div>
       <div
-        className="sc-htpNat cqUcZW"
+        className="sc-ifAKCX jhGUwf"
         fontSize="12px"
         height="50%"
         paddingBottom="15px"
@@ -57,20 +113,20 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarRight Standard 1`] = `
 
 exports[`Storyshots DisplayWrappers|NavBar/ProfileImageWrapper Standard 1`] = `
 <div
-  className="sc-EHOje lgDbyj"
+  className="sc-gzVnrw gOvDYE"
 >
   <img
-    className="sc-ifAKCX drujAA"
+    className="sc-bZQynM hhXPhy"
   />
 </div>
 `;
 
 exports[`Storyshots DisplayWrappers|NavBar/ProfileInfoWrapper Standard 1`] = `
 <div
-  className="sc-bxivhb gZoNOC"
+  className="sc-EHOje iUlrzR"
 >
   <div
-    className="sc-htpNat kxjYAS"
+    className="sc-ifAKCX iVLAQB"
     fontSize="16px"
     height="50%"
     paddingTop="15px"
@@ -79,7 +135,7 @@ exports[`Storyshots DisplayWrappers|NavBar/ProfileInfoWrapper Standard 1`] = `
     James Wheeler
   </div>
   <div
-    className="sc-htpNat cqUcZW"
+    className="sc-ifAKCX jhGUwf"
     fontSize="12px"
     height="50%"
     paddingBottom="15px"
@@ -92,20 +148,20 @@ exports[`Storyshots DisplayWrappers|NavBar/ProfileInfoWrapper Standard 1`] = `
 
 exports[`Storyshots DisplayWrappers|NavBar/ProfileWrapper Standard 1`] = `
 <div
-  className="sc-bZQynM cFVPuF"
+  className="sc-htoDjs czCAWw"
 >
   <div
-    className="sc-EHOje lgDbyj"
+    className="sc-gzVnrw gOvDYE"
   >
     <img
-      className="sc-ifAKCX drujAA"
+      className="sc-bZQynM hhXPhy"
     />
   </div>
   <div
-    className="sc-bxivhb gZoNOC"
+    className="sc-EHOje iUlrzR"
   >
     <div
-      className="sc-htpNat kxjYAS"
+      className="sc-ifAKCX iVLAQB"
       fontSize="16px"
       height="50%"
       paddingTop="15px"
@@ -114,7 +170,7 @@ exports[`Storyshots DisplayWrappers|NavBar/ProfileWrapper Standard 1`] = `
       James Wheeler
     </div>
     <div
-      className="sc-htpNat cqUcZW"
+      className="sc-ifAKCX jhGUwf"
       fontSize="12px"
       height="50%"
       paddingBottom="15px"
@@ -128,16 +184,16 @@ exports[`Storyshots DisplayWrappers|NavBar/ProfileWrapper Standard 1`] = `
 
 exports[`Storyshots DisplayWrappers|NavBar/SignUpInButtonWrapper Standard 1`] = `
 <div
-  className="sc-bwzfXH eLusHn"
+  className="sc-bxivhb dyYEUU"
 >
   <button
-    className="sc-bdVaJa jZSIRE"
+    className="sc-htpNat kpRQrk"
     secondary={true}
   >
     SIGN UP
   </button>
   <button
-    className="sc-bdVaJa cPUMWO"
+    className="sc-htpNat dvtAjB"
   >
     LOG IN
   </button>
@@ -146,7 +202,7 @@ exports[`Storyshots DisplayWrappers|NavBar/SignUpInButtonWrapper Standard 1`] = 
 
 exports[`Storyshots Primitive|/Buttons/ProfileInfoNavBar Login 1`] = `
 <button
-  className="sc-bdVaJa cPUMWO"
+  className="sc-htpNat dvtAjB"
   onClick={[Function]}
 >
   LOG IN
@@ -155,7 +211,7 @@ exports[`Storyshots Primitive|/Buttons/ProfileInfoNavBar Login 1`] = `
 
 exports[`Storyshots Primitive|/Buttons/ProfileInfoNavBar SignUp 1`] = `
 <button
-  className="sc-bdVaJa jZSIRE"
+  className="sc-htpNat kpRQrk"
   onClick={[Function]}
   secondary={true}
 >
@@ -165,14 +221,14 @@ exports[`Storyshots Primitive|/Buttons/ProfileInfoNavBar SignUp 1`] = `
 
 exports[`Storyshots Primitive|/Buttons/ProfileInfoNavBar button 1`] = `
 <button
-  className="sc-bdVaJa cPUMWO"
+  className="sc-htpNat dvtAjB"
   onClick={[Function]}
 />
 `;
 
 exports[`Storyshots Primitive|/Text/ProfileInfoNavBar ProfileEmail 1`] = `
 <div
-  className="sc-htpNat cqUcZW"
+  className="sc-ifAKCX jhGUwf"
   fontSize="12px"
   height="50%"
   paddingBottom="15px"
@@ -184,7 +240,7 @@ exports[`Storyshots Primitive|/Text/ProfileInfoNavBar ProfileEmail 1`] = `
 
 exports[`Storyshots Primitive|/Text/ProfileInfoNavBar ProfileName 1`] = `
 <div
-  className="sc-htpNat kxjYAS"
+  className="sc-ifAKCX iVLAQB"
   fontSize="16px"
   height="50%"
   paddingTop="15px"
@@ -196,7 +252,7 @@ exports[`Storyshots Primitive|/Text/ProfileInfoNavBar ProfileName 1`] = `
 
 exports[`Storyshots Primitive|/Text/ProfileInfoNavBar Standard 1`] = `
 <div
-  className="sc-htpNat hTvUGF"
+  className="sc-ifAKCX fvjIve"
 >
   Standard
 </div>
@@ -204,6 +260,42 @@ exports[`Storyshots Primitive|/Text/ProfileInfoNavBar Standard 1`] = `
 
 exports[`Storyshots Primitive|Images/ProfileImage Standard 1`] = `
 <img
-  className="sc-ifAKCX drujAA"
+  className="sc-bZQynM hhXPhy"
+/>
+`;
+
+exports[`Storyshots Primitive|Inputs/SearchBar C 1`] = `
+<input
+  className="sc-bdVaJa hRHmjZ"
+  placeholder="Search Causes"
+  placeholer="Search Causes"
+  type="text"
+/>
+`;
+
+exports[`Storyshots Primitive|Inputs/SearchBar C&P 1`] = `
+<input
+  className="sc-bdVaJa hRHmjZ"
+  placeholder="Search Causes and Posts"
+  placeholer="Search Causes and Posts"
+  type="text"
+/>
+`;
+
+exports[`Storyshots Primitive|Inputs/SearchBar P 1`] = `
+<input
+  className="sc-bdVaJa hRHmjZ"
+  placeholder="Search Posts"
+  placeholer="Search Posts"
+  type="text"
+/>
+`;
+
+exports[`Storyshots Primitive|Inputs/SearchBar Standard 1`] = `
+<input
+  className="sc-bdVaJa hRHmjZ"
+  placeholder="Search"
+  placeholer="Search"
+  type="text"
 />
 `;

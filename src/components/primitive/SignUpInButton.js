@@ -1,3 +1,5 @@
+//The signup or log in button displayed in the top right of the nav bar.
+
 import React from 'react'
 import styled from 'styled-components'
 
