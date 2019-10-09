@@ -299,3 +299,41 @@ exports[`Storyshots Primitive|Inputs/SearchBar Standard 1`] = `
   type="text"
 />
 `;
+
+exports[`Storyshots Primitive|Links/LinkNavBar Causes 1`] = `
+<a
+  className="sc-iwsKbI ficOqb"
+>
+  CAUSES
+</a>
+`;
+
+exports[`Storyshots Primitive|Links/LinkNavBar Home 1`] = `
+<a
+  className="sc-iwsKbI ficOqb"
+>
+  HOME
+</a>
+`;
+
+exports[`Storyshots Primitive|Links/LinkNavBar Posts 1`] = `
+<a
+  className="sc-iwsKbI ficOqb"
+>
+  POSTS
+</a>
+`;
+
+exports[`Storyshots Primitive|Links/LinkNavBar Profile 1`] = `
+<a
+  className="sc-iwsKbI ficOqb"
+>
+  PROFILE
+</a>
+`;
+
+exports[`Storyshots Primitive|Links/LinkNavBar Standard 1`] = `
+<a
+  className="sc-iwsKbI ficOqb"
+/>
+`;
