@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots DisplayWrappers|NavBar/ProfileInfoWrapper Standard 1`] = `
+<div
+  className="sc-bwzfXH cfRdLh"
+>
+  <div
+    className="sc-bdVaJa yTsod"
+    fontSize="16px"
+    height="50%"
+    paddingTop="15px"
+    width="100%"
+  >
+    James Wheeler
+  </div>
+  <div
+    className="sc-bdVaJa gbNnUr"
+    fontSize="12px"
+    height="50%"
+    paddingBottom="15px"
+    width="100%"
+  >
+    larkin_tr***@yahoo.com
+  </div>
+</div>
+`;
+
+exports[`Storyshots Primitive|/Buttons/ProfileInfoNavBar Login 1`] = `
+<button
+  className="sc-bxivhb diJEVd"
+  onClick={[Function]}
+>
+  LOG IN
+</button>
+`;
+
+exports[`Storyshots Primitive|/Buttons/ProfileInfoNavBar SignUp 1`] = `
+<button
+  className="sc-bxivhb edlfON"
+  onClick={[Function]}
+  secondary={true}
+>
+  SIGN UP
+</button>
+`;
+
+exports[`Storyshots Primitive|/Buttons/ProfileInfoNavBar button 1`] = `
+<button
+  className="sc-bxivhb diJEVd"
+  onClick={[Function]}
+/>
+`;
+
+exports[`Storyshots Primitive|/Text/ProfileInfoNavBar ProfileEmail 1`] = `
+<div
+  className="sc-bdVaJa gbNnUr"
+  fontSize="12px"
+  height="50%"
+  paddingBottom="15px"
+  width="100%"
+>
+  larkin_tr***@yahoo.com
+</div>
+`;
+
+exports[`Storyshots Primitive|/Text/ProfileInfoNavBar ProfileName 1`] = `
+<div
+  className="sc-bdVaJa yTsod"
+  fontSize="16px"
+  height="50%"
+  paddingTop="15px"
+  width="100%"
+>
+  James Wheeler
+</div>
+`;
+
+exports[`Storyshots Primitive|/Text/ProfileInfoNavBar Standard 1`] = `
+<div
+  className="sc-bdVaJa kngRPk"
+>
+  Standard
+</div>
+`;
+
+exports[`Storyshots Primitive|Images/ProfileImage Standard 1`] = `
+<img
+  className="sc-htpNat kDVyhn"
+/>
+`;
