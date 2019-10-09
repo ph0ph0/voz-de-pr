@@ -3,7 +3,7 @@ import ProfileInfoNavBar from './ProfileInfoNavBar.js'
 
 export default {
     component: ProfileInfoNavBar,
-    title: 'ProfileInfoNavBar'
+    title: 'Primitive|Text/ProfileInfoNavBar'
 }
 
 export const ProfileInfoStandard = () => <ProfileInfoNavBar>Standard</ProfileInfoNavBar>

@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions'
 
 export default {
     component: SignUpInButton,
-    title: 'SignUpInButton'
+    title: 'Primitive|Buttons/SignUpInButton'
 }
 
 export const button = () => <SignUpInButton onClick={action('clicked')}></SignUpInButton>
