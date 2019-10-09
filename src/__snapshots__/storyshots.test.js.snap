@@ -1,5 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots DisplayWrappers|NavBar/LinkWrapper LinkNavBar 1`] = `
+<div
+  className="sc-bxivhb kPrwFe"
+>
+  <a
+    className="sc-htpNat htswVG sc-bxivhb kPrwFe"
+  >
+    HOME
+  </a>
+  <a
+    className="sc-htpNat htswVG sc-bxivhb kPrwFe"
+  >
+    CAUSES
+  </a>
+  <a
+    className="sc-htpNat htswVG sc-bxivhb kPrwFe"
+  >
+    POSTS
+  </a>
+  <a
+    className="sc-htpNat htswVG sc-bxivhb kPrwFe"
+  >
+    PROFILE
+  </a>
+</div>
+`;
+
 exports[`Storyshots DisplayWrappers|NavBar/NavBarCentre C 1`] = `
 <div
   className="sc-bwzfXH kuCEjS"
