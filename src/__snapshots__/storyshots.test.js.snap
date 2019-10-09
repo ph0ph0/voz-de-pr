@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots DisplayWrappers Logo 1`] = `<img />`;
+
+exports[`Storyshots DisplayWrappers|LogoNavBar Logo 1`] = `<img />`;
+
+exports[`Storyshots DisplayWrappers|LogoNavBar/Logo Standard 1`] = `<img />`;
+
 exports[`Storyshots DisplayWrappers|NavBar/LinkWrapper LinkNavBar 1`] = `
 <div
   className="sc-bxivhb kPrwFe"
@@ -285,6 +291,8 @@ exports[`Storyshots Primitive|/Text/ProfileInfoNavBar Standard 1`] = `
 </div>
 `;
 
+exports[`Storyshots Primitive|Images/Logo Standard 1`] = `<img />`;
+
 exports[`Storyshots Primitive|Images/ProfileImage Standard 1`] = `
 <img
   className="sc-bZQynM hhXPhy"
@@ -364,3 +372,5 @@ exports[`Storyshots Primitive|Links/LinkNavBar Standard 1`] = `
   className="sc-iwsKbI ficOqb"
 />
 `;
+
+exports[`Storyshots Primitive|Logo Standard 1`] = `<img />`;
