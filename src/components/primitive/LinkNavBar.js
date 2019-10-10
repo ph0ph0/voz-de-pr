@@ -16,6 +16,7 @@ const LinkNavBar = styled(Link)`
     align-items: center;
     margin-left: 20px;
     font-size: 16px;
+    font-family: Avenir;
     color: #131415;
     border-bottom: ${props => (props.selected ? "1px solid #1B4EA0" : 0)};
 

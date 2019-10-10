@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import LogoNavBar from '../../../../primitive/LogoNavBar'
+import {ReactComponent as Logo } from '../../../../../assets/NavBar/Logo.svg'
 
 const Wrapper = (props) => {
     return (
         <div {...props}>
-            <LogoNavBar />
+            <Logo />
         </div>
     )
 }

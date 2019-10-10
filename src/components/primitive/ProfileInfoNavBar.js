@@ -14,6 +14,7 @@ const ProfileInfoNavBar = styled(Text)`
     width: ${(props) => props.width ? props.width : "100%"};
     height: ${(props) => props.height ? props.height : "50%"};
     font-size: ${(props) => props.fontSize ? props.fontSize : "16px"};
+    font-family: Avenir;
     padding-top: ${(props) => props.paddingTop ? props.paddingTop: "0px"};
     padding-bottom: ${(props) => props.paddingBottom ? props.paddingBottom : 0 };
     padding-left: "100px"

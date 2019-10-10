@@ -1,9 +1,11 @@
 import { configure } from '@storybook/react';
 import requireContext from 'require-context.macro';
 
-import '@storybook/addon-console'; 
+import '../src/theme/globalStyle'
 
 // For Console add on to storybook
+import '@storybook/addon-console'; 
+
 import { addDecorator } from '@storybook/react';
 import { withConsole } from '@storybook/addon-console';
 
