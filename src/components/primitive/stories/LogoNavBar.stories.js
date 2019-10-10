@@ -4,4 +4,6 @@ import { storiesOf } from '@storybook/react'
 import LogoNavBar from '../LogoNavBar'
 
 storiesOf("Primitive|Images/Logo", module)
-    .add("Standard", () => <LogoNavBar />)
+    .add("Standard", () => <LogoNavBar />, {
+        notes: "VdPR logo, wrapped by the LogoWrapper"
+    })

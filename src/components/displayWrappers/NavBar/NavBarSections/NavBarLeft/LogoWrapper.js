@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import LogoNavBar from '../../primitive/LogoNavBar'
+import LogoNavBar from '../../../../primitive/LogoNavBar'
 
 const Wrapper = (props) => {
     return (

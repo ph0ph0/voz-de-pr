@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import ProfileImage from '../../primitive/ProfileImage'
+import ProfileImage from '../../../../primitive/ProfileImage'
 
 const Wrapper = (props) => {
     return (

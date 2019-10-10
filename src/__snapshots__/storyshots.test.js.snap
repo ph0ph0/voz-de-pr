@@ -33,6 +33,33 @@ exports[`Storyshots DisplayWrappers|NavBar/LinkWrapper LinkNavBar 1`] = `
 </div>
 `;
 
+exports[`Storyshots DisplayWrappers|NavBar/LinkWrapper Standard 1`] = `
+<div
+  className="sc-bxivhb dGSKYG"
+>
+  <a
+    className="sc-htpNat htswVG sc-bxivhb dGSKYG"
+  >
+    HOME
+  </a>
+  <a
+    className="sc-htpNat htswVG sc-bxivhb dGSKYG"
+  >
+    CAUSES
+  </a>
+  <a
+    className="sc-htpNat htswVG sc-bxivhb dGSKYG"
+  >
+    POSTS
+  </a>
+  <a
+    className="sc-htpNat htswVG sc-bxivhb dGSKYG"
+  >
+    PROFILE
+  </a>
+</div>
+`;
+
 exports[`Storyshots DisplayWrappers|NavBar/LogoWrapper Standard 1`] = `
 <img
   className="sc-ifAKCX eytuCr"
@@ -227,6 +254,82 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarLeft NavBarLeft 1`] = `
 </div>
 `;
 
+exports[`Storyshots DisplayWrappers|NavBar/NavBarLeft Standard 1`] = `
+<div
+  className="sc-bZQynM fhsJZP"
+>
+  <div
+    className="sc-EHOje keNvCO sc-bZQynM fhsJZP"
+  >
+    <img
+      className="sc-ifAKCX eytuCr"
+    />
+  </div>
+  <div
+    className="sc-bxivhb dGSKYG sc-bZQynM fhsJZP"
+  >
+    <a
+      className="sc-htpNat htswVG sc-bxivhb dGSKYG sc-bZQynM fhsJZP"
+    >
+      HOME
+    </a>
+    <a
+      className="sc-htpNat htswVG sc-bxivhb dGSKYG sc-bZQynM fhsJZP"
+    >
+      CAUSES
+    </a>
+    <a
+      className="sc-htpNat htswVG sc-bxivhb dGSKYG sc-bZQynM fhsJZP"
+    >
+      POSTS
+    </a>
+    <a
+      className="sc-htpNat htswVG sc-bxivhb dGSKYG sc-bZQynM fhsJZP"
+    >
+      PROFILE
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|NavBar/NavBarLeft standard 1`] = `
+<div
+  className="sc-bZQynM fhsJZP"
+>
+  <div
+    className="sc-EHOje keNvCO sc-bZQynM fhsJZP"
+  >
+    <img
+      className="sc-ifAKCX eytuCr"
+    />
+  </div>
+  <div
+    className="sc-bxivhb dGSKYG sc-bZQynM fhsJZP"
+  >
+    <a
+      className="sc-htpNat htswVG sc-bxivhb dGSKYG sc-bZQynM fhsJZP"
+    >
+      HOME
+    </a>
+    <a
+      className="sc-htpNat htswVG sc-bxivhb dGSKYG sc-bZQynM fhsJZP"
+    >
+      CAUSES
+    </a>
+    <a
+      className="sc-htpNat htswVG sc-bxivhb dGSKYG sc-bZQynM fhsJZP"
+    >
+      POSTS
+    </a>
+    <a
+      className="sc-htpNat htswVG sc-bxivhb dGSKYG sc-bZQynM fhsJZP"
+    >
+      PROFILE
+    </a>
+  </div>
+</div>
+`;
+
 exports[`Storyshots DisplayWrappers|NavBar/NavBarRight Standard 1`] = `
 <div
   className="sc-dnqmqq jCWLOE"
@@ -390,10 +493,22 @@ exports[`Storyshots Primitive|/Buttons/ProfileInfoNavBar SignUp 1`] = `
 </button>
 `;
 
+exports[`Storyshots Primitive|/Buttons/ProfileInfoNavBar Standard 1`] = `
+<button
+  className="sc-gzVnrw dIRfIe"
+/>
+`;
+
 exports[`Storyshots Primitive|/Buttons/ProfileInfoNavBar button 1`] = `
 <button
   className="sc-htpNat dvtAjB"
   onClick={[Function]}
+/>
+`;
+
+exports[`Storyshots Primitive|/Buttons/ProfileInfoNavBar standard 1`] = `
+<button
+  className="sc-gzVnrw dIRfIe"
 />
 `;
 

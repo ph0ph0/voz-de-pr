@@ -3,7 +3,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Text = (props) => {
+const Text = ({fontSize, width, height, paddingTop, paddingBottom, ...props}) => {
     return (
         <div {...props} />
     )
@@ -14,8 +14,7 @@ const ProfileInfoNavBar = styled(Text)`
     width: ${(props) => props.width ? props.width : "100%"};
     height: ${(props) => props.height ? props.height : "50%"};
     padding-top: ${(props) => props.paddingTop ? props.paddingTop: "0px"};
-    padding-bottom: ${(props) => props.paddingBottom ? props.paddingBottom : "0px"};
-    padding-left: "50px";
+    padding-bottom: ${(props) => props.paddingBottom ? props.paddingBottom : 0 };
 `
 
 export default ProfileInfoNavBar

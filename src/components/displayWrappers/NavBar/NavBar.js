@@ -1,15 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import NavBarLeft from './NavBarLeft/NavBarLeft'
-import NavBarCentre from './NavBarCentre/NavBarCentre'
-import NavBarRight from './NavBarRight/NavBarRight'
+import NavBarLeft from './NavBarSections/NavBarLeft/NavBarLeft'
+import NavBarCentre from './NavBarSections/NavBarCentre/NavBarCentre'
+import NavBarRight from './NavBarSections/NavBarRight/NavBarRight'
 
 const Wrapper = (props) => {
+    console.log(`Loading NavBar`)
     return (
         <div {...props}>
             <NavBarLeft />
-            <NavBarCentre placeholder = {"Fuckface"}/>
+            <NavBarCentre />
             <NavBarRight />
         </div>
     )

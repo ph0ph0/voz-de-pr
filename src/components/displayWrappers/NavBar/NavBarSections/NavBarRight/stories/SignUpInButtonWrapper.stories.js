@@ -8,4 +8,6 @@ export const actions = {
 }
 
 storiesOf("DisplayWrappers|NavBar/SignUpInButtonWrapper", module)
-    .add("Standard", () => <SignUpInButtonWrapper />)
+    .add("Standard", () => <SignUpInButtonWrapper />, {
+        notes: "This wraps around the SignUpInButtons for SignUp and LogIn"
+    })
