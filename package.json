@@ -37,6 +37,7 @@
     "@storybook/addon-links": "^5.2.3",
     "@storybook/addon-notes": "^5.2.3",
     "@storybook/addon-storyshots": "^5.2.3",
+    "@storybook/addon-viewport": "^5.2.3",
     "@storybook/addons": "^5.2.3",
     "@storybook/react": "^5.2.3",
     "react-test-renderer": "^16.10.2",
