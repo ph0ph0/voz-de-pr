@@ -6,11 +6,10 @@ import NavBarCentre from './NavBarSections/NavBarCentre/NavBarCentre'
 import NavBarRight from './NavBarSections/NavBarRight/NavBarRight'
 
 const Wrapper = (props) => {
-    console.log(`Loading NavBar`)
     return (
         <div {...props}>
             <NavBarLeft />
-            <NavBarCentre />
+            <NavBarCentre placeholder = {"Search"}/>
             <NavBarRight />
         </div>
     )
@@ -21,7 +20,7 @@ const NavBar = styled(Wrapper)`
     background-color: white;
     display: flex;
     width: 100%;
-    height: 72px;
+    height: "72px";
     position: fixed;
     top: 0;
     padding: 0;

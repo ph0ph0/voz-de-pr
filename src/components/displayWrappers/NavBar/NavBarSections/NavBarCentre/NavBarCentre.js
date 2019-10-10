@@ -3,8 +3,7 @@ import styled from 'styled-components'
 
 import SearchBar from '../../../../primitive/SearchBar'
 
-const Wrapper = (props) => {
-    const {placeholder} = props
+const Wrapper = ({placeholder, ...props}) => {
     return (
         <div {...props}>
             <SearchBar placeholder = {placeholder}/>

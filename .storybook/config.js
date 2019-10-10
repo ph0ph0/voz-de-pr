@@ -83,6 +83,13 @@ const ViewPorts = {
       height: '1440px',
     },
   },
+  2880: {
+    name: "2880 - MB Pro",
+    styles: {
+      width: "2880px",
+      height: "1800px"
+    }
+  }
 }
 
 addParameters({

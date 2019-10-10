@@ -8,13 +8,14 @@ import ProfileInfoNavBar from '../../../../primitive/ProfileInfoNavBar'
 const Wrapper = (props) => {
     return (
         <div className = {props.className}>
-            <ProfileInfoNavBar fontSize = {"16px"} width = {"100%"} height = {"50%"} paddingTop = {"15px"}>James Wheeler</ProfileInfoNavBar>
-            <ProfileInfoNavBar fontSize = {"12px"} width = {"100%"} height = {"50%"} paddingBottom = {"15px"}>larkin_tr***@yahoo.com</ProfileInfoNavBar>
+            <ProfileInfoNavBar fontSize = {"16px"} width = {"80%"} height = {"50%"} paddingTop = {"15px"}>James Wheeler</ProfileInfoNavBar>
+            <ProfileInfoNavBar fontSize = {"12px"} width = {"80%"} height = {"50%"} paddingBottom = {"15px"}>larkin_tr***@yahoo.com</ProfileInfoNavBar>
         </div>
     )
 }
 
 const ProfileInfoWrapper = styled(Wrapper)`
+    /* background-color: yellow; */
     width: 140px;
     height: 95%;
 

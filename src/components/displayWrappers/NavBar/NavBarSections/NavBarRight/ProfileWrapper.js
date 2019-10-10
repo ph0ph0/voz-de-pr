@@ -14,6 +14,7 @@ const Wrapper = (props) => {
 }
 
 const ProfileWrapper = styled(Wrapper)`
+    /* background-color: blue; */
     width: 60%;
     height: 100%;
 
