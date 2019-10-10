@@ -5,12 +5,12 @@ import LinkNavBar from '../../../../primitive/LinkNavBar'
 
 const Wrapper = (props) => {
     return (
-        <div {...props}>
+        <nav {...props}>
             <LinkNavBar {...props}>HOME</LinkNavBar>
             <LinkNavBar {...props}>CAUSES</LinkNavBar>
             <LinkNavBar {...props}>POSTS</LinkNavBar>
             <LinkNavBar {...props}>PROFILE</LinkNavBar>
-        </div>
+        </nav>
     )
 }
 
