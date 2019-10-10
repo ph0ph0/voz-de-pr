@@ -4,9 +4,10 @@ import styled from 'styled-components'
 import SearchBar from '../../primitive/SearchBar'
 
 const Wrapper = (props) => {
+    const {placeholder} = props
     return (
         <div {...props}>
-            <SearchBar {...props}/>
+            <SearchBar placeholder = {placeholder}/>
         </div>
     )
 }
@@ -14,9 +15,9 @@ const Wrapper = (props) => {
 const NavBarCentre = styled(Wrapper)`
     /* background-color: red; */
     height: 72px;
-    flex-basis: 33.33333%;
     flex-grow: 10;
     flex-shrink: 5;
+    flex-basis: 33.33333%;
     /* flex-shrink: 2; */
     /* width: 33.3333%; */
     

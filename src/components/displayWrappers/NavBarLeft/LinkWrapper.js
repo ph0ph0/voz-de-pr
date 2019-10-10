@@ -15,9 +15,10 @@ const Wrapper = (props) => {
 }
 
 const LinkWrapper = styled(Wrapper)`
+    /* border: 1px solid purple; */
     flex: 0;
     height: 100%;
-    width: 100%;
+    width: 80%;
     margin-right: 10px;
     
     display: flex;

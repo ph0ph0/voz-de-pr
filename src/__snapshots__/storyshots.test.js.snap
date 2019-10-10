@@ -33,6 +33,114 @@ exports[`Storyshots DisplayWrappers|NavBar/LinkWrapper LinkNavBar 1`] = `
 </div>
 `;
 
+exports[`Storyshots DisplayWrappers|NavBar/LogoWrapper Standard 1`] = `
+<img
+  className="sc-ifAKCX eytuCr"
+/>
+`;
+
+exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
+<div
+  className="sc-fjdhpX WiuCG"
+>
+  <div
+    className="sc-bZQynM fhsJZP"
+  >
+    <div
+      className="sc-EHOje keNvCO sc-bZQynM fhsJZP"
+    >
+      <img
+        className="sc-ifAKCX eytuCr"
+      />
+    </div>
+    <div
+      className="sc-bxivhb dGSKYG sc-bZQynM fhsJZP"
+    >
+      <a
+        className="sc-htpNat htswVG sc-bxivhb dGSKYG sc-bZQynM fhsJZP"
+      >
+        HOME
+      </a>
+      <a
+        className="sc-htpNat htswVG sc-bxivhb dGSKYG sc-bZQynM fhsJZP"
+      >
+        CAUSES
+      </a>
+      <a
+        className="sc-htpNat htswVG sc-bxivhb dGSKYG sc-bZQynM fhsJZP"
+      >
+        POSTS
+      </a>
+      <a
+        className="sc-htpNat htswVG sc-bxivhb dGSKYG sc-bZQynM fhsJZP"
+      >
+        PROFILE
+      </a>
+    </div>
+  </div>
+  <div
+    className="sc-bwzfXH hitoTW"
+  >
+    <input
+      className="sc-bdVaJa hRHmjZ sc-bwzfXH hitoTW"
+      type="text"
+    />
+  </div>
+  <div
+    className="sc-jTzLTM cOYfoM"
+  >
+    <div
+      className="sc-htoDjs eEOuhl"
+    >
+      <button
+        className="sc-gzVnrw ipSEb"
+        secondary={true}
+      >
+        SIGN UP
+      </button>
+      <button
+        className="sc-gzVnrw dIRfIe"
+      >
+        LOG IN
+      </button>
+    </div>
+    <div
+      className="sc-VigVT iCnNAl"
+    >
+      <div
+        className="sc-gqjmRU jjqTqx"
+      >
+        <img
+          className="sc-gZMcBi cnsilN"
+        />
+      </div>
+      <div
+        className="sc-iwsKbI iWHASP"
+      >
+        <div
+          className="sc-dnqmqq bUBTZQ"
+          fontSize="16px"
+          height="50%"
+          paddingTop="15px"
+          width="100%"
+        >
+          James Wheeler
+        </div>
+        <div
+          className="sc-dnqmqq iRNuBM"
+          fontSize="12px"
+          height="50%"
+          paddingBottom="15px"
+          width="100%"
+        >
+          larkin_tr***@yahoo.com
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots DisplayWrappers|NavBar/NavBarCentre C 1`] = `
 <div
   className="sc-bwzfXH kuCEjS"
@@ -86,6 +194,36 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarCentre Standard 1`] = `
     placeholer="Search"
     type="text"
   />
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|NavBar/NavBarLeft NavBarLeft 1`] = `
+<div>
+  <div />
+  <div
+    className="sc-bxivhb kPrwFe"
+  >
+    <a
+      className="sc-htpNat htswVG sc-bxivhb kPrwFe"
+    >
+      HOME
+    </a>
+    <a
+      className="sc-htpNat htswVG sc-bxivhb kPrwFe"
+    >
+      CAUSES
+    </a>
+    <a
+      className="sc-htpNat htswVG sc-bxivhb kPrwFe"
+    >
+      POSTS
+    </a>
+    <a
+      className="sc-htpNat htswVG sc-bxivhb kPrwFe"
+    >
+      PROFILE
+    </a>
+  </div>
 </div>
 `;
 

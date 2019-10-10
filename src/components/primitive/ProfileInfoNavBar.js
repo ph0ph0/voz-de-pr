@@ -15,6 +15,7 @@ const ProfileInfoNavBar = styled(Text)`
     height: ${(props) => props.height ? props.height : "50%"};
     padding-top: ${(props) => props.paddingTop ? props.paddingTop: "0px"};
     padding-bottom: ${(props) => props.paddingBottom ? props.paddingBottom : "0px"};
+    padding-left: "50px";
 `
 
 export default ProfileInfoNavBar
