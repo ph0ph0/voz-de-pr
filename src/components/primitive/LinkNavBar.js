@@ -23,6 +23,7 @@ const LinkNavBar = styled(Link)`
     :hover {
         color: #1B4EA0;
         border-bottom: 1px solid #1B4EA0;
+        cursor: pointer;
     }
 `
 

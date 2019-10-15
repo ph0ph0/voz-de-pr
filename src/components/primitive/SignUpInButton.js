@@ -26,6 +26,7 @@ const SignUpInButton = styled(Button)`
   :hover {
     background-color: ${props => (props.secondary ? "#1B4EA0" : "#EC220D")};
     color: white;
+    cursor: pointer;
   }
 
 `
