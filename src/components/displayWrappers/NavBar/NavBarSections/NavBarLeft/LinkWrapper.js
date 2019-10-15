@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import LinkNavBar from '../../../../primitive/LinkNavBar'
+import LinkNavBar from '../../../../Primitive/LinkNavBar'
 
 const Wrapper = (props) => {
     return (
         <nav {...props}>
-            <LinkNavBar {...props}>HOME</LinkNavBar>
-            <LinkNavBar {...props}>CAUSES</LinkNavBar>
-            <LinkNavBar {...props}>POSTS</LinkNavBar>
-            <LinkNavBar {...props}>PROFILE</LinkNavBar>
+            <LinkNavBar to = {"/"} {...props}>HOME</LinkNavBar>
+            <LinkNavBar to = {"/Causes"} {...props}>CAUSES</LinkNavBar>
+            <LinkNavBar to = {"/Posts"} {...props}>POSTS</LinkNavBar>
+            <LinkNavBar to = {"/Profile"} {...props}>PROFILE</LinkNavBar>
         </nav>
     )
 }
