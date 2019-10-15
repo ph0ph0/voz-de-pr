@@ -8,6 +8,10 @@ const GlobalStyle = createGlobalStyle`
     padding: 0px;
     }
 
+    body  {
+        margin-top: 100px;
+    }
+
     .content {
     margin-top: 100px;
     }

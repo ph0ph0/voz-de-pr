@@ -10,7 +10,8 @@ const Page = (props) => {
 }
 
 const MainFeed = styled(Page)`
-    padding-top: "300px";
+    position: static;
+    margin-top: "200px";
     border: 1px solid black;
 `
 

@@ -14,7 +14,7 @@ function App() {
   return (
     <Fragment>
       <Router history = {customHistory}>
-        {/* <GlobalStyle /> */}
+        <GlobalStyle />
         <NavBar />
         <Routes />
         <Content />
@@ -24,7 +24,8 @@ function App() {
 }
 
 var divStyle = {
-  marginTop: "100px"
+  marginTop: "10px",
+  // position: "absolute"
 };
 
 const Content = () => (
