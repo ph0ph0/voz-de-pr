@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom'
 
 import {ReactComponent as Logo } from '../../../../../assets/NavBar/Logo.svg'
 
-const Wrapper = (props) => {
+const Wrapper = ({staticContext, ...props}) => {
 
     function onClick() {
         console.log('Clicked LogoWrapper')

@@ -1,24 +1,21 @@
 import React, { Fragment } from 'react';
 // import './App.css';
-import { BrowserRouter as Router } from 'react-router-dom'
-import { createBrowserHistory } from 'history'
+import { BrowserRouter } from 'react-router-dom'
 
 import GlobalStyle from './theme/globalStyle'
 
 import NavBar from './components/DisplayWrappers/NavBar/NavBar'
 import Routes from './components/Pages/Routes'
 
-const customHistory = createBrowserHistory()
-
 function App() {
   return (
     <Fragment>
-      <Router history = {customHistory}>
+      <BrowserRouter>
         <GlobalStyle />
         <NavBar />
         <Routes />
         <Content />
-      </Router>
+      </BrowserRouter>
     </Fragment>
   );
 }
