@@ -18,7 +18,6 @@ const Wrapper = ({staticContext, ...props}) => {
     )
 }
 
-//Doesn't matter what you set the width as
 const LogoWrapper = styled(Wrapper)`
     /* border: 2px solid orange; */
     height: 100%;

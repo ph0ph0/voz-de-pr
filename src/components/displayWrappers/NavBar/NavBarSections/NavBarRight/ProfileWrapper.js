@@ -1,13 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
+import { withRouter } from 'react-router-dom'
 
 import ProfileInfoWrapper from './ProfileInfoWrapper'
 import ProfileImageWrapper from './ProfileImageWrapper'
 
-const Wrapper = (props) => {
+const Wrapper = ({ staticContext, ...props }) => {
 
     function onClick() {
         console.log(`Clicked Profile Wrapper`)
+        props.history.push("/profile")
     }
 
     return (
@@ -32,4 +34,4 @@ const ProfileWrapper = styled(Wrapper)`
     }
 `
 
-export default ProfileWrapper
+export default withRouter(ProfileWrapper)

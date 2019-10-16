@@ -5,22 +5,35 @@ exports[`Storyshots DisplayWrappers|NavBar/LinkWrapper Standard 1`] = `
   className="sc-bxivhb dGSKYG"
 >
   <a
-    className="sc-htpNat dMSOBO sc-bxivhb dGSKYG"
+    aria-current="page"
+    className="sc-htpNat cInFPd sc-bxivhb dGSKYG active"
+    href="/"
+    onClick={[Function]}
+    style={Object {}}
   >
     HOME
   </a>
   <a
-    className="sc-htpNat dMSOBO sc-bxivhb dGSKYG"
+    aria-current={null}
+    className="sc-htpNat cInFPd sc-bxivhb dGSKYG"
+    href="/Causes"
+    onClick={[Function]}
   >
     CAUSES
   </a>
   <a
-    className="sc-htpNat dMSOBO sc-bxivhb dGSKYG"
+    aria-current={null}
+    className="sc-htpNat cInFPd sc-bxivhb dGSKYG"
+    href="/Posts"
+    onClick={[Function]}
   >
     POSTS
   </a>
   <a
-    className="sc-htpNat dMSOBO sc-bxivhb dGSKYG"
+    aria-current={null}
+    className="sc-htpNat cInFPd sc-bxivhb dGSKYG"
+    href="/Profile"
+    onClick={[Function]}
   >
     PROFILE
   </a>
@@ -29,9 +42,48 @@ exports[`Storyshots DisplayWrappers|NavBar/LinkWrapper Standard 1`] = `
 
 exports[`Storyshots DisplayWrappers|NavBar/LogoWrapper Standard 1`] = `
 <div
-  className="sc-ifAKCX bZXLIA"
+  className="sc-ifAKCX fnZSTt"
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+  location={
+    Object {
+      "hash": "",
+      "pathname": "/",
+      "search": "",
+      "state": undefined,
+    }
+  }
+  match={
+    Object {
+      "isExact": true,
+      "params": Object {},
+      "path": "/",
+      "url": "/",
+    }
+  }
+  onClick={[Function]}
 >
-  <svg>
+  <svg
+    onClick={[Function]}
+  >
     Logo.svg
   </svg>
 </div>
@@ -39,15 +91,53 @@ exports[`Storyshots DisplayWrappers|NavBar/LogoWrapper Standard 1`] = `
 
 exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
 <div
-  className="sc-VigVT elEyIh"
+  className="sc-VigVT kcRElN"
 >
   <div
     className="sc-EHOje kOcwsO"
   >
     <div
-      className="sc-ifAKCX bZXLIA sc-EHOje kOcwsO"
+      className="sc-ifAKCX fnZSTt sc-EHOje kOcwsO"
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+      location={
+        Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        }
+      }
+      match={
+        Object {
+          "isExact": true,
+          "params": Object {},
+          "path": "/",
+          "url": "/",
+        }
+      }
     >
-      <svg>
+      <svg
+        onClick={[Function]}
+      >
         Logo.svg
       </svg>
     </div>
@@ -55,22 +145,35 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
       className="sc-bxivhb dGSKYG sc-EHOje kOcwsO"
     >
       <a
-        className="sc-htpNat dMSOBO sc-bxivhb dGSKYG sc-EHOje kOcwsO"
+        aria-current="page"
+        className="sc-htpNat cInFPd sc-bxivhb dGSKYG sc-EHOje kOcwsO active"
+        href="/"
+        onClick={[Function]}
+        style={Object {}}
       >
         HOME
       </a>
       <a
-        className="sc-htpNat dMSOBO sc-bxivhb dGSKYG sc-EHOje kOcwsO"
+        aria-current={null}
+        className="sc-htpNat cInFPd sc-bxivhb dGSKYG sc-EHOje kOcwsO"
+        href="/Causes"
+        onClick={[Function]}
       >
         CAUSES
       </a>
       <a
-        className="sc-htpNat dMSOBO sc-bxivhb dGSKYG sc-EHOje kOcwsO"
+        aria-current={null}
+        className="sc-htpNat cInFPd sc-bxivhb dGSKYG sc-EHOje kOcwsO"
+        href="/Posts"
+        onClick={[Function]}
       >
         POSTS
       </a>
       <a
-        className="sc-htpNat dMSOBO sc-bxivhb dGSKYG sc-EHOje kOcwsO"
+        aria-current={null}
+        className="sc-htpNat cInFPd sc-bxivhb dGSKYG sc-EHOje kOcwsO"
+        href="/Profile"
+        onClick={[Function]}
       >
         PROFILE
       </a>
@@ -104,7 +207,44 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
       </button>
     </div>
     <div
-      className="sc-gZMcBi KIzcV"
+      className="sc-gZMcBi hhlJTS"
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+      location={
+        Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        }
+      }
+      match={
+        Object {
+          "isExact": true,
+          "params": Object {},
+          "path": "/",
+          "url": "/",
+        }
+      }
+      onClick={[Function]}
     >
       <div
         className="sc-iwsKbI eFRUyw"
@@ -189,9 +329,47 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarLeft Standard 1`] = `
   className="sc-EHOje kOcwsO"
 >
   <div
-    className="sc-ifAKCX bZXLIA sc-EHOje kOcwsO"
+    className="sc-ifAKCX fnZSTt sc-EHOje kOcwsO"
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+    location={
+      Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      }
+    }
+    match={
+      Object {
+        "isExact": true,
+        "params": Object {},
+        "path": "/",
+        "url": "/",
+      }
+    }
   >
-    <svg>
+    <svg
+      onClick={[Function]}
+    >
       Logo.svg
     </svg>
   </div>
@@ -199,22 +377,35 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarLeft Standard 1`] = `
     className="sc-bxivhb dGSKYG sc-EHOje kOcwsO"
   >
     <a
-      className="sc-htpNat dMSOBO sc-bxivhb dGSKYG sc-EHOje kOcwsO"
+      aria-current="page"
+      className="sc-htpNat cInFPd sc-bxivhb dGSKYG sc-EHOje kOcwsO active"
+      href="/"
+      onClick={[Function]}
+      style={Object {}}
     >
       HOME
     </a>
     <a
-      className="sc-htpNat dMSOBO sc-bxivhb dGSKYG sc-EHOje kOcwsO"
+      aria-current={null}
+      className="sc-htpNat cInFPd sc-bxivhb dGSKYG sc-EHOje kOcwsO"
+      href="/Causes"
+      onClick={[Function]}
     >
       CAUSES
     </a>
     <a
-      className="sc-htpNat dMSOBO sc-bxivhb dGSKYG sc-EHOje kOcwsO"
+      aria-current={null}
+      className="sc-htpNat cInFPd sc-bxivhb dGSKYG sc-EHOje kOcwsO"
+      href="/Posts"
+      onClick={[Function]}
     >
       POSTS
     </a>
     <a
-      className="sc-htpNat dMSOBO sc-bxivhb dGSKYG sc-EHOje kOcwsO"
+      aria-current={null}
+      className="sc-htpNat cInFPd sc-bxivhb dGSKYG sc-EHOje kOcwsO"
+      href="/Profile"
+      onClick={[Function]}
     >
       PROFILE
     </a>
@@ -241,7 +432,44 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarRight Standard 1`] = `
     </button>
   </div>
   <div
-    className="sc-gZMcBi KIzcV"
+    className="sc-gZMcBi hhlJTS"
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+    location={
+      Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      }
+    }
+    match={
+      Object {
+        "isExact": true,
+        "params": Object {},
+        "path": "/",
+        "url": "/",
+      }
+    }
+    onClick={[Function]}
   >
     <div
       className="sc-iwsKbI eFRUyw"
@@ -297,7 +525,44 @@ exports[`Storyshots DisplayWrappers|NavBar/ProfileInfoWrapper Standard 1`] = `
 
 exports[`Storyshots DisplayWrappers|NavBar/ProfileWrapper Standard 1`] = `
 <div
-  className="sc-gZMcBi KIzcV"
+  className="sc-gZMcBi hhlJTS"
+  history={
+    Object {
+      "action": "POP",
+      "block": [Function],
+      "createHref": [Function],
+      "go": [Function],
+      "goBack": [Function],
+      "goForward": [Function],
+      "length": 1,
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+  location={
+    Object {
+      "hash": "",
+      "pathname": "/",
+      "search": "",
+      "state": undefined,
+    }
+  }
+  match={
+    Object {
+      "isExact": true,
+      "params": Object {},
+      "path": "/",
+      "url": "/",
+    }
+  }
+  onClick={[Function]}
 >
   <div
     className="sc-iwsKbI eFRUyw"
@@ -430,7 +695,10 @@ exports[`Storyshots Primitive|Inputs/SearchBar Standard 1`] = `
 
 exports[`Storyshots Primitive|Links/LinkNavBar Causes 1`] = `
 <a
-  className="sc-htpNat dMSOBO"
+  aria-current={null}
+  className="sc-htpNat cInFPd"
+  href="/causes"
+  onClick={[Function]}
 >
   CAUSES
 </a>
@@ -438,7 +706,11 @@ exports[`Storyshots Primitive|Links/LinkNavBar Causes 1`] = `
 
 exports[`Storyshots Primitive|Links/LinkNavBar Home 1`] = `
 <a
-  className="sc-htpNat dMSOBO"
+  aria-current="page"
+  className="sc-htpNat cInFPd active"
+  href="/"
+  onClick={[Function]}
+  style={Object {}}
 >
   HOME
 </a>
@@ -446,7 +718,10 @@ exports[`Storyshots Primitive|Links/LinkNavBar Home 1`] = `
 
 exports[`Storyshots Primitive|Links/LinkNavBar Posts 1`] = `
 <a
-  className="sc-htpNat dMSOBO"
+  aria-current={null}
+  className="sc-htpNat cInFPd"
+  href="/posts"
+  onClick={[Function]}
 >
   POSTS
 </a>
@@ -454,7 +729,10 @@ exports[`Storyshots Primitive|Links/LinkNavBar Posts 1`] = `
 
 exports[`Storyshots Primitive|Links/LinkNavBar Profile 1`] = `
 <a
-  className="sc-htpNat dMSOBO"
+  aria-current={null}
+  className="sc-htpNat cInFPd"
+  href="/profile"
+  onClick={[Function]}
 >
   PROFILE
 </a>
@@ -462,7 +740,11 @@ exports[`Storyshots Primitive|Links/LinkNavBar Profile 1`] = `
 
 exports[`Storyshots Primitive|Links/LinkNavBar Standard 1`] = `
 <a
-  className="sc-htpNat dMSOBO"
+  aria-current="page"
+  className="sc-htpNat cInFPd active"
+  href="/"
+  onClick={[Function]}
+  style={Object {}}
 >
   TEST
 </a>
