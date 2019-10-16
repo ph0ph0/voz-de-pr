@@ -1,12 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
+import { withRouter } from 'react-router-dom'
 
 import {ReactComponent as Logo } from '../../../../../assets/NavBar/Logo.svg'
 
 const Wrapper = (props) => {
+
+    function onClick() {
+        console.log('Clicked LogoWrapper')
+        props.history.push("/")
+    }
+
     return (
         <div {...props}>
-            <Logo />
+            <Logo onClick = {onClick}/>
         </div>
     )
 }
@@ -19,6 +26,10 @@ const LogoWrapper = styled(Wrapper)`
 
     display: flex;
     align-items: center;
+
+    :hover {
+        cursor: pointer;
+    }
 `
 
-export default LogoWrapper
+export default withRouter(LogoWrapper)

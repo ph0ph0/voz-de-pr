@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body  {
-        margin-top: 100px;
+        margin-top: 0px;
     }
 
     .content {

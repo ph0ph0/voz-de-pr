@@ -21,8 +21,8 @@ const NavBar = styled(Wrapper)`
     display: flex;
     width: 100%;
     height: "72px";
-    position: fixed;
-    top: 0;
+    position: sticky;
+    top: 0px;
     padding: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
 `

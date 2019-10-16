@@ -5,8 +5,13 @@ import ProfileInfoWrapper from './ProfileInfoWrapper'
 import ProfileImageWrapper from './ProfileImageWrapper'
 
 const Wrapper = (props) => {
+
+    function onClick() {
+        console.log(`Clicked Profile Wrapper`)
+    }
+
     return (
-        <div {...props}>
+        <div {...props} onClick = {onClick}>
             <ProfileImageWrapper />
             <ProfileInfoWrapper />
         </div>
@@ -21,6 +26,10 @@ const ProfileWrapper = styled(Wrapper)`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    :hover {
+        cursor: pointer;
+    }
 `
 
 export default ProfileWrapper

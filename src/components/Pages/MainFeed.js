@@ -12,7 +12,6 @@ const Page = (props) => {
 const MainFeed = styled(Page)`
     position: static;
     margin-top: "200px";
-    border: 1px solid black;
 `
 
 export default MainFeed

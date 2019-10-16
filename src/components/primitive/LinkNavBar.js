@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
+import { PropTypes } from 'prop-types'
 
 const Link = (props) => {
     return (
@@ -9,6 +10,10 @@ const Link = (props) => {
             {...props}
         />
     )
+}
+
+Link.propType = {
+    to: PropTypes.string.isRequired
 }
 
 const LinkNavBar = styled(Link)`
