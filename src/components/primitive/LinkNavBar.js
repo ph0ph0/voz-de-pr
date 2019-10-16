@@ -28,14 +28,16 @@ const LinkNavBar = styled(Link)`
     border-bottom: ${props => (props.selected ? "1px solid #1B4EA0" : 0)};
 
     :hover {
-        color: #1B4EA0;
-        border-bottom: 1px solid #1B4EA0;
+        color: ${props => props.theme.secondaryColour};
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: ${props => props.theme.secondaryColour};
         cursor: pointer;
     }
 
     &.active {
-        color: #1B4EA0;
-        border-bottom: 1px solid #1B4EA0;
+        color: ${props => props.theme.secondaryColour};
+        border-bottom: 1px solid ${props => props.theme.secondaryColour};
     }
 `
 

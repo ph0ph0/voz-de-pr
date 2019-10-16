@@ -3,13 +3,19 @@ import requireContext from 'require-context.macro';
 
 import '../src/theme/globalStyle'
 
-// For Console add on to storybook
+// For Console add on to storybook, allows you to see the console output
 import '@storybook/addon-console'; 
 
 import { addDecorator } from '@storybook/react';
 import { withConsole } from '@storybook/addon-console';
 
 addDecorator((storyFn, context) => withConsole()(storyFn)(context));
+
+// For JSX (to view the rendered JSX)
+
+import { jsxDecorator } from 'storybook-addon-jsx';
+
+addDecorator(jsxDecorator);
 
 //For Viewport addon to storybook
 import { addParameters } from '@storybook/react';

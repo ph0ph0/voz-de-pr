@@ -3,6 +3,8 @@ import React, { Fragment } from 'react';
 import { BrowserRouter } from 'react-router-dom'
 
 import GlobalStyle from './theme/globalStyle'
+import { ThemeProvider } from 'styled-components'
+import theme from './theme/Theme'
 
 import NavBar from './components/DisplayWrappers/NavBar/NavBar'
 import Routes from './components/Pages/Routes'
@@ -12,9 +14,11 @@ function App() {
     <Fragment>
       <BrowserRouter>
         <GlobalStyle />
-        <NavBar />
-        <Routes />
-        <Content />
+        <ThemeProvider theme = {theme}>
+          <NavBar />
+          <Routes />
+          <LoremContent />
+        </ThemeProvider>
       </BrowserRouter>
     </Fragment>
   );
@@ -25,7 +29,7 @@ var divStyle = {
   // position: "absolute"
 };
 
-const Content = () => (
+const LoremContent = () => (
   <div style = {divStyle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis risus sed vulputate odio ut enim blandit volutpat maecenas. A pellentesque sit amet porttitor eget dolor morbi non arcu. Morbi blandit cursus risus at ultrices. Sed adipiscing diam donec adipiscing tristique risus. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Pharetra sit amet aliquam id diam maecenas. Nam aliquam sem et tortor consequat. Vestibulum lorem sed risus ultricies. Et odio pellentesque diam volutpat commodo sed egestas egestas. Tortor at auctor urna nunc id. Nullam non nisi est sit amet facilisis magna etiam. Laoreet non curabitur gravida arcu ac tortor. Amet venenatis urna cursus eget nunc scelerisque. Dolor morbi non arcu risus quis varius quam quisque id. At ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget. Blandit volutpat maecenas volutpat blandit aliquam. Vitae turpis massa sed elementum tempus egestas. Amet aliquam id diam maecenas ultricies. Tristique sollicitudin nibh sit amet commodo nulla facilisi.
 
   Quis commodo odio aenean sed adipiscing diam. Pretium viverra suspendisse potenti nullam. Sed sed risus pretium quam vulputate dignissim suspendisse in. Quisque id diam vel quam elementum. Augue neque gravida in fermentum et. Cursus vitae congue mauris rhoncus aenean vel elit. Et pharetra pharetra massa massa ultricies mi. Tortor posuere ac ut consequat semper viverra nam. Turpis egestas integer eget aliquet nibh praesent tristique. Faucibus in ornare quam viverra orci sagittis eu volutpat. Leo a diam sollicitudin tempor id eu nisl nunc. Nec ullamcorper sit amet risus nullam eget felis eget. Lacus viverra vitae congue eu consequat ac felis. Adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna neque. Habitant morbi tristique senectus et netus et malesuada. Mauris commodo quis imperdiet massa tincidunt nunc.

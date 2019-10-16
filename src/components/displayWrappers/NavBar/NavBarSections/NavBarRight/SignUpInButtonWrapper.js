@@ -4,10 +4,15 @@ import styled from 'styled-components'
 import SignUpInButton from '../../../../Primitive/SignUpInButton'
 
 const Wrapper = (props) => {
+
+    function onClick() {
+        console.log(`Clicked a SignUpInButton`)
+    }
+
     return (
         <div {...props}>
-            <SignUpInButton secondary >SIGN UP</SignUpInButton>
-            <SignUpInButton>LOG IN</SignUpInButton>
+            <SignUpInButton secondary onClick = {onClick}>SIGN UP</SignUpInButton>
+            <SignUpInButton onClick = {onClick}>LOG IN</SignUpInButton>
         </div>
     )
 }

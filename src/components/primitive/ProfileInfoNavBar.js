@@ -1,15 +1,8 @@
 //This is used to display either the profile name or email in the top right of the nav bar (nav bar right)
 
-import React from 'react'
 import styled from 'styled-components'
 
-const Text = ({fontSize, width, height, paddingTop, paddingBottom, ...props}) => {
-    return (
-        <div {...props} />
-    )
-}
-
-const ProfileInfoNavBar = styled(Text)`
+const ProfileInfoNavBar = styled.div`
     /* border: 1px solid black; */
     width: ${(props) => props.width ? props.width : "100%"};
     height: ${(props) => props.height ? props.height : "50%"};

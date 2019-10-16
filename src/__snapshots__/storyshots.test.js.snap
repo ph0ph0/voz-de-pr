@@ -627,6 +627,56 @@ exports[`Storyshots Primitive|/Buttons/ProfileInfoNavBar Standard 1`] = `
 />
 `;
 
+exports[`Storyshots Primitive|/Buttons/SignUpIButton Login 1`] = `
+<button
+  className="sc-bZQynM etdfXU"
+  onClick={[Function]}
+>
+  LOG IN
+</button>
+`;
+
+exports[`Storyshots Primitive|/Buttons/SignUpIButton SignUp 1`] = `
+<button
+  className="sc-bZQynM bKeyVQ"
+  onClick={[Function]}
+>
+  SIGN UP
+</button>
+`;
+
+exports[`Storyshots Primitive|/Buttons/SignUpIButton Standard 1`] = `
+<button
+  className="sc-bZQynM etdfXU"
+  onClick={[Function]}
+/>
+`;
+
+exports[`Storyshots Primitive|/Buttons/SignUpInButton Login 1`] = `
+<button
+  className="sc-bZQynM etdfXU"
+  onClick={[Function]}
+>
+  LOG IN
+</button>
+`;
+
+exports[`Storyshots Primitive|/Buttons/SignUpInButton SignUp 1`] = `
+<button
+  className="sc-bZQynM bKeyVQ"
+  onClick={[Function]}
+>
+  SIGN UP
+</button>
+`;
+
+exports[`Storyshots Primitive|/Buttons/SignUpInButton Standard 1`] = `
+<button
+  className="sc-bZQynM etdfXU"
+  onClick={[Function]}
+/>
+`;
+
 exports[`Storyshots Primitive|/Text/ProfileInfoNavBar ProfileEmail 1`] = `
 <div
   className="sc-htoDjs dfBkuE"

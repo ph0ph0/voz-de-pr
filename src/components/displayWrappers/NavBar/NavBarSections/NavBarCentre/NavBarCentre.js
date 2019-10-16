@@ -6,7 +6,7 @@ import SearchBar from '../../../../Primitive/SearchBar'
 const Wrapper = ({placeholder, ...props}) => {
     return (
         <div {...props}>
-            <SearchBar placeholder = {placeholder}/>
+            <SearchBar placeholder = {placeholder} type = "text"/>
         </div>
     )
 }

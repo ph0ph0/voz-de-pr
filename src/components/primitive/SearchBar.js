@@ -1,17 +1,6 @@
-import React from 'react'
 import styled from 'styled-components'
 
-const Search = (props) => {
-    return (
-        <input 
-        placeholer = {props.placeholder}
-        type = "text"
-        {...props}
-    />
-    )
-}
-
-const SearchBar = styled(Search)`
+const SearchBar = styled.input`
     height: 40px;
     width: 90%;
     border: 1px solid #f6f7f8;

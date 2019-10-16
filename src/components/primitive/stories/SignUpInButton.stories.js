@@ -3,7 +3,7 @@ import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { storiesOf } from '@storybook/react'
 
-storiesOf("Primitive|/Buttons/ProfileInfoNavBar", module)
+storiesOf("Primitive|/Buttons/SignUpInButton", module)
     .add("Standard", () => <SignUpInButton onClick={action('clicked')}></SignUpInButton>, {
         notes: "These are the buttons used to sign up or log in"
     })
