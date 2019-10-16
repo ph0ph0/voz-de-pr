@@ -17,6 +17,28 @@ import { jsxDecorator } from 'storybook-addon-jsx';
 
 addDecorator(jsxDecorator);
 
+//For the themes addon so that we can use styled-components themes
+
+import { ThemeProvider } from 'styled-components'
+import React from 'react'
+import theme from '../src/theme/Theme'
+
+addDecorator((story) =>(
+  <ThemeProvider theme = {theme}>
+    {story()}
+  </ThemeProvider>
+))
+
+// For react router, saves having to add it to every story that uses the browser
+import { BrowserRouter } from 'react-router-dom'
+
+addDecorator((story) => (
+  <BrowserRouter>
+    {story()}
+  </BrowserRouter>
+))
+
+
 //For Viewport addon to storybook
 import { addParameters } from '@storybook/react';
 
