@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import LinkNavBar from '../../../../Primitive/LinkNavBar'
+import LinkNavBar from '../../../../Primitive/NavBar/LinkNavBar'
 
 const Wrapper = (props) => {
     return (

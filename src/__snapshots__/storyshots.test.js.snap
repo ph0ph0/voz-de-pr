@@ -6,7 +6,7 @@ exports[`Storyshots DisplayWrappers|NavBar/LinkWrapper Standard 1`] = `
 >
   <a
     aria-current="page"
-    className="sc-htpNat cInFPd sc-bxivhb dGSKYG active"
+    className="sc-htpNat gaSQtN sc-bxivhb dGSKYG active"
     href="/"
     onClick={[Function]}
     style={Object {}}
@@ -15,7 +15,7 @@ exports[`Storyshots DisplayWrappers|NavBar/LinkWrapper Standard 1`] = `
   </a>
   <a
     aria-current={null}
-    className="sc-htpNat cInFPd sc-bxivhb dGSKYG"
+    className="sc-htpNat gaSQtN sc-bxivhb dGSKYG"
     href="/Causes"
     onClick={[Function]}
   >
@@ -23,7 +23,7 @@ exports[`Storyshots DisplayWrappers|NavBar/LinkWrapper Standard 1`] = `
   </a>
   <a
     aria-current={null}
-    className="sc-htpNat cInFPd sc-bxivhb dGSKYG"
+    className="sc-htpNat gaSQtN sc-bxivhb dGSKYG"
     href="/Posts"
     onClick={[Function]}
   >
@@ -31,7 +31,7 @@ exports[`Storyshots DisplayWrappers|NavBar/LinkWrapper Standard 1`] = `
   </a>
   <a
     aria-current={null}
-    className="sc-htpNat cInFPd sc-bxivhb dGSKYG"
+    className="sc-htpNat gaSQtN sc-bxivhb dGSKYG"
     href="/Profile"
     onClick={[Function]}
   >
@@ -146,7 +146,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
     >
       <a
         aria-current="page"
-        className="sc-htpNat cInFPd sc-bxivhb dGSKYG sc-EHOje kOcwsO active"
+        className="sc-htpNat gaSQtN sc-bxivhb dGSKYG sc-EHOje kOcwsO active"
         href="/"
         onClick={[Function]}
         style={Object {}}
@@ -155,7 +155,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
       </a>
       <a
         aria-current={null}
-        className="sc-htpNat cInFPd sc-bxivhb dGSKYG sc-EHOje kOcwsO"
+        className="sc-htpNat gaSQtN sc-bxivhb dGSKYG sc-EHOje kOcwsO"
         href="/Causes"
         onClick={[Function]}
       >
@@ -163,7 +163,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
       </a>
       <a
         aria-current={null}
-        className="sc-htpNat cInFPd sc-bxivhb dGSKYG sc-EHOje kOcwsO"
+        className="sc-htpNat gaSQtN sc-bxivhb dGSKYG sc-EHOje kOcwsO"
         href="/Posts"
         onClick={[Function]}
       >
@@ -171,7 +171,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
       </a>
       <a
         aria-current={null}
-        className="sc-htpNat cInFPd sc-bxivhb dGSKYG sc-EHOje kOcwsO"
+        className="sc-htpNat gaSQtN sc-bxivhb dGSKYG sc-EHOje kOcwsO"
         href="/Profile"
         onClick={[Function]}
       >
@@ -185,7 +185,6 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
     <input
       className="sc-bdVaJa bGHooc"
       placeholder="Search"
-      placeholer="Search"
       type="text"
     />
   </div>
@@ -197,11 +196,13 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
     >
       <button
         className="sc-bZQynM bKeyVQ"
+        onClick={[Function]}
       >
         SIGN UP
       </button>
       <button
         className="sc-bZQynM etdfXU"
+        onClick={[Function]}
       >
         LOG IN
       </button>
@@ -258,11 +259,17 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
       >
         <div
           className="sc-htoDjs haDExK"
+          fontSize="16px"
+          height="50%"
+          width="80%"
         >
           James Wheeler
         </div>
         <div
           className="sc-htoDjs ZUubs"
+          fontSize="12px"
+          height="50%"
+          width="80%"
         >
           larkin_tr***@yahoo.com
         </div>
@@ -279,7 +286,6 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarCentre C 1`] = `
   <input
     className="sc-bdVaJa bGHooc"
     placeholder="Search Causes"
-    placeholer="Search Causes"
     type="text"
   />
 </div>
@@ -292,7 +298,6 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarCentre C&P 1`] = `
   <input
     className="sc-bdVaJa bGHooc"
     placeholder="Search Causes and Posts"
-    placeholer="Search Causes and Posts"
     type="text"
   />
 </div>
@@ -305,7 +310,6 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarCentre P 1`] = `
   <input
     className="sc-bdVaJa bGHooc"
     placeholder="Search Posts"
-    placeholer="Search Posts"
     type="text"
   />
 </div>
@@ -318,7 +322,6 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarCentre Standard 1`] = `
   <input
     className="sc-bdVaJa bGHooc"
     placeholder="Search"
-    placeholer="Search"
     type="text"
   />
 </div>
@@ -378,7 +381,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarLeft Standard 1`] = `
   >
     <a
       aria-current="page"
-      className="sc-htpNat cInFPd sc-bxivhb dGSKYG sc-EHOje kOcwsO active"
+      className="sc-htpNat gaSQtN sc-bxivhb dGSKYG sc-EHOje kOcwsO active"
       href="/"
       onClick={[Function]}
       style={Object {}}
@@ -387,7 +390,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarLeft Standard 1`] = `
     </a>
     <a
       aria-current={null}
-      className="sc-htpNat cInFPd sc-bxivhb dGSKYG sc-EHOje kOcwsO"
+      className="sc-htpNat gaSQtN sc-bxivhb dGSKYG sc-EHOje kOcwsO"
       href="/Causes"
       onClick={[Function]}
     >
@@ -395,7 +398,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarLeft Standard 1`] = `
     </a>
     <a
       aria-current={null}
-      className="sc-htpNat cInFPd sc-bxivhb dGSKYG sc-EHOje kOcwsO"
+      className="sc-htpNat gaSQtN sc-bxivhb dGSKYG sc-EHOje kOcwsO"
       href="/Posts"
       onClick={[Function]}
     >
@@ -403,7 +406,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarLeft Standard 1`] = `
     </a>
     <a
       aria-current={null}
-      className="sc-htpNat cInFPd sc-bxivhb dGSKYG sc-EHOje kOcwsO"
+      className="sc-htpNat gaSQtN sc-bxivhb dGSKYG sc-EHOje kOcwsO"
       href="/Profile"
       onClick={[Function]}
     >
@@ -422,11 +425,13 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarRight Standard 1`] = `
   >
     <button
       className="sc-bZQynM bKeyVQ"
+      onClick={[Function]}
     >
       SIGN UP
     </button>
     <button
       className="sc-bZQynM etdfXU"
+      onClick={[Function]}
     >
       LOG IN
     </button>
@@ -483,11 +488,17 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarRight Standard 1`] = `
     >
       <div
         className="sc-htoDjs haDExK"
+        fontSize="16px"
+        height="50%"
+        width="80%"
       >
         James Wheeler
       </div>
       <div
         className="sc-htoDjs ZUubs"
+        fontSize="12px"
+        height="50%"
+        width="80%"
       >
         larkin_tr***@yahoo.com
       </div>
@@ -512,11 +523,17 @@ exports[`Storyshots DisplayWrappers|NavBar/ProfileInfoWrapper Standard 1`] = `
 >
   <div
     className="sc-htoDjs haDExK"
+    fontSize="16px"
+    height="50%"
+    width="80%"
   >
     James Wheeler
   </div>
   <div
     className="sc-htoDjs ZUubs"
+    fontSize="12px"
+    height="50%"
+    width="80%"
   >
     larkin_tr***@yahoo.com
   </div>
@@ -576,11 +593,17 @@ exports[`Storyshots DisplayWrappers|NavBar/ProfileWrapper Standard 1`] = `
   >
     <div
       className="sc-htoDjs haDExK"
+      fontSize="16px"
+      height="50%"
+      width="80%"
     >
       James Wheeler
     </div>
     <div
       className="sc-htoDjs ZUubs"
+      fontSize="12px"
+      height="50%"
+      width="80%"
     >
       larkin_tr***@yahoo.com
     </div>
@@ -594,62 +617,82 @@ exports[`Storyshots DisplayWrappers|NavBar/SignUpInButtonWrapper Standard 1`] = 
 >
   <button
     className="sc-bZQynM bKeyVQ"
+    onClick={[Function]}
   >
     SIGN UP
   </button>
   <button
     className="sc-bZQynM etdfXU"
+    onClick={[Function]}
   >
     LOG IN
   </button>
 </div>
 `;
 
-exports[`Storyshots Primitive|/Buttons/ProfileInfoNavBar Login 1`] = `
-<button
-  className="sc-bZQynM etdfXU"
+exports[`Storyshots DisplayWrappers|SubjctCard/Images/ProfPicSubjectCard Standard 1`] = `
+<div
+  className="sc-VigVT jPryKi"
 >
-  LOG IN
-</button>
+  <svg>
+    Userpic.svg
+  </svg>
+</div>
 `;
 
-exports[`Storyshots Primitive|/Buttons/ProfileInfoNavBar SignUp 1`] = `
-<button
-  className="sc-bZQynM bKeyVQ"
+exports[`Storyshots DisplayWrappers|SubjectCard/Images/ProfPicSubjectCard Standard 1`] = `
+<div
+  className="sc-VigVT jPryKi"
 >
-  SIGN UP
-</button>
+  <svg>
+    Userpic.svg
+  </svg>
+</div>
 `;
 
-exports[`Storyshots Primitive|/Buttons/ProfileInfoNavBar Standard 1`] = `
-<button
-  className="sc-bZQynM etdfXU"
-/>
-`;
-
-exports[`Storyshots Primitive|/Buttons/SignUpIButton Login 1`] = `
-<button
-  className="sc-bZQynM etdfXU"
-  onClick={[Function]}
+exports[`Storyshots DisplayWrappers|SubjectCard/ProfPicSubjectCard Standard 1`] = `
+<div
+  className="sc-VigVT jPryKi"
 >
-  LOG IN
-</button>
+  <svg>
+    Userpic.svg
+  </svg>
+</div>
 `;
 
-exports[`Storyshots Primitive|/Buttons/SignUpIButton SignUp 1`] = `
-<button
-  className="sc-bZQynM bKeyVQ"
-  onClick={[Function]}
+exports[`Storyshots DisplayWrappers|SubjectCard/SubjectCardTopLineWrapper Standard 1`] = `
+<div
+  className="sc-jzJRlG dGtcxo"
 >
-  SIGN UP
-</button>
-`;
-
-exports[`Storyshots Primitive|/Buttons/SignUpIButton Standard 1`] = `
-<button
-  className="sc-bZQynM etdfXU"
-  onClick={[Function]}
-/>
+  <div
+    className="sc-VigVT jPryKi"
+  >
+    <svg>
+      Userpic.svg
+    </svg>
+  </div>
+  <div
+    className="sc-jTzLTM jLOmfJ"
+    isTimeAgo={false}
+  >
+    
+     
+    James Montgommery Wheeler McGuiness
+  </div>
+  <div
+    className="sc-jTzLTM jLOmfJ"
+    isTimeAgo={true}
+  >
+    •
+     
+    1 Hour Ago
+  </div>
+  <svg
+    className="sc-fjdhpX drGMxq"
+  >
+    Delete.svg
+  </svg>
+</div>
 `;
 
 exports[`Storyshots Primitive|/Buttons/SignUpInButton Login 1`] = `
@@ -680,6 +723,9 @@ exports[`Storyshots Primitive|/Buttons/SignUpInButton Standard 1`] = `
 exports[`Storyshots Primitive|/Text/ProfileInfoNavBar ProfileEmail 1`] = `
 <div
   className="sc-htoDjs dfBkuE"
+  fontSize="12px"
+  height="50%"
+  width="100%"
 >
   larkin_tr***@yahoo.com
 </div>
@@ -688,6 +734,9 @@ exports[`Storyshots Primitive|/Text/ProfileInfoNavBar ProfileEmail 1`] = `
 exports[`Storyshots Primitive|/Text/ProfileInfoNavBar ProfileName 1`] = `
 <div
   className="sc-htoDjs fkMuCz"
+  fontSize="16px"
+  height="50%"
+  width="100%"
 >
   James Wheeler
 </div>
@@ -701,6 +750,24 @@ exports[`Storyshots Primitive|/Text/ProfileInfoNavBar Standard 1`] = `
 </div>
 `;
 
+exports[`Storyshots Primitive|Buttons/DeleteSubjectButton DeleteButton 1`] = `
+<svg
+  className="sc-fjdhpX drGMxq"
+>
+  Delete.svg
+</svg>
+`;
+
+exports[`Storyshots Primitive|Images/ProfPicSubjectCard Standard 1`] = `
+<div
+  className="sc-jzJRlG jAUIYn"
+>
+  <svg>
+    Userpic.svg
+  </svg>
+</div>
+`;
+
 exports[`Storyshots Primitive|Images/ProfileImage Standard 1`] = `
 <img
   className="sc-jTzLTM ccMzdV"
@@ -711,8 +778,6 @@ exports[`Storyshots Primitive|Inputs/SearchBar C 1`] = `
 <input
   className="sc-bdVaJa bGHooc"
   placeholder="Search Causes"
-  placeholer="Search Causes"
-  type="text"
 />
 `;
 
@@ -720,8 +785,6 @@ exports[`Storyshots Primitive|Inputs/SearchBar C&P 1`] = `
 <input
   className="sc-bdVaJa bGHooc"
   placeholder="Search Causes and Posts"
-  placeholer="Search Causes and Posts"
-  type="text"
 />
 `;
 
@@ -729,8 +792,6 @@ exports[`Storyshots Primitive|Inputs/SearchBar P 1`] = `
 <input
   className="sc-bdVaJa bGHooc"
   placeholder="Search Posts"
-  placeholer="Search Posts"
-  type="text"
 />
 `;
 
@@ -738,15 +799,13 @@ exports[`Storyshots Primitive|Inputs/SearchBar Standard 1`] = `
 <input
   className="sc-bdVaJa bGHooc"
   placeholder="Search"
-  placeholer="Search"
-  type="text"
 />
 `;
 
 exports[`Storyshots Primitive|Links/LinkNavBar Causes 1`] = `
 <a
   aria-current={null}
-  className="sc-htpNat cInFPd"
+  className="sc-htpNat gaSQtN"
   href="/causes"
   onClick={[Function]}
 >
@@ -757,7 +816,7 @@ exports[`Storyshots Primitive|Links/LinkNavBar Causes 1`] = `
 exports[`Storyshots Primitive|Links/LinkNavBar Home 1`] = `
 <a
   aria-current="page"
-  className="sc-htpNat cInFPd active"
+  className="sc-htpNat gaSQtN active"
   href="/"
   onClick={[Function]}
   style={Object {}}
@@ -769,7 +828,7 @@ exports[`Storyshots Primitive|Links/LinkNavBar Home 1`] = `
 exports[`Storyshots Primitive|Links/LinkNavBar Posts 1`] = `
 <a
   aria-current={null}
-  className="sc-htpNat cInFPd"
+  className="sc-htpNat gaSQtN"
   href="/posts"
   onClick={[Function]}
 >
@@ -780,7 +839,7 @@ exports[`Storyshots Primitive|Links/LinkNavBar Posts 1`] = `
 exports[`Storyshots Primitive|Links/LinkNavBar Profile 1`] = `
 <a
   aria-current={null}
-  className="sc-htpNat cInFPd"
+  className="sc-htpNat gaSQtN"
   href="/profile"
   onClick={[Function]}
 >
@@ -791,11 +850,64 @@ exports[`Storyshots Primitive|Links/LinkNavBar Profile 1`] = `
 exports[`Storyshots Primitive|Links/LinkNavBar Standard 1`] = `
 <a
   aria-current="page"
-  className="sc-htpNat cInFPd active"
+  className="sc-htpNat gaSQtN active"
   href="/"
   onClick={[Function]}
   style={Object {}}
 >
   TEST
 </a>
+`;
+
+exports[`Storyshots Primitive|Text/NameTimeAgo Name 1`] = `
+<div
+  className="sc-fjdhpX fTqDOp"
+  isTimeAgo={false}
+>
+  
+   
+  James Montgommery Wheeler McGuiness
+</div>
+`;
+
+exports[`Storyshots Primitive|Text/NameTimeAgo Standard 1`] = `
+<div
+  className="sc-fjdhpX fTqDOp"
+  isTimeAgo={false}
+>
+  
+   
+  Test
+</div>
+`;
+
+exports[`Storyshots Primitive|Text/NameTimeAgo TimeAgo 1`] = `
+<div
+  className="sc-fjdhpX fTqDOp"
+  isTimeAgo={true}
+>
+  •
+   
+  1 Hour Ago
+</div>
+`;
+
+exports[`Storyshots SubjectCar|Images/ProfPicSubjectCard Standard 1`] = `
+<div
+  className="sc-VigVT jPryKi"
+>
+  <svg>
+    Userpic.svg
+  </svg>
+</div>
+`;
+
+exports[`Storyshots SubjectCard|Images/ProfPicSubjectCard Standard 1`] = `
+<div
+  className="sc-VigVT jPryKi"
+>
+  <svg>
+    Userpic.svg
+  </svg>
+</div>
 `;

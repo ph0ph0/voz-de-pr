@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import SignUpInButton from '../../../../Primitive/SignUpInButton'
+import SignUpInButton from '../../../../Primitive/NavBar/SignUpInButton'
 
 const Wrapper = (props) => {
 

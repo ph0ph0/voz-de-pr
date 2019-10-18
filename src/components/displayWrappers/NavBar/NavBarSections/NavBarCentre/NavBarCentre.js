@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import SearchBar from '../../../../Primitive/SearchBar'
+import SearchBar from '../../../../Primitive/NavBar/SearchBar'
 
 const Wrapper = ({placeholder, ...props}) => {
     return (
