@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { withRouter } from 'react-router-dom'
 
-import {ReactComponent as Logo } from '../../../../../assets/NavBar/Logo.svg'
+import {ReactComponent as Logo } from '../../../../../assets/General/Logo.svg'
 
 const Wrapper = ({staticContext, ...props}) => {
 

@@ -630,6 +630,30 @@ exports[`Storyshots DisplayWrappers|NavBar/SignUpInButtonWrapper Standard 1`] = 
 </div>
 `;
 
+exports[`Storyshots DisplayWrappers|SidePanel/SidePanel Standard 1`] = `
+<div
+  className="sc-jzJRlG bFUQPj"
+>
+  <PRFlag.svg />
+  <Logo.svg />
+  <div
+    className="sc-jTzLTM efVEn"
+  >
+    Voz de Puerto Rico (Voz de PR) is a social platform that allows users to take an active role in the progression of human needs, social betterment and national development of Puerto Rico. It is community based, and provides a voice to those who wish to enact change across society.
+  </div>
+  <button
+    className="sc-fjdhpX lfgnBZ"
+  >
+    Create Cause
+  </button>
+  <button
+    className="sc-fjdhpX iwvZS"
+  >
+    Create Post
+  </button>
+</div>
+`;
+
 exports[`Storyshots DisplayWrappers|SubjectCard/BottomWrapper Standard 1`] = `
 <div
   className="sc-fjdhpX lmElKw"
@@ -1121,11 +1145,41 @@ exports[`Storyshots Primitive|/Text/ProfileInfoNavBar Standard 1`] = `
 </div>
 `;
 
+exports[`Storyshots Primitive|Buttons/ActionButton C 1`] = `
+<button
+  className="sc-iAyFgw fnjIJG"
+>
+  Create Post
+</button>
+`;
+
+exports[`Storyshots Primitive|Buttons/ActionButton P 1`] = `
+<button
+  className="sc-iAyFgw fnjIJG"
+>
+  Create Post
+</button>
+`;
+
+exports[`Storyshots Primitive|Buttons/ActionButton Standard 1`] = `
+<button
+  className="sc-iAyFgw gObUCG"
+/>
+`;
+
 exports[`Storyshots Primitive|Buttons/DeleteSubjectButton DeleteButton 1`] = `
 <svg
   className="sc-kAzzGY cCZvCL"
 >
   Delete.svg
+</svg>
+`;
+
+exports[`Storyshots Primitive|Images/Logo Standard 1`] = `
+<svg
+  className="sc-jTzLTM idQSUd"
+>
+  Logo.svg
 </svg>
 `;
 
