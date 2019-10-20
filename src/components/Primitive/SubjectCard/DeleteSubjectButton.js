@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 import { ReactComponent as Delete } from '../../../assets/SubjectCard/Delete.svg'

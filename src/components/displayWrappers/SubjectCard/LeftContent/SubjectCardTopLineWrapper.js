@@ -17,11 +17,6 @@ const Wrapper = ({profileName, timeAgo, ...props}) => {
     )
 }
 
-Wrapper.propTypes = {
-    profileName: PropTypes.string.isRequired,
-    timeAgo: PropTypes.string.isRequired
-}
-
 const SubjectCardTopLineWrapper = styled(Wrapper)`
     /* border: 1px solid olive; */
     width: 100%;
@@ -32,5 +27,9 @@ const SubjectCardTopLineWrapper = styled(Wrapper)`
     display: flex;
     place-content: flex-start;
 `
+SubjectCardTopLineWrapper.propTypes = {
+    profileName: PropTypes.string.isRequired,
+    timeAgo: PropTypes.string.isRequired
+}
 
 export default SubjectCardTopLineWrapper

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const Title = styled.div`
@@ -12,9 +11,5 @@ const Title = styled.div`
     text-align: left;
     font-size: 18px;
 `
-
-Title.propTypes = {
-    title: PropTypes.string.isRequired
-}
 
 export default Title

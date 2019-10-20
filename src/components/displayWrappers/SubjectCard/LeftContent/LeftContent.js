@@ -18,14 +18,6 @@ const Wrapper = ({profileName, timeAgo, title, subjectSummary, numberOfComments,
     )
 }
 
-Wrapper.propType = {
-    ProfileName: PropTypes.string.isRequired,
-    TimeAgo: PropTypes.string.isRequired,
-    Title: PropTypes.string.isRequired,
-    Summary: PropTypes.string.isRequired,
-    NumberOfComments: PropTypes.string.isRequired,
-}
-
 const LeftContent = styled(Wrapper)`
     /* border: 1px solid gold; */
     height: 100%;
@@ -36,5 +28,13 @@ const LeftContent = styled(Wrapper)`
     flex-direction: column;
     justify-content: flex-start;
 `
+
+LeftContent.propType = {
+    profileName: PropTypes.string.isRequired,
+    timeAgo: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    subjectSummary: PropTypes.string.isRequired,
+    numberOfComments: PropTypes.string.isRequired,
+}
 
 export default LeftContent

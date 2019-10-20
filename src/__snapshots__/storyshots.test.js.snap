@@ -91,7 +91,7 @@ exports[`Storyshots DisplayWrappers|NavBar/LogoWrapper Standard 1`] = `
 
 exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
 <div
-  className="sc-VigVT kcRElN"
+  className="sc-kkGfuU drQifv"
 >
   <div
     className="sc-EHOje kOcwsO"
@@ -630,29 +630,101 @@ exports[`Storyshots DisplayWrappers|NavBar/SignUpInButtonWrapper Standard 1`] = 
 </div>
 `;
 
-exports[`Storyshots DisplayWrappers|SubjctCard/Images/ProfPicSubjectCard Standard 1`] = `
+exports[`Storyshots DisplayWrappers|SubjectCard/BottomWrapper Standard 1`] = `
 <div
-  className="sc-VigVT jPryKi"
+  className="sc-fjdhpX lmElKw"
+>
+  <div
+    className="sc-VigVT edkKCb"
+  >
+    <svg>
+      Bubble.svg
+    </svg>
+  </div>
+  <div
+    className="sc-jTzLTM elYBEB"
+  >
+    12 Comments
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectCard/BubbleWrapper Standard 1`] = `
+<div
+  className="sc-VigVT edkKCb"
 >
   <svg>
-    Userpic.svg
+    Bubble.svg
   </svg>
 </div>
 `;
 
-exports[`Storyshots DisplayWrappers|SubjectCard/Images/ProfPicSubjectCard Standard 1`] = `
+exports[`Storyshots DisplayWrappers|SubjectCard/LeftContent Standard 1`] = `
 <div
-  className="sc-VigVT jPryKi"
+  className="sc-kpOJdX bklzZ"
 >
-  <svg>
-    Userpic.svg
-  </svg>
+  <div
+    className="sc-chPdSV iqUwwj"
+  >
+    <div
+      className="sc-jzJRlG jAUIYn"
+    >
+      <svg>
+        Userpic.svg
+      </svg>
+    </div>
+    <div
+      className="sc-cSHVUG gALDcU"
+    >
+      
+       
+      James Wheeler Montgommery McGuiness
+    </div>
+    <div
+      className="sc-cSHVUG gALDcU"
+    >
+      •
+       
+      1 Hour Ago
+    </div>
+    <svg
+      className="sc-kAzzGY cCZvCL"
+    >
+      Delete.svg
+    </svg>
+  </div>
+  <div
+    className="sc-kgoBCf cibMDk"
+  >
+    Puerto Rico - Cherish Its Natural Wonders
+  </div>
+  <p
+    className="sc-kGXeez bwRWEU"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor lacus luctus accumsan tortor posuere ac ut consequat semper. Magna ac placerat vestibulum lectus mauris ultrices eros in. Tellus id interdum velit laoreet. Sit amet luctus venenatis lectus magna fringilla urna porttitor. Tincidunt augue interdum velit euismod in pellentesque massa. Justo eget magna fermentum iaculis eu non diam phasellus vestibulum. Egestas erat imperdiet sed euismod nisi. Vulputate eu scelerisque felis imperdiet. Ante in nibh mauris cursus mattis molestie. Tincidunt praesent semper feugiat nibh sed pulvinar proin. Tortor at auctor urna nunc id cursus. Est ante in nibh mauris cursus mattis molestie a iaculis. Vel pharetra vel turpis nunc eget. Sed pulvinar proin gravida hendrerit. Facilisis leo vel fringilla est ullamcorper eget nulla. Tempus imperdiet nulla malesuada pellentesque. Proin libero nunc consequat interdum varius sit amet mattis. Urna cursus eget nunc scelerisque viverra mauris. Nec feugiat in fermentum posuere urna nec tincidunt praesent. Metus vulputate eu scelerisque felis imperdiet proin. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Id leo in vitae turpis massa sed elementum. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Vel pharetra vel turpis nunc eget lorem. Tellus cras adipiscing enim eu turpis egestas. Tellus in metus vulputate eu. Lacus sed turpis tincidunt id. Neque sodales ut etiam sit amet. Mauris sit amet massa vitae tortor condimentum lacinia quis vel.
+  </p>
+  <div
+    className="sc-fjdhpX lmElKw"
+  >
+    <div
+      className="sc-VigVT edkKCb"
+    >
+      <svg>
+        Bubble.svg
+      </svg>
+    </div>
+    <div
+      className="sc-jTzLTM elYBEB"
+    >
+      12 Comments
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Storyshots DisplayWrappers|SubjectCard/ProfPicSubjectCard Standard 1`] = `
 <div
-  className="sc-VigVT jPryKi"
+  className="sc-jzJRlG jAUIYn"
 >
   <svg>
     Userpic.svg
@@ -660,38 +732,337 @@ exports[`Storyshots DisplayWrappers|SubjectCard/ProfPicSubjectCard Standard 1`] 
 </div>
 `;
 
-exports[`Storyshots DisplayWrappers|SubjectCard/SubjectCardTopLineWrapper Standard 1`] = `
+exports[`Storyshots DisplayWrappers|SubjectCard/RightContent C 1`] = `
 <div
-  className="sc-jzJRlG dGtcxo"
+  className="sc-hMqMXs gSWtHi"
 >
   <div
-    className="sc-VigVT jPryKi"
+    className="sc-jKJlTe IaQDz"
+  >
+    <div
+      className="sc-dxgOiQ dMRUAS"
+    >
+      147 Votes
+    </div>
+    <div
+      className="sc-ckVGcZ dFaksg"
+    >
+      Cause
+    </div>
+  </div>
+  <img
+    className="sc-eNQAEJ eXCLQw"
+    src="PuertoRico_VdPR.jpg"
+  />
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectCard/RightContent P 1`] = `
+<div
+  className="sc-hMqMXs gSWtHi"
+>
+  <div
+    className="sc-jKJlTe IaQDz"
+  >
+    <div
+      className="sc-dxgOiQ kNXWuv"
+    >
+      147 Votes
+    </div>
+    <div
+      className="sc-ckVGcZ jXuUye"
+    >
+      Post
+    </div>
+  </div>
+  <img
+    className="sc-eNQAEJ eXCLQw"
+    src="PuertoRico_VdPR.jpg"
+  />
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectCard/RightContent Standard 1`] = `
+<div
+  className="sc-hMqMXs gSWtHi"
+>
+  <div
+    className="sc-jKJlTe IaQDz"
+  >
+    <div
+      className="sc-dxgOiQ dMRUAS"
+    />
+    <div
+      className="sc-ckVGcZ dFaksg"
+    >
+      Cause
+    </div>
+  </div>
+  <img
+    className="sc-eNQAEJ eXCLQw"
+  />
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectCard/SubjectCard C 1`] = `
+<div
+  className="sc-kEYyzF iJdNmb"
+>
+  <div
+    className="sc-kpOJdX bklzZ"
+  >
+    <div
+      className="sc-chPdSV iqUwwj"
+    >
+      <div
+        className="sc-jzJRlG jAUIYn"
+      >
+        <svg>
+          Userpic.svg
+        </svg>
+      </div>
+      <div
+        className="sc-cSHVUG gALDcU"
+      >
+        
+         
+        James Wheeler Montgommery McGuiness 
+      </div>
+      <div
+        className="sc-cSHVUG gALDcU"
+      >
+        •
+         
+        1 hour ago
+      </div>
+      <svg
+        className="sc-kAzzGY cCZvCL"
+      >
+        Delete.svg
+      </svg>
+    </div>
+    <div
+      className="sc-kgoBCf cibMDk"
+    >
+      Puerto Rico - Cherish Its Natural Wonders
+    </div>
+    <p
+      className="sc-kGXeez bwRWEU"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor lacus luctus accumsan tortor posuere ac ut consequat semper. Magna ac placerat vestibulum lectus mauris ultrices eros in. Tellus id interdum velit laoreet. Sit amet luctus venenatis lectus magna fringilla urna porttitor. Tincidunt augue interdum velit euismod in pellentesque massa. Justo eget magna fermentum iaculis eu non diam phasellus vestibulum. Egestas erat imperdiet sed euismod nisi. Vulputate eu scelerisque felis imperdiet. Ante in nibh mauris cursus mattis molestie. Tincidunt praesent semper feugiat nibh sed pulvinar proin. Tortor at auctor urna nunc id cursus. Est ante in nibh mauris cursus mattis molestie a iaculis. Vel pharetra vel turpis nunc eget. Sed pulvinar proin gravida hendrerit. Facilisis leo vel fringilla est ullamcorper eget nulla. Tempus imperdiet nulla malesuada pellentesque. Proin libero nunc consequat interdum varius sit amet mattis. Urna cursus eget nunc scelerisque viverra mauris. Nec feugiat in fermentum posuere urna nec tincidunt praesent. Metus vulputate eu scelerisque felis imperdiet proin. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Id leo in vitae turpis massa sed elementum. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Vel pharetra vel turpis nunc eget lorem. Tellus cras adipiscing enim eu turpis egestas. Tellus in metus vulputate eu. Lacus sed turpis tincidunt id. Neque sodales ut etiam sit amet. Mauris sit amet massa vitae tortor condimentum lacinia quis vel.
+    </p>
+    <div
+      className="sc-fjdhpX lmElKw"
+    >
+      <div
+        className="sc-VigVT edkKCb"
+      >
+        <svg>
+          Bubble.svg
+        </svg>
+      </div>
+      <div
+        className="sc-jTzLTM elYBEB"
+      >
+        12 Comments
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-hMqMXs gSWtHi"
+  >
+    <div
+      className="sc-jKJlTe IaQDz"
+    >
+      <div
+        className="sc-dxgOiQ dMRUAS"
+      >
+        147 Votes
+      </div>
+      <div
+        className="sc-ckVGcZ dFaksg"
+      >
+        Cause
+      </div>
+    </div>
+    <img
+      className="sc-eNQAEJ eXCLQw"
+      src="PuertoRico_VdPR.jpg"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectCard/SubjectCard P 1`] = `
+<div
+  className="sc-kEYyzF iJdNmb"
+>
+  <div
+    className="sc-kpOJdX bklzZ"
+  >
+    <div
+      className="sc-chPdSV iqUwwj"
+    >
+      <div
+        className="sc-jzJRlG jAUIYn"
+      >
+        <svg>
+          Userpic.svg
+        </svg>
+      </div>
+      <div
+        className="sc-cSHVUG gALDcU"
+      >
+        
+         
+        James Wheeler Montgommery McGuiness 
+      </div>
+      <div
+        className="sc-cSHVUG gALDcU"
+      >
+        •
+         
+        1 hour ago
+      </div>
+      <svg
+        className="sc-kAzzGY cCZvCL"
+      >
+        Delete.svg
+      </svg>
+    </div>
+    <div
+      className="sc-kgoBCf cibMDk"
+    >
+      Puerto Rico - Cherish Its Natural Wonders
+    </div>
+    <p
+      className="sc-kGXeez bwRWEU"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor lacus luctus accumsan tortor posuere ac ut consequat semper. Magna ac placerat vestibulum lectus mauris ultrices eros in. Tellus id interdum velit laoreet. Sit amet luctus venenatis lectus magna fringilla urna porttitor. Tincidunt augue interdum velit euismod in pellentesque massa. Justo eget magna fermentum iaculis eu non diam phasellus vestibulum. Egestas erat imperdiet sed euismod nisi. Vulputate eu scelerisque felis imperdiet. Ante in nibh mauris cursus mattis molestie. Tincidunt praesent semper feugiat nibh sed pulvinar proin. Tortor at auctor urna nunc id cursus. Est ante in nibh mauris cursus mattis molestie a iaculis. Vel pharetra vel turpis nunc eget. Sed pulvinar proin gravida hendrerit. Facilisis leo vel fringilla est ullamcorper eget nulla. Tempus imperdiet nulla malesuada pellentesque. Proin libero nunc consequat interdum varius sit amet mattis. Urna cursus eget nunc scelerisque viverra mauris. Nec feugiat in fermentum posuere urna nec tincidunt praesent. Metus vulputate eu scelerisque felis imperdiet proin. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Id leo in vitae turpis massa sed elementum. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Vel pharetra vel turpis nunc eget lorem. Tellus cras adipiscing enim eu turpis egestas. Tellus in metus vulputate eu. Lacus sed turpis tincidunt id. Neque sodales ut etiam sit amet. Mauris sit amet massa vitae tortor condimentum lacinia quis vel.
+    </p>
+    <div
+      className="sc-fjdhpX lmElKw"
+    >
+      <div
+        className="sc-VigVT edkKCb"
+      >
+        <svg>
+          Bubble.svg
+        </svg>
+      </div>
+      <div
+        className="sc-jTzLTM elYBEB"
+      >
+        12 Comments
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-hMqMXs gSWtHi"
+  >
+    <div
+      className="sc-jKJlTe IaQDz"
+    >
+      <div
+        className="sc-dxgOiQ kNXWuv"
+      >
+        147 Votes
+      </div>
+      <div
+        className="sc-ckVGcZ jXuUye"
+      >
+        Post
+      </div>
+    </div>
+    <img
+      className="sc-eNQAEJ eXCLQw"
+      src="PuertoRico_VdPR.jpg"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectCard/SubjectCardTopLineWrapper Standard 1`] = `
+<div
+  className="sc-chPdSV iqUwwj"
+>
+  <div
+    className="sc-jzJRlG jAUIYn"
   >
     <svg>
       Userpic.svg
     </svg>
   </div>
   <div
-    className="sc-jTzLTM jLOmfJ"
-    isTimeAgo={false}
+    className="sc-cSHVUG gALDcU"
   >
     
      
-    James Montgommery Wheeler McGuiness
+    James Wheeler Montgommery McGuiness
   </div>
   <div
-    className="sc-jTzLTM jLOmfJ"
-    isTimeAgo={true}
+    className="sc-cSHVUG gALDcU"
   >
     •
      
     1 Hour Ago
   </div>
   <svg
-    className="sc-fjdhpX drGMxq"
+    className="sc-kAzzGY cCZvCL"
   >
     Delete.svg
   </svg>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectCard/SubjectInfoWrapper C 1`] = `
+<div
+  className="sc-jKJlTe IaQDz"
+>
+  <div
+    className="sc-dxgOiQ dMRUAS"
+  >
+    193 Votes
+  </div>
+  <div
+    className="sc-ckVGcZ dFaksg"
+  >
+    Cause
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectCard/SubjectInfoWrapper P 1`] = `
+<div
+  className="sc-jKJlTe IaQDz"
+>
+  <div
+    className="sc-dxgOiQ kNXWuv"
+  >
+    1000000 Votes
+  </div>
+  <div
+    className="sc-ckVGcZ jXuUye"
+  >
+    Post
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectCard/SubjectInfoWrapper Standard 1`] = `
+<div
+  className="sc-jKJlTe IaQDz"
+>
+  <div
+    className="sc-dxgOiQ dMRUAS"
+  >
+    TEST
+  </div>
+  <div
+    className="sc-ckVGcZ dFaksg"
+  >
+    Cause
+  </div>
 </div>
 `;
 
@@ -752,25 +1123,16 @@ exports[`Storyshots Primitive|/Text/ProfileInfoNavBar Standard 1`] = `
 
 exports[`Storyshots Primitive|Buttons/DeleteSubjectButton DeleteButton 1`] = `
 <svg
-  className="sc-fjdhpX drGMxq"
+  className="sc-kAzzGY cCZvCL"
 >
   Delete.svg
 </svg>
 `;
 
-exports[`Storyshots Primitive|Images/ProfPicSubjectCard Standard 1`] = `
-<div
-  className="sc-jzJRlG jAUIYn"
->
-  <svg>
-    Userpic.svg
-  </svg>
-</div>
-`;
-
-exports[`Storyshots Primitive|Images/ProfileImage Standard 1`] = `
+exports[`Storyshots Primitive|Images/SubjectImage Standard 1`] = `
 <img
-  className="sc-jTzLTM ccMzdV"
+  className="sc-eNQAEJ eXCLQw"
+  src="PuertoRico_VdPR.jpg"
 />
 `;
 
@@ -861,8 +1223,7 @@ exports[`Storyshots Primitive|Links/LinkNavBar Standard 1`] = `
 
 exports[`Storyshots Primitive|Text/NameTimeAgo Name 1`] = `
 <div
-  className="sc-fjdhpX fTqDOp"
-  isTimeAgo={false}
+  className="sc-cSHVUG gALDcU"
 >
   
    
@@ -872,8 +1233,7 @@ exports[`Storyshots Primitive|Text/NameTimeAgo Name 1`] = `
 
 exports[`Storyshots Primitive|Text/NameTimeAgo Standard 1`] = `
 <div
-  className="sc-fjdhpX fTqDOp"
-  isTimeAgo={false}
+  className="sc-cSHVUG gALDcU"
 >
   
    
@@ -883,8 +1243,7 @@ exports[`Storyshots Primitive|Text/NameTimeAgo Standard 1`] = `
 
 exports[`Storyshots Primitive|Text/NameTimeAgo TimeAgo 1`] = `
 <div
-  className="sc-fjdhpX fTqDOp"
-  isTimeAgo={true}
+  className="sc-cSHVUG gALDcU"
 >
   •
    
@@ -892,22 +1251,114 @@ exports[`Storyshots Primitive|Text/NameTimeAgo TimeAgo 1`] = `
 </div>
 `;
 
-exports[`Storyshots SubjectCar|Images/ProfPicSubjectCard Standard 1`] = `
+exports[`Storyshots Primitive|text/CommentsIndicator Content 1`] = `
 <div
-  className="sc-VigVT jPryKi"
+  className="sc-jTzLTM elYBEB"
 >
-  <svg>
-    Userpic.svg
-  </svg>
+  12 Comments
 </div>
 `;
 
-exports[`Storyshots SubjectCard|Images/ProfPicSubjectCard Standard 1`] = `
+exports[`Storyshots Primitive|text/CommentsIndicator Standard 1`] = `
 <div
-  className="sc-VigVT jPryKi"
+  className="sc-jTzLTM elYBEB"
 >
-  <svg>
-    Userpic.svg
-  </svg>
+  Test
+</div>
+`;
+
+exports[`Storyshots Primitive|text/Info Standard 1`] = `
+<div
+  className="sc-iAyFgw jvxvKT"
+>
+  Voz de Puerto Rico (Voz de PR) is a social platform that allows users to take an active role in the progression of human needs, social betterment and national development of Puerto Rico. It is community based, and provides a voice to those who wish to enact change across society.
+</div>
+`;
+
+exports[`Storyshots Primitive|text/SubjectSummary Long Summary 1`] = `
+<p
+  className="sc-kGXeez bwRWEU"
+>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor lacus luctus accumsan tortor posuere ac ut consequat semper. Magna ac placerat vestibulum lectus mauris ultrices eros in. Tellus id interdum velit laoreet. Sit amet luctus venenatis lectus magna fringilla urna porttitor. Tincidunt augue interdum velit euismod in pellentesque massa. Justo eget magna fermentum iaculis eu non diam phasellus vestibulum. Egestas erat imperdiet sed euismod nisi. Vulputate eu scelerisque felis imperdiet. Ante in nibh mauris cursus mattis molestie. Tincidunt praesent semper feugiat nibh sed pulvinar proin. Tortor at auctor urna nunc id cursus. Est ante in nibh mauris cursus mattis molestie a iaculis. Vel pharetra vel turpis nunc eget. Sed pulvinar proin gravida hendrerit. Facilisis leo vel fringilla est ullamcorper eget nulla. Tempus imperdiet nulla malesuada pellentesque. Proin libero nunc consequat interdum varius sit amet mattis. Urna cursus eget nunc scelerisque viverra mauris. Nec feugiat in fermentum posuere urna nec tincidunt praesent. Metus vulputate eu scelerisque felis imperdiet proin. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Id leo in vitae turpis massa sed elementum. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Vel pharetra vel turpis nunc eget lorem. Tellus cras adipiscing enim eu turpis egestas. Tellus in metus vulputate eu. Lacus sed turpis tincidunt id. Neque sodales ut etiam sit amet. Mauris sit amet massa vitae tortor condimentum lacinia quis vel.
+</p>
+`;
+
+exports[`Storyshots Primitive|text/SubjectSummary Standard 1`] = `
+<p
+  className="sc-kGXeez bwRWEU"
+>
+  Test
+</p>
+`;
+
+exports[`Storyshots Primitive|text/SubjectTitle Long Title 1`] = `
+<div
+  className="sc-kgoBCf cibMDk"
+>
+  Puerto Rico - Cherish Its Natural Wonders and Come and Visit Us to See How We Do Things Differently. Our nature is amazing and our people are full of life
+</div>
+`;
+
+exports[`Storyshots Primitive|text/SubjectTitle Standard 1`] = `
+<div
+  className="sc-kgoBCf cibMDk"
+>
+  Test
+</div>
+`;
+
+exports[`Storyshots Primitive|text/SubjectTitle Title 1`] = `
+<div
+  className="sc-kgoBCf cibMDk"
+>
+  Puerto Rico - Cherish Its Natural Wonders
+</div>
+`;
+
+exports[`Storyshots Primitive|text/SubjectType C 1`] = `
+<div
+  className="sc-ckVGcZ dFaksg"
+>
+  Cause
+</div>
+`;
+
+exports[`Storyshots Primitive|text/SubjectType P 1`] = `
+<div
+  className="sc-ckVGcZ jXuUye"
+>
+  Post
+</div>
+`;
+
+exports[`Storyshots Primitive|text/SubjectType Standard 1`] = `
+<div
+  className="sc-ckVGcZ dFaksg"
+>
+  Cause
+</div>
+`;
+
+exports[`Storyshots Primitive|text/SubjectVotes C 1`] = `
+<div
+  className="sc-dxgOiQ dMRUAS"
+>
+  178 Votes
+</div>
+`;
+
+exports[`Storyshots Primitive|text/SubjectVotes P 1`] = `
+<div
+  className="sc-dxgOiQ kNXWuv"
+>
+  178 Votes
+</div>
+`;
+
+exports[`Storyshots Primitive|text/SubjectVotes Standard 1`] = `
+<div
+  className="sc-dxgOiQ dMRUAS"
+>
+  123 Test
 </div>
 `;

@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 
 const Votes = styled.div`
@@ -6,6 +5,7 @@ const Votes = styled.div`
     width: 50%;
     height: 22px;
 
+    font-family: Avenir;
     font-size: 16px;
     color: ${props => props.secondary ? props.theme.secondaryColour : props.theme.primaryColour};
     text-align: left;

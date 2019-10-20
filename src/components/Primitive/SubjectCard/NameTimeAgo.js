@@ -19,10 +19,6 @@ const C = ({children, isTimeAgo, ...props}) => {
       )
 }
 
-C.propType = {
-    isTimeAgo: PropTypes.bool.isRequired
-}
-
 const NameTimeAgo = styled(C)`
     /* border: 1px solid firebrick;   */
   width: auto;
@@ -37,5 +33,9 @@ const NameTimeAgo = styled(C)`
   /* Setting the line-height to 2em centres the text */
   line-height: 2em;
 `
+
+NameTimeAgo.propType = {
+  isTimeAgo: PropTypes.bool.isRequired
+}
 
 export default NameTimeAgo
