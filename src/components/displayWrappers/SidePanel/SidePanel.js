@@ -6,13 +6,7 @@ import Logo from '../../Primitive/SidePanel/Logo'
 import Info from '../../Primitive/SidePanel/Info'
 import ActionButton from '../../Primitive/General/ActionButton'
 
-const Wrapper = ({type, ...props}) => {
-
-    switch(type) {
-        case standard:
-            styling 
-    }
-
+const Wrapper = (props) => {
     return (
       <div {...props}>
         <PRFlag />
@@ -30,43 +24,19 @@ const Wrapper = ({type, ...props}) => {
   };
   
   const SidePanel = styled(Wrapper)`
-
-  `;
-
-const standard = {
     /* border: 1px solid black; */
-    width: "300px";
-    height: "533px";
-    background-color: "#fff";
+    width: 300px;
+    height: 533px;
+    background-color: #fff;
   
-    border-radius: "5px";
-    box-shadow: "0 0 10px rgba(0, 0, 0, 0.12)";
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
   
-    display: "flex";
-    flex-direction: "column";
-    justify-content: "flex-start";
-    align-items: "center";
-    overflow: "hidden";
-}
-
-const causeOnly = {
-
-}
-
-const postOnly = {
-
-}
-
-const causeInfo = {
-
-}
-
-const postInfo = {
-
-}
-
-const changeDetails = {
-
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+  `;
 
   export default SidePanel
