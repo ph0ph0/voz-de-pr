@@ -3,13 +3,13 @@ import styled from 'styled-components'
 
 const Info = styled.div`
     width: 238px;
-    height: 220px;
+    height: auto;
     /* border: 1px solid black; */
 
     padding: 0px;
     /* margin: 0px; */
     margin-top: 21px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     /* margin-right: 31px; */
 
     color: #1b4ea0;
