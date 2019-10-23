@@ -3,7 +3,7 @@ import { storiesOf, action } from '@storybook/react'
 
 import NameInput from '../NameInput'
 
-function onChangeNameValue(event) {
+export function onChangeNameValue(event) {
     console.log(`NameChanged to: ${event.target.value}`)
 }
 
