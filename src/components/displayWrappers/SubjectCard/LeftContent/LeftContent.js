@@ -29,7 +29,7 @@ const LeftContent = styled(Wrapper)`
     justify-content: flex-start;
 `
 
-LeftContent.propType = {
+LeftContent.propTypes = {
     profileName: PropTypes.string.isRequired,
     timeAgo: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,

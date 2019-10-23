@@ -1288,6 +1288,13 @@ exports[`Storyshots Primitive|Images/SubjectImage Standard 1`] = `
 />
 `;
 
+exports[`Storyshots Primitive|Inputs/NameInput Standard 1`] = `
+<input
+  className="sc-jDwBTQ euUyxw"
+  placeholder="Name"
+/>
+`;
+
 exports[`Storyshots Primitive|Inputs/SearchBar C 1`] = `
 <input
   className="sc-bdVaJa bGHooc"

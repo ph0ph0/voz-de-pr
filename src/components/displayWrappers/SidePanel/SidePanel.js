@@ -23,23 +23,6 @@ const SidePanel = ({type, props}) => {
     }
 }
 
-const StandardWrapper = (props) => {
-    return (
-      <div {...props}>
-        <PRFlag />
-        <Logo />
-        <Info>
-          Voz de Puerto Rico (Voz de PR) is a social platform that allows users to
-          take an active role in the progression of human needs, social betterment
-          and national development of Puerto Rico. It is community based, and
-          provides a voice to those who wish to enact change across society.
-        </Info>
-        <ActionButton>Create Cause</ActionButton>
-        <ActionButton secondary>Create Post</ActionButton>
-      </div>
-    );
-};
-
 const sidePanelStyle = css`
     /* border: 1px solid black; */
     width: 300px;
@@ -56,6 +39,23 @@ const sidePanelStyle = css`
     align-items: center;
     overflow: hidden;
 ` 
+
+const StandardWrapper = (props) => {
+    return (
+      <div {...props}>
+        <PRFlag />
+        <Logo />
+        <Info>
+          Voz de Puerto Rico (Voz de PR) is a social platform that allows users to
+          take an active role in the progression of human needs, social betterment
+          and national development of Puerto Rico. It is community based, and
+          provides a voice to those who wish to enact change across society.
+        </Info>
+        <ActionButton>Create Cause</ActionButton>
+        <ActionButton secondary>Create Post</ActionButton>
+      </div>
+    );
+};
   
 const SidePanel_Standard = styled(StandardWrapper)`
     ${sidePanelStyle}
