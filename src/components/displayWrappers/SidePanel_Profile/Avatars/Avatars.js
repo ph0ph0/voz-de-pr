@@ -72,7 +72,7 @@ const AvatarsArray = [
   };
   
   const Avatars = styled(AvatarsWrapper)`
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: auto;
     height: auto;
   

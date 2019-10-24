@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300px" height="60px" viewBox="0 0 300 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#F0F0F0" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="14 33.8222389 8.12214748 38.0901699 10.3648348 31.1811368 4.48943484 26.9098301 11.7533444 26.9077438 14 20 16.2466556 26.9077438 23.5105652 26.9098301 17.6351652 31.1811368 19.8778525 38.0901699"></polygon>
+        <filter x="-0.1%" y="-2.5%" width="100.1%" height="100.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#EC220D" x="0" y="0" width="300" height="60"></rect>
+        <rect id="Rectangle-2" fill="#FFFFFF" x="0" y="12" width="300" height="12"></rect>
+        <rect id="Rectangle-2-Copy" fill="#FFFFFF" x="0" y="36" width="300" height="12"></rect>
+        <polygon id="Rectangle-83" fill="#1B4EA0" points="0 0 40 30 0 60"></polygon>
+        <g id="Star-27">
+            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+            <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+        </g>
+    </g>
+</svg>

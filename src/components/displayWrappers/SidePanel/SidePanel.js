@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
-import { ReactComponent as PRFlag } from '../../../assets/General/PRFlag.svg'
+import { ReactComponent as PRFlag } from '../../../assets/SidePanel/PRFlag.svg'
 import Logo from '../../Primitive/SidePanel/Logo'
 import Info from '../../Primitive/SidePanel/Info'
 import ActionButton from '../../Primitive/General/ActionButton'

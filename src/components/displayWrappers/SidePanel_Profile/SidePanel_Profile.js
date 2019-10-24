@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-import { ReactComponent as PRFlag } from '../../../assets/General/PRFlag.svg'
+// import PRFlag from '../../../assets/SidePanel/FuckingFlag.png'
+import { ReactComponent as PRFlag } from '../../../assets/SidePanel/PRFlag.svg' 
 import Logo from '../../Primitive/SidePanel/Logo'
 import SidePanelProfileBody from './SidePanel_Profile_Body'
 import ActionButton from '../../Primitive/General/ActionButton'
@@ -78,8 +79,8 @@ const SidePanelWrapper = props => {
   
     return (
       <div {...props}>
-        <StyledPRFlag />
-        <StyledLogo />
+        <PRFlag />
+        <Logo />
         <SidePanelProfileBody
           nameValue={nameValue}
           onChangeNameValue={onChangeNameValue}
@@ -99,19 +100,8 @@ const SidePanelWrapper = props => {
     );
   };
 
-  const StyledPRFlag = styled(PRFlag)`
-    border: 1px solid green;
-    /* margin-top: 100px;
-    margin-left: 100px; */
-    background-color: yellow;
-    z-index: 1000;
-  `
-  const StyledLogo = styled(Logo)`
-    border: 1px solid red;
-  `
-  
 const SidePanel_Profile = styled(SidePanelWrapper)`
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 300px;
     height: auto;
     background-color: #fff;

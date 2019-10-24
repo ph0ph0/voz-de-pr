@@ -21,6 +21,9 @@ const SubjectCard = styled(Wrapper)`
     /* border: 1px solid black; */
     width: 738px;
     height: 178px;
+
+    margin-top: 15px;
+
     background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
