@@ -1,5 +1,101 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots DisplayWrapper/SidePanel_Profile/Avatars/AvatarRowWithThree Standard 1`] = `
+<div>
+  <img
+    alt="profile"
+    className="sc-kpOJdX eODvir"
+    onClick={[Function]}
+    src="Person.png"
+  />
+  <img
+    alt="profile"
+    className="sc-kpOJdX eODvir"
+    onClick={[Function]}
+    src="Person.png"
+  />
+  <img
+    alt="profile"
+    className="sc-kpOJdX eODvir"
+    onClick={[Function]}
+    src="Person.png"
+  />
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers/SidePanel_Profile/Avatars/AvatarRowWithThree Standard 1`] = `
+<div>
+  <img
+    alt="profile"
+    className="sc-kpOJdX eODvir"
+    onClick={[Function]}
+    src="Person.png"
+  />
+  <img
+    alt="profile"
+    className="sc-kpOJdX eODvir"
+    onClick={[Function]}
+    src="Person.png"
+  />
+  <img
+    alt="profile"
+    className="sc-kpOJdX eODvir"
+    onClick={[Function]}
+    src="Person.png"
+  />
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers/SidePanel_Profile/Avatars/AvatarRowWithTo Standard 1`] = `
+<div
+  className="sc-ckVGcZ eUFpHl"
+>
+  <img
+    alt="profile"
+    className="sc-kpOJdX eODvir"
+    onClick={[Function]}
+    src="Person.png"
+  />
+  <img
+    alt="profile"
+    className="sc-kpOJdX eODvir"
+    onClick={[Function]}
+    src="Person.png"
+  />
+  <img
+    alt="profile"
+    className="sc-kpOJdX eODvir"
+    onClick={[Function]}
+    src="Person.png"
+  />
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers/SidePanel_Profile/Avatars/AvatarRowWithTwo Standard 1`] = `
+<div
+  className="sc-ckVGcZ eUFpHl"
+>
+  <img
+    alt="profile"
+    className="sc-kpOJdX eODvir"
+    onClick={[Function]}
+    src="Person.png"
+  />
+  <img
+    alt="profile"
+    className="sc-kpOJdX eODvir"
+    onClick={[Function]}
+    src="Person.png"
+  />
+  <img
+    alt="profile"
+    className="sc-kpOJdX eODvir"
+    onClick={[Function]}
+    src="Person.png"
+  />
+</div>
+`;
+
 exports[`Storyshots DisplayWrappers|NavBar/LinkWrapper Standard 1`] = `
 <nav
   className="sc-bxivhb dGSKYG"
@@ -750,6 +846,154 @@ exports[`Storyshots DisplayWrappers|SidePanel/SidePanel Standard 1`] = `
 </div>
 `;
 
+exports[`Storyshots DisplayWrappers|SidePanel_Profile/Avatars/Avatars Standard 1`] = `
+<div>
+  <div>
+    <img
+      alt="profile"
+      className="sc-kpOJdX eODvir"
+      onClick={[Function]}
+      src="Person.png"
+    />
+    <img
+      alt="profile"
+      className="sc-kpOJdX eODvir"
+      onClick={[Function]}
+      src="Person.png"
+    />
+    <img
+      alt="profile"
+      className="sc-kpOJdX eODvir"
+      onClick={[Function]}
+      src="Person.png"
+    />
+  </div>
+  <div
+    className="sc-ckVGcZ eUFpHl"
+  >
+    <img
+      alt="profile"
+      className="sc-kpOJdX eODvir"
+      onClick={[Function]}
+      src="Person.png"
+    />
+    <img
+      alt="profile"
+      className="sc-kpOJdX eODvir"
+      onClick={[Function]}
+      src="Person.png"
+    />
+  </div>
+  <div>
+    <img
+      alt="profile"
+      className="sc-kpOJdX eODvir"
+      onClick={[Function]}
+      src="Person.png"
+    />
+    <img
+      alt="profile"
+      className="sc-kpOJdX eODvir"
+      onClick={[Function]}
+      src="Person.png"
+    />
+    <img
+      alt="profile"
+      className="sc-kpOJdX eODvir"
+      onClick={[Function]}
+      src="Person.png"
+    />
+  </div>
+  <div
+    className="sc-ckVGcZ eUFpHl"
+  >
+    <img
+      alt="profile"
+      className="sc-kpOJdX eODvir"
+      onClick={[Function]}
+      src="Person.png"
+    />
+    <img
+      alt="profile"
+      className="sc-kpOJdX eODvir"
+      onClick={[Function]}
+      src="Person.png"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SidePanel_Profile/DropDown/DropDown Standard 1`] = `
+<div
+  className="sc-kEYyzF cRccJh"
+>
+  <div
+    className="sc-jKJlTe dcUQHY"
+    onClick={[Function]}
+  >
+    <input
+      className="sc-kpOJdX iwJGVX"
+      placeholder="Locations"
+    />
+    <div
+      className="sc-dxgOiQ Qiepv"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-caret-down fa-w-10 "
+        color="#131415"
+        data-icon="caret-down"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SidePanel_Profile/DropDown/InlineContent Standard 1`] = `
+<div
+  className="sc-jKJlTe dAkLOv"
+>
+  <input
+    className="sc-kpOJdX iwJGVX"
+    placeholder="Locations"
+  />
+  <div
+    className="sc-dxgOiQ Qiepv"
+  >
+    <svg
+      aria-hidden="true"
+      className="svg-inline--fa fa-caret-down fa-w-10 "
+      color="#131415"
+      data-icon="caret-down"
+      data-prefix="fas"
+      focusable="false"
+      role="img"
+      style={Object {}}
+      viewBox="0 0 320 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+        fill="currentColor"
+        style={Object {}}
+      />
+    </svg>
+  </div>
+</div>
+`;
+
 exports[`Storyshots DisplayWrappers|SidePanel_Profile/DropDown/ListOfLocations Standard 1`] = `
 <ul
   className="sc-dxgOiQ iXrhfl"
@@ -887,6 +1131,290 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/DropDown/ListOfLocations S
     Isabel Segunda
   </li>
 </ul>
+`;
+
+exports[`Storyshots DisplayWrappers|SidePanel_Profile/SidePanel_Profile_Body Standard 1`] = `
+<div
+  className="sc-brqgnP cBziTn"
+>
+  <div
+    className="sc-fjdhpX kthXMt"
+    profile={true}
+  >
+    Change Details
+  </div>
+  <input
+    className="sc-cvbbAY iUJmUp"
+    placeholder="Name"
+  />
+  <div
+    className="sc-eHgmQL jjCwiS"
+  >
+    <div
+      className="sc-kkGfuU ciHlsZ"
+      onClick={[Function]}
+    >
+      <input
+        className="sc-eNQAEJ gQmmxZ"
+        placeholder="Locations"
+      />
+      <div
+        className="sc-hMqMXs cfKBZj"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-caret-down fa-w-10 "
+          color="#131415"
+          data-icon="caret-down"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 320 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-jWBwVP gqGxww"
+  >
+    Select A New Avatar
+  </div>
+  <div>
+    <div>
+      <img
+        alt="profile"
+        className="sc-kpOJdX eODvir"
+        onClick={[Function]}
+        src="Person.png"
+      />
+      <img
+        alt="profile"
+        className="sc-kpOJdX eODvir"
+        onClick={[Function]}
+        src="Person.png"
+      />
+      <img
+        alt="profile"
+        className="sc-kpOJdX eODvir"
+        onClick={[Function]}
+        src="Person.png"
+      />
+    </div>
+    <div
+      className="sc-ckVGcZ eUFpHl"
+    >
+      <img
+        alt="profile"
+        className="sc-kpOJdX eODvir"
+        onClick={[Function]}
+        src="Person.png"
+      />
+      <img
+        alt="profile"
+        className="sc-kpOJdX eODvir"
+        onClick={[Function]}
+        src="Person.png"
+      />
+    </div>
+    <div>
+      <img
+        alt="profile"
+        className="sc-kpOJdX eODvir"
+        onClick={[Function]}
+        src="Person.png"
+      />
+      <img
+        alt="profile"
+        className="sc-kpOJdX eODvir"
+        onClick={[Function]}
+        src="Person.png"
+      />
+      <img
+        alt="profile"
+        className="sc-kpOJdX eODvir"
+        onClick={[Function]}
+        src="Person.png"
+      />
+    </div>
+    <div
+      className="sc-ckVGcZ eUFpHl"
+    >
+      <img
+        alt="profile"
+        className="sc-kpOJdX eODvir"
+        onClick={[Function]}
+        src="Person.png"
+      />
+      <img
+        alt="profile"
+        className="sc-kpOJdX eODvir"
+        onClick={[Function]}
+        src="Person.png"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SidePanel_Profile/SidePanelProfile Standard 1`] = `
+<div
+  className="sc-cMljjf kFVBvl"
+>
+  <svg>
+    PRFlag.svg
+  </svg>
+  <svg
+    className="sc-jTzLTM idQSUd"
+  >
+    Logo.svg
+  </svg>
+  <div
+    className="sc-brqgnP jORHnO"
+  >
+    <div
+      className="sc-fjdhpX kthXMt"
+      profile={true}
+    >
+      Change Details
+    </div>
+    <input
+      className="sc-cvbbAY iUJmUp"
+      onChange={[Function]}
+      placeholder="Name"
+      value=""
+    />
+    <div
+      className="sc-eHgmQL jjCwiS"
+    >
+      <div
+        className="sc-kkGfuU ciHlsZ"
+        onClick={[Function]}
+      >
+        <input
+          className="sc-eNQAEJ gQmmxZ"
+          onChange={[Function]}
+          placeholder="Locations"
+          value=""
+        />
+        <div
+          className="sc-hMqMXs cfKBZj"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-caret-down fa-w-10 "
+            color="#131415"
+            data-icon="caret-down"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 320 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-jWBwVP gqGxww"
+    >
+      Select A New Avatar
+    </div>
+    <div>
+      <div>
+        <img
+          alt="profile"
+          className="sc-kpOJdX eODvir"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-kpOJdX eODvir"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-kpOJdX eODvir"
+          onClick={[Function]}
+          src="Person.png"
+        />
+      </div>
+      <div
+        className="sc-ckVGcZ eUFpHl"
+      >
+        <img
+          alt="profile"
+          className="sc-kpOJdX eODvir"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-kpOJdX eODvir"
+          onClick={[Function]}
+          src="Person.png"
+        />
+      </div>
+      <div>
+        <img
+          alt="profile"
+          className="sc-kpOJdX eODvir"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-kpOJdX eODvir"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-kpOJdX eODvir"
+          onClick={[Function]}
+          src="Person.png"
+        />
+      </div>
+      <div
+        className="sc-ckVGcZ eUFpHl"
+      >
+        <img
+          alt="profile"
+          className="sc-kpOJdX eODvir"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-kpOJdX eODvir"
+          onClick={[Function]}
+          src="Person.png"
+        />
+      </div>
+    </div>
+  </div>
+  <button
+    className="sc-jzJRlG iBPOWB"
+    onClick={[Function]}
+  >
+    Change Details
+  </button>
+</div>
 `;
 
 exports[`Storyshots DisplayWrappers|SubjectCard/BottomWrapper Standard 1`] = `
@@ -1410,6 +1938,72 @@ exports[`Storyshots Primitive|Buttons/DeleteSubjectButton DeleteButton 1`] = `
 >
   Delete.svg
 </svg>
+`;
+
+exports[`Storyshots Primitive|Images/Avatar Selected 1`] = `
+<img
+  alt="profile"
+  className="sc-hzDkRC eoicOm"
+  src="Person.png"
+/>
+`;
+
+exports[`Storyshots Primitive|Images/Avatar Standard 1`] = `
+<img
+  alt="profile"
+  className="sc-hzDkRC eoicOm"
+  src="Person.png"
+/>
+`;
+
+exports[`Storyshots Primitive|Images/ClearInput Standard 1`] = `
+<div
+  className="sc-jlyJG jrhVIp"
+>
+  <svg
+    aria-hidden="true"
+    className="svg-inline--fa fa-times-circle fa-w-16 "
+    color="#d8d8d8"
+    data-icon="times-circle"
+    data-prefix="fas"
+    focusable="false"
+    role="img"
+    style={Object {}}
+    viewBox="0 0 512 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"
+      fill="currentColor"
+      style={Object {}}
+    />
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Primitive|Images/DropDownArrow Standard 1`] = `
+<div
+  className="sc-jlyJG fexCTk"
+>
+  <svg
+    aria-hidden="true"
+    className="svg-inline--fa fa-caret-down fa-w-10 "
+    color="#131415"
+    data-icon="caret-down"
+    data-prefix="fas"
+    focusable="false"
+    role="img"
+    style={Object {}}
+    viewBox="0 0 320 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+      fill="currentColor"
+      style={Object {}}
+    />
+  </svg>
+</div>
 `;
 
 exports[`Storyshots Primitive|Images/Logo Standard 1`] = `

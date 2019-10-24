@@ -9,17 +9,17 @@ import ActionButton from '../../Primitive/General/ActionButton'
 const SidePanel = ({type, props}) => {
     switch (type) {
         case "Standard":
-            return <SidePanel_Standard {...props} />
+            return <SidePanelStandard {...props} />
         case "CauseOnly":
-            return <SidePanel_CauseOnly {...props} />
+            return <SidePanelCauseOnly {...props} />
         case "PostOnly":
-                return <SidePanel_PostOnly {...props} />
+                return <SidePanelPostOnly {...props} />
         case "CauseInfo":
-            return <SidePanel_CauseInfo {...props} />
+            return <SidePanelCauseInfo {...props} />
         case "PostInfo":
-                return <SidePanel_PostInfo {...props} />
+                return <SidePanelPostInfo {...props} />
         default:
-            return <SidePanel_Standard {...props}/>
+            return <SidePanelStandard {...props}/>
     }
 }
 
@@ -57,7 +57,7 @@ const StandardWrapper = (props) => {
     );
 };
   
-const SidePanel_Standard = styled(StandardWrapper)`
+const SidePanelStandard = styled(StandardWrapper)`
     ${sidePanelStyle}
 `;
 
@@ -74,7 +74,7 @@ return (
     );
 }
 
-const SidePanel_CauseOnly = styled(CauseOnlyWrapper)`
+const SidePanelCauseOnly = styled(CauseOnlyWrapper)`
     ${sidePanelStyle}
 `
 
@@ -91,7 +91,7 @@ const PostOnlyWrapper = (props) => {
     )
 }
 
-const SidePanel_PostOnly = styled(PostOnlyWrapper)`
+const SidePanelPostOnly = styled(PostOnlyWrapper)`
     ${sidePanelStyle}
 `
 const CauseInfoWrapper = (props) => {
@@ -106,7 +106,7 @@ const CauseInfoWrapper = (props) => {
         );
 }
 
-const SidePanel_CauseInfo = styled(CauseInfoWrapper)`
+const SidePanelCauseInfo = styled(CauseInfoWrapper)`
     ${sidePanelStyle}
 `
 
@@ -122,7 +122,7 @@ const PostInfoWrapper = (props) => {
         );
 }
 
-const SidePanel_PostInfo = styled(PostInfoWrapper)`
+const SidePanelPostInfo = styled(PostInfoWrapper)`
     ${sidePanelStyle}
 `
 

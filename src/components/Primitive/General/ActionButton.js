@@ -1,11 +1,22 @@
 import styled from 'styled-components'
 
+import Info from '../SidePanel/Info'
+import SidePanel_Profile_Body from '../../DisplayWrappers/SidePanel_Profile/SidePanel_Profile_Body'
+
 const ActionButton = styled.button`
     width: 125px;
     height: 40px;
 
-    /* margin-top: ${props => (props.secondary ? "20px" : "20px")}; */
+    /* margin-top: ${props => (props.secondary ? "20px" : "0")}; */
     /* margin-bottom: ${props => (props.secondary ? "-22px" : "17px")} */
+
+    /* & + ${Info} {
+        margin-top: ${props => (props.secondary ? "20px" : "0")};
+    } */
+
+    ${SidePanel_Profile_Body} + & {
+        margin-top: ${props => (props.secondary ? "20px" : "0")};
+    }
 
     color: white;
     font-family: Avenir;

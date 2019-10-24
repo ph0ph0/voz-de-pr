@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 import SubjectCard from '../DisplayWrappers/SubjectCard/SubjectCard'
 import PR from '../../assets/SubjectCard/PuertoRico_VdPR.jpg'
+import SidePanel_Profile from '../DisplayWrappers/SidePanel_Profile/SidePanel_Profile'
+import SidePanel from '../DisplayWrappers/SidePanel/SidePanel'
 
 const Page = (props) => {
     return (
-        <SubjectCard 
+        <Fragment>
+            <SubjectCard 
             profileName = {"James Wheeler Montgommery McGuiness "}
             timeAgo = {"1 hour ago"}
             title = "Puerto Rico - Cherish Its Natural Wonders"
@@ -15,7 +18,9 @@ const Page = (props) => {
             numberOfVotes = {"147 Votes"}
             secondary = {false}
             src = {PR}
-        />
+            />
+            <SidePanel_Profile />
+        </Fragment>
     )
 }
 
