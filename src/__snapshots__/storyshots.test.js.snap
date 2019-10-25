@@ -1855,6 +1855,113 @@ exports[`Storyshots DisplayWrappers|SubjectCard/SubjectInfoWrapper Standard 1`] 
 </div>
 `;
 
+exports[`Storyshots DisplayWrappers|TopOfPage/Filters ProfileType 1`] = `
+<div
+  className="sc-TOsTZ hIfhtx"
+>
+  <button
+    className="sc-gisBJw sc-kjoXOD dawLfG"
+  >
+    My Causes
+  </button>
+  <button
+    className="sc-gisBJw sc-cHGsZl bgbCUk"
+  >
+    My Posts
+  </button>
+  <button
+    className="sc-gisBJw sc-kjoXOD dawLfG"
+  >
+    All
+  </button>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|TopOfPage/Filters Standard 1`] = `
+<div
+  className="sc-TOsTZ hIfhtx"
+>
+  <button
+    className="sc-gisBJw kgLeBs"
+  >
+    Most Votes
+  </button>
+  <button
+    className="sc-gisBJw kgLeBs"
+  >
+    Most Recent
+  </button>
+  <button
+    className="sc-gisBJw kgLeBs"
+  >
+    Reset
+  </button>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|TopOfPage/TopOfPage Profile 1`] = `
+<div
+  className="sc-cJSrbW dEsLVf"
+  typeProfile={true}
+>
+  <h1
+    className="sc-kgAjT blfLkj"
+  >
+    My Profile
+  </h1>
+  <div
+    className="sc-TOsTZ hIfhtx"
+  >
+    <button
+      className="sc-gisBJw kgLeBs"
+    >
+      Most Votes
+    </button>
+    <button
+      className="sc-gisBJw kgLeBs"
+    >
+      Most Recent
+    </button>
+    <button
+      className="sc-gisBJw kgLeBs"
+    >
+      Reset
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|TopOfPage/TopOfPage Standard 1`] = `
+<div
+  className="sc-cJSrbW dEsLVf"
+>
+  <h1
+    className="sc-kgAjT blfLkj"
+  >
+    Home Feed
+  </h1>
+  <div
+    className="sc-TOsTZ hIfhtx"
+  >
+    <button
+      className="sc-gisBJw kgLeBs"
+    >
+      Most Votes
+    </button>
+    <button
+      className="sc-gisBJw kgLeBs"
+    >
+      Most Recent
+    </button>
+    <button
+      className="sc-gisBJw kgLeBs"
+    >
+      Reset
+    </button>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Primitive|/Buttons/SignUpInButton Login 1`] = `
 <button
   className="sc-bZQynM etdfXU"
@@ -1938,6 +2045,30 @@ exports[`Storyshots Primitive|Buttons/DeleteSubjectButton DeleteButton 1`] = `
 >
   Delete.svg
 </svg>
+`;
+
+exports[`Storyshots Primitive|Buttons/Filter FilterBlueProfile 1`] = `
+<button
+  className="sc-gisBJw sc-kjoXOD dawLfG"
+>
+  My Causes
+</button>
+`;
+
+exports[`Storyshots Primitive|Buttons/Filter FilterRedProfile 1`] = `
+<button
+  className="sc-gisBJw sc-kjoXOD dawLfG"
+>
+  My Causes
+</button>
+`;
+
+exports[`Storyshots Primitive|Buttons/Filter Standard 1`] = `
+<button
+  className="sc-gisBJw kgLeBs"
+>
+  Most Comments
+</button>
 `;
 
 exports[`Storyshots Primitive|Images/Avatar Selected 1`] = `
@@ -2188,6 +2319,12 @@ exports[`Storyshots Primitive|text/Info Standard 1`] = `
 >
   Voz de Puerto Rico (Voz de PR) is a social platform that allows users to take an active role in the progression of human needs, social betterment and national development of Puerto Rico. It is community based, and provides a voice to those who wish to enact change across society.
 </div>
+`;
+
+exports[`Storyshots Primitive|text/PageTitle Standard 1`] = `
+<h1
+  className="sc-gisBJw cnLnhf"
+/>
 `;
 
 exports[`Storyshots Primitive|text/SubjectSummary Long Summary 1`] = `
