@@ -4,9 +4,9 @@ import styled from 'styled-components'
 import LeftContent from './LeftContent/LeftContent'
 import RightContent from './RightContent/RightContent'
 
-const Wrapper = ({profileName, timeAgo, title, subjectSummary, numberOfComments, numberOfVotes, secondary, src, ...props}) => {
+const Wrapper = ({author, timeAgo, title, subjectContent, numberOfComments, numberOfVotes, secondary, src, ...props}) => {
 
-    const leftProps = {profileName, timeAgo, title, subjectSummary, numberOfComments}
+    const leftProps = {author, timeAgo, title, subjectContent, numberOfComments}
     const rightProps = {numberOfVotes, secondary, src}
 
     return (
@@ -22,13 +22,15 @@ const SubjectCard = styled(Wrapper)`
     width: 738px;
     height: 178px;
 
-    margin-top: 15px;
-
     background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
 
     display: flex;
+
+    & + & {
+        margin-top: 15px;
+    }
 `
 
 export default SubjectCard

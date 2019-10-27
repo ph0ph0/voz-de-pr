@@ -7,12 +7,12 @@ import SubjectTitle from '../../../Primitive/SubjectCard/SubjectTitle'
 import SubjectSummary from '../../../Primitive/SubjectCard/SubjectSummary'
 import BottomWrapper from './BottomWrapper'
 
-const Wrapper = ({profileName, timeAgo, title, subjectSummary, numberOfComments, ...props}) => {
+const Wrapper = ({author, timeAgo, title, subjectContent, numberOfComments, ...props}) => {
     return (
         <div {...props}>
-            <SubjectCardTopLineWrapper profileName = {profileName} timeAgo = {timeAgo} />
+            <SubjectCardTopLineWrapper author = {author} timeAgo = {timeAgo} />
             <SubjectTitle>{title}</SubjectTitle>
-            <SubjectSummary>{subjectSummary}</SubjectSummary>
+            <SubjectSummary>{subjectContent}</SubjectSummary>
             <BottomWrapper>{numberOfComments}</BottomWrapper>
         </div>
     )
