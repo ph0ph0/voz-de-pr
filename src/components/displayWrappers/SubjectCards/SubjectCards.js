@@ -6,9 +6,9 @@ import SubjectCard from '../SubjectCard/SubjectCard'
 const SubjectCardsWrapper = ({arrayOfSubjectCardData, ...props}) => {
     return (
         <div {...props}>
-            {arrayOfSubjectCardData.map((subject) => (
+            {arrayOfSubjectCardData.map((subject, index) => (
                 <SubjectCard 
-                    key = {subject.title}
+                    key = {index}
                     author = {subject.author}
                     timeAgo = {subject.timeAgo} 
                     title = {subject.title}

@@ -111,10 +111,10 @@ const SubjectCardData = [
     }    
 ]
 
-const MainPageContentWrapper = ({pageTitle, ...props}) => {
+const MainPageContentWrapper = ({pageTitle, profileType, ...props}) => {
     return (
         <div {...props}>
-            <TopOfPage>{pageTitle}</TopOfPage>
+            <TopOfPage profileType = {profileType}>{pageTitle}</TopOfPage>
             <SubjectCards arrayOfSubjectCardData = {SubjectCardData}/>
         </div>
     )
@@ -130,7 +130,8 @@ const MainPageContent = styled(MainPageContentWrapper)`
 `
 
 MainPageContent.propTypes = {
-    pageTitle: PropTypes.string.isRequired
+    pageTitle: PropTypes.string.isRequired,
+    profileType: PropTypes.bool.isRequired
 }
 
 export default MainPageContent

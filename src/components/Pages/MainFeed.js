@@ -6,7 +6,7 @@ import PageContent from '../DisplayWrappers/PageContent/PageContent'
 const Page = ({...props}) => {
     return (
         <div {...props}>
-            <PageContent pageTitle = {"Home Feed"} sidePanelType = {"Standard"}/>
+            <PageContent pageTitle = {"Home Feed"} sidePanelType = {"Standard"} profileType = {false}/>
         </div>
     )
 }
