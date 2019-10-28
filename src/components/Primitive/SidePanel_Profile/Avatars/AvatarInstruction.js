@@ -11,7 +11,6 @@ const AvatarInstruction = styled.div`
   margin-bottom: 5px;
   padding-left: 15px;
 
-  font-family: Avenir;
   font-size: 14px;
   text-align: left;
   color: #878a8c;

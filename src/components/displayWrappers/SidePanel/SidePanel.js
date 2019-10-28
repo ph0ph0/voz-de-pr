@@ -28,7 +28,11 @@ const sidePanelStyle = css`
     width: 300px;
     height: auto;
     background-color: #fff;
+
     padding-bottom: 20px;
+    margin-top: 100px;
+    position: sticky;
+    top: 172px;
 
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);

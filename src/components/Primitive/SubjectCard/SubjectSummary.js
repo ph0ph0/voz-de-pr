@@ -10,7 +10,6 @@ const Summary = styled.p`
     margin: 0px;
     margin-top: 8px;
 
-    font-family: Avenir;
     color: rgba(0, 0, 0, 0.54);
     text-align: left;
     font-size: 16px;

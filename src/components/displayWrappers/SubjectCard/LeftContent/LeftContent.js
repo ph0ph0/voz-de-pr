@@ -30,10 +30,10 @@ const LeftContent = styled(Wrapper)`
 `
 
 LeftContent.propTypes = {
-    profileName: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
     timeAgo: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    subjectSummary: PropTypes.string.isRequired,
+    subjectContent: PropTypes.string.isRequired,
     numberOfComments: PropTypes.string.isRequired,
 }
 

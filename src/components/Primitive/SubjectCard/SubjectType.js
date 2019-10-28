@@ -19,7 +19,6 @@ const SubjectType = styled(type)`
 
     color: ${props => props.secondary ? props.theme.secondaryColour : props.theme.primaryColour}; 
 
-    font-family: Avenir;
     font-size: 16px;
     text-align: right;
 `

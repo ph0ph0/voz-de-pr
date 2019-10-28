@@ -17,7 +17,6 @@ function App() {
         <ThemeProvider theme = {theme}>
           <NavBar />
           <Routes />
-          <LoremContent />
         </ThemeProvider>
       </BrowserRouter>
     </Fragment>

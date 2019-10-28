@@ -19,7 +19,6 @@ const ActionButton = styled.button`
     }
 
     color: white;
-    font-family: Avenir;
     font-size: 14px;
     background-color: ${props => (props.secondary ? "#1B4EA0" : "#EC220D")};
     border-radius: 5px;

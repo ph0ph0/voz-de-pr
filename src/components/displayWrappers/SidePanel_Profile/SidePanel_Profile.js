@@ -110,6 +110,7 @@ const SidePanel_Profile = styled(SidePanelWrapper)`
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
 
     padding-bottom: 20px;
+    margin-top: 100px;
 
     display: flex;
     flex-direction: column;

@@ -28,7 +28,7 @@ const SubjectCardTopLineWrapper = styled(Wrapper)`
     place-content: flex-start;
 `
 SubjectCardTopLineWrapper.propTypes = {
-    profileName: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
     timeAgo: PropTypes.string.isRequired
 }
 

@@ -4,8 +4,6 @@ import { storiesOf } from '@storybook/react'
 import SubjectCard from '../SubjectCard'
 import PR from '../../../../assets/SubjectCard/PuertoRico_VdPR.jpg'
 
-//PROPS: profileName, timeAgo, title, subjectSummary, numberOfComments, numberOfVotes, secondary, src,
-
 storiesOf("DisplayWrappers|SubjectCard/SubjectCard", module)
     .add("C", () => 
         <SubjectCard 

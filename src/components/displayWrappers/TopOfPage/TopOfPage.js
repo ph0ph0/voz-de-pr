@@ -14,9 +14,15 @@ const TopOfPageWrapper = ({children, profileType, ...props}) => {
 }
 
 const TopOfPage = styled(TopOfPageWrapper)`
-  border: 1px solid red;
-  display: flex;
-  flex-direction: row;
+    border: 1px solid orange;
+    height: 34px;
+    
+    margin-top: 35px;
+    margin-bottom: 28px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 `
 
 export default TopOfPage

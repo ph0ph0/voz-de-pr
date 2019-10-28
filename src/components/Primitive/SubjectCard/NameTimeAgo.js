@@ -28,7 +28,6 @@ const NameTimeAgo = styled(C)`
   color: rgba(0, 0, 0, 0.54);
   text-align: left;
   font-size: 12px;
-  font-family: Avenir;
   vertical-align: center;
   /* Setting the line-height to 2em centres the text */
   line-height: 2em;

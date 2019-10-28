@@ -13,7 +13,6 @@ const Info = styled.div`
 
     color: #1b4ea0;
     text-align: justify;
-    font-family: Avenir;
     font-size: 16px;
 
     /*This is needed to make the text look similar to Sketch*/

@@ -6,7 +6,6 @@ const CommentsIndicator = styled.div`
     width: 100%;
 
     color: rgba(0, 0, 0, 0.54);
-    font-family: Avenir;
     text-align: left;
     font-size: 12px;
 `

@@ -5,6 +5,6 @@ import TopOfPage from '../TopOfPage'
 
 storiesOf("DisplayWrappers|TopOfPage/TopOfPage", module)
     .add("Standard", () => <TopOfPage>Home Feed</TopOfPage>, {
-        notes: "This is the header for most of the pages"
+        notes: "*PROPS; children: The text of the title, profileType: boolean if true, it shows the filters for the profile page.* This is the header for most of the pages"
     })
     .add("Profile", () => <TopOfPage profileType>My Profile</TopOfPage>)

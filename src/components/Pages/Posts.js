@@ -1,16 +1,28 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Page = (props) => {
+import PageContent from '../DisplayWrappers/PageContent/PageContent'
+
+
+const Page = ({...props}) => {
     return (
         <div {...props}>
-            Posts YOU CUNT
+            <PageContent pageTitle = {"Posts Lobby"} sidePanelType = {"PostOnly"}/>
         </div>
     )
 }
 
 const Posts = styled(Page)`
-    margin-top: "200px";
+    /* position: static; */
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+
+    /* Needed to make the SidePanel keep its proper height */
+    align-items: flex-start;
+    
 `
 
 export default Posts
