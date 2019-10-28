@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 export const Filter = styled.button`
-  border: 1px solid burlywood;
+border: none;
+  /* border: 1px solid burlywood; */
   height: 19px;
   font-size: 14px;
   color: #6e6f70;

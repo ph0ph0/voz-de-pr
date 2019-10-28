@@ -26,7 +26,7 @@ const FiltersWrapper = ({profileType, ...props }) => {
   };
   
   const Filters = styled(FiltersWrapper)`
-    border: 1px solid teal;
+    /* border: 1px solid teal; */
     height: 19px;
     display: flex;
   

@@ -121,7 +121,7 @@ const MainPageContentWrapper = ({pageTitle, ...props}) => {
 }
 
 const MainPageContent = styled(MainPageContentWrapper)`
-    border: 1px solid green;
+    /* border: 1px solid green; */
 
     margin-right: 30px;
 

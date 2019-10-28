@@ -61,7 +61,7 @@ const PageContentWrapper = ({pageTitle, sidePanelType, ...props}) => {
 }
 
 const PageContent = styled(PageContentWrapper)`
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     align-items: flex-start;
