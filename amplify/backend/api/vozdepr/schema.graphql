@@ -1,182 +1,131 @@
 type User
-@model
-@aws_api_key
-@aws_cognito_user_pools
-@auth(rules: [
+  @model
+  @aws_api_key
+  @aws_cognito_user_pools
+  @auth(rules:[
+    {
+      allow:owner,
+      ownerField:"id",
+      operations:[create,read,update,delete]
+    }
+  ])
   {
-    allow: owner, 
-    ownerField: "id", 
-    operations: [create, read, update, delete]
-  } 
-]) {
-  id: ID!
-  username: String!
-  email: AWSEmail!
-  avatar: S3Object!
-  posts: [Post] @connection
-  createdAt: AWSDateTime
-  updatedAt: AWSDateTime
-}
+    id:ID!
+    username:String!
+    email:AWSEmail!
+    avatar:S3Object!
+    subjects:[Subject]@connection
+    createdAt:AWSDateTime
+    updatedAt:AWSDateTime
+  }
 
-#Post related objects
+#Objects - A Subject represents both a Cause and a Post
 
-type Post
+type Subject 
   @model
   @aws_api_key
   @aws_cognito_user_pools
-  @auth(rules: [
-      {
-        allow: owner,
-        operations: [create, update, delete]
-      },
-      {
-        allow: public,
-        operations: [read]
-      }
-  ]) 
+  @auth(rules:[
+  {
+    allow:owner,
+    operations:[create,update,delete]
+  },
+  {
+    allow:public,
+    operations:[read]
+  }
+  ])
   @key(
-    name: "postsByUser",
-    fields: ["createdBy"],
-    queryField: "postsByUser"
+    name:"subjectsByUser",
+    fields:["createdBy", "type"],
+    queryField:"subjectsByUser"
   )
-{
-    id: ID!
-    createdBy: ID
-    createdAt: AWSDateTime
-    author: String
-    title: String!
-    postContent: String!
-    postImage: S3Object
-    comments: [CommentOnPost] @connection
-    votes: Int
+  {
+    id:ID!
+    createdBy:ID
+    createdAt:AWSDateTime
+    author:String
+    title:String!
+    subjectContent:String!
+    subjectImage:S3Object
+    comments:[Comment]@connection
+    votes:Int
+    type: SubjectType
+  }
+
+enum SubjectType {
+  cause
+  post
 }
 
-type CommentOnPost
-  @model
-  @aws_api_key
-  @aws_cognito_user_pools 
-  @auth(rules: [
-    {
-      allow: owner, 
-      operations: [create, update, delete]
-    },
-    {
-      allow: public,
-      operations: [read]
-    }
-  ]) 
-{
-  id: ID!
-  createdBy: ID
-  author: String
-  createdAt: AWSDateTime
-  text: String!
-  votes: Int
-  post: Post @connection
-}
 
-#Cause related objects
-
-type Cause
+type Comment
   @model
   @aws_api_key
   @aws_cognito_user_pools
-  @auth(rules: [
-    {
-      allow: owner, 
-      operations: [create, update, delete]
-    },
-    {
-        allow: public,
-        operations: [read]
-      }
-  ]) 
-  @key(
-    name: "causesByUser",
-    fields: ["createdBy"],
-    queryField: "causesByUser"
-  )
-{
-    id: ID!
-    createdBy: ID
-    createdAt: AWSDateTime
-    author: String
-    title: String!
-    causeContent: String!
-    location: String
-    causeImage: S3Object
-    comments: [CommentOnCause] @connection
-    votes: Int
-}
+  @auth(rules:[
+  {
+    allow:owner,
+    operations:[create,update,delete]
+  },
+  {
+    allow:public,
+    operations:[read]
+  }
+  ])
+  {
+    id:ID!
+    createdBy:ID
+    author:String
+    createdAt:AWSDateTime
+    text:String!
+    votes:Int
+    subject: Subject @connection
+  }
 
+#May need to add a comment type enum ie postComment and causeComment
 
-
-type CommentOnCause
-  @model
-  @aws_api_key
-  @aws_cognito_user_pools
-  @auth(rules: [
-    {
-      allow: owner,
-      operations: [create, update, delete]
-    },
-    {
-      allow: public,
-      operations: [read]
-    }
-  ])  
-{
-  id: ID!
-  createdBy: ID
-  author: String
-  createdAt: AWSDateTime
-  text: String!
-  votes: Int
-  cause: Cause @connection
-}
-
-#Vote Type
+#VoteType
 
 type Vote
   @model
   @aws_api_key
   @aws_cognito_user_pools
-  @auth(rules: [
-    {
-      allow: owner,
-      operations: [create, update, delete]
-    },
-    {
-      allow: public,
-      operations: [read]
-    }
+  @auth(rules:[
+  {
+    allow:owner,
+    operations:[create,update,delete]
+  },
+  {
+    allow:public,
+    operations:[read]
+  }
   ])
   @key(
-    name: "votesOnAnObjectByUser",
-    fields: ["objectVotedOnId", "vote", "createdBy" ],
-    queryField: "votesOnObjectByUser"
+    name:"votesOnAnSubjectsByUser",
+    fields:["subjectVotedOnId","vote","createdBy"],
+    queryField:"votesOnSubjectByUser"
   )
-{
-  """
-  id of vote = userId + post/comment/cause id + post/cause/postComment/causeComment
-  ie id = 12233455_6786758_causeComment
-  objectId is the id of the object being voted on.
-  """
-  id: ID!
-  objectVotedOnId: ID!
-  createdBy: ID
-  createdAt: AWSDateTime
-  vote: VoteType
-  voteOn: VoteOnType
-}
+  {
+    """
+    idofvote=userId+post/comment/causeid+post/cause/postComment/causeComment
+    ieid=12233455_6786758_causeComment
+    objectIdistheidoftheobjectbeingvotedon.
+    """
+    id:ID!
+    subjectVotedOnId:ID!
+    createdBy:ID
+    createdAt:AWSDateTime
+    vote:VoteType
+    voteOn:VoteOnType
+  }
 
-#Inputs and enums
+#Inputsandenums
 
-input VoteInput {
-  id: ID!
-  vote: VoteType!
-  voteOn: VoteOnType!
-
+input VoteInput{
+  id:ID!
+  vote:VoteType!
+  voteOn:VoteOnType!
 }
 
 enum VoteType {
@@ -184,23 +133,15 @@ enum VoteType {
   down
 }
 
-enum VoteOnType {
+enum VoteOnType{
   post
   cause
-  commentOnPost
-  commentOnCause
 }
 
-#Rich Media
+#RichMedia
 
-type S3Object {
-  bucket: String!
-  region: String!
-  key: String!
+type S3Object{
+  bucket:String!
+  region:String!
+  key:String!
 }
-
-
-
-
-
-

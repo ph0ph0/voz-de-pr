@@ -1,6 +1,6 @@
 {
 	"auth": {
-		"vozdepr5422d708": {
+		"vozdepr6f5fe45e": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": []
@@ -16,14 +16,14 @@
 						{
 							"authenticationType": "AMAZON_COGNITO_USER_POOLS",
 							"userPoolConfig": {
-								"userPoolId": "authvozdepr5422d708"
+								"userPoolId": "authvozdepr6f5fe45e"
 							}
 						}
 					],
 					"defaultAuthentication": {
 						"authenticationType": "API_KEY",
 						"apiKeyConfig": {
-							"description": "defaultKey",
+							"description": "defaultAPIKey",
 							"apiKeyExpirationDays": "2"
 						}
 					}

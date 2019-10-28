@@ -11,21 +11,22 @@ export const onCreateUser = `subscription OnCreateUser {
       region
       key
     }
-    createdAt
-    updatedAt
-    posts {
+    subjects {
       items {
         id
         createdBy
         createdAt
         author
         title
-        postContent
+        subjectContent
         votes
+        type
         owner
       }
       nextToken
     }
+    createdAt
+    updatedAt
   }
 }
 `;
@@ -39,21 +40,22 @@ export const onUpdateUser = `subscription OnUpdateUser {
       region
       key
     }
-    createdAt
-    updatedAt
-    posts {
+    subjects {
       items {
         id
         createdBy
         createdAt
         author
         title
-        postContent
+        subjectContent
         votes
+        type
         owner
       }
       nextToken
     }
+    createdAt
+    updatedAt
   }
 }
 `;
@@ -67,39 +69,38 @@ export const onDeleteUser = `subscription OnDeleteUser {
       region
       key
     }
-    createdAt
-    updatedAt
-    posts {
+    subjects {
       items {
         id
         createdBy
         createdAt
         author
         title
-        postContent
+        subjectContent
         votes
+        type
         owner
       }
       nextToken
     }
+    createdAt
+    updatedAt
   }
 }
 `;
-export const onCreatePost = `subscription OnCreatePost($owner: String!) {
-  onCreatePost(owner: $owner) {
+export const onCreateSubject = `subscription OnCreateSubject($owner: String!) {
+  onCreateSubject(owner: $owner) {
     id
     createdBy
     createdAt
     author
     title
-    postContent
-    postImage {
+    subjectContent
+    subjectImage {
       bucket
       region
       key
     }
-    votes
-    owner
     comments {
       items {
         id
@@ -112,24 +113,25 @@ export const onCreatePost = `subscription OnCreatePost($owner: String!) {
       }
       nextToken
     }
+    votes
+    type
+    owner
   }
 }
 `;
-export const onUpdatePost = `subscription OnUpdatePost($owner: String!) {
-  onUpdatePost(owner: $owner) {
+export const onUpdateSubject = `subscription OnUpdateSubject($owner: String!) {
+  onUpdateSubject(owner: $owner) {
     id
     createdBy
     createdAt
     author
     title
-    postContent
-    postImage {
+    subjectContent
+    subjectImage {
       bucket
       region
       key
     }
-    votes
-    owner
     comments {
       items {
         id
@@ -142,24 +144,25 @@ export const onUpdatePost = `subscription OnUpdatePost($owner: String!) {
       }
       nextToken
     }
+    votes
+    type
+    owner
   }
 }
 `;
-export const onDeletePost = `subscription OnDeletePost($owner: String!) {
-  onDeletePost(owner: $owner) {
+export const onDeleteSubject = `subscription OnDeleteSubject($owner: String!) {
+  onDeleteSubject(owner: $owner) {
     id
     createdBy
     createdAt
     author
     title
-    postContent
-    postImage {
+    subjectContent
+    subjectImage {
       bucket
       region
       key
     }
-    votes
-    owner
     comments {
       items {
         id
@@ -172,280 +175,100 @@ export const onDeletePost = `subscription OnDeletePost($owner: String!) {
       }
       nextToken
     }
+    votes
+    type
+    owner
   }
 }
 `;
-export const onCreateCommentOnPost = `subscription OnCreateCommentOnPost($owner: String!) {
-  onCreateCommentOnPost(owner: $owner) {
+export const onCreateComment = `subscription OnCreateComment($owner: String!) {
+  onCreateComment(owner: $owner) {
     id
     createdBy
     author
     createdAt
     text
     votes
-    post {
+    subject {
       id
       createdBy
       createdAt
       author
       title
-      postContent
-      postImage {
+      subjectContent
+      subjectImage {
         bucket
         region
         key
       }
-      votes
-      owner
       comments {
         nextToken
       }
+      votes
+      type
+      owner
     }
     owner
   }
 }
 `;
-export const onUpdateCommentOnPost = `subscription OnUpdateCommentOnPost($owner: String!) {
-  onUpdateCommentOnPost(owner: $owner) {
+export const onUpdateComment = `subscription OnUpdateComment($owner: String!) {
+  onUpdateComment(owner: $owner) {
     id
     createdBy
     author
     createdAt
     text
     votes
-    post {
+    subject {
       id
       createdBy
       createdAt
       author
       title
-      postContent
-      postImage {
+      subjectContent
+      subjectImage {
         bucket
         region
         key
       }
-      votes
-      owner
       comments {
         nextToken
       }
+      votes
+      type
+      owner
     }
     owner
   }
 }
 `;
-export const onDeleteCommentOnPost = `subscription OnDeleteCommentOnPost($owner: String!) {
-  onDeleteCommentOnPost(owner: $owner) {
+export const onDeleteComment = `subscription OnDeleteComment($owner: String!) {
+  onDeleteComment(owner: $owner) {
     id
     createdBy
     author
     createdAt
     text
     votes
-    post {
+    subject {
       id
       createdBy
       createdAt
       author
       title
-      postContent
-      postImage {
+      subjectContent
+      subjectImage {
         bucket
         region
         key
       }
-      votes
-      owner
       comments {
         nextToken
       }
-    }
-    owner
-  }
-}
-`;
-export const onCreateCause = `subscription OnCreateCause($owner: String!) {
-  onCreateCause(owner: $owner) {
-    id
-    createdBy
-    createdAt
-    author
-    title
-    causeContent
-    location
-    causeImage {
-      bucket
-      region
-      key
-    }
-    votes
-    owner
-    comments {
-      items {
-        id
-        createdBy
-        author
-        createdAt
-        text
-        votes
-        owner
-      }
-      nextToken
-    }
-  }
-}
-`;
-export const onUpdateCause = `subscription OnUpdateCause($owner: String!) {
-  onUpdateCause(owner: $owner) {
-    id
-    createdBy
-    createdAt
-    author
-    title
-    causeContent
-    location
-    causeImage {
-      bucket
-      region
-      key
-    }
-    votes
-    owner
-    comments {
-      items {
-        id
-        createdBy
-        author
-        createdAt
-        text
-        votes
-        owner
-      }
-      nextToken
-    }
-  }
-}
-`;
-export const onDeleteCause = `subscription OnDeleteCause($owner: String!) {
-  onDeleteCause(owner: $owner) {
-    id
-    createdBy
-    createdAt
-    author
-    title
-    causeContent
-    location
-    causeImage {
-      bucket
-      region
-      key
-    }
-    votes
-    owner
-    comments {
-      items {
-        id
-        createdBy
-        author
-        createdAt
-        text
-        votes
-        owner
-      }
-      nextToken
-    }
-  }
-}
-`;
-export const onCreateCommentOnCause = `subscription OnCreateCommentOnCause($owner: String!) {
-  onCreateCommentOnCause(owner: $owner) {
-    id
-    createdBy
-    author
-    createdAt
-    text
-    votes
-    cause {
-      id
-      createdBy
-      createdAt
-      author
-      title
-      causeContent
-      location
-      causeImage {
-        bucket
-        region
-        key
-      }
       votes
+      type
       owner
-      comments {
-        nextToken
-      }
-    }
-    owner
-  }
-}
-`;
-export const onUpdateCommentOnCause = `subscription OnUpdateCommentOnCause($owner: String!) {
-  onUpdateCommentOnCause(owner: $owner) {
-    id
-    createdBy
-    author
-    createdAt
-    text
-    votes
-    cause {
-      id
-      createdBy
-      createdAt
-      author
-      title
-      causeContent
-      location
-      causeImage {
-        bucket
-        region
-        key
-      }
-      votes
-      owner
-      comments {
-        nextToken
-      }
-    }
-    owner
-  }
-}
-`;
-export const onDeleteCommentOnCause = `subscription OnDeleteCommentOnCause($owner: String!) {
-  onDeleteCommentOnCause(owner: $owner) {
-    id
-    createdBy
-    author
-    createdAt
-    text
-    votes
-    cause {
-      id
-      createdBy
-      createdAt
-      author
-      title
-      causeContent
-      location
-      causeImage {
-        bucket
-        region
-        key
-      }
-      votes
-      owner
-      comments {
-        nextToken
-      }
     }
     owner
   }
@@ -454,7 +277,7 @@ export const onDeleteCommentOnCause = `subscription OnDeleteCommentOnCause($owne
 export const onCreateVote = `subscription OnCreateVote($owner: String!) {
   onCreateVote(owner: $owner) {
     id
-    objectVotedOnId
+    subjectVotedOnId
     createdBy
     createdAt
     vote
@@ -466,7 +289,7 @@ export const onCreateVote = `subscription OnCreateVote($owner: String!) {
 export const onUpdateVote = `subscription OnUpdateVote($owner: String!) {
   onUpdateVote(owner: $owner) {
     id
-    objectVotedOnId
+    subjectVotedOnId
     createdBy
     createdAt
     vote
@@ -478,7 +301,7 @@ export const onUpdateVote = `subscription OnUpdateVote($owner: String!) {
 export const onDeleteVote = `subscription OnDeleteVote($owner: String!) {
   onDeleteVote(owner: $owner) {
     id
-    objectVotedOnId
+    subjectVotedOnId
     createdBy
     createdAt
     vote

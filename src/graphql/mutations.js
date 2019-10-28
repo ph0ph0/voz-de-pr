@@ -11,21 +11,22 @@ export const createUser = `mutation CreateUser($input: CreateUserInput!) {
       region
       key
     }
-    createdAt
-    updatedAt
-    posts {
+    subjects {
       items {
         id
         createdBy
         createdAt
         author
         title
-        postContent
+        subjectContent
         votes
+        type
         owner
       }
       nextToken
     }
+    createdAt
+    updatedAt
   }
 }
 `;
@@ -39,21 +40,22 @@ export const updateUser = `mutation UpdateUser($input: UpdateUserInput!) {
       region
       key
     }
-    createdAt
-    updatedAt
-    posts {
+    subjects {
       items {
         id
         createdBy
         createdAt
         author
         title
-        postContent
+        subjectContent
         votes
+        type
         owner
       }
       nextToken
     }
+    createdAt
+    updatedAt
   }
 }
 `;
@@ -67,39 +69,38 @@ export const deleteUser = `mutation DeleteUser($input: DeleteUserInput!) {
       region
       key
     }
-    createdAt
-    updatedAt
-    posts {
+    subjects {
       items {
         id
         createdBy
         createdAt
         author
         title
-        postContent
+        subjectContent
         votes
+        type
         owner
       }
       nextToken
     }
+    createdAt
+    updatedAt
   }
 }
 `;
-export const createPost = `mutation CreatePost($input: CreatePostInput!) {
-  createPost(input: $input) {
+export const createSubject = `mutation CreateSubject($input: CreateSubjectInput!) {
+  createSubject(input: $input) {
     id
     createdBy
     createdAt
     author
     title
-    postContent
-    postImage {
+    subjectContent
+    subjectImage {
       bucket
       region
       key
     }
-    votes
-    owner
     comments {
       items {
         id
@@ -112,24 +113,25 @@ export const createPost = `mutation CreatePost($input: CreatePostInput!) {
       }
       nextToken
     }
+    votes
+    type
+    owner
   }
 }
 `;
-export const updatePost = `mutation UpdatePost($input: UpdatePostInput!) {
-  updatePost(input: $input) {
+export const updateSubject = `mutation UpdateSubject($input: UpdateSubjectInput!) {
+  updateSubject(input: $input) {
     id
     createdBy
     createdAt
     author
     title
-    postContent
-    postImage {
+    subjectContent
+    subjectImage {
       bucket
       region
       key
     }
-    votes
-    owner
     comments {
       items {
         id
@@ -142,24 +144,25 @@ export const updatePost = `mutation UpdatePost($input: UpdatePostInput!) {
       }
       nextToken
     }
+    votes
+    type
+    owner
   }
 }
 `;
-export const deletePost = `mutation DeletePost($input: DeletePostInput!) {
-  deletePost(input: $input) {
+export const deleteSubject = `mutation DeleteSubject($input: DeleteSubjectInput!) {
+  deleteSubject(input: $input) {
     id
     createdBy
     createdAt
     author
     title
-    postContent
-    postImage {
+    subjectContent
+    subjectImage {
       bucket
       region
       key
     }
-    votes
-    owner
     comments {
       items {
         id
@@ -172,280 +175,100 @@ export const deletePost = `mutation DeletePost($input: DeletePostInput!) {
       }
       nextToken
     }
+    votes
+    type
+    owner
   }
 }
 `;
-export const createCommentOnPost = `mutation CreateCommentOnPost($input: CreateCommentOnPostInput!) {
-  createCommentOnPost(input: $input) {
+export const createComment = `mutation CreateComment($input: CreateCommentInput!) {
+  createComment(input: $input) {
     id
     createdBy
     author
     createdAt
     text
     votes
-    post {
+    subject {
       id
       createdBy
       createdAt
       author
       title
-      postContent
-      postImage {
+      subjectContent
+      subjectImage {
         bucket
         region
         key
       }
-      votes
-      owner
       comments {
         nextToken
       }
+      votes
+      type
+      owner
     }
     owner
   }
 }
 `;
-export const updateCommentOnPost = `mutation UpdateCommentOnPost($input: UpdateCommentOnPostInput!) {
-  updateCommentOnPost(input: $input) {
+export const updateComment = `mutation UpdateComment($input: UpdateCommentInput!) {
+  updateComment(input: $input) {
     id
     createdBy
     author
     createdAt
     text
     votes
-    post {
+    subject {
       id
       createdBy
       createdAt
       author
       title
-      postContent
-      postImage {
+      subjectContent
+      subjectImage {
         bucket
         region
         key
       }
-      votes
-      owner
       comments {
         nextToken
       }
+      votes
+      type
+      owner
     }
     owner
   }
 }
 `;
-export const deleteCommentOnPost = `mutation DeleteCommentOnPost($input: DeleteCommentOnPostInput!) {
-  deleteCommentOnPost(input: $input) {
+export const deleteComment = `mutation DeleteComment($input: DeleteCommentInput!) {
+  deleteComment(input: $input) {
     id
     createdBy
     author
     createdAt
     text
     votes
-    post {
+    subject {
       id
       createdBy
       createdAt
       author
       title
-      postContent
-      postImage {
+      subjectContent
+      subjectImage {
         bucket
         region
         key
       }
-      votes
-      owner
       comments {
         nextToken
       }
-    }
-    owner
-  }
-}
-`;
-export const createCause = `mutation CreateCause($input: CreateCauseInput!) {
-  createCause(input: $input) {
-    id
-    createdBy
-    createdAt
-    author
-    title
-    causeContent
-    location
-    causeImage {
-      bucket
-      region
-      key
-    }
-    votes
-    owner
-    comments {
-      items {
-        id
-        createdBy
-        author
-        createdAt
-        text
-        votes
-        owner
-      }
-      nextToken
-    }
-  }
-}
-`;
-export const updateCause = `mutation UpdateCause($input: UpdateCauseInput!) {
-  updateCause(input: $input) {
-    id
-    createdBy
-    createdAt
-    author
-    title
-    causeContent
-    location
-    causeImage {
-      bucket
-      region
-      key
-    }
-    votes
-    owner
-    comments {
-      items {
-        id
-        createdBy
-        author
-        createdAt
-        text
-        votes
-        owner
-      }
-      nextToken
-    }
-  }
-}
-`;
-export const deleteCause = `mutation DeleteCause($input: DeleteCauseInput!) {
-  deleteCause(input: $input) {
-    id
-    createdBy
-    createdAt
-    author
-    title
-    causeContent
-    location
-    causeImage {
-      bucket
-      region
-      key
-    }
-    votes
-    owner
-    comments {
-      items {
-        id
-        createdBy
-        author
-        createdAt
-        text
-        votes
-        owner
-      }
-      nextToken
-    }
-  }
-}
-`;
-export const createCommentOnCause = `mutation CreateCommentOnCause($input: CreateCommentOnCauseInput!) {
-  createCommentOnCause(input: $input) {
-    id
-    createdBy
-    author
-    createdAt
-    text
-    votes
-    cause {
-      id
-      createdBy
-      createdAt
-      author
-      title
-      causeContent
-      location
-      causeImage {
-        bucket
-        region
-        key
-      }
       votes
+      type
       owner
-      comments {
-        nextToken
-      }
-    }
-    owner
-  }
-}
-`;
-export const updateCommentOnCause = `mutation UpdateCommentOnCause($input: UpdateCommentOnCauseInput!) {
-  updateCommentOnCause(input: $input) {
-    id
-    createdBy
-    author
-    createdAt
-    text
-    votes
-    cause {
-      id
-      createdBy
-      createdAt
-      author
-      title
-      causeContent
-      location
-      causeImage {
-        bucket
-        region
-        key
-      }
-      votes
-      owner
-      comments {
-        nextToken
-      }
-    }
-    owner
-  }
-}
-`;
-export const deleteCommentOnCause = `mutation DeleteCommentOnCause($input: DeleteCommentOnCauseInput!) {
-  deleteCommentOnCause(input: $input) {
-    id
-    createdBy
-    author
-    createdAt
-    text
-    votes
-    cause {
-      id
-      createdBy
-      createdAt
-      author
-      title
-      causeContent
-      location
-      causeImage {
-        bucket
-        region
-        key
-      }
-      votes
-      owner
-      comments {
-        nextToken
-      }
     }
     owner
   }
@@ -454,7 +277,7 @@ export const deleteCommentOnCause = `mutation DeleteCommentOnCause($input: Delet
 export const createVote = `mutation CreateVote($input: CreateVoteInput!) {
   createVote(input: $input) {
     id
-    objectVotedOnId
+    subjectVotedOnId
     createdBy
     createdAt
     vote
@@ -466,7 +289,7 @@ export const createVote = `mutation CreateVote($input: CreateVoteInput!) {
 export const updateVote = `mutation UpdateVote($input: UpdateVoteInput!) {
   updateVote(input: $input) {
     id
-    objectVotedOnId
+    subjectVotedOnId
     createdBy
     createdAt
     vote
@@ -478,7 +301,7 @@ export const updateVote = `mutation UpdateVote($input: UpdateVoteInput!) {
 export const deleteVote = `mutation DeleteVote($input: DeleteVoteInput!) {
   deleteVote(input: $input) {
     id
-    objectVotedOnId
+    subjectVotedOnId
     createdBy
     createdAt
     vote

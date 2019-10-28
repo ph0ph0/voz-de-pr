@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "vozdepr5422d708_identitypool_5422d708",
+    "identityPoolName": "vozdepr6f5fe45e_identitypool_6f5fe45e",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "vozdep5422d708",
-    "userPoolName": "vozdepr5422d708_userpool_5422d708",
+    "resourceNameTruncated": "vozdep6f5fe45e",
+    "userPoolName": "vozdepr6f5fe45e_userpool_6f5fe45e",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -28,9 +28,9 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "vozdep5422d708_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "vozdep6f5fe45e_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "resourceName": "vozdepr5422d708",
+    "resourceName": "vozdepr6f5fe45e",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
@@ -48,5 +48,10 @@
     "usernameAttributes": [
         "email"
     ],
+    "triggers": "{}",
+    "parentStack": {
+        "Ref": "AWS::StackId"
+    },
+    "permissions": [],
     "dependsOn": []
 }
