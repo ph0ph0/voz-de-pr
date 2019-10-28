@@ -27,3 +27,4 @@ Avatar.propTypes = {
 }
 
 export default Avatar
+

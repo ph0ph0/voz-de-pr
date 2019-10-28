@@ -122,8 +122,10 @@ const MainPageContentWrapper = ({pageTitle, profileType, ...props}) => {
 
 const MainPageContent = styled(MainPageContentWrapper)`
     /* border: 1px solid green; */
+    /* background-color: red; */
 
     margin-right: 30px;
+    padding-right: 0px;
 
     display: flex;
     flex-direction: column;

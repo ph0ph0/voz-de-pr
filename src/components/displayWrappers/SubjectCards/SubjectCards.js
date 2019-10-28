@@ -24,9 +24,9 @@ const SubjectCardsWrapper = ({arrayOfSubjectCardData, ...props}) => {
 }
 
 const SubjectCards = styled(SubjectCardsWrapper)`
+    /* border: 1px solid turquoise; */
     display: flex;
     flex-direction: column;
-    margin-right: 30px;
 `
 
 export default SubjectCards
