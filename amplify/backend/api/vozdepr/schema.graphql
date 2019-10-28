@@ -7,7 +7,7 @@ type User
     allow: owner, 
     ownerField: "id", 
     operations: [create, read, update, delete]
-  }
+  } 
 ]) {
   id: ID!
   username: String!
