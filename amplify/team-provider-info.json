@@ -15,5 +15,22 @@
                 "vozdepr5422d708": {}
             }
         }
+    },
+    "master": {
+        "awscloudformation": {
+            "AuthRoleName": "vozdepr-master-20191028145822-authRole",
+            "UnauthRoleArn": "arn:aws:iam::010158731603:role/vozdepr-master-20191028145822-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::010158731603:role/vozdepr-master-20191028145822-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "vozdepr-master-20191028145822-deployment",
+            "UnauthRoleName": "vozdepr-master-20191028145822-unauthRole",
+            "StackName": "vozdepr-master-20191028145822",
+            "StackId": "arn:aws:cloudformation:us-east-1:010158731603:stack/vozdepr-master-20191028145822/633c5d80-f993-11e9-999a-0e23fbf2c85e"
+        },
+        "categories": {
+            "auth": {
+                "vozdepr5422d708": {}
+            }
+        }
     }
 }

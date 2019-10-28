@@ -27,7 +27,7 @@ type Post
   @auth(rules: [
       {
         allow: owner,
-        operations: [create, read, update, delete]
+        operations: [create, update, delete]
       },
       {
         allow: public,
@@ -58,7 +58,7 @@ type CommentOnPost
   @auth(rules: [
     {
       allow: owner, 
-      operations: [create, read, update, delete]
+      operations: [create, update, delete]
     },
     {
       allow: public,
@@ -84,7 +84,7 @@ type Cause
   @auth(rules: [
     {
       allow: owner, 
-      operations: [create, read, update, delete]
+      operations: [create, update, delete]
     },
     {
         allow: public,
@@ -118,7 +118,7 @@ type CommentOnCause
   @auth(rules: [
     {
       allow: owner,
-      operations: [create, read, update, delete]
+      operations: [create, update, delete]
     },
     {
       allow: public,
@@ -144,7 +144,7 @@ type Vote
   @auth(rules: [
     {
       allow: owner,
-      operations: [create, read, update, delete]
+      operations: [create, update, delete]
     },
     {
       allow: public,
