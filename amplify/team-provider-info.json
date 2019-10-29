@@ -13,6 +13,11 @@
         "categories": {
             "auth": {
                 "vozdepr6f5fe45e": {}
+            },
+            "function": {
+                "vozdepr6f5fe45ePostConfirmation": {
+                    "GROUP": "everyone"
+                }
             }
         }
     }

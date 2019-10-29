@@ -11,6 +11,8 @@ export const onCreateUser = `subscription OnCreateUser {
       region
       key
     }
+    createdAt
+    updatedAt
     subjects {
       items {
         id
@@ -25,8 +27,6 @@ export const onCreateUser = `subscription OnCreateUser {
       }
       nextToken
     }
-    createdAt
-    updatedAt
   }
 }
 `;
@@ -40,6 +40,8 @@ export const onUpdateUser = `subscription OnUpdateUser {
       region
       key
     }
+    createdAt
+    updatedAt
     subjects {
       items {
         id
@@ -54,8 +56,6 @@ export const onUpdateUser = `subscription OnUpdateUser {
       }
       nextToken
     }
-    createdAt
-    updatedAt
   }
 }
 `;
@@ -69,6 +69,8 @@ export const onDeleteUser = `subscription OnDeleteUser {
       region
       key
     }
+    createdAt
+    updatedAt
     subjects {
       items {
         id
@@ -83,8 +85,6 @@ export const onDeleteUser = `subscription OnDeleteUser {
       }
       nextToken
     }
-    createdAt
-    updatedAt
   }
 }
 `;
@@ -101,6 +101,9 @@ export const onCreateSubject = `subscription OnCreateSubject($owner: String!) {
       region
       key
     }
+    votes
+    type
+    owner
     comments {
       items {
         id
@@ -113,9 +116,6 @@ export const onCreateSubject = `subscription OnCreateSubject($owner: String!) {
       }
       nextToken
     }
-    votes
-    type
-    owner
   }
 }
 `;
@@ -132,6 +132,9 @@ export const onUpdateSubject = `subscription OnUpdateSubject($owner: String!) {
       region
       key
     }
+    votes
+    type
+    owner
     comments {
       items {
         id
@@ -144,9 +147,6 @@ export const onUpdateSubject = `subscription OnUpdateSubject($owner: String!) {
       }
       nextToken
     }
-    votes
-    type
-    owner
   }
 }
 `;
@@ -163,6 +163,9 @@ export const onDeleteSubject = `subscription OnDeleteSubject($owner: String!) {
       region
       key
     }
+    votes
+    type
+    owner
     comments {
       items {
         id
@@ -175,9 +178,6 @@ export const onDeleteSubject = `subscription OnDeleteSubject($owner: String!) {
       }
       nextToken
     }
-    votes
-    type
-    owner
   }
 }
 `;
@@ -201,12 +201,12 @@ export const onCreateComment = `subscription OnCreateComment($owner: String!) {
         region
         key
       }
-      comments {
-        nextToken
-      }
       votes
       type
       owner
+      comments {
+        nextToken
+      }
     }
     owner
   }
@@ -232,12 +232,12 @@ export const onUpdateComment = `subscription OnUpdateComment($owner: String!) {
         region
         key
       }
-      comments {
-        nextToken
-      }
       votes
       type
       owner
+      comments {
+        nextToken
+      }
     }
     owner
   }
@@ -263,12 +263,12 @@ export const onDeleteComment = `subscription OnDeleteComment($owner: String!) {
         region
         key
       }
-      comments {
-        nextToken
-      }
       votes
       type
       owner
+      comments {
+        nextToken
+      }
     }
     owner
   }

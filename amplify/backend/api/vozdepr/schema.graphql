@@ -24,20 +24,36 @@ type User
 type Subject 
   @model
   @aws_api_key
+  @aws_iam
   @aws_cognito_user_pools
   @auth(rules:[
   {
     allow:owner,
-    operations:[create,update,delete]
+    operations:[create, read, update, delete]
   },
   {
     allow:public,
     operations:[read]
+  },
+  {
+    allow: public,
+    provider: iam,
+    operations: [read]
+  },
+  {
+    allow: groups,
+    groups: ["everyone"],
+    operations: [read]
   }
   ])
   @key(
-    name:"subjectsByUser",
+    name:"subjectsByUserByType",
     fields:["createdBy", "type"],
+    queryField:"subjectsByUserByType"
+  )
+  @key(
+    name:"subjectsByUser",
+    fields:["createdBy"],
     queryField:"subjectsByUser"
   )
   {
@@ -50,7 +66,7 @@ type Subject
     subjectImage:S3Object
     comments:[Comment]@connection
     votes:Int
-    type: SubjectType
+    type: SubjectType!
   }
 
 enum SubjectType {
@@ -62,15 +78,26 @@ enum SubjectType {
 type Comment
   @model
   @aws_api_key
+  @aws_iam
   @aws_cognito_user_pools
   @auth(rules:[
   {
     allow:owner,
-    operations:[create,update,delete]
+    operations:[create, read, update, delete]
   },
   {
     allow:public,
     operations:[read]
+  },
+  {
+    allow: public,
+    provider: iam,
+    operations: [read]
+  },
+  {
+    allow: groups,
+    groups: ["everyone"],
+    operations: [read]
   }
   ])
   {
@@ -90,20 +117,31 @@ type Comment
 type Vote
   @model
   @aws_api_key
+  @aws_iam
   @aws_cognito_user_pools
   @auth(rules:[
   {
     allow:owner,
-    operations:[create,update,delete]
+    operations:[create, read, update, delete]
   },
   {
     allow:public,
     operations:[read]
+  },
+  {
+    allow: public,
+    provider: iam,
+    operations: [read]
+  },
+  {
+    allow: groups,
+    groups: ["everyone"],
+    operations: [read]
   }
   ])
   @key(
-    name:"votesOnAnSubjectsByUser",
-    fields:["subjectVotedOnId","vote","createdBy"],
+    name:"votesOnSubjectByUser",
+    fields:["subjectVotedOnId", "createdBy"],
     queryField:"votesOnSubjectByUser"
   )
   {

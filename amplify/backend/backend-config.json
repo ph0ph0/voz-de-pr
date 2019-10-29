@@ -3,7 +3,17 @@
 		"vozdepr6f5fe45e": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
-			"dependsOn": []
+			"dependsOn": [
+				{
+					"category": "function",
+					"resourceName": "vozdepr6f5fe45ePostConfirmation",
+					"triggerProvider": "Cognito",
+					"attributes": [
+						"Arn",
+						"Name"
+					]
+				}
+			]
 		}
 	},
 	"api": {
@@ -18,6 +28,9 @@
 							"userPoolConfig": {
 								"userPoolId": "authvozdepr6f5fe45e"
 							}
+						},
+						{
+							"authenticationType": "AWS_IAM"
 						}
 					],
 					"defaultAuthentication": {
@@ -29,6 +42,13 @@
 					}
 				}
 			}
+		}
+	},
+	"function": {
+		"vozdepr6f5fe45ePostConfirmation": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true
 		}
 	}
 }

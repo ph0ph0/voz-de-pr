@@ -11,6 +11,8 @@ export const createUser = `mutation CreateUser($input: CreateUserInput!) {
       region
       key
     }
+    createdAt
+    updatedAt
     subjects {
       items {
         id
@@ -25,8 +27,6 @@ export const createUser = `mutation CreateUser($input: CreateUserInput!) {
       }
       nextToken
     }
-    createdAt
-    updatedAt
   }
 }
 `;
@@ -40,6 +40,8 @@ export const updateUser = `mutation UpdateUser($input: UpdateUserInput!) {
       region
       key
     }
+    createdAt
+    updatedAt
     subjects {
       items {
         id
@@ -54,8 +56,6 @@ export const updateUser = `mutation UpdateUser($input: UpdateUserInput!) {
       }
       nextToken
     }
-    createdAt
-    updatedAt
   }
 }
 `;
@@ -69,6 +69,8 @@ export const deleteUser = `mutation DeleteUser($input: DeleteUserInput!) {
       region
       key
     }
+    createdAt
+    updatedAt
     subjects {
       items {
         id
@@ -83,8 +85,6 @@ export const deleteUser = `mutation DeleteUser($input: DeleteUserInput!) {
       }
       nextToken
     }
-    createdAt
-    updatedAt
   }
 }
 `;
@@ -101,6 +101,9 @@ export const createSubject = `mutation CreateSubject($input: CreateSubjectInput!
       region
       key
     }
+    votes
+    type
+    owner
     comments {
       items {
         id
@@ -113,9 +116,6 @@ export const createSubject = `mutation CreateSubject($input: CreateSubjectInput!
       }
       nextToken
     }
-    votes
-    type
-    owner
   }
 }
 `;
@@ -132,6 +132,9 @@ export const updateSubject = `mutation UpdateSubject($input: UpdateSubjectInput!
       region
       key
     }
+    votes
+    type
+    owner
     comments {
       items {
         id
@@ -144,9 +147,6 @@ export const updateSubject = `mutation UpdateSubject($input: UpdateSubjectInput!
       }
       nextToken
     }
-    votes
-    type
-    owner
   }
 }
 `;
@@ -163,6 +163,9 @@ export const deleteSubject = `mutation DeleteSubject($input: DeleteSubjectInput!
       region
       key
     }
+    votes
+    type
+    owner
     comments {
       items {
         id
@@ -175,9 +178,6 @@ export const deleteSubject = `mutation DeleteSubject($input: DeleteSubjectInput!
       }
       nextToken
     }
-    votes
-    type
-    owner
   }
 }
 `;
@@ -201,12 +201,12 @@ export const createComment = `mutation CreateComment($input: CreateCommentInput!
         region
         key
       }
-      comments {
-        nextToken
-      }
       votes
       type
       owner
+      comments {
+        nextToken
+      }
     }
     owner
   }
@@ -232,12 +232,12 @@ export const updateComment = `mutation UpdateComment($input: UpdateCommentInput!
         region
         key
       }
-      comments {
-        nextToken
-      }
       votes
       type
       owner
+      comments {
+        nextToken
+      }
     }
     owner
   }
@@ -263,12 +263,12 @@ export const deleteComment = `mutation DeleteComment($input: DeleteCommentInput!
         region
         key
       }
-      comments {
-        nextToken
-      }
       votes
       type
       owner
+      comments {
+        nextToken
+      }
     }
     owner
   }
