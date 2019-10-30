@@ -34,3 +34,4 @@ const SubjectCard = styled(Wrapper)`
 `
 
 export default SubjectCard
+

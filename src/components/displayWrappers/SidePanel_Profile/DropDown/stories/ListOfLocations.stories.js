@@ -7,5 +7,5 @@ import { onChangeNameValue } from '../../../../Primitive/SidePanel_Profile/stori
 
 storiesOf("DisplayWrappers|SidePanel_Profile/DropDown/ListOfLocations", module)
     .add("Standard", () => <ListOfLocations locationValue = {""} onLocationSelected = {onChangeNameValue}/>, {
-        notes: "*PROPS; locationValue: the current location value set in the container. onLocationSelected: set the current location in the container*"
+        notes: "*PROPS; locationValue: the current location value set in the container. onLocationSelected: function to set the current location in the container*"
     })

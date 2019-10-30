@@ -22,7 +22,6 @@ const AvatarsArray = [
   ];
   
   const AvatarsWrapper = ({ selectedAvatar, onClickAv, ...props }) => {
-    console.log(Avatars.length);
 
     //Note that objects can only have string keys, so the keys are converted to a string.
   

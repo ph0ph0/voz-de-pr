@@ -1,3 +1,5 @@
+//This component encapsulates everything that is displayed below the nav bar ie the main page content and the sidebar
+
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
