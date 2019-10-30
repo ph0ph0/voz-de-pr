@@ -17,7 +17,7 @@ const Avatar = styled(AvatarWrapper)`
 
     border-radius: 100px;
 
-    background-color: ${props => props.selectedAvatar === props.tag ? "#EC220D" : "white"};
+    background-color: ${props => props.selectedAvatar === props.tag ? props.theme.primaryColour : "white"};
 `;
 
 Avatar.propTypes = {

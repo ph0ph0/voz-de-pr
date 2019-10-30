@@ -20,7 +20,7 @@ const ActionButton = styled.button`
 
     color: white;
     font-size: 14px;
-    background-color: ${props => (props.secondary ? "#1B4EA0" : "#EC220D")};
+    background-color: ${props => (props.secondary ? props.theme.secondaryColour : props.theme.primaryColour)};
     border-radius: 5px;
     border: none;
 

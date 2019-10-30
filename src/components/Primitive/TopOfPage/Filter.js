@@ -14,11 +14,11 @@ border: none;
 
 export const FilterRedProfile = styled(Filter)`
   :hover {
-    color: #EC220D
+    color: ${props => props.theme.primaryColour}
   }
 `
 export const FilterBlueProfile = styled(Filter)`
   :hover {
-    color: #1B4EA0
+    color: ${props => props.theme.secondaryColour}
   }
 `
