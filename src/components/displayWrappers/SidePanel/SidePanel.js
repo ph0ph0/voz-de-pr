@@ -1,11 +1,12 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { Link } from 'react-router-dom'
 
 import { ReactComponent as PRFlag } from '../../../assets/SidePanel/PRFlag.svg'
 import Logo from '../../Primitive/SidePanel/Logo'
 import Info from '../../Primitive/SidePanel/Info'
-import ActionButton from '../../Primitive/General/ActionButton'
+import CreateSubjectButton from '../../Primitive/SidePanel/SidePanelActionButton'
+
+
 
 const SidePanel = ({type, props}) => {
     switch (type) {
@@ -56,8 +57,8 @@ const StandardWrapper = (props) => {
           and national development of Puerto Rico. It is community based, and
           provides a voice to those who wish to enact change across society.
         </Info>
-        <ActionButton>Create Cause</ActionButton>
-        <ActionButton secondary>Create Post</ActionButton>
+        <CreateSubjectButton />
+        <CreateSubjectButton secondary/>
       </div>
     );
 };
@@ -74,7 +75,7 @@ return (
         <Info>
             A Cause in Voz de PR is a request for assistance. It should be used to bring attention to a situation that requires help. Help can be in the form of volunteer work, a donation, or any other type of assistance that would help the Cause to achieve its goal! If you would like to make a donation, please make a note of the Cause ID and donate via ATH MOVIL.
         </Info>
-        <ActionButton>Create Cause</ActionButton>
+        <CreateSubjectButton />
     </div>
     );
 }
@@ -91,7 +92,7 @@ const PostOnlyWrapper = (props) => {
             <Info>
                 A Post in Voz de PR is curated information that will be useful to the people of Puerto Rico. A  Post aims to inform using knowledge, facts, figures, news articles, or general information that may benefit other users. It can be used as the starting point for a conversation relevant to Puerto Rico!
             </Info>
-            <ActionButton secondary>Create Post</ActionButton>
+            <CreateSubjectButton secondary/>
         </div>
     )
 }

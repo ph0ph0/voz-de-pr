@@ -6,6 +6,7 @@ import Causes from './Causes'
 import Posts from './Posts'
 import Profile from './Profile'
 import CreateCause from './CreateCause'
+import CreatePost from './CreatePost'
 
 const Routes = () => {
     return (
@@ -26,7 +27,7 @@ const Routes = () => {
                 <CreateCause />
             </Route>
             <Route path = "/create-post">
-                <CreateCause />
+                <CreatePost />
             </Route>
         </Switch>
     )

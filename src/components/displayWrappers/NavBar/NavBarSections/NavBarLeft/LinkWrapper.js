@@ -7,9 +7,9 @@ const Wrapper = (props) => {
     return (
         <nav {...props}>
             <LinkNavBar to = {"/"} {...props}>HOME</LinkNavBar>
-            <LinkNavBar to = {"/Causes"} {...props}>CAUSES</LinkNavBar>
-            <LinkNavBar to = {"/Posts"} {...props}>POSTS</LinkNavBar>
-            <LinkNavBar to = {"/Profile"} {...props}>PROFILE</LinkNavBar>
+            <LinkNavBar to = {"/causes"} {...props}>CAUSES</LinkNavBar>
+            <LinkNavBar to = {"/posts"} {...props}>POSTS</LinkNavBar>
+            <LinkNavBar to = {"/profile"} {...props}>PROFILE</LinkNavBar>
         </nav>
     )
 }
