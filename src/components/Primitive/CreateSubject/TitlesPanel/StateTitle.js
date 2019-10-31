@@ -1,10 +1,9 @@
-import React from 'react'
 import styled from 'styled-components'
 
 const StateTitle = styled.p`
     /* border: 1px solid orange; */
     color: ${props =>
-        props.type === props.currentState && props.secondary
+        (props.type === props.currentState) && props.secondary
         ? "#1B4EA0"
         : props.type === props.currentState
         ? "#EC220D"

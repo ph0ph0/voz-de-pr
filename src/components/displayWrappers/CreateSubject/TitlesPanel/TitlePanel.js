@@ -9,6 +9,7 @@ const TitlePanelWrapper = ({
     currentState,
     secondary,
     title,
+    onClickTitlePanel,
     ...props
   }) => {
     function renderSwitch(type) {
@@ -42,7 +43,7 @@ const TitlePanelWrapper = ({
       }
     }
     return (
-      <div {...props}>
+      <div {...props} onClick = {() => onClickTitlePanel(type)}>
         {renderSwitch(type)}
         <StateTitle type={type} secondary={secondary} currentState={currentState}>
           {title}
@@ -72,6 +73,10 @@ const TitlePanel = styled(TitlePanelWrapper)`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    :hover {
+      cursor: pointer
+    }
 `
 
 export default TitlePanel

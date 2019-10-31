@@ -1,6 +1,6 @@
 //This is the Card which the CreateSubject component wraps around in order to provide it with state
 
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import ContentBody from './ContentBody/ContentBody'
@@ -10,10 +10,15 @@ import TitlesPanel from './TitlesPanel/TitlesPanel'
 
 const CreateSubjectWrapper = ({ secondary, ...props }) => {
 
-  const state = "image"
+  const [currentState, setCurrentState] = useState("content")
+
+  const onClickTitlePanel = (type) => {
+    setCurrentState(type)
+    window.log(`new currentState: ${currentState}`)
+  }
 
   function renderSwitch() {
-    switch (state) {
+    switch (currentState) {
       case "content":
         return <ContentBody secondary={secondary} />;
       case "image":
@@ -27,8 +32,8 @@ const CreateSubjectWrapper = ({ secondary, ...props }) => {
 
   return (
     <div {...props}>
-      <TitlesPanel secondary={secondary} currentState={state} />
-      {renderSwitch(state)}
+      <TitlesPanel secondary={secondary} currentState={currentState} onClickTitlePanel = {onClickTitlePanel}/>
+      {renderSwitch(currentState)}
     </div>
   );
   };
