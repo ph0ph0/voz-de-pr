@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 import TopOfPage from '../TopOfPage/TopOfPage'
-import SubjectCards from '../SubjectCards/SubjectCards'
+import SubjectCards from '../../DisplayWrappers/SubjectCards/SubjectCards'
 import PR from '../../../assets/SubjectCard/PuertoRico_VdPR.jpg'
 
 const SubjectCardData = [ 
@@ -111,16 +111,16 @@ const SubjectCardData = [
     }    
 ]
 
-const MainPageContentWrapper = ({pageTitle, profileType, ...props}) => {
+const FeedMainPageContentWrapper = ({pageTitle, profileType, ...props}) => {
     return (
         <div {...props}>
-            <TopOfPage profileType = {profileType}>{pageTitle}</TopOfPage>
+            <TopOfPage profileType = {profileType} shouldShowFilters = {true}>{pageTitle}</TopOfPage>
             <SubjectCards arrayOfSubjectCardData = {SubjectCardData}/>
         </div>
     )
 }
 
-const MainPageContent = styled(MainPageContentWrapper)`
+const FeedMainPageContent = styled(FeedMainPageContentWrapper)`
     /* border: 1px solid green; */
     /* background-color: red; */
 
@@ -131,9 +131,9 @@ const MainPageContent = styled(MainPageContentWrapper)`
     flex-direction: column;
 `
 
-MainPageContent.propTypes = {
+FeedMainPageContent.propTypes = {
     pageTitle: PropTypes.string.isRequired,
     profileType: PropTypes.bool.isRequired
 }
 
-export default MainPageContent
+export default FeedMainPageContent

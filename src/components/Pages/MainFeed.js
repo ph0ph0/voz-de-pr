@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import PageContent from '../DisplayWrappers/PageContent/PageContent'
+import FeedPageContent from '../PageContentWrappers/FeedPages/FeedPageContent'
 
 const Page = ({...props}) => {
     return (
         <div {...props}>
-            <PageContent pageTitle = {"Home Feed"} sidePanelType = {"Standard"} profileType = {false}/>
+            <FeedPageContent pageTitle = {"Home Feed"} sidePanelType = {"Standard"} profileType = {false}/>
         </div>
     )
 }

@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import PageContent from '../DisplayWrappers/PageContent/PageContent'
+import FeedPageContent from '../PageContentWrappers/FeedPages/FeedPageContent'
 
 
 const Page = ({...props}) => {
     return (
         <div {...props}>
-            <PageContent pageTitle = {"Posts Lobby"} sidePanelType = {"PostOnly"} profileType = {false}/>
+            <FeedPageContent pageTitle = {"Posts Lobby"} sidePanelType = {"PostOnly"} profileType = {false}/>
         </div>
     )
 }

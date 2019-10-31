@@ -5,11 +5,11 @@ import PropTypes from 'prop-types'
 import Filters from './Filters'
 import PageTitle from '../../Primitive/TopOfPage/PageTitle'
 
-const TopOfPageWrapper = ({children, profileType, ...props}) => {
+const TopOfPageWrapper = ({children, profileType, shouldShowFilters, ...props}) => {
     return (
         <div {...props}>
             <PageTitle>{children}</PageTitle>
-            <Filters profileType = {profileType}/>
+            {shouldShowFilters && <Filters profileType = {profileType}/>}
         </div>
     )
 }
@@ -27,7 +27,7 @@ const TopOfPage = styled(TopOfPageWrapper)`
 `
 TopOfPage.propTypes = {
     children: PropTypes.string.isRequired,
-    profileType: PropTypes.bool.isRequired
+    shouldShowFilters: PropTypes.bool.isRequired
 }
 
 export default TopOfPage

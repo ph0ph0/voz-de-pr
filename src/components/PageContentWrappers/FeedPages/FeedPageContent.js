@@ -4,9 +4,9 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-import MainPageContent from '../MainPageContent/MainPageContent'
-import SidePanel from '../SidePanel/SidePanel'
-import SidePanelProfile from '../SidePanel_Profile/SidePanel_Profile'
+import MainPageContent from './FeedMainPageContent'
+import SidePanel from '../../DisplayWrappers/SidePanel/SidePanel'
+import SidePanelProfile from '../../DisplayWrappers/SidePanel_Profile/SidePanel_Profile'
 
 const PageContentWrapper = ({pageTitle, sidePanelType, profileType, ...props}) => {
 
