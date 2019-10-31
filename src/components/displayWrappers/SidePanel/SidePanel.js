@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import { Link } from 'react-router-dom'
 
 import { ReactComponent as PRFlag } from '../../../assets/SidePanel/PRFlag.svg'
 import Logo from '../../Primitive/SidePanel/Logo'

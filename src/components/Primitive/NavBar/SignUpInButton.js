@@ -20,6 +20,10 @@ const SignUpInButton = styled.button`
     cursor: pointer;
   }
 
+  :focus {
+      outline: none;
+    }
+
 `
 
 export default SignUpInButton

@@ -29,6 +29,14 @@ const ActionButton = styled.button`
         margin-top: 20px
     }
 
+    :hover {
+        cursor: pointer
+    }
+
+    :focus {
+      outline: none;
+    }
+
 `
 
 export default ActionButton
