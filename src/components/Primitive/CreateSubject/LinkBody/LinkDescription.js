@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const DescriptionInputWrapper = ({ api, ...props }) => {
     return (
@@ -30,5 +31,9 @@ const LinkDescription = styled(DescriptionInputWrapper)`
         outline: 0;
     }
 `
+
+LinkDescription.propTypes = {
+    api: PropTypes.object.isRequired
+}
 
 export default LinkDescription

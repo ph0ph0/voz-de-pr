@@ -133,11 +133,15 @@ exports[`Storyshots DisplayWrappers|CreateSubject/ContentBody/ContentBody Standa
 >
   <input
     className="sc-bdVaJa bGXvgD"
+    onChange={[Function]}
     placeholder="Title"
+    value="Test"
   />
   <textarea
     className="sc-bwzfXH faSnTU"
+    onChange={[Function]}
     placeholder="Post for all of Puerto Rico to hear!"
+    value="Test"
   />
   <button
     className="sc-kAzzGY cKQenn"
@@ -226,11 +230,15 @@ exports[`Storyshots DisplayWrappers|CreateSubject/CreateSubject/CreateSubject St
   >
     <input
       className="sc-bdVaJa bGXvgD"
+      onChange={[Function]}
       placeholder="Title"
+      value=""
     />
     <textarea
       className="sc-bwzfXH faSnTU"
+      onChange={[Function]}
       placeholder="Post for all of Puerto Rico to hear!"
+      value=""
     />
     <button
       className="sc-kAzzGY cKQenn"
@@ -247,7 +255,9 @@ exports[`Storyshots DisplayWrappers|CreateSubject/ImageBody/ImageBody Standard 1
 >
   <input
     className="sc-kgoBCf fuUrsX"
+    onChange={[Function]}
     placeholder="Description"
+    value="Test"
   />
   <div
     className="sc-kpOJdX hHtAst"
@@ -272,11 +282,15 @@ exports[`Storyshots DisplayWrappers|CreateSubject/LinkBody/LinkBody Cause 1`] = 
 >
   <input
     className="sc-ckVGcZ eOshxs"
+    onChange={[Function]}
     placeholder="Description"
+    value="Test"
   />
   <textarea
-    className="sc-jKJlTe cViQYR"
+    className="sc-jKJlTe deeDDH"
+    onChange={[Function]}
     placeholder="URL"
+    value="Test"
   />
   <button
     className="sc-kAzzGY cKQenn"
@@ -292,11 +306,15 @@ exports[`Storyshots DisplayWrappers|CreateSubject/LinkBody/LinkBody Post 1`] = `
 >
   <input
     className="sc-ckVGcZ eOshxs"
+    onChange={[Function]}
     placeholder="Description"
+    value="Test"
   />
   <textarea
-    className="sc-jKJlTe jmHopg"
+    className="sc-jKJlTe ihmYgl"
+    onChange={[Function]}
     placeholder="URL"
+    value="Test"
   />
   <button
     className="sc-kAzzGY fzWLFQ"
@@ -4213,11 +4231,15 @@ exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Cause 1`] 
       >
         <input
           className="sc-bdVaJa bGXvgD"
+          onChange={[Function]}
           placeholder="Title"
+          value=""
         />
         <textarea
           className="sc-bwzfXH faSnTU"
+          onChange={[Function]}
           placeholder="Post for all of Puerto Rico to hear!"
+          value=""
         />
         <button
           className="sc-kAzzGY cKQenn"
@@ -4341,11 +4363,15 @@ exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Post 1`] =
       >
         <input
           className="sc-bdVaJa bGXvgD"
+          onChange={[Function]}
           placeholder="Title"
+          value=""
         />
         <textarea
           className="sc-bwzfXH faSnTU"
+          onChange={[Function]}
           placeholder="Post for all of Puerto Rico to hear!"
+          value=""
         />
         <button
           className="sc-kAzzGY cKQenn"
@@ -4467,11 +4493,15 @@ exports[`Storyshots PageContentWrappers|CreatePages/CreatePageMainContent Cause 
     >
       <input
         className="sc-bdVaJa bGXvgD"
+        onChange={[Function]}
         placeholder="Title"
+        value=""
       />
       <textarea
         className="sc-bwzfXH faSnTU"
+        onChange={[Function]}
         placeholder="Post for all of Puerto Rico to hear!"
+        value=""
       />
       <button
         className="sc-kAzzGY cKQenn"
@@ -4575,11 +4605,15 @@ exports[`Storyshots PageContentWrappers|CreatePages/CreatePageMainContent Post 1
     >
       <input
         className="sc-bdVaJa bGXvgD"
+        onChange={[Function]}
         placeholder="Title"
+        value=""
       />
       <textarea
         className="sc-bwzfXH faSnTU"
+        onChange={[Function]}
         placeholder="Post for all of Puerto Rico to hear!"
+        value=""
       />
       <button
         className="sc-kAzzGY cKQenn"
@@ -7857,14 +7891,18 @@ exports[`Storyshots Primitive|text/CommentsIndicator Standard 1`] = `
 exports[`Storyshots Primitive|text/CreateSubjectSubjectTitle Standard 1`] = `
 <input
   className="sc-bdVaJa bGXvgD"
+  onChange={[Function]}
   placeholder="Title"
+  value="Test"
 />
 `;
 
 exports[`Storyshots Primitive|text/ImageDescription Standard 1`] = `
 <input
   className="sc-kgoBCf fuUrsX"
+  onChange={[Function]}
   placeholder="Description"
+  value="Test"
 />
 `;
 
@@ -7879,21 +7917,27 @@ exports[`Storyshots Primitive|text/Info Standard 1`] = `
 exports[`Storyshots Primitive|text/LinkDescription Standard 1`] = `
 <input
   className="sc-ckVGcZ eOshxs"
+  onChange={[Function]}
   placeholder="Description"
+  value="Test"
 />
 `;
 
 exports[`Storyshots Primitive|text/LinkTextArea Cause 1`] = `
 <textarea
-  className="sc-jKJlTe cViQYR"
+  className="sc-jKJlTe deeDDH"
+  onChange={[Function]}
   placeholder="URL"
+  value="Test"
 />
 `;
 
 exports[`Storyshots Primitive|text/LinkTextArea Post 1`] = `
 <textarea
-  className="sc-jKJlTe jmHopg"
+  className="sc-jKJlTe ihmYgl"
+  onChange={[Function]}
   placeholder="URL"
+  value="Test"
 />
 `;
 
@@ -7908,7 +7952,9 @@ exports[`Storyshots Primitive|text/PageTitle Standard 1`] = `
 exports[`Storyshots Primitive|text/SubjectContent Standard 1`] = `
 <textarea
   className="sc-bwzfXH faSnTU"
+  onChange={[Function]}
   placeholder="Post for all of Puerto Rico to hear!"
+  value="Test"
 />
 `;
 

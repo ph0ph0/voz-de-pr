@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const SubjectLinkTextWrapper = ({ api, secondary, ...props}) => {
     return (
@@ -42,5 +43,9 @@ const SubjectLinkTextArea = styled(SubjectLinkTextWrapper)`
         color: ${props => props.secondary ? props.theme.secondaryColour : props.theme.primaryColour};
     }
 `
+
+SubjectLinkTextArea.propTypes = {
+    api: PropTypes.object.isRequired
+}
 
 export default SubjectLinkTextArea

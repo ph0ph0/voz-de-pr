@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const SubjectContentWrapper = ({ api, ...props }) => {
     return (
@@ -36,5 +37,9 @@ const SubjectContentWrapper = ({ api, ...props }) => {
       outline: none;
     }
   `;
+
+SubjectContent.propTypes = {
+  api: PropTypes.object.isRequired
+}
 
   export default SubjectContent

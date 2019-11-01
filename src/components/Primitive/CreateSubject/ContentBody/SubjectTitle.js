@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const TitleInputWrapper = ({ api, ...props }) => {
     return <input  
@@ -28,5 +29,9 @@ const TitleInputWrapper = ({ api, ...props }) => {
       outline: 0;
     }
   `;
+
+SubjectTitle.propTypes = {
+  api: PropTypes.object.isRequired
+}
 
 export default SubjectTitle
