@@ -21,7 +21,7 @@ const AvatarsArray = [
     Person
   ];
   
-  const AvatarsWrapper = ({ selectedAvatar, onClickAv, ...props }) => {
+  const AvatarsWrapper = ({ api, ...props }) => {
 
     //Note that objects can only have string keys, so the keys are converted to a string.
   
@@ -48,23 +48,19 @@ const AvatarsArray = [
       <div {...props}>
         <AvatarRowWithThree
           avatars={RowOfThree_One}
-          onClickAv={onClickAv}
-          selectedAvatar={selectedAvatar}
+          api = {api}
         />
         <AvatarRowWithTwo
           avatars={RowOfTwo_One}
-          onClickAv={onClickAv}
-          selectedAvatar={selectedAvatar}
+          api = {api}
         />
         <AvatarRowWithThree
           avatars={RowOfThree_Two}
-          onClickAv={onClickAv}
-          selectedAvatar={selectedAvatar}
+          api = {api}
         />
         <AvatarRowWithTwo
           avatars={RowOfTwo_Two}
-          onClickAv={onClickAv}
-          selectedAvatar={selectedAvatar}
+          api = {api}
         />
       </div>
     );
@@ -83,8 +79,19 @@ const AvatarsArray = [
   `;
 
 Avatars.propTypes = {
+  api: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    locationValue: PropTypes.string.isRequired,
+    listOpen: PropTypes.bool.isRequired,
+    selectedLocation: PropTypes.string.isRequired,
     selectedAvatar: PropTypes.string,
-    onClickAv: PropTypes.func.isRequired
+    updateNameValue: PropTypes.func.isRequired,
+    toggleList: PropTypes.func.isRequired,
+    updateLocationValue: PropTypes.func.isRequired,
+    onLocationSelected: PropTypes.func.isRequired,
+    resetDropdown: PropTypes.func.isRequired
+  })
 }
+
 
 export default Avatars

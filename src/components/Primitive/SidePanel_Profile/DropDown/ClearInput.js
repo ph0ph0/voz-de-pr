@@ -4,14 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 
 
-const ClearInputWrapper = ({ onChangeValue, resetDropDown, ...props }) => {
+const ClearInputWrapper = ({ api, ...props }) => {
  
     return (
       <div {...props}>
         <FontAwesomeIcon
           icon={faTimesCircle}
           color="#d8d8d8"
-          onClick={resetDropDown}
+          onClick={api.resetDropdown}
         />
       </div>
     );

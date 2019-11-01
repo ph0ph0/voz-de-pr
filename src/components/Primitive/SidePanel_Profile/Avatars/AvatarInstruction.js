@@ -17,7 +17,7 @@ const AvatarInstruction = styled.div`
 
   /* This keeps the rest of the content in line when the DropDown opens! */
   ${DropDown} + & {
-    margin-top: ${props => (props.listOpen ? "61px" : "0px")};
+    margin-top: ${props => (props.api.listOpen ? "61px" : "0px")};
   }
 `;
 

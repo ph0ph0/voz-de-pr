@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-const InputWrapper = ({ onChangeLocationValue, locationValue, ...props }) => {
+const InputWrapper = ({ api, ...props }) => {
     return (
       <input
         placeholder={"Locations"}
-        value={locationValue}
-        onChange={onChangeLocationValue}
+        value={api.locationValue}
+        onChange={(event) => api.updateLocationValue(event.target.value)}
         {...props}
       />
     );
@@ -33,8 +33,18 @@ const Input = styled(InputWrapper)`
 `;
 
 Input.propTypes = {
-    onChangeLocationValue: PropTypes.func.isRequired,
-    locationValue: PropTypes.string.isRequired
+  api: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    locationValue: PropTypes.string.isRequired,
+    listOpen: PropTypes.bool.isRequired,
+    selectedLocation: PropTypes.string.isRequired,
+    selectedAvatar: PropTypes.string,
+    updateNameValue: PropTypes.func.isRequired,
+    toggleList: PropTypes.func.isRequired,
+    updateLocationValue: PropTypes.func.isRequired,
+    onLocationSelected: PropTypes.func.isRequired,
+    resetDropdown: PropTypes.func.isRequired
+  })
 }
 
 export default Input

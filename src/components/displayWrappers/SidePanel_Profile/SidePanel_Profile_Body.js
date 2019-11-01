@@ -19,34 +19,20 @@ const ProfileHeader = styled(Info)`
 `
 
 const SidePanelProfileBodyWrapper = ({
-    nameValue,
-    onChangeNameValue,
-    toggleList,
-    onClickAv,
-    listOpen,
-    selectedAvatar,
-    onChangeLocationValue,
-    locationValue,
-    onLocationSelected,
-    resetDropDown,
+    api,
     ...props
   }) => {
     return (
       <div {...props}>
         <ProfileHeader>Change Details</ProfileHeader>
-        <Name nameValue={nameValue} onChangeNameValue={onChangeNameValue} />
+        <Name api = {api} />
         <DropDown
-          listOpen={listOpen}
-          toggleList={toggleList}
-          onChangeLocationValue={onChangeLocationValue}
-          locationValue={locationValue}
-          onLocationSelected={onLocationSelected}
-          resetDropDown={resetDropDown}
+           api = {api}
         />
-        <AvatarInstruction listOpen={listOpen}>
+        <AvatarInstruction api = {api}>
           Select A New Avatar
         </AvatarInstruction>
-        <Avatars selectedAvatar={selectedAvatar} onClickAv={onClickAv} />
+        <Avatars api = {api} />
       </div>
     );
   };
@@ -61,16 +47,18 @@ const SidePanelProfileBody = styled(SidePanelProfileBodyWrapper)`
 `;
 
 SidePanelProfileBody.propTypes = {
-    nameValue: PropTypes.string.isRequired,
-    onChangeNameValue: PropTypes.func.isRequired,
-    toggleList: PropTypes.func.isRequired,
-    onClickAv: PropTypes.func.isRequired,
-    listOpen: PropTypes.bool.isRequired,
-    selectedAvatar: PropTypes.string,
-    onChangeLocationValue: PropTypes.func.isRequired,
+  api: PropTypes.shape({
+    name: PropTypes.string.isRequired,
     locationValue: PropTypes.string.isRequired,
+    listOpen: PropTypes.bool.isRequired,
+    selectedLocation: PropTypes.string.isRequired,
+    selectedAvatar: PropTypes.string,
+    updateNameValue: PropTypes.func.isRequired,
+    toggleList: PropTypes.func.isRequired,
+    updateLocationValue: PropTypes.func.isRequired,
     onLocationSelected: PropTypes.func.isRequired,
-    resetDropDown: PropTypes.func.isRequired
+    resetDropdown: PropTypes.func.isRequired
+  })
 }
 
 

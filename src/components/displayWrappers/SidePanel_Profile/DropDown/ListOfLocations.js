@@ -6,8 +6,7 @@ import { locations } from '../../../../Constants/Constants'
 import Location from '../../../Primitive/SidePanel_Profile/DropDown/Location'
 
 const ListOfLocationsWrapper = ({
-    locationValue,
-    onLocationSelected,
+    api,
     ...props
   }) => {
     return (
@@ -16,10 +15,10 @@ const ListOfLocationsWrapper = ({
           location =>
             location.title
               .toLowerCase()
-              .includes(locationValue.toLowerCase()) && (
+              .includes(api.locationValue.toLowerCase()) && (
               <Location
                 key={location.title}
-                onClick={() => onLocationSelected(location.title)}
+                onClick={() => api.onLocationSelected(location.title)}
               >
                 {location.title}
               </Location>
@@ -49,8 +48,18 @@ const ListOfLocations = styled(ListOfLocationsWrapper)`
 `;
 
 ListOfLocations.propTypes = {
+  api: PropTypes.shape({
+    name: PropTypes.string.isRequired,
     locationValue: PropTypes.string.isRequired,
-    onLocationSelected: PropTypes.func.isRequired
+    listOpen: PropTypes.bool.isRequired,
+    selectedLocation: PropTypes.string.isRequired,
+    selectedAvatar: PropTypes.string,
+    updateNameValue: PropTypes.func.isRequired,
+    toggleList: PropTypes.func.isRequired,
+    updateLocationValue: PropTypes.func.isRequired,
+    onLocationSelected: PropTypes.func.isRequired,
+    resetDropdown: PropTypes.func.isRequired
+  })
 }
 
 export default ListOfLocations

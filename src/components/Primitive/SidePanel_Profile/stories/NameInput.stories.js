@@ -3,9 +3,18 @@ import { storiesOf, action } from '@storybook/react'
 
 import NameInput from '../NameInput'
 
-export function onChangeNameValue(event) {
-    console.log(`NameChanged to: ${event.target.value}`)
+const mockApi = {
+    name: "",
+    locationValue: "",
+    listOpen: false,
+    selectedLocation: "",
+    selectedAvatar: "",
+    updateNameValue: "",
+    toggleList: () => {},
+    updateLocationValue: () => {},
+    onLocationSelected: () => {},
+    resetDropdown: () => {}
 }
 
 storiesOf("Primitive|Inputs/NameInput", module)
-    .add("Standard", () => <NameInput nameValue = {""} onChangeNameValue = {onChangeNameValue} />)
+    .add("Standard", () => <NameInput nameValue = {""} onChangeNameValue = {mockApi.onChangeNameValue} />)

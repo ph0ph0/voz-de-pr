@@ -6,8 +6,7 @@ import Avatar from '../../../Primitive/SidePanel_Profile/Avatars/Avatar'
 
 const AvatarRowThreeWrapper = ({
     avatars,
-    onClickAv,
-    selectedAvatar,
+    api,
     ...props
   }) => {
     // console.log(`cunt ${Object.keys(avatars)}`)
@@ -21,8 +20,8 @@ const AvatarRowThreeWrapper = ({
               src={png}
               key={key}
               tag={key}
-              onClick={() => onClickAv(key)}
-              selectedAvatar={selectedAvatar}
+              api={api}
+              onClick={() => api.onClickAv(key)}
             />
           );
         })}
@@ -37,9 +36,18 @@ const AvatarRowWithThree = styled(AvatarRowThreeWrapper)`
 `;
 
 AvatarRowWithThree.propTypes = {
-    avatars: PropTypes.node.isRequired,
-    onClickAv: PropTypes.func.isRequired,
-    selectedAvatar: PropTypes.string.isRequired
+  api: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    locationValue: PropTypes.string.isRequired,
+    listOpen: PropTypes.bool.isRequired,
+    selectedLocation: PropTypes.string.isRequired,
+    selectedAvatar: PropTypes.string,
+    updateNameValue: PropTypes.func.isRequired,
+    toggleList: PropTypes.func.isRequired,
+    updateLocationValue: PropTypes.func.isRequired,
+    onLocationSelected: PropTypes.func.isRequired,
+    resetDropdown: PropTypes.func.isRequired
+  })
 }
 
-export default AvatarRowThreeWrapper
+export default AvatarRowWithThree

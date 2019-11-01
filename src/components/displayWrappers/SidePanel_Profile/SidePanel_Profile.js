@@ -7,98 +7,45 @@ import Logo from '../../Primitive/SidePanel/Logo'
 import SidePanelProfileBody from './SidePanel_Profile_Body'
 import ActionButton from '../../Primitive/General/ActionButton'
 
+import useApi from '../../../CustomHooks/useAPI'
+import SidePanelProfileAPI from './API/SidePanelProfileAPI'
 
 const SidePanelWrapper = props => {
-    const [selectedAvatar, setSelectedAvatar] = useState(null);
-    const [listOpen, setListOpen] = useState(false);
-    const [nameValue, setNameValue] = useState("");
-    const [locationValue, setLocationValue] = useState("");
-    const [selectedLocation, setSelectedLocation] = useState("");
-  
-    const onChangeNameValue = event => {
-      console.log(`Name Input Value: ${event.target.value}`);
-      setNameValue(event.target.value);
-    };
-  
-    function onClickAv(key) {
-      const selectedKey = key;
-      setSelectedAvatar(selectedKey);
-      console.log(`Avatar clicked, key: ${key}`);
-    }
-  
-    function toggleList() {
-      setListOpen(prevState => {
-        const newState = !prevState;
-        return newState;
-      });
-      console.log(
-        `toggleList, locationValue: ${locationValue}, selectedLocation: ${selectedLocation}, listOpen: ${listOpen}`
-      );
-    }
-  
-    const onChangeLocationValue = event => {
-      console.log(`Location Input Value: ${event.target.value}`);
-      setLocationValue(event.target.value);
-    };
-  
-    const onLocationSelected = location => {
-      console.log(`Location Selected: ${location}`);
-      //When the user taps a location, set it as the location
-      setSelectedLocation(location);
-      //Set the selected location to the value of the input
-      setLocationValue(location);
-      //close the list
-      setListOpen(false);
-  
-      console.log(
-        `onLocationSelected, locationValue: ${locationValue}, selectedLocation: ${selectedLocation}, listOpen: ${listOpen}`
-      );
-    };
-  
-    const resetDropDown = () => {
-      setLocationValue("");
-      setSelectedLocation(null);
-      console.log(
-        `resetDropDown, locationValue: ${locationValue}, selectedLocation: ${selectedLocation}`
-      );
-    };
-  
-    const submitProfileChange = () => {
-      let newName = nameValue;
-      let newLocation = selectedLocation;
-      let newAvatar = selectedAvatar;
-  
-      console.log(
-        `submitted name ${newName}, location ${newLocation}, avatar ${newAvatar}`
-      );
-  
-      resetDropDown();
-      setNameValue("");
-      setSelectedAvatar(null);
-    };
-  
-    return (
-      <div {...props}>
-        <PRFlag />
-        <Logo />
-        <SidePanelProfileBody
-          nameValue={nameValue}
-          onChangeNameValue={onChangeNameValue}
-          toggleList={toggleList}
-          listOpen={listOpen}
-          onChangeLocationValue={onChangeLocationValue}
-          locationValue={locationValue}
-          onLocationSelected={onLocationSelected}
-          resetDropDown={resetDropDown}
-          selectedAvatar={selectedAvatar}
-          onClickAv={onClickAv}
-        />
-        <ActionButton secondary onClick={submitProfileChange}>
-          Change
-        </ActionButton>
-      </div>
+
+  const api = useApi(SidePanelProfileAPI, {
+    name: "",
+    locationValue: "",
+    selectedLocation: "",
+    listOpen: false,
+    selectedAvatar: null
+  })
+
+  const submitProfileChange = () => {
+    let newName = api.name;
+    let newLocation = api.selectedLocation;
+    let newAvatar = api.selectedAvatar;
+
+    console.log(
+      `submitted name ${newName}, location ${newLocation}, avatar ${newAvatar}`
     );
+
+    api.resetAll();
+    
   };
+
+  return (
+    <div {...props}>
+      <PRFlag />
+      <Logo />
+      <SidePanelProfileBody
+        api = {api}
+      />
+      <ActionButton secondary onClick={() => api.submit()}>
+        Change
+      </ActionButton>
+    </div>
+  );
+};
 
 const SidePanel_Profile = styled(SidePanelWrapper)`
     /* border: 1px solid black; */

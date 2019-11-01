@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 //Note that this component handles PNGs not SVGs. Hence, all SVGs sent over need to be converted to PNGs
 
-const AvatarWrapper = ({ src, tag, selectedAvatar, ...props }) => {  
+const AvatarWrapper = ({ src, tag, api, ...props }) => {  
     return <img alt="profile" src={src} {...props} />;
   };
   
@@ -17,7 +17,7 @@ const Avatar = styled(AvatarWrapper)`
 
     border-radius: 100px;
 
-    background-color: ${props => props.selectedAvatar === props.tag ? props.theme.primaryColour : "white"};
+    background-color: ${props => props.api.selectedAvatar === props.tag ? props.theme.primaryColour : "white"};
 `;
 
 Avatar.propTypes = {
