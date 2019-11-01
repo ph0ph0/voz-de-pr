@@ -7,7 +7,7 @@ const SubjectContentWrapper = ({ api, ...props }) => {
         {...props} 
         placeholder={"Post for all of Puerto Rico to hear!"}
         value = {api.subjectContent}
-        onChange = {api.updateSubjectContent}
+        onChange = {(event) => api.updateSubjectContent(event.target.value)}
       />
     );
   };

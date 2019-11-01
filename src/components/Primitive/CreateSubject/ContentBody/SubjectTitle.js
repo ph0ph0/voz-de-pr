@@ -5,7 +5,7 @@ const TitleInputWrapper = ({ api, ...props }) => {
     return <input  
       placeholder={"Title"} 
       value = {api.subjectTitle} 
-      onChange = {api.updateSubjectTitle}
+      onChange = {event => api.updateSubjectTitle(event.target.value)}
       {...props}
     />;
   };

@@ -18,12 +18,13 @@ const CreateSubjectWrapper = ({ secondary, ...props }) => {
     subjectTitle: "",
     subjectContent: "",
     imageDescription: "",
+    linkDescription: "",
     linkContent: ""
   })
 
   const onClickTitlePanel = (type) => {
     setCurrentState(type)
-    window.log(`new currentState: ${currentState}`)
+    window.log(`new currentState: ${type}`)
   }
 
   function renderSwitch() {

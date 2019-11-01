@@ -1,9 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const SubjectLinkTextWrapper = ({secondary, ...props}) => {
+const SubjectLinkTextWrapper = ({ api, secondary, ...props}) => {
     return (
-        <textarea {...props} placeholder = {"URL"}/>
+        <textarea 
+            {...props}
+            placeholder = {"URL"}
+            value = {api.linkContent}
+            onChange = {(event) => api.updateLinkContent(event.target.value)}
+        />
     )
 }
 
@@ -25,6 +30,9 @@ const SubjectLinkTextArea = styled(SubjectLinkTextWrapper)`
     line-height: 2.4em;
     font-size: 20px;
     margin-right: auto;
+
+    color: ${props => props.secondary ? props.theme.secondaryColour : props.theme.primaryColour};
+    text-decoration: underline;
 
     resize: none;
     :focus {

@@ -5,11 +5,11 @@ import LinkDescription from '../../../Primitive/CreateSubject/LinkBody/LinkDescr
 import LinkTextArea from '../../../Primitive/CreateSubject/LinkBody/LinkTextArea'
 import ActionButton from '../../../Primitive/General/ActionButton'
 
-const LinkBodyWrapper = ({secondary, ...props}) => {
+const LinkBodyWrapper = ({secondary, api, ...props}) => {
     return (
         <div {...props}>
-            <LinkDescription />
-            <LinkTextArea secondary={secondary} />
+            <LinkDescription api = {api}/>
+            <LinkTextArea secondary={secondary} api = {api} />
             <ActionButton secondary={secondary}>
                 {secondary ? "Create Post" : "Create Cause"}
             </ActionButton>

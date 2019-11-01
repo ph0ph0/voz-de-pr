@@ -1,9 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const DescriptionInputWrapper = ({...props}) => {
+const DescriptionInputWrapper = ({ api, ...props }) => {
     return (
-        <input {...props} placeholder = {"Description"} />
+        <input {
+            ...props} 
+            placeholder = {"Description"} 
+            value = {api.linkDescription}
+            onChange = {(event) => api.updateLinkDescription(event.target.value)}
+        />
         )
     }
 

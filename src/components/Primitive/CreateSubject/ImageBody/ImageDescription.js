@@ -1,8 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const DescriptionInputWrapper = ({ ...props }) => {
-  return <input {...props} placeholder={"Description"} />;
+const DescriptionInputWrapper = ({ api, ...props }) => {
+  return (
+    <input 
+      {...props} 
+      placeholder={"Description"} 
+      value = {api.imageDescription}
+      onChange = {(event) => api.updateImageDescription(event.target.value)}
+    />
+  );
 };
 
 const ImageDescription = styled(DescriptionInputWrapper)`

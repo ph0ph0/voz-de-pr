@@ -5,10 +5,10 @@ import ImageDescription from '../../../Primitive/CreateSubject/ImageBody/ImageDe
 import ImageUploadContainer from './ImageUploadContainer'
 import ActionButton from '../../../Primitive/General/ActionButton'
 
-const ImageBodyWrapper = ({secondary, ...props}) => {
+const ImageBodyWrapper = ({secondary, api, ...props}) => {
     return (
         <div {...props}>
-            <ImageDescription />
+            <ImageDescription api = {api}/>
             <ImageUploadContainer secondary={secondary} />
             <ActionButton secondary={secondary}>
                 {secondary ? "Create Post" : "Create Cause"}
