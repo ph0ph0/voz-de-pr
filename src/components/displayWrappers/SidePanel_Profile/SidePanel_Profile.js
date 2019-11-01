@@ -65,7 +65,7 @@ const SidePanelWrapper = props => {
   
     const submitProfileChange = () => {
       let newName = nameValue;
-      let newLocation = locationValue;
+      let newLocation = selectedLocation;
       let newAvatar = selectedAvatar;
   
       console.log(

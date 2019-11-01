@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import FeedPageContent from '../PageContentWrappers/FeedPages/FeedPageContent'
+
 const Page = (props) => {
     return (
         <div {...props}>
-            Profile YOU CUNT
+            <FeedPageContent pageTitle = {"My Profile"} sidePanelType = {"Profile"} profileType = {true}/>
         </div>
     )
 }

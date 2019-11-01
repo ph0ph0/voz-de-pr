@@ -66,7 +66,7 @@ SidePanelProfileBody.propTypes = {
     toggleList: PropTypes.func.isRequired,
     onClickAv: PropTypes.func.isRequired,
     listOpen: PropTypes.bool.isRequired,
-    selectedAvatar: PropTypes.number,
+    selectedAvatar: PropTypes.string,
     onChangeLocationValue: PropTypes.func.isRequired,
     locationValue: PropTypes.string.isRequired,
     onLocationSelected: PropTypes.func.isRequired,

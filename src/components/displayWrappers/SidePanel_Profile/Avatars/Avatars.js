@@ -83,7 +83,7 @@ const AvatarsArray = [
   `;
 
 Avatars.propTypes = {
-    selectedAvatar: PropTypes.number,
+    selectedAvatar: PropTypes.string,
     onClickAv: PropTypes.func.isRequired
 }
 

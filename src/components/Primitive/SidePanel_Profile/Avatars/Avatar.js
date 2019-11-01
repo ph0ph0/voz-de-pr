@@ -23,7 +23,7 @@ const Avatar = styled(AvatarWrapper)`
 Avatar.propTypes = {
     src: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
-    selectedAvatar: PropTypes.number
+    selectedAvatar: PropTypes.string
 }
 
 export default Avatar
