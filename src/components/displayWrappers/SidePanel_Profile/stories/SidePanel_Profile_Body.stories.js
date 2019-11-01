@@ -37,7 +37,7 @@ storiesOf("DisplayWrappers|SidePanel_Profile/SidePanel_Profile_Body", module)
     locationValue={"d"}
     onLocationSelected={onLocationSelected}
     resetDropDown={resetDropDown}
-    selectedAvatar={1}
+    selectedAvatar={"1"}
     onClickAv={onClickAv}
   />, {
       notes: "*PROPS nameValue, onChangeNameValue, toggleList, onClickAv, listOpen, selectedAvatar, onChangeLocationValue, locationValue, onLocationSelected, resetDropDown.* This looks messy as it needs to be in a container and can't act as a standalone component"

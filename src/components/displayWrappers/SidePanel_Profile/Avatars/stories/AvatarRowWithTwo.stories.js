@@ -27,6 +27,6 @@ const onClickAv = () => {
 }
 
 storiesOf("DisplayWrappers/SidePanel_Profile/Avatars/AvatarRowWithTwo", module)
-    .add("Standard", () => <AvatarRowWithTwo avatars={RowOfThree_One} onClickAv={onClickAv} selectedAvatar={1} />, {
+    .add("Standard", () => <AvatarRowWithTwo avatars={RowOfThree_One} onClickAv={onClickAv} selectedAvatar={"1"} />, {
         notes: "*PROPS; avatars, onClickAv, selectedAvatar* This is the wrapper for the avatars in the SidePanel_Profile"
     })

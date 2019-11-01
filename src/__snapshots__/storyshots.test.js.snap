@@ -95,7 +95,7 @@ exports[`Storyshots DisplayWrappers/SidePanel_Profile/Avatars/AvatarRowWithThree
   />
   <img
     alt="profile"
-    className="sc-gqjmRU kdcIJI"
+    className="sc-gqjmRU fPolVg"
     onClick={[Function]}
     src="Person.png"
   />
@@ -120,7 +120,7 @@ exports[`Storyshots DisplayWrappers/SidePanel_Profile/Avatars/AvatarRowWithTwo S
   />
   <img
     alt="profile"
-    className="sc-gqjmRU kdcIJI"
+    className="sc-gqjmRU fPolVg"
     onClick={[Function]}
     src="Person.png"
   />
@@ -2081,7 +2081,7 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/Avatars/Avatars Standard 1
     />
     <img
       alt="profile"
-      className="sc-gqjmRU kdcIJI"
+      className="sc-gqjmRU fPolVg"
       onClick={[Function]}
       src="Person.png"
     />
@@ -2493,7 +2493,7 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/SidePanel_Profile_Body Sta
       />
       <img
         alt="profile"
-        className="sc-gqjmRU kdcIJI"
+        className="sc-gqjmRU fPolVg"
         onClick={[Function]}
         src="Person.png"
       />
@@ -7521,7 +7521,7 @@ exports[`Storyshots Primitive|Buttons/UploadImageButton Profile 1`] = `
 exports[`Storyshots Primitive|Images/Avatar Selected 1`] = `
 <img
   alt="profile"
-  className="sc-gqjmRU kdcIJI"
+  className="sc-gqjmRU fPolVg"
   src="Person.png"
 />
 `;

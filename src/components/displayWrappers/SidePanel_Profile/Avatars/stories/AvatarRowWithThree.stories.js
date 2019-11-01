@@ -28,6 +28,6 @@ const onClickAv = () => {
 }
 
 storiesOf("DisplayWrappers/SidePanel_Profile/Avatars/AvatarRowWithThree", module)
-    .add("Standard", () => <AvatarRowWithThree avatars={RowOfThree_One} onClickAv={onClickAv} selectedAvatar={1} />, {
+    .add("Standard", () => <AvatarRowWithThree avatars={RowOfThree_One} onClickAv={onClickAv} selectedAvatar={"1"} />, {
         notes: "*PROPS; avatars, onClickAv, selectedAvatar* This is the wrapper for the avatars in the SidePanel_Profile"
     })

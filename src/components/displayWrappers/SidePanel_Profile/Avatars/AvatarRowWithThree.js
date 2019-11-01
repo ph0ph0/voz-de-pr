@@ -39,7 +39,7 @@ const AvatarRowWithThree = styled(AvatarRowThreeWrapper)`
 AvatarRowWithThree.propTypes = {
     avatars: PropTypes.node.isRequired,
     onClickAv: PropTypes.func.isRequired,
-    selectedAvatar: PropTypes.number.isRequired
+    selectedAvatar: PropTypes.string.isRequired
 }
 
 export default AvatarRowThreeWrapper
