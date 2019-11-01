@@ -8,9 +8,18 @@ import ImageBody from './ImageBody/ImageBody'
 import LinkBody from './LinkBody/LinkBody'
 import TitlesPanel from './TitlesPanel/TitlesPanel'
 
+import CreateSubjectFormAPI from './API/CreateSubjectFormAPI'
+import useAPI from '../../../CustomHooks/useAPI'
+
 const CreateSubjectWrapper = ({ secondary, ...props }) => {
 
   const [currentState, setCurrentState] = useState("content")
+  const api = useAPI(CreateSubjectFormAPI, {
+    subjectTitle: "",
+    subjectContent: "",
+    imageDescription: "",
+    linkContent: ""
+  })
 
   const onClickTitlePanel = (type) => {
     setCurrentState(type)
@@ -20,13 +29,13 @@ const CreateSubjectWrapper = ({ secondary, ...props }) => {
   function renderSwitch() {
     switch (currentState) {
       case "content":
-        return <ContentBody secondary={secondary} />;
+        return <ContentBody secondary={secondary} api = {api}/>;
       case "image":
-        return <ImageBody secondary={secondary} />;
+        return <ImageBody secondary={secondary} api = {api}/>;
       case "link":
-        return <LinkBody secondary={secondary} />;
+        return <LinkBody secondary={secondary} api = {api}/>;
       default:
-        return <ContentBody secondary={secondary} />;
+        return <ContentBody secondary={secondary} api = {api}/>;
     }
   }
 

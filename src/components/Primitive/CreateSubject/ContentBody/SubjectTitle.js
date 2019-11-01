@@ -1,8 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const TitleInputWrapper = ({ ...props }) => {
-    return <input {...props} placeholder={"Title"} />;
+const TitleInputWrapper = ({ api, ...props }) => {
+    return <input  
+      placeholder={"Title"} 
+      value = {api.subjectTitle} 
+      onChange = {api.updateSubjectTitle}
+      {...props}
+    />;
   };
   
   const SubjectTitle = styled(TitleInputWrapper)`

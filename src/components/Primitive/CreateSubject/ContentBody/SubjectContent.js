@@ -1,9 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const SubjectContentWrapper = ({ ...props }) => {
+const SubjectContentWrapper = ({ api, ...props }) => {
     return (
-      <textarea {...props} placeholder={"Post for all of Puerto Rico to hear!"} />
+      <textarea 
+        {...props} 
+        placeholder={"Post for all of Puerto Rico to hear!"}
+        value = {api.subjectContent}
+        onChange = {api.updateSubjectContent}
+      />
     );
   };
   

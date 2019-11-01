@@ -5,11 +5,11 @@ import SubjectTitle from '../../../Primitive/CreateSubject/ContentBody/SubjectTi
 import SubjectContent from '../../../Primitive/CreateSubject/ContentBody/SubjectContent'
 import ActionButton from '../../../Primitive/General/ActionButton'
 
-const ContentBodyWrapper = ({ secondary, ...props }) => {
+const ContentBodyWrapper = ({ secondary, api, ...props }) => {
     return (
       <div {...props}>
-        <SubjectTitle />
-        <SubjectContent />
+        <SubjectTitle api = {api}/>
+        <SubjectContent api = {api}/> 
         <ActionButton secondary={secondary}>
           {secondary ? "Create Post" : "Create Cause"}
         </ActionButton>
