@@ -86,7 +86,9 @@ exports[`Storyshots DisplayWrappers/CreateSubject/TitlesPanel/TitlesPanel Standa
 `;
 
 exports[`Storyshots DisplayWrappers/SidePanel_Profile/Avatars/AvatarRowWithThree Standard 1`] = `
-<div>
+<div
+  className="sc-VigVT dFcVli"
+>
   <img
     alt="profile"
     className="sc-gqjmRU kdcIJI"
@@ -95,7 +97,7 @@ exports[`Storyshots DisplayWrappers/SidePanel_Profile/Avatars/AvatarRowWithThree
   />
   <img
     alt="profile"
-    className="sc-gqjmRU fPolVg"
+    className="sc-gqjmRU kdcIJI"
     onClick={[Function]}
     src="Person.png"
   />
@@ -120,7 +122,7 @@ exports[`Storyshots DisplayWrappers/SidePanel_Profile/Avatars/AvatarRowWithTwo S
   />
   <img
     alt="profile"
-    className="sc-gqjmRU fPolVg"
+    className="sc-gqjmRU kdcIJI"
     onClick={[Function]}
     src="Person.png"
   />
@@ -135,13 +137,13 @@ exports[`Storyshots DisplayWrappers|CreateSubject/ContentBody/ContentBody Standa
     className="sc-bdVaJa bGXvgD"
     onChange={[Function]}
     placeholder="Title"
-    value="Test"
+    value=""
   />
   <textarea
     className="sc-bwzfXH faSnTU"
     onChange={[Function]}
     placeholder="Post for all of Puerto Rico to hear!"
-    value="Test"
+    value=""
   />
   <button
     className="sc-kAzzGY cKQenn"
@@ -257,7 +259,7 @@ exports[`Storyshots DisplayWrappers|CreateSubject/ImageBody/ImageBody Standard 1
     className="sc-kgoBCf fuUrsX"
     onChange={[Function]}
     placeholder="Description"
-    value="Test"
+    value=""
   />
   <div
     className="sc-kpOJdX hHtAst"
@@ -284,13 +286,13 @@ exports[`Storyshots DisplayWrappers|CreateSubject/LinkBody/LinkBody Cause 1`] = 
     className="sc-ckVGcZ eOshxs"
     onChange={[Function]}
     placeholder="Description"
-    value="Test"
+    value=""
   />
   <textarea
     className="sc-jKJlTe deeDDH"
     onChange={[Function]}
     placeholder="URL"
-    value="Test"
+    value=""
   />
   <button
     className="sc-kAzzGY cKQenn"
@@ -308,13 +310,13 @@ exports[`Storyshots DisplayWrappers|CreateSubject/LinkBody/LinkBody Post 1`] = `
     className="sc-ckVGcZ eOshxs"
     onChange={[Function]}
     placeholder="Description"
-    value="Test"
+    value=""
   />
   <textarea
     className="sc-jKJlTe ihmYgl"
     onChange={[Function]}
     placeholder="URL"
-    value="Test"
+    value=""
   />
   <button
     className="sc-kAzzGY fzWLFQ"
@@ -2072,7 +2074,9 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/Avatars/Avatars Standard 1
 <div
   className="sc-fjdhpX cjiikQ"
 >
-  <div>
+  <div
+    className="sc-VigVT dFcVli"
+  >
     <img
       alt="profile"
       className="sc-gqjmRU kdcIJI"
@@ -2081,7 +2085,7 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/Avatars/Avatars Standard 1
     />
     <img
       alt="profile"
-      className="sc-gqjmRU fPolVg"
+      className="sc-gqjmRU kdcIJI"
       onClick={[Function]}
       src="Person.png"
     />
@@ -2108,7 +2112,9 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/Avatars/Avatars Standard 1
       src="Person.png"
     />
   </div>
-  <div>
+  <div
+    className="sc-VigVT dFcVli"
+  >
     <img
       alt="profile"
       className="sc-gqjmRU kdcIJI"
@@ -2374,10 +2380,10 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/SidePanel_Profile_Body Sta
     className="sc-bxivhb jrIDMp"
     onChange={[Function]}
     placeholder="Name"
-    value="Test"
+    value=""
   />
   <div
-    className="sc-iwsKbI eokQaU"
+    className="sc-iwsKbI gVwdft"
   >
     <div
       className="sc-gzVnrw cuEmly"
@@ -2387,31 +2393,8 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/SidePanel_Profile_Body Sta
         className="sc-ifAKCX fputuP"
         onChange={[Function]}
         placeholder="Locations"
-        value="d"
+        value=""
       />
-      <div
-        className="sc-bZQynM dAviin"
-      >
-        <svg
-          aria-hidden="true"
-          className="svg-inline--fa fa-times-circle fa-w-16 "
-          color="#d8d8d8"
-          data-icon="times-circle"
-          data-prefix="fas"
-          focusable="false"
-          onClick={[Function]}
-          role="img"
-          style={Object {}}
-          viewBox="0 0 512 512"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"
-            fill="currentColor"
-            style={Object {}}
-          />
-        </svg>
-      </div>
       <div
         className="sc-EHOje jKngya"
       >
@@ -2435,56 +2418,18 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/SidePanel_Profile_Body Sta
         </svg>
       </div>
     </div>
-    <ul
-      className="sc-dnqmqq cdsNmS"
-    >
-      <li
-        className="sc-htoDjs jKESfa"
-        onClick={[Function]}
-      >
-        Aguadilla
-      </li>
-      <li
-        className="sc-htoDjs jKESfa"
-        onClick={[Function]}
-      >
-        Dorado
-      </li>
-      <li
-        className="sc-htoDjs jKESfa"
-        onClick={[Function]}
-      >
-        Adjuntas
-      </li>
-      <li
-        className="sc-htoDjs jKESfa"
-        onClick={[Function]}
-      >
-        Fajardo
-      </li>
-      <li
-        className="sc-htoDjs jKESfa"
-        onClick={[Function]}
-      >
-        Dewey
-      </li>
-      <li
-        className="sc-htoDjs jKESfa"
-        onClick={[Function]}
-      >
-        Isabel Segunda
-      </li>
-    </ul>
   </div>
   <div
-    className="sc-gZMcBi ehKsXZ"
+    className="sc-gZMcBi kEZgdQ"
   >
     Select A New Avatar
   </div>
   <div
     className="sc-fjdhpX cjiikQ"
   >
-    <div>
+    <div
+      className="sc-VigVT dFcVli"
+    >
       <img
         alt="profile"
         className="sc-gqjmRU kdcIJI"
@@ -2493,7 +2438,7 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/SidePanel_Profile_Body Sta
       />
       <img
         alt="profile"
-        className="sc-gqjmRU fPolVg"
+        className="sc-gqjmRU kdcIJI"
         onClick={[Function]}
         src="Person.png"
       />
@@ -2520,7 +2465,9 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/SidePanel_Profile_Body Sta
         src="Person.png"
       />
     </div>
-    <div>
+    <div
+      className="sc-VigVT dFcVli"
+    >
       <img
         alt="profile"
         className="sc-gqjmRU kdcIJI"
@@ -2631,7 +2578,9 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/SidePanelProfile Standard 
     <div
       className="sc-fjdhpX cjiikQ"
     >
-      <div>
+      <div
+        className="sc-VigVT dFcVli"
+      >
         <img
           alt="profile"
           className="sc-gqjmRU kdcIJI"
@@ -2667,7 +2616,9 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/SidePanelProfile Standard 
           src="Person.png"
         />
       </div>
-      <div>
+      <div
+        className="sc-VigVT dFcVli"
+      >
         <img
           alt="profile"
           className="sc-gqjmRU kdcIJI"
@@ -7521,7 +7472,8 @@ exports[`Storyshots Primitive|Buttons/UploadImageButton Profile 1`] = `
 exports[`Storyshots Primitive|Images/Avatar Selected 1`] = `
 <img
   alt="profile"
-  className="sc-gqjmRU fPolVg"
+  className="sc-gqjmRU kdcIJI"
+  selectedAvatar=""
   src="Person.png"
 />
 `;
@@ -7530,6 +7482,7 @@ exports[`Storyshots Primitive|Images/Avatar Standard 1`] = `
 <img
   alt="profile"
   className="sc-gqjmRU kdcIJI"
+  selectedAvatar=""
   src="Person.png"
 />
 `;
@@ -7545,6 +7498,7 @@ exports[`Storyshots Primitive|Images/ClearInput Standard 1`] = `
     data-icon="times-circle"
     data-prefix="fas"
     focusable="false"
+    onClick={[Function]}
     role="img"
     style={Object {}}
     viewBox="0 0 512 512"
@@ -7893,7 +7847,7 @@ exports[`Storyshots Primitive|text/CreateSubjectSubjectTitle Standard 1`] = `
   className="sc-bdVaJa bGXvgD"
   onChange={[Function]}
   placeholder="Title"
-  value="Test"
+  value=""
 />
 `;
 
@@ -7902,7 +7856,7 @@ exports[`Storyshots Primitive|text/ImageDescription Standard 1`] = `
   className="sc-kgoBCf fuUrsX"
   onChange={[Function]}
   placeholder="Description"
-  value="Test"
+  value=""
 />
 `;
 
@@ -7919,7 +7873,7 @@ exports[`Storyshots Primitive|text/LinkDescription Standard 1`] = `
   className="sc-ckVGcZ eOshxs"
   onChange={[Function]}
   placeholder="Description"
-  value="Test"
+  value=""
 />
 `;
 
@@ -7928,7 +7882,7 @@ exports[`Storyshots Primitive|text/LinkTextArea Cause 1`] = `
   className="sc-jKJlTe deeDDH"
   onChange={[Function]}
   placeholder="URL"
-  value="Test"
+  value=""
 />
 `;
 
@@ -7937,7 +7891,7 @@ exports[`Storyshots Primitive|text/LinkTextArea Post 1`] = `
   className="sc-jKJlTe ihmYgl"
   onChange={[Function]}
   placeholder="URL"
-  value="Test"
+  value=""
 />
 `;
 
@@ -7954,7 +7908,7 @@ exports[`Storyshots Primitive|text/SubjectContent Standard 1`] = `
   className="sc-bwzfXH faSnTU"
   onChange={[Function]}
   placeholder="Post for all of Puerto Rico to hear!"
-  value="Test"
+  value=""
 />
 `;
 

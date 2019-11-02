@@ -22,11 +22,9 @@ const AvatarsArray = [
     1: AvatarsArray[1]
   };
 
-const onClickAv = () => {
-    console.log("Clicked")
-}
+  import { mockApi } from '../../API/__mocks__/mockApi'
 
 storiesOf("DisplayWrappers/SidePanel_Profile/Avatars/AvatarRowWithTwo", module)
-    .add("Standard", () => <AvatarRowWithTwo avatars={RowOfThree_One} onClickAv={onClickAv} selectedAvatar={"1"} />, {
+    .add("Standard", () => <AvatarRowWithTwo avatars={RowOfThree_One} api = {mockApi}/>, {
         notes: "*PROPS; avatars, onClickAv, selectedAvatar* This is the wrapper for the avatars in the SidePanel_Profile"
     })

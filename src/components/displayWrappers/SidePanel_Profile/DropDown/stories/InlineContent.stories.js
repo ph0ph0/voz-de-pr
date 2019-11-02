@@ -3,12 +3,9 @@ import { storiesOf } from '@storybook/react'
 
 import InlineContent from '../InlineContent'
 
-const onChangeLocationValue = () => {
-    
-}
-
+import { mockApi } from '../../API/__mocks__/mockApi'
 
 storiesOf("DisplayWrappers|SidePanel_Profile/DropDown/InlineContent", module)
-    .add("Standard", () => <InlineContent locationValue = {""} onChangeLocationValue = {onChangeLocationValue}/>, {
+    .add("Standard", () => <InlineContent api = {mockApi}/>, {
         notes: "*PROPS; locationValue: the current location value set in the container. onChangeLocationValue: function to set the current location in the container when the value is selected*"
     })

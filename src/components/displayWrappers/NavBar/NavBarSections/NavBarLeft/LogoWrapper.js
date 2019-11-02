@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom'
 import {ReactComponent as Logo } from '../../../../../assets/General/Logo.svg'
 
 const Wrapper = ({staticContext, ...props}) => {
-
+    //staticContext allows props.history.push()
     function onClick() {
         console.log('Clicked LogoWrapper')
         props.history.push("/")

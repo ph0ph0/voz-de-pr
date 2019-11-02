@@ -3,10 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import ImageBody from '../ImageBody'
 
-const mockApi = {
-    imageDescription: "Test",
-    updateImageDescription: () => {}
-}
+import { mockApi } from '../../API/__mocks__/mockApi'
 
 storiesOf('DisplayWrappers|CreateSubject/ImageBody/ImageBody', module)
     .add('Standard', () => <ImageBody api = {mockApi}/>)

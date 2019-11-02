@@ -13,7 +13,7 @@ const DropDownWrapper = ({
       <div {...props}>
         <InlineContent
           api = {api}
-          onClick={api.toggleList }
+          onClick={api.toggleList}
         />
         {api.listOpen && (
           <ListOfLocations

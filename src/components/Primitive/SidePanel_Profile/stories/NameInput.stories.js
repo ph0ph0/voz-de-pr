@@ -3,18 +3,7 @@ import { storiesOf, action } from '@storybook/react'
 
 import NameInput from '../NameInput'
 
-const mockApi = {
-    name: "",
-    locationValue: "",
-    listOpen: false,
-    selectedLocation: "",
-    selectedAvatar: "",
-    updateNameValue: "",
-    toggleList: () => {},
-    updateLocationValue: () => {},
-    onLocationSelected: () => {},
-    resetDropdown: () => {}
-}
+import { mockApi } from '../../../DisplayWrappers/SidePanel_Profile/API/__mocks__/mockApi'
 
 storiesOf("Primitive|Inputs/NameInput", module)
-    .add("Standard", () => <NameInput nameValue = {""} onChangeNameValue = {mockApi.onChangeNameValue} />)
+    .add("Standard", () => <NameInput api = {mockApi} />)

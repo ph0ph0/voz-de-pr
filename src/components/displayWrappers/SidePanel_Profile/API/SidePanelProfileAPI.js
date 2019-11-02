@@ -6,7 +6,7 @@ const SidePanelProfileAPI = ({state, setState}) => {
     const selectedAvatar = state.selectedAvatar
 
     //Called when the user types into the NameInput component
-    const updateNameValue = (newValue) => {
+    const updateNameValue = (newValue ) => {
         setState(prevState => {
             return ({
                 ...prevState,
@@ -65,8 +65,9 @@ const SidePanelProfileAPI = ({state, setState}) => {
 
     //fires when the user clicks the submit button
     const resetDropdown = () => {
-        setState(() => {
+        setState((prevState) => {
             return ({
+                ...prevState,
                 locationValue: "",
                 selectedLocation: "",
                 listOpen: false,
@@ -78,6 +79,7 @@ const SidePanelProfileAPI = ({state, setState}) => {
     const resetAll = () => {
         setState(prevState => {
             return ({
+                ...prevState,
                 name: "",
                 locationValue: "",
                 selectedLocation: "",

@@ -6,7 +6,7 @@ import ProfileInfoWrapper from './ProfileInfoWrapper'
 import ProfileImageWrapper from './ProfileImageWrapper'
 
 const Wrapper = ({ staticContext, ...props }) => {
-
+    //staticContext allows props.history.push()
     function onClick() {
         console.log(`Clicked Profile Wrapper`)
         props.history.push("/profile")

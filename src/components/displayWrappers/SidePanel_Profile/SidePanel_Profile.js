@@ -20,19 +20,6 @@ const SidePanelWrapper = props => {
     selectedAvatar: null
   })
 
-  const submitProfileChange = () => {
-    let newName = api.name;
-    let newLocation = api.selectedLocation;
-    let newAvatar = api.selectedAvatar;
-
-    console.log(
-      `submitted name ${newName}, location ${newLocation}, avatar ${newAvatar}`
-    );
-
-    api.resetAll();
-    
-  };
-
   return (
     <div {...props}>
       <PRFlag />

@@ -3,11 +3,9 @@ import { storiesOf } from '@storybook/react'
 
 import Avatars from '../Avatars'
 
-const onClickAv = () => {
-    
-}
+import { mockApi } from '../../API/__mocks__/mockApi'
 
 storiesOf("DisplayWrappers|SidePanel_Profile/Avatars/Avatars", module)
-    .add("Standard", () => <Avatars selectedAvatar = {"1"} onClickAv = {onClickAv}/>, {
+    .add("Standard", () => <Avatars api = {mockApi}/>, {
         notes: "*PROPS; selectedAvatar, onClickAv* This is the avatar display for the SidePanel_Profile"
     })

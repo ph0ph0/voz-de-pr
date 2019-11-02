@@ -3,12 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import LinkBody from '../LinkBody'
 
-const mockApi = {
-    linkDescription: "Test",
-    linkContent: "Test",
-    updateLinkDescription: () => {},
-    updateLinkContent: () => {}
-}
+import { mockApi } from '../../API/__mocks__/mockApi'
 
 storiesOf('DisplayWrappers|CreateSubject/LinkBody/LinkBody', module)
     .add('Cause', () => <LinkBody api = {mockApi}/>)

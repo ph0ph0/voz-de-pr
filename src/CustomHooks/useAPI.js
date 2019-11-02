@@ -1,8 +1,9 @@
 import { useState } from 'react'
 
-const useAPI = (apiFactory, initialState) => {
+const useAPI = (api, initialState) => {
     const [state, setState] = useState(initialState)
-    return apiFactory({ state, setState })
+    return api({ state, setState })
 }
 
 export default useAPI
+

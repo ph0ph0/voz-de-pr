@@ -3,10 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import SubjectTitle from '../SubjectTitle'
 
-const mockApi = {
-    subjectTitle: "Test",
-    updateSubjectTitle: () => {}
-}
+import { mockApi } from '../../../../DisplayWrappers/CreateSubject/API/__mocks__/mockApi'
 
 storiesOf("Primitive|text/CreateSubjectSubjectTitle", module)
     .add("Standard", () => <SubjectTitle api = {mockApi}/>)

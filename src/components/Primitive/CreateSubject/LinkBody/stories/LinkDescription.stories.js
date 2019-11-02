@@ -3,10 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import LinkDescription from '../LinkDescription'
 
-const mockApi = {
-    linkDescription: "Test",
-    updateLinkDescription: () => {}
-}
+import { mockApi } from '../../../../DisplayWrappers/CreateSubject/API/__mocks__/mockApi'
 
 storiesOf('Primitive|text/LinkDescription', module)
     .add('Standard', () => <LinkDescription api = {mockApi}/>)

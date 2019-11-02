@@ -14,6 +14,7 @@ import useAPI from '../../../CustomHooks/useAPI'
 const CreateSubjectWrapper = ({ secondary, ...props }) => {
 
   const [currentState, setCurrentState] = useState("content")
+  
   const api = useAPI(CreateSubjectFormAPI, {
     subjectTitle: "",
     subjectContent: "",

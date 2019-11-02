@@ -3,12 +3,7 @@ import { storiesOf } from '@storybook/react'
 
 import ContentBody from '../ContentBody'
 
-const mockApi = {
-    subjectTitle: "Test",
-    subjectContent: "Test",
-    updateSubjectTitle: () => {},
-    updateSubjectContent: () => {}
-}
+import { mockApi } from '../../API/__mocks__/mockApi'
 
 storiesOf("DisplayWrappers|CreateSubject/ContentBody/ContentBody", module)
     .add("Standard", () => <ContentBody api = {mockApi}/>, {
