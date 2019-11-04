@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
@@ -9,8 +9,32 @@ const DropDownWrapper = ({
     api,
     ...props
   }) => {
+
+    const node = useRef(null)
+
+    useEffect(() => {
+      if (api.listOpen) {
+        document.addEventListener("mousedown", handleClickOutside)
+      } else {
+        document.removeEventListener("mousedown", handleClickOutside)
+      }
+
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside)
+      }
+    }, [api.listOpen]);
+
+    const handleClickOutside = (event) => {
+      if (node.current.contains(event.target)) {
+        //Click was inside the dropdown
+        return
+      }
+      //Click was outside the dropdown
+      api.toggleList()
+    }
+
     return (
-      <div {...props}>
+      <div ref = {node} {...props}>
         <InlineContent
           api = {api}
           onClick={api.toggleList}

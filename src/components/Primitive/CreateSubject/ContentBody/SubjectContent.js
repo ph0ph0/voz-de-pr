@@ -24,7 +24,6 @@ const SubjectContentWrapper = ({ api, ...props }) => {
   
     /* Padding must be removed so the text is in correct place */
     padding: 0px;
-    margin-top: 20px;
     margin-bottom: 30px;
     padding-left: 25px;
   

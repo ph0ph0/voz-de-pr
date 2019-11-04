@@ -1,8 +1,11 @@
+import { locations } from '../../../../Constants/Constants'
+
 const SidePanelProfileAPI = ({state, setState}) => {
     const name = state.name
     const locationValue = state.locationValue
     const selectedLocation = state.selectedLocation
     const listOpen = state.listOpen
+    const dropDownIsErrored = state.dropDownIsErrored
     const selectedAvatar = state.selectedAvatar
 
     //Called when the user types into the NameInput component
@@ -73,7 +76,7 @@ const SidePanelProfileAPI = ({state, setState}) => {
                 listOpen: false,
             })
         })
-        window.log(`dropDownReset; name: ${name}, locationValue: ${locationValue}, selectedLocation: ${selectedLocation}, listOpen: ${listOpen}, selectedAvater: ${selectedAvatar}`)
+        window.log(`dropDownReset; name: ${name}, locationValue: ${locationValue}, selectedLocation: ${selectedLocation}, listOpen: ${listOpen}, selectedAvatar: ${selectedAvatar}`)
     }
 
     const resetAll = () => {
@@ -84,24 +87,47 @@ const SidePanelProfileAPI = ({state, setState}) => {
                 locationValue: "",
                 selectedLocation: "",
                 listOpen: false,
+                dropDownIsErrored: false,
                 selectedAvatar: null
             })
         })
     }
 
-    const submit = () => {
-        const newName = name
-        const newLocation = selectedLocation
-        const newAvatar = selectedAvatar
-        resetAll()
+    const locationNotFound = () => {
+        const locationToCheck = locationValue
+        const result = locations.filter(location => location.title.toLowerCase() === locationToCheck.toLowerCase())
+        if (result.length === 0) {
+            window.log(`Got a match`)
+            return true
+        } 
+        return false
+        window.log(`locationCheck: ${result}`)
+    }
 
-        window.log(`newName: ${newName}, newLocation: ${newLocation}, newAvatar: ${newAvatar}`)
+    const submit = () => {
+        // const newName = name
+        // const newAvatar = selectedAvatar
+
+         if (locationNotFound()) {
+             setState(prevState => {
+                 return ({
+                    ...prevState,
+                    dropDownIsErrored: true
+                 })
+             })
+         }
+
+         //new location should be a location object, not the input text, as the object contained in the locations constant contains more info! 
+
+         resetAll()
+        // window.log(`newName: ${newName}, newLocation: ${newLocation}, newAvatar: ${newAvatar}`)
     }
 
     return ({
         name,
         locationValue,
         listOpen,
+        dropDownIsErrored,
         selectedLocation,
         selectedAvatar,
         updateNameValue,
@@ -110,6 +136,7 @@ const SidePanelProfileAPI = ({state, setState}) => {
         onLocationSelected,
         onClickAv,
         resetDropdown,
+        resetAll,
         submit
     })
 }

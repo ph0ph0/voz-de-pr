@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 // import PRFlag from '../../../assets/SidePanel/FuckingFlag.png'
@@ -17,6 +17,7 @@ const SidePanelWrapper = props => {
     locationValue: "",
     selectedLocation: "",
     listOpen: false,
+    dropDownIsErrored: false,
     selectedAvatar: null
   })
 

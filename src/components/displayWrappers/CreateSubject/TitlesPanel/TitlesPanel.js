@@ -3,29 +3,26 @@ import styled from 'styled-components'
 
 import TitlePanel from './TitlePanel'
 
-const TitlesPanelWrapper = ({ secondary, currentState, onClickTitlePanel, ...props }) => {
+const TitlesPanelWrapper = ({ api, secondary, currentState, onClickTitlePanel, ...props }) => {
     return (
       <div {...props}>
         <TitlePanel
           secondary={secondary}
           type={"content"}
           title={secondary ? "Post" : "Cause"}
-          currentState={currentState}
-          onClickTitlePanel = {onClickTitlePanel}
+          api = {api}
         />
         <TitlePanel
           secondary={secondary}
           type={"image"}
           title={"Image"}
-          currentState={currentState}
-          onClickTitlePanel = {onClickTitlePanel}
+          api = {api}
         />
         <TitlePanel
           secondary={secondary}
           type={"link"}
           title={"Link"}
-          currentState={currentState}
-          onClickTitlePanel = {onClickTitlePanel}
+          api = {api}
         />
       </div>
     );

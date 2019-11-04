@@ -7,6 +7,7 @@ import Name from '../../Primitive/SidePanel_Profile/NameInput'
 import DropDown from './DropDown/DropDown'
 import AvatarInstruction from '../../Primitive/SidePanel_Profile/Avatars/AvatarInstruction'
 import Avatars from './Avatars/Avatars'
+import ErrorText from '../../Primitive/General/ErrorText'
 
 //Need to modify the Info component a bit for the SP_P
 const ProfileHeader = styled(Info)`
@@ -26,6 +27,7 @@ const SidePanelProfileBodyWrapper = ({
       <div {...props}>
         <ProfileHeader>Change Details</ProfileHeader>
         <Name api = {api} />
+        {api.dropDownIsErrored && <ErrorText>Select location from the list</ErrorText>}
         <DropDown
            api = {api}
         />

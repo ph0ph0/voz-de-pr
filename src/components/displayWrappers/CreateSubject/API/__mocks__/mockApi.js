@@ -1,9 +1,12 @@
-export const mockApi = {
+export var mockApi = {
+    currentPanel: "content",
     subjectTitle: "",
     subjectContent: "",
     imageDescription: "",
-    linkDescription: "",
+    linkDescription: "", 
     linkContent: "",
+    titleIsErrored: false,
+    contentIsErrored: false,
     updateSubjectTitle: () => {},
     updateSubjectContent: () => {},
     updateImageDescription: () => {},

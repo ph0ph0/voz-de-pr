@@ -10,7 +10,7 @@ const LinkBodyWrapper = ({secondary, api, ...props}) => {
         <div {...props}>
             <LinkDescription api = {api}/>
             <LinkTextArea secondary={secondary} api = {api} />
-            <ActionButton secondary={secondary}>
+            <ActionButton secondary={secondary} onClick = {api.submit}>
                 {secondary ? "Create Post" : "Create Cause"}
             </ActionButton>
         </div>

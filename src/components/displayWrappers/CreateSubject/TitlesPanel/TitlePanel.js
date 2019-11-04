@@ -5,11 +5,10 @@ import StateTitle from '../../../Primitive/CreateSubject/TitlesPanel/StateTitle'
 import { EditSVG, ImageSVG, LinkSVG } from '../../../Primitive/CreateSubject/TitlesPanel/StateTitleSVGs'
 
 const TitlePanelWrapper = ({
+    api,
     type,
-    currentState,
     secondary,
     title,
-    onClickTitlePanel,
     ...props
   }) => {
     function renderSwitch(type) {
@@ -17,7 +16,7 @@ const TitlePanelWrapper = ({
         case "content":
           return (
             <EditSVG
-              currentState={currentState}
+              api = {api}
               type={type}
               secondary={secondary}
             />
@@ -25,7 +24,7 @@ const TitlePanelWrapper = ({
         case "image":
           return (
             <ImageSVG
-              currentState={currentState}
+              api = {api}
               type={type}
               secondary={secondary}
             />
@@ -33,7 +32,7 @@ const TitlePanelWrapper = ({
         case "link":
           return (
             <LinkSVG
-              currentState={currentState}
+              api = {api}
               type={type}
               secondary={secondary}
             />
@@ -43,9 +42,9 @@ const TitlePanelWrapper = ({
       }
     }
     return (
-      <div {...props} onClick = {() => onClickTitlePanel(type)}>
+      <div {...props} onClick = {() => api.showPanel(type)}>
         {renderSwitch(type)}
-        <StateTitle type={type} secondary={secondary} currentState={currentState}>
+        <StateTitle type={type} secondary={secondary} api = {api}>
           {title}
         </StateTitle>
       </div>
@@ -62,9 +61,9 @@ const TitlePanel = styled(TitlePanelWrapper)`
     border-left: ${props =>
         props.type === "image" ? "1px solid #D8D8D8" : "none"};
     border-bottom: ${props =>
-        props.type === props.currentState && props.secondary
+        props.type === props.api.currentPanel && props.secondary
         ? "2px solid #1B4EA0"
-        : props.type === props.currentState
+        : props.type === props.api.currentPanel
         ? "2px solid #EC220D"
         : "1px solid #D8D8D8"};
 

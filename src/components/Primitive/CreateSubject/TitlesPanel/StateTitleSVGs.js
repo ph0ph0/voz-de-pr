@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const ImageSVG = ({ currentState, type, secondary }) => {
+export const ImageSVG = ({ api, type, secondary }) => {
     return (
       <svg
         width="26px"
@@ -10,9 +10,9 @@ export const ImageSVG = ({ currentState, type, secondary }) => {
       >
         <path
           fill={
-            (type === currentState) && secondary
+            (type === api.currentPanel) && secondary
               ? "#1B4EA0"
-              : type === currentState
+              : type === api.currentPanel
               ? "#EC220D"
               : "#C5C6C7"
           }
@@ -22,7 +22,7 @@ export const ImageSVG = ({ currentState, type, secondary }) => {
     );
   };
   
-export const EditSVG = ({ currentState, type, secondary }) => {
+export const EditSVG = ({ api, type, secondary }) => {
     return (
       <svg
         width="26px"
@@ -32,9 +32,9 @@ export const EditSVG = ({ currentState, type, secondary }) => {
       >
         <path
           fill={
-            (type === currentState) && secondary
+            (type === api.currentPanel) && secondary
               ? "#1B4EA0"
-              : type === currentState
+              : type === api.currentPanel
               ? "#EC220D"
               : "#C5C6C7"
           }
@@ -44,7 +44,7 @@ export const EditSVG = ({ currentState, type, secondary }) => {
     );
   };
   
-export const LinkSVG = ({ type, currentState, secondary }) => {
+export const LinkSVG = ({ type, api, secondary }) => {
     return (
       <svg
         width="26px"
@@ -54,9 +54,9 @@ export const LinkSVG = ({ type, currentState, secondary }) => {
       >
         <path
           fill={
-            (type === currentState) && secondary
+            (type === api.currentPanel) && secondary
               ? "#1B4EA0"
-              : type === currentState
+              : type === api.currentPanel
               ? "#EC220D"
               : "#C5C6C7"
           }

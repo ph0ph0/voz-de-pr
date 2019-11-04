@@ -4,6 +4,8 @@ import { storiesOf } from '@storybook/react'
 import AvatarRowWithTwo from '../AvatarRowWithTwo'
 import Person from '../../../../../assets/General/Person.png'
 
+import { mockApi } from '../../API/__mocks__/mockApi'
+
 const AvatarsArray = [
     Person,
     Person,
@@ -21,8 +23,6 @@ const AvatarsArray = [
     0: AvatarsArray[0],
     1: AvatarsArray[1]
   };
-
-  import { mockApi } from '../../API/__mocks__/mockApi'
 
 storiesOf("DisplayWrappers/SidePanel_Profile/Avatars/AvatarRowWithTwo", module)
     .add("Standard", () => <AvatarRowWithTwo avatars={RowOfThree_One} api = {mockApi}/>, {

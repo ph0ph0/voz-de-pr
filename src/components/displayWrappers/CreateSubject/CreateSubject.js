@@ -12,24 +12,20 @@ import CreateSubjectFormAPI from './API/CreateSubjectFormAPI'
 import useAPI from '../../../CustomHooks/useAPI'
 
 const CreateSubjectWrapper = ({ secondary, ...props }) => {
-
-  const [currentState, setCurrentState] = useState("content")
   
   const api = useAPI(CreateSubjectFormAPI, {
+    currentPanel: "content",
     subjectTitle: "",
     subjectContent: "",
     imageDescription: "",
     linkDescription: "",
-    linkContent: ""
+    linkContent: "",
+    titleIsErrored: false,
+    contentIsErrored: false,
   })
 
-  const onClickTitlePanel = (type) => {
-    setCurrentState(type)
-    window.log(`new currentState: ${type}`)
-  }
-
   function renderSwitch() {
-    switch (currentState) {
+    switch (api.currentPanel) {
       case "content":
         return <ContentBody secondary={secondary} api = {api}/>;
       case "image":
@@ -43,8 +39,8 @@ const CreateSubjectWrapper = ({ secondary, ...props }) => {
 
   return (
     <div {...props}>
-      <TitlesPanel secondary={secondary} currentState={currentState} onClickTitlePanel = {onClickTitlePanel}/>
-      {renderSwitch(currentState)}
+      <TitlesPanel secondary={secondary} api = {api}/>
+      {renderSwitch()}
     </div>
   );
   };
