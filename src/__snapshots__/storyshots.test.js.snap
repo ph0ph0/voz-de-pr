@@ -3947,6 +3947,344 @@ exports[`Storyshots DisplayWrappers|SubjectCards/SubjectCards Standard 1`] = `
 </div>
 `;
 
+exports[`Storyshots DisplayWrappers|SubjectDetail/DeailHeader/DetailHeader Cause 1`] = `
+<div
+  className="sc-ktHwxA bwPBzM"
+>
+  <div
+    className="sc-hEsumM bgepNM"
+  >
+    <div
+      className="sc-TOsTZ iGdPgL"
+    >
+      <svg>
+        Userpic.svg
+      </svg>
+    </div>
+    <div
+      className="sc-kgAjT cJhmpn"
+    >
+      
+       
+      James Montgommery Wheeler Mcguiness
+    </div>
+    <div
+      className="sc-kgAjT cJhmpn"
+    >
+      •
+       
+      1 hour ago
+    </div>
+  </div>
+  <div
+    className="sc-tilXH kCwFsW"
+  >
+    <p
+      className="sc-jnlKLf ilkzJk"
+    >
+      Puerto Rico - Cherish Its Natural Wonders
+    </p>
+    <p
+      className="sc-fYxtnH koaDGE"
+    >
+      147 VOTES
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectDetail/DeailHeader/DetailHeader Post 1`] = `
+<div
+  className="sc-ktHwxA bwPBzM"
+>
+  <div
+    className="sc-hEsumM bgepNM"
+  >
+    <div
+      className="sc-TOsTZ iGdPgL"
+    >
+      <svg>
+        Userpic.svg
+      </svg>
+    </div>
+    <div
+      className="sc-kgAjT cJhmpn"
+    >
+      
+       
+      James Montgommery Wheeler Mcguiness
+    </div>
+    <div
+      className="sc-kgAjT cJhmpn"
+    >
+      •
+       
+      1 hour ago
+    </div>
+  </div>
+  <div
+    className="sc-tilXH kCwFsW"
+  >
+    <p
+      className="sc-jnlKLf ilkzJk"
+    >
+      Puerto Rico - Cherish Its Natural Wonders
+    </p>
+    <p
+      className="sc-fYxtnH ekUspK"
+    >
+      147 VOTES
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectDetail/DetailHeader Cause 1`] = `
+<div
+  className="sc-ktHwxA bwPBzM"
+>
+  <div
+    className="sc-hEsumM bgepNM"
+  >
+    <div
+      className="sc-TOsTZ iGdPgL"
+    >
+      <svg>
+        Userpic.svg
+      </svg>
+    </div>
+    <div
+      className="sc-kgAjT cJhmpn"
+    >
+      
+       
+      James Montgommery Wheeler Mcguiness
+    </div>
+    <div
+      className="sc-kgAjT cJhmpn"
+    >
+      •
+       
+      1 hour ago
+    </div>
+  </div>
+  <div
+    className="sc-tilXH kCwFsW"
+  >
+    <p
+      className="sc-jnlKLf ilkzJk"
+    >
+      Puerto Rico - Cherish Its Natural Wonders
+    </p>
+    <p
+      className="sc-fYxtnH koaDGE"
+    >
+      147 VOTES
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectDetail/DetailHeader Post 1`] = `
+<div
+  className="sc-ktHwxA bwPBzM"
+>
+  <div
+    className="sc-hEsumM bgepNM"
+  >
+    <div
+      className="sc-TOsTZ iGdPgL"
+    >
+      <svg>
+        Userpic.svg
+      </svg>
+    </div>
+    <div
+      className="sc-kgAjT cJhmpn"
+    >
+      
+       
+      James Montgommery Wheeler Mcguiness
+    </div>
+    <div
+      className="sc-kgAjT cJhmpn"
+    >
+      •
+       
+      1 hour ago
+    </div>
+  </div>
+  <div
+    className="sc-tilXH kCwFsW"
+  >
+    <p
+      className="sc-jnlKLf ilkzJk"
+    >
+      Puerto Rico - Cherish Its Natural Wonders
+    </p>
+    <p
+      className="sc-fYxtnH ekUspK"
+    >
+      147 VOTES
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectDetail/DetailHeader/DetailHeader Cause 1`] = `
+<div
+  className="sc-ktHwxA jUSjmW"
+>
+  <div
+    className="sc-hEsumM bgepNM"
+  >
+    <div
+      className="sc-TOsTZ iGdPgL"
+    >
+      <svg>
+        Userpic.svg
+      </svg>
+    </div>
+    <div
+      className="sc-kgAjT cJhmpn"
+    >
+      
+       
+      James Montgommery Wheeler Mcguiness
+    </div>
+    <div
+      className="sc-kgAjT cJhmpn"
+    >
+      •
+       
+      1 hour ago
+    </div>
+  </div>
+  <div
+    className="sc-tilXH kCwFsW"
+  >
+    <p
+      className="sc-jnlKLf ilkzJk"
+    >
+      Puerto Rico - Cherish Its Natural Wonders
+    </p>
+    <p
+      className="sc-fYxtnH koaDGE"
+    >
+      147 VOTES
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectDetail/DetailHeader/DetailHeader Post 1`] = `
+<div
+  className="sc-ktHwxA jUSjmW"
+>
+  <div
+    className="sc-hEsumM bgepNM"
+  >
+    <div
+      className="sc-TOsTZ iGdPgL"
+    >
+      <svg>
+        Userpic.svg
+      </svg>
+    </div>
+    <div
+      className="sc-kgAjT cJhmpn"
+    >
+      
+       
+      James Montgommery Wheeler Mcguiness
+    </div>
+    <div
+      className="sc-kgAjT cJhmpn"
+    >
+      •
+       
+      1 hour ago
+    </div>
+  </div>
+  <div
+    className="sc-tilXH kCwFsW"
+  >
+    <p
+      className="sc-jnlKLf ilkzJk"
+    >
+      Puerto Rico - Cherish Its Natural Wonders
+    </p>
+    <p
+      className="sc-fYxtnH ekUspK"
+    >
+      147 VOTES
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectDetail/DetailHeader/DetailHeaderBottomLine Cause 1`] = `
+<div
+  className="sc-tilXH kCwFsW"
+>
+  <p
+    className="sc-jnlKLf ilkzJk"
+  >
+    Puerto Rico - Cherish Its Natural Wonders
+  </p>
+  <p
+    className="sc-fYxtnH koaDGE"
+  >
+    147 VOTES
+  </p>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectDetail/DetailHeader/DetailHeaderBottomLine Post 1`] = `
+<div
+  className="sc-tilXH kCwFsW"
+>
+  <p
+    className="sc-jnlKLf ilkzJk"
+  >
+    Puerto Rico - Cherish Its Natural Wonders
+  </p>
+  <p
+    className="sc-fYxtnH koaDGE"
+  >
+    147 VOTES
+  </p>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectDetail/DetailHeader/DetailHeaderTopLine Standard 1`] = `
+<div
+  className="sc-jnlKLf jKMWma"
+>
+  <div
+    className="sc-TOsTZ iGdPgL"
+  >
+    <svg>
+      Userpic.svg
+    </svg>
+  </div>
+  <div
+    className="sc-kgAjT cJhmpn"
+  >
+    
+     
+    James Montgommery Wheeler Mcguiness
+  </div>
+  <div
+    className="sc-kgAjT cJhmpn"
+  >
+    •
+     
+    1 hour ago
+  </div>
+</div>
+`;
+
 exports[`Storyshots DisplayWrappers|TopOfPage/Filters ProfileType 1`] = `
 <div
   className="sc-hEsumM hIFUBq"
@@ -7653,6 +7991,13 @@ exports[`Storyshots Primitive|Images/StateTitleSVGs Link_Post 1`] = `
 </svg>
 `;
 
+exports[`Storyshots Primitive|Images/SubjectDetailImage Standard 1`] = `
+<img
+  className="sc-jqCOkK sc-kTUwUJ jrFIAO"
+  src="PuertoRico_VdPR.jpg"
+/>
+`;
+
 exports[`Storyshots Primitive|Images/SubjectImage Standard 1`] = `
 <img
   className="sc-jqCOkK fkgfrd"
@@ -7901,6 +8246,46 @@ exports[`Storyshots Primitive|text/SubjectContent Standard 1`] = `
 />
 `;
 
+exports[`Storyshots Primitive|text/SubjectDetailNoOfVotes Cause 1`] = `
+<p
+  className="sc-lhVmIH FjUPC"
+>
+  147 VOTES
+</p>
+`;
+
+exports[`Storyshots Primitive|text/SubjectDetailNoOfVotes Post 1`] = `
+<p
+  className="sc-lhVmIH kabwZX"
+>
+  147 VOTES
+</p>
+`;
+
+exports[`Storyshots Primitive|text/SubjectDetailSubjectContent Standard 1`] = `
+<p
+  className="sc-kTUwUJ bxlOwB"
+>
+  
+In its mission to protect functional ecosystems in the islands of Puerto Rico and to secure the essential services they provide, the Conservation Trust of Puerto Rico has focused its land acquisition and ecosystem management strategies on a regional approach, based on Puerto Rico’s main watersheds. As such, 5 distinct Regions have been established and labeled according to their cardinal direction. The Conservation Trust’s natural protected areas are managed and supervised according to this regional network. 
+
+Tours through the nurseries in Río Piedras and Barranquitas are interesting and educational, while emphasizing that each and every person can have a positive impact on the environment, to the benefit of current and future generations of Puerto Ricans.
+
+With your donation, you support Para la Naturaleza's efforts towards environmental conservation and historical preservation as well as promote the rehabilitation of our habitats. 
+
+For your convenience, you can also make your donation by calling (787) 722-5834 or sending a check to Para la Naturaleza, PO Box 9023554, San Juan, PR 00902-3554.
+
+</p>
+`;
+
+exports[`Storyshots Primitive|text/SubjectDetailTitle Standard 1`] = `
+<p
+  className="sc-lhVmIH eXzdGP"
+>
+  Test
+</p>
+`;
+
 exports[`Storyshots Primitive|text/SubjectSummary Long Summary 1`] = `
 <p
   className="sc-frDJqD fSVtML"
@@ -8002,5 +8387,37 @@ exports[`Storyshots Primitive|text/TitlesPanel Post 1`] = `
   className="sc-kEYyzF jmmKyO"
 >
   Edit
+</p>
+`;
+
+exports[`Storyshots Primtive|SubjectDetail/DetailBody/SubjectContent Standard 1`] = `
+<p
+  className="sc-kTUwUJ bxlOwB"
+>
+  
+In its mission to protect functional ecosystems in the islands of Puerto Rico and to secure the essential services they provide, the Conservation Trust of Puerto Rico has focused its land acquisition and ecosystem management strategies on a regional approach, based on Puerto Rico’s main watersheds. As such, 5 distinct Regions have been established and labeled according to their cardinal direction. The Conservation Trust’s natural protected areas are managed and supervised according to this regional network. 
+
+Tours through the nurseries in Río Piedras and Barranquitas are interesting and educational, while emphasizing that each and every person can have a positive impact on the environment, to the benefit of current and future generations of Puerto Ricans.
+
+With your donation, you support Para la Naturaleza's efforts towards environmental conservation and historical preservation as well as promote the rehabilitation of our habitats. 
+
+For your convenience, you can also make your donation by calling (787) 722-5834 or sending a check to Para la Naturaleza, PO Box 9023554, San Juan, PR 00902-3554.
+
+</p>
+`;
+
+exports[`Storyshots Primtive|text/SubjectDetailSubjectContent Standard 1`] = `
+<p
+  className="sc-kTUwUJ bxlOwB"
+>
+  
+In its mission to protect functional ecosystems in the islands of Puerto Rico and to secure the essential services they provide, the Conservation Trust of Puerto Rico has focused its land acquisition and ecosystem management strategies on a regional approach, based on Puerto Rico’s main watersheds. As such, 5 distinct Regions have been established and labeled according to their cardinal direction. The Conservation Trust’s natural protected areas are managed and supervised according to this regional network. 
+
+Tours through the nurseries in Río Piedras and Barranquitas are interesting and educational, while emphasizing that each and every person can have a positive impact on the environment, to the benefit of current and future generations of Puerto Ricans.
+
+With your donation, you support Para la Naturaleza's efforts towards environmental conservation and historical preservation as well as promote the rehabilitation of our habitats. 
+
+For your convenience, you can also make your donation by calling (787) 722-5834 or sending a check to Para la Naturaleza, PO Box 9023554, San Juan, PR 00902-3554.
+
 </p>
 `;
