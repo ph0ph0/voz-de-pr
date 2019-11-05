@@ -100,8 +100,8 @@ const SidePanelProfileAPI = ({state, setState}) => {
             window.log(`Got a match`)
             return true
         } 
-        return false
         window.log(`locationCheck: ${result}`)
+        return false
     }
 
     const submit = () => {

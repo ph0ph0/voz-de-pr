@@ -1,6 +1,6 @@
 //This is the Card which the CreateSubject component wraps around in order to provide it with state
 
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import ContentBody from './ContentBody/ContentBody'
