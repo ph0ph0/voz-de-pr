@@ -11,7 +11,7 @@ const SubjectDetailWrapper = ({subjectID, noOfVotes, comments, secondary, ...pro
     )
 }
 
-const SubjectDetail = styled(SubjectDetailWrapper)`
+const SubjectDetailCard = styled(SubjectDetailWrapper)`
      /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
@@ -20,6 +20,7 @@ const SubjectDetail = styled(SubjectDetailWrapper)`
     height: auto;
 
     margin: 0px;
+    margin-right: 30px;
     padding: 0px;
     padding-bottom: 20px;
 
@@ -28,4 +29,4 @@ const SubjectDetail = styled(SubjectDetailWrapper)`
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
 `
 
-export default SubjectDetail
+export default SubjectDetailCard

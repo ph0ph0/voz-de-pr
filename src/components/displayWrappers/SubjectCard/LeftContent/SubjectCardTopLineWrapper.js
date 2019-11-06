@@ -29,7 +29,7 @@ const SubjectCardTopLineWrapper = styled(Wrapper)`
 `
 SubjectCardTopLineWrapper.propTypes = {
     author: PropTypes.string.isRequired,
-    timeAgo: PropTypes.string.isRequired
+    timePassed: PropTypes.string.isRequired
 }
 
 export default SubjectCardTopLineWrapper

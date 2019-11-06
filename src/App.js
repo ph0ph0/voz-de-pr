@@ -7,7 +7,7 @@ import { ThemeProvider } from 'styled-components'
 import theme from './theme/Theme'
 
 import NavBar from './components/DisplayWrappers/NavBar/NavBar'
-import Routes from './components/Pages/Routes'
+import Routes from './Routes/Routes'
 
 function App() {
   return (

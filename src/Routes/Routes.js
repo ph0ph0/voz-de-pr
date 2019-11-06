@@ -1,13 +1,13 @@
 import React from 'react'
 import {Route, Switch } from 'react-router-dom'
 
-import MainFeed from './MainFeed'
-import Causes from './Causes'
-import Posts from './Posts'
-import Profile from './Profile'
-import CreateCause from './CreateCause'
-import CreatePost from './CreatePost'
-// import SubjectDetail from './SubjectDetail'
+import MainFeed from '../components/Pages/MainFeed'
+import Causes from '../components/Pages/Causes'
+import Posts from '../components/Pages/Posts'
+import Profile from '../components/Pages/Profile'
+import CreateCause from '../components/Pages/CreateCause'
+import CreatePost from '../components/Pages/CreatePost'
+import SubjectDetail from '../components/Pages/SubjectDetail'
 
 const Routes = () => {
     return (
@@ -30,9 +30,9 @@ const Routes = () => {
             <Route path = "/create-post">
                 <CreatePost />
             </Route>
-            {/* <Route path = "/subjectId">
-                <SubjectDetail />
-            </Route> */}
+            <Route path = "/subjectId">
+                <SubjectDetail type = {"CauseOnly"}/>
+            </Route>
         </Switch>
     )
 }

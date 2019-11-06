@@ -3,14 +3,20 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const  = ({...props}) => {
+import SubjectDetailCard from '../../DisplayWrappers/SubjectDetailCard/SubjectDetailCard'
+import SidePanel from '../../DisplayWrappers/SidePanel/SidePanel'
+
+const SubjectDetailPageContentWrapper = ({ type, ...props}) => {
     return (
         <div {...props}>
-            
+            <SubjectDetailCard />
+            <SidePanel type = {type}/>
         </div>
     )
 }
 
-const  = styled()``
+const SubjectDetailPageContent = styled(SubjectDetailPageContentWrapper)`
+    display: flex;
+`
 
-export default 
+export default SubjectDetailPageContent

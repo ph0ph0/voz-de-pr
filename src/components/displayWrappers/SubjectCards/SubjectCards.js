@@ -14,8 +14,8 @@ const SubjectCardsWrapper = ({arrayOfSubjectCardData, ...props}) => {
                     timePassed = {subject.timePassed} 
                     title = {subject.title}
                     subjectContent = {subject.subjectContent}
-                    numberOfComments = {subject.numberOfComments} 
-                    numberOfVotes = {subject.numberOfVotes} 
+                    numberOfComments = {subject.comments && subject.comments.length} 
+                    numberOfVotes = {subject.votes} 
                     secondary = {(subject.type === "Post") ? true : false} 
                     src = {subject.subjectImage}
                 />

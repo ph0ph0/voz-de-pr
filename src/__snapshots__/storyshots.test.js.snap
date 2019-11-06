@@ -85,6 +85,450 @@ exports[`Storyshots DisplayWrappers/CreateSubject/TitlesPanel/TitlesPanel Standa
 </div>
 `;
 
+exports[`Storyshots DisplayWrappers/Pages/SubjectDetail Cause 1`] = `
+<div
+  className="sc-hZSUBg VKktY"
+>
+  <div
+    className="sc-bsbRJL kfmymT"
+  >
+    <div
+      className="sc-kIPQKe cghkEh"
+    >
+      <div
+        className="sc-esjQYD iAviUW"
+      >
+        <div
+          className="sc-dfVpRl iZDkmv"
+        >
+          <div
+            className="sc-gxMtzJ drNOvL"
+          >
+            <div
+              className="sc-TOsTZ iGdPgL"
+            >
+              <svg>
+                Userpic.svg
+              </svg>
+            </div>
+            <div
+              className="sc-kgAjT cJhmpn"
+            >
+              
+               
+              James Montgommery Wheeler Mcguiness
+            </div>
+            <div
+              className="sc-kgAjT cJhmpn"
+            >
+              •
+               
+              1 hour ago
+            </div>
+          </div>
+          <div
+            className="sc-dqBHgY brXydG"
+          >
+            <p
+              className="sc-jtRfpW djwDaa"
+            >
+              Puerto Rico - Cherish Its Natural Wonders
+            </p>
+            <p
+              className="sc-kTUwUJ fEzaEj"
+            >
+               
+              0 VOTES
+            </p>
+          </div>
+        </div>
+        <img
+          className="sc-jqCOkK sc-kfGgVZ jhwuMj"
+        />
+        <div
+          className="sc-kPVwWT kNtIGJ"
+        >
+          <div
+            className="sc-gisBJw eZwyEv"
+          >
+            <svg>
+              Bubble.svg
+            </svg>
+          </div>
+          <div
+            className="sc-gzOgki zcIYc"
+          >
+             
+            0 Comments
+          </div>
+          <div
+            className="sc-iyvyFf lbZgUG"
+          >
+            CauseID - 
+          </div>
+          <p
+            className="sc-kTUwUJ sc-hwwEjo jiOnPI"
+          >
+             
+            0 VOTES
+          </p>
+          <svg
+            className="sc-fYxtnH haeFGy"
+            height="20px"
+            viewBox="0 0 14 20"
+            width="14px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="#979797"
+              transform="translate(4, 0.000000)"
+            >
+              <path
+                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+                fill-rule="nonzero"
+                id="Line"
+              />
+              <rect
+                height="6.66666667"
+                id="Rectangle"
+                width="6"
+                x="0"
+                y="12.8571429"
+              />
+            </g>
+          </svg>
+          <svg
+            className="sc-fYxtnH feMqde"
+            height="20px"
+            viewBox="0 0 14 20"
+            width="14px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="#979797"
+              transform="translate(4, 0.000000)"
+            >
+              <path
+                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+                fill-rule="nonzero"
+                id="Line"
+              />
+              <rect
+                height="6.66666667"
+                id="Rectangle"
+                width="6"
+                x="0"
+                y="12.8571429"
+              />
+            </g>
+          </svg>
+        </div>
+        <div
+          className="sc-elJkPf gvggah"
+        >
+          <p
+            className="sc-cmTdod HfubX"
+          />
+          <a
+            className="sc-jwKygS eYkwKa"
+          >
+            http://www.fideicomiso.org/home.html
+          </a>
+          <div
+            className="sc-bYSBpT fEJYvd"
+          >
+            <p
+              className="sc-lhVmIH bbwJua"
+            >
+              Comment as
+            </p>
+            <p
+              className="sc-btzYZH hufAeQ"
+            >
+              James Wheeler
+            </p>
+          </div>
+          <div
+            className="sc-iELTvK fLpYYL"
+          >
+            <textarea
+              className="sc-kafWEX eknYje"
+              placeholder="What are your thoughts?"
+            />
+            <button
+              className="sc-chPdSV eQkBGz sc-feJyhm emJbcO"
+            >
+              Comment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-fBuWsC eyyndN"
+    >
+      <svg>
+        PRFlag.svg
+      </svg>
+      <svg
+        className="sc-hzDkRC eelvFP"
+      >
+        Logo.svg
+      </svg>
+      <div
+        className="sc-htpNat iqZjTK"
+      >
+        Voz de Puerto Rico (Voz de PR) is a social platform that allows users to take an active role in the progression of human needs, social betterment and national development of Puerto Rico. It is community based, and provides a voice to those who wish to enact change across society.
+      </div>
+      <a
+        className="sc-jhAzac jKAVNS"
+        href="/create-cause"
+        onClick={[Function]}
+      >
+        <button
+          className="sc-chPdSV eQkBGz sc-jhAzac jKAVNS"
+        >
+          Create Cause
+        </button>
+      </a>
+      <a
+        className="sc-jhAzac jKAVNS"
+        href="/create-post"
+        onClick={[Function]}
+      >
+        <button
+          className="sc-chPdSV gUnKUM sc-jhAzac jKAVNS"
+        >
+          Create Post
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers/Pages/SubjectDetail Post 1`] = `
+<div
+  className="sc-hZSUBg VKktY"
+>
+  <div
+    className="sc-bsbRJL kfmymT"
+  >
+    <div
+      className="sc-kIPQKe cghkEh"
+    >
+      <div
+        className="sc-esjQYD iAviUW"
+      >
+        <div
+          className="sc-dfVpRl iZDkmv"
+        >
+          <div
+            className="sc-gxMtzJ drNOvL"
+          >
+            <div
+              className="sc-TOsTZ iGdPgL"
+            >
+              <svg>
+                Userpic.svg
+              </svg>
+            </div>
+            <div
+              className="sc-kgAjT cJhmpn"
+            >
+              
+               
+              James Montgommery Wheeler Mcguiness
+            </div>
+            <div
+              className="sc-kgAjT cJhmpn"
+            >
+              •
+               
+              1 hour ago
+            </div>
+          </div>
+          <div
+            className="sc-dqBHgY brXydG"
+          >
+            <p
+              className="sc-jtRfpW djwDaa"
+            >
+              Puerto Rico - Cherish Its Natural Wonders
+            </p>
+            <p
+              className="sc-kTUwUJ fEzaEj"
+            >
+               
+              0 VOTES
+            </p>
+          </div>
+        </div>
+        <img
+          className="sc-jqCOkK sc-kfGgVZ jhwuMj"
+        />
+        <div
+          className="sc-kPVwWT kNtIGJ"
+        >
+          <div
+            className="sc-gisBJw eZwyEv"
+          >
+            <svg>
+              Bubble.svg
+            </svg>
+          </div>
+          <div
+            className="sc-gzOgki zcIYc"
+          >
+             
+            0 Comments
+          </div>
+          <div
+            className="sc-iyvyFf lbZgUG"
+          >
+            CauseID - 
+          </div>
+          <p
+            className="sc-kTUwUJ sc-hwwEjo jiOnPI"
+          >
+             
+            0 VOTES
+          </p>
+          <svg
+            className="sc-fYxtnH haeFGy"
+            height="20px"
+            viewBox="0 0 14 20"
+            width="14px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="#979797"
+              transform="translate(4, 0.000000)"
+            >
+              <path
+                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+                fill-rule="nonzero"
+                id="Line"
+              />
+              <rect
+                height="6.66666667"
+                id="Rectangle"
+                width="6"
+                x="0"
+                y="12.8571429"
+              />
+            </g>
+          </svg>
+          <svg
+            className="sc-fYxtnH feMqde"
+            height="20px"
+            viewBox="0 0 14 20"
+            width="14px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="#979797"
+              transform="translate(4, 0.000000)"
+            >
+              <path
+                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+                fill-rule="nonzero"
+                id="Line"
+              />
+              <rect
+                height="6.66666667"
+                id="Rectangle"
+                width="6"
+                x="0"
+                y="12.8571429"
+              />
+            </g>
+          </svg>
+        </div>
+        <div
+          className="sc-elJkPf gvggah"
+        >
+          <p
+            className="sc-cmTdod HfubX"
+          />
+          <a
+            className="sc-jwKygS eYkwKa"
+          >
+            http://www.fideicomiso.org/home.html
+          </a>
+          <div
+            className="sc-bYSBpT fEJYvd"
+          >
+            <p
+              className="sc-lhVmIH bbwJua"
+            >
+              Comment as
+            </p>
+            <p
+              className="sc-btzYZH hufAeQ"
+            >
+              James Wheeler
+            </p>
+          </div>
+          <div
+            className="sc-iELTvK fLpYYL"
+          >
+            <textarea
+              className="sc-kafWEX eknYje"
+              placeholder="What are your thoughts?"
+            />
+            <button
+              className="sc-chPdSV eQkBGz sc-feJyhm emJbcO"
+            >
+              Comment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-fBuWsC eyyndN"
+    >
+      <svg>
+        PRFlag.svg
+      </svg>
+      <svg
+        className="sc-hzDkRC eelvFP"
+      >
+        Logo.svg
+      </svg>
+      <div
+        className="sc-htpNat iqZjTK"
+      >
+        Voz de Puerto Rico (Voz de PR) is a social platform that allows users to take an active role in the progression of human needs, social betterment and national development of Puerto Rico. It is community based, and provides a voice to those who wish to enact change across society.
+      </div>
+      <a
+        className="sc-jhAzac jKAVNS"
+        href="/create-cause"
+        onClick={[Function]}
+      >
+        <button
+          className="sc-chPdSV eQkBGz sc-jhAzac jKAVNS"
+        >
+          Create Cause
+        </button>
+      </a>
+      <a
+        className="sc-jhAzac jKAVNS"
+        href="/create-post"
+        onClick={[Function]}
+      >
+        <button
+          className="sc-chPdSV gUnKUM sc-jhAzac jKAVNS"
+        >
+          Create Post
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots DisplayWrappers/SidePanel_Profile/Avatars/AvatarRowWithThree Standard 1`] = `
 <div
   className="sc-VigVT dFcVli"
@@ -2175,6 +2619,894 @@ exports[`Storyshots DisplayWrappers|Pages/MainFeed/MainFeed Standard 1`] = `
 </div>
 `;
 
+exports[`Storyshots DisplayWrappers|Pages/SubjectDetail Cause 1`] = `
+<div
+  className="sc-hZSUBg VKktY"
+>
+  <div
+    className="sc-bsbRJL kfmymT"
+  >
+    <div
+      className="sc-kIPQKe cghkEh"
+    >
+      <div
+        className="sc-esjQYD iAviUW"
+      >
+        <div
+          className="sc-dfVpRl iZDkmv"
+        >
+          <div
+            className="sc-gxMtzJ drNOvL"
+          >
+            <div
+              className="sc-TOsTZ iGdPgL"
+            >
+              <svg>
+                Userpic.svg
+              </svg>
+            </div>
+            <div
+              className="sc-kgAjT cJhmpn"
+            >
+              
+               
+              James Montgommery Wheeler Mcguiness
+            </div>
+            <div
+              className="sc-kgAjT cJhmpn"
+            >
+              •
+               
+              1 hour ago
+            </div>
+          </div>
+          <div
+            className="sc-dqBHgY brXydG"
+          >
+            <p
+              className="sc-jtRfpW djwDaa"
+            >
+              Puerto Rico - Cherish Its Natural Wonders
+            </p>
+            <p
+              className="sc-kTUwUJ fEzaEj"
+            >
+               
+              0 VOTES
+            </p>
+          </div>
+        </div>
+        <img
+          className="sc-jqCOkK sc-kfGgVZ jhwuMj"
+        />
+        <div
+          className="sc-kPVwWT kNtIGJ"
+        >
+          <div
+            className="sc-gisBJw eZwyEv"
+          >
+            <svg>
+              Bubble.svg
+            </svg>
+          </div>
+          <div
+            className="sc-gzOgki zcIYc"
+          >
+             
+            0 Comments
+          </div>
+          <div
+            className="sc-iyvyFf lbZgUG"
+          >
+            CauseID - 
+          </div>
+          <p
+            className="sc-kTUwUJ sc-hwwEjo jiOnPI"
+          >
+             
+            0 VOTES
+          </p>
+          <svg
+            className="sc-fYxtnH haeFGy"
+            height="20px"
+            viewBox="0 0 14 20"
+            width="14px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="#979797"
+              transform="translate(4, 0.000000)"
+            >
+              <path
+                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+                fill-rule="nonzero"
+                id="Line"
+              />
+              <rect
+                height="6.66666667"
+                id="Rectangle"
+                width="6"
+                x="0"
+                y="12.8571429"
+              />
+            </g>
+          </svg>
+          <svg
+            className="sc-fYxtnH feMqde"
+            height="20px"
+            viewBox="0 0 14 20"
+            width="14px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="#979797"
+              transform="translate(4, 0.000000)"
+            >
+              <path
+                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+                fill-rule="nonzero"
+                id="Line"
+              />
+              <rect
+                height="6.66666667"
+                id="Rectangle"
+                width="6"
+                x="0"
+                y="12.8571429"
+              />
+            </g>
+          </svg>
+        </div>
+        <div
+          className="sc-elJkPf gvggah"
+        >
+          <p
+            className="sc-cmTdod HfubX"
+          />
+          <a
+            className="sc-jwKygS eYkwKa"
+          >
+            http://www.fideicomiso.org/home.html
+          </a>
+          <div
+            className="sc-bYSBpT fEJYvd"
+          >
+            <p
+              className="sc-lhVmIH bbwJua"
+            >
+              Comment as
+            </p>
+            <p
+              className="sc-btzYZH hufAeQ"
+            >
+              James Wheeler
+            </p>
+          </div>
+          <div
+            className="sc-iELTvK fLpYYL"
+          >
+            <textarea
+              className="sc-kafWEX eknYje"
+              placeholder="What are your thoughts?"
+            />
+            <button
+              className="sc-chPdSV eQkBGz sc-feJyhm emJbcO"
+            >
+              Comment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-fBuWsC eyyndN"
+    >
+      <svg>
+        PRFlag.svg
+      </svg>
+      <svg
+        className="sc-hzDkRC eelvFP"
+      >
+        Logo.svg
+      </svg>
+      <div
+        className="sc-htpNat iqZjTK"
+      >
+        Voz de Puerto Rico (Voz de PR) is a social platform that allows users to take an active role in the progression of human needs, social betterment and national development of Puerto Rico. It is community based, and provides a voice to those who wish to enact change across society.
+      </div>
+      <a
+        className="sc-jhAzac jKAVNS"
+        href="/create-cause"
+        onClick={[Function]}
+      >
+        <button
+          className="sc-chPdSV eQkBGz sc-jhAzac jKAVNS"
+        >
+          Create Cause
+        </button>
+      </a>
+      <a
+        className="sc-jhAzac jKAVNS"
+        href="/create-post"
+        onClick={[Function]}
+      >
+        <button
+          className="sc-chPdSV gUnKUM sc-jhAzac jKAVNS"
+        >
+          Create Post
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|Pages/SubjectDetail Post 1`] = `
+<div
+  className="sc-hZSUBg VKktY"
+>
+  <div
+    className="sc-bsbRJL kfmymT"
+  >
+    <div
+      className="sc-kIPQKe cghkEh"
+    >
+      <div
+        className="sc-esjQYD iAviUW"
+      >
+        <div
+          className="sc-dfVpRl iZDkmv"
+        >
+          <div
+            className="sc-gxMtzJ drNOvL"
+          >
+            <div
+              className="sc-TOsTZ iGdPgL"
+            >
+              <svg>
+                Userpic.svg
+              </svg>
+            </div>
+            <div
+              className="sc-kgAjT cJhmpn"
+            >
+              
+               
+              James Montgommery Wheeler Mcguiness
+            </div>
+            <div
+              className="sc-kgAjT cJhmpn"
+            >
+              •
+               
+              1 hour ago
+            </div>
+          </div>
+          <div
+            className="sc-dqBHgY brXydG"
+          >
+            <p
+              className="sc-jtRfpW djwDaa"
+            >
+              Puerto Rico - Cherish Its Natural Wonders
+            </p>
+            <p
+              className="sc-kTUwUJ fEzaEj"
+            >
+               
+              0 VOTES
+            </p>
+          </div>
+        </div>
+        <img
+          className="sc-jqCOkK sc-kfGgVZ jhwuMj"
+        />
+        <div
+          className="sc-kPVwWT kNtIGJ"
+        >
+          <div
+            className="sc-gisBJw eZwyEv"
+          >
+            <svg>
+              Bubble.svg
+            </svg>
+          </div>
+          <div
+            className="sc-gzOgki zcIYc"
+          >
+             
+            0 Comments
+          </div>
+          <div
+            className="sc-iyvyFf lbZgUG"
+          >
+            CauseID - 
+          </div>
+          <p
+            className="sc-kTUwUJ sc-hwwEjo jiOnPI"
+          >
+             
+            0 VOTES
+          </p>
+          <svg
+            className="sc-fYxtnH haeFGy"
+            height="20px"
+            viewBox="0 0 14 20"
+            width="14px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="#979797"
+              transform="translate(4, 0.000000)"
+            >
+              <path
+                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+                fill-rule="nonzero"
+                id="Line"
+              />
+              <rect
+                height="6.66666667"
+                id="Rectangle"
+                width="6"
+                x="0"
+                y="12.8571429"
+              />
+            </g>
+          </svg>
+          <svg
+            className="sc-fYxtnH feMqde"
+            height="20px"
+            viewBox="0 0 14 20"
+            width="14px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="#979797"
+              transform="translate(4, 0.000000)"
+            >
+              <path
+                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+                fill-rule="nonzero"
+                id="Line"
+              />
+              <rect
+                height="6.66666667"
+                id="Rectangle"
+                width="6"
+                x="0"
+                y="12.8571429"
+              />
+            </g>
+          </svg>
+        </div>
+        <div
+          className="sc-elJkPf gvggah"
+        >
+          <p
+            className="sc-cmTdod HfubX"
+          />
+          <a
+            className="sc-jwKygS eYkwKa"
+          >
+            http://www.fideicomiso.org/home.html
+          </a>
+          <div
+            className="sc-bYSBpT fEJYvd"
+          >
+            <p
+              className="sc-lhVmIH bbwJua"
+            >
+              Comment as
+            </p>
+            <p
+              className="sc-btzYZH hufAeQ"
+            >
+              James Wheeler
+            </p>
+          </div>
+          <div
+            className="sc-iELTvK fLpYYL"
+          >
+            <textarea
+              className="sc-kafWEX eknYje"
+              placeholder="What are your thoughts?"
+            />
+            <button
+              className="sc-chPdSV eQkBGz sc-feJyhm emJbcO"
+            >
+              Comment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-fBuWsC eyyndN"
+    >
+      <svg>
+        PRFlag.svg
+      </svg>
+      <svg
+        className="sc-hzDkRC eelvFP"
+      >
+        Logo.svg
+      </svg>
+      <div
+        className="sc-htpNat iqZjTK"
+      >
+        Voz de Puerto Rico (Voz de PR) is a social platform that allows users to take an active role in the progression of human needs, social betterment and national development of Puerto Rico. It is community based, and provides a voice to those who wish to enact change across society.
+      </div>
+      <a
+        className="sc-jhAzac jKAVNS"
+        href="/create-cause"
+        onClick={[Function]}
+      >
+        <button
+          className="sc-chPdSV eQkBGz sc-jhAzac jKAVNS"
+        >
+          Create Cause
+        </button>
+      </a>
+      <a
+        className="sc-jhAzac jKAVNS"
+        href="/create-post"
+        onClick={[Function]}
+      >
+        <button
+          className="sc-chPdSV gUnKUM sc-jhAzac jKAVNS"
+        >
+          Create Post
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|Pages/SubjectDetail/SubjectDetail Cause 1`] = `
+<div
+  className="sc-hZSUBg VKktY"
+>
+  <div
+    className="sc-bsbRJL kfmymT"
+  >
+    <div
+      className="sc-kIPQKe cghkEh"
+    >
+      <div
+        className="sc-esjQYD iAviUW"
+      >
+        <div
+          className="sc-dfVpRl iZDkmv"
+        >
+          <div
+            className="sc-gxMtzJ drNOvL"
+          >
+            <div
+              className="sc-TOsTZ iGdPgL"
+            >
+              <svg>
+                Userpic.svg
+              </svg>
+            </div>
+            <div
+              className="sc-kgAjT cJhmpn"
+            >
+              
+               
+              James Montgommery Wheeler Mcguiness
+            </div>
+            <div
+              className="sc-kgAjT cJhmpn"
+            >
+              •
+               
+              1 hour ago
+            </div>
+          </div>
+          <div
+            className="sc-dqBHgY brXydG"
+          >
+            <p
+              className="sc-jtRfpW djwDaa"
+            >
+              Puerto Rico - Cherish Its Natural Wonders
+            </p>
+            <p
+              className="sc-kTUwUJ fEzaEj"
+            >
+               
+              0 VOTES
+            </p>
+          </div>
+        </div>
+        <img
+          className="sc-jqCOkK sc-kfGgVZ jhwuMj"
+        />
+        <div
+          className="sc-kPVwWT kNtIGJ"
+        >
+          <div
+            className="sc-gisBJw eZwyEv"
+          >
+            <svg>
+              Bubble.svg
+            </svg>
+          </div>
+          <div
+            className="sc-gzOgki zcIYc"
+          >
+             
+            0 Comments
+          </div>
+          <div
+            className="sc-iyvyFf lbZgUG"
+          >
+            CauseID - 
+          </div>
+          <p
+            className="sc-kTUwUJ sc-hwwEjo jiOnPI"
+          >
+             
+            0 VOTES
+          </p>
+          <svg
+            className="sc-fYxtnH haeFGy"
+            height="20px"
+            viewBox="0 0 14 20"
+            width="14px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="#979797"
+              transform="translate(4, 0.000000)"
+            >
+              <path
+                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+                fill-rule="nonzero"
+                id="Line"
+              />
+              <rect
+                height="6.66666667"
+                id="Rectangle"
+                width="6"
+                x="0"
+                y="12.8571429"
+              />
+            </g>
+          </svg>
+          <svg
+            className="sc-fYxtnH feMqde"
+            height="20px"
+            viewBox="0 0 14 20"
+            width="14px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="#979797"
+              transform="translate(4, 0.000000)"
+            >
+              <path
+                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+                fill-rule="nonzero"
+                id="Line"
+              />
+              <rect
+                height="6.66666667"
+                id="Rectangle"
+                width="6"
+                x="0"
+                y="12.8571429"
+              />
+            </g>
+          </svg>
+        </div>
+        <div
+          className="sc-elJkPf gvggah"
+        >
+          <p
+            className="sc-cmTdod HfubX"
+          />
+          <a
+            className="sc-jwKygS eYkwKa"
+          >
+            http://www.fideicomiso.org/home.html
+          </a>
+          <div
+            className="sc-bYSBpT fEJYvd"
+          >
+            <p
+              className="sc-lhVmIH bbwJua"
+            >
+              Comment as
+            </p>
+            <p
+              className="sc-btzYZH hufAeQ"
+            >
+              James Wheeler
+            </p>
+          </div>
+          <div
+            className="sc-iELTvK fLpYYL"
+          >
+            <textarea
+              className="sc-kafWEX eknYje"
+              placeholder="What are your thoughts?"
+            />
+            <button
+              className="sc-chPdSV eQkBGz sc-feJyhm emJbcO"
+            >
+              Comment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-fBuWsC eyyndN"
+    >
+      <svg>
+        PRFlag.svg
+      </svg>
+      <svg
+        className="sc-hzDkRC eelvFP"
+      >
+        Logo.svg
+      </svg>
+      <div
+        className="sc-htpNat iqZjTK"
+      >
+        Voz de Puerto Rico (Voz de PR) is a social platform that allows users to take an active role in the progression of human needs, social betterment and national development of Puerto Rico. It is community based, and provides a voice to those who wish to enact change across society.
+      </div>
+      <a
+        className="sc-jhAzac jKAVNS"
+        href="/create-cause"
+        onClick={[Function]}
+      >
+        <button
+          className="sc-chPdSV eQkBGz sc-jhAzac jKAVNS"
+        >
+          Create Cause
+        </button>
+      </a>
+      <a
+        className="sc-jhAzac jKAVNS"
+        href="/create-post"
+        onClick={[Function]}
+      >
+        <button
+          className="sc-chPdSV gUnKUM sc-jhAzac jKAVNS"
+        >
+          Create Post
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|Pages/SubjectDetail/SubjectDetail Post 1`] = `
+<div
+  className="sc-hZSUBg VKktY"
+>
+  <div
+    className="sc-bsbRJL kfmymT"
+  >
+    <div
+      className="sc-kIPQKe cghkEh"
+    >
+      <div
+        className="sc-esjQYD iAviUW"
+      >
+        <div
+          className="sc-dfVpRl iZDkmv"
+        >
+          <div
+            className="sc-gxMtzJ drNOvL"
+          >
+            <div
+              className="sc-TOsTZ iGdPgL"
+            >
+              <svg>
+                Userpic.svg
+              </svg>
+            </div>
+            <div
+              className="sc-kgAjT cJhmpn"
+            >
+              
+               
+              James Montgommery Wheeler Mcguiness
+            </div>
+            <div
+              className="sc-kgAjT cJhmpn"
+            >
+              •
+               
+              1 hour ago
+            </div>
+          </div>
+          <div
+            className="sc-dqBHgY brXydG"
+          >
+            <p
+              className="sc-jtRfpW djwDaa"
+            >
+              Puerto Rico - Cherish Its Natural Wonders
+            </p>
+            <p
+              className="sc-kTUwUJ fEzaEj"
+            >
+               
+              0 VOTES
+            </p>
+          </div>
+        </div>
+        <img
+          className="sc-jqCOkK sc-kfGgVZ jhwuMj"
+        />
+        <div
+          className="sc-kPVwWT kNtIGJ"
+        >
+          <div
+            className="sc-gisBJw eZwyEv"
+          >
+            <svg>
+              Bubble.svg
+            </svg>
+          </div>
+          <div
+            className="sc-gzOgki zcIYc"
+          >
+             
+            0 Comments
+          </div>
+          <div
+            className="sc-iyvyFf lbZgUG"
+          >
+            CauseID - 
+          </div>
+          <p
+            className="sc-kTUwUJ sc-hwwEjo jiOnPI"
+          >
+             
+            0 VOTES
+          </p>
+          <svg
+            className="sc-fYxtnH haeFGy"
+            height="20px"
+            viewBox="0 0 14 20"
+            width="14px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="#979797"
+              transform="translate(4, 0.000000)"
+            >
+              <path
+                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+                fill-rule="nonzero"
+                id="Line"
+              />
+              <rect
+                height="6.66666667"
+                id="Rectangle"
+                width="6"
+                x="0"
+                y="12.8571429"
+              />
+            </g>
+          </svg>
+          <svg
+            className="sc-fYxtnH feMqde"
+            height="20px"
+            viewBox="0 0 14 20"
+            width="14px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="#979797"
+              transform="translate(4, 0.000000)"
+            >
+              <path
+                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+                fill-rule="nonzero"
+                id="Line"
+              />
+              <rect
+                height="6.66666667"
+                id="Rectangle"
+                width="6"
+                x="0"
+                y="12.8571429"
+              />
+            </g>
+          </svg>
+        </div>
+        <div
+          className="sc-elJkPf gvggah"
+        >
+          <p
+            className="sc-cmTdod HfubX"
+          />
+          <a
+            className="sc-jwKygS eYkwKa"
+          >
+            http://www.fideicomiso.org/home.html
+          </a>
+          <div
+            className="sc-bYSBpT fEJYvd"
+          >
+            <p
+              className="sc-lhVmIH bbwJua"
+            >
+              Comment as
+            </p>
+            <p
+              className="sc-btzYZH hufAeQ"
+            >
+              James Wheeler
+            </p>
+          </div>
+          <div
+            className="sc-iELTvK fLpYYL"
+          >
+            <textarea
+              className="sc-kafWEX eknYje"
+              placeholder="What are your thoughts?"
+            />
+            <button
+              className="sc-chPdSV eQkBGz sc-feJyhm emJbcO"
+            >
+              Comment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-fBuWsC eyyndN"
+    >
+      <svg>
+        PRFlag.svg
+      </svg>
+      <svg
+        className="sc-hzDkRC eelvFP"
+      >
+        Logo.svg
+      </svg>
+      <div
+        className="sc-htpNat iqZjTK"
+      >
+        Voz de Puerto Rico (Voz de PR) is a social platform that allows users to take an active role in the progression of human needs, social betterment and national development of Puerto Rico. It is community based, and provides a voice to those who wish to enact change across society.
+      </div>
+      <a
+        className="sc-jhAzac jKAVNS"
+        href="/create-cause"
+        onClick={[Function]}
+      >
+        <button
+          className="sc-chPdSV eQkBGz sc-jhAzac jKAVNS"
+        >
+          Create Cause
+        </button>
+      </a>
+      <a
+        className="sc-jhAzac jKAVNS"
+        href="/create-post"
+        onClick={[Function]}
+      >
+        <button
+          className="sc-chPdSV gUnKUM sc-jhAzac jKAVNS"
+        >
+          Create Post
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots DisplayWrappers|SidePanel/SidePanel CauseInfo 1`] = `
 <div
   className="sc-eqIVtm jBjvEW"
@@ -2911,6 +4243,69 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/SidePanelProfile Standard 
   >
     Change
   </button>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectCard/BottomWrapper 0Comments 1`] = `
+<div
+  className="sc-cHGsZl cDEGfY"
+>
+  <div
+    className="sc-gisBJw eZwyEv"
+  >
+    <svg>
+      Bubble.svg
+    </svg>
+  </div>
+  <div
+    className="sc-kjoXOD grKzSL"
+  >
+    0
+     
+    0 Comments
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectCard/BottomWrapper 1Comment 1`] = `
+<div
+  className="sc-cHGsZl cDEGfY"
+>
+  <div
+    className="sc-gisBJw eZwyEv"
+  >
+    <svg>
+      Bubble.svg
+    </svg>
+  </div>
+  <div
+    className="sc-kjoXOD grKzSL"
+  >
+    1
+     
+    Comment
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectCard/BottomWrapper ManyComments 1`] = `
+<div
+  className="sc-cHGsZl cDEGfY"
+>
+  <div
+    className="sc-gisBJw eZwyEv"
+  >
+    <svg>
+      Bubble.svg
+    </svg>
+  </div>
+  <div
+    className="sc-kjoXOD grKzSL"
+  >
+    100
+     
+    Comments
+  </div>
 </div>
 `;
 

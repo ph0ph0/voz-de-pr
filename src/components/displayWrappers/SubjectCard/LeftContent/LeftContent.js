@@ -13,7 +13,7 @@ const Wrapper = ({author, isOwner, timePassed, title, subjectContent, numberOfCo
             <SubjectCardTopLineWrapper author = {author} timePassed = {timePassed} isOwner = {isOwner}/>
             <SubjectTitle>{title}</SubjectTitle>
             <SubjectSummary>{subjectContent}</SubjectSummary>
-            <BottomWrapper>{numberOfComments}</BottomWrapper>
+            <BottomWrapper numberOfComments = {numberOfComments}/>
         </div>
     )
 }
@@ -31,10 +31,10 @@ const LeftContent = styled(Wrapper)`
 
 LeftContent.propTypes = {
     author: PropTypes.string.isRequired,
-    timeAgo: PropTypes.string.isRequired,
+    timePassed: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     subjectContent: PropTypes.string.isRequired,
-    numberOfComments: PropTypes.string.isRequired,
+    numberOfComments: PropTypes.number.isRequired,
 }
 
 export default LeftContent

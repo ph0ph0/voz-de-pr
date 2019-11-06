@@ -4,11 +4,11 @@ import styled from 'styled-components'
 import BubbleWrapper from './BubbleWrapper'
 import CommentsIndicator from '../../../Primitive/SubjectCard/CommentsIndicator'
 
-const Wrapper = ({children, ...props}) => {
+const Wrapper = ({numberOfComments, ...props}) => {
     return (
         <div {...props}>
             <BubbleWrapper />
-            <CommentsIndicator>{children}</CommentsIndicator>
+            <CommentsIndicator>{numberOfComments} {(numberOfComments > 1) ? "Comments" : (numberOfComments === 1) ? "Comment" : "0 Comments"}</CommentsIndicator>
         </div>
     )
 }
