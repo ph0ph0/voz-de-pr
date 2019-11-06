@@ -20,6 +20,7 @@ const DetailHeader = styled(DetailHeaderWrapper)`
     width: 100%;
 
     margin: 0px;
+    margin-bottom: 25px;
     padding: 0px;
 `
 

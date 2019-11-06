@@ -3,17 +3,11 @@ import { storiesOf } from '@storybook/react'
 
 import SubjectDetailCard from '../SubjectDetailCard'
 
-const text = `We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.`;
+import { CauseOnly, PostOnly } from '../../../../Constants/MockSubjectsData'
 
-const comments = [
-    {
-        name: "James Wheeler",
-        commentContent: text,
-        timePassed: "1 hour ago",
-        noOfVotes: 456,
-    }
-]
+const causeSubject = CauseOnly[0]
+const postSubject = PostOnly[0]
 
 storiesOf('DisplayWrappers|SubjectDetail/SubjectDetail', module)
-    .add('Cause', () => <SubjectDetailCard subjectID = {1234567890}  noOfVotes = {423} comments = {comments}/>)
-    .add('Post', () => <SubjectDetailCard subjectID = {1234567890}  noOfVotes = {423} comments = {comments}/>)
+    .add('Cause', () => <SubjectDetailCard subject = {causeSubject}/>)
+    .add('Post', () => <SubjectDetailCard secondary subject = {causeSubject}/>)

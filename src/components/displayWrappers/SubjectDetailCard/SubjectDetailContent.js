@@ -14,6 +14,7 @@ const SubjectDetailContentWrapper = (
         noOfVotes, 
         comments,
         src,
+        subjectContent,
         ...props
     }) => {
 
@@ -24,7 +25,7 @@ const SubjectDetailContentWrapper = (
                 <DetailHeader secondary = {secondary} noOfVotes = {noOfVotes}/>
                 <DetailImage src = {src} />
                 <DetailSummary secondary = {secondary} subjectID = {subjectID} noOfVotes = {noOfVotes} noOfComments = {numberOfComments}/>
-                <DetailBody secondary = {secondary} noOfVotes = {noOfVotes}/>
+                <DetailBody secondary = {secondary} noOfVotes = {noOfVotes} subjectContent = {subjectContent}/>
                 {comments && (comments.length != 0) && <CommentsSection comments = {comments}/>}
             </div>
         )

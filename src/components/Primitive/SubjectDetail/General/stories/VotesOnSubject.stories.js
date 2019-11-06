@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import VotesOnSubject from '../VotesOnSubject'
-import { VotesOnSubjectInSummary } from '../../../../DisplayWrappers/SubjectDetail/DetailSummary/DetailSummary'
+import { VotesOnSubjectInSummary } from '../../../../DisplayWrappers/SubjectDetailCard/DetailSummary/DetailSummary'
 
 storiesOf('Primitive|text/SubjectDetailVotesOnSubject', module)
     .add('DetailHeading_Cause', () => <VotesOnSubject votesOnSubject = {1234}/>)

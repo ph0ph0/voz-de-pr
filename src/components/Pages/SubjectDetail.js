@@ -3,19 +3,27 @@ import styled from 'styled-components'
 
 import SubjectDetailPageContent from '../PageContentWrappers/DetailPages/DetailPageContent'
 
-const SubjectDetailPageWrapper = ({ type, ...props}) => {
+import { CauseOnly } from '../../Constants/MockSubjectsData'
+
+const SubjectDetailPageWrapper = ({ secondary, ...props}) => {
+
+    //secondary here determines which side panel should be shown; the post one or the cause one.
+
+    const subject = CauseOnly[0]
+
     return (
         <div {...props}>
-            <SubjectDetailPageContent type = {type}/>
+            <SubjectDetailPageContent subject = {subject} secondary = {secondary}/>
         </div>
     )
 }
 
 const SubjectDetailPage = styled(SubjectDetailPageWrapper)`
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
 
     display: flex;
     justify-content: center;
+    align-items: flex-end;
 `
 
 export default SubjectDetailPage

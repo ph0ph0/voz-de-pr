@@ -7,7 +7,7 @@ import SubjectType from '../../../Primitive/SubjectCard/SubjectType'
 const Wrapper = ({numberOfVotes, secondary, ...props}) => {
     return (
         <div {...props}>
-            <SubjectVotes secondary = {secondary}>{numberOfVotes}</SubjectVotes>
+            <SubjectVotes secondary = {secondary}>{numberOfVotes} {(numberOfVotes > 1) ? "VOTES" : (numberOfVotes === 1) ? "VOTE" : "VOTES"}</SubjectVotes>
             <SubjectType secondary = {secondary} />
         </div>
     )
