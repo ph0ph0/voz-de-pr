@@ -13,6 +13,7 @@ const SubjectDetailContentWrapper = (
         subjectID,  
         noOfVotes, 
         comments,
+        src,
         ...props
     }) => {
 
@@ -21,7 +22,7 @@ const SubjectDetailContentWrapper = (
         return (
             <div {...props}>
                 <DetailHeader secondary = {secondary} noOfVotes = {noOfVotes}/>
-                <DetailImage />
+                <DetailImage src = {src} />
                 <DetailSummary secondary = {secondary} subjectID = {subjectID} noOfVotes = {noOfVotes} noOfComments = {numberOfComments}/>
                 <DetailBody secondary = {secondary} noOfVotes = {noOfVotes}/>
                 {comments && (comments.length != 0) && <CommentsSection comments = {comments}/>}
@@ -29,6 +30,13 @@ const SubjectDetailContentWrapper = (
         )
 }
 
-const SubjectDetailContent = styled(SubjectDetailContentWrapper)``
+const SubjectDetailContent = styled(SubjectDetailContentWrapper)`
+    /* border: 1px solid purple; */
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    margin: 0 34px 0 34px;
+`
 
 export default SubjectDetailContent

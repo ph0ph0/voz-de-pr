@@ -10,13 +10,14 @@ const SubjectCardsWrapper = ({arrayOfSubjectCardData, ...props}) => {
                 <SubjectCard 
                     key = {index}
                     author = {subject.author}
+                    createdBy = {subject.createdBy}
                     timeAgo = {subject.timeAgo} 
                     title = {subject.title}
                     subjectContent = {subject.subjectContent}
                     numberOfComments = {subject.numberOfComments} 
                     numberOfVotes = {subject.numberOfVotes} 
                     secondary = {(subject.type === "Post") ? true : false} 
-                    src = {subject.src}
+                    src = {subject.subjectImage}
                 />
             ))}
         </div>

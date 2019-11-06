@@ -20,7 +20,11 @@ const DetailBodyWrapper = ({ subjectContent, secondary, ...props}) => {
 const DetailBody = styled(DetailBodyWrapper)`
     /* border: 1px solid orange; */
 
-    margin: 0 21px 20px 21px;
+    width: 100%;
+
+    padding: 0px;
+    margin: 0px;
+    /* margin: 0 21px 20px 21px; */
 `
 
 export default DetailBody

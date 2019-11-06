@@ -6,7 +6,7 @@ import FeedPageContent from '../PageContentWrappers/FeedPages/FeedPageContent'
 const Page = ({...props}) => {
     return (
         <div {...props}>
-            <FeedPageContent pageTitle = {"Cause Lobby"} sidePanelType = {"CauseOnly"} profileType = {false}/>
+            <FeedPageContent pageType = {"Causes"} profileType = {false}/>
         </div>
     )
 }

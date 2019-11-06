@@ -8,48 +8,34 @@ import MainPageContent from './FeedMainPageContent'
 import SidePanel from '../../DisplayWrappers/SidePanel/SidePanel'
 import SidePanelProfile from '../../DisplayWrappers/SidePanel_Profile/SidePanel_Profile'
 
-const PageContentWrapper = ({pageTitle, sidePanelType, profileType, ...props}) => {
+const PageContentWrapper = ({pageTitle, pageType, profileType, ...props}) => {
 
-    switch (sidePanelType) {
-        case "Standard":
+    switch (pageType) {
+        case "Home":
             return (
                 <div {...props}>
-                    <MainPageContent pageTitle = {pageTitle} profileType = {profileType} />
+                    <MainPageContent pageTitle = {"Home Feed"} profileType = {profileType} queryType = {"Mixed"} />
                     <SidePanel type = {"Standard"} />
                 </div>
             )
-        case "CauseOnly":
+        case "Causes":
             return (
                 <div {...props}>
-                    <MainPageContent pageTitle = {pageTitle} profileType = {profileType} />
+                    <MainPageContent pageTitle = {"Cause Lobby"} profileType = {profileType} queryType = {"CauseOnly"}/>
                     <SidePanel type = {"CauseOnly"} />
                 </div>
             )
-        case "PostOnly":
+        case "Posts":
             return (
                 <div {...props}>
-                    <MainPageContent pageTitle = {pageTitle} profileType = {profileType} />
+                    <MainPageContent pageTitle = {"Posts Lobby"} profileType = {profileType} queryType = {"PostOnly"}/>
                     <SidePanel type = {"PostOnly"} />
-                </div>
-            )
-        case "CauseInfo":
-            return (
-                <div {...props}>
-                    <MainPageContent pageTitle = {pageTitle} profileType = {profileType} />
-                    <SidePanel type = {"CauseInfo"} />
-                </div>
-            )
-        case "PostInfo":
-            return (
-                <div {...props}>
-                    <MainPageContent pageTitle = {pageTitle} profileType = {profileType} />
-                    <SidePanel type = {"PostInfo"} />
                 </div>
             )
         case "Profile":
             return (
                 <div {...props}>
-                    <MainPageContent pageTitle = {pageTitle} profileType = {profileType} />
+                    <MainPageContent pageTitle = {"My Profile"} profileType = {profileType} queryType = {"Profile"}/>
                     <SidePanelProfile />
                 </div>
             )

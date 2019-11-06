@@ -4,9 +4,13 @@ import styled from 'styled-components'
 import LeftContent from './LeftContent/LeftContent'
 import RightContent from './RightContent/RightContent'
 
-const Wrapper = ({author, timeAgo, title, subjectContent, numberOfComments, numberOfVotes, secondary, src, ...props}) => {
+const Wrapper = ({author, createdBy, timeAgo, title, subjectContent, numberOfComments, numberOfVotes, secondary, src, ...props}) => {
 
-    const leftProps = {author, timeAgo, title, subjectContent, numberOfComments}
+    const userID = "USERID2"
+
+    const isOwner = (userID === createdBy) ? true : false
+
+    const leftProps = {author, timeAgo, title, subjectContent, numberOfComments, isOwner}
     const rightProps = {numberOfVotes, secondary, src}
 
     return (

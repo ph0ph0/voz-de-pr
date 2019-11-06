@@ -6,7 +6,7 @@ import FeedPageContent from '../PageContentWrappers/FeedPages/FeedPageContent'
 const Page = ({...props}) => {
     return (
         <div {...props}>
-            <FeedPageContent pageTitle = {"Home Feed"} sidePanelType = {"Standard"} profileType = {false}/>
+            <FeedPageContent pageType = {"Home"} profileType = {false}/>
         </div>
     )
 }

@@ -6,13 +6,13 @@ import ProfPicSubjectCard from './ProfPicSubjectCard'
 import NameTimeAgo from '../../../Primitive/SubjectCard/NameTimeAgo'
 import DeleteButton from '../../../Primitive/SubjectCard/DeleteSubjectButton'
 
-const Wrapper = ({author, timeAgo, ...props}) => {
+const Wrapper = ({author, isOwner, timeAgo, ...props}) => {
     return (
         <div {...props}>
             <ProfPicSubjectCard />
             <NameTimeAgo isTimeAgo = {false}>{author}</NameTimeAgo>
             <NameTimeAgo isTimeAgo = {true}>{timeAgo}</NameTimeAgo>
-            <DeleteButton />
+            {isOwner && <DeleteButton />}
         </div>
     )
 }
