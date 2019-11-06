@@ -1,15 +1,15 @@
-import styled from 'styled-components'
 import React from 'react'
+import styled from 'styled-components'
 
-const NoOfVotesWrapper = ({ noOfVotesOnSubject, ...props}) => {
+const VotesOnSubjectWrapper = ({ votesOnSubject, secondary, ...props}) => {
     return (
         <p {...props}>
-            {noOfVotesOnSubject} VOTES
+           {votesOnSubject} VOTES
         </p>
     )
 }
 
-const SubjectDetailNoOfVotes = styled(NoOfVotesWrapper)`
+const VotesOnSubject = styled(VotesOnSubjectWrapper)`
     font-size: 20px;
     color: ${props => props.secondary ? props.theme.secondaryColour : props.theme.primaryColour};
 
@@ -22,4 +22,4 @@ const SubjectDetailNoOfVotes = styled(NoOfVotesWrapper)`
     margin-left: auto;
 `
 
-export default SubjectDetailNoOfVotes
+export default VotesOnSubject

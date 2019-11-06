@@ -8970,6 +8970,15 @@ exports[`Storyshots Primitive/text/SubjectDetailCommentTextAreaInput Standard 1`
 />
 `;
 
+exports[`Storyshots Primitive/text/VotesOnComment Standard 1`] = `
+<p
+  className="sc-jnlKLf kuaWDI"
+>
+  10000
+   VOTES
+</p>
+`;
+
 exports[`Storyshots Primitive|/Buttons/SignUpInButton Login 1`] = `
 <button
   className="sc-jDwBTQ gFPAlF"
@@ -9735,6 +9744,61 @@ exports[`Storyshots Primitive|text/SubjectDetailTitle Standard 1`] = `
   className="sc-lhVmIH eXzdGP"
 >
   Test
+</p>
+`;
+
+exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject DetailHeading 1`] = `
+<p
+  className="sc-kTUwUJ fEzaEj"
+>
+   VOTES
+</p>
+`;
+
+exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject DetailHeading_Cause 1`] = `
+<p
+  className="sc-kTUwUJ fEzaEj"
+>
+  1234
+   VOTES
+</p>
+`;
+
+exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject DetailHeading_Post 1`] = `
+<p
+  className="sc-kTUwUJ dbZXEu"
+  secondary={true}
+>
+  1234
+   VOTES
+</p>
+`;
+
+exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject DetailSummary_Cause 1`] = `
+<p
+  className="sc-kTUwUJ sc-hwwEjo bYtNWS"
+  secondary={true}
+>
+  1234
+   VOTES
+</p>
+`;
+
+exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject DetailSummary_Post 1`] = `
+<p
+  className="sc-kTUwUJ sc-hwwEjo bYtNWS"
+  secondary={true}
+>
+  1234
+   VOTES
+</p>
+`;
+
+exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject Standard 1`] = `
+<p
+  className="sc-kTUwUJ fEzaEj"
+>
+   VOTES
 </p>
 `;
 

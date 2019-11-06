@@ -4,16 +4,22 @@ import styled from 'styled-components'
 import BubbleWrapper from '../../SubjectCard/LeftContent/BubbleWrapper'
 import CommentsIndicator from '../../../Primitive/SubjectDetail/DetailSummary/SummaryCommentsIndicator'
 import SubjectID from '../../../Primitive/SubjectDetail/DetailSummary/SubjectID'
-import CommentNumberOfVotes from '../../../Primitive/SubjectDetail/DetailSummary/NumberOfVotesInSummary'
+import VotesOnSubject from '../../../Primitive/SubjectDetail/General/VotesOnSubject'
 import VoteArrow from '../../../Primitive/SubjectDetail/DetailSummary/VoteArrow'
 
-const DetailSummaryWrapper = ({ secondary, noOfComments, subjectID, noOfVotes, ...props}) => {
+// Imported into Primitive/SubjectDetail/General/VotesOnSubject story
+export const VotesOnSubjectInSummary = styled(VotesOnSubject)`
+    /* border: 1px solid purple; */
+    font-size: 12px;
+`
+
+const DetailSummaryWrapper = ({ secondary, noOfComments, subjectID, votesOnSubject, ...props}) => {
     return (
         <div {...props}>
             <BubbleWrapper />
             <CommentsIndicator noOfComments = {noOfComments}/>
             <SubjectID secondary = {secondary} subjectID = {subjectID}/>
-            <CommentNumberOfVotes noOfVotes = {noOfVotes}/>
+            <VotesOnSubjectInSummary votesOnSubject = {votesOnSubject}/>
             <VoteArrow />
             <VoteArrow pointDown />
         </div>

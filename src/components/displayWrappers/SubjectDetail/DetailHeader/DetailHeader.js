@@ -4,11 +4,11 @@ import styled from 'styled-components'
 import DetailHeaderTopLineWrapper from './TopLine/DetailHeaderTopLine'
 import DetailHeaderBottomLineWrapper from './BottomLine/DetailHeaderBottomLine'
 
-const DetailHeaderWrapper = ({ secondary, ...props }) => {
+const DetailHeaderWrapper = ({ secondary, votesOnSubject, ...props }) => {
     return (
         <div {...props}>
             <DetailHeaderTopLineWrapper />
-            <DetailHeaderBottomLineWrapper secondary = {secondary}/>
+            <DetailHeaderBottomLineWrapper secondary = {secondary} votesOnSubject = {votesOnSubject}/>
         </div>
     )
 }
