@@ -8,7 +8,7 @@ import MainPageContent from './FeedMainPageContent'
 import SidePanel from '../../DisplayWrappers/SidePanel/SidePanel'
 import SidePanelProfile from '../../DisplayWrappers/SidePanel_Profile/SidePanel_Profile'
 
-const PageContentWrapper = ({pageTitle, pageType, profileType, ...props}) => {
+const PageContentWrapper = ({pageType, profileType, ...props}) => {
 
     switch (pageType) {
         case "Home":
@@ -42,7 +42,7 @@ const PageContentWrapper = ({pageTitle, pageType, profileType, ...props}) => {
         default:
             return (
                 <div {...props}>
-                    <MainPageContent pageTitle = {pageTitle} profileType = {profileType} />
+                    <MainPageContent pageTitle = {"Home Feed"} profileType = {profileType} />
                     <SidePanel type = {"Standard"} />
                 </div>
             )
@@ -57,8 +57,6 @@ const PageContent = styled(PageContentWrapper)`
 `
 
 PageContent.propTypes = {
-    pageTitle: PropTypes.string.isRequired,
-    sidePanelType: PropTypes.string.isRequired,
     profileType: PropTypes.bool.isRequired
 }
 

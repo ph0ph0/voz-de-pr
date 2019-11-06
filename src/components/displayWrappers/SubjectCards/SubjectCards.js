@@ -11,7 +11,7 @@ const SubjectCardsWrapper = ({arrayOfSubjectCardData, ...props}) => {
                     key = {index}
                     author = {subject.author}
                     createdBy = {subject.createdBy}
-                    timeAgo = {subject.timeAgo} 
+                    timePassed = {subject.timePassed} 
                     title = {subject.title}
                     subjectContent = {subject.subjectContent}
                     numberOfComments = {subject.numberOfComments} 

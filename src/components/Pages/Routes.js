@@ -7,6 +7,7 @@ import Posts from './Posts'
 import Profile from './Profile'
 import CreateCause from './CreateCause'
 import CreatePost from './CreatePost'
+// import SubjectDetail from './SubjectDetail'
 
 const Routes = () => {
     return (
@@ -29,6 +30,9 @@ const Routes = () => {
             <Route path = "/create-post">
                 <CreatePost />
             </Route>
+            {/* <Route path = "/subjectId">
+                <SubjectDetail />
+            </Route> */}
         </Switch>
     )
 }
