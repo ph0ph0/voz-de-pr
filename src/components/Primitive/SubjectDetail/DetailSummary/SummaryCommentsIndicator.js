@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import React from 'react'
 
-const CommentsIndicatorWrapper = ({ noOfCommentsOnSubject, ...props}) => {
+const CommentsIndicatorWrapper = ({ noOfComments, ...props}) => {
     return (
         <div {...props}>
-            {noOfCommentsOnSubject} Comments
+            {noOfComments} {(noOfComments > 1) ? "Comments" : (noOfComments === 1) ? "Comment" : "0 Comments"}
         </div>
 
     )

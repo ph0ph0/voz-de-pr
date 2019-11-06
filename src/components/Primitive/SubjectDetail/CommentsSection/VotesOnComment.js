@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const CommentNumberOfVotesWrapper = ({ votesOnComment, ...props}) => {
     return (
         <p {...props}>
-            {votesOnComment} VOTES
+            {votesOnComment} {(votesOnComment > 1) ? "VOTES" : (votesOnComment === 1) ? "VOTE" : "0 VOTES"}
         </p>
     )
 }

@@ -16,7 +16,7 @@ const SubjectDetailContentWrapper = (
         ...props
     }) => {
 
-        const numberOfComments = comments.length
+        const numberOfComments = comments && comments.length
 
         return (
             <div {...props}>
@@ -24,7 +24,7 @@ const SubjectDetailContentWrapper = (
                 <DetailImage />
                 <DetailSummary secondary = {secondary} subjectID = {subjectID} noOfVotes = {noOfVotes} noOfComments = {numberOfComments}/>
                 <DetailBody secondary = {secondary} noOfVotes = {noOfVotes}/>
-                {(comments.length != 0) && <CommentsSection comments = {comments}/>}
+                {comments && (comments.length != 0) && <CommentsSection comments = {comments}/>}
             </div>
         )
 }

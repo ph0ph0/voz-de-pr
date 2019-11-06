@@ -15,5 +15,7 @@ const comments = [
 ]
 
 storiesOf('DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDetailContent', module)
-    .add('Cause', () => <SubjectDetailContent subjectID = {1234567890}  noOfVotes = {423} comments = {comments}/>)
-    .add('Post', () => <SubjectDetailContent secondary subjectID = {1234567890}  noOfVotes = {423} comments = {comments}/>)
+    .add('Cause_withComments', () => <SubjectDetailContent subjectID = {1234567890}  noOfVotes = {423} comments = {comments}/>)
+    .add('Post_withComments', () => <SubjectDetailContent secondary subjectID = {1234567890}  noOfVotes = {423} comments = {comments}/>)
+    .add('Cause_withoutComments', () => <SubjectDetailContent subjectID = {1234567890}  noOfVotes = {423} />)
+    .add('Post_withoutComments', () => <SubjectDetailContent secondary subjectID = {1234567890}  noOfVotes = {423} comments = {comments}/>)

@@ -5180,6 +5180,439 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
 </div>
 `;
 
+exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDetailContent Cause_withComments 1`] = `
+<div
+  className="sc-esjQYD ikJPMC"
+>
+  <div
+    className="sc-dfVpRl iZDkmv"
+    noOfVotes={423}
+  >
+    <div
+      className="sc-gxMtzJ drNOvL"
+    >
+      <div
+        className="sc-TOsTZ iGdPgL"
+      >
+        <svg>
+          Userpic.svg
+        </svg>
+      </div>
+      <div
+        className="sc-kgAjT cJhmpn"
+      >
+        
+         
+        James Montgommery Wheeler Mcguiness
+      </div>
+      <div
+        className="sc-kgAjT cJhmpn"
+      >
+        •
+         
+        1 hour ago
+      </div>
+    </div>
+    <div
+      className="sc-dqBHgY brXydG"
+    >
+      <p
+        className="sc-jtRfpW djwDaa"
+      >
+        Puerto Rico - Cherish Its Natural Wonders
+      </p>
+      <p
+        className="sc-kTUwUJ fEzaEj"
+      >
+         VOTES
+      </p>
+    </div>
+  </div>
+  <img
+    className="sc-jqCOkK sc-kfGgVZ jhwuMj"
+  />
+  <div
+    className="sc-kPVwWT kNtIGJ"
+    noOfVotes={423}
+  >
+    <div
+      className="sc-gisBJw eZwyEv"
+    >
+      <svg>
+        Bubble.svg
+      </svg>
+    </div>
+    <div
+      className="sc-gzOgki zcIYc"
+      noOfComments={1}
+    >
+       Comments
+    </div>
+    <div
+      className="sc-iyvyFf lbZgUG"
+    >
+      CauseID - 
+      1234567890
+    </div>
+    <p
+      className="sc-kTUwUJ sc-hwwEjo jiOnPI"
+    >
+       VOTES
+    </p>
+    <svg
+      className="sc-fYxtnH haeFGy"
+      height="20px"
+      viewBox="0 0 14 20"
+      width="14px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="#979797"
+        transform="translate(4, 0.000000)"
+      >
+        <path
+          d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+          fill-rule="nonzero"
+          id="Line"
+        />
+        <rect
+          height="6.66666667"
+          id="Rectangle"
+          width="6"
+          x="0"
+          y="12.8571429"
+        />
+      </g>
+    </svg>
+    <svg
+      className="sc-fYxtnH feMqde"
+      height="20px"
+      viewBox="0 0 14 20"
+      width="14px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="#979797"
+        transform="translate(4, 0.000000)"
+      >
+        <path
+          d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+          fill-rule="nonzero"
+          id="Line"
+        />
+        <rect
+          height="6.66666667"
+          id="Rectangle"
+          width="6"
+          x="0"
+          y="12.8571429"
+        />
+      </g>
+    </svg>
+  </div>
+  <div
+    className="sc-elJkPf eENRqW"
+    noOfVotes={423}
+  >
+    <p
+      className="sc-cmTdod HfubX"
+    />
+    <a
+      className="sc-jwKygS eYkwKa"
+    >
+      http://www.fideicomiso.org/home.html
+    </a>
+    <div
+      className="sc-bYSBpT fEJYvd"
+    >
+      <p
+        className="sc-lhVmIH bbwJua"
+      >
+        Comment as
+      </p>
+      <p
+        className="sc-btzYZH hufAeQ"
+      >
+        James Wheeler
+      </p>
+    </div>
+    <div
+      className="sc-iELTvK fLpYYL"
+    >
+      <textarea
+        className="sc-kafWEX eknYje"
+        placeholder="What are your thoughts?"
+      />
+      <button
+        className="sc-chPdSV eQkBGz sc-feJyhm emJbcO"
+      >
+        Comment
+      </button>
+    </div>
+  </div>
+  <div
+    className="sc-cIShpX iYdQjI"
+  >
+    <div
+      className="sc-ktHwxA bwPBzM"
+      noOfVotes={456}
+    >
+      <div
+        className="sc-tilXH cGwaaQ"
+      >
+        <div
+          className="sc-kgAjT cJhmpn"
+        >
+          
+           
+          James Wheeler
+        </div>
+        <div
+          className="sc-kgAjT cJhmpn"
+          timeAgo={true}
+        >
+          
+           
+          1 hour ago
+        </div>
+        <p
+          className="sc-jnlKLf kuaWDI"
+        >
+           VOTES
+        </p>
+        <svg
+          className="sc-fYxtnH haeFGy"
+          height="17px"
+          viewBox="0 0 14 20"
+          width="14px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="#979797"
+            transform="translate(4, 0.000000)"
+          >
+            <path
+              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+              fill-rule="nonzero"
+              id="Line"
+            />
+            <rect
+              height="6.66666667"
+              id="Rectangle"
+              width="6"
+              x="0"
+              y="12.8571429"
+            />
+          </g>
+        </svg>
+        <svg
+          className="sc-fYxtnH feMqde"
+          height="17px"
+          viewBox="0 0 14 20"
+          width="14px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="#979797"
+            transform="translate(4, 0.000000)"
+          >
+            <path
+              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+              fill-rule="nonzero"
+              id="Line"
+            />
+            <rect
+              height="6.66666667"
+              id="Rectangle"
+              width="6"
+              x="0"
+              y="12.8571429"
+            />
+          </g>
+        </svg>
+      </div>
+      <p
+        className="sc-hEsumM cggWGb"
+      >
+        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDetailContent Cause_withoutComments 1`] = `
+<div
+  className="sc-esjQYD ikJPMC"
+>
+  <div
+    className="sc-dfVpRl iZDkmv"
+    noOfVotes={423}
+  >
+    <div
+      className="sc-gxMtzJ drNOvL"
+    >
+      <div
+        className="sc-TOsTZ iGdPgL"
+      >
+        <svg>
+          Userpic.svg
+        </svg>
+      </div>
+      <div
+        className="sc-kgAjT cJhmpn"
+      >
+        
+         
+        James Montgommery Wheeler Mcguiness
+      </div>
+      <div
+        className="sc-kgAjT cJhmpn"
+      >
+        •
+         
+        1 hour ago
+      </div>
+    </div>
+    <div
+      className="sc-dqBHgY brXydG"
+    >
+      <p
+        className="sc-jtRfpW djwDaa"
+      >
+        Puerto Rico - Cherish Its Natural Wonders
+      </p>
+      <p
+        className="sc-kTUwUJ fEzaEj"
+      >
+         VOTES
+      </p>
+    </div>
+  </div>
+  <img
+    className="sc-jqCOkK sc-kfGgVZ jhwuMj"
+  />
+  <div
+    className="sc-kPVwWT kNtIGJ"
+    noOfVotes={423}
+  >
+    <div
+      className="sc-gisBJw eZwyEv"
+    >
+      <svg>
+        Bubble.svg
+      </svg>
+    </div>
+    <div
+      className="sc-gzOgki zcIYc"
+    >
+       Comments
+    </div>
+    <div
+      className="sc-iyvyFf lbZgUG"
+    >
+      CauseID - 
+      1234567890
+    </div>
+    <p
+      className="sc-kTUwUJ sc-hwwEjo jiOnPI"
+    >
+       VOTES
+    </p>
+    <svg
+      className="sc-fYxtnH haeFGy"
+      height="20px"
+      viewBox="0 0 14 20"
+      width="14px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="#979797"
+        transform="translate(4, 0.000000)"
+      >
+        <path
+          d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+          fill-rule="nonzero"
+          id="Line"
+        />
+        <rect
+          height="6.66666667"
+          id="Rectangle"
+          width="6"
+          x="0"
+          y="12.8571429"
+        />
+      </g>
+    </svg>
+    <svg
+      className="sc-fYxtnH feMqde"
+      height="20px"
+      viewBox="0 0 14 20"
+      width="14px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="#979797"
+        transform="translate(4, 0.000000)"
+      >
+        <path
+          d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+          fill-rule="nonzero"
+          id="Line"
+        />
+        <rect
+          height="6.66666667"
+          id="Rectangle"
+          width="6"
+          x="0"
+          y="12.8571429"
+        />
+      </g>
+    </svg>
+  </div>
+  <div
+    className="sc-elJkPf eENRqW"
+    noOfVotes={423}
+  >
+    <p
+      className="sc-cmTdod HfubX"
+    />
+    <a
+      className="sc-jwKygS eYkwKa"
+    >
+      http://www.fideicomiso.org/home.html
+    </a>
+    <div
+      className="sc-bYSBpT fEJYvd"
+    >
+      <p
+        className="sc-lhVmIH bbwJua"
+      >
+        Comment as
+      </p>
+      <p
+        className="sc-btzYZH hufAeQ"
+      >
+        James Wheeler
+      </p>
+    </div>
+    <div
+      className="sc-iELTvK fLpYYL"
+    >
+      <textarea
+        className="sc-kafWEX eknYje"
+        placeholder="What are your thoughts?"
+      />
+      <button
+        className="sc-chPdSV eQkBGz sc-feJyhm emJbcO"
+      >
+        Comment
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDetailContent Post 1`] = `
 <div
   className="sc-esjQYD ikJPMC"
@@ -5428,6 +5861,528 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
       <p
         className="sc-hEsumM epeevU"
       />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDetailContent Post_withComments 1`] = `
+<div
+  className="sc-esjQYD ikJPMC"
+>
+  <div
+    className="sc-dfVpRl iZDkmv"
+    noOfVotes={423}
+  >
+    <div
+      className="sc-gxMtzJ drNOvL"
+    >
+      <div
+        className="sc-TOsTZ iGdPgL"
+      >
+        <svg>
+          Userpic.svg
+        </svg>
+      </div>
+      <div
+        className="sc-kgAjT cJhmpn"
+      >
+        
+         
+        James Montgommery Wheeler Mcguiness
+      </div>
+      <div
+        className="sc-kgAjT cJhmpn"
+      >
+        •
+         
+        1 hour ago
+      </div>
+    </div>
+    <div
+      className="sc-dqBHgY brXydG"
+    >
+      <p
+        className="sc-jtRfpW djwDaa"
+      >
+        Puerto Rico - Cherish Its Natural Wonders
+      </p>
+      <p
+        className="sc-kTUwUJ dbZXEu"
+      >
+         VOTES
+      </p>
+    </div>
+  </div>
+  <img
+    className="sc-jqCOkK sc-kfGgVZ jhwuMj"
+  />
+  <div
+    className="sc-kPVwWT kNtIGJ"
+    noOfVotes={423}
+  >
+    <div
+      className="sc-gisBJw eZwyEv"
+    >
+      <svg>
+        Bubble.svg
+      </svg>
+    </div>
+    <div
+      className="sc-gzOgki zcIYc"
+      noOfComments={1}
+    >
+       Comments
+    </div>
+    <div
+      className="sc-iyvyFf lbZgUG"
+    >
+      PostID - 
+      1234567890
+    </div>
+    <p
+      className="sc-kTUwUJ sc-hwwEjo jiOnPI"
+    >
+       VOTES
+    </p>
+    <svg
+      className="sc-fYxtnH haeFGy"
+      height="20px"
+      viewBox="0 0 14 20"
+      width="14px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="#979797"
+        transform="translate(4, 0.000000)"
+      >
+        <path
+          d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+          fill-rule="nonzero"
+          id="Line"
+        />
+        <rect
+          height="6.66666667"
+          id="Rectangle"
+          width="6"
+          x="0"
+          y="12.8571429"
+        />
+      </g>
+    </svg>
+    <svg
+      className="sc-fYxtnH feMqde"
+      height="20px"
+      viewBox="0 0 14 20"
+      width="14px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="#979797"
+        transform="translate(4, 0.000000)"
+      >
+        <path
+          d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+          fill-rule="nonzero"
+          id="Line"
+        />
+        <rect
+          height="6.66666667"
+          id="Rectangle"
+          width="6"
+          x="0"
+          y="12.8571429"
+        />
+      </g>
+    </svg>
+  </div>
+  <div
+    className="sc-elJkPf eENRqW"
+    noOfVotes={423}
+  >
+    <p
+      className="sc-cmTdod HfubX"
+    />
+    <a
+      className="sc-jwKygS eooixg"
+    >
+      http://www.fideicomiso.org/home.html
+    </a>
+    <div
+      className="sc-bYSBpT fEJYvd"
+    >
+      <p
+        className="sc-lhVmIH bbwJua"
+      >
+        Comment as
+      </p>
+      <p
+        className="sc-btzYZH dhqGbz"
+      >
+        James Wheeler
+      </p>
+    </div>
+    <div
+      className="sc-iELTvK fLpYYL"
+    >
+      <textarea
+        className="sc-kafWEX eknYje"
+        placeholder="What are your thoughts?"
+      />
+      <button
+        className="sc-chPdSV gUnKUM sc-feJyhm dAlOPW"
+      >
+        Comment
+      </button>
+    </div>
+  </div>
+  <div
+    className="sc-cIShpX iYdQjI"
+  >
+    <div
+      className="sc-ktHwxA bwPBzM"
+      noOfVotes={456}
+    >
+      <div
+        className="sc-tilXH cGwaaQ"
+      >
+        <div
+          className="sc-kgAjT cJhmpn"
+        >
+          
+           
+          James Wheeler
+        </div>
+        <div
+          className="sc-kgAjT cJhmpn"
+          timeAgo={true}
+        >
+          
+           
+          1 hour ago
+        </div>
+        <p
+          className="sc-jnlKLf kuaWDI"
+        >
+           VOTES
+        </p>
+        <svg
+          className="sc-fYxtnH haeFGy"
+          height="17px"
+          viewBox="0 0 14 20"
+          width="14px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="#979797"
+            transform="translate(4, 0.000000)"
+          >
+            <path
+              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+              fill-rule="nonzero"
+              id="Line"
+            />
+            <rect
+              height="6.66666667"
+              id="Rectangle"
+              width="6"
+              x="0"
+              y="12.8571429"
+            />
+          </g>
+        </svg>
+        <svg
+          className="sc-fYxtnH feMqde"
+          height="17px"
+          viewBox="0 0 14 20"
+          width="14px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="#979797"
+            transform="translate(4, 0.000000)"
+          >
+            <path
+              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+              fill-rule="nonzero"
+              id="Line"
+            />
+            <rect
+              height="6.66666667"
+              id="Rectangle"
+              width="6"
+              x="0"
+              y="12.8571429"
+            />
+          </g>
+        </svg>
+      </div>
+      <p
+        className="sc-hEsumM cggWGb"
+      >
+        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDetailContent Post_withoutComments 1`] = `
+<div
+  className="sc-esjQYD ikJPMC"
+>
+  <div
+    className="sc-dfVpRl iZDkmv"
+    noOfVotes={423}
+  >
+    <div
+      className="sc-gxMtzJ drNOvL"
+    >
+      <div
+        className="sc-TOsTZ iGdPgL"
+      >
+        <svg>
+          Userpic.svg
+        </svg>
+      </div>
+      <div
+        className="sc-kgAjT cJhmpn"
+      >
+        
+         
+        James Montgommery Wheeler Mcguiness
+      </div>
+      <div
+        className="sc-kgAjT cJhmpn"
+      >
+        •
+         
+        1 hour ago
+      </div>
+    </div>
+    <div
+      className="sc-dqBHgY brXydG"
+    >
+      <p
+        className="sc-jtRfpW djwDaa"
+      >
+        Puerto Rico - Cherish Its Natural Wonders
+      </p>
+      <p
+        className="sc-kTUwUJ dbZXEu"
+      >
+         VOTES
+      </p>
+    </div>
+  </div>
+  <img
+    className="sc-jqCOkK sc-kfGgVZ jhwuMj"
+  />
+  <div
+    className="sc-kPVwWT kNtIGJ"
+    noOfVotes={423}
+  >
+    <div
+      className="sc-gisBJw eZwyEv"
+    >
+      <svg>
+        Bubble.svg
+      </svg>
+    </div>
+    <div
+      className="sc-gzOgki zcIYc"
+      noOfComments={1}
+    >
+       Comments
+    </div>
+    <div
+      className="sc-iyvyFf lbZgUG"
+    >
+      PostID - 
+      1234567890
+    </div>
+    <p
+      className="sc-kTUwUJ sc-hwwEjo jiOnPI"
+    >
+       VOTES
+    </p>
+    <svg
+      className="sc-fYxtnH haeFGy"
+      height="20px"
+      viewBox="0 0 14 20"
+      width="14px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="#979797"
+        transform="translate(4, 0.000000)"
+      >
+        <path
+          d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+          fill-rule="nonzero"
+          id="Line"
+        />
+        <rect
+          height="6.66666667"
+          id="Rectangle"
+          width="6"
+          x="0"
+          y="12.8571429"
+        />
+      </g>
+    </svg>
+    <svg
+      className="sc-fYxtnH feMqde"
+      height="20px"
+      viewBox="0 0 14 20"
+      width="14px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        fill="#979797"
+        transform="translate(4, 0.000000)"
+      >
+        <path
+          d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+          fill-rule="nonzero"
+          id="Line"
+        />
+        <rect
+          height="6.66666667"
+          id="Rectangle"
+          width="6"
+          x="0"
+          y="12.8571429"
+        />
+      </g>
+    </svg>
+  </div>
+  <div
+    className="sc-elJkPf eENRqW"
+    noOfVotes={423}
+  >
+    <p
+      className="sc-cmTdod HfubX"
+    />
+    <a
+      className="sc-jwKygS eooixg"
+    >
+      http://www.fideicomiso.org/home.html
+    </a>
+    <div
+      className="sc-bYSBpT fEJYvd"
+    >
+      <p
+        className="sc-lhVmIH bbwJua"
+      >
+        Comment as
+      </p>
+      <p
+        className="sc-btzYZH dhqGbz"
+      >
+        James Wheeler
+      </p>
+    </div>
+    <div
+      className="sc-iELTvK fLpYYL"
+    >
+      <textarea
+        className="sc-kafWEX eknYje"
+        placeholder="What are your thoughts?"
+      />
+      <button
+        className="sc-chPdSV gUnKUM sc-feJyhm dAlOPW"
+      >
+        Comment
+      </button>
+    </div>
+  </div>
+  <div
+    className="sc-cIShpX iYdQjI"
+  >
+    <div
+      className="sc-ktHwxA bwPBzM"
+      noOfVotes={456}
+    >
+      <div
+        className="sc-tilXH cGwaaQ"
+      >
+        <div
+          className="sc-kgAjT cJhmpn"
+        >
+          
+           
+          James Wheeler
+        </div>
+        <div
+          className="sc-kgAjT cJhmpn"
+          timeAgo={true}
+        >
+          
+           
+          1 hour ago
+        </div>
+        <p
+          className="sc-jnlKLf kuaWDI"
+        >
+           VOTES
+        </p>
+        <svg
+          className="sc-fYxtnH haeFGy"
+          height="17px"
+          viewBox="0 0 14 20"
+          width="14px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="#979797"
+            transform="translate(4, 0.000000)"
+          >
+            <path
+              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+              fill-rule="nonzero"
+              id="Line"
+            />
+            <rect
+              height="6.66666667"
+              id="Rectangle"
+              width="6"
+              x="0"
+              y="12.8571429"
+            />
+          </g>
+        </svg>
+        <svg
+          className="sc-fYxtnH feMqde"
+          height="17px"
+          viewBox="0 0 14 20"
+          width="14px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            fill="#979797"
+            transform="translate(4, 0.000000)"
+          >
+            <path
+              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
+              fill-rule="nonzero"
+              id="Line"
+            />
+            <rect
+              height="6.66666667"
+              id="Rectangle"
+              width="6"
+              x="0"
+              y="12.8571429"
+            />
+          </g>
+        </svg>
+      </div>
+      <p
+        className="sc-hEsumM cggWGb"
+      >
+        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
+      </p>
     </div>
   </div>
 </div>
@@ -8970,6 +9925,36 @@ exports[`Storyshots Primitive/text/SubjectDetailCommentTextAreaInput Standard 1`
 />
 `;
 
+exports[`Storyshots Primitive/text/VotesOnComment 0Votes 1`] = `
+<p
+  className="sc-jnlKLf kuaWDI"
+>
+  0
+   
+  0 VOTES
+</p>
+`;
+
+exports[`Storyshots Primitive/text/VotesOnComment 1Vote 1`] = `
+<p
+  className="sc-jnlKLf kuaWDI"
+>
+  1
+   
+  VOTE
+</p>
+`;
+
+exports[`Storyshots Primitive/text/VotesOnComment ManyVotes 1`] = `
+<p
+  className="sc-jnlKLf kuaWDI"
+>
+  1000
+   
+  VOTES
+</p>
+`;
+
 exports[`Storyshots Primitive/text/VotesOnComment Standard 1`] = `
 <p
   className="sc-jnlKLf kuaWDI"
@@ -9635,6 +10620,36 @@ exports[`Storyshots Primitive|text/SubjectContent Standard 1`] = `
 />
 `;
 
+exports[`Storyshots Primitive|text/SubjectDetailCommentsIndicator 0Comments 1`] = `
+<div
+  className="sc-gzOgki zcIYc"
+>
+  0
+   
+  0 Comments
+</div>
+`;
+
+exports[`Storyshots Primitive|text/SubjectDetailCommentsIndicator 1Comment 1`] = `
+<div
+  className="sc-gzOgki zcIYc"
+>
+  1
+   
+  Comment
+</div>
+`;
+
+exports[`Storyshots Primitive|text/SubjectDetailCommentsIndicator ManyComments 1`] = `
+<div
+  className="sc-gzOgki zcIYc"
+>
+  30
+   
+  Comments
+</div>
+`;
+
 exports[`Storyshots Primitive|text/SubjectDetailCommentsIndicator Standard 1`] = `
 <div
   className="sc-elJkPf cVqmey"
@@ -9747,6 +10762,25 @@ exports[`Storyshots Primitive|text/SubjectDetailTitle Standard 1`] = `
 </p>
 `;
 
+exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject 0Votes 1`] = `
+<p
+  className="sc-kTUwUJ sc-hwwEjo bYtNWS"
+>
+   
+  0 Votes
+</p>
+`;
+
+exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject 1Vote 1`] = `
+<p
+  className="sc-kTUwUJ sc-hwwEjo bYtNWS"
+>
+  1
+   
+  VOTE
+</p>
+`;
+
 exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject DetailHeading 1`] = `
 <p
   className="sc-kTUwUJ fEzaEj"
@@ -9791,6 +10825,16 @@ exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject DetailSummary_Pos
 >
   1234
    VOTES
+</p>
+`;
+
+exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject ManyVotes 1`] = `
+<p
+  className="sc-kTUwUJ sc-hwwEjo bYtNWS"
+>
+  100
+   
+  VOTES
 </p>
 `;
 

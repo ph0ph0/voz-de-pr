@@ -4,4 +4,6 @@ import { storiesOf } from '@storybook/react'
 import VotesOnComment from '../VotesOnComment'
 
 storiesOf('Primitive/text/VotesOnComment', module)
-    .add('Standard', () => <VotesOnComment votesOnComment = {10000}/>)
+    .add('0Votes', () => <VotesOnComment />)
+    .add('1Vote', () => <VotesOnComment votesOnComment = {1}/>)
+    .add('ManyVotes', () => <VotesOnComment votesOnComment = {1000}/>)

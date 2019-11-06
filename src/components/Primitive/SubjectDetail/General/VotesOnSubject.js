@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const VotesOnSubjectWrapper = ({ votesOnSubject, secondary, ...props}) => {
     return (
         <p {...props}>
-           {votesOnSubject} VOTES
+           {votesOnSubject} {(votesOnSubject > 1) ? "VOTES" : (votesOnSubject === 1) ? "VOTE" : "0 VOTES"}
         </p>
     )
 }
