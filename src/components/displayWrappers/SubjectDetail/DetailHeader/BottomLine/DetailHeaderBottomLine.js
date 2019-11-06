@@ -4,11 +4,11 @@ import styled from 'styled-components'
 import SubjectDetailTitle from '../../../../Primitive/SubjectDetail/DetailHeader/SubjectDetailTitle'
 import SubjectDetailNoOfVotes from '../../../../Primitive/SubjectDetail/DetailHeader/SubjectDetailNoOfVotes'
 
-const DetailHeaderBottomLineWrapper = ({ secondary, ...props}) => {
+const DetailHeaderBottomLineWrapper = ({ secondary, noOfVotesOnSubject, ...props}) => {
     return (
         <div {...props}>
             <SubjectDetailTitle>Puerto Rico - Cherish Its Natural Wonders</SubjectDetailTitle>
-            <SubjectDetailNoOfVotes secondary = {secondary}>147 VOTES</SubjectDetailNoOfVotes>
+            <SubjectDetailNoOfVotes secondary = {secondary} noOfVotesOnSubject = {noOfVotesOnSubject}/>
         </div>
     )
 }

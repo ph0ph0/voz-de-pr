@@ -9513,6 +9513,25 @@ exports[`Storyshots Primitive|text/CommentContent Standard 1`] = `
 </p>
 `;
 
+exports[`Storyshots Primitive|text/CommentNumberOfVotes Cause 1`] = `
+<div
+  className="sc-hwwEjo inZCJi"
+>
+  234
+   VOTES
+</div>
+`;
+
+exports[`Storyshots Primitive|text/CommentNumberOfVotes Post 1`] = `
+<div
+  className="sc-hwwEjo hGfDQe"
+  secondary={true}
+>
+  234
+   VOTES
+</div>
+`;
+
 exports[`Storyshots Primitive|text/CommentsIndicator Content 1`] = `
 <div
   className="sc-kjoXOD grKzSL"
@@ -9629,6 +9648,32 @@ exports[`Storyshots Primitive|text/SubjectDetailNoOfVotes Post 1`] = `
 >
   147 VOTES
 </p>
+`;
+
+exports[`Storyshots Primitive|text/SubjectDetailNoOfVotesss Cause 1`] = `
+<p
+  className="sc-kTUwUJ fEzaEj"
+/>
+`;
+
+exports[`Storyshots Primitive|text/SubjectDetailNoOfVotesss Post 1`] = `
+<p
+  className="sc-kTUwUJ dbZXEu"
+  secondary={true}
+/>
+`;
+
+exports[`Storyshots Primitive|text/SubjectDetailNoOfVotessss Cause 1`] = `
+<p
+  className="sc-kTUwUJ fEzaEj"
+/>
+`;
+
+exports[`Storyshots Primitive|text/SubjectDetailNoOfVotessss Post 1`] = `
+<p
+  className="sc-kTUwUJ dbZXEu"
+  secondary={true}
+/>
 `;
 
 exports[`Storyshots Primitive|text/SubjectDetailNumberOfVotes Cause 1`] = `

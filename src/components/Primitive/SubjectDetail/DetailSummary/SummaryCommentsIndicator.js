@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 import React from 'react'
 
-const CommentsIndicatorWrapper = ({ noOfComments, ...props}) => {
+const CommentsIndicatorWrapper = ({ noOfCommentsOnSubject, ...props}) => {
     return (
         <div {...props}>
-            {noOfComments} Comments
+            {noOfCommentsOnSubject} Comments
         </div>
 
     )
 }
 
-const CommentsIndicator = styled(CommentsIndicatorWrapper)`
+const SummaryCommentsIndicator = styled(CommentsIndicatorWrapper)`
     /* border: 1px solid lime; */
     height: 16px;
     width: auto;
@@ -21,4 +21,4 @@ const CommentsIndicator = styled(CommentsIndicatorWrapper)`
     font-size: 12px;
 `
 
-export default CommentsIndicator
+export default SummaryCommentsIndicator

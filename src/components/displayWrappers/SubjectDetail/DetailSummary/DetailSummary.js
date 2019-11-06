@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 import BubbleWrapper from '../../SubjectCard/LeftContent/BubbleWrapper'
-import CommentsIndicator from '../../../Primitive/SubjectDetail/DetailSummary/CommentsIndicator'
+import CommentsIndicator from '../../../Primitive/SubjectDetail/DetailSummary/SummaryCommentsIndicator'
 import SubjectID from '../../../Primitive/SubjectDetail/DetailSummary/SubjectID'
-import NoOfVotes from '../../../Primitive/SubjectDetail/DetailSummary/NumberOfVotes'
+import CommentNumberOfVotes from '../../../Primitive/SubjectDetail/DetailSummary/NumberOfVotesInSummary'
 import VoteArrow from '../../../Primitive/SubjectDetail/DetailSummary/VoteArrow'
 
 const DetailSummaryWrapper = ({ secondary, noOfComments, subjectID, noOfVotes, ...props}) => {
@@ -13,7 +13,7 @@ const DetailSummaryWrapper = ({ secondary, noOfComments, subjectID, noOfVotes, .
             <BubbleWrapper />
             <CommentsIndicator noOfComments = {noOfComments}/>
             <SubjectID secondary = {secondary} subjectID = {subjectID}/>
-            <NoOfVotes noOfVotes = {noOfVotes}/>
+            <CommentNumberOfVotes noOfVotes = {noOfVotes}/>
             <VoteArrow />
             <VoteArrow pointDown />
         </div>

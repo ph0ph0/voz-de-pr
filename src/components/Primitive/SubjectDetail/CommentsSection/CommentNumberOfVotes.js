@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const CommentNumberOfVotesWrapper = ({ noOfVotes, ...props}) => {
+const CommentNumberOfVotesWrapper = ({ noOfVotesOnComment, ...props}) => {
     return (
         <p {...props}>
-            {noOfVotes} VOTES
+            {noOfVotesOnComment} VOTES
         </p>
     )
 }
