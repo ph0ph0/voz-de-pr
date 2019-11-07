@@ -14,7 +14,7 @@ const C = ({children, isTimeAgo, ...props}) => {
 
       return (
           <div {...props}>
-              {isTimeAgo ? convertUnicode("\u2022") : ""} {children}
+              {isTimeAgo ? convertUnicode("\u00B7") : ""} {children}
           </div>
       )
 }

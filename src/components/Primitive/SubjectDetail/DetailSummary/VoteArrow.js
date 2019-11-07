@@ -14,7 +14,7 @@ const VoteArrowWrapper = ({ small, pointDown, ...props }) => {
         <path
           id="Line"
           d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-          fill-rule="nonzero"
+          
 
           // transform="translate(4, 0.000000) rotate(90, -3, 0)"
         />
@@ -36,10 +36,8 @@ const VoteArrow = styled(VoteArrowWrapper)`
   transform: ${props => (props.pointDown ? "rotate(180deg)" : "rotate(0deg)")};
 
   & + & {
-    margin-left: 16px;
+  margin-left: ${props => props.small ? "2px" : "16px"};
   }
-
-  color: green;
 `;
 
 export default VoteArrow;

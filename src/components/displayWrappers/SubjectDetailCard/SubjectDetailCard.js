@@ -2,13 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 import SubjectDetailContent from './SubjectDetailContent'
-import { CauseOnly } from '../../../Constants/MockSubjectsData'
 
 const SubjectDetailWrapper = ({subject, secondary, ...props}) => {
 
     return (
         <div {...props}>
-            <SubjectDetailContent subjectID = {subject.id} noOfVotes = {subject.votes} subjectContent = {subject.subjectContent} comments = {subject.comments} src = {subject.subjectImage} secondary = {secondary} />
+            <SubjectDetailContent subjectID = {subject.id} votesOnSubject = {subject.votes} subjectContent = {subject.subjectContent} comments = {subject.comments} src = {subject.subjectImage} secondary = {secondary} />
         </div>
     )
 }

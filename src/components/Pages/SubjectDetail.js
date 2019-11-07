@@ -5,11 +5,13 @@ import SubjectDetailPageContent from '../PageContentWrappers/DetailPages/DetailP
 
 import { CauseOnly } from '../../Constants/MockSubjectsData'
 
-const SubjectDetailPageWrapper = ({ secondary, ...props}) => {
+const SubjectDetailPageWrapper = ({ ...props}) => {
 
     //secondary here determines which side panel should be shown; the post one or the cause one.
 
     const subject = CauseOnly[0]
+
+    const secondary = (subject.type === "post") ? true : false
 
     return (
         <div {...props}>

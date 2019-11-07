@@ -6,11 +6,12 @@ import Comment from './Comment'
 const CommentsSectionWrapper = ({ comments, ...props}) => {
     return (
         <div {...props}>
-            {comments.map((comment) => (
+            {comments.map((comment, index) => (
                 <Comment 
-                    noOfVotes = {comment.noOfVotes} 
-                    commentContent = {comment.commentContent} 
-                    name = {comment.name} 
+                    key = {index}
+                    votesOnComment = {comment.votes} 
+                    commentContent = {comment.text} 
+                    author = {comment.author} 
                     timePassed = {comment.timePassed}
                 />
             ))}

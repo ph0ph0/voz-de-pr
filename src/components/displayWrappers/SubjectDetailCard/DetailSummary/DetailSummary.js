@@ -38,7 +38,7 @@ const DetailSummary = styled(DetailSummaryWrapper)`
     box-sizing: border-box;
 
     display: flex;
-    place-content: flex-start;
+    /* place-content: flex-start; */
     align-items: center;
 `
 

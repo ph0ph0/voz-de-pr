@@ -11,7 +11,7 @@ const SubjectDetailContentWrapper = (
     { 
         secondary, 
         subjectID,  
-        noOfVotes, 
+        votesOnSubject, 
         comments,
         src,
         subjectContent,
@@ -22,11 +22,11 @@ const SubjectDetailContentWrapper = (
 
         return (
             <div {...props}>
-                <DetailHeader secondary = {secondary} noOfVotes = {noOfVotes}/>
+                <DetailHeader secondary = {secondary} votesOnSubject = {votesOnSubject}/>
                 <DetailImage src = {src} />
-                <DetailSummary secondary = {secondary} subjectID = {subjectID} noOfVotes = {noOfVotes} noOfComments = {numberOfComments}/>
-                <DetailBody secondary = {secondary} noOfVotes = {noOfVotes} subjectContent = {subjectContent}/>
-                {comments && (comments.length != 0) && <CommentsSection comments = {comments}/>}
+                <DetailSummary secondary = {secondary} subjectID = {subjectID} votesOnSubject = {votesOnSubject} noOfComments = {numberOfComments}/>
+                <DetailBody secondary = {secondary} subjectContent = {subjectContent}/>
+                {comments && (comments.length !== 0) && <CommentsSection comments = {comments}/>}
             </div>
         )
 }

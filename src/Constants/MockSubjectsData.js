@@ -4,22 +4,76 @@ const commentText = `We believe in conservation, not only because it protects na
 
 const comments = [
     {
-        name: "James Wheeler",
-        commentContent: commentText,
+        author: "James Wheeler",
+        text: commentText,
         timePassed: "1 hour ago",
-        noOfVotes: 456,
+        votes: 456,
     },
     {
-        name: "James Wheeler",
-        commentContent: commentText,
+        author: "James Wheeler",
+        text: commentText,
         timePassed: "1 hour ago",
-        noOfVotes: 456,
+        votes: 456,
     },
     {
-        name: "James Wheeler",
-        commentContent: commentText,
+        author: "James Wheeler",
+        text: commentText,
         timePassed: "1 hour ago",
-        noOfVotes: 456,
+        votes: 456,
+    },
+    {
+        author: "James Wheeler",
+        text: commentText,
+        timePassed: "1 hour ago",
+        votes: 456,
+    },
+    {
+        author: "James Wheeler",
+        text: commentText,
+        timePassed: "1 hour ago",
+        votes: 456,
+    },
+    {
+        author: "James Wheeler",
+        text: commentText,
+        timePassed: "1 hour ago",
+        votes: 456,
+    },
+    {
+        author: "James Wheeler",
+        text: commentText,
+        timePassed: "1 hour ago",
+        votes: 456,
+    },
+    {
+        author: "James Wheeler",
+        text: commentText,
+        timePassed: "1 hour ago",
+        votes: 456,
+    },
+    {
+        author: "James Wheeler",
+        text: commentText,
+        timePassed: "1 hour ago",
+        votes: 456,
+    },
+    {
+        author: "James Wheeler",
+        text: commentText,
+        timePassed: "1 hour ago",
+        votes: 456,
+    },
+    {
+        author: "James Wheeler",
+        text: commentText,
+        timePassed: "1 hour ago",
+        votes: 456,
+    },
+    {
+        author: "James Wheeler",
+        text: commentText,
+        timePassed: "1 hour ago",
+        votes: 456,
     }
 ]
 

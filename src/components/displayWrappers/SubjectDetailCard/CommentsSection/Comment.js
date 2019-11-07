@@ -4,10 +4,10 @@ import styled from 'styled-components'
 import CommentHeading from './CommentHeading'
 import CommentContent from '../../../Primitive/SubjectDetail/CommentsSection/CommentContent'
 
-const CommentWrapper = ({ votesOnComment, commentContent, name, timePassed, ...props}) => {
+const CommentWrapper = ({ votesOnComment, commentContent, author, timePassed, ...props}) => {
     return (
         <div {...props}>
-            <CommentHeading votesOnComment = {votesOnComment} name = {name} timePassed = {timePassed}/>
+            <CommentHeading votesOnComment = {votesOnComment} author = {author} timePassed = {timePassed}/>
             <CommentContent commentContent = {commentContent}/>
         </div>
     )
