@@ -19,7 +19,7 @@ const DetailSummaryWrapper = ({ secondary, noOfComments, subjectID, votesOnSubje
             <BubbleWrapper />
             <CommentsIndicator noOfComments = {noOfComments}/>
             <SubjectID secondary = {secondary} subjectID = {subjectID}/>
-            <VotesOnSubjectInSummary votesOnSubject = {votesOnSubject}/>
+            <VotesOnSubjectInSummary secondary = {secondary} votesOnSubject = {votesOnSubject}/>
             <VoteArrow />
             <VoteArrow pointDown />
         </div>

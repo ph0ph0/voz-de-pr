@@ -27,7 +27,7 @@ const RightContent = styled(Wrapper)`
 `
 
 RightContent.propTypes = {
-    numberOfVotes: PropTypes.string.isRequired,
+    numberOfVotes: PropTypes.number.isRequired,
     secondary: PropTypes.bool.isRequired
 }
 

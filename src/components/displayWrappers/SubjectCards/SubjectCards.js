@@ -3,7 +3,24 @@ import styled from 'styled-components'
 
 import SubjectCard from '../SubjectCard/SubjectCard'
 
-const SubjectCardsWrapper = ({arrayOfSubjectCardData, ...props}) => {
+import { useHistory } from 'react-router-dom'
+
+const SubjectCardsWrapper = ({staticContext, arrayOfSubjectCardData, ...props}) => {
+
+    let history = useHistory()
+
+    const onClick = (index) => {
+        window.log(`clicked card with index: ${index}`)
+
+        const subject = arrayOfSubjectCardData[index]
+        const subjectID = subject.id
+
+        history.push({
+            pathname: `/${subjectID}`,
+            state: {subject: subject}
+        })
+    }
+
     return (
         <div {...props}>
             {arrayOfSubjectCardData.map((subject, index) => (
@@ -16,8 +33,9 @@ const SubjectCardsWrapper = ({arrayOfSubjectCardData, ...props}) => {
                     subjectContent = {subject.subjectContent}
                     numberOfComments = {subject.comments && subject.comments.length} 
                     numberOfVotes = {subject.votes} 
-                    secondary = {(subject.type === "Post") ? true : false} 
+                    secondary = {(subject.type === "post") ? true : false} 
                     src = {subject.subjectImage}
+                    onClick = {() => onClick(index)}
                 />
             ))}
         </div>

@@ -3,13 +3,31 @@ import styled from 'styled-components'
 
 import SubjectDetailPageContent from '../PageContentWrappers/DetailPages/DetailPageContent'
 
-import { CauseOnly } from '../../Constants/MockSubjectsData'
+import { SubjectsMixed } from '../../Constants/MockSubjectsData'
 
-const SubjectDetailPageWrapper = ({ ...props}) => {
+import { withRouter } from 'react-router-dom'
+
+const fetchSubject = (subjectID) => {
+    window.log(`fetching subject: ${subjectID}`)
+
+    //This is meant to be equivalent to going to the server to get the subject. Replace with a server call
+    let subject = SubjectsMixed.filter(subject =>  subjectID === subject.id)
+    window.log(`subject retrieved: ${JSON.stringify(subject[0].id)}`)
+    
+    return subject[0]
+
+}
+
+const SubjectDetailPageWrapper = withRouter(({ staticContext, ...props}) => {
 
     //secondary here determines which side panel should be shown; the post one or the cause one.
 
-    const subject = CauseOnly[0]
+    var passedSubject = (props.location && props.location.state && props.location.state.subject) 
+        ? props.location.state.subject 
+        : fetchSubject(props.match.params.subjectID)  
+
+    const subject = passedSubject
+    window.log(`subject to show is: ${JSON.stringify(subject.id)}`)
 
     const secondary = (subject.type === "post") ? true : false
 
@@ -18,7 +36,7 @@ const SubjectDetailPageWrapper = ({ ...props}) => {
             <SubjectDetailPageContent subject = {subject} secondary = {secondary}/>
         </div>
     )
-}
+})
 
 const SubjectDetailPage = styled(SubjectDetailPageWrapper)`
     /* border: 1px solid orange; */

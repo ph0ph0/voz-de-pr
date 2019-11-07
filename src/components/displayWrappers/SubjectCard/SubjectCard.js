@@ -32,8 +32,15 @@ const SubjectCard = styled(Wrapper)`
 
     display: flex;
 
+    box-sizing: border-box;
+
     & + & {
         margin-top: 15px;
+    }
+
+    :hover {
+        cursor: pointer;
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.12);        
     }
 `
 

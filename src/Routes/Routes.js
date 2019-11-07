@@ -9,7 +9,7 @@ import CreateCause from '../components/Pages/CreateCause'
 import CreatePost from '../components/Pages/CreatePost'
 import SubjectDetail from '../components/Pages/SubjectDetail'
 
-const Routes = () => {
+const Routes = (props) => {
     return (
         <Switch>
             <Route exact path = "/">
@@ -30,8 +30,8 @@ const Routes = () => {
             <Route path = "/create-post">
                 <CreatePost />
             </Route>
-            <Route path = "/subjectId">
-                <SubjectDetail type = {"CauseOnly"}/>
+            <Route path = "/:subjectID">
+                <SubjectDetail {...props}/>
             </Route>
         </Switch>
     )

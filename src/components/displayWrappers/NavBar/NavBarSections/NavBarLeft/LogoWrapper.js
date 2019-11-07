@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+
+//withRouter allows us to push the history so that we can navigate, but we need to remove staticContext from the props!
 import { withRouter } from 'react-router-dom'
 
 import {ReactComponent as Logo } from '../../../../../assets/General/Logo.svg'

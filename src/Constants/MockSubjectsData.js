@@ -91,7 +91,7 @@ export const CauseOnly = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "cause",
     },
     {
         id: "2ABC",
@@ -105,7 +105,7 @@ export const CauseOnly = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "cause",
     },{
         id: "3ABC",
         createdBy: "USERID1",
@@ -118,7 +118,7 @@ export const CauseOnly = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "cause",
     },
     {
         id: "4ABC",
@@ -132,7 +132,7 @@ export const CauseOnly = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "cause",
     },
     {
         id: "5ABC",
@@ -146,7 +146,7 @@ export const CauseOnly = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "cause",
     },
     {
         id: "6ABC",
@@ -160,7 +160,7 @@ export const CauseOnly = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "cause",
     },
     {
         id: "7ABC",
@@ -174,7 +174,7 @@ export const CauseOnly = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "cause",
     },
     {
         id: "8ABC",
@@ -188,7 +188,7 @@ export const CauseOnly = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "cause",
     },
     {
         id: "9ABC",
@@ -202,7 +202,7 @@ export const CauseOnly = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "cause",
     },
     {
         id: "10ABC",
@@ -216,7 +216,7 @@ export const CauseOnly = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "cause",
     }    
 ]
 
@@ -234,7 +234,7 @@ export const PostOnly = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Post",
+        type: "post",
     },
     {
         id: "2ABC",
@@ -248,7 +248,7 @@ export const PostOnly = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Post",
+        type: "post",
     },{
         id: "3ABC",
         createdBy: "USERID1",
@@ -261,7 +261,7 @@ export const PostOnly = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Post",
+        type: "post",
     },
     {
         id: "4ABC",
@@ -275,7 +275,7 @@ export const PostOnly = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Post",
+        type: "post",
     },
     {
         id: "5ABC",
@@ -289,7 +289,7 @@ export const PostOnly = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Post",
+        type: "post",
     },
     {
         id: "6ABC",
@@ -303,7 +303,7 @@ export const PostOnly = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Post",
+        type: "post",
     },
     {
         id: "7ABC",
@@ -317,7 +317,7 @@ export const PostOnly = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Post",
+        type: "post",
     },
     {
         id: "8ABC",
@@ -331,7 +331,7 @@ export const PostOnly = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Post",
+        type: "post",
     },
     {
         id: "9ABC",
@@ -345,7 +345,7 @@ export const PostOnly = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Post",
+        type: "post",
     },
     {
         id: "10ABC",
@@ -359,7 +359,7 @@ export const PostOnly = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Post",
+        type: "post",
     }    
 ]
 
@@ -377,7 +377,7 @@ export const SubjectsMixed = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "cause",
     },
     {
         id: "2ABC",
@@ -391,7 +391,7 @@ export const SubjectsMixed = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Post",
+        type: "post",
     },{
         id: "3ABC",
         createdBy: "USERID1",
@@ -404,7 +404,7 @@ export const SubjectsMixed = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Post",
+        type: "post",
     },
     {
         id: "4ABC",
@@ -418,7 +418,7 @@ export const SubjectsMixed = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "cause",
     },
     {
         id: "5ABC",
@@ -432,7 +432,7 @@ export const SubjectsMixed = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "cause",
     },
     {
         id: "6ABC",
@@ -446,7 +446,7 @@ export const SubjectsMixed = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Post",
+        type: "post",
     },
     {
         id: "7ABC",
@@ -460,7 +460,7 @@ export const SubjectsMixed = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "cause",
     },
     {
         id: "8ABC",
@@ -474,7 +474,7 @@ export const SubjectsMixed = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Post",
+        type: "post",
     },
     {
         id: "9ABC",
@@ -488,7 +488,7 @@ export const SubjectsMixed = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Post",
+        type: "post",
     },
     {
         id: "10ABC",
@@ -502,7 +502,7 @@ export const SubjectsMixed = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "cause",
     }    
 ]
 
@@ -520,7 +520,7 @@ export const Profile = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "cause",
     },
     {
         id: "2ABC",
@@ -534,7 +534,7 @@ export const Profile = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "post",
     },{
         id: "3ABC",
         createdBy: "USERID2",
@@ -547,7 +547,7 @@ export const Profile = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "cause",
     },
     {
         id: "4ABC",
@@ -561,7 +561,7 @@ export const Profile = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "post",
     },
     {
         id: "5ABC",
@@ -575,7 +575,7 @@ export const Profile = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "cause",
     },
     {
         id: "6ABC",
@@ -589,7 +589,7 @@ export const Profile = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "post",
     },
     {
         id: "7ABC",
@@ -603,7 +603,7 @@ export const Profile = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "post",
     },
     {
         id: "8ABC",
@@ -617,7 +617,7 @@ export const Profile = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "cause",
     },
     {
         id: "9ABC",
@@ -631,7 +631,7 @@ export const Profile = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "cause",
     },
     {
         id: "10ABC",
@@ -645,6 +645,6 @@ export const Profile = [
         subjectImage: PR,
         comments: comments,
         votes: 147,
-        type: "Cause",
+        type: "post",
     }    
 ]
