@@ -31,7 +31,7 @@ const Routes = (props) => {
                 <CreatePost />
             </Route>
             <Route path = "/:subjectID">
-                <SubjectDetail {...props}/>
+                <SubjectDetail />
             </Route>
         </Switch>
     )

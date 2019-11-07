@@ -3,77 +3,85 @@ import PR from '../assets/SubjectCard/PuertoRico_VdPR.jpg'
 const commentText = `We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.`;
 
 const comments = [
-    {
+    {   
         author: "James Wheeler",
+        id: "1",
         text: commentText,
         timePassed: "1 hour ago",
         votes: 456,
+        subject: "1ABC"
     },
     {
         author: "James Wheeler",
+        id: "2",
         text: commentText,
         timePassed: "1 hour ago",
         votes: 456,
+        subject: "1ABC"
     },
-    {
+    {   
+        id: "3",
         author: "James Wheeler",
         text: commentText,
         timePassed: "1 hour ago",
         votes: 456,
+        subject: "1ABC"
     },
-    {
+    {   
+        id: "4",
         author: "James Wheeler",
         text: commentText,
         timePassed: "1 hour ago",
         votes: 456,
+        subject: "1ABC"
     },
-    {
+    {   
+        id: "15",
         author: "James Wheeler",
         text: commentText,
         timePassed: "1 hour ago",
         votes: 456,
+        subject: "1ABC"
     },
-    {
+    {   
+        id: "6",
         author: "James Wheeler",
         text: commentText,
         timePassed: "1 hour ago",
         votes: 456,
+        subject: "1ABC"
     },
-    {
+    {   
+        id: "7",
         author: "James Wheeler",
         text: commentText,
         timePassed: "1 hour ago",
         votes: 456,
+        subject: "1ABC"
     },
-    {
+    {   
+        id: "8",
         author: "James Wheeler",
         text: commentText,
         timePassed: "1 hour ago",
         votes: 456,
+        subject: "1ABC"
     },
-    {
+    {   
+        id: "9",
         author: "James Wheeler",
         text: commentText,
         timePassed: "1 hour ago",
         votes: 456,
+        subject: "1ABC"
     },
-    {
+    {   
+        id: "10",
         author: "James Wheeler",
         text: commentText,
         timePassed: "1 hour ago",
         votes: 456,
-    },
-    {
-        author: "James Wheeler",
-        text: commentText,
-        timePassed: "1 hour ago",
-        votes: 456,
-    },
-    {
-        author: "James Wheeler",
-        text: commentText,
-        timePassed: "1 hour ago",
-        votes: 456,
+        subject: "1ABC"
     }
 ]
 

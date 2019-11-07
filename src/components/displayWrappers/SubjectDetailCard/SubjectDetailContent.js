@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 import DetailHeader from './DetailHeader/DetailHeader'
 import DetailImage from '../../Primitive/SubjectDetail/DetailImage/DetailImage'
@@ -10,23 +11,19 @@ import CommentsSection from './CommentsSection/CommentsSection'
 const SubjectDetailContentWrapper = (
     { 
         secondary, 
-        subjectID,  
-        votesOnSubject, 
-        comments,
-        src,
-        subjectContent,
+        subject,
         ...props
     }) => {
-
-        const numberOfComments = comments && comments.length
+        
+        const numberOfComments = subject.comments && subject.comments.length
 
         return (
             <div {...props}>
-                <DetailHeader secondary = {secondary} votesOnSubject = {votesOnSubject}/>
-                <DetailImage src = {src} />
-                <DetailSummary secondary = {secondary} subjectID = {subjectID} votesOnSubject = {votesOnSubject} noOfComments = {numberOfComments}/>
-                <DetailBody secondary = {secondary} subjectContent = {subjectContent}/>
-                {comments && (comments.length !== 0) && <CommentsSection comments = {comments}/>}
+                <DetailHeader secondary = {secondary} votesOnSubject = {subject.votes}/>
+                <DetailImage src = {subject.subjectImage} />
+                <DetailSummary secondary = {secondary} subjectID = {subject.id} votesOnSubject = {subject.votes} noOfComments = {numberOfComments}/>
+                <DetailBody secondary = {secondary} subjectContent = {subject.subjectContent}/>
+                {subject.comments && (subject.comments.length !== 0) && <CommentsSection comments = {subject.comments}/>}
             </div>
         )
 }
@@ -39,5 +36,25 @@ const SubjectDetailContent = styled(SubjectDetailContentWrapper)`
     align-items: center;
     margin: 0 34px 0 34px;
 `
+
+SubjectDetailContent.propTypes = {
+    secondary: PropTypes.bool.isRequired,
+    subject: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        createdBy: PropTypes.string.isRequired,
+        createdAt: PropTypes.string.isRequired,
+        author: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        subjectContent: PropTypes.string.isRequired,
+        subjectImage: PropTypes.string.isRequired,
+        votes: PropTypes.number.isRequired,
+        type: PropTypes.string.isRequired,
+        comments: PropTypes.arrayOf(
+            PropTypes.object.isRequired
+        ),
+        timePassed: PropTypes.string.isRequired
+    })
+}
+
 
 export default SubjectDetailContent

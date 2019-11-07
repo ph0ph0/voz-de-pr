@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 import SubjectDetailTitle from '../../../../Primitive/SubjectDetail/DetailHeader/SubjectDetailTitle'
 import VotesOnSubject from '../../../../Primitive/SubjectDetail/General/VotesOnSubject'
@@ -24,5 +25,10 @@ const DetailHeaderBottomLine = styled(DetailHeaderBottomLineWrapper)`
     display: flex;
     flex-direction: row;
 `
+
+DetailHeaderBottomLine.propTypes = {
+    secondary: PropTypes.bool.isRequired,
+    votesOnSubject: PropTypes.number.isRequired
+  }
 
 export default DetailHeaderBottomLine

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 import SubjectContent from '../../../Primitive/SubjectDetail/DetailBody/SubjectContent'
 import SubjectLink from '../../../Primitive/SubjectDetail/DetailBody/SubjectLink'
@@ -26,5 +27,10 @@ const DetailBody = styled(DetailBodyWrapper)`
     margin: 0px;
     /* margin: 0 21px 20px 21px; */
 `
+
+DetailBody.propTypes = {
+    secondary: PropTypes.bool.isRequired,
+    subjectContent: PropTypes.string.isRequired
+  }
 
 export default DetailBody

@@ -20,8 +20,6 @@ const fetchSubject = (subjectID) => {
 
 const SubjectDetailPageWrapper = withRouter(({ staticContext, ...props}) => {
 
-    //secondary here determines which side panel should be shown; the post one or the cause one.
-
     var passedSubject = (props.location && props.location.state && props.location.state.subject) 
         ? props.location.state.subject 
         : fetchSubject(props.match.params.subjectID)  
@@ -29,6 +27,7 @@ const SubjectDetailPageWrapper = withRouter(({ staticContext, ...props}) => {
     const subject = passedSubject
     window.log(`subject to show is: ${JSON.stringify(subject.id)}`)
 
+    //secondary here determines which side panel should be shown; the post one or the cause one.
     const secondary = (subject.type === "post") ? true : false
 
     return (

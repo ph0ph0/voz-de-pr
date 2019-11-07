@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 import BubbleWrapper from '../../SubjectCard/LeftContent/BubbleWrapper'
 import CommentsIndicator from '../../../Primitive/SubjectDetail/DetailSummary/SummaryCommentsIndicator'
@@ -41,5 +42,12 @@ const DetailSummary = styled(DetailSummaryWrapper)`
     /* place-content: flex-start; */
     align-items: center;
 `
+
+DetailSummary.propTypes = {
+    noOfComments: PropTypes.number.isRequired,
+    secondary: PropTypes.bool.isRequired,
+    subjectID: PropTypes.string.isRequired,
+    votesOnSubject: PropTypes.number.isRequired
+  }
 
 export default DetailSummary
