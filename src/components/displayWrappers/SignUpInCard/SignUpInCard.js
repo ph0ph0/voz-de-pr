@@ -4,12 +4,12 @@ import styled from 'styled-components'
 import { ReactComponent as SidePanelSVG } from '../../../assets/SignUpInCard/SVG_SignUpInSidePanel.svg'
 import SignUpCardBody from './SignUpInCardBody/SignUpInCardBody'
 
-const SignUpInCardWrapper = ({isSignUp, ...props}) => {
+const SignUpInCardWrapper = ({isSignUp, api, ...props}) => {
 
     return (
         <div {...props}>
-            <SidePanel isSignUp = {isSignUp}/>
-            <SignUpCardBody isSignUp = {isSignUp}/>
+            <SidePanel isSignUp = {api.isSignUp}/>
+            <SignUpCardBody api = {api}/>
         </div>
     )
 }

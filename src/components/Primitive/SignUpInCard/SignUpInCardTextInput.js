@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const TextInputWrapper = ({ placeholder, ...props}) => {
     return (
-        <input {...props} placeholder = {placeholder}/>
+        <input {...props} placeholder = {placeholder} />
     )
 }
 

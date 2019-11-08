@@ -6,13 +6,17 @@ import LocationInput from '../../../Primitive/SidePanel_Profile/DropDown/Locatio
 import DropDownArrow from '../../../Primitive/SidePanel_Profile/DropDown/DropDownArrow'
 import ClearInput from '../../../Primitive/SidePanel_Profile/DropDown/ClearInput'
 
+const LocationInputSignUpInCard = styled(LocationInput)`
+  font-size: 20px;
+`
+
 const InlineWrapper = ({
     api,
     ...props
   }) => {
     return (
       <div {...props}>
-        <LocationInput
+        <LocationInputSignUpInCard
           api = {api}
         />
         {api.listOpen && <ClearInput api = {api} />}

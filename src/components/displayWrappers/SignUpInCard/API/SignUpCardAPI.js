@@ -2,11 +2,57 @@ import { locations } from '../../../../Constants/Constants'
 
 const SignUpInCardAPI = ({state, setState}) => {
     
+    const nameValue = state.nameValue
+    const usernameValue = state.usernameValue
+    const emailValue = state.emailValue
+    const passwordValue = state.passwordValue
     const locationValue = state.locationValue
     const selectedLocation = state.selectedLocation
     const listOpen = state.listOpen
     const dropDownIsErrored = state.dropDownIsErrored
     const selectedAvatar = state.selectedAvatar
+    const isSignUp = state.isSignUp
+
+    //Fires when the user types in the name field
+    const updateNameValue = (newValue) => {
+        setState(prevState => {
+            return ({
+                ...prevState,
+                nameValue: newValue
+            })
+        })
+        window.log(`nameValue: ${newValue}`)
+    }
+
+    const updateUsernameValue = (newValue) => {
+        setState(prevState => {
+            return ({
+                ...prevState,
+                usernameValue: newValue
+            })
+        })
+        window.log(`usernameValue: ${newValue}`)
+    }
+
+    const updateEmailValue = (newValue) => {
+        setState(prevState => {
+            return ({
+                ...prevState,
+                emailValue: newValue
+            })
+        })
+        window.log(`emailValue: ${newValue}`)
+    }
+
+    const updatePasswordValue = (newValue) => {
+        setState(prevState => {
+            return ({
+                ...prevState,
+                passwordValue: newValue
+            })
+        })
+        window.log(`passwordValue: ${newValue}`)
+    }
 
     //Fires when the user clicks on the Inline Content wrapper. Opens the drop down and displays the locations
     const toggleList = () => {
@@ -53,6 +99,16 @@ const SignUpInCardAPI = ({state, setState}) => {
             })
         })
         window.log(`avatar selected: ${selectedKey}`)
+    }
+
+    const toggleSignUp = () => {
+        window.log(`toggling signup`)
+        setState(prevState => {
+            return ({
+                ...prevState,
+                isSignUp: !isSignUp
+            })
+        })
     }
 
     //fires when the user clicks the submit button
@@ -113,16 +169,26 @@ const SignUpInCardAPI = ({state, setState}) => {
     }
 
     return ({
+        nameValue,
+        usernameValue,
+        emailValue,
+        passwordValue,
         locationValue,
         listOpen,
         dropDownIsErrored,
         selectedLocation,
         selectedAvatar,
         toggleList,
+        updateNameValue,
+        updateUsernameValue,
+        updateEmailValue,
         updateLocationValue,
+        updatePasswordValue,
         onLocationSelected,
         onClickAv,
+        toggleSignUp,
         resetDropdown,
+        isSignUp,
         resetAll,
         submit
     })

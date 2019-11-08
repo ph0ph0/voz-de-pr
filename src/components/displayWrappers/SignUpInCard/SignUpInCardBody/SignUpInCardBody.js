@@ -30,23 +30,64 @@ const AvatarInstructionSignUp = styled(AvatarInstruction)`
 const SignUpInButton = styled(ActionButton)`
     margin-top: 17px;
     margin-bottom: 19px;
+
+    :hover {
+        cursor: pointer
+    }
+
+    :focus {
+        outline: 0;
+    }
 `
 
-const SignUpCardBodyWrapper = ({ isSignUp, ...props}) => {
+const SignUpCardBodyWrapper = ({ api, isSignUp, ...props}) => {
     return (
         <div {...props}>
-            <Logo isSignUp = {isSignUp}/>
-            {isSignUp && <TextField placeholder = {"Name"}/>}
-            {isSignUp && <TextField placeholder = {"Username"}/>}
-            <TextField placeholder = {"Email"}/>
-            {isSignUp && <DropDown api = {api}/>}
-            <TextField placeholder = {"Password"}/>
-            {isSignUp && <AvatarInstructionSignUp api = {api}>
-                Select an Avatar
-            </AvatarInstructionSignUp>}
-            {isSignUp && <Avatars api = {api}/>}
-            <SignUpInButton secondary>SIGN UP</SignUpInButton>
-            <BottomLineWrapper isSignUp = {isSignUp}/>
+            <Logo isSignUp = {api.isSignUp}/>
+            {api.isSignUp 
+                && <TextField 
+                        placeholder = {"Name"} 
+                        value = {api.nameValue} 
+                        onChange = {(event) => api.updateNameValue(event.target.value)}
+                    />
+            }
+            {api.isSignUp 
+                && <TextField 
+                    placeholder = {"Username"} 
+                    value = {api.usernameValue} 
+                    onChange = {(event) => api.updateUsernameValue(event.target.value)}
+                    />
+            }
+            <TextField 
+                placeholder = {"Email"} 
+                value = {api.emailValue} 
+                onChange = {(event) => api.updateEmailValue(event.target.value)}/>
+            {api.isSignUp 
+                && <DropDown 
+                        api = {api}
+                    />
+            }
+            <TextField 
+                placeholder = {"Password"} 
+                value = {api.passwordValue} 
+                onChange = {(event) => api.updatePasswordValue(event.target.value)}
+            />
+            {api.isSignUp 
+                && <AvatarInstructionSignUp 
+                    api = {api}
+                    >
+                        Select an Avatar
+                    </AvatarInstructionSignUp>}
+            {api.isSignUp 
+                && <Avatars 
+                        api = {api}
+                    />}
+            <SignUpInButton 
+                secondary = {api.isSignUp ? true : false} 
+                >
+                    {api.isSignUp ? "SIGN UP" : "LOG IN"}
+                </SignUpInButton>
+            <BottomLineWrapper api = {api}/>
         </div>
     )
 }
