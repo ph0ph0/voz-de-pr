@@ -45,7 +45,7 @@ const DetailSummary = styled(DetailSummaryWrapper)`
 
 DetailSummary.propTypes = {
     noOfComments: PropTypes.number.isRequired,
-    secondary: PropTypes.bool.isRequired,
+    secondary: PropTypes.bool,
     subjectID: PropTypes.string.isRequired,
     votesOnSubject: PropTypes.number.isRequired
   }

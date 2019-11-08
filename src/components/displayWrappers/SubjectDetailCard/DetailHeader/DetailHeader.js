@@ -25,7 +25,7 @@ const DetailHeader = styled(DetailHeaderWrapper)`
     padding: 0px;
 `
 DetailHeader.propTypes = {
-    secondary: PropTypes.bool.isRequired,
+    secondary: PropTypes.bool,
     votesOnSubject: PropTypes.number.isRequired
 }
 

@@ -7,7 +7,7 @@ import { SubjectsMixed } from '../../Constants/MockSubjectsData'
 
 import { withRouter } from 'react-router-dom'
 
-const fetchSubject = (subjectID) => {
+export const fetchSubject = (subjectID) => {
     window.log(`fetching subject: ${subjectID}`)
 
     //This is meant to be equivalent to going to the server to get the subject. Replace with a server call
@@ -18,7 +18,9 @@ const fetchSubject = (subjectID) => {
 
 }
 
-const SubjectDetailPageWrapper = withRouter(({ staticContext, ...props}) => {
+const SubjectDetailPageWrapper = withRouter(({ staticContext, ...props,}) => {
+
+    window.log(`props for SDPW: ${JSON.stringify(props)}`)
 
     var passedSubject = (props.location && props.location.state && props.location.state.subject) 
         ? props.location.state.subject 

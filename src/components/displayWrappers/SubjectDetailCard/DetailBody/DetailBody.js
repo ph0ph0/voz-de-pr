@@ -29,7 +29,7 @@ const DetailBody = styled(DetailBodyWrapper)`
 `
 
 DetailBody.propTypes = {
-    secondary: PropTypes.bool.isRequired,
+    secondary: PropTypes.bool,
     subjectContent: PropTypes.string.isRequired
   }
 

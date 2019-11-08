@@ -38,7 +38,7 @@ const SubjectDetailContent = styled(SubjectDetailContentWrapper)`
 `
 
 SubjectDetailContent.propTypes = {
-    secondary: PropTypes.bool.isRequired,
+    secondary: PropTypes.bool,
     subject: PropTypes.shape({
         id: PropTypes.string.isRequired,
         createdBy: PropTypes.string.isRequired,

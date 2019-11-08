@@ -32,7 +32,7 @@ const SubjectDetailCard = styled(SubjectDetailWrapper)`
 `
 
 SubjectDetailCard.propTypes = {
-    secondary: PropTypes.bool.isRequired,
+    secondary: PropTypes.bool,
     subject: PropTypes.shape({
         id: PropTypes.string.isRequired,
         createdBy: PropTypes.string.isRequired,

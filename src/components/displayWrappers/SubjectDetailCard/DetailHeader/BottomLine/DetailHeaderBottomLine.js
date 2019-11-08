@@ -27,7 +27,7 @@ const DetailHeaderBottomLine = styled(DetailHeaderBottomLineWrapper)`
 `
 
 DetailHeaderBottomLine.propTypes = {
-    secondary: PropTypes.bool.isRequired,
+    secondary: PropTypes.bool,
     votesOnSubject: PropTypes.number.isRequired
   }
 
