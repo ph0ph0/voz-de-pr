@@ -1,4 +1,8 @@
+import { cleanup } from '@testing-library/react'
+
 import CreateSubjectFormAPI from '../CreateSubjectFormAPI'
+
+afterEach(cleanup)
 
 let state = {
     currentPanel: "content",
@@ -68,22 +72,28 @@ it("updates link content", () => {
     expect(mockApi.api.linkContent).toEqual("new link content")
 })
 
-it("checks title is not empty when submitting", () => {
-  mockApi.api.updateSubjectTitle("")
-  mockApi.api.submit()
-  expect(mockApi.api.titleIsErrored).toEqual(true)
-
-  mockApi.api.updateSubjectTitle("should pass")
-  mockApi.api.submit()
-  expect(mockApi.api.titleIsErrored).toEqual(true)
-})
-
-it("checks content is not empty when submitting", () => {
-  mockApi.api.updateSubjectContent("")
-  mockApi.api.submit()
-  expect(mockApi.api.contentIsErrored).toEqual(true)
-
-  mockApi.api.updateSubjectContent("should pass")
-  mockApi.api.submit()
-  expect(mockApi.api.contentIsErrored).toEqual(true)
+describe("Fields are not empty on submit", () => {
+  it("checks title is not empty when submitting", () => {
+    mockApi.api.updateSubjectTitle("")
+    mockApi.api.updateSubjectContent("TEST")
+    mockApi.api.submit()
+    expect(mockApi.api.titleIsErrored).toEqual(true)
+  
+    mockApi.api.updateSubjectTitle("should pass")
+    mockApi.api.updateSubjectContent("should pass")
+    mockApi.api.submit()
+    expect(mockApi.api.titleIsErrored).toEqual(false)
+  })
+  
+  it("checks content is not empty when submitting", () => {
+    mockApi.api.updateSubjectTitle("TEST")
+    mockApi.api.updateSubjectContent("")
+    mockApi.api.submit()
+    expect(mockApi.api.contentIsErrored).toEqual(true)
+  
+    mockApi.api.updateSubjectTitle("should pass")
+    mockApi.api.updateSubjectContent("should pass")
+    mockApi.api.submit()
+    expect(mockApi.api.contentIsErrored).toEqual(false)
+  })
 })

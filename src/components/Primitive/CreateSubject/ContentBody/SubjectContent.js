@@ -7,8 +7,6 @@ const SubjectContentWrapper = ({ api, ...props }) => {
       <textarea 
         {...props} 
         placeholder={"Post for all of Puerto Rico to hear!"}
-        value = {api.subjectContent}
-        onChange = {(event) => api.updateSubjectContent(event.target.value)}
       />
     );
   };
@@ -37,8 +35,4 @@ const SubjectContentWrapper = ({ api, ...props }) => {
     }
   `;
 
-SubjectContent.propTypes = {
-  api: PropTypes.object.isRequired
-}
-
-  export default SubjectContent
+ export default SubjectContent

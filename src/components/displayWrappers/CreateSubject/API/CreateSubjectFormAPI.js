@@ -68,17 +68,13 @@ const CreateSubjectFormAPI = ({state, setState}) => {
     }
 
     const titleIsEmpty = () => {
-        if (subjectTitle === "") {
-            return true
-        }
-        return false
+        window.log(`title in bool: ${subjectTitle}`)
+        return (subjectTitle === "") ? true : false
     }
 
     const contentIsEmpty = () => {
-        if (subjectContent === "") {
-            return true
-        }
-        return false
+        window.log(`content in bool: ${subjectContent}`)
+        return (subjectContent === "") ? true : false
     }
 
     const resetAll = () => {
@@ -90,14 +86,18 @@ const CreateSubjectFormAPI = ({state, setState}) => {
                 subjectContent: "",
                 imageDescription: "",
                 linkDescription: "",
-                linkContent: ""
+                linkContent: "",
+                titleIsErrored: false,
+                contentIsErrored: false
             })
         })
     }
 
     const submit = () => {
 
-        if (titleIsEmpty) {
+        window.log(`On submit, subjectTitle: ${subjectTitle}, subjectContent ${subjectContent}`)
+
+        if (titleIsEmpty()) {
             setState(prevState => {
                 return ({
                     ...prevState,
@@ -105,9 +105,10 @@ const CreateSubjectFormAPI = ({state, setState}) => {
                     titleIsErrored: true
                 })
             })
+            return
         }
 
-        if (contentIsEmpty) {
+        if (contentIsEmpty()) {
             setState(prevState => {
                 return ({
                     ...prevState,
@@ -115,7 +116,8 @@ const CreateSubjectFormAPI = ({state, setState}) => {
                     contentIsErrored: true
                 })
             })
-        }
+            return
+        } 
 
         resetAll()
     }

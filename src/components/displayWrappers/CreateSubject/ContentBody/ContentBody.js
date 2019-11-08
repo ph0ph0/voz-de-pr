@@ -10,9 +10,9 @@ const ContentBodyWrapper = ({ secondary, api, ...props }) => {
     return (
       <div {...props}>
         {api.titleIsErrored && <ErrorText>Please choose a title</ErrorText>}
-        <SubjectTitle api = {api}/>
+        <SubjectTitle value = {api.subjectTitle} onChange = {event => api.updateSubjectTitle(event.target.value)}/>
         {api.contentIsErrored && (secondary ? <ErrorText>Please describe your post</ErrorText> : <ErrorText>Please describe your cause</ErrorText>)}
-        <SubjectContent api = {api}/> 
+        <SubjectContent value = {api.subjectContent} onChange = {(event) => api.updateSubjectContent(event.target.value)}/> 
         <ActionButton secondary={secondary} onClick = {api.submit}>
           {secondary ? "Create Post" : "Create Cause"}
         </ActionButton>
