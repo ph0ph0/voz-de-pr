@@ -1,6 +1,6 @@
 import { locations } from '../../../../Constants/Constants'
 
-const SignUpCardAPI = ({state, setState}) => {
+const SignUpInCardAPI = ({state, setState}) => {
     
     const locationValue = state.locationValue
     const selectedLocation = state.selectedLocation
@@ -128,4 +128,4 @@ const SignUpCardAPI = ({state, setState}) => {
     })
 }
 
-export default SignUpCardAPI
+export default SignUpInCardAPI

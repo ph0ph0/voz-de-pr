@@ -27,7 +27,7 @@ const AvatarsArray = [
     4: AvatarsArray[4]
   }
 
-storiesOf("DisplayWrappers/SignUpCard/Avatars/AvatarRowWithFive", module)
+storiesOf("DisplayWrappers/SignUpInCard/Avatars/AvatarRowWithFive", module)
     .add("Standard", () => <AvatarRowWithFive avatars={RowOne} api = {mockApi} />, {
-        notes: "*PROPS; avatars, onClickAv, selectedAvatar* This is the wrapper for the avatars in the SignUpCard"
+        notes: "*PROPS; avatars, onClickAv, selectedAvatar* This is the wrapper for the avatars in the SignUpInCard"
     })

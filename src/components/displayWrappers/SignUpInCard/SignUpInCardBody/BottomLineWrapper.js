@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import SwitchStateButton from '../../../Primitive/SignUpCard/SwitchStateButton'
+import SwitchStateButton from '../../../Primitive/SignUpInCard/SwitchStateButton'
 
 const BottomLineWrapperWrapper = ({ isSignUp, ...props}) => {
     return (

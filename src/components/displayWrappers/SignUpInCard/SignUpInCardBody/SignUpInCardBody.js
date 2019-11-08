@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import TextField from '../../../Primitive/SignUpCard/SignUpCardTextInput'
+import TextField from '../../../Primitive/SignUpInCard/SignUpInCardTextInput'
 import { ReactComponent as LogoSVG } from '../../../../assets/SignUpInCard/SignUpInLogo.svg'
 import DropDown from '../DropDown/DropDown'
 import AvatarInstruction from '../../../Primitive/SidePanel_Profile/Avatars/AvatarInstruction'
@@ -52,7 +52,7 @@ const SignUpCardBodyWrapper = ({ isSignUp, ...props}) => {
 }
 
 const SignUpCardBody = styled(SignUpCardBodyWrapper)`
-    border: 1px solid indigo;
+    /* border: 1px solid indigo; */
 
     width: 468px;
     height: auto;

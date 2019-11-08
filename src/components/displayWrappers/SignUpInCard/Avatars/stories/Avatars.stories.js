@@ -5,7 +5,7 @@ import Avatars from '../Avatars'
 
 import { mockApi } from '../../API/__mocks__/mockApi'
 
-storiesOf("DisplayWrappers|SidePanel_Profile/Avatars/Avatars", module)
+storiesOf("DisplayWrappers|SignUpInCard/Avatars/Avatars", module)
     .add("Standard", () => <Avatars api = {mockApi}/>, {
         notes: "*PROPS; selectedAvatar, onClickAv* This is the avatar display for the SidePanel_Profile"
     })

@@ -8,6 +8,7 @@ import Profile from '../components/Pages/Profile'
 import CreateCause from '../components/Pages/CreateCause'
 import CreatePost from '../components/Pages/CreatePost'
 import SubjectDetail from '../components/Pages/SubjectDetail'
+import SignUpIn from '../components/Pages/SignUpIn'
 
 const Routes = (props) => {
     return (
@@ -29,6 +30,9 @@ const Routes = (props) => {
             </Route>
             <Route path = "/create-post">
                 <CreatePost />
+            </Route>
+            <Route path = "/signupin">
+                <SignUpIn />
             </Route>
             <Route path = "/:subjectID">
                 <SubjectDetail />

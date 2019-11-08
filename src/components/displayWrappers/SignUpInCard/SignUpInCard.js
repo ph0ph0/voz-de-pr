@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { ReactComponent as SidePanelSVG } from '../../../assets/SignUpInCard/SVG_SignUpInSidePanel.svg'
-import SignUpCardBody from './SignUpCardBody/SignUpCardBody'
+import SignUpCardBody from './SignUpInCardBody/SignUpInCardBody'
 
 const SignUpInCardWrapper = ({isSignUp, ...props}) => {
 
@@ -15,13 +15,18 @@ const SignUpInCardWrapper = ({isSignUp, ...props}) => {
 }
 
 const SidePanel = styled(SidePanelSVG)`
+    /* border: 1px solid orange; */
+
     margin-top: ${props => props.isSignUp ? "0px" : "-100px;"};
+    
 `
 
 const SignUpInCard = styled(SignUpInCardWrapper)`
     /* border: 1px solid black; */
     width: 752px;
-    height: auto;
+    height: ${props => props.isSignUp ? "776px" : "616px"};
+
+    margin-top: 20px;
 
     overflow: hidden;
 

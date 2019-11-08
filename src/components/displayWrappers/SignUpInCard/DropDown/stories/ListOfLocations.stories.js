@@ -5,7 +5,7 @@ import ListOfLocations from '../ListOfLocations'
 
 import { mockApi } from '../../API/__mocks__/mockApi'
 
-storiesOf("DisplayWrappers|SignUpCard/DropDown/ListOfLocations", module)
+storiesOf("DisplayWrappers|SignUpInCard/DropDown/ListOfLocations", module)
     .add("Standard", () => <ListOfLocations api = {mockApi}/>, {
         notes: "*PROPS; locationValue: the current location value set in the container. onLocationSelected: function to set the current location in the container*"
     })
