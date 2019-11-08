@@ -1,17 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { ReactComponent as SidePanel } from '../../../assets/SignUpInCard/SVG_SignUpInSidePanel.svg'
+import { ReactComponent as SidePanelSVG } from '../../../assets/SignUpInCard/SVG_SignUpInSidePanel.svg'
 import SignUpCardBody from './SignUpCardBody/SignUpCardBody'
 
-const SignUpInCardWrapper = ({...props}) => {
+const SignUpInCardWrapper = ({isSignUp, ...props}) => {
+
     return (
         <div {...props}>
-            <SidePanel />
-            <SignUpCardBody isSignUp/>
+            <SidePanel isSignUp = {isSignUp}/>
+            <SignUpCardBody isSignUp = {isSignUp}/>
         </div>
     )
 }
+
+const SidePanel = styled(SidePanelSVG)`
+    margin-top: ${props => props.isSignUp ? "0px" : "-100px;"};
+`
 
 const SignUpInCard = styled(SignUpInCardWrapper)`
     /* border: 1px solid black; */

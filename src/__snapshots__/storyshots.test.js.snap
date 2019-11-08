@@ -2251,6 +2251,98 @@ exports[`Storyshots DisplayWrappers|SignUpInCard/BottomLineWrapper/BottomLineWra
 </div>
 `;
 
+exports[`Storyshots DisplayWrappers|SignUpInCard/SignUpInCard SignIn 1`] = `
+<div
+  className="sc-bbmXgH hdHncr"
+>
+  <svg
+    className="sc-uJMKN berUQo"
+    isSignUp={false}
+  >
+    SVG_SignUpInSidePanel.svg
+  </svg>
+  <div
+    className="sc-jqCOkK tbARK"
+  >
+    <svg
+      className="sc-hqyNC dHmwtm"
+      isSignUp={false}
+    >
+      SignUpInLogo.svg
+    </svg>
+    <input
+      className="sc-kvZOFW fRZckM"
+      placeholder="Email"
+    />
+    <input
+      className="sc-kvZOFW fRZckM"
+      placeholder="Password"
+    />
+    <button
+      className="sc-chPdSV sc-dNLxif wQnQP"
+    >
+      SIGN UP
+    </button>
+    <div
+      className="sc-frDJqD eLcnaT"
+    >
+      New to Voz de Puerto Rico?
+      <button
+        className="sc-hmzhuo DczRB"
+      >
+        SIGN UP
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots DisplayWrappers|SignUpInCard/SignUpInCard SignUp 1`] = `
+<div
+  className="sc-bbmXgH hdHncr"
+>
+  <svg
+    className="sc-uJMKN berUQo"
+    isSignUp={false}
+  >
+    SVG_SignUpInSidePanel.svg
+  </svg>
+  <div
+    className="sc-jqCOkK tbARK"
+  >
+    <svg
+      className="sc-hqyNC dHmwtm"
+      isSignUp={false}
+    >
+      SignUpInLogo.svg
+    </svg>
+    <input
+      className="sc-kvZOFW fRZckM"
+      placeholder="Email"
+    />
+    <input
+      className="sc-kvZOFW fRZckM"
+      placeholder="Password"
+    />
+    <button
+      className="sc-chPdSV sc-dNLxif wQnQP"
+    >
+      SIGN UP
+    </button>
+    <div
+      className="sc-frDJqD eLcnaT"
+    >
+      New to Voz de Puerto Rico?
+      <button
+        className="sc-hmzhuo DczRB"
+      >
+        SIGN UP
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots DisplayWrappers|SignUpInCard/SignUpInCard Standard 1`] = `
 <div
   className="sc-hqyNC gJJGXR"

@@ -13,7 +13,7 @@ import BottomLineWrapper from './BottomLineWrapper'
 import api from '../API/SignUpCardAPI'
 
 const Logo = styled(LogoSVG)`
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
 
     margin-top: 39px;
     margin-bottom: ${props => props.isSignUp ? "32px" : "111px"};
@@ -21,6 +21,8 @@ const Logo = styled(LogoSVG)`
 `
 
 const AvatarInstructionSignUp = styled(AvatarInstruction)`
+    /* border: 1px solid red; */
+    padding: 0px;
     margin-right: auto;
     margin-left: 26px;
 `
@@ -34,15 +36,15 @@ const SignUpCardBodyWrapper = ({ isSignUp, ...props}) => {
     return (
         <div {...props}>
             <Logo isSignUp = {isSignUp}/>
-            <TextField placeholder = {"Name"}/>
-            <TextField placeholder = {"Username"}/>
+            {isSignUp && <TextField placeholder = {"Name"}/>}
+            {isSignUp && <TextField placeholder = {"Username"}/>}
             <TextField placeholder = {"Email"}/>
-            <DropDown api = {api}/>
+            {isSignUp && <DropDown api = {api}/>}
             <TextField placeholder = {"Password"}/>
-            <AvatarInstructionSignUp api = {api}>
+            {isSignUp && <AvatarInstructionSignUp api = {api}>
                 Select an Avatar
-            </AvatarInstructionSignUp>
-            <Avatars api = {api}/>
+            </AvatarInstructionSignUp>}
+            {isSignUp && <Avatars api = {api}/>}
             <SignUpInButton secondary>SIGN UP</SignUpInButton>
             <BottomLineWrapper isSignUp = {isSignUp}/>
         </div>
