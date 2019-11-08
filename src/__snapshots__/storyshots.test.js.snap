@@ -129,6 +129,43 @@ exports[`Storyshots DisplayWrappers/SidePanel_Profile/Avatars/AvatarRowWithTwo S
 </div>
 `;
 
+exports[`Storyshots DisplayWrappers/SignUpCard/Avatars/AvatarRowWithFive Standard 1`] = `
+<div
+  className="sc-kjoXOD iHOGIt"
+>
+  <img
+    alt="profile"
+    className="sc-gqjmRU kdcIJI"
+    onClick={[Function]}
+    src="Person.png"
+  />
+  <img
+    alt="profile"
+    className="sc-gqjmRU kdcIJI"
+    onClick={[Function]}
+    src="Person.png"
+  />
+  <img
+    alt="profile"
+    className="sc-gqjmRU kdcIJI"
+    onClick={[Function]}
+    src="Person.png"
+  />
+  <img
+    alt="profile"
+    className="sc-gqjmRU kdcIJI"
+    onClick={[Function]}
+    src="Person.png"
+  />
+  <img
+    alt="profile"
+    className="sc-gqjmRU kdcIJI"
+    onClick={[Function]}
+    src="Person.png"
+  />
+</div>
+`;
+
 exports[`Storyshots DisplayWrappers/SubjectDetail/DetailBody/CommentBox Cause 1`] = `
 <div
   className="sc-lhVmIH bgFsWs"
@@ -14662,6 +14699,46 @@ exports[`Storyshots Primitive|Buttons/SidePanelActionButton Post 1`] = `
     Create Post
   </button>
 </a>
+`;
+
+exports[`Storyshots Primitive|Buttons/SignUpInCard/SwitchStateButton Sign In 1`] = `
+<button
+  className="sc-gqPbQI gbvHkd"
+>
+  LOG IN
+</button>
+`;
+
+exports[`Storyshots Primitive|Buttons/SignUpInCard/SwitchStateButton Sign In Card 1`] = `
+<button
+  className="sc-gqPbQI kkOjbT"
+>
+  SIGN UP
+</button>
+`;
+
+exports[`Storyshots Primitive|Buttons/SignUpInCard/SwitchStateButton Sign UP 1`] = `
+<button
+  className="sc-gqPbQI gbvHkd"
+>
+  LOG IN
+</button>
+`;
+
+exports[`Storyshots Primitive|Buttons/SignUpInCard/SwitchStateButton Sign Up 1`] = `
+<button
+  className="sc-gqPbQI kkOjbT"
+>
+  SIGN UP
+</button>
+`;
+
+exports[`Storyshots Primitive|Buttons/SignUpInCard/SwitchStateButton Sign Up Card 1`] = `
+<button
+  className="sc-gqPbQI gbvHkd"
+>
+  LOG IN
+</button>
 `;
 
 exports[`Storyshots Primitive|Buttons/UploadImageButton Cause 1`] = `

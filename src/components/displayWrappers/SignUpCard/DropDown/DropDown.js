@@ -51,7 +51,7 @@ const DropDownWrapper = ({
   const DropDown = styled(DropDownWrapper)`
     background-color: white;
     border-radius: 5px;
-    width: auto;
+    width: 100%;
     height: auto;
   
     padding: 0px;
