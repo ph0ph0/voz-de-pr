@@ -8,11 +8,12 @@ const SwitchStateButtonWrapper = ({ isSignUp, ...props}) => {
 }
 
 const SwitchStateButton = styled(SwitchStateButtonWrapper)`
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
+    border: none;
     font-size: 14px;
 
-    margin: 0px;
+    margin-left: 5px;
     padding: 0px;
 
     color: ${props => props.isSignUp ? props.theme.primaryColour : props.theme.secondaryColour};

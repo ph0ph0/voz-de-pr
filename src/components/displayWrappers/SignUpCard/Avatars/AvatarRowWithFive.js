@@ -4,6 +4,10 @@ import PropTypes from 'prop-types'
 
 import Avatar from '../../../Primitive/SidePanel_Profile/Avatars/Avatar'
 
+const AvatarSignUp = styled(Avatar)`
+  margin: 5px;
+`
+
 const AvatarRowFiveWrapper = ({
     avatars,
     api,
@@ -16,7 +20,7 @@ const AvatarRowFiveWrapper = ({
         {Object.keys(avatars).map(key => {
           const png = avatars[key];
           return (
-            <Avatar
+            <AvatarSignUp
               src={png}
               key={key}
               tag={key}
