@@ -9,9 +9,6 @@ import Avatars from '../Avatars/Avatars'
 import ActionButton from '../../../Primitive/General/ActionButton'
 import BottomLineWrapper from './BottomLineWrapper'
 
-
-import api from '../API/SignUpCardAPI'
-
 const Logo = styled(LogoSVG)`
     /* border: 1px solid salmon; */
 
