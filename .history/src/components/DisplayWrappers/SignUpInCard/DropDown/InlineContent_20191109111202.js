@@ -11,9 +11,7 @@ const LocationInputSignUpInCard = styled(LocationInput)`
 `
 
 const ClearInputSignUpInCard = styled(ClearInput)`
-  /* border: 1px solid orange; */
-  margin-right: -80px;
-  margin-left: auto;
+  border: 1px solid orange;
 `
 
 const InlineWrapper = ({

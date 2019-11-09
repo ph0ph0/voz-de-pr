@@ -51,7 +51,7 @@ const DropDownWrapper = ({
   const DropDown = styled(DropDownWrapper)`
     background-color: white;
     border-radius: 5px;
-    width: ${props => (props.api.listOpen ? "468px" : "100%")};
+    width: ${props => (props.api.listOpen ? "317px" : "100%")};
     height: auto;
   
     padding: 0px;

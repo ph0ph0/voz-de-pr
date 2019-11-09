@@ -9,11 +9,6 @@ import Avatars from '../Avatars/Avatars'
 import ActionButton from '../../../Primitive/General/ActionButton'
 import BottomLineWrapper from './BottomLineWrapper'
 
-const PasswordField = styled(TextField)`
-    /* Need to move this down when the dropdown opens so it stays in place */
-    margin-top: ${props => props.api.listOpen ? "61px" : "0px"};
-`
-
 const Logo = styled(LogoSVG)`
     /* border: 1px solid salmon; */
 
@@ -69,11 +64,10 @@ const SignUpCardBodyWrapper = ({ api, isSignUp, ...props}) => {
                         api = {api}
                     />
             }
-            <PasswordField 
+            <TextField 
                 placeholder = {"Password"} 
                 value = {api.passwordValue} 
                 onChange = {(event) => api.updatePasswordValue(event.target.value)}
-                api = {api}
             />
             {api.isSignUp 
                 && <AvatarInstructionSignUp 

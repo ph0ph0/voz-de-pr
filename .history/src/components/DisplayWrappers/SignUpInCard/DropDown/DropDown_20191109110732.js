@@ -51,13 +51,13 @@ const DropDownWrapper = ({
   const DropDown = styled(DropDownWrapper)`
     background-color: white;
     border-radius: 5px;
-    width: ${props => (props.api.listOpen ? "468px" : "100%")};
+    width: 100%;
     height: auto;
   
     padding: 0px;
     margin-bottom: 20px;
     /* Keeps the DropDown in place when it opens as its position will now be absolute */
-    margin-top: ${props => (props.api.listOpen ? "317px" : "0px")};
+    margin-top: ${props => (props.api.listOpen ? "330px" : "0px")};
     border-style: solid;
     border-width: 1px;
     border-color: ${props => (props.api.listOpen ? "#96C8DA" : "#d8d8d8")};

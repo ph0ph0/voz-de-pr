@@ -10,12 +10,6 @@ const LocationInputSignUpInCard = styled(LocationInput)`
   font-size: 20px;
 `
 
-const ClearInputSignUpInCard = styled(ClearInput)`
-  /* border: 1px solid orange; */
-  margin-right: -80px;
-  margin-left: auto;
-`
-
 const InlineWrapper = ({
     api,
     ...props
@@ -25,7 +19,7 @@ const InlineWrapper = ({
         <LocationInputSignUpInCard
           api = {api}
         />
-        {api.listOpen && <ClearInputSignUpInCard api = {api} />}
+        {api.listOpen && <ClearInput api = {api} />}
         <DropDownArrow />
       </div>
     );

@@ -1,6 +1,7 @@
 import { locations } from '../../../../Constants/Constants'
 
-const SignUpInCardAPI = ({ state, setState }) => {
+const SignUpInCardAPI = ({state, setState}) => {
+    
     const nameValue = state.nameValue
     const usernameValue = state.usernameValue
     const emailValue = state.emailValue

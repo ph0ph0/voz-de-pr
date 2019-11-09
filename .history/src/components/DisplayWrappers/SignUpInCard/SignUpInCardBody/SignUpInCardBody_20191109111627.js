@@ -10,7 +10,6 @@ import ActionButton from '../../../Primitive/General/ActionButton'
 import BottomLineWrapper from './BottomLineWrapper'
 
 const PasswordField = styled(TextField)`
-    /* Need to move this down when the dropdown opens so it stays in place */
     margin-top: ${props => props.api.listOpen ? "61px" : "0px"};
 `
 
