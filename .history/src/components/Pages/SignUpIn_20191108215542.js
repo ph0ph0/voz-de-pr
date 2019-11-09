@@ -18,7 +18,7 @@ const SignUpInPageWrapper = ({...props}) => {
         listOpen: false,
         dropDownIsErrored: false,
         selectedAvatar: null,
-        isSignUp: true
+        isSignUp: true,
       })
 
     return (
