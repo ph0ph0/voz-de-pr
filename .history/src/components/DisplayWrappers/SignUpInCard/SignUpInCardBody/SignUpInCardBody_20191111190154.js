@@ -93,7 +93,7 @@ const SignUpCardBodyWrapper = ({ api, isSignUp, ...props }) => {
         api={api}
       />
       <PasswordField
-        placeholder={"Re-type Password"}
+        placeholder={"Password"}
         value={api.passwordValue}
         onChange={event => api.updatePasswordValue(event.target.value)}
         api={api}
