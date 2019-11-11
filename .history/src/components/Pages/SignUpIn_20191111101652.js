@@ -20,7 +20,7 @@ const SignUpInPageWrapper = withRouter(({ ...props }) => {
     listOpen: false,
     dropDownIsErrored: false,
     selectedAvatar: null,
-    isSignUp: isSignup
+    isSignUp: true
   });
 
   return (

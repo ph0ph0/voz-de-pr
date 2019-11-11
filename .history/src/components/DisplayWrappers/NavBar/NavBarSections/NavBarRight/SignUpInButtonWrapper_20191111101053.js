@@ -1,36 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import { useHistory } from "react-router-dom";
 
 import SignUpInButton from "../../../../Primitive/NavBar/SignUpInButton";
 
 const Wrapper = props => {
-  let history = useHistory();
-
   function navigateToSignUp() {
-    history.push({
-      pathname: "/signupin",
-      state: {
-        clickedSignUp: true
-      }
-    });
+    console.log(`Clicked a SignUpInButton`);
   }
 
-  function nagivateToSignIn() {
-    history.push({
-      pathname: "/signupin",
-      state: {
-        clickedSignUp: false
-      }
-    });
-  }
+  function nagivateToSignIn() {}
 
   return (
     <div {...props}>
-      <SignUpInButton secondary onClick={navigateToSignUp}>
+      <SignUpInButton secondary onClick={onClick}>
         SIGN UP
       </SignUpInButton>
-      <SignUpInButton onClick={nagivateToSignIn}>LOG IN</SignUpInButton>
+      <SignUpInButton onClick={onClick}>LOG IN</SignUpInButton>
     </div>
   );
 };

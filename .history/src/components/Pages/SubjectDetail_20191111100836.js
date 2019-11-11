@@ -13,7 +13,7 @@ export const fetchSubject = (subjectID) => {
     //This is meant to be equivalent to going to the server to get the subject. Replace with a server call
     let subject = SubjectsMixed.filter(subject =>  subjectID === subject.id)
     window.log(`subject retrieved: ${JSON.stringify(subject[0].id)}`)
-
+    
     return subject[0]
 
 }
@@ -22,9 +22,10 @@ const SubjectDetailPageWrapper = withRouter(({ staticContext, ...props,}) => {
 
     window.log(`props for SDPW: ${JSON.stringify(props)}`)
 
-    var passedSubject = (props.location && props.location.state && props.location.state.subject)
-        ? props.location.state.subject
-        : fetchSubject(props.match.params.subjectID)
+    var passedSubject = (props.location && props.location.state && props.location.state.subject) 
+        ? props.location.state.subject 
+        : fetchSubject(props.match.params.subjectID)   
+        
 
     const subject = passedSubject
     window.log(`subject to show is: ${JSON.stringify(subject.id)}`)

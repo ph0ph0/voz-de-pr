@@ -9,7 +9,7 @@ const Wrapper = props => {
 
   function navigateToSignUp() {
     history.push({
-      pathname: "/signupin",
+      pathname: "",
       state: {
         clickedSignUp: true
       }
@@ -18,7 +18,7 @@ const Wrapper = props => {
 
   function nagivateToSignIn() {
     history.push({
-      pathname: "/signupin",
+      pathname: "",
       state: {
         clickedSignUp: false
       }

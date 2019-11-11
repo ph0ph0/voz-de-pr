@@ -9,21 +9,14 @@ const Wrapper = props => {
 
   function navigateToSignUp() {
     history.push({
-      pathname: "/signupin",
+      pathname: "",
       state: {
         clickedSignUp: true
       }
     });
   }
 
-  function nagivateToSignIn() {
-    history.push({
-      pathname: "/signupin",
-      state: {
-        clickedSignUp: false
-      }
-    });
-  }
+  function nagivateToSignIn() {}
 
   return (
     <div {...props}>

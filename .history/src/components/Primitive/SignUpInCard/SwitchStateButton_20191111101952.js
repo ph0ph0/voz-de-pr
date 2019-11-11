@@ -15,9 +15,7 @@ const SwitchStateButton = styled(SwitchStateButtonWrapper)`
   padding: 0px;
 
   color: ${props =>
-    props.api.isSignUp
-      ? props.theme.primaryColour
-      : props.theme.secondaryColour};
+    props.isSignUp ? props.theme.primaryColour : props.theme.secondaryColour};
 
   :hover {
     cursor: pointer;

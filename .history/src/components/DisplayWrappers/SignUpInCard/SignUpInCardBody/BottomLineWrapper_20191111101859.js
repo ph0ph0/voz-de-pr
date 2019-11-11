@@ -9,7 +9,9 @@ const BottomLineWrapperWrapper = ({ api, ...props }) => {
       {api.isSignUp
         ? "Already got a voice on Voz de Puerto Rico?"
         : "New to Voz de Puerto Rico?"}
-      <SwitchStateButton onClick={api.toggleSignUp} api={api} />
+      <SwitchStateButton onClick={api.toggleSignUp}>
+        {api.isSignUp ? "LOG IN" : "SIGN UP"}
+      </SwitchStateButton>
     </div>
   );
 };
