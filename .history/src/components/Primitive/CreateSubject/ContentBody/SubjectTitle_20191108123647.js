@@ -1,10 +1,14 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const TitleInputWrapper = ({ api, ...props }) => {
-  return <input placeholder={"Title"} {...props} />;
-};
-
+    return <input  
+      placeholder={"Title"} 
+      {...props}
+    />;
+  };
+  
 const SubjectTitle = styled(TitleInputWrapper)`
   border: 1px solid #d8d8d8;
   /* border: 1px solid red; */
@@ -25,4 +29,4 @@ const SubjectTitle = styled(TitleInputWrapper)`
   }
 `;
 
-export default SubjectTitle;
+export default SubjectTitle

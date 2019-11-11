@@ -42,7 +42,7 @@ AvatarRowWithFive.propTypes = {
     listOpen: PropTypes.bool.isRequired,
     selectedLocation: PropTypes.string.isRequired,
     selectedAvatar: PropTypes.string,
-    updateUsernameValue: PropTypes.func.isRequired,
+    updateNameValue: PropTypes.func.isRequired,
     toggleList: PropTypes.func.isRequired,
     updateLocationValue: PropTypes.func.isRequired,
     onLocationSelected: PropTypes.func.isRequired,
