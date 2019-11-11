@@ -62,7 +62,7 @@ const SignUpCardBodyWrapper = ({ api, isSignUp, ...props }) => {
         />
       )}
       {api.isSignUp && api.usernameInputIsErrored && (
-        <ErrorText>Please provide a username</ErrorText>
+        <ErrorText>Please provide a user name</ErrorText>
       )}
       {api.isSignUp && (
         <TextField
@@ -72,7 +72,7 @@ const SignUpCardBodyWrapper = ({ api, isSignUp, ...props }) => {
         />
       )}
       {api.emailInputIsErrored && (
-        <ErrorText>Please provide a valid email</ErrorText>
+        <ErrorText>Please provide an email</ErrorText>
       )}
       <TextField
         placeholder={"Email"}

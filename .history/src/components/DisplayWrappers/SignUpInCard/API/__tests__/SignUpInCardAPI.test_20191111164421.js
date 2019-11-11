@@ -244,8 +244,8 @@ it("clears all inputs when user switches panel type", () => {
   expect(mockApi.api.lastNameValue).toEqual("");
   expect(mockApi.api.usernameValue).toEqual("");
   expect(mockApi.api.emailValue).toEqual("");
-  expect(mockApi.api.locationValue).toEqual("");
-  expect(mockApi.api.selectedLocation).toEqual(null);
+  expect(mockApi.api.locationValue).toEqual(null);
+  expect(mockApi.api.selectedLocation).toEqual("");
   expect(mockApi.api.passwordValue).toEqual("");
   expect(mockApi.api.selectedAvatar).toEqual(null);
 });

@@ -1,5 +1,4 @@
 import { locations } from "../../../../Constants/Constants";
-import { inputsAreEmpty } from "./utils/InputsAreEmpty";
 
 const SignUpInCardAPI = ({ state, setState }) => {
   const firstNameValue = state.firstNameValue;
@@ -29,6 +28,89 @@ const SignUpInCardAPI = ({ state, setState }) => {
   //   passwordInput: { isErrored: state.inputErrorState.passwordInput.isErrored },
   //   avatarInput: { isErrored: state.inputErrorState.avatarInput.isErrored }
   // };
+
+  const inputsAreEmpty = () => {
+    setState(prevState => {
+      return {
+        ...prevState,
+        firstNameInputIsErrored: false,
+        lastNameInputIsErrored: false,
+        usernameInputIsErrored: false,
+        emailInputIsErrored: false,
+        locationInputIsErrored: false,
+        passwordInputIsErrored: false,
+        avatarInputIsErrored: false
+      };
+    });
+
+    var flag = false;
+
+    if (firstNameValue === "") {
+      window.log(`first name value was empty`);
+      setState(prevState => {
+        return {
+          ...prevState,
+          firstNameInputIsErrored: true
+        };
+      });
+      flag = true;
+    }
+    if (lastNameValue === "") {
+      setState(prevState => {
+        return {
+          ...prevState,
+          lastNameInputIsErrored: true
+        };
+      });
+      flag = true;
+    }
+    if (usernameValue === "") {
+      setState(prevState => {
+        return {
+          ...prevState,
+          usernameInputIsErrored: true
+        };
+      });
+      flag = true;
+    }
+    if (emailValue === "") {
+      setState(prevState => {
+        return {
+          ...prevState,
+          emailInputIsErrored: true
+        };
+      });
+      flag = true;
+    }
+    if (locationValue === "") {
+      setState(prevState => {
+        return {
+          ...prevState,
+          locationInputIsErrored: true
+        };
+      });
+      flag = true;
+    }
+    if (passwordValue === "") {
+      setState(prevState => {
+        return {
+          ...prevState,
+          passwordInputIsErrored: true
+        };
+      });
+      flag = true;
+    }
+    if (selectedAvatar === null) {
+      setState(prevState => {
+        return {
+          ...prevState,
+          avatarInputIsErrored: true
+        };
+      });
+      flag = true;
+    }
+    return flag;
+  };
 
   //Fires when the user types in the name field
   const updateFirstNameValue = newValue => {
@@ -136,7 +218,6 @@ const SignUpInCardAPI = ({ state, setState }) => {
         isSignUp: !isSignUp
       };
     });
-    resetAll();
   };
 
   //fires when the user clicks the submit button
@@ -164,7 +245,7 @@ const SignUpInCardAPI = ({ state, setState }) => {
         emailValue: "",
         locationValue: "",
         passwordValue: "",
-        selectedLocation: null,
+        selectedLocation: "",
         listOpen: false,
         selectedAvatar: null,
         firstNameInputIsErrored: false,
@@ -192,19 +273,10 @@ const SignUpInCardAPI = ({ state, setState }) => {
   };
 
   const submit = () => {
+    // const newName = name
+    // const newAvatar = selectedAvatar
     window.log(`Hit Submit`);
-    if (
-      inputsAreEmpty(
-        setState,
-        firstNameValue,
-        lastNameValue,
-        usernameValue,
-        emailValue,
-        locationValue,
-        passwordValue,
-        selectedAvatar
-      )
-    ) {
+    if (inputsAreEmpty()) {
       return;
     }
 
@@ -216,13 +288,10 @@ const SignUpInCardAPI = ({ state, setState }) => {
           locationInputIsErrored: true
         };
       });
-      return;
     }
 
-    //MAKE SURE THAT WHEN THE USER CLICKS ON A LOCATION, THEY ARE SELECTING AN OBJECT
-    //ie const locationOfUser = findLocation() <- searches through locations and returns the whole object object
-    //NETWORK REQUEST
     resetAll();
+    // window.log(`newName: ${newName}, newLocation: ${newLocation}, newAvatar: ${newAvatar}`)
   };
 
   return {
@@ -255,7 +324,6 @@ const SignUpInCardAPI = ({ state, setState }) => {
     resetDropdown,
     isSignUp,
     resetAll,
-    locationNotFound,
     submit
   };
 };

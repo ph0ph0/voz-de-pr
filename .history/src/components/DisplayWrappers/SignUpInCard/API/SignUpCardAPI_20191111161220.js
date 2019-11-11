@@ -136,7 +136,6 @@ const SignUpInCardAPI = ({ state, setState }) => {
         isSignUp: !isSignUp
       };
     });
-    resetAll();
   };
 
   //fires when the user clicks the submit button
@@ -164,7 +163,7 @@ const SignUpInCardAPI = ({ state, setState }) => {
         emailValue: "",
         locationValue: "",
         passwordValue: "",
-        selectedLocation: null,
+        selectedLocation: "",
         listOpen: false,
         selectedAvatar: null,
         firstNameInputIsErrored: false,
@@ -180,6 +179,7 @@ const SignUpInCardAPI = ({ state, setState }) => {
 
   const locationNotFound = () => {
     const locationToCheck = locationValue;
+    window.log(`Location to check: ${locationToCheck}`);
     const result = locations.filter(
       location => location.title.toLowerCase() === locationToCheck.toLowerCase()
     );
@@ -255,7 +255,6 @@ const SignUpInCardAPI = ({ state, setState }) => {
     resetDropdown,
     isSignUp,
     resetAll,
-    locationNotFound,
     submit
   };
 };

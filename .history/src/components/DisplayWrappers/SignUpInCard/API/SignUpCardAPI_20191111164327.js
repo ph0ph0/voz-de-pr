@@ -136,7 +136,6 @@ const SignUpInCardAPI = ({ state, setState }) => {
         isSignUp: !isSignUp
       };
     });
-    resetAll();
   };
 
   //fires when the user clicks the submit button

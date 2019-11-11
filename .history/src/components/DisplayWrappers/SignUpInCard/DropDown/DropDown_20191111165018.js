@@ -46,7 +46,7 @@ const DropDown = styled(DropDownWrapper)`
   padding: 0px;
   margin-bottom: 20px;
   /* Keeps the DropDown in place when it opens as its position will now be absolute */
-  margin-top: ${props => (props.api.listOpen ? "374px" : "0px")};
+  margin-top: ${props => (props.api.listOpen ? "373px" : "0px")};
   border-style: solid;
   border-width: 1px;
   border-color: ${props => (props.api.listOpen ? "#96C8DA" : "#d8d8d8")};

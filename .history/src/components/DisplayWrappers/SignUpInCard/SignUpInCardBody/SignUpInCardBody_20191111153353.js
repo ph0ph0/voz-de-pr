@@ -4,7 +4,7 @@ import styled from "styled-components";
 import TextField from "../../../Primitive/SignUpInCard/SignUpInCardTextInput";
 import DropDown from "../DropDown/DropDown";
 import PasswordField from "../../../Primitive/SignUpInCard/PasswordField.js";
-import Logo from "../../../Primitive/SignUpInCard/SignUpInLogo";
+import Logo from "../../../Primitive/SignUpInCard/Logo";
 import AvatarInstruction from "../../../Primitive/SidePanel_Profile/Avatars/AvatarInstruction";
 import Avatars from "../Avatars/Avatars";
 import ActionButton from "../../../Primitive/General/ActionButton";
@@ -62,7 +62,7 @@ const SignUpCardBodyWrapper = ({ api, isSignUp, ...props }) => {
         />
       )}
       {api.isSignUp && api.usernameInputIsErrored && (
-        <ErrorText>Please provide a username</ErrorText>
+        <ErrorText>Please provide a user name</ErrorText>
       )}
       {api.isSignUp && (
         <TextField
@@ -72,7 +72,7 @@ const SignUpCardBodyWrapper = ({ api, isSignUp, ...props }) => {
         />
       )}
       {api.emailInputIsErrored && (
-        <ErrorText>Please provide a valid email</ErrorText>
+        <ErrorText>Please provide an email</ErrorText>
       )}
       <TextField
         placeholder={"Email"}

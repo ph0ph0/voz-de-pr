@@ -136,7 +136,6 @@ const SignUpInCardAPI = ({ state, setState }) => {
         isSignUp: !isSignUp
       };
     });
-    resetAll();
   };
 
   //fires when the user clicks the submit button
@@ -164,7 +163,7 @@ const SignUpInCardAPI = ({ state, setState }) => {
         emailValue: "",
         locationValue: "",
         passwordValue: "",
-        selectedLocation: null,
+        selectedLocation: "",
         listOpen: false,
         selectedAvatar: null,
         firstNameInputIsErrored: false,
@@ -219,8 +218,13 @@ const SignUpInCardAPI = ({ state, setState }) => {
       return;
     }
 
+    // const locationOfUser = findLocation() ?
+
+    if (let locationOfUser) = findLocation() else {
+      
+    }
+
     //MAKE SURE THAT WHEN THE USER CLICKS ON A LOCATION, THEY ARE SELECTING AN OBJECT
-    //ie const locationOfUser = findLocation() <- searches through locations and returns the whole object object
     //NETWORK REQUEST
     resetAll();
   };
@@ -255,7 +259,6 @@ const SignUpInCardAPI = ({ state, setState }) => {
     resetDropdown,
     isSignUp,
     resetAll,
-    locationNotFound,
     submit
   };
 };

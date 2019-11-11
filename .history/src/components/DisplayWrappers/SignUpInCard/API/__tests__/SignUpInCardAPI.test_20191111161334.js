@@ -2,7 +2,6 @@ import { cleanup } from "@testing-library/react";
 import { locations } from "../../../../../Constants/Constants";
 
 import SignUpCardAPI from "../SignUpCardAPI";
-import { exportNamedDeclaration } from "@babel/types";
 
 afterEach(cleanup);
 
@@ -200,13 +199,13 @@ it("checks that the avatar is specified on submit", () => {
   expect(mockApi.api.avatarInputIsErrored).toEqual(true);
 });
 
-it("checks that location exists", () => {
-  mockApi.api.updateLocationValue("");
-  expect(mockApi.api.locationNotFound()).toEqual(true);
+// it("resets all inputs", () => {
 
-  mockApi.api.updateLocationValue(locations[0].title);
-  expect(mockApi.api.locationNotFound()).toEqual(false);
-});
+// })
+
+// it("checks that location exists", () => {
+
+// })
 
 it("clears all inputs on submit", () => {
   mockApi.api.updateFirstNameValue("TEST");
@@ -224,28 +223,7 @@ it("clears all inputs on submit", () => {
   expect(mockApi.api.usernameValue).toEqual("");
   expect(mockApi.api.emailValue).toEqual("");
   expect(mockApi.api.locationValue).toEqual("");
-  expect(mockApi.api.selectedLocation).toEqual(null);
-  expect(mockApi.api.passwordValue).toEqual("");
-  expect(mockApi.api.selectedAvatar).toEqual(null);
-});
-
-it("clears all inputs when user switches panel type", () => {
-  mockApi.api.updateFirstNameValue("TEST");
-  mockApi.api.updateLastNameValue("TEST");
-  mockApi.api.updateUsernameValue("TEST");
-  mockApi.api.updateEmailValue("TEST");
-  mockApi.api.toggleList();
-  mockApi.api.onLocationSelected(locations[0].title);
-  mockApi.api.updatePasswordValue("TEST");
-  mockApi.api.onClickAv(1);
-  mockApi.api.toggleSignUp();
-
-  expect(mockApi.api.firstNameValue).toEqual("");
-  expect(mockApi.api.lastNameValue).toEqual("");
-  expect(mockApi.api.usernameValue).toEqual("");
-  expect(mockApi.api.emailValue).toEqual("");
-  expect(mockApi.api.locationValue).toEqual("");
-  expect(mockApi.api.selectedLocation).toEqual(null);
+  expect(mockApi.api.selectedLocation).toEqual("");
   expect(mockApi.api.passwordValue).toEqual("");
   expect(mockApi.api.selectedAvatar).toEqual(null);
 });
