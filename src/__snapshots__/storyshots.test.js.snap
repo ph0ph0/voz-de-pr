@@ -2295,6 +2295,39 @@ exports[`Storyshots DisplayWrappers|SignUpInCard/SignUpInCard SignIn 1`] = `
       type="password"
       value=""
     />
+    <input
+      api={
+        Object {
+          "dropDownIsErrored": false,
+          "emailValue": "",
+          "isSignUp": false,
+          "listOpen": false,
+          "locationValue": "",
+          "nameValue": "",
+          "onClickAv": [Function],
+          "onLocationSelected": [Function],
+          "passwordValue": "",
+          "resetAll": [Function],
+          "resetDropdown": [Function],
+          "selectedAvatar": null,
+          "selectedLocation": "",
+          "submit": [Function],
+          "toggleList": [Function],
+          "toggleSignUp": [Function],
+          "updateEmailValue": [Function],
+          "updateLocationValue": [Function],
+          "updateNameValue": [Function],
+          "updatePasswordValue": [Function],
+          "updateUsernameValue": [Function],
+          "usernameValue": "",
+        }
+      }
+      className="sc-dNLxif kaaZoy"
+      onChange={[Function]}
+      placeholder="Re-type Password"
+      type="password"
+      value=""
+    />
     <button
       className="sc-chPdSV sc-gGBfsJ gLQAXX"
       onClick={[Function]}
@@ -2425,6 +2458,39 @@ exports[`Storyshots DisplayWrappers|SignUpInCard/SignUpInCard SignUp 1`] = `
       type="password"
       value=""
     />
+    <input
+      api={
+        Object {
+          "dropDownIsErrored": false,
+          "emailValue": "",
+          "isSignUp": false,
+          "listOpen": false,
+          "locationValue": "",
+          "nameValue": "",
+          "onClickAv": [Function],
+          "onLocationSelected": [Function],
+          "passwordValue": "",
+          "resetAll": [Function],
+          "resetDropdown": [Function],
+          "selectedAvatar": null,
+          "selectedLocation": "",
+          "submit": [Function],
+          "toggleList": [Function],
+          "toggleSignUp": [Function],
+          "updateEmailValue": [Function],
+          "updateLocationValue": [Function],
+          "updateNameValue": [Function],
+          "updatePasswordValue": [Function],
+          "updateUsernameValue": [Function],
+          "usernameValue": "",
+        }
+      }
+      className="sc-dNLxif kaaZoy"
+      onChange={[Function]}
+      placeholder="Re-type Password"
+      type="password"
+      value=""
+    />
     <button
       className="sc-chPdSV sc-gGBfsJ gLQAXX"
       onClick={[Function]}
@@ -2492,6 +2558,39 @@ exports[`Storyshots DisplayWrappers|SignUpInCard/SignUpInCardBody/SignUpInCardBo
     className="sc-dNLxif kaaZoy"
     onChange={[Function]}
     placeholder="Password"
+    type="password"
+    value=""
+  />
+  <input
+    api={
+      Object {
+        "dropDownIsErrored": false,
+        "emailValue": "",
+        "isSignUp": false,
+        "listOpen": false,
+        "locationValue": "",
+        "nameValue": "",
+        "onClickAv": [Function],
+        "onLocationSelected": [Function],
+        "passwordValue": "",
+        "resetAll": [Function],
+        "resetDropdown": [Function],
+        "selectedAvatar": null,
+        "selectedLocation": "",
+        "submit": [Function],
+        "toggleList": [Function],
+        "toggleSignUp": [Function],
+        "updateEmailValue": [Function],
+        "updateLocationValue": [Function],
+        "updateNameValue": [Function],
+        "updatePasswordValue": [Function],
+        "updateUsernameValue": [Function],
+        "usernameValue": "",
+      }
+    }
+    className="sc-dNLxif kaaZoy"
+    onChange={[Function]}
+    placeholder="Re-type Password"
     type="password"
     value=""
   />

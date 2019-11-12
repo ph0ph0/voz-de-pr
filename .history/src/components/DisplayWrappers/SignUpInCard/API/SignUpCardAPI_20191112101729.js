@@ -14,8 +14,6 @@ const SignUpInCardAPI = ({ state, setState }) => {
   const listOpen = state.listOpen;
   const selectedAvatar = state.selectedAvatar;
   const isSignUp = state.isSignUp;
-  const emailsMatch = state.emailsMatch;
-  const passwordsMatch = state.passwordsMatch;
   const firstNameInputIsErrored = state.firstNameInputIsErrored;
   const lastNameInputIsErrored = state.lastNameInputIsErrored;
   const usernameInputIsErrored = state.usernameInputIsErrored;
@@ -79,8 +77,7 @@ const SignUpInCardAPI = ({ state, setState }) => {
     setState(prevState => {
       return {
         ...prevState,
-        secondEmailValue: newValue,
-        emailsMatch: emailsAreSame(newValue) ? true : false
+        secondEmailValue: newValue
       };
     });
     window.log(`emailValue: ${newValue}`);
@@ -100,8 +97,7 @@ const SignUpInCardAPI = ({ state, setState }) => {
     setState(prevState => {
       return {
         ...prevState,
-        secondPasswordValue: newValue,
-        passwordsMatch: passwordsAreSame(newValue) ? true : false
+        secondPasswordValue: newValue
       };
     });
     window.log(`passwordValue: ${newValue}`);
@@ -180,14 +176,6 @@ const SignUpInCardAPI = ({ state, setState }) => {
     );
   };
 
-  const emailsAreSame = newSecondEmailInputValue => {
-    return newSecondEmailInputValue === firstEmailValue;
-  };
-
-  const passwordsAreSame = newSecondPasswordInputValue => {
-    return newSecondPasswordInputValue === firstPasswordValue;
-  };
-
   const resetAll = () => {
     setState(prevState => {
       return {
@@ -195,11 +183,9 @@ const SignUpInCardAPI = ({ state, setState }) => {
         firstNameValue: "",
         lastNameValue: "",
         usernameValue: "",
-        firstEmailValue: "",
-        secondEmailValue: "",
+        emailValue: "",
         locationValue: "",
-        firstPasswordValue: "",
-        secondPasswordValue: "",
+        passwordValue: "",
         selectedLocation: null,
         listOpen: false,
         selectedAvatar: null,
@@ -235,9 +221,9 @@ const SignUpInCardAPI = ({ state, setState }) => {
         firstNameValue,
         lastNameValue,
         usernameValue,
-        firstEmailValue,
+        emailValue,
         locationValue,
-        firstPasswordValue,
+        passwordValue,
         selectedAvatar
       )
     ) {
@@ -281,8 +267,6 @@ const SignUpInCardAPI = ({ state, setState }) => {
     passwordInputIsErrored,
     avatarInputIsErrored,
     toggleList,
-    emailsMatch,
-    passwordsMatch,
     updateFirstNameValue,
     updateLastNameValue,
     updateUsernameValue,

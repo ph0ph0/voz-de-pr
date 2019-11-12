@@ -80,7 +80,7 @@ const SignUpInCardAPI = ({ state, setState }) => {
       return {
         ...prevState,
         secondEmailValue: newValue,
-        emailsMatch: emailsAreSame(newValue) ? true : false
+        emailsMatch: emailsAreSame ? true : false
       };
     });
     window.log(`emailValue: ${newValue}`);
@@ -101,7 +101,7 @@ const SignUpInCardAPI = ({ state, setState }) => {
       return {
         ...prevState,
         secondPasswordValue: newValue,
-        passwordsMatch: passwordsAreSame(newValue) ? true : false
+        passwordsMatch: passwordsAreSame ? true : false
       };
     });
     window.log(`passwordValue: ${newValue}`);
@@ -195,11 +195,9 @@ const SignUpInCardAPI = ({ state, setState }) => {
         firstNameValue: "",
         lastNameValue: "",
         usernameValue: "",
-        firstEmailValue: "",
-        secondEmailValue: "",
+        emailValue: "",
         locationValue: "",
-        firstPasswordValue: "",
-        secondPasswordValue: "",
+        passwordValue: "",
         selectedLocation: null,
         listOpen: false,
         selectedAvatar: null,
@@ -281,8 +279,6 @@ const SignUpInCardAPI = ({ state, setState }) => {
     passwordInputIsErrored,
     avatarInputIsErrored,
     toggleList,
-    emailsMatch,
-    passwordsMatch,
     updateFirstNameValue,
     updateLastNameValue,
     updateUsernameValue,

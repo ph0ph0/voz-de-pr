@@ -289,7 +289,7 @@ describe("Submission helpers", () => {
   });
 });
 
-describe("Switching panels", () => {
+describe("Switchin panels", () => {
   it("clears all inputs when user switches panel type", () => {
     mockApi.api.updateFirstNameValue("TEST");
     mockApi.api.updateLastNameValue("TEST");

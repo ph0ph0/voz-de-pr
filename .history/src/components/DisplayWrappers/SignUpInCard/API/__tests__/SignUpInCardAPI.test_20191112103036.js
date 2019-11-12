@@ -10,15 +10,11 @@ const state = {
   firstNameValue: "",
   lastNameValue: "",
   usernameValue: "",
-  firstEmailValue: "",
-  secondEmailValue: "",
+  emailValue: "",
   locationValue: "",
-  firstPasswordValue: "",
-  sedondPasswordValue: "",
+  passwordValue: "",
   selectedLocation: "",
   listOpen: false,
-  emailsMatch: null,
-  passwordsMatch: null,
   dropDownIsErrored: false,
   selectedAvatar: null,
   isSignUp: false,
@@ -90,7 +86,7 @@ describe("Input field updaters", () => {
 
   it("updates the second password value", () => {
     mockApi.api.updateSecondPasswordValue("TEST");
-    expect(mockApi.api.secondPasswordValue).toEqual("TEST");
+    expect(mockApi.api.SecondPasswordValue).toEqual("TEST");
   });
 
   it("updates the selectedLocation value, location value and closes the dropdown when a location is selected from the dropdown", () => {
@@ -120,7 +116,7 @@ describe("Input field updaters", () => {
 describe("Input match checkers", () => {
   it("checks that the password match works", () => {
     mockApi.api.updateFirstEmailValue("TEST");
-    mockApi.api.updateSecondEmailValue("Test");
+    mockApi.api.updateSecondEmailValue("TEST");
     expect(mockApi.api.emailsMatch).toEqual(false);
 
     mockApi.api.updateFirstEmailValue("TEST");
@@ -130,7 +126,7 @@ describe("Input match checkers", () => {
 
   it("checks that the email match works", () => {
     mockApi.api.updateFirstPasswordValue("TEST");
-    mockApi.api.updateSecondPasswordValue("test");
+    mockApi.api.updateSecondPasswordValue("TEST");
     expect(mockApi.api.passwordsMatch).toEqual(false);
 
     mockApi.api.updateFirstPasswordValue("TEST");
@@ -146,12 +142,10 @@ describe("Form submission", () => {
     expect(mockApi.api.firstNameValue).toEqual("");
     mockApi.api.updateLastNameValue("TEST");
     mockApi.api.updateUsernameValue("TEST");
-    mockApi.api.updateFirstEmailValue("TEST");
-    mockApi.api.updateSecondEmailValue("TEST");
-    mockApi.api.updateFirstPasswordValue("TEST");
-    mockApi.api.updateSecondPasswordValue("TEST");
+    mockApi.api.updateEmailValue("TEST");
     mockApi.api.toggleList();
     mockApi.api.onLocationSelected("TEST");
+    mockApi.api.updatePasswordValue("TEST");
     mockApi.api.onClickAv(1);
     mockApi.api.submit();
     expect(mockApi.api.firstNameInputIsErrored).toEqual(true);
@@ -162,12 +156,10 @@ describe("Form submission", () => {
     mockApi.api.updateFirstNameValue("TEST");
     mockApi.api.updateLastNameValue("");
     mockApi.api.updateUsernameValue("TEST");
-    mockApi.api.updateFirstEmailValue("TEST");
-    mockApi.api.updateSecondEmailValue("TEST");
-    mockApi.api.updateFirstPasswordValue("TEST");
-    mockApi.api.updateSecondPasswordValue("TEST");
+    mockApi.api.updateEmailValue("TEST");
     mockApi.api.toggleList();
     mockApi.api.onLocationSelected("TEST");
+    mockApi.api.updatePasswordValue("TEST");
     mockApi.api.onClickAv(1);
     mockApi.api.submit();
     expect(mockApi.api.lastNameInputIsErrored).toEqual(true);
@@ -178,12 +170,10 @@ describe("Form submission", () => {
     mockApi.api.updateFirstNameValue("TEST");
     mockApi.api.updateLastNameValue("TEST");
     mockApi.api.updateUsernameValue("");
-    mockApi.api.updateFirstEmailValue("TEST");
-    mockApi.api.updateSecondEmailValue("TEST");
-    mockApi.api.updateFirstPasswordValue("TEST");
-    mockApi.api.updateSecondPasswordValue("TEST");
+    mockApi.api.updateEmailValue("TEST");
     mockApi.api.toggleList();
     mockApi.api.onLocationSelected("TEST");
+    mockApi.api.updatePasswordValue("TEST");
     mockApi.api.onClickAv(1);
     mockApi.api.submit();
     expect(mockApi.api.usernameInputIsErrored).toEqual(true);
@@ -194,12 +184,10 @@ describe("Form submission", () => {
     mockApi.api.updateFirstNameValue("TEST");
     mockApi.api.updateLastNameValue("TEST");
     mockApi.api.updateUsernameValue("TEST");
-    mockApi.api.updateFirstEmailValue("");
-    mockApi.api.updateSecondEmailValue("TEST");
-    mockApi.api.updateFirstPasswordValue("TEST");
-    mockApi.api.updateSecondPasswordValue("TEST");
+    mockApi.api.updateEmailValue("");
     mockApi.api.toggleList();
     mockApi.api.onLocationSelected("TEST");
+    mockApi.api.updatePasswordValue("TEST");
     mockApi.api.onClickAv(1);
     mockApi.api.submit();
     expect(mockApi.api.emailInputIsErrored).toEqual(true);
@@ -210,12 +198,10 @@ describe("Form submission", () => {
     mockApi.api.updateFirstNameValue("TEST");
     mockApi.api.updateLastNameValue("TEST");
     mockApi.api.updateUsernameValue("TEST");
-    mockApi.api.updateFirstEmailValue("TEST");
-    mockApi.api.updateSecondEmailValue("TEST");
-    mockApi.api.updateFirstPasswordValue("TEST");
-    mockApi.api.updateSecondPasswordValue("TEST");
+    mockApi.api.updateEmailValue("TEST");
     mockApi.api.toggleList();
     mockApi.api.onLocationSelected("");
+    mockApi.api.updatePasswordValue("TEST");
     mockApi.api.onClickAv(1);
     mockApi.api.submit();
     expect(mockApi.api.locationInputIsErrored).toEqual(true);
@@ -226,12 +212,10 @@ describe("Form submission", () => {
     mockApi.api.updateFirstNameValue("TEST");
     mockApi.api.updateLastNameValue("TEST");
     mockApi.api.updateUsernameValue("TEST");
-    mockApi.api.updateFirstEmailValue("TEST");
-    mockApi.api.updateSecondEmailValue("TEST");
-    mockApi.api.updateFirstPasswordValue("");
-    mockApi.api.updateSecondPasswordValue("TEST");
+    mockApi.api.updateEmailValue("TEST");
     mockApi.api.toggleList();
     mockApi.api.onLocationSelected("TEST");
+    mockApi.api.updatePasswordValue("");
     mockApi.api.onClickAv(1);
     mockApi.api.submit();
     expect(mockApi.api.passwordInputIsErrored).toEqual(true);
@@ -242,12 +226,10 @@ describe("Form submission", () => {
     mockApi.api.updateFirstNameValue("TEST");
     mockApi.api.updateLastNameValue("TEST");
     mockApi.api.updateUsernameValue("TEST");
-    mockApi.api.updateFirstEmailValue("TEST");
-    mockApi.api.updateSecondEmailValue("TEST");
-    mockApi.api.updateFirstPasswordValue("TEST");
-    mockApi.api.updateSecondPasswordValue("TEST");
+    mockApi.api.updateEmailValue("TEST");
     mockApi.api.toggleList();
     mockApi.api.onLocationSelected("TEST");
+    mockApi.api.updatePasswordValue("TEST");
     mockApi.api.onClickAv(null);
     mockApi.api.submit();
     expect(mockApi.api.avatarInputIsErrored).toEqual(true);
@@ -267,51 +249,43 @@ describe("Submission helpers", () => {
     mockApi.api.updateFirstNameValue("TEST");
     mockApi.api.updateLastNameValue("TEST");
     mockApi.api.updateUsernameValue("TEST");
-    mockApi.api.updateFirstEmailValue("TEST");
-    mockApi.api.updateSecondEmailValue("TEST");
-    mockApi.api.updateFirstPasswordValue("TEST");
-    mockApi.api.updateSecondPasswordValue("TEST");
+    mockApi.api.updateEmailValue("TEST");
     mockApi.api.toggleList();
     mockApi.api.onLocationSelected(locations[0].title);
+    mockApi.api.updatePasswordValue("TEST");
     mockApi.api.onClickAv(1);
     mockApi.api.submit();
 
     expect(mockApi.api.firstNameValue).toEqual("");
     expect(mockApi.api.lastNameValue).toEqual("");
     expect(mockApi.api.usernameValue).toEqual("");
-    expect(mockApi.api.firstEmailValue).toEqual("");
-    expect(mockApi.api.secondEmailValue).toEqual("");
+    expect(mockApi.api.emailValue).toEqual("");
     expect(mockApi.api.locationValue).toEqual("");
     expect(mockApi.api.selectedLocation).toEqual(null);
-    expect(mockApi.api.firstPasswordValue).toEqual("");
-    expect(mockApi.api.secondPasswordValue).toEqual("");
+    expect(mockApi.api.passwordValue).toEqual("");
     expect(mockApi.api.selectedAvatar).toEqual(null);
   });
 });
 
-describe("Switching panels", () => {
+describe("Switchin panels", () => {
   it("clears all inputs when user switches panel type", () => {
     mockApi.api.updateFirstNameValue("TEST");
     mockApi.api.updateLastNameValue("TEST");
     mockApi.api.updateUsernameValue("TEST");
-    mockApi.api.updateFirstEmailValue("TEST");
-    mockApi.api.updateSecondEmailValue("TEST");
-    mockApi.api.updateFirstPasswordValue("TEST");
-    mockApi.api.updateSecondPasswordValue("TEST");
+    mockApi.api.updateEmailValue("TEST");
     mockApi.api.toggleList();
     mockApi.api.onLocationSelected(locations[0].title);
+    mockApi.api.updatePasswordValue("TEST");
     mockApi.api.onClickAv(1);
     mockApi.api.toggleSignUp();
 
     expect(mockApi.api.firstNameValue).toEqual("");
     expect(mockApi.api.lastNameValue).toEqual("");
     expect(mockApi.api.usernameValue).toEqual("");
-    expect(mockApi.api.firstEmailValue).toEqual("");
-    expect(mockApi.api.secondEmailValue).toEqual("");
+    expect(mockApi.api.emailValue).toEqual("");
     expect(mockApi.api.locationValue).toEqual("");
     expect(mockApi.api.selectedLocation).toEqual(null);
-    expect(mockApi.api.firstPasswordValue).toEqual("");
-    expect(mockApi.api.secondPasswordValue).toEqual("");
+    expect(mockApi.api.passwordValue).toEqual("");
     expect(mockApi.api.selectedAvatar).toEqual(null);
   });
 });
