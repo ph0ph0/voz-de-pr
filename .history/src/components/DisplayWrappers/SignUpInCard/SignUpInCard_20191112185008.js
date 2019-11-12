@@ -10,12 +10,21 @@ import SideGraphic from "./SignUpInCardBody/SignUpInSideGraphic";
 const SignUpInCardWrapper = ({ api, showSignUp, ...props }) => {
   window.log(`isSignUp in SignUpInCard?: ${api.isSignUp}`);
 
-  if (api.isSignUp === true && showSignUp === false) {
-    window.log(`toggling*****: ${showSignUp}`);
-    api.toggleSignUp();
-  } else if (api.isSignUp === false && showSignUp === true) {
+  // if (api.isSignUp === true && showSignUp === false) {
+  //   window.log(`toggling*****: ${showSignUp}`);
+  //   api.toggleSignUp();
+  // } else if (api.isSignUp === false && showSignUp === true) {
+  //   api.toggleSignUp();
+  // }
+
+  if (showSignUp === false) {
     api.toggleSignUp();
   }
+
+  // useEffect(() => {
+  //   window.log(`x: ${showSignUp}`);
+
+  // });
 
   return (
     <div {...props}>

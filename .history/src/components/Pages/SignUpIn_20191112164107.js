@@ -8,8 +8,12 @@ import SignUpInApi from "../DisplayWrappers/SignUpInCard/API/SignUpCardAPI";
 import useApi from "../../CustomHooks/useAPI";
 
 const SignUpInPageWrapper = withRouter(({ staticContext, ...props }) => {
-  const showSignUp = props.location.state.clickedSignUp;
-  // window.log(`Clicked navbar su/li buttons, isSignup?: ${isSignup}`);
+  const isSignup = props.location.state.clickedSignUp;
+  window.log(`Clicked navbar su/li buttons, isSignup?: ${isSignup}`);
+
+  const [state, setState] = useState(true);
+
+  setState(props.location.state.clickedSignUp);
 
   const api = useApi(SignUpInApi, {
     firstNameValue: "",
@@ -25,7 +29,7 @@ const SignUpInPageWrapper = withRouter(({ staticContext, ...props }) => {
     passwordsMatch: null,
     listOpen: false,
     selectedAvatar: null,
-    isSignUp: showSignUp,
+    isSignUp: state,
     firstNameInputIsErrored: false,
     lastNameInputIsErrored: false,
     usernameInputIsErrored: false,
@@ -37,7 +41,7 @@ const SignUpInPageWrapper = withRouter(({ staticContext, ...props }) => {
 
   return (
     <div {...props}>
-      <SignUpInCard api={api} showSignUp={showSignUp} />
+      <SignUpInCard api={api} />
     </div>
   );
 });

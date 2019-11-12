@@ -7,15 +7,16 @@ import { SignUpInCardApiPropTypes } from "./API/proptypes/SignUpInCardApiPropTyp
 import SignUpCardBody from "./SignUpInCardBody/SignUpInCardBody";
 import SideGraphic from "./SignUpInCardBody/SignUpInSideGraphic";
 
-const SignUpInCardWrapper = ({ api, showSignUp, ...props }) => {
+const SignUpInCardWrapper = ({ api, x, ...props }) => {
   window.log(`isSignUp in SignUpInCard?: ${api.isSignUp}`);
 
-  if (api.isSignUp === true && showSignUp === false) {
-    window.log(`toggling*****: ${showSignUp}`);
-    api.toggleSignUp();
-  } else if (api.isSignUp === false && showSignUp === true) {
-    api.toggleSignUp();
-  }
+  useEffect(() => {
+    window.log(`x: ${x}`);
+    if (api.isSignUp === true && x === false) {
+      window.log(`toggling*****: ${x}`);
+      api.toggleSignUp();
+    }
+  });
 
   return (
     <div {...props}>

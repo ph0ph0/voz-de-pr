@@ -31,7 +31,7 @@ const Routes = props => {
       <Route path="/create-post">
         <CreatePost />
       </Route>
-      <Route path="/signupin">
+      <Route path="/signupin:cardType">
         <SignUpIn />
       </Route>
       <Route path="/:subjectID">

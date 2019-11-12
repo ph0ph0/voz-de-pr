@@ -17,6 +17,11 @@ const SignUpInCardWrapper = ({ api, showSignUp, ...props }) => {
     api.toggleSignUp();
   }
 
+  // useEffect(() => {
+  //   window.log(`x: ${showSignUp}`);
+
+  // });
+
   return (
     <div {...props}>
       <SideGraphic isSignUp={api.isSignUp} />
