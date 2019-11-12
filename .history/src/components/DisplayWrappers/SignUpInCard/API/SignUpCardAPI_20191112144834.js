@@ -226,7 +226,7 @@ const SignUpInCardAPI = ({ state, setState }) => {
       location => location.title.toLowerCase() === locationToCheck.toLowerCase()
     );
     if (result.length === 0) {
-      window.log(`No location match`);
+      window.log(`No match`);
       return true;
     }
     window.log(`locationCheck: ${result}`);
@@ -239,9 +239,6 @@ const SignUpInCardAPI = ({ state, setState }) => {
 
   const submit = () => {
     window.log(`Hit Submit`);
-
-    //Will need to branch here, one submit for signup and one login as the validity checks are different.
-
     if (
       inputsAreEmpty(
         setState,
@@ -252,11 +249,9 @@ const SignUpInCardAPI = ({ state, setState }) => {
         locationValue,
         firstPasswordValue,
         selectedAvatar
-      ) ||
-      !emailsMatch ||
-      !passwordsMatch
+      )
     ) {
-      window.log(`INPUTS WERE EMPTY OR EMAILS/PW DIDNT MATCH`);
+      window.log(`emailInputIsErrored on submit?: ${emailInputIsErrored}`);
       return;
     }
 
@@ -282,7 +277,6 @@ const SignUpInCardAPI = ({ state, setState }) => {
     //MAKE SURE THAT WHEN THE USER CLICKS ON A LOCATION, THEY ARE SELECTING AN OBJECT
     //ie const locationOfUser = findLocation() <- searches through locations and returns the whole object object
     //NETWORK REQUEST
-    //NOTE!!!: RESET ALL DOESNT SEEM TO WORK ATM FOR SOME REASON, text is left in the second pw and email fields?
     resetAll();
   };
 

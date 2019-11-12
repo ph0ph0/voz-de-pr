@@ -83,14 +83,12 @@ const SignUpCardBodyWrapper = ({ api, isSignUp, ...props }) => {
         value={api.emailValue}
         onChange={event => api.updateFirstEmailValue(event.target.value)}
       />
-      {api.isSignUp && (
-        <EmailField
-          api={api}
-          placeholder={"Re-type Email"}
-          value={api.emailValue}
-          onChange={event => api.updateSecondEmailValue(event.target.value)}
-        />
-      )}
+      <EmailField
+        api={api}
+        placeholder={"Re-type Email"}
+        value={api.emailValue}
+        onChange={event => api.updateSecondEmailValue(event.target.value)}
+      />
       {api.isSignUp && api.locationInputIsErrored && (
         <ErrorText>Please select a location from the dropdown</ErrorText>
       )}
@@ -104,14 +102,12 @@ const SignUpCardBodyWrapper = ({ api, isSignUp, ...props }) => {
         onChange={event => api.updateFirstPasswordValue(event.target.value)}
         api={api}
       />
-      {api.isSignUp && (
-        <PasswordField
-          placeholder={"Re-type Password"}
-          value={api.passwordValue}
-          onChange={event => api.updateSecondPasswordValue(event.target.value)}
-          api={api}
-        />
-      )}
+      <PasswordField
+        placeholder={"Re-type Password"}
+        value={api.passwordValue}
+        onChange={event => api.updateSecondPasswordValue(event.target.value)}
+        api={api}
+      />
       {api.isSignUp && api.avatarInputIsErrored && (
         <ErrorText>Please select an avatar</ErrorText>
       )}
@@ -140,9 +136,9 @@ const SignUpCardBody = styled(SignUpCardBodyWrapper)`
 
   margin-left: 41px;
 
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
 `;
 
 SignUpCardBody.propTypes = {

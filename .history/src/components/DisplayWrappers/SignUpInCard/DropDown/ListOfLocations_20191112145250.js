@@ -13,14 +13,15 @@ const ListOfLocationsWrapper = ({ api, ...props }) => {
         location =>
           location.title
             .toLowerCase()
-            .includes(api.locationValue.toLowerCase()) && (
+            .includes(api.locationValue.toLowerCase()) &&
+          ((
             <Location
               key={location.title}
               onClick={() => api.onLocationSelected(location.title)}
             >
               {location.title}
             </Location>
-          )
+          ) 
       )}
     </ul>
   );

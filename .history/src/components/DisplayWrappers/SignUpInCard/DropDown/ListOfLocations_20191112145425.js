@@ -30,7 +30,7 @@ const ListOfLocations = styled(ListOfLocationsWrapper)`
   /* background-color: green;
     border: 1px solid #d8d8d8; */
   width: auto;
-  height: 150px;
+  height: auto;
   max-height: 150px;
 
   padding: 0px;

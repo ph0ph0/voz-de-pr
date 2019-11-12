@@ -282,7 +282,6 @@ const SignUpInCardAPI = ({ state, setState }) => {
     //MAKE SURE THAT WHEN THE USER CLICKS ON A LOCATION, THEY ARE SELECTING AN OBJECT
     //ie const locationOfUser = findLocation() <- searches through locations and returns the whole object object
     //NETWORK REQUEST
-    //NOTE!!!: RESET ALL DOESNT SEEM TO WORK ATM FOR SOME REASON, text is left in the second pw and email fields?
     resetAll();
   };
 

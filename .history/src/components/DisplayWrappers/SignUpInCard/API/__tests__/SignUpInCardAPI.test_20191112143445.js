@@ -267,10 +267,10 @@ describe("Submission helpers", () => {
     ("finds a location successfully",
     () => {
       mockApi.api.onLocationSelected("");
-      expect(mockApi.api.getLocationObject()).toEqual(false);
+      expect(mockApi.api.getLocation).toBe(false);
 
       mockApi.api.onLocationSelected(locations[0].title);
-      expect(mockApi.api.getLocationObject()).toEqual(locations[0]);
+      expect(mockApi.api.getLocation).toEqual(locations[0]);
     })
   )
     it("clears all inputs on submit", () => {
