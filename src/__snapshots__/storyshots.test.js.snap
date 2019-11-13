@@ -646,7 +646,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
     className="sc-cvbbAY WaFib"
   >
     <input
-      className="sc-eHgmQL cwsUro"
+      className="sc-eHgmQL eXjPvE"
       placeholder="Search"
       type="text"
     />
@@ -747,7 +747,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarCentre C 1`] = `
   className="sc-cvbbAY WaFib"
 >
   <input
-    className="sc-eHgmQL cwsUro"
+    className="sc-eHgmQL eXjPvE"
     placeholder="Search Causes"
     type="text"
   />
@@ -759,7 +759,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarCentre C&P 1`] = `
   className="sc-cvbbAY WaFib"
 >
   <input
-    className="sc-eHgmQL cwsUro"
+    className="sc-eHgmQL eXjPvE"
     placeholder="Search Causes and Posts"
     type="text"
   />
@@ -771,7 +771,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarCentre P 1`] = `
   className="sc-cvbbAY WaFib"
 >
   <input
-    className="sc-eHgmQL cwsUro"
+    className="sc-eHgmQL eXjPvE"
     placeholder="Search Posts"
     type="text"
   />
@@ -783,7 +783,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarCentre Standard 1`] = `
   className="sc-cvbbAY WaFib"
 >
   <input
-    className="sc-eHgmQL cwsUro"
+    className="sc-eHgmQL eXjPvE"
     placeholder="Search"
     type="text"
   />
@@ -14646,28 +14646,28 @@ exports[`Storyshots Primitive|Inputs/NameInput Standard 1`] = `
 
 exports[`Storyshots Primitive|Inputs/SearchBar C 1`] = `
 <input
-  className="sc-eHgmQL cwsUro"
+  className="sc-eHgmQL eXjPvE"
   placeholder="Search Causes"
 />
 `;
 
 exports[`Storyshots Primitive|Inputs/SearchBar C&P 1`] = `
 <input
-  className="sc-eHgmQL cwsUro"
+  className="sc-eHgmQL eXjPvE"
   placeholder="Search Causes and Posts"
 />
 `;
 
 exports[`Storyshots Primitive|Inputs/SearchBar P 1`] = `
 <input
-  className="sc-eHgmQL cwsUro"
+  className="sc-eHgmQL eXjPvE"
   placeholder="Search Posts"
 />
 `;
 
 exports[`Storyshots Primitive|Inputs/SearchBar Standard 1`] = `
 <input
-  className="sc-eHgmQL cwsUro"
+  className="sc-eHgmQL eXjPvE"
   placeholder="Search"
 />
 `;
