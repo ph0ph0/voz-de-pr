@@ -8,7 +8,7 @@ import Profile from "../components/Pages/Profile";
 import CreateCause from "../components/Pages/CreateCause";
 import CreatePost from "../components/Pages/CreatePost";
 import SubjectDetail from "../components/Pages/SubjectDetail";
-import SignUp from "../components/Pages/SignUp";
+import SignUpIn from "../components/Pages/SignUpIn";
 
 const Routes = props => {
   return (
