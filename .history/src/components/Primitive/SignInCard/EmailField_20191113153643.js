@@ -18,7 +18,7 @@ const EmailTextInput = styled(TextInputWrapper)`
   padding-left: 25px;
   margin-bottom: 20px;
 
-  /* line-height: 2.4em; */
+  line-height: 2.4em;
   font-size: 20px;
 
   :focus {

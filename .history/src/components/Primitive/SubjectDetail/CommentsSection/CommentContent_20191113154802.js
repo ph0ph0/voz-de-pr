@@ -6,7 +6,7 @@ const CommentContentWrapper = ({ commentContent, ...props }) => {
 };
 
 const CommentContent = styled(CommentContentWrapper)`
-  /* border: 1px solid darkkhaki; */
+  border: 1px solid darkkhaki;
   font-size: 12px;
   font-family: Avenir;
   text-align: justify;
@@ -14,7 +14,6 @@ const CommentContent = styled(CommentContentWrapper)`
 
   margin: 0px;
   margin-left: 26px;
-  margin-bottom: 7px;
 `;
 
 export default CommentContent;

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const TextInputWrapper = ({ ...props }) => {
-  return <input {...props} type="email" />;
+  return <input {...props} />;
 };
 
 const EmailTextInput = styled(TextInputWrapper)`
@@ -18,7 +18,7 @@ const EmailTextInput = styled(TextInputWrapper)`
   padding-left: 25px;
   margin-bottom: 20px;
 
-  /* line-height: 2.4em; */
+  line-height: 2.4em;
   font-size: 20px;
 
   :focus {

@@ -1,25 +1,24 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Filter = styled.button`
-  border: none;
+border: none;
   /* border: 1px solid burlywood; */
   height: 19px;
   font-size: 14px;
   color: #6e6f70;
-  background-color: #fff;
 
   :hover {
-    color: #1b4ea0;
+    color: #1B4EA0;
   }
 `;
 
 export const FilterRedProfile = styled(Filter)`
   :hover {
-    color: ${props => props.theme.primaryColour};
+    color: ${props => props.theme.primaryColour}
   }
-`;
+`
 export const FilterBlueProfile = styled(Filter)`
   :hover {
-    color: ${props => props.theme.secondaryColour};
+    color: ${props => props.theme.secondaryColour}
   }
-`;
+`

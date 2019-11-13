@@ -23,7 +23,7 @@ const CommentHeadingWrapper = ({
 };
 
 const CommentHeading = styled(CommentHeadingWrapper)`
-  /* border: 1px solid orange; */
+  border: 1px solid orange;
   display: flex;
   align-items: center;
 `;

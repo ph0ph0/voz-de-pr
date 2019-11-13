@@ -6,7 +6,7 @@ export const Filter = styled.button`
   height: 19px;
   font-size: 14px;
   color: #6e6f70;
-  background-color: #fff;
+  background-color: none;
 
   :hover {
     color: #1b4ea0;
