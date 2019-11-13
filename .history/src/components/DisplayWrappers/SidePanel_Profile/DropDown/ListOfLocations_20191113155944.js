@@ -28,7 +28,7 @@ const ListOfLocationsWrapper = ({ api, ...props }) => {
 const ListOfLocations = styled(ListOfLocationsWrapper)`
   /* background-color: green;
     border: 1px solid #d8d8d8; */
-  width: 238px;
+  width: auto;
   height: auto;
   max-height: 150px;
 

@@ -19,7 +19,7 @@ const InlineWrapper = ({ api, ...props }) => {
 const InlineContent = styled(InlineWrapper)`
   /* border: 1px solid green; */
   height: auto;
-  width: 238px;
+  width: 200px;
 
   color: #878a8c;
   display: flex;

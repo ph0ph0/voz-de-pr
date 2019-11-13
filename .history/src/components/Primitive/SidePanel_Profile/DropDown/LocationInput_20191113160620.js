@@ -14,7 +14,7 @@ const InputWrapper = ({ api, ...props }) => {
 
 const Input = styled(InputWrapper)`
   border: none;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   /* Still need to add a radius to the border as otherwise it cuts off the parent radius */
   border-radius: 5px;
   width: 150px;

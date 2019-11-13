@@ -10,11 +10,11 @@ import ClearInput from "../../../../Primitive/SidePanel_Profile/DropDown/ClearIn
 const LocationInputSignUpInCard = styled(LocationInput)`
   font-size: 20px;
   line-height: 1;
-  /* border: 1px solid orange; */
+  border: 1px solid orange;
 `;
 
 const ClearInputSignUpInCard = styled(ClearInput)`
-  /* border: 1px solid orange; */
+  border: 1px solid orange;
   margin-right: -80px;
   margin-left: auto;
 `;

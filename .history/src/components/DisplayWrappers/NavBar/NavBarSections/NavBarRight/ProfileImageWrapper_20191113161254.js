@@ -12,7 +12,7 @@ const Wrapper = props => {
 };
 
 const ProfileImageWrapper = styled(Wrapper)`
-  /* border: 1px solid red; */
+  border: 1px solid red;
   width: 40px;
   height: 95%;
 
