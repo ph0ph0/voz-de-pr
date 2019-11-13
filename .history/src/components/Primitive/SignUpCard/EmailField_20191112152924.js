@@ -8,7 +8,7 @@ const TextInputWrapper = ({ placeholder, ...props }) => {
 const EmailTextInput = styled(TextInputWrapper)`
   /* If the entered dont emails match, show red, if they do, green, and if nothing entered, grey */
   border: ${props =>
-    props.api.emailsMatch === false
+    props.api.isSignUp && props.api.emailsMatch === false
       ? "1px solid red"
       : props.api.emailsMatch === true
       ? "1px solid green"

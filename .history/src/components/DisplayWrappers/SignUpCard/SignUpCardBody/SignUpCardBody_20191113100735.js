@@ -27,7 +27,7 @@ const AvatarInstructionSignUp = styled(AvatarInstruction)`
   margin-left: 26px;
 `;
 
-const SignUpInButton = styled(ActionButton)`
+const SignUpButton = styled(ActionButton)`
   margin-top: 17px;
   margin-bottom: 19px;
 
@@ -43,37 +43,37 @@ const SignUpInButton = styled(ActionButton)`
 const SignUpCardBodyWrapper = ({ api, ...props }) => {
   return (
     <div {...props}>
-      <Logo isSignUp={api.isSignUp} />
-      {api.isSignUp && api.firstNameInputIsErrored && (
+      <Logo />
+      {api.firstNameInputIsErrored && (
         <ErrorText>Please provide a first name</ErrorText>
       )}
-      {api.isSignUp && (
-        <TextField
-          placeholder={"First Name"}
-          value={api.firstNameValue}
-          onChange={event => api.updateFirstNameValue(event.target.value)}
-        />
-      )}
-      {api.isSignUp && api.lastNameInputIsErrored && (
+
+      <TextField
+        placeholder={"First Name"}
+        value={api.firstNameValue}
+        onChange={event => api.updateFirstNameValue(event.target.value)}
+      />
+
+      {api.lastNameInputIsErrored && (
         <ErrorText>Please provide a last name</ErrorText>
       )}
-      {api.isSignUp && (
-        <TextField
-          placeholder={"Last Name"}
-          value={api.lastNameValue}
-          onChange={event => api.updateLastNameValue(event.target.value)}
-        />
-      )}
-      {api.isSignUp && api.usernameInputIsErrored && (
+
+      <TextField
+        placeholder={"Last Name"}
+        value={api.lastNameValue}
+        onChange={event => api.updateLastNameValue(event.target.value)}
+      />
+
+      {api.usernameInputIsErrored && (
         <ErrorText>Please provide a username</ErrorText>
       )}
-      {api.isSignUp && (
-        <TextField
-          placeholder={"Username"}
-          value={api.usernameValue}
-          onChange={event => api.updateUsernameValue(event.target.value)}
-        />
-      )}
+
+      <TextField
+        placeholder={"Username"}
+        value={api.usernameValue}
+        onChange={event => api.updateUsernameValue(event.target.value)}
+      />
+
       {api.emailInputIsErrored && (
         <ErrorText>Please provide a valid email</ErrorText>
       )}
@@ -83,19 +83,19 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
         value={api.firstEmailValue}
         onChange={event => api.updateFirstEmailValue(event.target.value)}
       />
-      {api.isSignUp && (
-        <EmailField
-          api={api}
-          placeholder={"Re-type Email"}
-          value={api.secondEmailValue}
-          onChange={event => api.updateSecondEmailValue(event.target.value)}
-        />
-      )}
-      {api.isSignUp && api.locationInputIsErrored && (
+
+      <EmailField
+        api={api}
+        placeholder={"Re-type Email"}
+        value={api.secondEmailValue}
+        onChange={event => api.updateSecondEmailValue(event.target.value)}
+      />
+
+      {api.locationInputIsErrored && (
         <ErrorText>Please select a location from the dropdown</ErrorText>
       )}
-      {api.isSignUp && <DropDown api={api} />}
-      {api.isSignUp && api.passwordInputIsErrored && (
+      <DropDown api={api} />
+      {api.passwordInputIsErrored && (
         <ErrorText>Please provide a password</ErrorText>
       )}
       <PasswordField
@@ -104,29 +104,26 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
         onChange={event => api.updateFirstPasswordValue(event.target.value)}
         api={api}
       />
-      {api.isSignUp && (
-        <PasswordField
-          placeholder={"Re-type Password"}
-          value={api.secondPasswordValue}
-          onChange={event => api.updateSecondPasswordValue(event.target.value)}
-          api={api}
-        />
-      )}
-      {api.isSignUp && api.avatarInputIsErrored && (
+
+      <PasswordField
+        placeholder={"Re-type Password"}
+        value={api.secondPasswordValue}
+        onChange={event => api.updateSecondPasswordValue(event.target.value)}
+        api={api}
+      />
+
+      {api.avatarInputIsErrored && (
         <ErrorText>Please select an avatar</ErrorText>
       )}
-      {api.isSignUp && (
-        <AvatarInstructionSignUp api={api}>
-          Select an Avatar
-        </AvatarInstructionSignUp>
-      )}
-      {api.isSignUp && <Avatars api={api} />}
-      <SignUpInButton
-        secondary={api.isSignUp ? true : false}
-        onClick={api.submit}
-      >
-        {api.isSignUp ? "SIGN UP" : "LOG IN"}
-      </SignUpInButton>
+
+      <AvatarInstructionSignUp api={api}>
+        Select an Avatar
+      </AvatarInstructionSignUp>
+
+      <Avatars api={api} />
+      <SignUpButton secondary onClick={api.submit}>
+        SIGN UP
+      </SignUpButton>
       <BottomLineWrapper api={api} />
     </div>
   );
@@ -136,7 +133,7 @@ const SignUpCardBody = styled(SignUpCardBodyWrapper)`
   /* border: 1px solid indigo; */
 
   width: 468px;
-  height: auto;
+  height: 1700px;
 
   margin-left: 41px;
 

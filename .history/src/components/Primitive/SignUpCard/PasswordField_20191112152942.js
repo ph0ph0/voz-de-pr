@@ -8,9 +8,9 @@ const PasswordInputWrapper = ({ placeholder, ...props }) => {
 const PasswordField = styled(PasswordInputWrapper)`
   /* If the entered dont passwords match, show red, if they do, green, and if nothing entered, grey */
   border: ${props =>
-    props.api.passwordsMatch === false
+    props.api.isSignUp && props.api.emailsMatch === false
       ? "1px solid red"
-      : props.api.passwordsMatch === true
+      : props.api.emailsMatch === true
       ? "1px solid green"
       : "1px solid #d8d8d8"};
 

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { withRouter } from "react-router-dom";
 
-import SignUpCard from "../DisplayWrappers/SignUpInCards/SignUpCard/SignUpCard";
+import SignUpInCard from "../DisplayWrappers/SignUpCard/SignUpCard";
 
 import SignUpApi from "../DisplayWrappers/SignUpInCards/SignUpCard/API/SignUpCardAPI";
 import useApi from "../../CustomHooks/useAPI";
@@ -37,7 +37,7 @@ const SignUpInPageWrapper = withRouter(({ staticContext, ...props }) => {
 
   return (
     <div {...props}>
-      <SignUpCard api={api} showSignUp={showSignUp} />
+      <SignUpInCard api={api} showSignUp={showSignUp} />
     </div>
   );
 });

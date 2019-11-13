@@ -7,15 +7,8 @@ import { SignUpInCardApiPropTypes } from "./API/proptypes/SignUpCardApiPropTypes
 import SignUpCardBody from "./SignUpCardBody/SignUpCardBody";
 import SideGraphic from "./SignUpCardBody/SignUpSideGraphic";
 
-const SignUpInCardWrapper = ({ api, showSignUp, ...props }) => {
+const SignUpInCardWrapper = ({ api, ...props }) => {
   window.log(`isSignUp in SignUpInCard?: ${api.isSignUp}`);
-
-  //This is used to toggle the panel when the user clicks on the SignUp/LogIn buttons of the NavBar
-  // if (api.isSignUp === true && showSignUp === false) {
-  //   api.toggleSignUp();
-  // } else if (api.isSignUp === false && showSignUp === true) {
-  //   api.toggleSignUp();
-  // }
 
   return (
     <div {...props}>
@@ -30,13 +23,10 @@ const SignUpInCardWrapper = ({ api, showSignUp, ...props }) => {
 const SignUpInCard = styled(SignUpInCardWrapper)`
   /* border: 1px solid black; */
   width: 752px;
-  height: ${props => (props.api.isSignUp ? "auto" : "616px")};
-  /* padding-bottom: ${props => (props.isSignUp ? "76px" : "616px")}; */
+  height: auto;
   margin-top: 20px;
 
   overflow: hidden;
-
-  /* padding-bottom: 30px; */
 
   background-color: #ffffff;
   border-radius: 5px;
@@ -44,8 +34,6 @@ const SignUpInCard = styled(SignUpInCardWrapper)`
 
   display: flex;
   flex-direction: row;
-  /* justify-content: center; */
-  /* align-items: center; */
 `;
 
 SignUpInCard.propTypes = {

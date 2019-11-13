@@ -6,7 +6,7 @@ const Logo = styled(LogoSVG)`
   /* border: 1px solid salmon; */
 
   margin-top: 39px;
-  margin-bottom: 32px;
+  margin-bottom: ${props => (props.isSignUp ? "32px" : "111px")};
   margin-left: auto;
 `;
 
