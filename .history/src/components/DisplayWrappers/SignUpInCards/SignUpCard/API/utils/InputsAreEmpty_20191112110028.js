@@ -22,7 +22,6 @@ export const inputsAreEmpty = (
     };
   });
 
-  //This flag is returned to the caller and indicates if any of the fields were empty
   var flag = false;
 
   if (firstNameValue === "") {

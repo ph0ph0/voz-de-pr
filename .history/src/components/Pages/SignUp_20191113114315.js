@@ -6,7 +6,7 @@ import SignUpCard from "../DisplayWrappers/SignUpInCards/SignUpCard/SignUpCard";
 import SignUpApi from "../DisplayWrappers/SignUpInCards/SignUpCard/API/SignUpCardAPI";
 import useApi from "../../CustomHooks/useAPI";
 
-const SignUpWrapper = ({ staticContext, ...props }) => {
+const SignUpPageWrapper = ({ staticContext, ...props }) => {
   const api = useApi(SignUpApi, {
     firstNameValue: "",
     lastNameValue: "",
@@ -37,7 +37,7 @@ const SignUpWrapper = ({ staticContext, ...props }) => {
   );
 };
 
-const SignUp = styled(SignUpWrapper)`
+const SignUp = styled(SignUpPageWrapper)`
   margin-bottom: 50px;
 
   display: flex;

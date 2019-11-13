@@ -1,5 +1,5 @@
 import { cleanup } from "@testing-library/react";
-import { locations } from "../../../../../../Constants/Constants";
+import { locations } from "../../../../../Constants/Constants";
 
 import SignUpCardAPI from "../SignUpCardAPI";
 
