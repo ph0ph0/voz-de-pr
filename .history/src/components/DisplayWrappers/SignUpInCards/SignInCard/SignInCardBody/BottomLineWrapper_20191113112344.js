@@ -4,12 +4,12 @@ import styled from "styled-components";
 import SwitchStateButton from "../../../../Primitive/SignUpCard/SwitchStateButton";
 
 const BottomLineWrapperWrapper = ({ api, ...props }) => {
+  const navToSignUp = () => {};
+
   return (
     <div {...props}>
-      {api.isSignUp
-        ? "Already got a voice on Voz de Puerto Rico?"
-        : "New to Voz de Puerto Rico?"}
-      <SwitchStateButton onClick={api.toggleSignUp} api={api} />
+      New to Voz de Puerto Rico?
+      <SwitchStateButton onClick={navToLogIn} />
     </div>
   );
 };

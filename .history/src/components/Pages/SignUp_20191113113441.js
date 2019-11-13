@@ -22,6 +22,7 @@ const SignUpPageWrapper = withRouter(({ staticContext, ...props }) => {
     passwordsMatch: null,
     listOpen: false,
     selectedAvatar: null,
+    isSignUp: showSignUp,
     firstNameInputIsErrored: false,
     lastNameInputIsErrored: false,
     usernameInputIsErrored: false,
@@ -33,7 +34,7 @@ const SignUpPageWrapper = withRouter(({ staticContext, ...props }) => {
 
   return (
     <div {...props}>
-      <SignUpCard api={api} />
+      <SignUpCard api={api} showSignUp={showSignUp} />
     </div>
   );
 });

@@ -32,10 +32,10 @@ const Routes = props => {
       <Route path="/create-post">
         <CreatePost />
       </Route>
-      <Route exact path="/signup">
+      <Route path="/signup">
         <SignUp />
       </Route>
-      <Route exact path="/signin">
+      <Route path="/signin">
         <SignIn />
       </Route>
       <Route path="/:subjectID">

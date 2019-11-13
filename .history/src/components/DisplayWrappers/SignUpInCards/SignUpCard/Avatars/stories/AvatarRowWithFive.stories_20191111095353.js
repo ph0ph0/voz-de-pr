@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 
 import AvatarRowWithFive from "../AvatarRowWithFive";
-import Person from "../../../../../../assets/General/Person.png";
+import Person from "../../../../../assets/General/Person.png";
 
 import { mockApi } from "../../API/__mocks__/mockApi";
 

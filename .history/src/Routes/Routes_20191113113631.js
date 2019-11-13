@@ -9,7 +9,6 @@ import CreateCause from "../components/Pages/CreateCause";
 import CreatePost from "../components/Pages/CreatePost";
 import SubjectDetail from "../components/Pages/SubjectDetail";
 import SignUp from "../components/Pages/SignUp";
-import SignIn from "../components/Pages/SignIn";
 
 const Routes = props => {
   return (
@@ -32,11 +31,8 @@ const Routes = props => {
       <Route path="/create-post">
         <CreatePost />
       </Route>
-      <Route exact path="/signup">
+      <Route path="/signup">
         <SignUp />
-      </Route>
-      <Route exact path="/signin">
-        <SignIn />
       </Route>
       <Route path="/:subjectID">
         <SubjectDetail />

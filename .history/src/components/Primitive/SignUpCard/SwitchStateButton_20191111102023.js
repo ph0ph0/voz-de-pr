@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-const SwitchStateButtonWrapper = ({ isSignUp, ...props }) => {
-  return <button {...props}>{isSignUp ? "LOG IN" : "SIGN UP"}</button>;
+const SwitchStateButtonWrapper = ({ api, ...props }) => {
+  return <button {...props}>{api.isSignUp ? "LOG IN" : "SIGN UP"}</button>;
 };
 
 const SwitchStateButton = styled(SwitchStateButtonWrapper)`
@@ -15,7 +15,9 @@ const SwitchStateButton = styled(SwitchStateButtonWrapper)`
   padding: 0px;
 
   color: ${props =>
-    props.isSignUp ? props.theme.primaryColour : props.theme.secondaryColour};
+    props.api.isSignUp
+      ? props.theme.primaryColour
+      : props.theme.secondaryColour};
 
   :hover {
     cursor: pointer;

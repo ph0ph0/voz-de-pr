@@ -33,7 +33,7 @@ const SignUpPageWrapper = withRouter(({ staticContext, ...props }) => {
 
   return (
     <div {...props}>
-      <SignUpCard api={api} />
+      <SignUpCard api={api} showSignUp={showSignUp} />
     </div>
   );
 });

@@ -9,16 +9,14 @@ import SignUpCardBody from "./SignUpCardBody/SignUpCardBody";
 import SideGraphic from "./SignUpCardBody/SignUpSideGraphic";
 
 const SignUpInCard = ({ api, ...props }) => {
+  window.log(`isSignUp in SignUpInCard?: ${api.isSignUp}`);
+
   return (
     <SignUpInCardLayout>
       <SideGraphic />
       <SignUpCardBody api={api} />
     </SignUpInCardLayout>
   );
-};
-
-SignUpInCard.propTypes = {
-  api: SignUpInCardApiPropTypes
 };
 
 export default SignUpInCard;
