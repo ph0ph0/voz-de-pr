@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
@@ -11,11 +11,11 @@ const SignUpInCardWrapper = ({ api, showSignUp, ...props }) => {
   window.log(`isSignUp in SignUpInCard?: ${api.isSignUp}`);
 
   //This is used to toggle the panel when the user clicks on the SignUp/LogIn buttons of the NavBar
-  // if (api.isSignUp === true && showSignUp === false) {
-  //   api.toggleSignUp();
-  // } else if (api.isSignUp === false && showSignUp === true) {
-  //   api.toggleSignUp();
-  // }
+  if (api.isSignUp === true && showSignUp === false) {
+    api.toggleSignUp();
+  } else if (api.isSignUp === false && showSignUp === true) {
+    api.toggleSignUp();
+  }
 
   return (
     <div {...props}>

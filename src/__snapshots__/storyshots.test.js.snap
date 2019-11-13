@@ -1948,12 +1948,12 @@ exports[`Storyshots DisplayWrappers|SignUpInCard/BottomLineWrapper/BottomLineWra
 <div
   className="sc-hqyNC gxsARw"
 >
-  New to Voz de Puerto Rico?
+  Already got a voice on Voz de Puerto Rico?
   <button
-    className="sc-kvZOFW rMVaZ"
+    className="sc-kvZOFW fZPaul"
     onClick={[Function]}
   >
-    SIGN UP
+    LOG IN
   </button>
 </div>
 `;
@@ -1962,12 +1962,12 @@ exports[`Storyshots DisplayWrappers|SignUpInCard/BottomLineWrapper/BottomLineWra
 <div
   className="sc-hqyNC gxsARw"
 >
-  New to Voz de Puerto Rico?
+  Already got a voice on Voz de Puerto Rico?
   <button
-    className="sc-kvZOFW rMVaZ"
+    className="sc-kvZOFW fZPaul"
     onClick={[Function]}
   >
-    SIGN UP
+    LOG IN
   </button>
 </div>
 `;
@@ -2049,7 +2049,7 @@ exports[`Storyshots DisplayWrappers|SignUpInCard/DropDown/InlineContent Standard
 
 exports[`Storyshots DisplayWrappers|SignUpInCard/DropDown/ListOfLocations Standard 1`] = `
 <ul
-  className="sc-hmzhuo iCnNsS"
+  className="sc-hmzhuo gsznFv"
 >
   <li
     className="sc-htoDjs jKESfa"
@@ -2188,10 +2188,10 @@ exports[`Storyshots DisplayWrappers|SignUpInCard/DropDown/ListOfLocations Standa
 
 exports[`Storyshots DisplayWrappers|SignUpInCard/SignUpInCard SignIn 1`] = `
 <div
-  className="sc-ktHwxA elSKgx"
+  className="sc-ktHwxA lchDwZ"
 >
   <div
-    className="sc-hEsumM gCeynp"
+    className="sc-hEsumM dYnnVe"
   >
     <svg
       height="870px"
@@ -2247,106 +2247,199 @@ exports[`Storyshots DisplayWrappers|SignUpInCard/SignUpInCard SignIn 1`] = `
     className="sc-fYxtnH jGQbnG"
   >
     <svg
-      className="sc-uJMKN lpRLM"
-      isSignUp={false}
+      className="sc-uJMKN cUppxz"
+      isSignUp={true}
     >
       SignUpInLogo.svg
     </svg>
     <input
+      className="sc-jbKcbu eoYpUM"
+      onChange={[Function]}
+      placeholder="First Name"
+      value=""
+    />
+    <input
+      className="sc-jbKcbu eoYpUM"
+      onChange={[Function]}
+      placeholder="Last Name"
+      value=""
+    />
+    <input
+      className="sc-jbKcbu eoYpUM"
+      onChange={[Function]}
+      placeholder="Username"
+      value=""
+    />
+    <input
       api={
         Object {
-          "dropDownIsErrored": false,
+          "avatarInputIsErrored": false,
+          "emailInputIsErrored": false,
+          "emailsMatch": null,
           "firstEmailValue": "",
+          "firstNameInputIsErrored": false,
           "firstNameValue": "",
           "firstPasswordValue": "",
-          "isSignUp": false,
+          "isSignUp": true,
+          "lastNameInputIsErrored": false,
           "lastNameValue": "",
           "listOpen": false,
+          "locationInputIsErrored": false,
+          "locationNotFound": [Function],
           "locationValue": "",
           "onClickAv": [Function],
           "onLocationSelected": [Function],
+          "passwordInputIsErrored": false,
+          "passwordsMatch": null,
           "resetAll": [Function],
           "resetDropdown": [Function],
           "secondEmailValue": "",
           "secondPasswordValue": "",
           "selectedAvatar": null,
-          "selectedLocation": "",
+          "selectedLocation": null,
           "submit": [Function],
           "toggleList": [Function],
           "toggleSignUp": [Function],
-          "updateEmailValue": [Function],
+          "updateFirstEmailValue": [Function],
+          "updateFirstNameValue": [Function],
+          "updateFirstPasswordValue": [Function],
+          "updateLastNameValue": [Function],
           "updateLocationValue": [Function],
-          "updateNameValue": [Function],
-          "updatePasswordValue": [Function],
+          "updateSecondEmailValue": [Function],
+          "updateSecondPasswordValue": [Function],
           "updateUsernameValue": [Function],
+          "usernameInputIsErrored": false,
           "usernameValue": "",
         }
       }
       className="sc-jqCOkK bGRwOe"
       onChange={[Function]}
       placeholder="Email"
+      value=""
     />
     <input
       api={
         Object {
-          "dropDownIsErrored": false,
+          "avatarInputIsErrored": false,
+          "emailInputIsErrored": false,
+          "emailsMatch": null,
           "firstEmailValue": "",
+          "firstNameInputIsErrored": false,
           "firstNameValue": "",
           "firstPasswordValue": "",
-          "isSignUp": false,
+          "isSignUp": true,
+          "lastNameInputIsErrored": false,
           "lastNameValue": "",
           "listOpen": false,
+          "locationInputIsErrored": false,
+          "locationNotFound": [Function],
           "locationValue": "",
           "onClickAv": [Function],
           "onLocationSelected": [Function],
+          "passwordInputIsErrored": false,
+          "passwordsMatch": null,
           "resetAll": [Function],
           "resetDropdown": [Function],
           "secondEmailValue": "",
           "secondPasswordValue": "",
           "selectedAvatar": null,
-          "selectedLocation": "",
+          "selectedLocation": null,
           "submit": [Function],
           "toggleList": [Function],
           "toggleSignUp": [Function],
-          "updateEmailValue": [Function],
+          "updateFirstEmailValue": [Function],
+          "updateFirstNameValue": [Function],
+          "updateFirstPasswordValue": [Function],
+          "updateLastNameValue": [Function],
           "updateLocationValue": [Function],
-          "updateNameValue": [Function],
-          "updatePasswordValue": [Function],
+          "updateSecondEmailValue": [Function],
+          "updateSecondPasswordValue": [Function],
           "updateUsernameValue": [Function],
+          "usernameInputIsErrored": false,
           "usernameValue": "",
         }
       }
       className="sc-jqCOkK bGRwOe"
       onChange={[Function]}
       placeholder="Re-type Email"
+      value=""
     />
+    <div
+      className="sc-frDJqD hVBLgG"
+    >
+      <div
+        className="sc-ksYbfQ iGgkHg"
+        onClick={[Function]}
+      >
+        <input
+          className="sc-ifAKCX sc-kgAjT eoPXHp"
+          onChange={[Function]}
+          placeholder="Location"
+          value=""
+        />
+        <div
+          className="sc-EHOje jKngya"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-caret-down fa-w-10 "
+            color="#131415"
+            data-icon="caret-down"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 320 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
     <input
       api={
         Object {
-          "dropDownIsErrored": false,
+          "avatarInputIsErrored": false,
+          "emailInputIsErrored": false,
+          "emailsMatch": null,
           "firstEmailValue": "",
+          "firstNameInputIsErrored": false,
           "firstNameValue": "",
           "firstPasswordValue": "",
-          "isSignUp": false,
+          "isSignUp": true,
+          "lastNameInputIsErrored": false,
           "lastNameValue": "",
           "listOpen": false,
+          "locationInputIsErrored": false,
+          "locationNotFound": [Function],
           "locationValue": "",
           "onClickAv": [Function],
           "onLocationSelected": [Function],
+          "passwordInputIsErrored": false,
+          "passwordsMatch": null,
           "resetAll": [Function],
           "resetDropdown": [Function],
           "secondEmailValue": "",
           "secondPasswordValue": "",
           "selectedAvatar": null,
-          "selectedLocation": "",
+          "selectedLocation": null,
           "submit": [Function],
           "toggleList": [Function],
           "toggleSignUp": [Function],
-          "updateEmailValue": [Function],
+          "updateFirstEmailValue": [Function],
+          "updateFirstNameValue": [Function],
+          "updateFirstPasswordValue": [Function],
+          "updateLastNameValue": [Function],
           "updateLocationValue": [Function],
-          "updateNameValue": [Function],
-          "updatePasswordValue": [Function],
+          "updateSecondEmailValue": [Function],
+          "updateSecondPasswordValue": [Function],
           "updateUsernameValue": [Function],
+          "usernameInputIsErrored": false,
           "usernameValue": "",
         }
       }
@@ -2359,30 +2452,42 @@ exports[`Storyshots DisplayWrappers|SignUpInCard/SignUpInCard SignIn 1`] = `
     <input
       api={
         Object {
-          "dropDownIsErrored": false,
+          "avatarInputIsErrored": false,
+          "emailInputIsErrored": false,
+          "emailsMatch": null,
           "firstEmailValue": "",
+          "firstNameInputIsErrored": false,
           "firstNameValue": "",
           "firstPasswordValue": "",
-          "isSignUp": false,
+          "isSignUp": true,
+          "lastNameInputIsErrored": false,
           "lastNameValue": "",
           "listOpen": false,
+          "locationInputIsErrored": false,
+          "locationNotFound": [Function],
           "locationValue": "",
           "onClickAv": [Function],
           "onLocationSelected": [Function],
+          "passwordInputIsErrored": false,
+          "passwordsMatch": null,
           "resetAll": [Function],
           "resetDropdown": [Function],
           "secondEmailValue": "",
           "secondPasswordValue": "",
           "selectedAvatar": null,
-          "selectedLocation": "",
+          "selectedLocation": null,
           "submit": [Function],
           "toggleList": [Function],
           "toggleSignUp": [Function],
-          "updateEmailValue": [Function],
+          "updateFirstEmailValue": [Function],
+          "updateFirstNameValue": [Function],
+          "updateFirstPasswordValue": [Function],
+          "updateLastNameValue": [Function],
           "updateLocationValue": [Function],
-          "updateNameValue": [Function],
-          "updatePasswordValue": [Function],
+          "updateSecondEmailValue": [Function],
+          "updateSecondPasswordValue": [Function],
           "updateUsernameValue": [Function],
+          "usernameInputIsErrored": false,
           "usernameValue": "",
         }
       }
@@ -2390,22 +2495,100 @@ exports[`Storyshots DisplayWrappers|SignUpInCard/SignUpInCard SignIn 1`] = `
       onChange={[Function]}
       placeholder="Re-type Password"
       type="password"
+      value=""
     />
+    <div
+      className="sc-gZMcBi sc-gGBfsJ fKxMoT"
+    >
+      Select an Avatar
+    </div>
+    <div
+      className="sc-TOsTZ gxHYhM"
+    >
+      <div
+        className="sc-cHGsZl hHwTak"
+      >
+        <img
+          alt="profile"
+          className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+          onClick={[Function]}
+          src="Person.png"
+        />
+      </div>
+      <div
+        className="sc-cHGsZl hHwTak"
+      >
+        <img
+          alt="profile"
+          className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+          onClick={[Function]}
+          src="Person.png"
+        />
+      </div>
+    </div>
     <button
-      className="sc-chPdSV sc-jnlKLf feymRt"
+      className="sc-chPdSV sc-jnlKLf gmVzdM"
       onClick={[Function]}
     >
-      LOG IN
+      SIGN UP
     </button>
     <div
       className="sc-hqyNC gxsARw"
     >
-      New to Voz de Puerto Rico?
+      Already got a voice on Voz de Puerto Rico?
       <button
-        className="sc-kvZOFW rMVaZ"
+        className="sc-kvZOFW fZPaul"
         onClick={[Function]}
       >
-        SIGN UP
+        LOG IN
       </button>
     </div>
   </div>
@@ -2414,10 +2597,10 @@ exports[`Storyshots DisplayWrappers|SignUpInCard/SignUpInCard SignIn 1`] = `
 
 exports[`Storyshots DisplayWrappers|SignUpInCard/SignUpInCard SignUp 1`] = `
 <div
-  className="sc-ktHwxA elSKgx"
+  className="sc-ktHwxA lchDwZ"
 >
   <div
-    className="sc-hEsumM gCeynp"
+    className="sc-hEsumM dYnnVe"
   >
     <svg
       height="870px"
@@ -2473,106 +2656,199 @@ exports[`Storyshots DisplayWrappers|SignUpInCard/SignUpInCard SignUp 1`] = `
     className="sc-fYxtnH jGQbnG"
   >
     <svg
-      className="sc-uJMKN lpRLM"
-      isSignUp={false}
+      className="sc-uJMKN cUppxz"
+      isSignUp={true}
     >
       SignUpInLogo.svg
     </svg>
     <input
+      className="sc-jbKcbu eoYpUM"
+      onChange={[Function]}
+      placeholder="First Name"
+      value=""
+    />
+    <input
+      className="sc-jbKcbu eoYpUM"
+      onChange={[Function]}
+      placeholder="Last Name"
+      value=""
+    />
+    <input
+      className="sc-jbKcbu eoYpUM"
+      onChange={[Function]}
+      placeholder="Username"
+      value=""
+    />
+    <input
       api={
         Object {
-          "dropDownIsErrored": false,
+          "avatarInputIsErrored": false,
+          "emailInputIsErrored": false,
+          "emailsMatch": null,
           "firstEmailValue": "",
+          "firstNameInputIsErrored": false,
           "firstNameValue": "",
           "firstPasswordValue": "",
-          "isSignUp": false,
+          "isSignUp": true,
+          "lastNameInputIsErrored": false,
           "lastNameValue": "",
           "listOpen": false,
+          "locationInputIsErrored": false,
+          "locationNotFound": [Function],
           "locationValue": "",
           "onClickAv": [Function],
           "onLocationSelected": [Function],
+          "passwordInputIsErrored": false,
+          "passwordsMatch": null,
           "resetAll": [Function],
           "resetDropdown": [Function],
           "secondEmailValue": "",
           "secondPasswordValue": "",
           "selectedAvatar": null,
-          "selectedLocation": "",
+          "selectedLocation": null,
           "submit": [Function],
           "toggleList": [Function],
           "toggleSignUp": [Function],
-          "updateEmailValue": [Function],
+          "updateFirstEmailValue": [Function],
+          "updateFirstNameValue": [Function],
+          "updateFirstPasswordValue": [Function],
+          "updateLastNameValue": [Function],
           "updateLocationValue": [Function],
-          "updateNameValue": [Function],
-          "updatePasswordValue": [Function],
+          "updateSecondEmailValue": [Function],
+          "updateSecondPasswordValue": [Function],
           "updateUsernameValue": [Function],
+          "usernameInputIsErrored": false,
           "usernameValue": "",
         }
       }
       className="sc-jqCOkK bGRwOe"
       onChange={[Function]}
       placeholder="Email"
+      value=""
     />
     <input
       api={
         Object {
-          "dropDownIsErrored": false,
+          "avatarInputIsErrored": false,
+          "emailInputIsErrored": false,
+          "emailsMatch": null,
           "firstEmailValue": "",
+          "firstNameInputIsErrored": false,
           "firstNameValue": "",
           "firstPasswordValue": "",
-          "isSignUp": false,
+          "isSignUp": true,
+          "lastNameInputIsErrored": false,
           "lastNameValue": "",
           "listOpen": false,
+          "locationInputIsErrored": false,
+          "locationNotFound": [Function],
           "locationValue": "",
           "onClickAv": [Function],
           "onLocationSelected": [Function],
+          "passwordInputIsErrored": false,
+          "passwordsMatch": null,
           "resetAll": [Function],
           "resetDropdown": [Function],
           "secondEmailValue": "",
           "secondPasswordValue": "",
           "selectedAvatar": null,
-          "selectedLocation": "",
+          "selectedLocation": null,
           "submit": [Function],
           "toggleList": [Function],
           "toggleSignUp": [Function],
-          "updateEmailValue": [Function],
+          "updateFirstEmailValue": [Function],
+          "updateFirstNameValue": [Function],
+          "updateFirstPasswordValue": [Function],
+          "updateLastNameValue": [Function],
           "updateLocationValue": [Function],
-          "updateNameValue": [Function],
-          "updatePasswordValue": [Function],
+          "updateSecondEmailValue": [Function],
+          "updateSecondPasswordValue": [Function],
           "updateUsernameValue": [Function],
+          "usernameInputIsErrored": false,
           "usernameValue": "",
         }
       }
       className="sc-jqCOkK bGRwOe"
       onChange={[Function]}
       placeholder="Re-type Email"
+      value=""
     />
+    <div
+      className="sc-frDJqD hVBLgG"
+    >
+      <div
+        className="sc-ksYbfQ iGgkHg"
+        onClick={[Function]}
+      >
+        <input
+          className="sc-ifAKCX sc-kgAjT eoPXHp"
+          onChange={[Function]}
+          placeholder="Location"
+          value=""
+        />
+        <div
+          className="sc-EHOje jKngya"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-caret-down fa-w-10 "
+            color="#131415"
+            data-icon="caret-down"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 320 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
     <input
       api={
         Object {
-          "dropDownIsErrored": false,
+          "avatarInputIsErrored": false,
+          "emailInputIsErrored": false,
+          "emailsMatch": null,
           "firstEmailValue": "",
+          "firstNameInputIsErrored": false,
           "firstNameValue": "",
           "firstPasswordValue": "",
-          "isSignUp": false,
+          "isSignUp": true,
+          "lastNameInputIsErrored": false,
           "lastNameValue": "",
           "listOpen": false,
+          "locationInputIsErrored": false,
+          "locationNotFound": [Function],
           "locationValue": "",
           "onClickAv": [Function],
           "onLocationSelected": [Function],
+          "passwordInputIsErrored": false,
+          "passwordsMatch": null,
           "resetAll": [Function],
           "resetDropdown": [Function],
           "secondEmailValue": "",
           "secondPasswordValue": "",
           "selectedAvatar": null,
-          "selectedLocation": "",
+          "selectedLocation": null,
           "submit": [Function],
           "toggleList": [Function],
           "toggleSignUp": [Function],
-          "updateEmailValue": [Function],
+          "updateFirstEmailValue": [Function],
+          "updateFirstNameValue": [Function],
+          "updateFirstPasswordValue": [Function],
+          "updateLastNameValue": [Function],
           "updateLocationValue": [Function],
-          "updateNameValue": [Function],
-          "updatePasswordValue": [Function],
+          "updateSecondEmailValue": [Function],
+          "updateSecondPasswordValue": [Function],
           "updateUsernameValue": [Function],
+          "usernameInputIsErrored": false,
           "usernameValue": "",
         }
       }
@@ -2585,30 +2861,42 @@ exports[`Storyshots DisplayWrappers|SignUpInCard/SignUpInCard SignUp 1`] = `
     <input
       api={
         Object {
-          "dropDownIsErrored": false,
+          "avatarInputIsErrored": false,
+          "emailInputIsErrored": false,
+          "emailsMatch": null,
           "firstEmailValue": "",
+          "firstNameInputIsErrored": false,
           "firstNameValue": "",
           "firstPasswordValue": "",
-          "isSignUp": false,
+          "isSignUp": true,
+          "lastNameInputIsErrored": false,
           "lastNameValue": "",
           "listOpen": false,
+          "locationInputIsErrored": false,
+          "locationNotFound": [Function],
           "locationValue": "",
           "onClickAv": [Function],
           "onLocationSelected": [Function],
+          "passwordInputIsErrored": false,
+          "passwordsMatch": null,
           "resetAll": [Function],
           "resetDropdown": [Function],
           "secondEmailValue": "",
           "secondPasswordValue": "",
           "selectedAvatar": null,
-          "selectedLocation": "",
+          "selectedLocation": null,
           "submit": [Function],
           "toggleList": [Function],
           "toggleSignUp": [Function],
-          "updateEmailValue": [Function],
+          "updateFirstEmailValue": [Function],
+          "updateFirstNameValue": [Function],
+          "updateFirstPasswordValue": [Function],
+          "updateLastNameValue": [Function],
           "updateLocationValue": [Function],
-          "updateNameValue": [Function],
-          "updatePasswordValue": [Function],
+          "updateSecondEmailValue": [Function],
+          "updateSecondPasswordValue": [Function],
           "updateUsernameValue": [Function],
+          "usernameInputIsErrored": false,
           "usernameValue": "",
         }
       }
@@ -2616,22 +2904,100 @@ exports[`Storyshots DisplayWrappers|SignUpInCard/SignUpInCard SignUp 1`] = `
       onChange={[Function]}
       placeholder="Re-type Password"
       type="password"
+      value=""
     />
+    <div
+      className="sc-gZMcBi sc-gGBfsJ fKxMoT"
+    >
+      Select an Avatar
+    </div>
+    <div
+      className="sc-TOsTZ gxHYhM"
+    >
+      <div
+        className="sc-cHGsZl hHwTak"
+      >
+        <img
+          alt="profile"
+          className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+          onClick={[Function]}
+          src="Person.png"
+        />
+      </div>
+      <div
+        className="sc-cHGsZl hHwTak"
+      >
+        <img
+          alt="profile"
+          className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+          onClick={[Function]}
+          src="Person.png"
+        />
+        <img
+          alt="profile"
+          className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+          onClick={[Function]}
+          src="Person.png"
+        />
+      </div>
+    </div>
     <button
-      className="sc-chPdSV sc-jnlKLf feymRt"
+      className="sc-chPdSV sc-jnlKLf gmVzdM"
       onClick={[Function]}
     >
-      LOG IN
+      SIGN UP
     </button>
     <div
       className="sc-hqyNC gxsARw"
     >
-      New to Voz de Puerto Rico?
+      Already got a voice on Voz de Puerto Rico?
       <button
-        className="sc-kvZOFW rMVaZ"
+        className="sc-kvZOFW fZPaul"
         onClick={[Function]}
       >
-        SIGN UP
+        LOG IN
       </button>
     </div>
   </div>
@@ -2643,106 +3009,199 @@ exports[`Storyshots DisplayWrappers|SignUpInCard/SignUpInCardBody/SignUpInCardBo
   className="sc-fYxtnH jGQbnG"
 >
   <svg
-    className="sc-uJMKN lpRLM"
-    isSignUp={false}
+    className="sc-uJMKN cUppxz"
+    isSignUp={true}
   >
     SignUpInLogo.svg
   </svg>
   <input
+    className="sc-jbKcbu eoYpUM"
+    onChange={[Function]}
+    placeholder="First Name"
+    value=""
+  />
+  <input
+    className="sc-jbKcbu eoYpUM"
+    onChange={[Function]}
+    placeholder="Last Name"
+    value=""
+  />
+  <input
+    className="sc-jbKcbu eoYpUM"
+    onChange={[Function]}
+    placeholder="Username"
+    value=""
+  />
+  <input
     api={
       Object {
-        "dropDownIsErrored": false,
+        "avatarInputIsErrored": false,
+        "emailInputIsErrored": false,
+        "emailsMatch": null,
         "firstEmailValue": "",
+        "firstNameInputIsErrored": false,
         "firstNameValue": "",
         "firstPasswordValue": "",
-        "isSignUp": false,
+        "isSignUp": true,
+        "lastNameInputIsErrored": false,
         "lastNameValue": "",
         "listOpen": false,
+        "locationInputIsErrored": false,
+        "locationNotFound": [Function],
         "locationValue": "",
         "onClickAv": [Function],
         "onLocationSelected": [Function],
+        "passwordInputIsErrored": false,
+        "passwordsMatch": null,
         "resetAll": [Function],
         "resetDropdown": [Function],
         "secondEmailValue": "",
         "secondPasswordValue": "",
         "selectedAvatar": null,
-        "selectedLocation": "",
+        "selectedLocation": null,
         "submit": [Function],
         "toggleList": [Function],
         "toggleSignUp": [Function],
-        "updateEmailValue": [Function],
+        "updateFirstEmailValue": [Function],
+        "updateFirstNameValue": [Function],
+        "updateFirstPasswordValue": [Function],
+        "updateLastNameValue": [Function],
         "updateLocationValue": [Function],
-        "updateNameValue": [Function],
-        "updatePasswordValue": [Function],
+        "updateSecondEmailValue": [Function],
+        "updateSecondPasswordValue": [Function],
         "updateUsernameValue": [Function],
+        "usernameInputIsErrored": false,
         "usernameValue": "",
       }
     }
     className="sc-jqCOkK bGRwOe"
     onChange={[Function]}
     placeholder="Email"
+    value=""
   />
   <input
     api={
       Object {
-        "dropDownIsErrored": false,
+        "avatarInputIsErrored": false,
+        "emailInputIsErrored": false,
+        "emailsMatch": null,
         "firstEmailValue": "",
+        "firstNameInputIsErrored": false,
         "firstNameValue": "",
         "firstPasswordValue": "",
-        "isSignUp": false,
+        "isSignUp": true,
+        "lastNameInputIsErrored": false,
         "lastNameValue": "",
         "listOpen": false,
+        "locationInputIsErrored": false,
+        "locationNotFound": [Function],
         "locationValue": "",
         "onClickAv": [Function],
         "onLocationSelected": [Function],
+        "passwordInputIsErrored": false,
+        "passwordsMatch": null,
         "resetAll": [Function],
         "resetDropdown": [Function],
         "secondEmailValue": "",
         "secondPasswordValue": "",
         "selectedAvatar": null,
-        "selectedLocation": "",
+        "selectedLocation": null,
         "submit": [Function],
         "toggleList": [Function],
         "toggleSignUp": [Function],
-        "updateEmailValue": [Function],
+        "updateFirstEmailValue": [Function],
+        "updateFirstNameValue": [Function],
+        "updateFirstPasswordValue": [Function],
+        "updateLastNameValue": [Function],
         "updateLocationValue": [Function],
-        "updateNameValue": [Function],
-        "updatePasswordValue": [Function],
+        "updateSecondEmailValue": [Function],
+        "updateSecondPasswordValue": [Function],
         "updateUsernameValue": [Function],
+        "usernameInputIsErrored": false,
         "usernameValue": "",
       }
     }
     className="sc-jqCOkK bGRwOe"
     onChange={[Function]}
     placeholder="Re-type Email"
+    value=""
   />
+  <div
+    className="sc-frDJqD hVBLgG"
+  >
+    <div
+      className="sc-ksYbfQ iGgkHg"
+      onClick={[Function]}
+    >
+      <input
+        className="sc-ifAKCX sc-kgAjT eoPXHp"
+        onChange={[Function]}
+        placeholder="Location"
+        value=""
+      />
+      <div
+        className="sc-EHOje jKngya"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-caret-down fa-w-10 "
+          color="#131415"
+          data-icon="caret-down"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 320 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
   <input
     api={
       Object {
-        "dropDownIsErrored": false,
+        "avatarInputIsErrored": false,
+        "emailInputIsErrored": false,
+        "emailsMatch": null,
         "firstEmailValue": "",
+        "firstNameInputIsErrored": false,
         "firstNameValue": "",
         "firstPasswordValue": "",
-        "isSignUp": false,
+        "isSignUp": true,
+        "lastNameInputIsErrored": false,
         "lastNameValue": "",
         "listOpen": false,
+        "locationInputIsErrored": false,
+        "locationNotFound": [Function],
         "locationValue": "",
         "onClickAv": [Function],
         "onLocationSelected": [Function],
+        "passwordInputIsErrored": false,
+        "passwordsMatch": null,
         "resetAll": [Function],
         "resetDropdown": [Function],
         "secondEmailValue": "",
         "secondPasswordValue": "",
         "selectedAvatar": null,
-        "selectedLocation": "",
+        "selectedLocation": null,
         "submit": [Function],
         "toggleList": [Function],
         "toggleSignUp": [Function],
-        "updateEmailValue": [Function],
+        "updateFirstEmailValue": [Function],
+        "updateFirstNameValue": [Function],
+        "updateFirstPasswordValue": [Function],
+        "updateLastNameValue": [Function],
         "updateLocationValue": [Function],
-        "updateNameValue": [Function],
-        "updatePasswordValue": [Function],
+        "updateSecondEmailValue": [Function],
+        "updateSecondPasswordValue": [Function],
         "updateUsernameValue": [Function],
+        "usernameInputIsErrored": false,
         "usernameValue": "",
       }
     }
@@ -2755,30 +3214,42 @@ exports[`Storyshots DisplayWrappers|SignUpInCard/SignUpInCardBody/SignUpInCardBo
   <input
     api={
       Object {
-        "dropDownIsErrored": false,
+        "avatarInputIsErrored": false,
+        "emailInputIsErrored": false,
+        "emailsMatch": null,
         "firstEmailValue": "",
+        "firstNameInputIsErrored": false,
         "firstNameValue": "",
         "firstPasswordValue": "",
-        "isSignUp": false,
+        "isSignUp": true,
+        "lastNameInputIsErrored": false,
         "lastNameValue": "",
         "listOpen": false,
+        "locationInputIsErrored": false,
+        "locationNotFound": [Function],
         "locationValue": "",
         "onClickAv": [Function],
         "onLocationSelected": [Function],
+        "passwordInputIsErrored": false,
+        "passwordsMatch": null,
         "resetAll": [Function],
         "resetDropdown": [Function],
         "secondEmailValue": "",
         "secondPasswordValue": "",
         "selectedAvatar": null,
-        "selectedLocation": "",
+        "selectedLocation": null,
         "submit": [Function],
         "toggleList": [Function],
         "toggleSignUp": [Function],
-        "updateEmailValue": [Function],
+        "updateFirstEmailValue": [Function],
+        "updateFirstNameValue": [Function],
+        "updateFirstPasswordValue": [Function],
+        "updateLastNameValue": [Function],
         "updateLocationValue": [Function],
-        "updateNameValue": [Function],
-        "updatePasswordValue": [Function],
+        "updateSecondEmailValue": [Function],
+        "updateSecondPasswordValue": [Function],
         "updateUsernameValue": [Function],
+        "usernameInputIsErrored": false,
         "usernameValue": "",
       }
     }
@@ -2786,22 +3257,100 @@ exports[`Storyshots DisplayWrappers|SignUpInCard/SignUpInCardBody/SignUpInCardBo
     onChange={[Function]}
     placeholder="Re-type Password"
     type="password"
+    value=""
   />
+  <div
+    className="sc-gZMcBi sc-gGBfsJ fKxMoT"
+  >
+    Select an Avatar
+  </div>
+  <div
+    className="sc-TOsTZ gxHYhM"
+  >
+    <div
+      className="sc-cHGsZl hHwTak"
+    >
+      <img
+        alt="profile"
+        className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+        onClick={[Function]}
+        src="Person.png"
+      />
+      <img
+        alt="profile"
+        className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+        onClick={[Function]}
+        src="Person.png"
+      />
+      <img
+        alt="profile"
+        className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+        onClick={[Function]}
+        src="Person.png"
+      />
+      <img
+        alt="profile"
+        className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+        onClick={[Function]}
+        src="Person.png"
+      />
+      <img
+        alt="profile"
+        className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+        onClick={[Function]}
+        src="Person.png"
+      />
+    </div>
+    <div
+      className="sc-cHGsZl hHwTak"
+    >
+      <img
+        alt="profile"
+        className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+        onClick={[Function]}
+        src="Person.png"
+      />
+      <img
+        alt="profile"
+        className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+        onClick={[Function]}
+        src="Person.png"
+      />
+      <img
+        alt="profile"
+        className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+        onClick={[Function]}
+        src="Person.png"
+      />
+      <img
+        alt="profile"
+        className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+        onClick={[Function]}
+        src="Person.png"
+      />
+      <img
+        alt="profile"
+        className="sc-gqjmRU sc-kjoXOD gtLBPQ"
+        onClick={[Function]}
+        src="Person.png"
+      />
+    </div>
+  </div>
   <button
-    className="sc-chPdSV sc-jnlKLf feymRt"
+    className="sc-chPdSV sc-jnlKLf gmVzdM"
     onClick={[Function]}
   >
-    LOG IN
+    SIGN UP
   </button>
   <div
     className="sc-hqyNC gxsARw"
   >
-    New to Voz de Puerto Rico?
+    Already got a voice on Voz de Puerto Rico?
     <button
-      className="sc-kvZOFW rMVaZ"
+      className="sc-kvZOFW fZPaul"
       onClick={[Function]}
     >
-      SIGN UP
+      LOG IN
     </button>
   </div>
 </div>
@@ -15482,17 +16031,17 @@ exports[`Storyshots Primitive|Buttons/SidePanelActionButton Post 1`] = `
 
 exports[`Storyshots Primitive|Buttons/SignUpInCard/SwitchStateButton Sign In Card 1`] = `
 <button
-  className="sc-kvZOFW rMVaZ"
+  className="sc-kvZOFW fZPaul"
 >
-  SIGN UP
+  LOG IN
 </button>
 `;
 
 exports[`Storyshots Primitive|Buttons/SignUpInCard/SwitchStateButton Sign Up Card 1`] = `
 <button
-  className="sc-kvZOFW rMVaZ"
+  className="sc-kvZOFW fZPaul"
 >
-  SIGN UP
+  LOG IN
 </button>
 `;
 
@@ -16039,30 +16588,42 @@ exports[`Storyshots Primitive|text/PasswordField Standard 1`] = `
 <input
   api={
     Object {
-      "dropDownIsErrored": false,
+      "avatarInputIsErrored": false,
+      "emailInputIsErrored": false,
+      "emailsMatch": null,
       "firstEmailValue": "",
+      "firstNameInputIsErrored": false,
       "firstNameValue": "",
       "firstPasswordValue": "",
-      "isSignUp": false,
+      "isSignUp": true,
+      "lastNameInputIsErrored": false,
       "lastNameValue": "",
       "listOpen": false,
+      "locationInputIsErrored": false,
+      "locationNotFound": [Function],
       "locationValue": "",
       "onClickAv": [Function],
       "onLocationSelected": [Function],
+      "passwordInputIsErrored": false,
+      "passwordsMatch": null,
       "resetAll": [Function],
       "resetDropdown": [Function],
       "secondEmailValue": "",
       "secondPasswordValue": "",
       "selectedAvatar": null,
-      "selectedLocation": "",
+      "selectedLocation": null,
       "submit": [Function],
       "toggleList": [Function],
       "toggleSignUp": [Function],
-      "updateEmailValue": [Function],
+      "updateFirstEmailValue": [Function],
+      "updateFirstNameValue": [Function],
+      "updateFirstPasswordValue": [Function],
+      "updateLastNameValue": [Function],
       "updateLocationValue": [Function],
-      "updateNameValue": [Function],
-      "updatePasswordValue": [Function],
+      "updateSecondEmailValue": [Function],
+      "updateSecondPasswordValue": [Function],
       "updateUsernameValue": [Function],
+      "usernameInputIsErrored": false,
       "usernameValue": "",
     }
   }

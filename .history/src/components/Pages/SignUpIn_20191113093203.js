@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { withRouter } from "react-router-dom";
 
@@ -11,28 +11,30 @@ const SignUpInPageWrapper = withRouter(({ staticContext, ...props }) => {
   const showSignUp = props.location.state.clickedSignUp;
   // window.log(`Clicked navbar su/li buttons, isSignup?: ${isSignup}`);
 
-  const api = useApi(SignUpInApi, {
-    firstNameValue: "",
-    lastNameValue: "",
-    usernameValue: "",
-    firstEmailValue: "",
-    secondEmailValue: "",
-    locationValue: "",
-    firstPasswordValue: "",
-    secondPasswordValue: "",
-    selectedLocation: null,
-    emailsMatch: null,
-    passwordsMatch: null,
-    listOpen: false,
-    selectedAvatar: null,
-    isSignUp: showSignUp,
-    firstNameInputIsErrored: false,
-    lastNameInputIsErrored: false,
-    usernameInputIsErrored: false,
-    emailInputIsErrored: false,
-    locationInputIsErrored: false,
-    passwordInputIsErrored: false,
-    avatarInputIsErrored: false
+  useEffect(() => {
+    const api = useApi(SignUpInApi, {
+      firstNameValue: "",
+      lastNameValue: "",
+      usernameValue: "",
+      firstEmailValue: "",
+      secondEmailValue: "",
+      locationValue: "",
+      firstPasswordValue: "",
+      secondPasswordValue: "",
+      selectedLocation: null,
+      emailsMatch: null,
+      passwordsMatch: null,
+      listOpen: false,
+      selectedAvatar: null,
+      isSignUp: showSignUp,
+      firstNameInputIsErrored: false,
+      lastNameInputIsErrored: false,
+      usernameInputIsErrored: false,
+      emailInputIsErrored: false,
+      locationInputIsErrored: false,
+      passwordInputIsErrored: false,
+      avatarInputIsErrored: false
+    });
   });
 
   return (

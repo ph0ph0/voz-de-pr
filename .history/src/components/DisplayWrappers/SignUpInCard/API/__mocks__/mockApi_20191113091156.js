@@ -22,7 +22,7 @@ export const mockApi = {
   avatarInputIsErrored: false,
   toggleList: () => {},
   updateFirstNameValue: () => {},
-  updateLastNameValue: () => {},
+  updateSecondNameValue: () => {},
   updateUsernameValue: () => {},
   updateFirstEmailValue: () => {},
   updateSecondEmailValue: () => {},
@@ -34,6 +34,5 @@ export const mockApi = {
   toggleSignUp: () => {},
   resetDropdown: () => {},
   resetAll: () => {},
-  locationNotFound: () => {},
   submit: () => {}
 };

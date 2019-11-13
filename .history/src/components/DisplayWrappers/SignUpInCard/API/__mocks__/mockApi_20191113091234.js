@@ -34,6 +34,5 @@ export const mockApi = {
   toggleSignUp: () => {},
   resetDropdown: () => {},
   resetAll: () => {},
-  locationNotFound: () => {},
   submit: () => {}
 };
