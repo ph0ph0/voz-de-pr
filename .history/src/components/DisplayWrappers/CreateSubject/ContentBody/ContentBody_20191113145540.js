@@ -10,23 +10,9 @@ const ErrorText = styled(Error)`
   margin-right: auto;
 `;
 
-const Counter = styled.div`
-  font-size: 16px;
-  margin-left: auto;
-`;
-
 const ContentBodyWrapper = ({ secondary, api, ...props }) => {
   return (
     <div {...props}>
-      <Counter>
-        {60 - api.subjectTitle.length} char
-        {60 - api.subjectTitle.length > 1
-          ? "s"
-          : 60 - api.subjectTitle.length < 1
-          ? "s"
-          : ""}{" "}
-        left
-      </Counter>
       {api.titleIsErrored && <ErrorText>Please choose a title</ErrorText>}
       <SubjectTitle
         placeholder={"Title"}

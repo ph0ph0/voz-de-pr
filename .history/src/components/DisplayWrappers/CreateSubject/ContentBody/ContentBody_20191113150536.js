@@ -18,15 +18,7 @@ const Counter = styled.div`
 const ContentBodyWrapper = ({ secondary, api, ...props }) => {
   return (
     <div {...props}>
-      <Counter>
-        {60 - api.subjectTitle.length} char
-        {60 - api.subjectTitle.length > 1
-          ? "s"
-          : 60 - api.subjectTitle.length < 1
-          ? "s"
-          : ""}{" "}
-        left
-      </Counter>
+      <Counter>{60 - api.subjectTitle.length} chars left</Counter>
       {api.titleIsErrored && <ErrorText>Please choose a title</ErrorText>}
       <SubjectTitle
         placeholder={"Title"}

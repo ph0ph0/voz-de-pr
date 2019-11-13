@@ -1,4 +1,3 @@
-import { inputsAreEmpty } from "./utils/InputsAreEmpty";
 const CreateSubjectFormAPI = ({ state, setState }) => {
   const currentPanel = state.currentPanel;
   const subjectTitle = state.subjectTitle;
@@ -102,7 +101,25 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
       `On submit, subjectTitle: ${subjectTitle}, subjectContent ${subjectContent}`
     );
 
-    if (inputsAreEmpty(setState, subjectTitle, subjectContent)) {
+    if (titleIsEmpty()) {
+      setState(prevState => {
+        return {
+          ...prevState,
+          currentPanel: "content",
+          titleIsErrored: true
+        };
+      });
+      return;
+    }
+
+    if (contentIsEmpty()) {
+      setState(prevState => {
+        return {
+          ...prevState,
+          currentPanel: "content",
+          contentIsErrored: true
+        };
+      });
       return;
     }
 

@@ -4,32 +4,14 @@ import styled from "styled-components";
 import SubjectTitle from "../../../Primitive/CreateSubject/ContentBody/SubjectTitle";
 import SubjectContent from "../../../Primitive/CreateSubject/ContentBody/SubjectContent";
 import ActionButton from "../../../Primitive/General/ActionButton";
-import Error from "../../../Primitive/General/ErrorText";
-
-const ErrorText = styled(Error)`
-  margin-right: auto;
-`;
-
-const Counter = styled.div`
-  font-size: 16px;
-  margin-left: auto;
-`;
+import ErrorText from "../../../Primitive/General/ErrorText";
 
 const ContentBodyWrapper = ({ secondary, api, ...props }) => {
   return (
     <div {...props}>
-      <Counter>
-        {60 - api.subjectTitle.length} char
-        {60 - api.subjectTitle.length > 1
-          ? "s"
-          : 60 - api.subjectTitle.length < 1
-          ? "s"
-          : ""}{" "}
-        left
-      </Counter>
       {api.titleIsErrored && <ErrorText>Please choose a title</ErrorText>}
       <SubjectTitle
-        placeholder={"Title"}
+        placeholder={"Title: Max 60 chars"}
         value={api.subjectTitle}
         onChange={event => api.updateSubjectTitle(event.target.value)}
       />

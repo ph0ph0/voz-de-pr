@@ -20,9 +20,9 @@ const ContentBodyWrapper = ({ secondary, api, ...props }) => {
     <div {...props}>
       <Counter>
         {60 - api.subjectTitle.length} char
-        {60 - api.subjectTitle.length > 1
+        {api.subjectTitle.length > 1
           ? "s"
-          : 60 - api.subjectTitle.length < 1
+          : api.subjectTitle.length < 1
           ? "s"
           : ""}{" "}
         left

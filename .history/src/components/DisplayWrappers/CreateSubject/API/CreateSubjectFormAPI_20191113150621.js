@@ -21,7 +21,7 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
   const updateSubjectTitle = newValue => {
     //We dont want the title being too long!
     window.log(`titleLength: ${newValue.length}`);
-    if (newValue.length > 60) return;
+    if (newValue.length > 59) return;
     setState(prevState => {
       return {
         ...prevState,

@@ -74,7 +74,7 @@ describe("input updaters", () => {
   });
 });
 
-describe("Submission checks", () => {
+describe("Fields are not empty on submit", () => {
   it("checks title is not empty when submitting", () => {
     mockApi.api.updateSubjectTitle("");
     mockApi.api.updateSubjectContent("TEST");
