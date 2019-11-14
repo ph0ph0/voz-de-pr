@@ -7,12 +7,15 @@ import NameTimeAgo from "../../../Primitive/SubjectCard/NameTimeAgo";
 import DeleteButton from "../../../Primitive/SubjectCard/DeleteSubjectButton";
 
 const Wrapper = ({ author, isOwner, timePassed, ...props }) => {
+  const deleteSubject = () => {
+    window.log(`Clicked Delete`);
+  };
   return (
     <div {...props}>
       <ProfPicSubjectCard />
       <NameTimeAgo isTimeAgo={false}>{author}</NameTimeAgo>
       <NameTimeAgo isTimeAgo={true}>{timePassed}</NameTimeAgo>
-      {isOwner && <DeleteButton />}
+      {isOwner && <DeleteButton onClick={deleteSubject} />}
     </div>
   );
 };
