@@ -71,6 +71,16 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
     window.log(`linkContent: ${newValue}`);
   };
 
+  const titleIsEmpty = () => {
+    window.log(`title in bool: ${subjectTitle}`);
+    return subjectTitle === "" ? true : false;
+  };
+
+  const contentIsEmpty = () => {
+    window.log(`content in bool: ${subjectContent}`);
+    return subjectContent === "" ? true : false;
+  };
+
   const resetAll = () => {
     setState(prevState => {
       return {

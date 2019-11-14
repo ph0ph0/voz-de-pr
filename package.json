@@ -46,6 +46,8 @@
     "@storybook/addons": "^5.2.3",
     "@storybook/react": "^5.2.3",
     "@testing-library/react": "^9.3.2",
+    "eslint": "^6.6.0",
+    "eslint-plugin-react": "^7.16.0",
     "prettier": "1.19.1",
     "react-test-renderer": "^16.10.2",
     "require-context.macro": "^1.2.2",
