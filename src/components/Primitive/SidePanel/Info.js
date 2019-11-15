@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Info = styled.div`
     width: 238px;
@@ -18,6 +18,6 @@ const Info = styled.div`
     /*This is needed to make the text look similar to Sketch*/
     line-height: 1.4;
     letter-spacing: 0.3px;
-`
+`;
 
-export default Info
+export default Info;

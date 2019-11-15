@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 const useAPI = (api, initialState) => {
-    const [state, setState] = useState(initialState)
-    return api({ state, setState })
-}
+  const [state, setState] = useState(initialState);
+  return api({ state, setState });
+};
 
-export default useAPI
+export default useAPI;
 

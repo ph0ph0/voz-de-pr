@@ -1,7 +1,7 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
+import React from "react";
+import { storiesOf } from "@storybook/react";
 
-import DeleteButton from '../DeleteSubjectButton'
+import DeleteButton from "../DeleteSubjectButton";
 
 storiesOf("Primitive|Buttons/DeleteSubjectButton", module)
-    .add("DeleteButton", () => <DeleteButton />)
+  .add("DeleteButton", () => <DeleteButton />);

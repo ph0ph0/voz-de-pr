@@ -1,13 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const ErrorTextWrapper = ({children, ...props}) => {
-    return (
-        <div {...props}>
-            {children}
-        </div>
-    )
-}
+  return (
+    <div {...props}>
+      {children}
+    </div>
+  );
+};
 
 const ErrorText = styled(ErrorTextWrapper)`
     color: red;
@@ -15,6 +15,6 @@ const ErrorText = styled(ErrorTextWrapper)`
 
     padding: 0px;
     margin: 0px;
-`
+`;
 
-export default ErrorText
+export default ErrorText;

@@ -1,9 +1,9 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
+import React from "react";
+import { storiesOf } from "@storybook/react";
 
-import SummaryCommentsIndicator from '../SummaryCommentsIndicator'
+import SummaryCommentsIndicator from "../SummaryCommentsIndicator";
 
-storiesOf('Primitive|text/SubjectDetailCommentsIndicator', module)
-    .add('0Comments', () => <SummaryCommentsIndicator />)
-    .add('1Comment', () => <SummaryCommentsIndicator noOfComments = {1}/>)
-    .add('ManyComments', () => <SummaryCommentsIndicator noOfComments = {30}/>)
+storiesOf("Primitive|text/SubjectDetailCommentsIndicator", module)
+  .add("0Comments", () => <SummaryCommentsIndicator />)
+  .add("1Comment", () => <SummaryCommentsIndicator noOfComments = {1}/>)
+  .add("ManyComments", () => <SummaryCommentsIndicator noOfComments = {30}/>);

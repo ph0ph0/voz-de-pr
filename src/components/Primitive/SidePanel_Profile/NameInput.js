@@ -1,17 +1,17 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const NameInputWrapper = ({ api, ...props }) => {
-    return (
-      <input
-        placeholder="Name"
-        value={api.name}
-        onChange={(event) => api.updateNameValue(event.target.value)}
-        {...props}
-      />
-    );
-  };
+  return (
+    <input
+      placeholder="Name"
+      value={api.name}
+      onChange={(event) => api.updateNameValue(event.target.value)}
+      {...props}
+    />
+  );
+};
   
 const NameInput = styled(NameInputWrapper)`
     border-radius: 5px;
@@ -33,18 +33,18 @@ const NameInput = styled(NameInputWrapper)`
 `;
 
 NameInput.propTypes = {
-    api: PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      locationValue: PropTypes.string.isRequired,
-      listOpen: PropTypes.bool.isRequired,
-      selectedLocation: PropTypes.string.isRequired,
-      selectedAvatar: PropTypes.string,
-      updateNameValue: PropTypes.func.isRequired,
-      toggleList: PropTypes.func.isRequired,
-      updateLocationValue: PropTypes.func.isRequired,
-      onLocationSelected: PropTypes.func.isRequired,
-      resetDropdown: PropTypes.func.isRequired
-    })
-}
+  api: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    locationValue: PropTypes.string.isRequired,
+    listOpen: PropTypes.bool.isRequired,
+    selectedLocation: PropTypes.string.isRequired,
+    selectedAvatar: PropTypes.string,
+    updateNameValue: PropTypes.func.isRequired,
+    toggleList: PropTypes.func.isRequired,
+    updateLocationValue: PropTypes.func.isRequired,
+    onLocationSelected: PropTypes.func.isRequired,
+    resetDropdown: PropTypes.func.isRequired
+  })
+};
 
-  export default NameInput
+export default NameInput;

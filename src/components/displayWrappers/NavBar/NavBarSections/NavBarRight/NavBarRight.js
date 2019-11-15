@@ -1,17 +1,17 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import SignUpInButtonWrapper from './SignUpInButtonWrapper'
-import ProfileWrapper from './ProfileWrapper'
+import SignUpInButtonWrapper from "./SignUpInButtonWrapper";
+import ProfileWrapper from "./ProfileWrapper";
 
 const Wrapper = (props) => {
-    return (
-        <div {...props}>
-            <SignUpInButtonWrapper />
-            <ProfileWrapper />
-        </div>
-    )
-}
+  return (
+    <div {...props}>
+      <SignUpInButtonWrapper />
+      <ProfileWrapper />
+    </div>
+  );
+};
 
 const NavBarRight = styled(Wrapper)`
     /* background-color: orange; */
@@ -24,6 +24,6 @@ const NavBarRight = styled(Wrapper)`
     display: flex;
     justify-content: center;
     align-items: center;
-`
+`;
 
-export default NavBarRight
+export default NavBarRight;

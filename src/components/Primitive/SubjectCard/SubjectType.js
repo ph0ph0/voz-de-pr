@@ -1,16 +1,16 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const type = ({secondary, ...props}) => {
 
-    const type = secondary ? "Post" : "Cause"
+  const type = secondary ? "Post" : "Cause";
 
-    return (
-        <div {...props}>
-            {type}
-        </div>
-    )
-}
+  return (
+    <div {...props}>
+      {type}
+    </div>
+  );
+};
 
 const SubjectType = styled(type)`
     /* border: 1px solid magenta; */
@@ -21,6 +21,6 @@ const SubjectType = styled(type)`
 
     font-size: 16px;
     text-align: right;
-`
+`;
 
-export default SubjectType
+export default SubjectType;

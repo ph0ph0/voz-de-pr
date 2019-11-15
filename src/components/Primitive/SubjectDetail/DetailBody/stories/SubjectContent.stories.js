@@ -1,7 +1,7 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
+import React from "react";
+import { storiesOf } from "@storybook/react";
 
-import SubjectContent from '../SubjectContent'
+import SubjectContent from "../SubjectContent";
 
 const text = `
 In its mission to protect functional ecosystems in the islands of Puerto Rico and to secure the essential services they provide, the Conservation Trust of Puerto Rico has focused its land acquisition and ecosystem management strategies on a regional approach, based on Puerto Rico’s main watersheds. As such, 5 distinct Regions have been established and labeled according to their cardinal direction. The Conservation Trust’s natural protected areas are managed and supervised according to this regional network. 
@@ -13,5 +13,5 @@ With your donation, you support Para la Naturaleza's efforts towards environment
 For your convenience, you can also make your donation by calling (787) 722-5834 or sending a check to Para la Naturaleza, PO Box 9023554, San Juan, PR 00902-3554.
 `;
 
-storiesOf('Primitive|text/SubjectDetailSubjectContent', module)
-    .add('Standard', () => <SubjectContent>{text}</SubjectContent>)
+storiesOf("Primitive|text/SubjectDetailSubjectContent", module)
+  .add("Standard", () => <SubjectContent>{text}</SubjectContent>);

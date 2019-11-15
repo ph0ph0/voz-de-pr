@@ -1,13 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const VotesOnSubjectWrapper = ({ votesOnSubject, secondary, ...props}) => {
-    return (
-        <p {...props}>
-           {votesOnSubject} {(votesOnSubject > 1) ? "VOTES" : (votesOnSubject === 1) ? "VOTE" : "0 VOTES"}
-        </p>
-    )
-}
+  return (
+    <p {...props}>
+      {votesOnSubject} {(votesOnSubject > 1) ? "VOTES" : (votesOnSubject === 1) ? "VOTE" : "0 VOTES"}
+    </p>
+  );
+};
 
 const VotesOnSubject = styled(VotesOnSubjectWrapper)`
     font-size: 20px;
@@ -20,6 +20,6 @@ const VotesOnSubject = styled(VotesOnSubjectWrapper)`
     vertical-align: center;
 
     margin-left: auto;
-`
+`;
 
-export default VotesOnSubject
+export default VotesOnSubject;

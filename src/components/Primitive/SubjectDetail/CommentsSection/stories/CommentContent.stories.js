@@ -1,7 +1,7 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
+import React from "react";
+import { storiesOf } from "@storybook/react";
 
-import CommentContent from '../CommentContent'
+import CommentContent from "../CommentContent";
 
-storiesOf('Primitive|text/CommentContent', module)
-    .add('Standard', () => <CommentContent commentContent = {"Jabba flabba"} />)
+storiesOf("Primitive|text/CommentContent", module)
+  .add("Standard", () => <CommentContent commentContent = {"Jabba flabba"} />);

@@ -1,16 +1,16 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import { ReactComponent as Bubble} from '../../../../assets/SubjectCard/Bubble.svg'
+import { ReactComponent as Bubble} from "../../../../assets/SubjectCard/Bubble.svg";
 
 
 const Wrapper = (props) => {
-    return (
-        <div {...props}>
-            <Bubble />
-        </div>
-    )
-}
+  return (
+    <div {...props}>
+      <Bubble />
+    </div>
+  );
+};
 
 const BubbleWrapper = styled(Wrapper)`
     /* border: 1px solid green;
@@ -24,6 +24,6 @@ const BubbleWrapper = styled(Wrapper)`
     display: flex;
     justify-content: flex-start;
     align-items: center;
-`
+`;
 
-export default BubbleWrapper
+export default BubbleWrapper;

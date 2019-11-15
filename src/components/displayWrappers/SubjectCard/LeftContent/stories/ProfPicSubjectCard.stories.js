@@ -1,7 +1,7 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
+import React from "react";
+import { storiesOf } from "@storybook/react";
 
-import ProfPicSubjectCard from '../ProfPicSubjectCard'
+import ProfPicSubjectCard from "../ProfPicSubjectCard";
 
 storiesOf("DisplayWrappers|SubjectCard/ProfPicSubjectCard", module)
-    .add("Standard", () => <ProfPicSubjectCard />)
+  .add("Standard", () => <ProfPicSubjectCard />);

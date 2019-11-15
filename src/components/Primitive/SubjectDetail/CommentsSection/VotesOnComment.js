@@ -1,13 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const CommentNumberOfVotesWrapper = ({ votesOnComment, ...props}) => {
-    return (
-        <p {...props}>
-            {votesOnComment} {(votesOnComment > 1) ? "VOTES" : (votesOnComment === 1) ? "VOTE" : "0 VOTES"}
-        </p>
-    )
-}
+  return (
+    <p {...props}>
+      {votesOnComment} {(votesOnComment > 1) ? "VOTES" : (votesOnComment === 1) ? "VOTE" : "0 VOTES"}
+    </p>
+  );
+};
 
 const CommentNumberOfVotes = styled(CommentNumberOfVotesWrapper)`
     font-weight: bold;
@@ -18,6 +18,6 @@ const CommentNumberOfVotes = styled(CommentNumberOfVotesWrapper)`
     margin: 0px;
     padding: 0px;
     margin-left: 10px;
-`
+`;
 
-export default CommentNumberOfVotes
+export default CommentNumberOfVotes;

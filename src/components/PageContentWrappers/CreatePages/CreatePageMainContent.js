@@ -1,17 +1,17 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import TopOfPage from '../TopOfPage/TopOfPage'
-import CreateSubject from '../../DisplayWrappers/CreateSubject/CreateSubject'
+import TopOfPage from "../TopOfPage/TopOfPage";
+import CreateSubject from "../../DisplayWrappers/CreateSubject/CreateSubject";
 
 const CreatePageMainContentWrapper = ({secondary, ...props}) => {
-    return (
-        <div {...props}>
-            <TopOfPage shouldShowFilters = {false}>{secondary ? "Create a Post" : "Create a Cause"}</TopOfPage>
-            <CreateSubject secondary = {secondary}/>
-        </div>
-    )
-}
+  return (
+    <div {...props}>
+      <TopOfPage shouldShowFilters = {false}>{secondary ? "Create a Post" : "Create a Cause"}</TopOfPage>
+      <CreateSubject secondary = {secondary}/>
+    </div>
+  );
+};
 
 const CreatePageMainContent = styled(CreatePageMainContentWrapper)`
     /* border: 1px solid green; */
@@ -22,6 +22,6 @@ const CreatePageMainContent = styled(CreatePageMainContentWrapper)`
 
     display: flex;
     flex-direction: column;
-`
+`;
 
-export default CreatePageMainContent
+export default CreatePageMainContent;

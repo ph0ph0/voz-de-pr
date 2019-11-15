@@ -1,8 +1,8 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
+import React from "react";
+import { storiesOf } from "@storybook/react";
 
-import DetailHeader from '../DetailHeader'
+import DetailHeader from "../DetailHeader";
 
-storiesOf('DisplayWrappers|SubjectDetail/DetailHeader/DetailHeader', module)
-    .add('Cause', () => <DetailHeader votesOnSubject = {22312}/>)
-    .add('Post', () => <DetailHeader secondary votesOnSubject = {22312}/>)
+storiesOf("DisplayWrappers|SubjectDetail/DetailHeader/DetailHeader", module)
+  .add("Cause", () => <DetailHeader votesOnSubject = {22312}/>)
+  .add("Post", () => <DetailHeader secondary votesOnSubject = {22312}/>);

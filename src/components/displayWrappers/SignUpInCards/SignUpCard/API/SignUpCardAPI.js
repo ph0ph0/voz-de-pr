@@ -214,7 +214,7 @@ const SignUpCardAPI = ({ state, setState }) => {
       location => location.title.toLowerCase() === locationToCheck.toLowerCase()
     );
     if (result.length === 0) {
-      window.log(`No location match`);
+      window.log("No location match");
       return true;
     }
     window.log(`locationCheck: ${result}`);
@@ -226,7 +226,7 @@ const SignUpCardAPI = ({ state, setState }) => {
   };
 
   const submit = () => {
-    window.log(`Hit Submit`);
+    window.log("Hit Submit");
 
     //Will need to branch here, one submit for signup and one login as the validity checks are different.
 
@@ -244,7 +244,7 @@ const SignUpCardAPI = ({ state, setState }) => {
       !emailsMatch ||
       !passwordsMatch
     ) {
-      window.log(`INPUTS WERE EMPTY OR EMAILS/PW DIDNT MATCH`);
+      window.log("INPUTS WERE EMPTY OR EMAILS/PW DIDNT MATCH");
       return;
     }
 

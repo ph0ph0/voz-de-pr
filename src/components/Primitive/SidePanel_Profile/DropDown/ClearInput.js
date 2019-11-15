@@ -1,23 +1,23 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 
 
 const ClearInputWrapper = ({ api, ...props }) => {
  
-    return (
-      <div {...props}>
-        <FontAwesomeIcon
-          icon={faTimesCircle}
-          color="#d8d8d8"
-          onClick={api.resetDropdown}
-        />
-      </div>
-    );
-  };
+  return (
+    <div {...props}>
+      <FontAwesomeIcon
+        icon={faTimesCircle}
+        color="#d8d8d8"
+        onClick={api.resetDropdown}
+      />
+    </div>
+  );
+};
   
-  const ClearInput = styled(ClearInputWrapper)`
+const ClearInput = styled(ClearInputWrapper)`
     /* border: 1px solid orange; */
     width: auto;
     height: 37px;
@@ -29,4 +29,4 @@ const ClearInputWrapper = ({ api, ...props }) => {
     line-height: 2.4em;
   `;
 
-  export default ClearInput
+export default ClearInput;

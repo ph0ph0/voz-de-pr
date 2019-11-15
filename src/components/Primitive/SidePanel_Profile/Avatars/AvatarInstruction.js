@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 //We haven't for a story for this one because of the conditional CSS combinator.
 //SB doesn't know what DropDown is and it throws and error
 
-import DropDown from '../../../DisplayWrappers/SidePanel_Profile/DropDown/DropDown'
+import DropDown from "../../../DisplayWrappers/SidePanel_Profile/DropDown/DropDown";
 
 const AvatarInstruction = styled.div`
   /* border: 1px solid red; */
@@ -21,4 +21,4 @@ const AvatarInstruction = styled.div`
   }
 `;
 
-export default AvatarInstruction
+export default AvatarInstruction;

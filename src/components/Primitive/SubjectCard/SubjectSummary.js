@@ -1,5 +1,5 @@
 
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Summary = styled.p`
     /* border: 1px solid purple; */
@@ -20,6 +20,6 @@ const Summary = styled.p`
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-`
+`;
 
-export default Summary
+export default Summary;

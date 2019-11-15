@@ -1,17 +1,17 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const DescriptionInputWrapper = ({ api, ...props }) => {
-    return (
-        <input {
-            ...props} 
-            placeholder = {"Description"} 
-            value = {api.linkDescription}
-            onChange = {(event) => api.updateLinkDescription(event.target.value)}
-        />
-        )
-    }
+  return (
+    <input {
+    ...props} 
+    placeholder = {"Description"} 
+    value = {api.linkDescription}
+    onChange = {(event) => api.updateLinkDescription(event.target.value)}
+    />
+  );
+};
 
 const LinkDescription = styled(DescriptionInputWrapper)`
     border: 1px solid #d8d8d8;
@@ -30,10 +30,10 @@ const LinkDescription = styled(DescriptionInputWrapper)`
     :focus {
         outline: 0;
     }
-`
+`;
 
 LinkDescription.propTypes = {
-    api: PropTypes.object.isRequired
-}
+  api: PropTypes.object.isRequired
+};
 
-export default LinkDescription
+export default LinkDescription;

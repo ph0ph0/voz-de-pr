@@ -1,6 +1,6 @@
 //This is used to add the same style to every component ie so they all have the same font etc
 
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     html,
@@ -30,6 +30,6 @@ const GlobalStyle = createGlobalStyle`
     code {
         font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
     }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;

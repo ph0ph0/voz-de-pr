@@ -1,12 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
 //Note that this component handles PNGs not SVGs. Hence, all SVGs sent over need to be converted to PNGs
 
 const AvatarWrapper = ({ src, tag, api, ...props }) => {  
-    return <img alt="profile" src={src} {...props} />;
-  };
+  return <img alt="profile" src={src} {...props} />;
+};
   
 const Avatar = styled(AvatarWrapper)`
     width: 73px;
@@ -21,10 +21,10 @@ const Avatar = styled(AvatarWrapper)`
 `;
 
 Avatar.propTypes = {
-    src: PropTypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
-    selectedAvatar: PropTypes.string
-}
+  src: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  selectedAvatar: PropTypes.string
+};
 
-export default Avatar
+export default Avatar;
 

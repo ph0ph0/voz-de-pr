@@ -1,24 +1,24 @@
-import React from 'react'
-import styled from 'styled-components'
-import { withRouter } from 'react-router-dom'
+import React from "react";
+import styled from "styled-components";
+import { withRouter } from "react-router-dom";
 
-import ProfileInfoWrapper from './ProfileInfoWrapper'
-import ProfileImageWrapper from './ProfileImageWrapper'
+import ProfileInfoWrapper from "./ProfileInfoWrapper";
+import ProfileImageWrapper from "./ProfileImageWrapper";
 
 const Wrapper = ({ staticContext, ...props }) => {
-    //staticContext allows props.history.push()
-    function onClick() {
-        console.log(`Clicked Profile Wrapper`)
-        props.history.push("/profile")
-    }
+  //staticContext allows props.history.push()
+  function onClick() {
+    console.log("Clicked Profile Wrapper");
+    props.history.push("/profile");
+  }
 
-    return (
-        <div {...props} onClick = {onClick}>
-            <ProfileImageWrapper />
-            <ProfileInfoWrapper />
-        </div>
-    )
-}
+  return (
+    <div {...props} onClick = {onClick}>
+      <ProfileImageWrapper />
+      <ProfileInfoWrapper />
+    </div>
+  );
+};
 
 const ProfileWrapper = styled(Wrapper)`
     /* background-color: blue; */
@@ -32,6 +32,6 @@ const ProfileWrapper = styled(Wrapper)`
     :hover {
         cursor: pointer;
     }
-`
+`;
 
-export default withRouter(ProfileWrapper)
+export default withRouter(ProfileWrapper);

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Votes = styled.div`
     /* border: 1px solid cyan; */
@@ -8,6 +8,6 @@ const Votes = styled.div`
     font-size: 16px;
     color: ${props => props.secondary ? props.theme.secondaryColour : props.theme.primaryColour};
     text-align: left;
-`
+`;
 
-export default Votes
+export default Votes;

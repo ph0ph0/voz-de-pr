@@ -1,20 +1,20 @@
-import React from 'react'
-import styled from 'styled-components'
-import { NavLink } from 'react-router-dom'
-import { PropTypes } from 'prop-types'
+import React from "react";
+import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+import { PropTypes } from "prop-types";
 
 const Link = (props) => {
-    return (
-        <NavLink 
-            exact to = { props.to }
-            {...props}
-        />
-    )
-}
+  return (
+    <NavLink 
+      exact to = { props.to }
+      {...props}
+    />
+  );
+};
 
 Link.propType = {
-    to: PropTypes.string.isRequired
-}
+  to: PropTypes.string.isRequired
+};
 
 const LinkNavBar = styled(Link)`
     height: 100%;
@@ -38,6 +38,6 @@ const LinkNavBar = styled(Link)`
         color: ${props => props.theme.secondaryColour};
         border-bottom: 1px solid ${props => props.theme.secondaryColour};
     }
-`
+`;
 
-export default LinkNavBar
+export default LinkNavBar;

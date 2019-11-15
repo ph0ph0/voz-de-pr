@@ -1,15 +1,15 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import SearchBar from '../../../../Primitive/NavBar/SearchBar'
+import SearchBar from "../../../../Primitive/NavBar/SearchBar";
 
 const Wrapper = ({placeholder, ...props}) => {
-    return (
-        <div {...props}>
-            <SearchBar placeholder = {placeholder} type = "text"/>
-        </div>
-    )
-}
+  return (
+    <div {...props}>
+      <SearchBar placeholder = {placeholder} type = "text"/>
+    </div>
+  );
+};
 
 const NavBarCentre = styled(Wrapper)`
     /* background-color: red; */
@@ -24,6 +24,6 @@ const NavBarCentre = styled(Wrapper)`
     display: flex;
     justify-content: center;
     align-items: center;
-`
+`;
 
-export default NavBarCentre
+export default NavBarCentre;

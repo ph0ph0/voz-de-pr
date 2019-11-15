@@ -23,8 +23,8 @@ const ContentBodyWrapper = ({ secondary, api, ...props }) => {
         {60 - api.subjectTitle.length > 1
           ? "s"
           : 60 - api.subjectTitle.length < 1
-          ? "s"
-          : ""}{" "}
+            ? "s"
+            : ""}{" "}
         left
       </Counter>
       {api.titleIsErrored && <ErrorText>Please choose a title</ErrorText>}

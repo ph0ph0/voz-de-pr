@@ -1,15 +1,15 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import CreatePageContent from '../PageContentWrappers/CreatePages/CreatePageContent'
+import CreatePageContent from "../PageContentWrappers/CreatePages/CreatePageContent";
 
 const CreatePostWrapper = ({...props}) => {
-    return (
-        <div {...props}>
-            <CreatePageContent secondary/>
-        </div>
-    )
-}
+  return (
+    <div {...props}>
+      <CreatePageContent secondary/>
+    </div>
+  );
+};
 
 const CreatePost = styled(CreatePostWrapper)`
     /* position: static; */
@@ -21,6 +21,6 @@ const CreatePost = styled(CreatePostWrapper)`
 
     /* Needed to make the SidePanel keep its proper height */
     align-items: flex-start;
-`
+`;
 
-export default CreatePost
+export default CreatePost;

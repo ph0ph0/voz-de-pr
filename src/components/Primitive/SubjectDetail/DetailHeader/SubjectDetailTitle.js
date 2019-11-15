@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const SubjectDetailTitle = styled.p`
      /* border: 1px solid brown; */
@@ -8,6 +8,6 @@ const SubjectDetailTitle = styled.p`
 
     margin: 0px;
     padding: 0px;
-`
+`;
 
-export default SubjectDetailTitle
+export default SubjectDetailTitle;

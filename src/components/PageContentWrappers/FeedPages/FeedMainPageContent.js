@@ -1,39 +1,39 @@
 //MainPageContent houses the Title/Filters (TopOfPage) and the SubjectCards in a column flex box.
 
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
-import TopOfPage from '../TopOfPage/TopOfPage'
-import SubjectCards from '../../DisplayWrappers/SubjectCards/SubjectCards'
-import { SubjectsMixed, CauseOnly, PostOnly, Profile } from '../../../Constants/MockSubjectsData'
+import TopOfPage from "../TopOfPage/TopOfPage";
+import SubjectCards from "../../DisplayWrappers/SubjectCards/SubjectCards";
+import { SubjectsMixed, CauseOnly, PostOnly, Profile } from "../../../Constants/MockSubjectsData";
 
 const getSubjectCards = (queryType) => {
-    switch (queryType) {
-        case "CauseOnly":
-            return CauseOnly
-        case "PostOnly":
-            return PostOnly
-        case "Mixed":
-            return SubjectsMixed
-        case "Profile":
-                return Profile
-        default:
-            return SubjectsMixed
-    }
-}
+  switch (queryType) {
+  case "CauseOnly":
+    return CauseOnly;
+  case "PostOnly":
+    return PostOnly;
+  case "Mixed":
+    return SubjectsMixed;
+  case "Profile":
+    return Profile;
+  default:
+    return SubjectsMixed;
+  }
+};
 
 const FeedMainPageContentWrapper = ({pageTitle, profileType, queryType, ...props}) => {
 
-    const subjectCardData = getSubjectCards(queryType)
+  const subjectCardData = getSubjectCards(queryType);
 
-    return (
-        <div {...props}>
-            <TopOfPage profileType = {profileType} shouldShowFilters = {true}>{pageTitle}</TopOfPage>
-            <SubjectCards arrayOfSubjectCardData = {subjectCardData}/>
-        </div>
-    )
-}
+  return (
+    <div {...props}>
+      <TopOfPage profileType = {profileType} shouldShowFilters = {true}>{pageTitle}</TopOfPage>
+      <SubjectCards arrayOfSubjectCardData = {subjectCardData}/>
+    </div>
+  );
+};
 
 const FeedMainPageContent = styled(FeedMainPageContentWrapper)`
     /* border: 1px solid green; */
@@ -44,11 +44,11 @@ const FeedMainPageContent = styled(FeedMainPageContentWrapper)`
 
     display: flex;
     flex-direction: column;
-`
+`;
 
 FeedMainPageContent.propTypes = {
-    pageTitle: PropTypes.string.isRequired,
-    profileType: PropTypes.bool.isRequired
-}
+  pageTitle: PropTypes.string.isRequired,
+  profileType: PropTypes.bool.isRequired
+};
 
-export default FeedMainPageContent
+export default FeedMainPageContent;

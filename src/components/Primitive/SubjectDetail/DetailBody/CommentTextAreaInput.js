@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const CommentTextAreaWrapper = ({...props}) => {
-    return <textarea {...props} placeholder={"What are your thoughts?"} />
-}
+  return <textarea {...props} placeholder={"What are your thoughts?"} />;
+};
 
 const CommentTextArea = styled(CommentTextAreaWrapper)`
     color: rgba(0, 0, 0, 0.54);
@@ -22,6 +22,6 @@ const CommentTextArea = styled(CommentTextAreaWrapper)`
     padding-left: 25px;
 
     resize: none;
-`
+`;
 
-export default CommentTextArea
+export default CommentTextArea;

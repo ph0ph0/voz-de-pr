@@ -1,6 +1,6 @@
 //The signup or log in button displayed in the top right of the nav bar.
 
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const SignUpInButton = styled.button`
     height: 40px;
@@ -24,6 +24,6 @@ const SignUpInButton = styled.button`
       outline: none;
     }
 
-`
+`;
 
-export default SignUpInButton
+export default SignUpInButton;

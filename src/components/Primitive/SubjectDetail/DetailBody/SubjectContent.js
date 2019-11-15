@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const SubjectContent = styled.p`
     /* border: 1px solid green; */
@@ -8,6 +8,6 @@ const SubjectContent = styled.p`
     margin: 0;
 
     box-sizing: border-box;
-`
+`;
 
-export default SubjectContent
+export default SubjectContent;

@@ -1,24 +1,24 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 //withRouter allows us to push the history so that we can navigate, but we need to remove staticContext from the props!
-import { withRouter } from 'react-router-dom'
+import { withRouter } from "react-router-dom";
 
-import {ReactComponent as Logo } from '../../../../../assets/General/Logo.svg'
+import {ReactComponent as Logo } from "../../../../../assets/General/Logo.svg";
 
 const Wrapper = ({staticContext, ...props}) => {
-    //staticContext allows props.history.push()
-    function onClick() {
-        console.log('Clicked LogoWrapper')
-        props.history.push("/")
-    }
+  //staticContext allows props.history.push()
+  function onClick() {
+    console.log("Clicked LogoWrapper");
+    props.history.push("/");
+  }
 
-    return (
-        <div {...props}>
-            <Logo onClick = {onClick}/>
-        </div>
-    )
-}
+  return (
+    <div {...props}>
+      <Logo onClick = {onClick}/>
+    </div>
+  );
+};
 
 const LogoWrapper = styled(Wrapper)`
     /* border: 2px solid orange; */
@@ -31,6 +31,6 @@ const LogoWrapper = styled(Wrapper)`
     :hover {
         cursor: pointer;
     }
-`
+`;
 
-export default withRouter(LogoWrapper)
+export default withRouter(LogoWrapper);

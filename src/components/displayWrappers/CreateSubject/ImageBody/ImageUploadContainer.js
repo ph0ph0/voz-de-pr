@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import UploadImageButton from '../../../Primitive/CreateSubject/ImageBody/UploadImageButton'
+import UploadImageButton from "../../../Primitive/CreateSubject/ImageBody/UploadImageButton";
 
 const ImageUploadWrapper = ({ secondary, ...props }) => {
   return (
@@ -31,5 +31,5 @@ const ImageUploadContainer = styled(ImageUploadWrapper)`
   align-items: center;
 `;
 
-export default ImageUploadContainer
+export default ImageUploadContainer;
 

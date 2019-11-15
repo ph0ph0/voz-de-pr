@@ -1,14 +1,14 @@
-import styled from 'styled-components'
-import React from 'react'
+import styled from "styled-components";
+import React from "react";
 
 const CommentsIndicatorWrapper = ({ noOfComments, ...props}) => {
-    return (
-        <div {...props}>
-            {noOfComments} {(noOfComments > 1) ? "Comments" : (noOfComments === 1) ? "Comment" : "0 Comments"}
-        </div>
+  return (
+    <div {...props}>
+      {noOfComments} {(noOfComments > 1) ? "Comments" : (noOfComments === 1) ? "Comment" : "0 Comments"}
+    </div>
 
-    )
-}
+  );
+};
 
 const SummaryCommentsIndicator = styled(CommentsIndicatorWrapper)`
     /* border: 1px solid lime; */
@@ -19,6 +19,6 @@ const SummaryCommentsIndicator = styled(CommentsIndicatorWrapper)`
     font-family: Avenir;
     text-align: left;
     font-size: 12px;
-`
+`;
 
-export default SummaryCommentsIndicator
+export default SummaryCommentsIndicator;

@@ -1,17 +1,17 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import LinkWrapper from './LinkWrapper'
-import LogoWrapper from './LogoWrapper'
+import LinkWrapper from "./LinkWrapper";
+import LogoWrapper from "./LogoWrapper";
 
 const Wrapper = (props) => {
-    return (
-        <div {...props}>
-            <LogoWrapper {...props}/>
-            <LinkWrapper {...props}/>
-        </div>
-    )
-}
+  return (
+    <div {...props}>
+      <LogoWrapper {...props}/>
+      <LinkWrapper {...props}/>
+    </div>
+  );
+};
 
 const NavBarLeft = styled(Wrapper)`
     /* background-color: red; */
@@ -25,6 +25,6 @@ const NavBarLeft = styled(Wrapper)`
     justify-content: center;
     align-items: center;
     
-`
+`;
 
-export default NavBarLeft
+export default NavBarLeft;

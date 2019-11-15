@@ -1,9 +1,9 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
+import React from "react";
+import { storiesOf } from "@storybook/react";
 
-import CreateSubject from '../CreateSubject'
+import CreateSubject from "../CreateSubject";
 
-storiesOf('DisplayWrappers|CreateSubject/CreateSubject/CreateSubject', module)
-    .add('Standard', () => <CreateSubject/>, {
-        notes: ""
-    })
+storiesOf("DisplayWrappers|CreateSubject/CreateSubject/CreateSubject", module)
+  .add("Standard", () => <CreateSubject/>, {
+    notes: ""
+  });

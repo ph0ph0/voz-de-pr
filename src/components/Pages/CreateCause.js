@@ -1,15 +1,15 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import CreatePageContent from '../PageContentWrappers/CreatePages/CreatePageContent'
+import CreatePageContent from "../PageContentWrappers/CreatePages/CreatePageContent";
 
 const CreateCauseWrapper = ({...props}) => {
-    return (
-        <div {...props}>
-            <CreatePageContent />
-        </div>
-    )
-}
+  return (
+    <div {...props}>
+      <CreatePageContent />
+    </div>
+  );
+};
 
 const CreateCause = styled(CreateCauseWrapper)`
     /* position: static; */
@@ -21,6 +21,6 @@ const CreateCause = styled(CreateCauseWrapper)`
 
     /* Needed to make the SidePanel keep its proper height */
     align-items: flex-start;
-`
+`;
 
-export default CreateCause
+export default CreateCause;

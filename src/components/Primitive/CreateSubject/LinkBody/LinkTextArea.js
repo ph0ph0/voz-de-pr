@@ -1,17 +1,17 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const SubjectLinkTextWrapper = ({ api, secondary, ...props}) => {
-    return (
-        <textarea 
-            {...props}
-            placeholder = {"URL"}
-            value = {api.linkContent}
-            onChange = {(event) => api.updateLinkContent(event.target.value)}
-        />
-    )
-}
+  return (
+    <textarea 
+      {...props}
+      placeholder = {"URL"}
+      value = {api.linkContent}
+      onChange = {(event) => api.updateLinkContent(event.target.value)}
+    />
+  );
+};
 
 const SubjectLinkTextArea = styled(SubjectLinkTextWrapper)`
     /* border: none; */
@@ -42,10 +42,10 @@ const SubjectLinkTextArea = styled(SubjectLinkTextWrapper)`
     ::placeholder {
         color: ${props => props.secondary ? props.theme.secondaryColour : props.theme.primaryColour};
     }
-`
+`;
 
 SubjectLinkTextArea.propTypes = {
-    api: PropTypes.object.isRequired
-}
+  api: PropTypes.object.isRequired
+};
 
-export default SubjectLinkTextArea
+export default SubjectLinkTextArea;

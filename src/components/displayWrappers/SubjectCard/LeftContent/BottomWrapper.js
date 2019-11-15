@@ -1,17 +1,17 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import BubbleWrapper from './BubbleWrapper'
-import CommentsIndicator from '../../../Primitive/SubjectCard/CommentsIndicator'
+import BubbleWrapper from "./BubbleWrapper";
+import CommentsIndicator from "../../../Primitive/SubjectCard/CommentsIndicator";
 
 const Wrapper = ({numberOfComments, ...props}) => {
-    return (
-        <div {...props}>
-            <BubbleWrapper />
-            <CommentsIndicator>{numberOfComments} {(numberOfComments > 1) ? "Comments" : (numberOfComments === 1) ? "Comment" : "0 Comments"}</CommentsIndicator>
-        </div>
-    )
-}
+  return (
+    <div {...props}>
+      <BubbleWrapper />
+      <CommentsIndicator>{numberOfComments} {(numberOfComments > 1) ? "Comments" : (numberOfComments === 1) ? "Comment" : "0 Comments"}</CommentsIndicator>
+    </div>
+  );
+};
 
 const BottomWrapper = styled(Wrapper)`
     /* border: 1px solid blue; */
@@ -22,6 +22,6 @@ const BottomWrapper = styled(Wrapper)`
 
     display: flex;
     place-content: flex-start;
-`
+`;
 
-export default BottomWrapper
+export default BottomWrapper;

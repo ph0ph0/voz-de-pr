@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import { ReactComponent as LogoExport } from '../../../assets/General/Logo.svg'
+import { ReactComponent as LogoExport } from "../../../assets/General/Logo.svg";
 
 const Logo = styled(LogoExport)`
   width: 107px;
@@ -9,4 +9,4 @@ const Logo = styled(LogoExport)`
   margin-top: 21px;
 `;
 
-export default Logo
+export default Logo;

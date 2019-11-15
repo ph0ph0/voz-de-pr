@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const LocationWrapper = ({ children, ...props }) => {
-    return <li {...props}>{children}</li>;
-  };
+  return <li {...props}>{children}</li>;
+};
   
 const Location = styled(LocationWrapper)`
     text-align: left;
@@ -12,4 +12,4 @@ const Location = styled(LocationWrapper)`
     margin-left: 30px;
 `;
 
-export default Location
+export default Location;

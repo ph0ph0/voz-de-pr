@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Title = styled.div`
     /* border: 1px solid red; */
@@ -9,6 +9,6 @@ const Title = styled.div`
 
     text-align: left;
     font-size: 18px;
-`
+`;
 
-export default Title
+export default Title;

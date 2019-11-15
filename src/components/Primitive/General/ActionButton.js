@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import Info from '../SidePanel/Info'
-import SidePanel_Profile_Body from '../../DisplayWrappers/SidePanel_Profile/SidePanel_Profile_Body'
+import Info from "../SidePanel/Info";
+import SidePanel_Profile_Body from "../../DisplayWrappers/SidePanel_Profile/SidePanel_Profile_Body";
 
 const ActionButton = styled.button`
     width: 125px;
@@ -37,6 +37,6 @@ const ActionButton = styled.button`
       outline: none;
     }
 
-`
+`;
 
-export default ActionButton
+export default ActionButton;

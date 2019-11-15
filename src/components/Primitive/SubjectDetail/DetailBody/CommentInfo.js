@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const Name = styled.p`
   font-size: 12px;
@@ -28,4 +28,4 @@ const CommentInfo = styled(CommentInfoWrapper)`
   display: flex;
 `;
 
-export default CommentInfo
+export default CommentInfo;

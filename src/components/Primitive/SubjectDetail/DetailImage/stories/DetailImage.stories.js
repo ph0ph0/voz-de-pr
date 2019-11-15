@@ -1,8 +1,8 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
+import React from "react";
+import { storiesOf } from "@storybook/react";
 
-import DetailImage from '../DetailImage'
-import PR from '../../../../../assets/SubjectCard/PuertoRico_VdPR.jpg'
+import DetailImage from "../DetailImage";
+import PR from "../../../../../assets/SubjectCard/PuertoRico_VdPR.jpg";
 
-storiesOf('Primitive|Images/SubjectDetailImage', module)
-    .add('Standard', () => <DetailImage src = {PR}/>)
+storiesOf("Primitive|Images/SubjectDetailImage", module)
+  .add("Standard", () => <DetailImage src = {PR}/>);

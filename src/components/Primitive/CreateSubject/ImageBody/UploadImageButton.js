@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const UploadImageButton = styled.button`
   border: ${props =>
@@ -12,4 +12,4 @@ const UploadImageButton = styled.button`
   color: ${props => (props.secondary ? "#1B4EA0" : "#EC220D")};
 `;
 
-export default UploadImageButton
+export default UploadImageButton;

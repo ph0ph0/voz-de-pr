@@ -1,7 +1,7 @@
-import React from 'react'
-import { storiesOf } from '@storybook/react'
+import React from "react";
+import { storiesOf } from "@storybook/react";
 
-import BubbleWrapper from '../BubbleWrapper'
+import BubbleWrapper from "../BubbleWrapper";
 
 storiesOf("DisplayWrappers|SubjectCard/BubbleWrapper", module)
-    .add("Standard", () => <BubbleWrapper />)
+  .add("Standard", () => <BubbleWrapper />);

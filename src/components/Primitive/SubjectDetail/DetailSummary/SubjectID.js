@@ -1,13 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const SubjectIDWrapper = ({ subjectID, secondary,  ...props}) => {
-    return (
-        <div {...props}>
-            {secondary ? "PostID - " : "CauseID - "}{subjectID}
-        </div>
-    )
-}
+  return (
+    <div {...props}>
+      {secondary ? "PostID - " : "CauseID - "}{subjectID}
+    </div>
+  );
+};
 
 const SubjectID = styled(SubjectIDWrapper)`
     /* border: 1px solid darkgoldenrod; */
@@ -18,6 +18,6 @@ const SubjectID = styled(SubjectIDWrapper)`
 
     margin-left: auto;
     margin-right: auto;
-`
+`;
 
-export default SubjectID
+export default SubjectID;

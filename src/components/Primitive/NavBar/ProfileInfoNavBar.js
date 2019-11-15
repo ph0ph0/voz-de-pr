@@ -1,6 +1,6 @@
 //This is used to display either the profile name or email in the top right of the nav bar (nav bar right)
 
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const ProfileInfoNavBar = styled.div`
     /* border: 1px solid black; */
@@ -10,6 +10,6 @@ const ProfileInfoNavBar = styled.div`
     padding-top: ${(props) => props.paddingTop ? props.paddingTop: "0px"};
     padding-bottom: ${(props) => props.paddingBottom ? props.paddingBottom : 0 };
     padding-left: "100px"
-`
+`;
 
-export default ProfileInfoNavBar
+export default ProfileInfoNavBar;

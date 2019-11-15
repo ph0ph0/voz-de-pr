@@ -25,14 +25,14 @@ const CreateSubjectWrapper = ({ secondary, ...props }) => {
 
   function renderSwitch() {
     switch (api.currentPanel) {
-      case "content":
-        return <ContentBody secondary={secondary} api={api} />;
-      case "image":
-        return <ImageBody secondary={secondary} api={api} />;
-      case "link":
-        return <LinkBody secondary={secondary} api={api} />;
-      default:
-        return <ContentBody secondary={secondary} api={api} />;
+    case "content":
+      return <ContentBody secondary={secondary} api={api} />;
+    case "image":
+      return <ImageBody secondary={secondary} api={api} />;
+    case "link":
+      return <LinkBody secondary={secondary} api={api} />;
+    default:
+      return <ContentBody secondary={secondary} api={api} />;
     }
   }
 

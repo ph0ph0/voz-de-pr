@@ -11,8 +11,8 @@ const PasswordField = styled(PasswordInputWrapper)`
     props.api.passwordsMatch === false
       ? "1px solid red"
       : props.api.passwordsMatch === true
-      ? "1px solid green"
-      : "1px solid #d8d8d8"};
+        ? "1px solid green"
+        : "1px solid #d8d8d8"};
 
   /* Need to push the password field up when the list is open so that it stays in the same place */
   margin-top: ${props => (props.api.listOpen ? "-150px" : "0px")};

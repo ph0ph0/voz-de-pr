@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const SubjectImage = styled.img`
     /* Note that image should be jpg, png wouldnt work for some reason.
@@ -12,6 +12,6 @@ const SubjectImage = styled.img`
     height: auto;
 
     border-radius: 5px;
-`
+`;
 
-export default SubjectImage
+export default SubjectImage;

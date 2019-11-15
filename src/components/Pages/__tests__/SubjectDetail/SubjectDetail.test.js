@@ -1,9 +1,9 @@
-import { SubjectsMixed } from '../../../../Constants/MockSubjectsData'
+import { SubjectsMixed } from "../../../../Constants/MockSubjectsData";
 
-import { fetchSubject } from '../../SubjectDetail'
+import { fetchSubject } from "../../SubjectDetail";
 
-global.log = () => {}
+global.log = () => {};
 
 it("fetches subject", () => {
-    expect(fetchSubject("1ABC")).toEqual(SubjectsMixed[0])
-})
+  expect(fetchSubject("1ABC")).toEqual(SubjectsMixed[0]);
+});

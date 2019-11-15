@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const CommentsIndicator = styled.div`
     /* border: 1px solid lime; */
@@ -8,6 +8,6 @@ const CommentsIndicator = styled.div`
     color: rgba(0, 0, 0, 0.54);
     text-align: left;
     font-size: 12px;
-`
+`;
 
-export default CommentsIndicator
+export default CommentsIndicator;

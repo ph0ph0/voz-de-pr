@@ -1,72 +1,72 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
-import AvatarRowWithThree from './AvatarRowWithThree'
-import AvatarRowWithTwo from './AvatarRowWithTwo'
-import Person from '../../../../assets/General/Person.png'
+import AvatarRowWithThree from "./AvatarRowWithThree";
+import AvatarRowWithTwo from "./AvatarRowWithTwo";
+import Person from "../../../../assets/General/Person.png";
 
 //This needs to be altered when we have access to the avatars!
 
 const AvatarsArray = [
-    Person,
-    Person,
-    Person,
-    Person,
-    Person,
-    Person,
-    Person,
-    Person,
-    Person,
-    Person
-  ];
+  Person,
+  Person,
+  Person,
+  Person,
+  Person,
+  Person,
+  Person,
+  Person,
+  Person,
+  Person
+];
   
-  const AvatarsWrapper = ({ api, ...props }) => {
+const AvatarsWrapper = ({ api, ...props }) => {
 
-    //Note that objects can only have string keys, so the keys are converted to a string.
+  //Note that objects can only have string keys, so the keys are converted to a string.
   
-    const RowOfThree_One = {
-      0: AvatarsArray[0],
-      1: AvatarsArray[1],
-      2: AvatarsArray[2]
-    };
-    const RowOfTwo_One = {
-      3: AvatarsArray[3],
-      4: AvatarsArray[4]
-    };
-    const RowOfThree_Two = {
-      5: AvatarsArray[5],
-      6: AvatarsArray[6],
-      7: AvatarsArray[7]
-    };
-    const RowOfTwo_Two = {
-      8: AvatarsArray[8],
-      9: AvatarsArray[9]
-    };
-  
-    return (
-      <div {...props}>
-        <AvatarRowWithThree
-          avatars={RowOfThree_One}
-          api = {api}
-        />
-        <AvatarRowWithTwo
-          avatars={RowOfTwo_One}
-          api = {api}
-        />
-        <AvatarRowWithThree
-          avatars={RowOfThree_Two}
-          api = {api}
-        />
-        <AvatarRowWithTwo
-          avatars={RowOfTwo_Two}
-          api = {api}
-        />
-      </div>
-    );
+  const RowOfThree_One = {
+    0: AvatarsArray[0],
+    1: AvatarsArray[1],
+    2: AvatarsArray[2]
+  };
+  const RowOfTwo_One = {
+    3: AvatarsArray[3],
+    4: AvatarsArray[4]
+  };
+  const RowOfThree_Two = {
+    5: AvatarsArray[5],
+    6: AvatarsArray[6],
+    7: AvatarsArray[7]
+  };
+  const RowOfTwo_Two = {
+    8: AvatarsArray[8],
+    9: AvatarsArray[9]
   };
   
-  const Avatars = styled(AvatarsWrapper)`
+  return (
+    <div {...props}>
+      <AvatarRowWithThree
+        avatars={RowOfThree_One}
+        api = {api}
+      />
+      <AvatarRowWithTwo
+        avatars={RowOfTwo_One}
+        api = {api}
+      />
+      <AvatarRowWithThree
+        avatars={RowOfThree_Two}
+        api = {api}
+      />
+      <AvatarRowWithTwo
+        avatars={RowOfTwo_Two}
+        api = {api}
+      />
+    </div>
+  );
+};
+  
+const Avatars = styled(AvatarsWrapper)`
     /* border: 1px solid red; */
     width: auto;
     height: auto;
@@ -91,7 +91,7 @@ Avatars.propTypes = {
     onLocationSelected: PropTypes.func.isRequired,
     resetDropdown: PropTypes.func.isRequired
   })
-}
+};
 
 
-export default Avatars
+export default Avatars;

@@ -11,7 +11,7 @@ export const inputsAreEmpty = (setState, emailValue, passwordValue) => {
   var flag = false;
 
   if (emailValue === "") {
-    window.log(`email was empty`);
+    window.log("email was empty");
     setState(prevState => {
       return {
         ...prevState,
@@ -21,7 +21,7 @@ export const inputsAreEmpty = (setState, emailValue, passwordValue) => {
     flag = true;
   }
   if (passwordValue === "") {
-    window.log(`password was empty`);
+    window.log("password was empty");
     setState(prevState => {
       return {
         ...prevState,

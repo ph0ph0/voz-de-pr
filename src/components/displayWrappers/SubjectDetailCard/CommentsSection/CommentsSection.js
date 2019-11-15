@@ -1,23 +1,23 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import Comment from './Comment'
+import Comment from "./Comment";
 
 const CommentsSectionWrapper = ({ comments, ...props}) => {
-    return (
-        <div {...props}>
-            {comments.map((comment, index) => (
-                <Comment 
-                    key = {index}
-                    votesOnComment = {comment.votes} 
-                    commentContent = {comment.text} 
-                    author = {comment.author} 
-                    timePassed = {comment.timePassed}
-                />
-            ))}
-        </div>
-    )
-}
+  return (
+    <div {...props}>
+      {comments.map((comment, index) => (
+        <Comment 
+          key = {index}
+          votesOnComment = {comment.votes} 
+          commentContent = {comment.text} 
+          author = {comment.author} 
+          timePassed = {comment.timePassed}
+        />
+      ))}
+    </div>
+  );
+};
 
 const CommentsSection = styled(CommentsSectionWrapper)`
     /* border: 1px solid red; */
@@ -27,6 +27,6 @@ const CommentsSection = styled(CommentsSectionWrapper)`
 
     box-sizing: border-box;
     width: 602px;
-`
+`;
 
-export default CommentsSection
+export default CommentsSection;

@@ -1,14 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 // import PRFlag from '../../../assets/SidePanel/FuckingFlag.png'
-import { ReactComponent as PRFlag } from '../../../assets/SidePanel/PRFlag.svg' 
-import Logo from '../../Primitive/SidePanel/Logo'
-import SidePanelProfileBody from './SidePanel_Profile_Body'
-import ActionButton from '../../Primitive/General/ActionButton'
+import { ReactComponent as PRFlag } from "../../../assets/SidePanel/PRFlag.svg"; 
+import Logo from "../../Primitive/SidePanel/Logo";
+import SidePanelProfileBody from "./SidePanel_Profile_Body";
+import ActionButton from "../../Primitive/General/ActionButton";
 
-import useApi from '../../../CustomHooks/useAPI'
-import SidePanelProfileAPI from './API/SidePanelProfileAPI'
+import useApi from "../../../CustomHooks/useAPI";
+import SidePanelProfileAPI from "./API/SidePanelProfileAPI";
 
 const SidePanelWrapper = props => {
 
@@ -19,7 +19,7 @@ const SidePanelWrapper = props => {
     listOpen: false,
     dropDownIsErrored: false,
     selectedAvatar: null
-  })
+  });
 
   return (
     <div {...props}>
@@ -54,4 +54,4 @@ const SidePanel_Profile = styled(SidePanelWrapper)`
     overflow: hidden;
 `;
 
-export default SidePanel_Profile
+export default SidePanel_Profile;

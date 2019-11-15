@@ -11,8 +11,8 @@ const EmailTextInput = styled(TextInputWrapper)`
     props.api.emailsMatch === false
       ? "1px solid red"
       : props.api.emailsMatch === true
-      ? "1px solid green"
-      : "1px solid #d8d8d8"};
+        ? "1px solid green"
+        : "1px solid #d8d8d8"};
   /* border: 1px solid red; */
   /* Still need to add a radius to the border as otherwise it cuts off the parent radius */
   border-radius: 5px;

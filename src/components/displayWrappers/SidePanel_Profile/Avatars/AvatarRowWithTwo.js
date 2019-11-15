@@ -1,34 +1,34 @@
-import React from 'react'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
-import Avatar from '../../../Primitive/SidePanel_Profile/Avatars/Avatar'
+import Avatar from "../../../Primitive/SidePanel_Profile/Avatars/Avatar";
 
 const AvatarRowTwoWrapper = ({
-    api,
-    avatars,
-    onClickAv,
-    ...props
-  }) => {
-    return (
-      <div {...props}>
-        {Object.keys(avatars).map(key => {
-          const png = avatars[key];
-          return (
-            <Avatar
-              src={png}
-              key={key}
-              tag={key}
-              api={api}
-              onClick={() => api.onClickAv(key)}
-            />
-          );
-        })}
-      </div>
-    );
-  };
+  api,
+  avatars,
+  onClickAv,
+  ...props
+}) => {
+  return (
+    <div {...props}>
+      {Object.keys(avatars).map(key => {
+        const png = avatars[key];
+        return (
+          <Avatar
+            src={png}
+            key={key}
+            tag={key}
+            api={api}
+            onClick={() => api.onClickAv(key)}
+          />
+        );
+      })}
+    </div>
+  );
+};
   
-  const AvatarRowWithTwo = styled(AvatarRowTwoWrapper)`
+const AvatarRowWithTwo = styled(AvatarRowTwoWrapper)`
     /* border: 1px solid black; */
   
     display: flex;
@@ -48,8 +48,8 @@ AvatarRowWithTwo.propTypes = {
     onLocationSelected: PropTypes.func.isRequired,
     resetDropdown: PropTypes.func.isRequired
   })
-}
+};
 
 
 
-export default AvatarRowWithTwo
+export default AvatarRowWithTwo;

@@ -26,7 +26,7 @@ export const inputsAreEmpty = (
   var flag = false;
 
   if (firstNameValue === "") {
-    window.log(`first name value was empty`);
+    window.log("first name value was empty");
     setState(prevState => {
       return {
         ...prevState,
