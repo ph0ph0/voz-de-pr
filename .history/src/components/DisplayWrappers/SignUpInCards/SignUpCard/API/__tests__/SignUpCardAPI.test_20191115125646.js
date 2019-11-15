@@ -261,17 +261,16 @@ describe("Submission helpers", () => {
     expect(mockApi.api.locationNotFound()).toEqual(false);
   });
 
-  it("finds a location successfully", () => {
-    mockApi.api.onLocationSelected("");
-    expect(mockApi.api.getLocationObject()).toBe(undefined);
+  it(
+    ("finds a location successfully",
+    () => {
+      mockApi.api.onLocationSelected("");
+      expect(mockApi.api.getLocationObject()).toEqual(false);
 
-    mockApi.api.onLocationSelected(locations[0].title);
-    expect(mockApi.api.selectedLocation).toEqual(locations[0].title);
-    expect(mockApi.api.getLocationObject(locations[0].title)).toBe(
-      locations[0]
-    );
-  });
-
+      mockApi.api.onLocationSelected(locations[0].title);
+      expect(mockApi.api.getLocationObject()).toEqual(locations[0]);
+    })
+  );
   it("clears all inputs on submit", () => {
     mockApi.api.updateFirstNameValue("TEST");
     mockApi.api.updateLastNameValue("TEST");

@@ -222,7 +222,9 @@ const SignUpCardAPI = ({ state, setState }) => {
   };
 
   const getLocationObject = locationTitle => {
-    return locations.find(location => location.title === locationTitle);
+    return locations.find(
+      location => location.title.toLowerCase() === locationTitle.toLowerCase()
+    );
   };
 
   const submit = () => {
