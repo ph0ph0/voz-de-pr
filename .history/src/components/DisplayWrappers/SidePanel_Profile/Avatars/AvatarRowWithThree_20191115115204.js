@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 import Avatar from "../../../Primitive/SidePanel_Profile/Avatars/Avatar";
-import { mockApi } from "../API/__mocks__/mockApi";
 
 const AvatarRowThreeWrapper = ({ avatars, api, ...props }) => {
   // console.log(`cunt ${Object.keys(avatars)}`)
@@ -32,7 +32,18 @@ const AvatarRowWithThree = styled(AvatarRowThreeWrapper)`
 `;
 
 AvatarRowWithThree.propTypes = {
-  api: mockApi
+  api: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    locationValue: PropTypes.string.isRequired,
+    listOpen: PropTypes.bool.isRequired,
+    selectedLocation: PropTypes.string.isRequired,
+    selectedAvatar: PropTypes.string,
+    updateNameValue: PropTypes.func.isRequired,
+    toggleList: PropTypes.func.isRequired,
+    updateLocationValue: PropTypes.func.isRequired,
+    onLocationSelected: PropTypes.func.isRequired,
+    resetDropdown: PropTypes.func.isRequired
+  })
 };
 
 export default AvatarRowWithThree;

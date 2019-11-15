@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 import Avatar from "../../../Primitive/SidePanel_Profile/Avatars/Avatar";
 import { mockApi } from "../API/__mocks__/mockApi";

@@ -1,9 +1,7 @@
 module.exports = {
   env: {
     browser: true,
-    node: true,
-    es6: true,
-    "jest/globals": true
+    es6: true
   },
   extends: ["eslint:recommended", "plugin:react/recommended"],
   globals: {
@@ -22,7 +20,6 @@ module.exports = {
     indent: ["error", 2],
     "linebreak-style": ["error", "unix"],
     quotes: ["error", "double"],
-    semi: ["error", "always"],
-    "react/prop-types": 0
+    semi: ["error", "always"]
   }
 };

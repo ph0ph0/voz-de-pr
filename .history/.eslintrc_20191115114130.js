@@ -1,9 +1,7 @@
 module.exports = {
   env: {
     browser: true,
-    node: true,
-    es6: true,
-    "jest/globals": true
+    es6: true
   },
   extends: ["eslint:recommended", "plugin:react/recommended"],
   globals: {
@@ -17,12 +15,11 @@ module.exports = {
     ecmaVersion: 2019,
     sourceType: "module"
   },
-  plugins: ["react", "jest"],
+  plugins: ["react"],
   rules: {
-    indent: ["error", 2],
+    indent: ["error", "tab"],
     "linebreak-style": ["error", "unix"],
     quotes: ["error", "double"],
-    semi: ["error", "always"],
-    "react/prop-types": 0
+    semi: ["error", "always"]
   }
 };

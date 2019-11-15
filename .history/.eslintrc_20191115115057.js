@@ -1,7 +1,6 @@
 module.exports = {
   env: {
     browser: true,
-    node: true,
     es6: true,
     "jest/globals": true
   },
@@ -22,7 +21,6 @@ module.exports = {
     indent: ["error", 2],
     "linebreak-style": ["error", "unix"],
     quotes: ["error", "double"],
-    semi: ["error", "always"],
-    "react/prop-types": 0
+    semi: ["error", "always"]
   }
 };
