@@ -20,5 +20,27 @@
                 }
             }
         }
+    },
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "vozdepr-dev-20191115152724-authRole",
+            "UnauthRoleArn": "arn:aws:iam::010158731603:role/vozdepr-dev-20191115152724-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::010158731603:role/vozdepr-dev-20191115152724-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "vozdepr-dev-20191115152724-deployment",
+            "UnauthRoleName": "vozdepr-dev-20191115152724-unauthRole",
+            "StackName": "vozdepr-dev-20191115152724",
+            "StackId": "arn:aws:cloudformation:us-east-1:010158731603:stack/vozdepr-dev-20191115152724/6ce192b0-07bc-11ea-842c-12c1d85cca19"
+        },
+        "categories": {
+            "auth": {
+                "vozdepr6f5fe45e": {}
+            },
+            "function": {
+                "vozdepr6f5fe45ePostConfirmation": {
+                    "GROUP": "everyone"
+                }
+            }
+        }
     }
 }
