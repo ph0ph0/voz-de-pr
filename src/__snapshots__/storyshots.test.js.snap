@@ -87,7 +87,7 @@ exports[`Storyshots DisplayWrappers/CreateSubject/TitlesPanel/TitlesPanel Standa
 
 exports[`Storyshots DisplayWrappers/SidePanel_Profile/Avatars/AvatarRowWithThree Standard 1`] = `
 <div
-  className="sc-VigVT dFcVli"
+  className="sc-VigVT drtFQQ"
 >
   <img
     alt="profile"
@@ -1297,7 +1297,7 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/Avatars/Avatars Standard 1
   className="sc-fjdhpX cjiikQ"
 >
   <div
-    className="sc-VigVT dFcVli"
+    className="sc-VigVT drtFQQ"
   >
     <img
       alt="profile"
@@ -1335,7 +1335,7 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/Avatars/Avatars Standard 1
     />
   </div>
   <div
-    className="sc-VigVT dFcVli"
+    className="sc-VigVT drtFQQ"
   >
     <img
       alt="profile"
@@ -1650,7 +1650,7 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/SidePanel_Profile_Body Sta
     className="sc-fjdhpX cjiikQ"
   >
     <div
-      className="sc-VigVT dFcVli"
+      className="sc-VigVT drtFQQ"
     >
       <img
         alt="profile"
@@ -1688,7 +1688,7 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/SidePanel_Profile_Body Sta
       />
     </div>
     <div
-      className="sc-VigVT dFcVli"
+      className="sc-VigVT drtFQQ"
     >
       <img
         alt="profile"
@@ -1801,7 +1801,7 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/SidePanelProfile Standard 
       className="sc-fjdhpX cjiikQ"
     >
       <div
-        className="sc-VigVT dFcVli"
+        className="sc-VigVT drtFQQ"
       >
         <img
           alt="profile"
@@ -1839,7 +1839,7 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/SidePanelProfile Standard 
         />
       </div>
       <div
-        className="sc-VigVT dFcVli"
+        className="sc-VigVT drtFQQ"
       >
         <img
           alt="profile"
@@ -16392,7 +16392,7 @@ exports[`Storyshots Primitive|Images/Avatar Selected 1`] = `
 <img
   alt="profile"
   className="sc-gqjmRU kdcIJI"
-  selectedAvatar=""
+  selectedAvatar={null}
   src="Person.png"
 />
 `;
@@ -16401,7 +16401,7 @@ exports[`Storyshots Primitive|Images/Avatar Standard 1`] = `
 <img
   alt="profile"
   className="sc-gqjmRU kdcIJI"
-  selectedAvatar=""
+  selectedAvatar={null}
   src="Person.png"
 />
 `;
