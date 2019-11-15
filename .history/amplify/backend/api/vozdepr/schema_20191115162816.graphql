@@ -8,13 +8,10 @@ type User
       ownerField:"id",
       operations:[create,read,update,delete]
     }
-  ])  
+  ])
   {
     id:ID!
     username:String!
-    firstName:String
-    lastName:String
-    voiceNumber: Int
     email:AWSEmail!
     avatar:S3Object!
     subjects:[Subject]@connection
@@ -66,10 +63,8 @@ type Subject
     author:String
     title:String!
     subjectContent:String!
-    pictures: [Picture] @connection
+    subjectImage:S3Object
     comments:[Comment]@connection
-    timePassedSinceCreation: String
-    numberOfComments: Int
     votes:Int
     type: SubjectType!
   }
@@ -77,38 +72,6 @@ type Subject
 enum SubjectType {
   cause
   post
-}
-
-type Picture
-@model
-  @aws_api_key
-  @aws_iam
-  @aws_cognito_user_pools
-  @auth(rules:[
-  {
-    allow:owner,
-    operations:[create, read, update, delete]
-  },
-  {
-    allow:public,
-    operations:[read]
-  },
-  {
-    allow: public,
-    provider: iam,
-    operations: [read]
-  },
-  {
-    allow: groups,
-    groups: ["everyone"],
-    operations: [read]
-  }
-  ])
-{
-  id: ID!
-  description: String
-  owner: String
-  file: S3Object
 }
 
 
@@ -219,4 +182,4 @@ type S3Object{
   bucket:String!
   region:String!
   key:String!
-} 
+}

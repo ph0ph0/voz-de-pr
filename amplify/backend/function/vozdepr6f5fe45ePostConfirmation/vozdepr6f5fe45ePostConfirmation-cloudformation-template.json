@@ -101,7 +101,7 @@
 				"Runtime": "nodejs8.10",
 				"Timeout": "25",
 				"Code": {
-					"S3Bucket": "vozdepr-staging-20191115155801-deployment",
+					"S3Bucket": "vozdepr-dev-20191115152724-deployment",
 					"S3Key": "amplify-builds/vozdepr6f5fe45ePostConfirmation-7068664d553172796969-build.zip"
 				}
 			}

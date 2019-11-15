@@ -5,6 +5,9 @@ export const createUser = `mutation CreateUser($input: CreateUserInput!) {
   createUser(input: $input) {
     id
     username
+    firstName
+    lastName
+    voiceNumber
     email
     avatar {
       bucket
@@ -21,6 +24,8 @@ export const createUser = `mutation CreateUser($input: CreateUserInput!) {
         author
         title
         subjectContent
+        timePassedSinceCreation
+        numberOfComments
         votes
         type
         owner
@@ -34,6 +39,9 @@ export const updateUser = `mutation UpdateUser($input: UpdateUserInput!) {
   updateUser(input: $input) {
     id
     username
+    firstName
+    lastName
+    voiceNumber
     email
     avatar {
       bucket
@@ -50,6 +58,8 @@ export const updateUser = `mutation UpdateUser($input: UpdateUserInput!) {
         author
         title
         subjectContent
+        timePassedSinceCreation
+        numberOfComments
         votes
         type
         owner
@@ -63,6 +73,9 @@ export const deleteUser = `mutation DeleteUser($input: DeleteUserInput!) {
   deleteUser(input: $input) {
     id
     username
+    firstName
+    lastName
+    voiceNumber
     email
     avatar {
       bucket
@@ -79,6 +92,8 @@ export const deleteUser = `mutation DeleteUser($input: DeleteUserInput!) {
         author
         title
         subjectContent
+        timePassedSinceCreation
+        numberOfComments
         votes
         type
         owner
@@ -96,14 +111,19 @@ export const createSubject = `mutation CreateSubject($input: CreateSubjectInput!
     author
     title
     subjectContent
-    subjectImage {
-      bucket
-      region
-      key
-    }
+    timePassedSinceCreation
+    numberOfComments
     votes
     type
     owner
+    pictures {
+      items {
+        id
+        description
+        owner
+      }
+      nextToken
+    }
     comments {
       items {
         id
@@ -127,14 +147,19 @@ export const updateSubject = `mutation UpdateSubject($input: UpdateSubjectInput!
     author
     title
     subjectContent
-    subjectImage {
-      bucket
-      region
-      key
-    }
+    timePassedSinceCreation
+    numberOfComments
     votes
     type
     owner
+    pictures {
+      items {
+        id
+        description
+        owner
+      }
+      nextToken
+    }
     comments {
       items {
         id
@@ -158,14 +183,19 @@ export const deleteSubject = `mutation DeleteSubject($input: DeleteSubjectInput!
     author
     title
     subjectContent
-    subjectImage {
-      bucket
-      region
-      key
-    }
+    timePassedSinceCreation
+    numberOfComments
     votes
     type
     owner
+    pictures {
+      items {
+        id
+        description
+        owner
+      }
+      nextToken
+    }
     comments {
       items {
         id
@@ -177,6 +207,45 @@ export const deleteSubject = `mutation DeleteSubject($input: DeleteSubjectInput!
         owner
       }
       nextToken
+    }
+  }
+}
+`;
+export const createPicture = `mutation CreatePicture($input: CreatePictureInput!) {
+  createPicture(input: $input) {
+    id
+    description
+    owner
+    file {
+      bucket
+      region
+      key
+    }
+  }
+}
+`;
+export const updatePicture = `mutation UpdatePicture($input: UpdatePictureInput!) {
+  updatePicture(input: $input) {
+    id
+    description
+    owner
+    file {
+      bucket
+      region
+      key
+    }
+  }
+}
+`;
+export const deletePicture = `mutation DeletePicture($input: DeletePictureInput!) {
+  deletePicture(input: $input) {
+    id
+    description
+    owner
+    file {
+      bucket
+      region
+      key
     }
   }
 }
@@ -196,14 +265,14 @@ export const createComment = `mutation CreateComment($input: CreateCommentInput!
       author
       title
       subjectContent
-      subjectImage {
-        bucket
-        region
-        key
-      }
+      timePassedSinceCreation
+      numberOfComments
       votes
       type
       owner
+      pictures {
+        nextToken
+      }
       comments {
         nextToken
       }
@@ -227,14 +296,14 @@ export const updateComment = `mutation UpdateComment($input: UpdateCommentInput!
       author
       title
       subjectContent
-      subjectImage {
-        bucket
-        region
-        key
-      }
+      timePassedSinceCreation
+      numberOfComments
       votes
       type
       owner
+      pictures {
+        nextToken
+      }
       comments {
         nextToken
       }
@@ -258,14 +327,14 @@ export const deleteComment = `mutation DeleteComment($input: DeleteCommentInput!
       author
       title
       subjectContent
-      subjectImage {
-        bucket
-        region
-        key
-      }
+      timePassedSinceCreation
+      numberOfComments
       votes
       type
       owner
+      pictures {
+        nextToken
+      }
       comments {
         nextToken
       }

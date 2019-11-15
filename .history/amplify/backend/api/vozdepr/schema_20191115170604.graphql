@@ -8,7 +8,7 @@ type User
       ownerField:"id",
       operations:[create,read,update,delete]
     }
-  ])  
+  ])
   {
     id:ID!
     username:String!
@@ -79,7 +79,7 @@ enum SubjectType {
   post
 }
 
-type Picture
+type Picture 
 @model
   @aws_api_key
   @aws_iam
@@ -219,4 +219,4 @@ type S3Object{
   bucket:String!
   region:String!
   key:String!
-} 
+}

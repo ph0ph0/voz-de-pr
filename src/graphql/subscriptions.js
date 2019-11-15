@@ -5,6 +5,9 @@ export const onCreateUser = `subscription OnCreateUser {
   onCreateUser {
     id
     username
+    firstName
+    lastName
+    voiceNumber
     email
     avatar {
       bucket
@@ -21,6 +24,8 @@ export const onCreateUser = `subscription OnCreateUser {
         author
         title
         subjectContent
+        timePassedSinceCreation
+        numberOfComments
         votes
         type
         owner
@@ -34,6 +39,9 @@ export const onUpdateUser = `subscription OnUpdateUser {
   onUpdateUser {
     id
     username
+    firstName
+    lastName
+    voiceNumber
     email
     avatar {
       bucket
@@ -50,6 +58,8 @@ export const onUpdateUser = `subscription OnUpdateUser {
         author
         title
         subjectContent
+        timePassedSinceCreation
+        numberOfComments
         votes
         type
         owner
@@ -63,6 +73,9 @@ export const onDeleteUser = `subscription OnDeleteUser {
   onDeleteUser {
     id
     username
+    firstName
+    lastName
+    voiceNumber
     email
     avatar {
       bucket
@@ -79,6 +92,8 @@ export const onDeleteUser = `subscription OnDeleteUser {
         author
         title
         subjectContent
+        timePassedSinceCreation
+        numberOfComments
         votes
         type
         owner
@@ -96,14 +111,19 @@ export const onCreateSubject = `subscription OnCreateSubject($owner: String!) {
     author
     title
     subjectContent
-    subjectImage {
-      bucket
-      region
-      key
-    }
+    timePassedSinceCreation
+    numberOfComments
     votes
     type
     owner
+    pictures {
+      items {
+        id
+        description
+        owner
+      }
+      nextToken
+    }
     comments {
       items {
         id
@@ -127,14 +147,19 @@ export const onUpdateSubject = `subscription OnUpdateSubject($owner: String!) {
     author
     title
     subjectContent
-    subjectImage {
-      bucket
-      region
-      key
-    }
+    timePassedSinceCreation
+    numberOfComments
     votes
     type
     owner
+    pictures {
+      items {
+        id
+        description
+        owner
+      }
+      nextToken
+    }
     comments {
       items {
         id
@@ -158,14 +183,19 @@ export const onDeleteSubject = `subscription OnDeleteSubject($owner: String!) {
     author
     title
     subjectContent
-    subjectImage {
-      bucket
-      region
-      key
-    }
+    timePassedSinceCreation
+    numberOfComments
     votes
     type
     owner
+    pictures {
+      items {
+        id
+        description
+        owner
+      }
+      nextToken
+    }
     comments {
       items {
         id
@@ -177,6 +207,45 @@ export const onDeleteSubject = `subscription OnDeleteSubject($owner: String!) {
         owner
       }
       nextToken
+    }
+  }
+}
+`;
+export const onCreatePicture = `subscription OnCreatePicture($owner: String!) {
+  onCreatePicture(owner: $owner) {
+    id
+    description
+    owner
+    file {
+      bucket
+      region
+      key
+    }
+  }
+}
+`;
+export const onUpdatePicture = `subscription OnUpdatePicture($owner: String!) {
+  onUpdatePicture(owner: $owner) {
+    id
+    description
+    owner
+    file {
+      bucket
+      region
+      key
+    }
+  }
+}
+`;
+export const onDeletePicture = `subscription OnDeletePicture($owner: String!) {
+  onDeletePicture(owner: $owner) {
+    id
+    description
+    owner
+    file {
+      bucket
+      region
+      key
     }
   }
 }
@@ -196,14 +265,14 @@ export const onCreateComment = `subscription OnCreateComment($owner: String!) {
       author
       title
       subjectContent
-      subjectImage {
-        bucket
-        region
-        key
-      }
+      timePassedSinceCreation
+      numberOfComments
       votes
       type
       owner
+      pictures {
+        nextToken
+      }
       comments {
         nextToken
       }
@@ -227,14 +296,14 @@ export const onUpdateComment = `subscription OnUpdateComment($owner: String!) {
       author
       title
       subjectContent
-      subjectImage {
-        bucket
-        region
-        key
-      }
+      timePassedSinceCreation
+      numberOfComments
       votes
       type
       owner
+      pictures {
+        nextToken
+      }
       comments {
         nextToken
       }
@@ -258,14 +327,14 @@ export const onDeleteComment = `subscription OnDeleteComment($owner: String!) {
       author
       title
       subjectContent
-      subjectImage {
-        bucket
-        region
-        key
-      }
+      timePassedSinceCreation
+      numberOfComments
       votes
       type
       owner
+      pictures {
+        nextToken
+      }
       comments {
         nextToken
       }

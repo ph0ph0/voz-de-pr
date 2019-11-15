@@ -8,7 +8,7 @@ type User
       ownerField:"id",
       operations:[create,read,update,delete]
     }
-  ])  
+  ])
   {
     id:ID!
     username:String!
