@@ -23,6 +23,7 @@ function App() {
     </Fragment>
   );
 }
+c = "";
 
 // var divStyle = {
 //   marginTop: "10px",
