@@ -9,7 +9,7 @@ type User
       operations:[create,read,update,delete]
     }
   ])
-  {    
+  {
     id:ID!
     username:String!
     firstName:String
@@ -217,6 +217,6 @@ enum VoteOnType{
 
 type S3Object{
   bucket:String!
-  region:String!
+  region:String!  
   key:String!
 }

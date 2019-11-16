@@ -9,7 +9,7 @@ type User
       operations:[create,read,update,delete]
     }
   ])
-  {    
+  {
     id:ID!
     username:String!
     firstName:String
@@ -220,3 +220,6 @@ type S3Object{
   region:String!
   key:String!
 }
+
+
+

@@ -9,7 +9,7 @@ type User
       operations:[create,read,update,delete]
     }
   ])
-  {    
+  {
     id:ID!
     username:String!
     firstName:String

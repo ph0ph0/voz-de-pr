@@ -1,7 +1,6 @@
 {
     "AppSyncApiName": "vozdepr",
     "DynamoDBBillingMode": "PAY_PER_REQUEST",
-    "APIKeyExpirationEpoch": "-1",
     "DynamoDBEnableServerSideEncryption": "false",
     "AuthCognitoUserPoolId": {
         "Fn::GetAtt": [
