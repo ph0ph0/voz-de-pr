@@ -1,0 +1,16 @@
+{
+    "trigger": true,
+    "modules": [
+        "add-to-group"
+    ],
+    "parentResource": "vozdepr33ba7441",
+    "functionName": "vozdepr33ba7441PostConfirmation",
+    "parentStack": "auth",
+    "triggerEnvs": "[]",
+    "triggerDir": "/Users/Pho/.nvm/versions/node/v8.15.1/lib/node_modules/@aws-amplify/cli/node_modules/amplify-category-auth/provider-utils/awscloudformation/utils/../triggers/PostConfirmation",
+    "roleName": "vozdepr33ba7441PostConfirmation",
+    "triggerTemplate": "PostConfirmation.json.ejs",
+    "triggerEventPath": "PostConfirmation.event.json",
+    "skipEdit": true,
+    "resourceName": "vozdepr33ba7441PostConfirmation"
+}

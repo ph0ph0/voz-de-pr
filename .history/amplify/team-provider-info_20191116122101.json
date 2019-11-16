@@ -1,0 +1,68 @@
+{
+    "master": {
+        "awscloudformation": {
+            "AuthRoleName": "vozdepr-master-20191116120449-authRole",
+            "UnauthRoleArn": "arn:aws:iam::010158731603:role/vozdepr-master-20191116120449-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::010158731603:role/vozdepr-master-20191116120449-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "vozdepr-master-20191116120449-deployment",
+            "UnauthRoleName": "vozdepr-master-20191116120449-unauthRole",
+            "StackName": "vozdepr-master-20191116120449",
+            "StackId": "arn:aws:cloudformation:us-east-1:010158731603:stack/vozdepr-master-20191116120449/4a9330d0-0869-11ea-ba2f-12f8925a37c4"
+        },
+        "categories": {
+            "function": {
+                "vozdepr33ba7441PostConfirmation": {
+                    "GROUP": "everyone"
+                }
+            },
+            "auth": {
+                "vozdepr33ba7441": {}
+            }
+        }
+    },
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "vozdepr-dev-20191116121640-authRole",
+            "UnauthRoleArn": "arn:aws:iam::010158731603:role/vozdepr-dev-20191116121640-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::010158731603:role/vozdepr-dev-20191116121640-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "vozdepr-dev-20191116121640-deployment",
+            "UnauthRoleName": "vozdepr-dev-20191116121640-unauthRole",
+            "StackName": "vozdepr-dev-20191116121640",
+            "StackId": "arn:aws:cloudformation:us-east-1:010158731603:stack/vozdepr-dev-20191116121640/f26878f0-086a-11ea-851f-12da3ecd6186"
+        },
+        "categories": {
+            "auth": {
+                "vozdepr33ba7441": {}
+            },
+            "function": {
+                "vozdepr33ba7441PostConfirmation": {
+                    "GROUP": "everyone"
+                }
+            }
+        }
+    },
+    "staging": {
+        "awscloudformation": {
+            "AuthRoleName": "vozdepr-staging-20191116121914-authRole",
+            "UnauthRoleArn": "arn:aws:iam::010158731603:role/vozdepr-staging-20191116121914-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::010158731603:role/vozdepr-staging-20191116121914-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "vozdepr-staging-20191116121914-deployment",
+            "UnauthRoleName": "vozdepr-staging-20191116121914-unauthRole",
+            "StackName": "vozdepr-staging-20191116121914",
+            "StackId": "arn:aws:cloudformation:us-east-1:010158731603:stack/vozdepr-staging-20191116121914/4dda0c80-086b-11ea-b433-0ab7c9206afb"
+        },
+        "categories": {
+            "auth": {
+                "vozdepr33ba7441": {}
+            },
+            "function": {
+                "vozdepr33ba7441PostConfirmation": {
+                    "GROUP": "everyone"
+                }
+            }
+        }
+    }
+}

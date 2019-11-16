@@ -1,0 +1,47 @@
+{
+	"function": {
+		"vozdepr33ba7441PostConfirmation": {
+			"service": "Lambda",
+			"providerPlugin": "awscloudformation",
+			"build": true
+		}
+	},
+	"auth": {
+		"vozdepr33ba7441": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [
+				{
+					"category": "function",
+					"resourceName": "vozdepr33ba7441PostConfirmation",
+					"triggerProvider": "Cognito",
+					"attributes": [
+						"Arn",
+						"Name"
+					]
+				}
+			]
+		}
+	},
+	"api": {
+		"vozdepr": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [
+						{
+							"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+							"userPoolConfig": {
+								"userPoolId": "authvozdepr33ba7441"
+							}
+						}
+					],
+					"defaultAuthentication": {
+						"authenticationType": "AWS_IAM"
+					}
+				}
+			}
+		}
+	}
+}
