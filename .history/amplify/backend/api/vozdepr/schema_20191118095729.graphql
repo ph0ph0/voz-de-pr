@@ -22,7 +22,7 @@ type User
   updatedAt: AWSDateTime
 }
 
-#Objects - A Subject represents both a Cause and a Post.
+#Objects - A Subject represents both a Cause and a Post
 
 type Subject
   @model
