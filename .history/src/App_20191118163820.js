@@ -12,7 +12,7 @@ import NavBar from "./components/DisplayWrappers/NavBar/NavBar";
 import Routes from "./Routes/Routes";
 
 import { ApolloProvider as ApolloHooksProvider } from "@apollo/react-hooks";
-import { clientConfig } from "./clientConfig";
+import clientConfig from "./clientConfig";
 
 Amplify.configure({
   Auth: {
