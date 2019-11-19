@@ -10,6 +10,9 @@ import ActionButton from "../../Primitive/General/ActionButton";
 import useApi from "../../../CustomHooks/useAPI";
 import SidePanelProfileAPI from "./API/SidePanelProfileAPI";
 
+import { useQuery } from "@apollo/react-hooks";
+import { listQueries } from "../../../graphql/queries";
+
 const SidePanelWrapper = props => {
   const api = useApi(SidePanelProfileAPI, {
     name: "",
@@ -19,6 +22,10 @@ const SidePanelWrapper = props => {
     dropDownIsErrored: false,
     selectedAvatar: null
   });
+
+  const { loading, error, data } = useQuery(listQueries);
+
+  window.log(`error,: ${error}, data: ${data}`);
 
   return (
     <div {...props}>

@@ -10,6 +10,8 @@ import ActionButton from "../../Primitive/General/ActionButton";
 import useApi from "../../../CustomHooks/useAPI";
 import SidePanelProfileAPI from "./API/SidePanelProfileAPI";
 
+import { useQuery } from "@apollo/react-hooks";
+
 const SidePanelWrapper = props => {
   const api = useApi(SidePanelProfileAPI, {
     name: "",
