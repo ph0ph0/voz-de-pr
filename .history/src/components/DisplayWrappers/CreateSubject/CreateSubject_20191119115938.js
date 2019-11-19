@@ -12,9 +12,9 @@ import Button from "../../Primitive/General/ActionButton";
 import CreateSubjectFormAPI from "./API/CreateSubjectFormAPI";
 import useAPI from "../../../CustomHooks/useAPI";
 
-import { useMutation } from "@apollo/react-hooks";
-import { createSubject } from "../../../graphql/mutations";
-import gql from "graphql-tag";
+import { useMutation } from '@apollo/react-hooks'
+import { createSubject } from '../../../graphql/mutations'
+import gql from 'graphql-tag'
 
 const ActionButton = styled(Button)`
   margin-left: auto;
@@ -22,9 +22,8 @@ const ActionButton = styled(Button)`
 `;
 
 const CreateSubjectWrapper = ({ secondary, ...props }) => {
-  const [addSubject, { data, loading, error, called }] = useMutation(
-    gql(createSubject)
-  );
+
+  const { addSubject, {data, loading, error, called} } = useMutation(gql(createSubject))
 
   const api = useAPI(CreateSubjectFormAPI, {
     currentPanel: "content",
@@ -50,31 +49,11 @@ const CreateSubjectWrapper = ({ secondary, ...props }) => {
     }
   }
 
-  if (error) {
-    window.log(`ERROR Mutating: ${error}`);
-  }
-
-  const subject = {
-    type: "post",
-    title: "FROM CLIENT",
-    subjectContent: "SubCont"
-  };
-
-  const submit = () => {
-    addSubject({
-      variables: subject
-    });
-  };
-
   return (
     <div {...props}>
       <TitlesPanel secondary={secondary} api={api} />
       {renderSwitch()}
-      {data && <p>GotData</p>}
-      {loading && <p>Loading</p>}
-      {error && <p>Error {`${error.message}`}</p>}
-      {called && <p>Called</p>}
-      <ActionButton secondary={secondary} api={api.submit} onClick={submit}>
+      <ActionButton secondary={secondary} api={api.submit}>
         {secondary ? "Create Post" : "Create Cause"}
       </ActionButton>
     </div>

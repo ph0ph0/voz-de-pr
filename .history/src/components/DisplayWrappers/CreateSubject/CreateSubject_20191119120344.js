@@ -72,7 +72,7 @@ const CreateSubjectWrapper = ({ secondary, ...props }) => {
       {renderSwitch()}
       {data && <p>GotData</p>}
       {loading && <p>Loading</p>}
-      {error && <p>Error {`${error.message}`}</p>}
+      {error && <p>Error</p>}
       {called && <p>Called</p>}
       <ActionButton secondary={secondary} api={api.submit} onClick={submit}>
         {secondary ? "Create Post" : "Create Cause"}

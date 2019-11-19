@@ -54,27 +54,14 @@ const CreateSubjectWrapper = ({ secondary, ...props }) => {
     window.log(`ERROR Mutating: ${error}`);
   }
 
-  const subject = {
-    type: "post",
-    title: "FROM CLIENT",
-    subjectContent: "SubCont"
-  };
-
-  const submit = () => {
-    addSubject({
-      variables: subject
-    });
-  };
-
   return (
     <div {...props}>
       <TitlesPanel secondary={secondary} api={api} />
       {renderSwitch()}
       {data && <p>GotData</p>}
       {loading && <p>Loading</p>}
-      {error && <p>Error {`${error.message}`}</p>}
-      {called && <p>Called</p>}
-      <ActionButton secondary={secondary} api={api.submit} onClick={submit}>
+      {error && <p>Error</p>}
+      <ActionButton secondary={secondary} api={api.submit}>
         {secondary ? "Create Post" : "Create Cause"}
       </ActionButton>
     </div>

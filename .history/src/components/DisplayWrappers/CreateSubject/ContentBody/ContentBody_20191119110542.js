@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import SubjectTitle from "../../../Primitive/CreateSubject/ContentBody/SubjectTitle";
 import SubjectContent from "../../../Primitive/CreateSubject/ContentBody/SubjectContent";
+import ActionButton from "../../../Primitive/General/ActionButton";
 import Error from "../../../Primitive/General/ErrorText";
 
 const ErrorText = styled(Error)`
@@ -43,6 +44,9 @@ const ContentBodyWrapper = ({ secondary, api, ...props }) => {
         value={api.subjectContent}
         onChange={event => api.updateSubjectContent(event.target.value)}
       />
+      <ActionButton secondary={secondary} onClick={api.submit}>
+        {secondary ? "Create Post" : "Create Cause"}
+      </ActionButton>
     </div>
   );
 };
