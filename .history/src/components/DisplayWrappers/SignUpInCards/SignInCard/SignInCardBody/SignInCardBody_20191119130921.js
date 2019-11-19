@@ -30,28 +30,6 @@ const SignInButton = styled(ActionButton)`
 `;
 
 const SignInCardBodyWrapper = ({ api, ...props }) => {
-  const LogIn = async () => {
-    const email = "test@test.com";
-    const password = "1234567890";
-
-    try {
-      await Auth.signOut();
-      window.log(`Logged out`);
-    } catch (error) {
-      window.log(`ERROR LOGGING OUT: ${error.message}`);
-    }
-
-    try {
-      const user = await Auth.signIn(email, password);
-      alert("LOGGED IN!");
-      const currentUser = await Auth.currentAuthenticatedUser();
-      const currentCredentials = await Auth.currentCredentials();
-      window.log(`CurrentCred: ${JSON.stringify(currentCredentials)}`);
-    } catch (error) {
-      window.log(`ERROR LOGGING IN: ${error.message}`);
-    }
-  };
-
   return (
     <div {...props}>
       <Logo />
@@ -73,7 +51,7 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
         onChange={event => api.updatePasswordValue(event.target.value)}
         api={api}
       />
-      <SignInButton onClick={LogIn}>LOG IN</SignInButton>
+      <SignInButton onClick={api.submit}>LOG IN</SignInButton>
       <BottomLineWrapper />
     </div>
   );

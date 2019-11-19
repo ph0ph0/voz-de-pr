@@ -44,9 +44,9 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
     try {
       const user = await Auth.signIn(email, password);
       alert("LOGGED IN!");
-      const currentUser = await Auth.currentAuthenticatedUser();
-      const currentCredentials = await Auth.currentCredentials();
-      window.log(`CurrentCred: ${JSON.stringify(currentCredentials)}`);
+
+      const loggedUser = await Auth.confirmSignIn(user);
+      window.log(`Logged In User: ${JSON.stringify(loggedUser)}`);
     } catch (error) {
       window.log(`ERROR LOGGING IN: ${error.message}`);
     }
