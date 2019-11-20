@@ -12,10 +12,7 @@ import Error from "../../../../Primitive/General/ErrorText";
 
 import { Auth } from "aws-amplify";
 import Amplify, { API, graphqlOperation } from "aws-amplify";
-import { listSubjects } from "../../../../../graphql/queries";
-import { createSubject } from "../../../../../graphql/mutations";
-import gql from "graphql-tag";
-import { clientConfig } from "../../../../../clientConfig";
+import { listSubjects, createSubject } from "../../../../../graphql/queries";
 
 const ErrorText = styled(Error)`
   margin-right: auto;
@@ -39,9 +36,9 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
     var sub = null;
     try {
       sub = await API.graphql(graphqlOperation(listSubjects));
-      window.log(`subjects you fucka: ${JSON.stringify(sub)}`);
+      window.log(`subjects you fucka: ${JSON.stringify(subjects)}`);
     } catch (error) {
-      window.log(`error fuckface: ${JSON.stringify(error)}`);
+      window.log(`error fuckface: ${error.message}`);
     }
 
     return sub;
@@ -49,7 +46,6 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
   const LogIn = async () => {
     const email = "test@test.com";
     const password = "1234567890";
-    const newPassword = "1234567890";
 
     try {
       await Auth.signOut();
@@ -62,68 +58,30 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
     window.log(`subjies1: ${JSON.stringify(subies)}`);
 
     try {
-      Auth.signIn(email, password)
-        .then(user => {
-          if (user.challengeName === "NEW_PASSWORD_REQUIRED") {
-            const { requiredAttributes } = user.challengeParam; // the array of required attributes, e.g ['email', 'phone_number']
-            Auth.completeNewPassword(
-              user, // the Cognito User Object
-              newPassword, // the new password
-              // OPTIONAL, the required attributes
-              {
-                email: email,
-                phone_number: "1234567890"
-              }
-            )
-              .then(user => {
-                // at this time the user is logged in if no MFA required
-                console.log(user);
-              })
-              .catch(e => {
-                console.log(e);
-              });
-          } else {
-            // if no MFA required for the user, then the user is now logged in
-            console.log(user);
-          }
-        })
-        .catch(e => {
-          console.log(e);
-        });
-
+      const user = await Auth.signIn(email, password);
       alert("LOGGED IN!");
-      // const currentUser = await Auth.currentAuthenticatedUser();
-      // const currentCredentials = await Auth.currentCredentials();
+      const currentUser = await Auth.currentAuthenticatedUser();
+      const currentCredentials = await Auth.currentCredentials();
       // window.log(`CurrentCred: ${JSON.stringify(currentCredentials)}`);
       const s = await subjects();
       window.log(`subies@@@@: ${JSON.stringify(s)}`);
     } catch (error) {
-      window.log(`ERROR LOGGING IN: ${JSON.stringify(error)}`);
+      window.log(`ERROR LOGGING IN: ${error.message}`);
     }
   };
 
   const mutate = async () => {
     const subject = {
       type: "post",
-      title: "FROM CLIENT6",
-      subjectContent: "SubCont6"
+      title: "FROM CLIENT",
+      subjectContent: "SubCont"
     };
 
     try {
-      const data = await API.graphql(
-        graphqlOperation(createSubject, { input: subject })
-      );
-      // const data = await clientConfig.mutate({
-      //   mutation: gql(createSubject),
-      //   variables: {
-      //     input: {
-      //       ...subject
-      //     }
-      //   }
-      // });
-      window.log(`mutation data: ${JSON.stringify(data)}`);
+      const data = await API.graphql(graphqlOperation(createSubject, subject));
+      window.log(`mutation data: ${data}`);
     } catch (error) {
-      window.log(`Error doing mutation: ${JSON.stringify(error)}`);
+      window.log(`Error updating: ${error.message}`);
     }
   };
 
@@ -135,16 +93,6 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
       window.log(`ERROR LOGGING OUT: ${error.message}`);
     }
   };
-
-  const gCU = async () => {
-    try {
-      const user = await Auth.currentAuthenticatedUser();
-      window.log(`CurrentUser: ${JSON.stringify(user)}`);
-    } catch (error) {
-      window.log(`Error getting current user: ${error.message}`);
-    }
-  };
-
   return (
     <div {...props}>
       <Logo />
@@ -169,8 +117,6 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
       <SignInButton onClick={LogIn}>LOG IN</SignInButton>
       <ActionButton onClick={mutate}>Mutate</ActionButton>
       <ActionButton onClick={LogOut}>Log out</ActionButton>
-      <ActionButton onClick={gCU}>Get Current User</ActionButton>
-      <ActionButton onClick={subjects}>Get Subjects</ActionButton>
       <BottomLineWrapper />
     </div>
   );

@@ -10,12 +10,16 @@ import NavBar from "./components/DisplayWrappers/NavBar/NavBar";
 import Routes from "./Routes/Routes";
 
 import { ApolloProvider as ApolloHooksProvider } from "@apollo/react-hooks";
-import { ApolloProvider } from "react-apollo";
 import { clientConfig } from "./clientConfig";
+
+import Amplify from "aws-amplify";
+import awsMobile from "./aws-exports";
+
+Amplify.configure(awsMobile);
 
 function App() {
   return (
-    <ApolloProvider client={clientConfig}>
+    <ApolloHooksProvider client={clientConfig}>
       <BrowserRouter>
         <GlobalStyle />
         <ThemeProvider theme={theme}>
@@ -23,7 +27,7 @@ function App() {
           <Routes />
         </ThemeProvider>
       </BrowserRouter>
-    </ApolloProvider>
+    </ApolloHooksProvider>
   );
 }
 

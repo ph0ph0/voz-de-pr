@@ -16,13 +16,15 @@ import { clientConfig } from "./clientConfig";
 function App() {
   return (
     <ApolloProvider client={clientConfig}>
-      <BrowserRouter>
-        <GlobalStyle />
-        <ThemeProvider theme={theme}>
-          <NavBar />
-          <Routes />
-        </ThemeProvider>
-      </BrowserRouter>
+      <ApolloHooksProvider client={clientConfig}>
+        <BrowserRouter>
+          <GlobalStyle />
+          <ThemeProvider theme={theme}>
+            <NavBar />
+            <Routes />
+          </ThemeProvider>
+        </BrowserRouter>
+      </ApolloHooksProvider>
     </ApolloProvider>
   );
 }

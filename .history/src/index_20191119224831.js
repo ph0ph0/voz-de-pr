@@ -5,11 +5,11 @@ import App from "./App";
 import "./devConfig.config";
 // import * as serviceWorker from './serviceWorker';
 
-import Amplify, { Auth } from "aws-amplify";
-import awsMobile from "./aws-exports";
-import AWSAppSyncClient from "aws-appsync";
+// import Amplify, { Auth } from "aws-amplify";
+// import awsMobile from "./aws-exports";
+// import AWSAppSyncClient from "aws-appsync";
 
-Amplify.configure(awsMobile);
+// Amplify.configure(awsMobile);
 
 // const client = new AWSAppSyncClient({
 //   url: awsMobile.aws_appsync_graphqlEndpoint,

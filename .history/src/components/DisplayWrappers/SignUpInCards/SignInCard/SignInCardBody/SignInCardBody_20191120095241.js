@@ -39,7 +39,7 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
     var sub = null;
     try {
       sub = await API.graphql(graphqlOperation(listSubjects));
-      window.log(`subjects you fucka: ${JSON.stringify(sub)}`);
+      window.log(`subjects you fucka: ${JSON.stringify(subjects)}`);
     } catch (error) {
       window.log(`error fuckface: ${JSON.stringify(error)}`);
     }
@@ -105,14 +105,12 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
   const mutate = async () => {
     const subject = {
       type: "post",
-      title: "FROM CLIENT6",
-      subjectContent: "SubCont6"
+      title: "FROM CLIENT4",
+      subjectContent: "SubCont4"
     };
 
     try {
-      const data = await API.graphql(
-        graphqlOperation(createSubject, { input: subject })
-      );
+      const data = await API.graphql(graphqlOperation(createSubject, subject));
       // const data = await clientConfig.mutate({
       //   mutation: gql(createSubject),
       //   variables: {

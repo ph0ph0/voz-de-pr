@@ -110,9 +110,7 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
     };
 
     try {
-      const data = await API.graphql(
-        graphqlOperation(createSubject, { input: subject })
-      );
+      const data = await API.graphql(graphqlOperation(createSubject, subject));
       // const data = await clientConfig.mutate({
       //   mutation: gql(createSubject),
       //   variables: {

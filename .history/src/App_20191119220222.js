@@ -10,20 +10,29 @@ import NavBar from "./components/DisplayWrappers/NavBar/NavBar";
 import Routes from "./Routes/Routes";
 
 import { ApolloProvider as ApolloHooksProvider } from "@apollo/react-hooks";
-import { ApolloProvider } from "react-apollo";
 import { clientConfig } from "./clientConfig";
+
+import Amplify from "aws-amplify";
+import awsMobile from "./aws-exports";
+
+Amplify.configure({
+  Auth: {
+    region: awsMobile.aws_appsync_region,
+    userPoolId: awsMobile.aws_user_pools_id,
+    identityPoolId: awsMobile.aws_cognito_identity_pool_id,
+    userPoolWebClientId: awsMobile.aws_user_pools_web_client_id
+  }
+});
 
 function App() {
   return (
-    <ApolloProvider client={clientConfig}>
-      <BrowserRouter>
-        <GlobalStyle />
-        <ThemeProvider theme={theme}>
-          <NavBar />
-          <Routes />
-        </ThemeProvider>
-      </BrowserRouter>
-    </ApolloProvider>
+    <BrowserRouter>
+      <GlobalStyle />
+      <ThemeProvider theme={theme}>
+        <NavBar />
+        <Routes />
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 

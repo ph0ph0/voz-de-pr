@@ -5,21 +5,17 @@ import App from "./App";
 import "./devConfig.config";
 // import * as serviceWorker from './serviceWorker';
 
-import Amplify, { Auth } from "aws-amplify";
+import Amplify from "aws-amplify";
 import awsMobile from "./aws-exports";
-import AWSAppSyncClient from "aws-appsync";
 
-Amplify.configure(awsMobile);
-
-// const client = new AWSAppSyncClient({
-//   url: awsMobile.aws_appsync_graphqlEndpoint,
-//   region: awsMobile.aws_appsync_region,
-//   auth: {
-//     type: "AMAZON_COGNITO_USER_POOLS",
-//     jwtToken: async () =>
-//       (await Auth.currentSession()).getIdToken().getJwtToken()
-//   }
-// });
+Amplify.configure({
+  Auth: {
+    region: awsMobile.aws_appsync_region,
+    userPoolId: awsMobile.aws_user_pools_id,
+    identityPoolId: awsMobile.aws_cognito_identity_pool_id,
+    userPoolWebClientId: awsMobile.aws_user_pools_web_client_id
+  }
+});
 
 ReactDOM.render(<App />, document.getElementById("root"));
 

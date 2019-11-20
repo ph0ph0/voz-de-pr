@@ -12,7 +12,7 @@ const httpLink = createHttpLink({
 });
 
 const authConfig = {
-  type: "AMAZON_COGNITO_USER_POOLS",
+  type: "AUTH_TYPE.AMAZON_COGNITO_USER_POOLS",
   jwtToken: async () => (await Auth.currentSession()).getIdToken().getJwtToken()
 };
 

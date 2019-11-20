@@ -11,15 +11,15 @@ import AWSAppSyncClient from "aws-appsync";
 
 Amplify.configure(awsMobile);
 
-// const client = new AWSAppSyncClient({
-//   url: awsMobile.aws_appsync_graphqlEndpoint,
-//   region: awsMobile.aws_appsync_region,
-//   auth: {
-//     type: "AMAZON_COGNITO_USER_POOLS",
-//     jwtToken: async () =>
-//       (await Auth.currentSession()).getIdToken().getJwtToken()
-//   }
-// });
+const client = new AWSAppSyncClient({
+  url: awsMobile.aws_appsync_graphqlEndpoint,
+  region: awsMobile.aws_appsync_region,
+  auth: {
+    type: "AMAZON_COGNITO_USER_POOLS",
+    jwtToken: async () =>
+      (await Auth.currentSession()).getIdToken().getJwtToken()
+  }
+});
 
 ReactDOM.render(<App />, document.getElementById("root"));
 

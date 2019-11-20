@@ -12,8 +12,8 @@ const httpLink = createHttpLink({
 });
 
 const authConfig = {
-  type: "AMAZON_COGNITO_USER_POOLS",
-  jwtToken: async () => (await Auth.currentSession()).getIdToken().getJwtToken()
+  type: awsMobile.aws_appsync_authenticationType,
+  credentials: () => Auth.currentCredentials()
 };
 
 const awsLink = createAppSyncLink({

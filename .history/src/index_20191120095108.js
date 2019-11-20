@@ -9,7 +9,17 @@ import Amplify, { Auth } from "aws-amplify";
 import awsMobile from "./aws-exports";
 import AWSAppSyncClient from "aws-appsync";
 
-Amplify.configure(awsMobile);
+Amplify.configure({
+  Auth: {
+    identityPoolId: awsMobile.aws_cognito_identity_pool_id,
+    region: awsMobile.aws_appsync_region,
+    userPoolId: awsMobile.aws_user_pools_id,
+    userPoolWebClientId: awsMobile.aws_user_pools_web_client_id
+  },
+  aws_appsync_graphqlEndpoint: awsMobile.aws_appsync_graphqlEndpoint,
+  aws_appsync_region: awsMobile.aws_appsync_region,
+  aws_appsync_authenticationType: "AMAZON_COGNITO_USER_POOLS"
+});
 
 // const client = new AWSAppSyncClient({
 //   url: awsMobile.aws_appsync_graphqlEndpoint,

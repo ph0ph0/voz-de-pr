@@ -15,7 +15,7 @@ import Amplify, { API, graphqlOperation } from "aws-amplify";
 import { listSubjects } from "../../../../../graphql/queries";
 import { createSubject } from "../../../../../graphql/mutations";
 import gql from "graphql-tag";
-import { clientConfig } from "../../../../../clientConfig";
+import client from "../../../../../clientConfig";
 
 const ErrorText = styled(Error)`
   margin-right: auto;
@@ -39,7 +39,7 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
     var sub = null;
     try {
       sub = await API.graphql(graphqlOperation(listSubjects));
-      window.log(`subjects you fucka: ${JSON.stringify(sub)}`);
+      window.log(`subjects you fucka: ${JSON.stringify(subjects)}`);
     } catch (error) {
       window.log(`error fuckface: ${JSON.stringify(error)}`);
     }
@@ -105,22 +105,22 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
   const mutate = async () => {
     const subject = {
       type: "post",
-      title: "FROM CLIENT6",
-      subjectContent: "SubCont6"
+      title: "FROM CLIENT3",
+      subjectContent: "SubCont3"
     };
 
     try {
-      const data = await API.graphql(
-        graphqlOperation(createSubject, { input: subject })
-      );
-      // const data = await clientConfig.mutate({
-      //   mutation: gql(createSubject),
-      //   variables: {
-      //     input: {
-      //       ...subject
-      //     }
-      //   }
-      // });
+      // const data = await API.graphql(
+      //   graphqlOperation(createSubject, { input: subject })
+      // );
+      const data = await ApolloProvider.client.mutate({
+        mutation: gql(createSubject),
+        variables: {
+          input: {
+            subject
+          }
+        }
+      });
       window.log(`mutation data: ${JSON.stringify(data)}`);
     } catch (error) {
       window.log(`Error doing mutation: ${JSON.stringify(error)}`);
@@ -170,7 +170,6 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
       <ActionButton onClick={mutate}>Mutate</ActionButton>
       <ActionButton onClick={LogOut}>Log out</ActionButton>
       <ActionButton onClick={gCU}>Get Current User</ActionButton>
-      <ActionButton onClick={subjects}>Get Subjects</ActionButton>
       <BottomLineWrapper />
     </div>
   );
