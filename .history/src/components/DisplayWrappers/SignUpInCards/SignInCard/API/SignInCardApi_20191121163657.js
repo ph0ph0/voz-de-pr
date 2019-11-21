@@ -7,7 +7,7 @@ const SignInCardApi = ({ state, setState }) => {
   const emailInputIsErrored = state.emailInputIsErrored;
   const passwordInputIsErrored = state.passwordInputIsErrored;
 
-  const { login, error, loading } = useUser();
+  const {login, error, loading}
 
   const updateEmailValue = newValue => {
     setState(prevState => {

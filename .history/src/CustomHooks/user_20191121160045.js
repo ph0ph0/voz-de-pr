@@ -49,15 +49,15 @@ export const UserProvider = ({ children }) => {
         }
         //Other checks
         setLoading(false);
-        setError(error);
+        setError(true);
       });
   };
 
   const logout = () => {
     window.log(`Logging out`);
+
     setError(null);
     setLoading(true);
-
     Auth.signOut().then(data => {
       setUser(null);
       window.log(`Logged out`);

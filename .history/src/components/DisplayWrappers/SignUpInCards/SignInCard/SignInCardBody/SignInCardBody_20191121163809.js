@@ -14,11 +14,6 @@ const ErrorText = styled(Error)`
   margin-right: auto;
 `;
 
-const LoginErrorText = styled(Error)`
-  margin-right: auto;
-  margin-left: auto;
-`;
-
 const SignInButton = styled(ActionButton)`
   margin-top: 17px;
   margin-bottom: 19px;
@@ -66,11 +61,9 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
         onChange={event => api.updatePasswordValue(event.target.value)}
         api={api}
       />
-      {api.error && <LoginErrorText>{api.error.message}</LoginErrorText>}
-      {/* {api.loading && <p>Loading...</p>} */}
-      <SignInButton onClick={api.submit}>
-        {api.loading ? <p>Loading</p> : "LOG IN"}
-      </SignInButton>
+      {api.error && <ErrorText>api.error.message</ErrorText>}
+      {api.loading && <p>Loading...</p>}
+      <SignInButton onClick={api.submit}>LOG IN</SignInButton>
       <BottomLineWrapper />
       <ForgotPasswordText>Forgot your password?</ForgotPasswordText>
     </div>

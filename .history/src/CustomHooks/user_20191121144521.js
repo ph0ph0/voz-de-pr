@@ -16,6 +16,14 @@ export const UserProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  const setErrorAndLoading = (error = null, loading = false) => {
+    window.log(
+      `Setting error: ${JSON.stringify(error)}, setting loading: ${loading}`
+    );
+    setError(error);
+    setLoading(loading);
+  };
+
   useEffect(() => {
     //Configure the keys needed for the Auth module
     Auth.configure(awsMobile);
@@ -33,12 +41,11 @@ export const UserProvider = ({ children }) => {
 
   const login = (email, password) => {
     window.log("Logging in...");
-    setError(null);
-    setLoading(true);
+    setErrorAndLoading(null, true);
     Auth.signIn(email, password)
       .then(cognitoUser => {
         window.log("Logged In!");
-        setLoading(false);
+        setErrorAndLoading(null, false);
         setUser(cognitoUser);
         return cognitoUser;
       })
@@ -48,27 +55,28 @@ export const UserProvider = ({ children }) => {
           error.message = "Invalid username or password";
         }
         //Other checks
-        setLoading(false);
-        setError(error);
+        setErrorAndLoading(error, false);
       });
   };
 
   const logout = () => {
     window.log(`Logging out`);
-    setError(null);
-    setLoading(true);
-
+    setErrorAndLoading(null, true);
     Auth.signOut().then(data => {
       setUser(null);
       window.log(`Logged out`);
-      setLoading(false);
+      setErrorAndLoading(null, false);
       return data;
     });
   };
 
+  const currentUser = () => {
+    return user;
+  };
+
   //Make sure not to force a re-render of components that are reading these values,
   // unless the user value has changed. This is for optimisation purposes.
-  const values = useMemo(() => ({ user, error, loading, login, logout }), [
+  const values = useMemo(() => ({ user, error, loading }), [
     user,
     error,
     loading

@@ -1,4 +1,10 @@
-import React, { useState, useEffect, useMemo, useContext } from "react";
+import React, {
+  useState,
+  useEffect,
+  useMemo,
+  useContext,
+  useCallback
+} from "react";
 import { Auth } from "aws-amplify";
 import awsMobile from "../aws-exports";
 
@@ -15,6 +21,14 @@ export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+
+  const setErrorAndLoading = (error = null, loading = false) => {
+    window.log(
+      `Setting error: ${JSON.stringify(error)}, setting loading: ${loading}`
+    );
+    setError(error);
+    setLoading(loading);
+  };
 
   useEffect(() => {
     //Configure the keys needed for the Auth module
@@ -33,12 +47,11 @@ export const UserProvider = ({ children }) => {
 
   const login = (email, password) => {
     window.log("Logging in...");
-    setError(null);
-    setLoading(true);
+    setErrorAndLoading(null, true);
     Auth.signIn(email, password)
       .then(cognitoUser => {
         window.log("Logged In!");
-        setLoading(false);
+        setErrorAndLoading(null, false);
         setUser(cognitoUser);
         return cognitoUser;
       })
@@ -48,20 +61,17 @@ export const UserProvider = ({ children }) => {
           error.message = "Invalid username or password";
         }
         //Other checks
-        setLoading(false);
-        setError(error);
+        setErrorAndLoading(error, false);
       });
   };
 
   const logout = () => {
     window.log(`Logging out`);
-    setError(null);
-    setLoading(true);
-
+    setErrorAndLoading(null, true);
     Auth.signOut().then(data => {
       setUser(null);
       window.log(`Logged out`);
-      setLoading(false);
+      setErrorAndLoading(null, false);
       return data;
     });
   };
@@ -71,7 +81,9 @@ export const UserProvider = ({ children }) => {
   const values = useMemo(() => ({ user, error, loading, login, logout }), [
     user,
     error,
-    loading
+    loading,
+    login,
+    logout
   ]);
 
   //Finally, return the interface that we want to expose to our other components

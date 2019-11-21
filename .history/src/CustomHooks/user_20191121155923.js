@@ -1,4 +1,10 @@
-import React, { useState, useEffect, useMemo, useContext } from "react";
+import React, {
+  useState,
+  useEffect,
+  useMemo,
+  useContext,
+  useCallback
+} from "react";
 import { Auth } from "aws-amplify";
 import awsMobile from "../aws-exports";
 
@@ -15,6 +21,14 @@ export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+
+  const setErrorAndLoading = (error = null, loading = false) => {
+    window.log(
+      `Setting error: ${JSON.stringify(error)}, setting loading: ${loading}`
+    );
+    setError(error);
+    setLoading(loading);
+  };
 
   useEffect(() => {
     //Configure the keys needed for the Auth module
@@ -33,12 +47,11 @@ export const UserProvider = ({ children }) => {
 
   const login = (email, password) => {
     window.log("Logging in...");
-    setError(null);
-    setLoading(true);
+    setErrorAndLoading(null, true);
     Auth.signIn(email, password)
       .then(cognitoUser => {
         window.log("Logged In!");
-        setLoading(false);
+        setErrorAndLoading(null, false);
         setUser(cognitoUser);
         return cognitoUser;
       })
@@ -48,8 +61,7 @@ export const UserProvider = ({ children }) => {
           error.message = "Invalid username or password";
         }
         //Other checks
-        setLoading(false);
-        setError(error);
+        setErrorAndLoading(error, false);
       });
   };
 
@@ -57,7 +69,6 @@ export const UserProvider = ({ children }) => {
     window.log(`Logging out`);
     setError(null);
     setLoading(true);
-
     Auth.signOut().then(data => {
       setUser(null);
       window.log(`Logged out`);

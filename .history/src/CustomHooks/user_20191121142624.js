@@ -16,6 +16,11 @@ export const UserProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  const setErrorAndLoading = (error = null, loading = false) => {
+    setError(error);
+    setLoading(loading);
+  };
+
   useEffect(() => {
     //Configure the keys needed for the Auth module
     Auth.configure(awsMobile);
@@ -33,7 +38,6 @@ export const UserProvider = ({ children }) => {
 
   const login = (email, password) => {
     window.log("Logging in...");
-    setError(null);
     setLoading(true);
     Auth.signIn(email, password)
       .then(cognitoUser => {
@@ -44,35 +48,31 @@ export const UserProvider = ({ children }) => {
       })
       .catch(error => {
         window.log(`Error Logging In!: ${JSON.stringify(error)}`);
+        setLoading(false);
         if (error.code === "UserNotFoundException") {
           error.message = "Invalid username or password";
         }
         //Other checks
-        setLoading(false);
         setError(error);
       });
   };
 
   const logout = () => {
     window.log(`Logging out`);
-    setError(null);
-    setLoading(true);
-
     Auth.signOut().then(data => {
       setUser(null);
       window.log(`Logged out`);
-      setLoading(false);
       return data;
     });
   };
 
+  const currentUser = () => {
+    return user;
+  };
+
   //Make sure not to force a re-render of components that are reading these values,
   // unless the user value has changed. This is for optimisation purposes.
-  const values = useMemo(() => ({ user, error, loading, login, logout }), [
-    user,
-    error,
-    loading
-  ]);
+  const values = useMemo(() => ({ login, logout, currentUser }), [user]);
 
   //Finally, return the interface that we want to expose to our other components
   return <UserContext.Provider value={values}>{children}</UserContext.Provider>;

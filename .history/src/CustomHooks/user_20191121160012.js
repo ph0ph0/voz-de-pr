@@ -1,4 +1,10 @@
-import React, { useState, useEffect, useMemo, useContext } from "react";
+import React, {
+  useState,
+  useEffect,
+  useMemo,
+  useContext,
+  useCallback
+} from "react";
 import { Auth } from "aws-amplify";
 import awsMobile from "../aws-exports";
 
@@ -15,6 +21,14 @@ export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+
+  const setErrorAndLoading = (error = null, loading = false) => {
+    window.log(
+      `Setting error: ${JSON.stringify(error)}, setting loading: ${loading}`
+    );
+    setError(error);
+    setLoading(loading);
+  };
 
   useEffect(() => {
     //Configure the keys needed for the Auth module
@@ -49,7 +63,7 @@ export const UserProvider = ({ children }) => {
         }
         //Other checks
         setLoading(false);
-        setError(error);
+        setError(true);
       });
   };
 
@@ -57,7 +71,6 @@ export const UserProvider = ({ children }) => {
     window.log(`Logging out`);
     setError(null);
     setLoading(true);
-
     Auth.signOut().then(data => {
       setUser(null);
       window.log(`Logged out`);

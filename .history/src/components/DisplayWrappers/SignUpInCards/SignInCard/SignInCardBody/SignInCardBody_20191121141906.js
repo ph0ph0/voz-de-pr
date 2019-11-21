@@ -10,13 +10,15 @@ import ActionButton from "../../../../Primitive/General/ActionButton";
 import BottomLineWrapper from "./SignInBottomLineWrapper";
 import Error from "../../../../Primitive/General/ErrorText";
 
+import { Auth } from "aws-amplify";
+import { API, graphqlOperation } from "aws-amplify";
+import { listSubjects } from "../../../../../graphql/queries";
+import { createSubject } from "../../../../../graphql/mutations";
+
+import { useUser } from "../../../../../CustomHooks/user";
+
 const ErrorText = styled(Error)`
   margin-right: auto;
-`;
-
-const LoginErrorText = styled(Error)`
-  margin-right: auto;
-  margin-left: auto;
 `;
 
 const SignInButton = styled(ActionButton)`
@@ -32,19 +34,23 @@ const SignInButton = styled(ActionButton)`
   }
 `;
 
-const ForgotPasswordText = styled.button`
-  color: rgba(0, 0, 0, 0.54);
-  border: none;
-  background-color: #fff;
-  font-size: 13px;
-  font-family: Avenir;
-  letter-spacing: 0.5px;
-  :hover {
-    cursor: pointer;
-  }
-`;
-
 const SignInCardBodyWrapper = ({ api, ...props }) => {
+  const { user, login, logout, currentUser } = useUser();
+
+  const signIn = () => {
+    const email = "test@test.com";
+    const password = "1234567890";
+    login(email, password);
+  };
+
+  const signOut = () => {
+    logout();
+  };
+
+  const gcu = () => {
+    const user = currentUser();
+    window.log(`CURRENTUSER: ${user}zzz`);
+  };
   return (
     <div {...props}>
       <Logo />
@@ -66,13 +72,10 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
         onChange={event => api.updatePasswordValue(event.target.value)}
         api={api}
       />
-      {api.error && <LoginErrorText>{api.error.message}</LoginErrorText>}
-      {/* {api.loading && <p>Loading...</p>} */}
-      <SignInButton onClick={api.submit}>
-        {api.loading ? <p>Loading</p> : "LOG IN"}
-      </SignInButton>
+      <SignInButton onClick={signIn}>LOG IN</SignInButton>
+      <ActionButton onClick={signOut}>Log out</ActionButton>
+      <ActionButton onClick={gCU}>Get Current User</ActionButton>
       <BottomLineWrapper />
-      <ForgotPasswordText>Forgot your password?</ForgotPasswordText>
     </div>
   );
 };

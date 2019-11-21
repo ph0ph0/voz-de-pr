@@ -10,13 +10,15 @@ import ActionButton from "../../../../Primitive/General/ActionButton";
 import BottomLineWrapper from "./SignInBottomLineWrapper";
 import Error from "../../../../Primitive/General/ErrorText";
 
+import { Auth } from "aws-amplify";
+import { API, graphqlOperation } from "aws-amplify";
+import { listSubjects } from "../../../../../graphql/queries";
+import { createSubject } from "../../../../../graphql/mutations";
+
+import { useUser } from "../../../../../CustomHooks/user";
+
 const ErrorText = styled(Error)`
   margin-right: auto;
-`;
-
-const LoginErrorText = styled(Error)`
-  margin-right: auto;
-  margin-left: auto;
 `;
 
 const SignInButton = styled(ActionButton)`
@@ -38,13 +40,28 @@ const ForgotPasswordText = styled.button`
   background-color: #fff;
   font-size: 13px;
   font-family: Avenir;
-  letter-spacing: 0.5px;
-  :hover {
-    cursor: pointer;
-  }
+  letter-spacing: 5;
 `;
 
 const SignInCardBodyWrapper = ({ api, ...props }) => {
+  const { login, logout, user, error, loading } = useUser();
+
+  const signIn = () => {
+    const email = "test@test.com";
+    const password = "1234567890";
+    login(email, password);
+  };
+
+  const signOut = () => {
+    logout();
+  };
+
+  const gCU = () => {
+    window.log(`CURRENTUSER: ${JSON.stringify(user)}zzz`);
+  };
+  const fPW = () => {
+    window.log(`forgot password`);
+  };
   return (
     <div {...props}>
       <Logo />
@@ -66,11 +83,9 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
         onChange={event => api.updatePasswordValue(event.target.value)}
         api={api}
       />
-      {api.error && <LoginErrorText>{api.error.message}</LoginErrorText>}
-      {/* {api.loading && <p>Loading...</p>} */}
-      <SignInButton onClick={api.submit}>
-        {api.loading ? <p>Loading</p> : "LOG IN"}
-      </SignInButton>
+      {error && <p>Error!</p>}
+      {loading && <p>Loading...</p>}
+      <SignInButton onClick={signIn}>LOG IN</SignInButton>
       <BottomLineWrapper />
       <ForgotPasswordText>Forgot your password?</ForgotPasswordText>
     </div>

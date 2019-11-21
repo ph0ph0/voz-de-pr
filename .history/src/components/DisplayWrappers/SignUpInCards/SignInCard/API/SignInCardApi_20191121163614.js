@@ -1,13 +1,11 @@
 import { inputsAreEmpty } from "./utils/InputsAreEmpty";
-import { useUser } from "../../../../../CustomHooks/user";
+import { login, error, loading } from "../../../../../CustomHooks/user";
 
 const SignInCardApi = ({ state, setState }) => {
   const emailValue = state.emailValue;
   const passwordValue = state.passwordValue;
   const emailInputIsErrored = state.emailInputIsErrored;
   const passwordInputIsErrored = state.passwordInputIsErrored;
-
-  const { login, error, loading } = useUser();
 
   const updateEmailValue = newValue => {
     setState(prevState => {
