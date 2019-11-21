@@ -61,12 +61,12 @@
 				"FunctionName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"vozdepr33ba7441PostConfirmation",
+						"vozdepr2708a77dPostConfirmation",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"vozdepr33ba7441PostConfirmation",
+									"vozdepr2708a77dPostConfirmation",
 									"-",
 									{
 										"Ref": "env"
@@ -101,8 +101,8 @@
 				"Runtime": "nodejs8.10",
 				"Timeout": "25",
 				"Code": {
-					"S3Bucket": "vozdepr-dev-20191116121640-deployment",
-					"S3Key": "amplify-builds/vozdepr33ba7441PostConfirmation-576f636348594e75446b-build.zip"
+					"S3Bucket": "vozdepr-master-20191120133937-deployment",
+					"S3Key": "amplify-builds/vozdepr2708a77dPostConfirmation-726e5447716947474278-build.zip"
 				}
 			}
 		},
@@ -112,12 +112,12 @@
 				"RoleName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"vozdepr33ba7441PostConfirmation",
+						"vozdepr2708a77dPostConfirmation",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"vozdepr33ba7441PostConfirmation",
+									"vozdepr2708a77dPostConfirmation",
 									"-",
 									{
 										"Ref": "env"

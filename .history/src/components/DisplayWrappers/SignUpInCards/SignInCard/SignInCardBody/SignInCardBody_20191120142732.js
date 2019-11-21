@@ -183,8 +183,12 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
       <ActionButton onClick={mutate}>Mutate</ActionButton>
       <ActionButton onClick={LogOut}>Log out</ActionButton>
       <ActionButton onClick={gCU}>Get Current User</ActionButton>
-      <ActionButton onClick={subjectsAuth}>Get Sub Auth</ActionButton>
-      <ActionButton onClick={subjectsUnAuth}>Get Subjects UNAuth</ActionButton>
+      <ActionButton onClick={subjectsAuth}>
+        Get Subjects When Authenticated
+      </ActionButton>
+      <ActionButton onClick={subjectsUnAuth}>
+        Get Subjects When UNAuthenticated
+      </ActionButton>
       <BottomLineWrapper />
     </div>
   );

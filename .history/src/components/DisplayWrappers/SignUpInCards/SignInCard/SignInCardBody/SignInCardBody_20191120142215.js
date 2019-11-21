@@ -35,7 +35,7 @@ const SignInButton = styled(ActionButton)`
 `;
 
 const SignInCardBodyWrapper = ({ api, ...props }) => {
-  const subjectsAuth = async () => {
+  const subjects = async () => {
     var sub = null;
     try {
       sub = await API.graphql(graphqlOperation(listSubjects));
@@ -45,19 +45,6 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
     }
 
     return sub;
-  };
-
-  const subjectsUnAuth = async () => {
-    try {
-      const { data } = await API.graphql({
-        query: listSubjects,
-        variables: {},
-        authMode: "AWS_IAM"
-      });
-      window.log(`GOT THE DATA BITCH!!!: ${JSON.stringify(data)}`);
-    } catch (error) {
-      window.log(`Error getting unauthed subjects!: ${JSON.stringify(error)}`);
-    }
   };
   const LogIn = async () => {
     const email = "test@test.com";
@@ -71,8 +58,8 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
       window.log(`ERROR LOGGING OUT: ${error.message}`);
     }
 
-    // const subies = await subjects();
-    // window.log(`subjies1: ${JSON.stringify(subies)}`);
+    const subies = await subjects();
+    window.log(`subjies1: ${JSON.stringify(subies)}`);
 
     try {
       Auth.signIn(email, password)
@@ -108,8 +95,8 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
       // const currentUser = await Auth.currentAuthenticatedUser();
       // const currentCredentials = await Auth.currentCredentials();
       // window.log(`CurrentCred: ${JSON.stringify(currentCredentials)}`);
-      // const s = await subjects();
-      // window.log(`subies@@@@: ${JSON.stringify(s)}`);
+      const s = await subjects();
+      window.log(`subies@@@@: ${JSON.stringify(s)}`);
     } catch (error) {
       window.log(`ERROR LOGGING IN: ${JSON.stringify(error)}`);
     }
@@ -183,8 +170,7 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
       <ActionButton onClick={mutate}>Mutate</ActionButton>
       <ActionButton onClick={LogOut}>Log out</ActionButton>
       <ActionButton onClick={gCU}>Get Current User</ActionButton>
-      <ActionButton onClick={subjectsAuth}>Get Sub Auth</ActionButton>
-      <ActionButton onClick={subjectsUnAuth}>Get Subjects UNAuth</ActionButton>
+      <ActionButton onClick={subjects}>Get Subjects</ActionButton>
       <BottomLineWrapper />
     </div>
   );

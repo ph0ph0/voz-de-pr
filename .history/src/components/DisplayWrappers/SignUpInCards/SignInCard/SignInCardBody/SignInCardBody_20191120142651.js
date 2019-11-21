@@ -71,8 +71,8 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
       window.log(`ERROR LOGGING OUT: ${error.message}`);
     }
 
-    // const subies = await subjects();
-    // window.log(`subjies1: ${JSON.stringify(subies)}`);
+    const subies = await subjects();
+    window.log(`subjies1: ${JSON.stringify(subies)}`);
 
     try {
       Auth.signIn(email, password)
@@ -108,8 +108,8 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
       // const currentUser = await Auth.currentAuthenticatedUser();
       // const currentCredentials = await Auth.currentCredentials();
       // window.log(`CurrentCred: ${JSON.stringify(currentCredentials)}`);
-      // const s = await subjects();
-      // window.log(`subies@@@@: ${JSON.stringify(s)}`);
+      const s = await subjects();
+      window.log(`subies@@@@: ${JSON.stringify(s)}`);
     } catch (error) {
       window.log(`ERROR LOGGING IN: ${JSON.stringify(error)}`);
     }
@@ -183,8 +183,12 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
       <ActionButton onClick={mutate}>Mutate</ActionButton>
       <ActionButton onClick={LogOut}>Log out</ActionButton>
       <ActionButton onClick={gCU}>Get Current User</ActionButton>
-      <ActionButton onClick={subjectsAuth}>Get Sub Auth</ActionButton>
-      <ActionButton onClick={subjectsUnAuth}>Get Subjects UNAuth</ActionButton>
+      <ActionButton onClick={subjectsAuth}>
+        Get Subjects When Authenticated
+      </ActionButton>
+      <ActionButton onClick={subjectsUnAuth}>
+        Get Subjects When UNAuthenticated
+      </ActionButton>
       <BottomLineWrapper />
     </div>
   );

@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "vozdepr33ba7441_identitypool_33ba7441",
+    "identityPoolName": "vozdepr2708a77d_identitypool_2708a77d",
     "allowUnauthenticatedIdentities": true,
-    "resourceNameTruncated": "vozdep33ba7441",
-    "userPoolName": "vozdepr33ba7441_userpool_33ba7441",
+    "resourceNameTruncated": "vozdep2708a77d",
+    "userPoolName": "vozdepr2708a77d_userpool_2708a77d",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -23,14 +23,23 @@
     "userpoolClientGenerateSecret": true,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [
+        "family_name",
+        "given_name",
+        "name",
+        "updated_at",
         "email"
     ],
     "userpoolClientReadAttributes": [
-        "email"
+        "email",
+        "family_name",
+        "given_name",
+        "name",
+        "updated_at",
+        "email_verified"
     ],
-    "userpoolClientLambdaRole": "vozdep33ba7441_userpoolclient_lambda_role",
-    "userpoolClientSetAttributes": false,
-    "resourceName": "vozdepr33ba7441",
+    "userpoolClientLambdaRole": "vozdep2708a77d_userpoolclient_lambda_role",
+    "userpoolClientSetAttributes": true,
+    "resourceName": "vozdepr2708a77d",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
@@ -58,7 +67,7 @@
     "dependsOn": [
         {
             "category": "function",
-            "resourceName": "vozdepr33ba7441PostConfirmation",
+            "resourceName": "vozdepr2708a77dPostConfirmation",
             "triggerProvider": "Cognito",
             "attributes": [
                 "Arn",
@@ -66,6 +75,6 @@
             ]
         }
     ],
-    "thirdPartyAuth": false,
-    "hostedUI": false
+    "hostedUI": false,
+    "thirdPartyAuth": false
 }

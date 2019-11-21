@@ -1,0 +1,14 @@
+{
+    "trigger": true,
+    "modules": [
+        "add-to-group"
+    ],
+    "parentResource": "vozdepr2708a77d",
+    "functionName": "vozdepr2708a77dPostConfirmation",
+    "parentStack": "auth",
+    "triggerEnvs": "[]",
+    "triggerTemplate": "PostConfirmation.json.ejs",
+    "roleName": "vozdepr2708a77dPostConfirmation",
+    "skipEdit": true,
+    "resourceName": "vozdepr2708a77dPostConfirmation"
+}
