@@ -5,15 +5,20 @@ import Logo from "../../../../Primitive/SignInCard/SignInLogo";
 import EmailField from "../../../../Primitive/SignInCard/EmailField";
 import PasswordField from "../../../../Primitive/SignInCard/PasswordField";
 import ActionButton from "../../../../Primitive/General/ActionButton";
+import BottomLineWrapper from "../../SignInCard/SignInCardBody/SignInBottomLineWrapper";
 import Error from "../../../../Primitive/General/ErrorText";
 import LoadingSpinner from "../../../../Primitive/General/LoadingSpinner";
 
 const ErrorText = styled(Error)`
   margin-right: auto;
+`;
+
+const LoginErrorText = styled(Error)`
+  margin-right: auto;
   margin-left: auto;
 `;
 
-const SubmitButton = styled(ActionButton)`
+const SignInButton = styled(ActionButton)`
   margin-top: 17px;
   margin-bottom: 19px;
 
@@ -26,11 +31,26 @@ const SubmitButton = styled(ActionButton)`
   }
 `;
 
+const ForgotPasswordText = styled.button`
+  color: rgba(0, 0, 0, 0.54);
+  border: none;
+  background-color: #fff;
+  font-size: 13px;
+  font-family: Avenir;
+  letter-spacing: 0.5px;
+  :hover {
+    cursor: pointer;
+  }
+  :focus {
+    outline: 0;
+  }
+`;
+
 const Info = styled.p`
   color: rgba(0, 0, 0, 0.54);
   font-size: 14px;
   padding: 0px;
-  margin: 10px;
+  margin: 0px;
 `;
 
 const ForgotPasswordCardBodyWrapper = ({ api, ...props }) => {
@@ -40,23 +60,17 @@ const ForgotPasswordCardBodyWrapper = ({ api, ...props }) => {
     switch (content) {
       case "email":
         return (
-          <Fragment>
-            <Info>
-              Please enter your email and we will send you a recovery code
-            </Info>
-            <EmailField
-              data-testid="EmailInput"
-              placeholder={"Email"}
-              value={api.emailValue}
-              onChange={event => api.updateEmailValue(event.target.value)}
-            />
-            {api.error && <ErrorText>{api.error.message}</ErrorText>}
-          </Fragment>
+          <EmailField
+            data-testid="EmailInput"
+            placeholder={"Email"}
+            value={api.emailValue}
+            onChange={event => api.updateEmailValue(event.target.value)}
+          />
         );
       case "code":
         return (
           <Fragment>
-            <Info>Please check your email for your confirmation code</Info>
+            <p>Please check your email for your confirmation code</p>
             <EmailField
               data-testid="EmailInput"
               placeholder={"Confirmation code"}
@@ -85,7 +99,9 @@ const ForgotPasswordCardBodyWrapper = ({ api, ...props }) => {
         return (
           <Fragment>
             <p>Success! Please log in</p>
-            <ActionButton onClick={navigateToLogin}>GO TO LOGIN</ActionButton>
+            <ActionButton onClick={navigateToLogin}>
+              Return to login
+            </ActionButton>
           </Fragment>
         );
     }
@@ -96,16 +112,11 @@ const ForgotPasswordCardBodyWrapper = ({ api, ...props }) => {
       <Logo />
       {renderSwitch(api.content)}
       {api.content !== "success" && (
-        <SubmitButton onClick={api.submit} data-testid="SignInButton">
-          {api.loading ? (
-            <LoadingSpinner />
-          ) : api.content === "email" ? (
-            "SEND"
-          ) : (
-            "CHANGE"
-          )}
-        </SubmitButton>
+        <SignInButton onClick={api.submit} data-testid="SignInButton">
+          {api.loading ? <LoadingSpinner /> : "LOG IN"}
+        </SignInButton>
       )}
+      <BottomLineWrapper />
     </div>
   );
 };
