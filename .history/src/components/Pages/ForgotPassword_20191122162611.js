@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import SignInCard from "../DisplayWrappers/SignUpInCards/SignInCard/SignInCard";
+import ForgotPasswordCard from "../DisplayWrappers/SignUpInCards/ForgotPasswordCard/ForgotPasswordCard";
 import SignInApi from "../DisplayWrappers/SignUpInCards/SignInCard/API/SignInCardApi";
 import useApi from "../../CustomHooks/useAPI";
 

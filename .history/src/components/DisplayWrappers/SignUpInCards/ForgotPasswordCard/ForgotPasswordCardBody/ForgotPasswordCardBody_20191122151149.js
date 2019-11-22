@@ -1,13 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import SignInCardApiPropTypes from "../API/proptypes/SignUpCardApiPropTypes";
-
 import Logo from "../../../../Primitive/SignInCard/SignInLogo";
 import EmailField from "../../../../Primitive/SignInCard/EmailField";
 import PasswordField from "../../../../Primitive/SignInCard/PasswordField";
 import ActionButton from "../../../../Primitive/General/ActionButton";
-import BottomLineWrapper from "../SignInCardBody/SignInBottomLineWrapper";
+import BottomLineWrapper from "../../SignInCard/SignInCardBody/SignInBottomLineWrapper";
 import Error from "../../../../Primitive/General/ErrorText";
 import LoadingSpinner from "../../../../Primitive/General/LoadingSpinner";
 
@@ -48,7 +46,7 @@ const ForgotPasswordText = styled.button`
   }
 `;
 
-const SignInCardBodyWrapper = ({ api, ...props }) => {
+const ForgotPasswordCardBodyWrapper = ({ api, ...props }) => {
   return (
     <div {...props}>
       <Logo />
@@ -93,8 +91,7 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
   );
 };
 
-const SignInCard = styled(SignInCardBodyWrapper)`
-  /* border: 1px solid red; */
+const ForgotPasswordCard = styled(ForgotPasswordCardBodyWrapper)`
   width: 468px;
   height: auto;
 
@@ -105,8 +102,4 @@ const SignInCard = styled(SignInCardBodyWrapper)`
   align-items: center;
 `;
 
-SignInCard.propTypes = {
-  api: SignInCardApiPropTypes
-};
-
-export default SignInCard;
+export default ForgotPasswordCard;

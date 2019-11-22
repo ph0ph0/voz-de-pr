@@ -1,4 +1,3 @@
-import { inputsAreEmpty } from "./utils/InputsAreEmpty";
 import { useUser } from "../../../../../CustomHooks/user";
 
 const SignInCardApi = ({ state, setState }) => {
@@ -79,5 +78,3 @@ const SignInCardApi = ({ state, setState }) => {
     loading
   };
 };
-
-export default SignInCardApi;

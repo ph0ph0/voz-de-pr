@@ -1,13 +1,11 @@
-import React from "react";
+import React, { Fragment } from "react";
 import styled from "styled-components";
-
-import SignInCardApiPropTypes from "../API/proptypes/SignUpCardApiPropTypes";
 
 import Logo from "../../../../Primitive/SignInCard/SignInLogo";
 import EmailField from "../../../../Primitive/SignInCard/EmailField";
 import PasswordField from "../../../../Primitive/SignInCard/PasswordField";
 import ActionButton from "../../../../Primitive/General/ActionButton";
-import BottomLineWrapper from "../SignInCardBody/SignInBottomLineWrapper";
+import BottomLineWrapper from "../../SignInCard/SignInCardBody/SignInBottomLineWrapper";
 import Error from "../../../../Primitive/General/ErrorText";
 import LoadingSpinner from "../../../../Primitive/General/LoadingSpinner";
 
@@ -48,7 +46,60 @@ const ForgotPasswordText = styled.button`
   }
 `;
 
-const SignInCardBodyWrapper = ({ api, ...props }) => {
+const ForgotPasswordCardBodyWrapper = ({ api, ...props }) => {
+  const renderSwitch = () => {
+    switch (api.content) {
+      case "email":
+        return (
+          <EmailField
+            data-testid="EmailInput"
+            placeholder={"Email"}
+            value={api.emailValue}
+            onChange={event => api.updateEmailValue(event.target.value)}
+            api={api}
+          />
+        );
+      case "code":
+        return (
+          <Fragment>
+            <p>Please check your email for your confirmation code</p>
+            <EmailField
+              data-testid="EmailInput"
+              placeholder={"Confirmation code"}
+              value={api.emailValue}
+              onChange={event => api.updateEmailValue(event.target.value)}
+              api={api}
+            />
+            <PasswordField
+              data-testid="PasswordInput"
+              placeholder={"Password"}
+              value={api.firstPasswordValue}
+              onChange={event =>
+                api.updateFirstPasswordValue(event.target.value)
+              }
+              api={api}
+            />
+            <PasswordField
+              data-testid="PasswordInput"
+              placeholder={"Confirm Password"}
+              value={api.passwordValue}
+              onChange={event =>
+                api.updateSecondPasswordValue(event.target.value)
+              }
+              api={api}
+            />
+          </Fragment>
+        );
+      case "success":
+        return (
+          <Fragment>
+            <p>Success! Please log in</p>
+            <ActionButton>Return to login</ActionButton>
+          </Fragment>
+        );
+    }
+  };
+
   return (
     <div {...props}>
       <Logo />
@@ -93,8 +144,7 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
   );
 };
 
-const SignInCard = styled(SignInCardBodyWrapper)`
-  /* border: 1px solid red; */
+const ForgotPasswordCard = styled(ForgotPasswordCardBodyWrapper)`
   width: 468px;
   height: auto;
 
@@ -105,8 +155,4 @@ const SignInCard = styled(SignInCardBodyWrapper)`
   align-items: center;
 `;
 
-SignInCard.propTypes = {
-  api: SignInCardApiPropTypes
-};
-
-export default SignInCard;
+export default ForgotPasswordCard;

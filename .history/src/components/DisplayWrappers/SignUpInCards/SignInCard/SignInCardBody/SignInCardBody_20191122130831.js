@@ -7,7 +7,7 @@ import Logo from "../../../../Primitive/SignInCard/SignInLogo";
 import EmailField from "../../../../Primitive/SignInCard/EmailField";
 import PasswordField from "../../../../Primitive/SignInCard/PasswordField";
 import ActionButton from "../../../../Primitive/General/ActionButton";
-import BottomLineWrapper from "../SignInCardBody/SignInBottomLineWrapper";
+import BottomLineWrapper from "./SignInBottomLineWrapper";
 import Error from "../../../../Primitive/General/ErrorText";
 import LoadingSpinner from "../../../../Primitive/General/LoadingSpinner";
 

@@ -1,30 +1,30 @@
 import React from "react";
 import styled from "styled-components";
 
-import SignInCard from "../DisplayWrappers/SignUpInCards/SignInCard/SignInCard";
+import ForgotPasswordCard from "../DisplayWrappers/SignUpInCards/ForgotPasswordCard/ForgotPasswordCard";
 import SignInApi from "../DisplayWrappers/SignUpInCards/SignInCard/API/SignInCardApi";
 import useApi from "../../CustomHooks/useAPI";
 
-const SignInWrapper = ({ ...props }) => {
+const ForgotPasswordnWrapper = ({ ...props }) => {
   const api = useApi(SignInApi, {
     emailValue: "",
-    passwordValue: "",
-    emailInputIsErrored: false,
-    passwordInputIsErrored: false,
-    forgotPasswordIsVisible: false
+    firstPasswordValue: "",
+    secondPasswordValue: "",
+    codeValue: "",
+    content: "email"
   });
   return (
     <div {...props}>
-      <SignInCard api={api} />
+      <ForgotPasswordCard api={api} />
     </div>
   );
 };
 
-const SignIn = styled(SignInWrapper)`
+const ForgotPassword = styled(ForgotPasswordnWrapper)`
   margin-bottom: 50px;
 
   display: flex;
   justify-content: center;
 `;
 
-export default SignIn;
+export default ForgotPassword;

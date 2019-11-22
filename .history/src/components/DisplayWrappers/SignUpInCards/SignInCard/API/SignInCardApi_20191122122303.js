@@ -55,14 +55,8 @@ const SignInCardApi = ({ state, setState }) => {
   };
 
   const showForgotPassword = () => {
-    window.log(`Changing forgotPasswordIsVisible: ${forgotPasswordIsVisible}`);
-
-    setState(prevState => {
-      return {
-        ...prevState,
-        forgotPasswordIsVisible: !forgotPasswordIsVisible
-      };
-    });
+    window.log("Changing forgotPasswordIsVisible");
+    return !forgotPasswordIsVisible;
   };
 
   return {
