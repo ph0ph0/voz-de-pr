@@ -73,7 +73,9 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
         {api.loading ? <LoadingSpinner /> : "LOG IN"}
       </SignInButton>
       <BottomLineWrapper />
-      <ForgotPasswordText>Forgot your password?</ForgotPasswordText>
+      <ForgotPasswordText style={{ paddingBottom: "500px" }}>
+        Forgot your password?
+      </ForgotPasswordText>
     </div>
   );
 };
