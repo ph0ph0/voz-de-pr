@@ -50,36 +50,26 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
     <div {...props}>
       <Logo />
       {api.emailInputIsErrored && (
-        <ErrorText data-testid="EmailEmptyErrorText">
-          Please provide your email
-        </ErrorText>
+        <ErrorText>Please provide your email</ErrorText>
       )}
       <EmailField
-        data-testid="EmailInput"
         placeholder={"Email"}
         value={api.emailValue}
         onChange={event => api.updateEmailValue(event.target.value)}
         api={api}
       />
       {api.passwordInputIsErrored && (
-        <ErrorText data-testid="PasswordEmptyErrorText">
-          Please provide your password
-        </ErrorText>
+        <ErrorText>Please provide your password</ErrorText>
       )}
       <PasswordField
-        data-testid="PasswordInput"
         placeholder={"Password"}
         value={api.passwordValue}
         onChange={event => api.updatePasswordValue(event.target.value)}
         api={api}
       />
-      {api.error && (
-        <LoginErrorText data-testid="LoginErrorText">
-          {api.error.message}
-        </LoginErrorText>
-      )}
+      {api.error && <LoginErrorText>{api.error.message}</LoginErrorText>}
       {/* {api.loading && <p>Loading...</p>} */}
-      <SignInButton onClick={api.submit} data-testid="SignInButton">
+      <SignInButton onClick={api.submit}>
         {api.loading ? <LoadingSpinner /> : "LOG IN"}
       </SignInButton>
       <BottomLineWrapper />

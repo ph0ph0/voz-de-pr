@@ -2,7 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const ErrorTextWrapper = ({ children, ...props }) => {
-  return <div {...props}>{children}</div>;
+  return (
+    <div {...props} data-testid="Cunt">
+      {children}
+    </div>
+  );
 };
 
 const ErrorText = styled(ErrorTextWrapper)`

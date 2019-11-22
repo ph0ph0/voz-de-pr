@@ -8,7 +8,7 @@ import SignInCardApiPropTypes from "./API/proptypes/SignUpCardApiPropTypes";
 const SignInCard = ({ api }) => {
   return (
     <SignUpInCardLayout>
-      {/* <SideGraphic data-testid="SideGraphic" /> */}
+      <SideGraphic data-testid="SideGraphic" />
       <SignInCardBody api={api} data-testid="SignInCardBody" />
     </SignUpInCardLayout>
   );
