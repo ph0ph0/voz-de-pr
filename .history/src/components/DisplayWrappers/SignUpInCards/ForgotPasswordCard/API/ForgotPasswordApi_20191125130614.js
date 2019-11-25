@@ -95,8 +95,6 @@ const ForgotPasswordApi = ({ state, setState }) => {
         break;
       case "code":
         window.log(`Current emailValue: ${emailValue}`);
-        if (!passwordsMatch) return;
-
         await submitCodeAndNewPassword(
           emailValue,
           codeValue,

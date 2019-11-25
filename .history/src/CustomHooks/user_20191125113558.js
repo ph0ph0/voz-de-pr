@@ -71,7 +71,7 @@ export const UserProvider = ({ children }) => {
     await Auth.forgotPassword(email)
       .then(data => {
         setLoading(false);
-        window.log(`Forgot password data: ${JSON.stringify(data)}`);
+        window.log(`Forgot password data: ${data}`);
         return data;
       })
       .catch(error => {
@@ -79,11 +79,8 @@ export const UserProvider = ({ children }) => {
         window.log(
           `Error implementing forgot pw flow: ${JSON.stringify(error)}`
         );
-        if (error.code === "UserNotFoundException") {
-          error.message = "User not found, please try a different email";
-        }
         setError(error);
-        throw error;
+        return error;
       });
   };
 
@@ -93,7 +90,7 @@ export const UserProvider = ({ children }) => {
     await Auth.forgotPasswordSubmit(email, code, password)
       .then(data => {
         setLoading(false);
-        window.log(`Submitted code, data: ${JSON.stringify(data)}`);
+        window.log(`Submitted code, data: ${data}`);
         return data;
       })
       .catch(error => {
@@ -102,7 +99,7 @@ export const UserProvider = ({ children }) => {
           `Error submitting code and new password: ${JSON.stringify(error)}`
         );
         setError(error);
-        throw error;
+        return error;
       });
   };
 

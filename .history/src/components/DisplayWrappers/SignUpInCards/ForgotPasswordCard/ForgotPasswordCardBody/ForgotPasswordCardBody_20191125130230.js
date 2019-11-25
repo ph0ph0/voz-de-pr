@@ -74,7 +74,7 @@ const ForgotPasswordCardBodyWrapper = ({ api, ...props }) => {
             <PasswordField
               data-testid="PasswordInput"
               placeholder={"Confirm Password"}
-              value={api.secondPasswordValue}
+              value={api.passwordValue}
               onChange={event =>
                 api.updateSecondPasswordValue(event.target.value)
               }

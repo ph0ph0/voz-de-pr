@@ -57,10 +57,10 @@ const ForgotPasswordCardBodyWrapper = ({ api, ...props }) => {
           <Fragment>
             <Info>Please check your email for your confirmation code</Info>
             <EmailField
-              data-testid="CodeInput"
+              data-testid="EmailInput"
               placeholder={"Confirmation code"}
-              value={api.codeValue}
-              onChange={event => api.updateCodeValue(event.target.value)}
+              value={api.emailValue}
+              onChange={event => api.updateEmailValue(event.target.value)}
             />
             <PasswordField
               data-testid="PasswordInput"
@@ -69,16 +69,14 @@ const ForgotPasswordCardBodyWrapper = ({ api, ...props }) => {
               onChange={event =>
                 api.updateFirstPasswordValue(event.target.value)
               }
-              api={api}
             />
             <PasswordField
               data-testid="PasswordInput"
               placeholder={"Confirm Password"}
-              value={api.secondPasswordValue}
+              value={api.passwordValue}
               onChange={event =>
                 api.updateSecondPasswordValue(event.target.value)
               }
-              api={api}
             />
           </Fragment>
         );

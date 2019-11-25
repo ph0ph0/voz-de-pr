@@ -1,9 +1,9 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import styled from "styled-components";
 
 import Logo from "../../../../Primitive/SignInCard/SignInLogo";
 import EmailField from "../../../../Primitive/SignInCard/EmailField";
-import PasswordField from "../../../../Primitive/SignUpCard/PasswordField";
+import PasswordField from "../../../../Primitive/SignInCard/PasswordField";
 import ActionButton from "../../../../Primitive/General/ActionButton";
 import Error from "../../../../Primitive/General/ErrorText";
 import LoadingSpinner from "../../../../Primitive/General/LoadingSpinner";
@@ -50,6 +50,7 @@ const ForgotPasswordCardBodyWrapper = ({ api, ...props }) => {
               value={api.emailValue}
               onChange={event => api.updateEmailValue(event.target.value)}
             />
+            {api.error && <ErrorText>{api.error.message}</ErrorText>}
           </Fragment>
         );
       case "code":
@@ -57,10 +58,10 @@ const ForgotPasswordCardBodyWrapper = ({ api, ...props }) => {
           <Fragment>
             <Info>Please check your email for your confirmation code</Info>
             <EmailField
-              data-testid="CodeInput"
+              data-testid="EmailInput"
               placeholder={"Confirmation code"}
-              value={api.codeValue}
-              onChange={event => api.updateCodeValue(event.target.value)}
+              value={api.emailValue}
+              onChange={event => api.updateEmailValue(event.target.value)}
             />
             <PasswordField
               data-testid="PasswordInput"
@@ -69,16 +70,14 @@ const ForgotPasswordCardBodyWrapper = ({ api, ...props }) => {
               onChange={event =>
                 api.updateFirstPasswordValue(event.target.value)
               }
-              api={api}
             />
             <PasswordField
               data-testid="PasswordInput"
               placeholder={"Confirm Password"}
-              value={api.secondPasswordValue}
+              value={api.passwordValue}
               onChange={event =>
                 api.updateSecondPasswordValue(event.target.value)
               }
-              api={api}
             />
           </Fragment>
         );
@@ -96,7 +95,6 @@ const ForgotPasswordCardBodyWrapper = ({ api, ...props }) => {
     <div {...props}>
       <Logo />
       {renderSwitch(api.content)}
-      {api.error && <ErrorText>{api.error.message}</ErrorText>}
       {api.content !== "success" && (
         <SubmitButton onClick={api.submit} data-testid="SignInButton">
           {api.loading ? (

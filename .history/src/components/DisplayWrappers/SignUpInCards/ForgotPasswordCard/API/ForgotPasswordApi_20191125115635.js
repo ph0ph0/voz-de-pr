@@ -6,7 +6,6 @@ const ForgotPasswordApi = ({ state, setState }) => {
   const firstPasswordValue = state.firstPasswordValue;
   const secondPasswordValue = state.secondPasswordValue;
   const content = state.content;
-  const passwordsMatch = state.passwordsMatch;
 
   const {
     error,
@@ -29,8 +28,7 @@ const ForgotPasswordApi = ({ state, setState }) => {
     setState(prevState => {
       return {
         ...prevState,
-        firstPasswordValue: newValue,
-        passwordsMatch: passwordsAreSame(newValue, secondPasswordValue)
+        firstPasswordValue: newValue
       };
     });
     window.log(`new passwordValue: ${newValue}`);
@@ -40,8 +38,7 @@ const ForgotPasswordApi = ({ state, setState }) => {
     setState(prevState => {
       return {
         ...prevState,
-        secondPasswordValue: newValue,
-        passwordsMatch: passwordsAreSame(newValue, firstPasswordValue)
+        secondPasswordValue: newValue
       };
     });
     window.log(`new passwordValue: ${newValue}`);
@@ -51,15 +48,10 @@ const ForgotPasswordApi = ({ state, setState }) => {
     setState(prevState => {
       return {
         ...prevState,
-        codeValue: newValue
+        secondPasswordValue: newValue
       };
     });
     window.log(`new passwordValue: ${newValue}`);
-  };
-
-  //Checks that the newly entered password matches the email. Used to set passwordsMatch bool in updatePasswordValue
-  const passwordsAreSame = (newValue, otherValue) => {
-    return newValue === otherValue;
   };
 
   const resetAll = () => {
@@ -69,8 +61,7 @@ const ForgotPasswordApi = ({ state, setState }) => {
         emailValue: "",
         firstPasswordValue: "",
         secondPasswordValue: "",
-        codeValue: "",
-        passwordsMatch: null
+        codeValue: ""
       };
     });
   };
@@ -79,41 +70,29 @@ const ForgotPasswordApi = ({ state, setState }) => {
     window.log(`Switching content, currently: ${content}`);
     switch (content) {
       case "email":
-        await forgotPassword(emailValue)
-          .then(() => {
-            setState(prevState => {
-              return {
-                ...prevState,
-                content: "code"
-              };
-            });
-            window.log(`content is now: ${content}`);
-          })
-          .catch(() => {
-            return;
-          });
+        return;
+        try {
+          await forgotPassword(emailValue);
+        } catch (error) {
+          return;
+        }
+        setState(prevState => {
+          return {
+            ...prevState,
+            content: "code"
+          };
+        });
+        window.log(`content is now: ${content}`);
         break;
       case "code":
-        window.log(`Current emailValue: ${emailValue}`);
-        if (!passwordsMatch) return;
-
-        await submitCodeAndNewPassword(
-          emailValue,
-          codeValue,
-          secondPasswordValue
-        )
-          .then(() => {
-            setState(prevState => {
-              return {
-                ...prevState,
-                content: "success"
-              };
-            });
-            window.log(`content is now: ${content}`);
-          })
-          .catch(() => {
-            return;
-          });
+        //Check code
+        setState(prevState => {
+          return {
+            ...prevState,
+            content: "success"
+          };
+        });
+        window.log(`content is now: ${content}`);
         break;
       default:
         setState(prevState => {
@@ -123,6 +102,8 @@ const ForgotPasswordApi = ({ state, setState }) => {
           };
         });
     }
+
+    resetAll();
   };
 
   return {
@@ -133,7 +114,6 @@ const ForgotPasswordApi = ({ state, setState }) => {
     updateFirstPasswordValue,
     updateSecondPasswordValue,
     codeValue,
-    passwordsMatch,
     updateCodeValue,
     content,
     submit,

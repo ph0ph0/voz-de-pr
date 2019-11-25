@@ -65,13 +65,13 @@ export const UserProvider = ({ children }) => {
     });
   };
 
-  const forgotPassword = async email => {
+  const forgotPassword = email => {
     setError(null);
     setLoading(true);
-    await Auth.forgotPassword(email)
+    Auth.forgotPassword(email)
       .then(data => {
         setLoading(false);
-        window.log(`Forgot password data: ${JSON.stringify(data)}`);
+        window.log(`Forgot password data: ${data}`);
         return data;
       })
       .catch(error => {
@@ -79,47 +79,17 @@ export const UserProvider = ({ children }) => {
         window.log(
           `Error implementing forgot pw flow: ${JSON.stringify(error)}`
         );
-        if (error.code === "UserNotFoundException") {
-          error.message = "User not found, please try a different email";
-        }
         setError(error);
-        throw error;
-      });
-  };
-
-  const submitCodeAndNewPassword = async (email, code, password) => {
-    setError(null);
-    setLoading(true);
-    await Auth.forgotPasswordSubmit(email, code, password)
-      .then(data => {
-        setLoading(false);
-        window.log(`Submitted code, data: ${JSON.stringify(data)}`);
-        return data;
-      })
-      .catch(error => {
-        setLoading(false);
-        window.log(
-          `Error submitting code and new password: ${JSON.stringify(error)}`
-        );
-        setError(error);
-        throw error;
       });
   };
 
   //Make sure not to force a re-render of components that are reading these values,
   // unless the user value has changed. This is for optimisation purposes.
-  const values = useMemo(
-    () => ({
-      user,
-      error,
-      loading,
-      login,
-      logout,
-      forgotPassword,
-      submitCodeAndNewPassword
-    }),
-    [user, error, loading]
-  );
+  const values = useMemo(() => ({ user, error, loading, login, logout }), [
+    user,
+    error,
+    loading
+  ]);
 
   //Finally, return the interface that we want to expose to our other components
   return <UserContext.Provider value={values}>{children}</UserContext.Provider>;

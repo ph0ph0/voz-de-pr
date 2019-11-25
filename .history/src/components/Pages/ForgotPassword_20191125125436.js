@@ -11,8 +11,8 @@ const ForgotPasswordnWrapper = ({ ...props }) => {
     firstPasswordValue: "",
     secondPasswordValue: "",
     codeValue: "",
-    content: "email",
-    passwordsMatch: null
+    content: "code",
+    passwordsMatch: false
   });
   return (
     <div {...props}>
