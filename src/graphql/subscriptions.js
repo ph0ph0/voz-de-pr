@@ -14,6 +14,7 @@ export const onCreateUser = `subscription OnCreateUser {
       region
       key
     }
+    location
     createdAt
     updatedAt
     subjects {
@@ -48,6 +49,7 @@ export const onUpdateUser = `subscription OnUpdateUser {
       region
       key
     }
+    location
     createdAt
     updatedAt
     subjects {
@@ -82,6 +84,7 @@ export const onDeleteUser = `subscription OnDeleteUser {
       region
       key
     }
+    location
     createdAt
     updatedAt
     subjects {

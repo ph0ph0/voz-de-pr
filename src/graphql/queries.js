@@ -14,6 +14,7 @@ export const getUser = `query GetUser($id: ID!) {
       region
       key
     }
+    location
     createdAt
     updatedAt
     subjects {
@@ -53,6 +54,7 @@ export const listUsers = `query ListUsers(
         region
         key
       }
+      location
       createdAt
       updatedAt
       subjects {

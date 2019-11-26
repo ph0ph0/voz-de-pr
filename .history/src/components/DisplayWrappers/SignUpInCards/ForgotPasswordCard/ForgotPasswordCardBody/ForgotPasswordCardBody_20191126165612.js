@@ -36,8 +36,9 @@ const Info = styled.p`
 `;
 
 const ForgotPasswordCardBodyWrapper = ({ api, ...props }) => {
-  let history = useHistory();
   const navigateToLogin = () => {
+    let history = useHistory();
+
     history.push({
       pathname: "/signin"
     });
