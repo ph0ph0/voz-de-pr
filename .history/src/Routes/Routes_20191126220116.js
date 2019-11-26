@@ -44,7 +44,7 @@ const Routes = props => {
         <ForgotPassword />
       </Route>
       <Route exact path="/confirmsignup">
-        <ConfirmSignUp />
+        <ForgotPassword />
       </Route>
       <Route path="/:subjectID">
         <SubjectDetail />

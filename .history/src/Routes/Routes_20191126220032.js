@@ -11,7 +11,6 @@ import SubjectDetail from "../components/Pages/SubjectDetail";
 import SignUp from "../components/Pages/SignUp";
 import SignIn from "../components/Pages/SignIn";
 import ForgotPassword from "../components/Pages/ForgotPassword";
-import ConfirmSignUp from "../components/Pages/ConfirmSignUp";
 
 const Routes = props => {
   return (
@@ -44,7 +43,7 @@ const Routes = props => {
         <ForgotPassword />
       </Route>
       <Route exact path="/confirmsignup">
-        <ConfirmSignUp />
+        <ForgotPassword />
       </Route>
       <Route path="/:subjectID">
         <SubjectDetail />
