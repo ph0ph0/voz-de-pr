@@ -47,34 +47,6 @@ export const UserProvider = ({ children }) => {
       });
   };
 
-  const confirmSignUp = async (email, password, confirmationCode) => {
-    window.log(`Confirming sign up...`);
-    setError(null);
-    setLoading(true);
-    let userData;
-    try {
-      userData = await Auth.confirmSignUp(email, confirmationCode);
-      window.log(`User confirmed! Attempting sign in...`);
-    } catch (error) {
-      window.log(`Failed to confirm signup!: ${JSON.stringify(error)}`);
-      setLoading(false);
-      setError(error);
-    }
-    try {
-      await Auth.signIn(email, password);
-      window.log(`User confirmed AND signed in!`);
-      setLoading(false);
-    } catch (error) {
-      window.log(
-        `Error signing user in after confirming signUp!: ${JSON.stringify(
-          error
-        )}`
-      );
-      setLoading(false);
-      setError(error);
-    }
-  };
-
   //Handle the user update here, but return the resolve value so that we can chain .then statements.
   //Additionally, we catch the error and enhance it with extra info
   const login = (email, password) => {
@@ -162,8 +134,6 @@ export const UserProvider = ({ children }) => {
       loading,
       login,
       logout,
-      signUp,
-      confirmSignUp,
       forgotPassword,
       submitCodeAndNewPassword
     }),

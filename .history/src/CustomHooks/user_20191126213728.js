@@ -163,7 +163,6 @@ export const UserProvider = ({ children }) => {
       login,
       logout,
       signUp,
-      confirmSignUp,
       forgotPassword,
       submitCodeAndNewPassword
     }),
