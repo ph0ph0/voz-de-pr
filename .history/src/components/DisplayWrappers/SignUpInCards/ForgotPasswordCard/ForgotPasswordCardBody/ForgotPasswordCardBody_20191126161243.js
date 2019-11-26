@@ -85,10 +85,8 @@ const ForgotPasswordCardBodyWrapper = ({ api, ...props }) => {
       case "success":
         return (
           <Fragment>
-            <p data-testid="SuccessText">Success! Please log in</p>
-            <ActionButton onClick={navigateToLogin} data-testid="SuccessButton">
-              GO TO LOGIN
-            </ActionButton>
+            <p>Success! Please log in</p>
+            <ActionButton onClick={navigateToLogin}>GO TO LOGIN</ActionButton>
           </Fragment>
         );
     }

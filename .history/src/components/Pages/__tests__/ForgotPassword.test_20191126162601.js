@@ -1,18 +1,20 @@
 import React from "react";
-import { render, fireEvent, cleanup, wait } from "@testing-library/react";
+import { render, fireEvent, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 
 import ForgotPassword from "../ForgotPassword";
 import { MemoryRouter as Router } from "react-router-dom";
+import { UserProvider } from "../../../CustomHooks/user";
 import { ThemeProvider } from "styled-components";
 import theme from "../../../theme/Theme";
+import { act } from "react-dom/test-utils";
 
 jest.mock("../../../CustomHooks/user", () => ({
   useUser: () => ({
     error: null,
     loading: false,
     forgotPassword: () => {},
-    submitCodeAndNewPassword: () => {}
+    submitCodeAndNewPassword: async () => ({ data: {} })
   })
 }));
 
@@ -63,7 +65,7 @@ describe("Forgot password flow", () => {
     fireEvent.click(submitButton);
 
     //Wait for the async code to resolve.
-    await wait();
+    await flushPromises();
 
     const codeInput = getByTestId("CodeInput");
     expect(codeInput).toBeInTheDocument();
@@ -90,7 +92,7 @@ describe("Forgot password flow", () => {
     fireEvent.click(submitButton);
 
     //Wait for the async code to resolve.
-    await wait();
+    await flushPromises();
 
     const firstPasswordInput = getByTestId("FirstPasswordInput");
     expect(firstPasswordInput).toBeInTheDocument();
@@ -105,7 +107,7 @@ describe("Forgot password flow", () => {
     fireEvent.click(submitButton);
 
     //Wait for the async code to resolve.
-    await wait();
+    await flushPromises();
 
     const matchingPasswords = "matching passwords";
 
@@ -119,7 +121,7 @@ describe("Forgot password flow", () => {
     fireEvent.click(submitButton);
 
     //Wait for the async code to resolve.
-    await wait();
+    await flushPromises();
 
     const successText = getByText("Success! Please log in");
     const successButton = getByText("GO TO LOGIN");

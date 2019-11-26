@@ -77,49 +77,71 @@ const ForgotPasswordApi = ({ state, setState }) => {
 
   const submit = async () => {
     window.log(`Switching content, currently: ${content}`);
-    switch (content) {
-      case "email":
-        try {
-          await forgotPassword(emailValue);
-        } catch {
-          return;
-        }
-        setState(prevState => {
-          return {
-            ...prevState,
-            content: "code"
-          };
-        });
-        break;
-      case "code":
-        window.log(`Current emailValue: ${emailValue}`);
-        if (!passwordsMatch) return;
+    await forgotPassword(emailValue);
+    setState(prevState => {
+      return {
+        ...prevState,
+        content: "code"
+      };
+    });
+    // switch (content) {
+    //   case "email":
+    //     try {
+    //       await forgotPassword(emailValue);
+    //     } catch {
+    //       return;
+    //     }
+    //     setState(prevState => {
+    //       return {
+    //         ...prevState,
+    //         content: "code"
+    //       };
+    //     });
+    //     // });
+    //     // await forgotPassword(emailValue)
+    //     //   .then(() => {
+    //     //     setState(prevState => {
+    //     //       return {
+    //     //         ...prevState,
+    //     //         content: "code"
+    //     //       };
+    //     //     });
+    //     //     window.log(`content is now: ${content}`);
+    //     //   })
+    //     //   .catch(() => {
+    //     //     return;
+    //     //   });
+    //     break;
+    //   case "code":
+    //     window.log(`Current emailValue: ${emailValue}`);
+    //     if (!passwordsMatch) return;
 
-        try {
-          await submitCodeAndNewPassword(
-            emailValue,
-            codeValue,
-            secondPasswordValue
-          );
-        } catch {
-          return;
-        }
-        setState(prevState => {
-          return {
-            ...prevState,
-            content: "success"
-          };
-        });
-        window.log(`content is now: ${content}`);
-        break;
-      default:
-        setState(prevState => {
-          return {
-            ...prevState,
-            content: "email"
-          };
-        });
-    }
+    //     await submitCodeAndNewPassword(
+    //       emailValue,
+    //       codeValue,
+    //       secondPasswordValue
+    //     )
+    //       .then(() => {
+    //         setState(prevState => {
+    //           return {
+    //             ...prevState,
+    //             content: "success"
+    //           };
+    //         });
+    //         window.log(`content is now: ${content}`);
+    //       })
+    //       .catch(() => {
+    //         return;
+    //       });
+    //     break;
+    //   default:
+    //     setState(prevState => {
+    //       return {
+    //         ...prevState,
+    //         content: "email"
+    //       };
+    //     });
+    // }
   };
 
   return {

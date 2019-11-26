@@ -90,6 +90,7 @@ const ForgotPasswordApi = ({ state, setState }) => {
             content: "code"
           };
         });
+        window.log(`content is now: ${content}`);
         break;
       case "code":
         window.log(`Current emailValue: ${emailValue}`);

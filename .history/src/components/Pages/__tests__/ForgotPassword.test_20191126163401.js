@@ -4,15 +4,17 @@ import "@testing-library/jest-dom/extend-expect";
 
 import ForgotPassword from "../ForgotPassword";
 import { MemoryRouter as Router } from "react-router-dom";
+import { UserProvider } from "../../../CustomHooks/user";
 import { ThemeProvider } from "styled-components";
 import theme from "../../../theme/Theme";
+import { act } from "react-dom/test-utils";
 
 jest.mock("../../../CustomHooks/user", () => ({
   useUser: () => ({
     error: null,
     loading: false,
     forgotPassword: () => {},
-    submitCodeAndNewPassword: () => {}
+    submitCodeAndNewPassword: async () => ({ data: {} })
   })
 }));
 

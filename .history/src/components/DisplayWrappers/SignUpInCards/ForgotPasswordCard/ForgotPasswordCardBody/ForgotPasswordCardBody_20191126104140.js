@@ -63,7 +63,7 @@ const ForgotPasswordCardBodyWrapper = ({ api, ...props }) => {
               onChange={event => api.updateCodeValue(event.target.value)}
             />
             <PasswordField
-              data-testid="FirstPasswordInput"
+              data-testid="PasswordInput"
               placeholder={"New password"}
               value={api.firstPasswordValue}
               onChange={event =>
@@ -72,7 +72,7 @@ const ForgotPasswordCardBodyWrapper = ({ api, ...props }) => {
               api={api}
             />
             <PasswordField
-              data-testid="SecondPasswordInput"
+              data-testid="PasswordInput"
               placeholder={"Confirm Password"}
               value={api.secondPasswordValue}
               onChange={event =>
@@ -85,10 +85,8 @@ const ForgotPasswordCardBodyWrapper = ({ api, ...props }) => {
       case "success":
         return (
           <Fragment>
-            <p data-testid="SuccessText">Success! Please log in</p>
-            <ActionButton onClick={navigateToLogin} data-testid="SuccessButton">
-              GO TO LOGIN
-            </ActionButton>
+            <p>Success! Please log in</p>
+            <ActionButton onClick={navigateToLogin}>GO TO LOGIN</ActionButton>
           </Fragment>
         );
     }

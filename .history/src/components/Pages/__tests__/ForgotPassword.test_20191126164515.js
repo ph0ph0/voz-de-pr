@@ -12,7 +12,7 @@ jest.mock("../../../CustomHooks/user", () => ({
     error: null,
     loading: false,
     forgotPassword: () => {},
-    submitCodeAndNewPassword: () => {}
+    submitCodeAndNewPassword: async () => ({ data: {} })
   })
 }));
 

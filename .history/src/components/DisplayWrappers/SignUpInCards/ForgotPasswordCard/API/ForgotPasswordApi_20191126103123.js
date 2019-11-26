@@ -77,10 +77,16 @@ const ForgotPasswordApi = ({ state, setState }) => {
 
   const submit = async () => {
     window.log(`Switching content, currently: ${content}`);
+    // setState(prevState => {
+    //   return {
+    //     ...prevState,
+    //     content: "code"
+    //   };
+    // });
     switch (content) {
       case "email":
         try {
-          await forgotPassword(emailValue);
+          await forgotPassword(email);
         } catch {
           return;
         }
@@ -90,27 +96,41 @@ const ForgotPasswordApi = ({ state, setState }) => {
             content: "code"
           };
         });
+        // await forgotPassword(emailValue)
+        //   .then(() => {
+        //     setState(prevState => {
+        //       return {
+        //         ...prevState,
+        //         content: "code"
+        //       };
+        //     });
+        //     window.log(`content is now: ${content}`);
+        //   })
+        //   .catch(() => {
+        //     return;
+        //   });
         break;
       case "code":
         window.log(`Current emailValue: ${emailValue}`);
         if (!passwordsMatch) return;
 
-        try {
-          await submitCodeAndNewPassword(
-            emailValue,
-            codeValue,
-            secondPasswordValue
-          );
-        } catch {
-          return;
-        }
-        setState(prevState => {
-          return {
-            ...prevState,
-            content: "success"
-          };
-        });
-        window.log(`content is now: ${content}`);
+        await submitCodeAndNewPassword(
+          emailValue,
+          codeValue,
+          secondPasswordValue
+        )
+          .then(() => {
+            setState(prevState => {
+              return {
+                ...prevState,
+                content: "success"
+              };
+            });
+            window.log(`content is now: ${content}`);
+          })
+          .catch(() => {
+            return;
+          });
         break;
       default:
         setState(prevState => {

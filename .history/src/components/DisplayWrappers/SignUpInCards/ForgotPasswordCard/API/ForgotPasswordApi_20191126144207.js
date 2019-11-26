@@ -95,22 +95,23 @@ const ForgotPasswordApi = ({ state, setState }) => {
         window.log(`Current emailValue: ${emailValue}`);
         if (!passwordsMatch) return;
 
-        try {
-          await submitCodeAndNewPassword(
-            emailValue,
-            codeValue,
-            secondPasswordValue
-          );
-        } catch {
-          return;
-        }
-        setState(prevState => {
-          return {
-            ...prevState,
-            content: "success"
-          };
-        });
-        window.log(`content is now: ${content}`);
+        await submitCodeAndNewPassword(
+          emailValue,
+          codeValue,
+          secondPasswordValue
+        )
+          .then(() => {
+            setState(prevState => {
+              return {
+                ...prevState,
+                content: "success"
+              };
+            });
+            window.log(`content is now: ${content}`);
+          })
+          .catch(() => {
+            return;
+          });
         break;
       default:
         setState(prevState => {
