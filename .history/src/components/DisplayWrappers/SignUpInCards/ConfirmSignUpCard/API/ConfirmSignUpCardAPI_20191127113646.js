@@ -17,18 +17,7 @@ const SignInCardApi = ({ state, setState }) => {
   };
 
   const submit = () => {
-    try {
-      confirmSignUp();
-    } catch {
-      return;
-    }
-
-    setState(prevState => {
-      return {
-        ...prevState,
-        success: true
-      };
-    });
+    confirmSignUp();
   };
 
   return {

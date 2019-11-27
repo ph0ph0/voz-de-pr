@@ -2,7 +2,6 @@ import { useUser } from "../../../../../CustomHooks/user";
 
 const SignInCardApi = ({ state, setState }) => {
   const codeValue = state.emailValue;
-  const success = state.success;
 
   const { confirmSignUp, error, loading } = useUser();
 
@@ -17,18 +16,7 @@ const SignInCardApi = ({ state, setState }) => {
   };
 
   const submit = () => {
-    try {
-      confirmSignUp();
-    } catch {
-      return;
-    }
-
-    setState(prevState => {
-      return {
-        ...prevState,
-        success: true
-      };
-    });
+    confirmSignUp();
   };
 
   return {

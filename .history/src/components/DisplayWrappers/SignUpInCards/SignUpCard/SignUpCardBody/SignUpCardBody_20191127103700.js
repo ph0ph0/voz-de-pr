@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 
-import { useHistory } from "react-router-dom";
-
 import { SignUpInCardApiPropTypes } from "../API/proptypes/SignUpCardApiPropTypes";
 
 import TextField from "components/Primitive/SignUpCard/SignUpCardTextInput";
@@ -15,7 +13,6 @@ import Avatars from "../Avatars/Avatars";
 import ActionButton from "components/Primitive/General/ActionButton";
 import BottomLineWrapper from "./SignUpBottomLineWrapper";
 import Error from "components/Primitive/General/ErrorText";
-import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
 
 const ErrorText = styled(Error)`
   margin: 0px;
@@ -44,16 +41,9 @@ const SignUpButton = styled(ActionButton)`
 `;
 
 const SignUpCardBodyWrapper = ({ api, ...props }) => {
-  const history = useHistory();
-  //If signup is successful, `success` in the api will be true
   useEffect(() => {
-    if (api.success) {
-      window.log(`naving to confirm sign up...`);
-      history.push({
-        pathname: "/confirmsignup"
-      });
-    }
-  }, [api.success]);
+    window.log(`SignUpCard Error: ${api.error}`);
+  }, [api.error]);
 
   return (
     <div {...props}>
@@ -135,9 +125,8 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
       </AvatarInstructionSignUp>
 
       <Avatars api={api} />
-      {api.error && <Error>{api.error.message}</Error>}
       <SignUpButton secondary onClick={api.submit}>
-        {api.loading ? <LoadingSpinner /> : "SIGN UP"}
+        SIGN UP
       </SignUpButton>
       <BottomLineWrapper api={api} />
     </div>

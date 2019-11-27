@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import { useHistory } from "react-router-dom";
@@ -37,7 +37,7 @@ const ConfirmSignUpCardBodyWrapper = ({ api, ...props }) => {
         placeholder={"Confirmation Code"}
       />
       {api.error && <Error>{api.error.message}</Error>}
-      <ActionButton onClick={api.submit}>
+      <ActionButton>
         {api.loading ? <LoadingSpinner /> : "CONFIRM"}
       </ActionButton>
     </div>

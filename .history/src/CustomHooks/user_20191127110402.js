@@ -14,6 +14,8 @@ export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  //success is used in login, signUp and confirmSignUp to initiate naving away from the form when successful
 
   useEffect(() => {
     //Configure the keys needed for the Auth module
@@ -29,55 +31,52 @@ export const UserProvider = ({ children }) => {
   }, []);
 
   //Remember to update the current logged in user!
-  const signUp = async (email, password) => {
+  const signUp = (email, password) => {
     window.log(`Signing up...`);
     setError(null);
     setLoading(true);
-
-    try {
-      const newUser = await Auth.signUp(email, password);
-      window.log(`Signed Up! User: ${JSON.stringify(newUser)}`);
-      setUser(newUser); //Remember to create User object in database!
-    } catch (error) {
-      window.log(`Error signing up!: ${JSON.stringify(error)}`);
-      setError(error);
-      throw error;
-    } finally {
-      setLoading(false);
-    }
+    Auth.signUp(email, password)
+      .then(newUser => {
+        window.log(`Signed Up! User: ${JSON.stringify(newUser)}`);
+        setLoading(false); //May want to defer this til later if we are creating a user object!
+        setUser(newUser);
+        setSuccess(true);
+        return newUser;
+      })
+      .catch(error => {
+        window.log(`Error signing up!: ${JSON.stringify(error)}`);
+        setLoading(false);
+        setError(error);
+      })
+      .finally(setSuccess(false));
   };
 
   const confirmSignUp = async (email, password, confirmationCode) => {
     window.log(`Confirming sign up...`);
     setError(null);
     setLoading(true);
-
     try {
       await Auth.confirmSignUp(email, confirmationCode);
       window.log(`User confirmed! Attempting sign in...`);
     } catch (error) {
       window.log(`Failed to confirm signup!: ${JSON.stringify(error)}`);
-      setError(error);
-      //Only set loading to false if we  fail to confirm the user
       setLoading(false);
-      throw error;
+      setError(error);
     }
-
     try {
       const user = await Auth.signIn(email, password);
       window.log(`User confirmed AND signed in!`);
+      setLoading(false);
       setUser(user);
+      setSuccess(true);
     } catch (error) {
       window.log(
         `Error signing user in after confirming signUp!: ${JSON.stringify(
           error
         )}`
       );
-      setError(error);
-      throw error;
-    } finally {
-      // setSuccess(false);
       setLoading(false);
+      setError(error);
     }
   };
 
@@ -102,7 +101,6 @@ export const UserProvider = ({ children }) => {
         //Other checks
         setLoading(false);
         setError(error);
-        throw error;
       });
   };
 
@@ -167,6 +165,7 @@ export const UserProvider = ({ children }) => {
       user,
       error,
       loading,
+      success,
       login,
       logout,
       signUp,
@@ -174,7 +173,7 @@ export const UserProvider = ({ children }) => {
       forgotPassword,
       submitCodeAndNewPassword
     }),
-    [user, error, loading]
+    [user, error, loading, success]
   );
 
   //Finally, return the interface that we want to expose to our other components

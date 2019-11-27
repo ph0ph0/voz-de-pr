@@ -137,7 +137,7 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
       <Avatars api={api} />
       {api.error && <Error>{api.error.message}</Error>}
       <SignUpButton secondary onClick={api.submit}>
-        {api.loading ? <LoadingSpinner /> : "SIGN UP"}
+        {api.loading ? <LoadingSpinner /> "SIGN UP"}
       </SignUpButton>
       <BottomLineWrapper api={api} />
     </div>

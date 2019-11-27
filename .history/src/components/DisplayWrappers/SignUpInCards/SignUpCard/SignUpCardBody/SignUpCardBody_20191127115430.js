@@ -15,7 +15,6 @@ import Avatars from "../Avatars/Avatars";
 import ActionButton from "components/Primitive/General/ActionButton";
 import BottomLineWrapper from "./SignUpBottomLineWrapper";
 import Error from "components/Primitive/General/ErrorText";
-import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
 
 const ErrorText = styled(Error)`
   margin: 0px;
@@ -135,9 +134,9 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
       </AvatarInstructionSignUp>
 
       <Avatars api={api} />
-      {api.error && <Error>{api.error.message}</Error>}
+      {api.error && <ErrorText>{api.error.message}</ErrorText>}
       <SignUpButton secondary onClick={api.submit}>
-        {api.loading ? <LoadingSpinner /> : "SIGN UP"}
+        SIGN UP
       </SignUpButton>
       <BottomLineWrapper api={api} />
     </div>

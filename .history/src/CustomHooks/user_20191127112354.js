@@ -14,6 +14,8 @@ export const UserProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  //success is used in login, signUp and confirmSignUp to initiate naving away from the form when successful
 
   useEffect(() => {
     //Configure the keys needed for the Auth module
@@ -35,15 +37,17 @@ export const UserProvider = ({ children }) => {
     setLoading(true);
 
     try {
-      const newUser = await Auth.signUp(email, password);
-      window.log(`Signed Up! User: ${JSON.stringify(newUser)}`);
-      setUser(newUser); //Remember to create User object in database!
-    } catch (error) {
+      // const newUser = await Auth.signUp(email, password);
+      // window.log(`Signed Up! User: ${JSON.stringify(newUser)}`);
+      // setUser(newUser); //Remember to create User object in database!
+      // setSuccess(true);
+    } catch {
       window.log(`Error signing up!: ${JSON.stringify(error)}`);
       setError(error);
       throw error;
     } finally {
-      setLoading(false);
+      setSuccess(false);
+      setLoading(true);
     }
   };
 
@@ -67,6 +71,7 @@ export const UserProvider = ({ children }) => {
       const user = await Auth.signIn(email, password);
       window.log(`User confirmed AND signed in!`);
       setUser(user);
+      setSuccess(true);
     } catch (error) {
       window.log(
         `Error signing user in after confirming signUp!: ${JSON.stringify(
@@ -76,7 +81,7 @@ export const UserProvider = ({ children }) => {
       setError(error);
       throw error;
     } finally {
-      // setSuccess(false);
+      setSuccess(false);
       setLoading(false);
     }
   };
@@ -167,6 +172,7 @@ export const UserProvider = ({ children }) => {
       user,
       error,
       loading,
+      success,
       login,
       logout,
       signUp,
@@ -174,7 +180,7 @@ export const UserProvider = ({ children }) => {
       forgotPassword,
       submitCodeAndNewPassword
     }),
-    [user, error, loading]
+    [user, error, loading, success]
   );
 
   //Finally, return the interface that we want to expose to our other components

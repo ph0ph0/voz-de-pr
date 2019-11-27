@@ -24,9 +24,8 @@ const SignUpCardAPI = ({ state, setState }) => {
   const locationInputIsErrored = state.locationInputIsErrored;
   const passwordInputIsErrored = state.passwordInputIsErrored;
   const avatarInputIsErrored = state.avatarInputIsErrored;
-  const success = state.success;
 
-  const { signUp, error, loading } = useUser();
+  const { signUp, error, loading, success } = useUser();
 
   //Fires when the user types in the name field
   const updateFirstNameValue = newValue => {
@@ -261,18 +260,10 @@ const SignUpCardAPI = ({ state, setState }) => {
     }
 
     try {
-      await signUp(secondEmailValue, secondPasswordValue);
-    } catch (error) {
-      window.log(`Error caught in SignUpCardAPI: ${JSON.stringify(error)}`);
+      signUp(secondEmailValue, secondPasswordValue);
+    } catch {
       return;
     }
-
-    setState(prevState => {
-      return {
-        ...prevState,
-        success: true
-      };
-    });
 
     resetAll();
   };

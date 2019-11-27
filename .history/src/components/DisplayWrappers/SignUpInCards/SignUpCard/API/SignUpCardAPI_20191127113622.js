@@ -220,50 +220,49 @@ const SignUpCardAPI = ({ state, setState }) => {
     return locations.find(location => location.title === locationTitle);
   };
 
-  const submit = async () => {
+  const submit = () => {
     window.log("Submitting for signup...");
 
-    if (
-      inputsAreEmpty(
-        setState,
-        firstNameValue,
-        lastNameValue,
-        usernameValue,
-        firstEmailValue,
-        locationValue,
-        firstPasswordValue,
-        selectedAvatar
-      ) ||
-      !emailsMatch ||
-      !passwordsMatch
-    ) {
-      window.log("INPUTS WERE EMPTY OR EMAILS/PW DIDNT MATCH");
-      return;
-    }
+    // if (
+    //   inputsAreEmpty(
+    //     setState,
+    //     firstNameValue,
+    //     lastNameValue,
+    //     usernameValue,
+    //     firstEmailValue,
+    //     locationValue,
+    //     firstPasswordValue,
+    //     selectedAvatar
+    //   ) ||
+    //   !emailsMatch ||
+    //   !passwordsMatch
+    // ) {
+    //   window.log("INPUTS WERE EMPTY OR EMAILS/PW DIDNT MATCH");
+    //   return;
+    // }
 
-    //new location should be a location object, not the input text, as the object contained in the locations constant contains more info!
-    if (locationNotFound()) {
-      setState(prevState => {
-        return {
-          ...prevState,
-          locationInputIsErrored: true
-        };
-      });
-      return;
-    }
+    // //new location should be a location object, not the input text, as the object contained in the locations constant contains more info!
+    // if (locationNotFound()) {
+    //   setState(prevState => {
+    //     return {
+    //       ...prevState,
+    //       locationInputIsErrored: true
+    //     };
+    //   });
+    //   return;
+    // }
 
-    const locationObject = getLocationObject(selectedLocation);
-    if (!locationObject) {
-      window.log(`NO LOCATION OBJECT: ${locationObject}`);
-      return;
-    } else {
-      window.log(`Found Location Object: ${JSON.stringify(locationObject)}`);
-    }
+    // const locationObject = getLocationObject(selectedLocation);
+    // if (!locationObject) {
+    //   window.log(`NO LOCATION OBJECT: ${locationObject}`);
+    //   return;
+    // } else {
+    //   window.log(`Found Location Object: ${JSON.stringify(locationObject)}`);
+    // }
 
     try {
-      await signUp(secondEmailValue, secondPasswordValue);
-    } catch (error) {
-      window.log(`Error caught in SignUpCardAPI: ${JSON.stringify(error)}`);
+      signUp(secondEmailValue, secondPasswordValue);
+    } catch {
       return;
     }
 

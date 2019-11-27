@@ -220,7 +220,7 @@ const SignUpCardAPI = ({ state, setState }) => {
     return locations.find(location => location.title === locationTitle);
   };
 
-  const submit = async () => {
+  const submit = () => {
     window.log("Submitting for signup...");
 
     if (
@@ -261,7 +261,7 @@ const SignUpCardAPI = ({ state, setState }) => {
     }
 
     try {
-      await signUp(secondEmailValue, secondPasswordValue);
+      signUp(secondEmailValue, secondPasswordValue);
     } catch (error) {
       window.log(`Error caught in SignUpCardAPI: ${JSON.stringify(error)}`);
       return;

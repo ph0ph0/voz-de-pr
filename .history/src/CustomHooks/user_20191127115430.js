@@ -38,7 +38,7 @@ export const UserProvider = ({ children }) => {
       const newUser = await Auth.signUp(email, password);
       window.log(`Signed Up! User: ${JSON.stringify(newUser)}`);
       setUser(newUser); //Remember to create User object in database!
-    } catch (error) {
+    } catch {
       window.log(`Error signing up!: ${JSON.stringify(error)}`);
       setError(error);
       throw error;

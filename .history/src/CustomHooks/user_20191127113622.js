@@ -35,14 +35,15 @@ export const UserProvider = ({ children }) => {
     setLoading(true);
 
     try {
-      const newUser = await Auth.signUp(email, password);
-      window.log(`Signed Up! User: ${JSON.stringify(newUser)}`);
-      setUser(newUser); //Remember to create User object in database!
-    } catch (error) {
+      // const newUser = await Auth.signUp(email, password);
+      // window.log(`Signed Up! User: ${JSON.stringify(newUser)}`);
+      // setUser(newUser); //Remember to create User object in database!
+    } catch {
       window.log(`Error signing up!: ${JSON.stringify(error)}`);
       setError(error);
       throw error;
     } finally {
+      // setSuccess(false);
       setLoading(false);
     }
   };
@@ -53,7 +54,7 @@ export const UserProvider = ({ children }) => {
     setLoading(true);
 
     try {
-      await Auth.confirmSignUp(email, confirmationCode);
+      // await Auth.confirmSignUp(email, confirmationCode);
       window.log(`User confirmed! Attempting sign in...`);
     } catch (error) {
       window.log(`Failed to confirm signup!: ${JSON.stringify(error)}`);
@@ -64,9 +65,9 @@ export const UserProvider = ({ children }) => {
     }
 
     try {
-      const user = await Auth.signIn(email, password);
+      // const user = await Auth.signIn(email, password);
       window.log(`User confirmed AND signed in!`);
-      setUser(user);
+      // setUser(user);
     } catch (error) {
       window.log(
         `Error signing user in after confirming signUp!: ${JSON.stringify(
