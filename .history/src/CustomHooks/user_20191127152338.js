@@ -130,14 +130,6 @@ export const UserProvider = ({ children }) => {
         window.log(`Error Logging In!: ${JSON.stringify(error)}`);
         if (error.code === "UserNotFoundException") {
           error.message = "Invalid username or password";
-        } else if (
-          error.code === "InternalErrorException" ||
-          error.code === "InvalidLambdaResponseException" ||
-          error.code === "InvalidParameterException" ||
-          error.code === "UnexpectedLambdaException" ||
-          error.code === "UserLambdaValidationException"
-        ) {
-          error.message = "An internal error occured, please try again later";
         }
         //Other checks
         setLoading(false);
@@ -175,14 +167,6 @@ export const UserProvider = ({ children }) => {
         );
         if (error.code === "UserNotFoundException") {
           error.message = "User not found, please try a different email";
-        } else if (
-          error.code === "InternalErrorException" ||
-          error.code === "InvalidLambdaResponseException" ||
-          error.code === "InvalidParameterException" ||
-          error.code === "UnexpectedLambdaException" ||
-          error.code === "UserLambdaValidationException"
-        ) {
-          error.message = "An internal error occured, please try again later";
         }
         setError(error);
         throw error;

@@ -43,14 +43,6 @@ export const UserProvider = ({ children }) => {
       if (error.code === "InvalidParameterException") {
         error.message =
           "Please ensure that your password has more than 6 characters";
-      } else if (
-        error.code === "InternalErrorException" ||
-        error.code === "InvalidLambdaResponseException" ||
-        error.code === "InvalidParameterException" ||
-        error.code === "UnexpectedLambdaException" ||
-        error.code === "UserLambdaValidationException"
-      ) {
-        error.message = "An internal error occured, please try again later";
       }
       setError(error);
       throw error;
@@ -63,23 +55,12 @@ export const UserProvider = ({ children }) => {
     window.log(`Confirming sign up...`);
     setError(null);
     setLoading(true);
-    window.log(`confirmation code in user hook: ${confirmationCode}`);
+    window.log(`confirmation code: ${confirmationCode}`);
     try {
       await Auth.confirmSignUp(email, confirmationCode);
       window.log(`User confirmed! Attempting sign in...`);
     } catch (error) {
       window.log(`Failed to confirm signup!: ${JSON.stringify(error)}`);
-      if (error.code === "AliasExistsException") {
-        error.message = "This account has already been confirmed";
-      } else if (
-        error.code === "InternalErrorException" ||
-        error.code === "InvalidLambdaResponseException" ||
-        error.code === "InvalidParameterException" ||
-        error.code === "UnexpectedLambdaException" ||
-        error.code === "UserLambdaValidationException"
-      ) {
-        error.message = "An internal error occured, please try again later";
-      }
       setError(error);
       //Only set loading to false if we  fail to confirm the user
       setLoading(false);
@@ -96,15 +77,6 @@ export const UserProvider = ({ children }) => {
           error
         )}`
       );
-      if (
-        error.code === "InternalErrorException" ||
-        error.code === "InvalidLambdaResponseException" ||
-        error.code === "InvalidParameterException" ||
-        error.code === "UnexpectedLambdaException" ||
-        error.code === "UserLambdaValidationException"
-      ) {
-        error.message = "An internal error occured, please try again later";
-      }
       setError(error);
       throw error;
     } finally {
@@ -130,14 +102,6 @@ export const UserProvider = ({ children }) => {
         window.log(`Error Logging In!: ${JSON.stringify(error)}`);
         if (error.code === "UserNotFoundException") {
           error.message = "Invalid username or password";
-        } else if (
-          error.code === "InternalErrorException" ||
-          error.code === "InvalidLambdaResponseException" ||
-          error.code === "InvalidParameterException" ||
-          error.code === "UnexpectedLambdaException" ||
-          error.code === "UserLambdaValidationException"
-        ) {
-          error.message = "An internal error occured, please try again later";
         }
         //Other checks
         setLoading(false);
@@ -175,14 +139,6 @@ export const UserProvider = ({ children }) => {
         );
         if (error.code === "UserNotFoundException") {
           error.message = "User not found, please try a different email";
-        } else if (
-          error.code === "InternalErrorException" ||
-          error.code === "InvalidLambdaResponseException" ||
-          error.code === "InvalidParameterException" ||
-          error.code === "UnexpectedLambdaException" ||
-          error.code === "UserLambdaValidationException"
-        ) {
-          error.message = "An internal error occured, please try again later";
         }
         setError(error);
         throw error;

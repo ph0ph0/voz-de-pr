@@ -42,7 +42,6 @@ const ConfirmSignUpCardBodyWrapper = withRouter(
           value={api.codeValue}
           onChange={event => api.updateCodeValue(event.target.value)}
           placeholder={"Confirmation Code"}
-          type="number"
         />
         {api.error && <Error>{api.error.message}</Error>}
         <ActionButton

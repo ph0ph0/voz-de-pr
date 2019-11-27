@@ -1,7 +1,7 @@
 import { useUser } from "../../../../../CustomHooks/user";
 
 const SignInCardApi = ({ state, setState }) => {
-  const codeValue = state.codeValue;
+  const codeValue = state.emailValue;
   const success = state.success;
 
   const { confirmSignUp, error, loading } = useUser();
@@ -17,7 +17,6 @@ const SignInCardApi = ({ state, setState }) => {
   };
 
   const submit = async (email, password) => {
-    window.log(`codeValue in API: ${codeValue}`);
     try {
       await confirmSignUp(email, password, codeValue);
     } catch {
