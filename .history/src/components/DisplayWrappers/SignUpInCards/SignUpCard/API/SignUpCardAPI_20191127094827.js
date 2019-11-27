@@ -1,4 +1,4 @@
-import { locations } from "Constants/Constants";
+import { locations } from "../../../../../Constants/Constants";
 import { inputsAreEmpty } from "./utils/InputsAreEmpty";
 
 import { useUser } from "CustomHooks/user";

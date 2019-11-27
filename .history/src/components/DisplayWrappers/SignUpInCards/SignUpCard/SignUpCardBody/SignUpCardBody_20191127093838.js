@@ -3,16 +3,16 @@ import styled from "styled-components";
 
 import { SignUpInCardApiPropTypes } from "../API/proptypes/SignUpCardApiPropTypes";
 
-import TextField from "components/Primitive/SignUpCard/SignUpCardTextInput";
+import TextField from "src/components/Primitive/SignUpCard/SignUpCardTextInput";
 import DropDown from "../DropDown/DropDown";
-import PasswordField from "components/Primitive/SignUpCard/PasswordField.js";
-import EmailField from "components/Primitive/SignUpCard/EmailField";
-import Logo from "components/Primitive/SignUpCard/SignUpLogo";
-import AvatarInstruction from "components/Primitive/SidePanel_Profile/Avatars/AvatarInstruction";
+import PasswordField from "../../../../Primitive/SignUpCard/PasswordField.js";
+import EmailField from "../../../../Primitive/SignUpCard/EmailField";
+import Logo from "../../../../Primitive/SignUpCard/SignUpLogo";
+import AvatarInstruction from "../../../../Primitive/SidePanel_Profile/Avatars/AvatarInstruction";
 import Avatars from "../Avatars/Avatars";
-import ActionButton from "components/Primitive/General/ActionButton";
+import ActionButton from "../../../../Primitive/General/ActionButton";
 import BottomLineWrapper from "./SignUpBottomLineWrapper";
-import Error from "components/Primitive/General/ErrorText";
+import Error from "../../../../Primitive/General/ErrorText";
 
 const ErrorText = styled(Error)`
   margin: 0px;

@@ -12,7 +12,7 @@ import AvatarInstruction from "components/Primitive/SidePanel_Profile/Avatars/Av
 import Avatars from "../Avatars/Avatars";
 import ActionButton from "components/Primitive/General/ActionButton";
 import BottomLineWrapper from "./SignUpBottomLineWrapper";
-import Error from "components/Primitive/General/ErrorText";
+import Error from "componentss/Primitive/General/ErrorText";
 
 const ErrorText = styled(Error)`
   margin: 0px;
