@@ -89,21 +89,17 @@ describe("Input validation", () => {
 });
 
 describe("After valid email and password added", () => {
+  const { getByTestId, queryByText, debug } = render(
+    <ThemeProvider theme={theme}>
+      <Router>
+        <SignIn />
+      </Router>
+    </ThemeProvider>
+  );
   it("segues to main feed", async () => {
-    const { getByTestId, queryByText, debug } = render(
-      <ThemeProvider theme={theme}>
-        <Router>
-          <SignIn />
-        </Router>
-      </ThemeProvider>
-    );
     const emailInput = getByTestId("EmailInput");
     const passwordInput = getByTestId("PasswordInput");
     const submitButton = getByTestId("SignInButton");
-
-    expect(emailInput).toBeInTheDocument();
-    expect(passwordInput).toBeInTheDocument();
-    expect(submitButton).toBeInTheDocument();
 
     fireEvent.change(emailInput, {
       target: { value: "test@test.com" }
@@ -112,7 +108,9 @@ describe("After valid email and password added", () => {
       target: { value: "1234567890" }
     });
 
-    fireEvent.click(submitButton);
+    act(() => {
+      fireEvent.click(submitButton);
+    });
 
     await wait();
 

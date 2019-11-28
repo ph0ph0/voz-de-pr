@@ -105,12 +105,11 @@ describe("After valid email and password added", () => {
     expect(passwordInput).toBeInTheDocument();
     expect(submitButton).toBeInTheDocument();
 
-    fireEvent.change(emailInput, {
-      target: { value: "test@test.com" }
-    });
-    fireEvent.change(passwordInput, {
-      target: { value: "1234567890" }
-    });
+    emailInput.value = "test@test.com";
+    passwordInput.value = "1234567890";
+
+    fireEvent.change(emailInput);
+    fireEvent.change(passwordInput);
 
     fireEvent.click(submitButton);
 

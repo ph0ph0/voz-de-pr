@@ -1,5 +1,3 @@
-//THESE TESTS ARE BACKUPS. THE MAIN ONES ARE IN THE PAGES FOLDER AS THEY DON"T TEST IMPLEMENTATION DETAILS!
-
 import { cleanup } from "@testing-library/react";
 import { locations } from "../../../../../../Constants/Constants";
 
@@ -283,31 +281,31 @@ describe("Submission helpers", () => {
     );
   });
 
-  //   it("clears all inputs on submit", () => {
-  //     mockApi.api.updateFirstNameValue("TEST");
-  //     mockApi.api.updateLastNameValue("TEST");
-  //     mockApi.api.updateUsernameValue("TEST");
-  //     mockApi.api.updateFirstEmailValue("TEST");
-  //     mockApi.api.updateSecondEmailValue("TEST");
-  //     mockApi.api.updateFirstPasswordValue("TEST");
-  //     mockApi.api.updateSecondPasswordValue("TEST");
-  //     mockApi.api.toggleList();
-  //     mockApi.api.onLocationSelected(locations[0].title);
-  //     mockApi.api.onClickAv(1);
-  //     mockApi.api.submit();
+//   it("clears all inputs on submit", () => {
+//     mockApi.api.updateFirstNameValue("TEST");
+//     mockApi.api.updateLastNameValue("TEST");
+//     mockApi.api.updateUsernameValue("TEST");
+//     mockApi.api.updateFirstEmailValue("TEST");
+//     mockApi.api.updateSecondEmailValue("TEST");
+//     mockApi.api.updateFirstPasswordValue("TEST");
+//     mockApi.api.updateSecondPasswordValue("TEST");
+//     mockApi.api.toggleList();
+//     mockApi.api.onLocationSelected(locations[0].title);
+//     mockApi.api.onClickAv(1);
+//     mockApi.api.submit();
 
-  //     expect(mockApi.api.firstNameValue).toEqual("");
-  //     expect(mockApi.api.lastNameValue).toEqual("");
-  //     expect(mockApi.api.usernameValue).toEqual("");
-  //     expect(mockApi.api.firstEmailValue).toEqual("");
-  //     expect(mockApi.api.secondEmailValue).toEqual("");
-  //     expect(mockApi.api.locationValue).toEqual("");
-  //     expect(mockApi.api.selectedLocation).toEqual(null);
-  //     expect(mockApi.api.firstPasswordValue).toEqual("");
-  //     expect(mockApi.api.secondPasswordValue).toEqual("");
-  //     expect(mockApi.api.selectedAvatar).toEqual(null);
-  //   });
-});
+//     expect(mockApi.api.firstNameValue).toEqual("");
+//     expect(mockApi.api.lastNameValue).toEqual("");
+//     expect(mockApi.api.usernameValue).toEqual("");
+//     expect(mockApi.api.firstEmailValue).toEqual("");
+//     expect(mockApi.api.secondEmailValue).toEqual("");
+//     expect(mockApi.api.locationValue).toEqual("");
+//     expect(mockApi.api.selectedLocation).toEqual(null);
+//     expect(mockApi.api.firstPasswordValue).toEqual("");
+//     expect(mockApi.api.secondPasswordValue).toEqual("");
+//     expect(mockApi.api.selectedAvatar).toEqual(null);
+//   });
+// });
 
 // describe("Switching panels", () => {
 //   it("clears all inputs when user switches panel type", () => {

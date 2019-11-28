@@ -101,10 +101,6 @@ describe("After valid email and password added", () => {
     const passwordInput = getByTestId("PasswordInput");
     const submitButton = getByTestId("SignInButton");
 
-    expect(emailInput).toBeInTheDocument();
-    expect(passwordInput).toBeInTheDocument();
-    expect(submitButton).toBeInTheDocument();
-
     fireEvent.change(emailInput, {
       target: { value: "test@test.com" }
     });

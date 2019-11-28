@@ -9,7 +9,7 @@ import SideGraphic from "./SignUpCardBody/SignUpSideGraphic";
 const SignUpCard = ({ api }) => {
   return (
     <SignUpInCardLayout>
-      <SideGraphic />
+      {/* <SideGraphic /> */}
       <SignUpCardBody api={api} />
     </SignUpInCardLayout>
   );

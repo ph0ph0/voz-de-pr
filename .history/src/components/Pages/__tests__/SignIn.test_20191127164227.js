@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent, cleanup, act, wait } from "@testing-library/react";
+import { render, fireEvent, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 
 import SignIn from "../SignIn";
@@ -21,33 +21,35 @@ jest.mock("CustomHooks/user", () => ({
   })
 }));
 
-describe("render test", () => {
-  it("renders", () => {
-    const { getByTestId } = render(
+it("renders", () => {
+  const { getByTestId } = render(
+    <UserProvider>
       <ThemeProvider theme={theme}>
         <Router>
           <SignIn />
         </Router>
       </ThemeProvider>
-    );
-    const emailInput = getByTestId("EmailInput");
-    const passwordInput = getByTestId("PasswordInput");
-    const submitButton = getByTestId("SignInButton");
+    </UserProvider>
+  );
+  const emailInput = getByTestId("EmailInput");
+  const passwordInput = getByTestId("PasswordInput");
+  const submitButton = getByTestId("SignInButton");
 
-    expect(emailInput).toBeInTheDocument();
-    expect(passwordInput).toBeInTheDocument();
-    expect(submitButton).toBeInTheDocument();
-  });
+  expect(emailInput).toBeInTheDocument();
+  expect(passwordInput).toBeInTheDocument();
+  expect(submitButton).toBeInTheDocument();
 });
 
 describe("Input validation", () => {
   it("Indicates that email must be entered to login", () => {
     const { getByTestId, queryByText } = render(
-      <ThemeProvider theme={theme}>
-        <Router>
-          <SignIn />
-        </Router>
-      </ThemeProvider>
+      <UserProvider>
+        <ThemeProvider theme={theme}>
+          <Router>
+            <SignIn />
+          </Router>
+        </ThemeProvider>
+      </UserProvider>
     );
 
     fireEvent.change(getByTestId("EmailInput"), { target: { value: "" } });
@@ -65,11 +67,13 @@ describe("Input validation", () => {
 
   it("Indicates that password must be entered to login", () => {
     const { getByTestId, queryByText } = render(
-      <ThemeProvider theme={theme}>
-        <Router>
-          <SignIn />
-        </Router>
-      </ThemeProvider>
+      <UserProvider>
+        <ThemeProvider theme={theme}>
+          <Router>
+            <SignIn />
+          </Router>
+        </ThemeProvider>
+      </UserProvider>
     );
 
     fireEvent.change(getByTestId("EmailInput"), {
@@ -88,34 +92,25 @@ describe("Input validation", () => {
   });
 });
 
-describe("After valid email and password added", () => {
-  it("segues to main feed", async () => {
-    const { getByTestId, queryByText, debug } = render(
+describe("After valid email and password added, it segues to main feed", () => {
+  const { getByTestId, queryByText, debug } = render(
+    <UserProvider>
       <ThemeProvider theme={theme}>
         <Router>
           <SignIn />
         </Router>
       </ThemeProvider>
-    );
-    const emailInput = getByTestId("EmailInput");
-    const passwordInput = getByTestId("PasswordInput");
-    const submitButton = getByTestId("SignInButton");
+    </UserProvider>
+  );
 
-    expect(emailInput).toBeInTheDocument();
-    expect(passwordInput).toBeInTheDocument();
-    expect(submitButton).toBeInTheDocument();
-
-    fireEvent.change(emailInput, {
-      target: { value: "test@test.com" }
-    });
-    fireEvent.change(passwordInput, {
-      target: { value: "1234567890" }
-    });
-
-    fireEvent.click(submitButton);
-
-    await wait();
-
-    debug();
+  fireEvent.change(getByTestId("EmailInput"), {
+    target: { value: "test@test.com" }
   });
+  fireEvent.change(getByTestId("PasswordInput"), {
+    target: { value: "1234567890" }
+  });
+
+  fireEvent.click(getByTestId("SignInButton"));
+
+  debug();
 });

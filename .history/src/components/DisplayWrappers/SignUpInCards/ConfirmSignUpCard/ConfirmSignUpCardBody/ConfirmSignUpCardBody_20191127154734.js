@@ -40,7 +40,6 @@ const ConfirmSignUpCardBodyWrapper = withRouter(
         />
         {api.error && <Error>{api.error.message}</Error>}
         <ActionButton
-          data-testid="submitButton"
           onClick={() =>
             api.submit(
               props.location.state.email,

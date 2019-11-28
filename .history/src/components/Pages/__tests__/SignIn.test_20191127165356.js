@@ -97,13 +97,10 @@ describe("After valid email and password added", () => {
         </Router>
       </ThemeProvider>
     );
+    debug();
     const emailInput = getByTestId("EmailInput");
     const passwordInput = getByTestId("PasswordInput");
     const submitButton = getByTestId("SignInButton");
-
-    expect(emailInput).toBeInTheDocument();
-    expect(passwordInput).toBeInTheDocument();
-    expect(submitButton).toBeInTheDocument();
 
     fireEvent.change(emailInput, {
       target: { value: "test@test.com" }
@@ -112,10 +109,10 @@ describe("After valid email and password added", () => {
       target: { value: "1234567890" }
     });
 
-    fireEvent.click(submitButton);
+    act(() => {
+      fireEvent.click(submitButton);
+    });
 
     await wait();
-
-    debug();
   });
 });

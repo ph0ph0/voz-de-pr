@@ -1,5 +1,3 @@
-//THESE TESTS ARE BACKUPS. THE MAIN ONES ARE IN THE PAGES FOLDER AS THEY DON"T TEST IMPLEMENTATION DETAILS!
-
 import { cleanup } from "@testing-library/react";
 import { locations } from "../../../../../../Constants/Constants";
 

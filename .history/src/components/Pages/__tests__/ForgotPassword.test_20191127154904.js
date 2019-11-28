@@ -21,6 +21,11 @@ afterEach(cleanup);
 //Allows us to ignore window . log calls
 global.log = () => {};
 
+//Used to ensure that any test code that depends on async code in the Api is ran on the following event loop
+function flushPromises() {
+  return new Promise(resolve => setImmediate(resolve));
+}
+
 it("renders email content initially", () => {
   const { getByTestId } = render(
     <ThemeProvider theme={theme}>

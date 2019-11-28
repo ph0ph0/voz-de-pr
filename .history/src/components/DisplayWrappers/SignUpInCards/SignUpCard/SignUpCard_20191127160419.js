@@ -6,17 +6,17 @@ import SignUpInCardLayout from "../General/SignUpInCardLayout";
 import SignUpCardBody from "./SignUpCardBody/SignUpCardBody";
 import SideGraphic from "./SignUpCardBody/SignUpSideGraphic";
 
-const SignUpCard = ({ api }) => {
+const SignUpInCard = ({ api }) => {
   return (
     <SignUpInCardLayout>
-      <SideGraphic />
+      {/* <SideGraphic /> */}
       <SignUpCardBody api={api} />
     </SignUpInCardLayout>
   );
 };
 
-SignUpCard.propTypes = {
+SignUpInCard.propTypes = {
   api: SignUpInCardApiPropTypes
 };
 
-export default SignUpCard;
+export default SignUpInCard;

@@ -3,11 +3,11 @@ import styled from "styled-components";
 
 import { useHistory, withRouter } from "react-router-dom";
 
-import Logo from "components/Primitive/SignInCard/SignInLogo";
-import EmailField from "components/Primitive/SignInCard/EmailField";
-import ActionButton from "components/Primitive/General/ActionButton";
-import Error from "components/Primitive/General/ErrorText";
-import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
+import Logo from "../../../../Primitive/SignInCard/SignInLogo";
+import EmailField from "../../../../Primitive/SignInCard/EmailField";
+import ActionButton from "../../../../Primitive/General/ActionButton";
+import Error from "../../../../Primitive/General/ErrorText";
+import LoadingSpinner from "../../../../Primitive/General/LoadingSpinner";
 
 const Info = styled.p`
   color: rgba(0, 0, 0, 0.54);
@@ -40,7 +40,6 @@ const ConfirmSignUpCardBodyWrapper = withRouter(
         />
         {api.error && <Error>{api.error.message}</Error>}
         <ActionButton
-          data-testid="submitButton"
           onClick={() =>
             api.submit(
               props.location.state.email,
