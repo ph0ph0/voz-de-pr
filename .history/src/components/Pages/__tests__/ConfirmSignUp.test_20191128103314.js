@@ -46,8 +46,8 @@ describe("Presenting input errors to the user", () => {
     );
     expect(Info).toBeInTheDocument();
 
-    // fireEvent.click(submitButton);
+    fireEvent.click(submitButton);
 
-    // debug(ConfirmSignUpCard);
+    debug(ConfirmSignUpCard);
   });
 });

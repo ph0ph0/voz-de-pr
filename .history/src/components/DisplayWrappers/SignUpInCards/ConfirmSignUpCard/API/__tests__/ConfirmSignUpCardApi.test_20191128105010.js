@@ -1,0 +1,36 @@
+import api from "../ConfirmSignUpCardAPI";
+import { cleanup } from "@testing-library/react";
+
+afterEach(cleanup);
+
+jest.mock("CustomHooks/user", () => ({
+  useUser: () => ({
+    error: null,
+    loading: false,
+    forgotPassword: () => {},
+    submitCodeAndNewPassword: () => {}
+  })
+}));
+
+const state = {
+  codeValue: "",
+  success: false
+};
+
+const useApiMock = (api, defaultValue) => {
+  let state = defaultValue;
+  let setState = updater => {
+    if (typeof updater === "function") {
+      state = updater(state);
+    } else {
+      state = updater;
+    }
+    ref.api = api({ state, setState });
+  };
+  let ref = {
+    api: api({ state, setState })
+  };
+  return ref;
+};
+
+const mockApi = useApiMock(SignInCardAPI, state);

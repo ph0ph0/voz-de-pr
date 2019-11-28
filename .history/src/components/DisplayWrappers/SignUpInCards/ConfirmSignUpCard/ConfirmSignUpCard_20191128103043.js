@@ -10,7 +10,7 @@ const ConfirmSignUpCardWrapper = ({ api, ...props }) => {
     <div {...props}>
       <SignUpInLayout>
         <SideGraphic />
-        <ConfirmSignUpCardBody data-testid="ConfirmSignUpCardBody" api={api} />
+        <ConfirmSignUpCardBody data-test-id="ConfirmSignUpCardBody" api={api} />
       </SignUpInLayout>
     </div>
   );
