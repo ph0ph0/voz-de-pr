@@ -266,8 +266,7 @@ const SignUpCardAPI = ({ state, setState }) => {
         secondPasswordValue,
         usernameValue,
         firstNameValue,
-        lastNameValue,
-        selectedLocation
+        lastNameValue
       );
     } catch (error) {
       window.log(`Error caught in SignUpCardAPI: ${JSON.stringify(error)}`);

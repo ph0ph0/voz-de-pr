@@ -32,14 +32,7 @@ export const UserProvider = ({ children }) => {
   }, []);
 
   //Remember to update the current logged in user!
-  const signUp = async (
-    email,
-    password,
-    username,
-    firstName,
-    lastName,
-    location
-  ) => {
+  const signUp = async (email, password) => {
     window.log(`Signing up...`);
     setError(null);
     setLoading(true);
@@ -47,7 +40,13 @@ export const UserProvider = ({ children }) => {
     //CHECK USERNAME IS UNIQUE!
 
     try {
-      const cognitoUser = await Auth.signUp(email, password);
+      const cognitoUser = await Auth.signUp(
+        email,
+        password,
+        username,
+        firstName,
+        lastName
+      );
       window.log(`Signed Up! User: ${JSON.stringify(cognitoUser)}`);
       const userObject = {
         id: cognitoUser.userSub,

@@ -32,14 +32,7 @@ export const UserProvider = ({ children }) => {
   }, []);
 
   //Remember to update the current logged in user!
-  const signUp = async (
-    email,
-    password,
-    username,
-    firstName,
-    lastName,
-    location
-  ) => {
+  const signUp = async (email, password, username, firstName, lastName) => {
     window.log(`Signing up...`);
     setError(null);
     setLoading(true);

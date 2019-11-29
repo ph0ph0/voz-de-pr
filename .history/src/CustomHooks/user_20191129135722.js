@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useContext } from "react";
 import { Auth } from "aws-amplify";
 import awsMobile from "../aws-exports";
-import { getUserObject, createUserObject } from "./useUpdateUserObject";
+import { getUserObject } from "./useUpdateUserObject";
 
 //Create context to hold values that we will expose to our components.
 // Don't worry about null, as it will be populated instantly by the component below
@@ -32,33 +32,16 @@ export const UserProvider = ({ children }) => {
   }, []);
 
   //Remember to update the current logged in user!
-  const signUp = async (
-    email,
-    password,
-    username,
-    firstName,
-    lastName,
-    location
-  ) => {
+  const signUp = async (email, password) => {
     window.log(`Signing up...`);
     setError(null);
     setLoading(true);
 
-    //CHECK USERNAME IS UNIQUE!
-
     try {
-      const cognitoUser = await Auth.signUp(email, password);
-      window.log(`Signed Up! User: ${JSON.stringify(cognitoUser)}`);
-      const userObject = {
-        id: cognitoUser.userSub,
-        username: username,
-        firstName: firstName,
-        lastName: lastName,
-        voiceNumber: 1,
-        email: email,
-        location: location
-      };
-      const newUser = await createUserObject(userObject);
+      const newUser = await Auth.signUp(email, password);
+      window.log(`Signed Up! User: ${JSON.stringify(newUser)}`);
+      const username = newUser.user.username;
+      window.log(`!@!@!@!@Username: ${username}`);
       setUser(newUser); //Remember to create User object in database!
     } catch (error) {
       window.log(`Error signing up!: ${JSON.stringify(error)}`);
