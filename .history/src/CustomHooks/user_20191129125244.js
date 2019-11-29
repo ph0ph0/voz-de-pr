@@ -20,8 +20,6 @@ export const UserProvider = ({ children }) => {
     //Configure the keys needed for the Auth module
     Auth.configure(awsMobile);
 
-    Auth.signOut();
-
     //Attempt to fetch the current user and set it
     Auth.currentAuthenticatedUser()
       .then(user => setUser(user))
@@ -124,13 +122,11 @@ export const UserProvider = ({ children }) => {
     setLoading(true);
     try {
       const cognitoUser = await Auth.signIn(email, password);
+      setUser(cognitoUser);
       window.log("Logged user in");
       const userId = cognitoUser.username;
-      const userObjectData = await getUserObject(userId);
-      window.log(
-        `Logged in and got userObject: ${JSON.stringify(userObjectData)}`
-      );
-      setUser(userObjectData.data.getUser);
+      const userObject = await getUserObject(userId);
+      window.log(`Logged in and got userObject: ${userObject}`);
     } catch (error) {
       window.log(`Error logging in or getting user object: ${error.message}`);
       if (user) {
@@ -139,7 +135,7 @@ export const UserProvider = ({ children }) => {
             setUser(null);
           })
           .catch(error => {
-            window.log(`Error signing out after error logging in ${error}`);
+            window.log(`Error signing out after error logging in`);
           });
       }
       if (error.code === "UserNotFoundException") {

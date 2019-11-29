@@ -20,8 +20,6 @@ export const UserProvider = ({ children }) => {
     //Configure the keys needed for the Auth module
     Auth.configure(awsMobile);
 
-    Auth.signOut();
-
     //Attempt to fetch the current user and set it
     Auth.currentAuthenticatedUser()
       .then(user => setUser(user))
@@ -122,43 +120,37 @@ export const UserProvider = ({ children }) => {
     window.log("Logging in...");
     setError(null);
     setLoading(true);
-    try {
-      const cognitoUser = await Auth.signIn(email, password);
-      window.log("Logged user in");
-      const userId = cognitoUser.username;
-      const userObjectData = await getUserObject(userId);
-      window.log(
-        `Logged in and got userObject: ${JSON.stringify(userObjectData)}`
-      );
-      setUser(userObjectData.data.getUser);
-    } catch (error) {
-      window.log(`Error logging in or getting user object: ${error.message}`);
-      if (user) {
-        await Auth.signOut()
-          .then(() => {
-            setUser(null);
-          })
-          .catch(error => {
-            window.log(`Error signing out after error logging in ${error}`);
-          });
-      }
-      if (error.code === "UserNotFoundException") {
-        error.message = "Invalid username or password";
-      } else if (
-        error.code === "InternalErrorException" ||
-        error.code === "InvalidLambdaResponseException" ||
-        error.code === "InvalidParameterException" ||
-        error.code === "UnexpectedLambdaException" ||
-        error.code === "UserLambdaValidationException"
-      ) {
-        error.message = "An internal error occured, please try again later";
-      }
-      setLoading(false);
-      setError(error);
-      throw error;
-    } finally {
-      setLoading(false);
-    }
+    // try {
+    //   const cognitoUser = await Auth.signIn(email, password)
+    //   const userObject = await getUserObject(id)
+    // } catch (error) {
+
+    // }
+    await Auth.signIn(email, password)
+      .then(cognitoUser => {
+        window.log("Logged In!");
+        setLoading(false); //May want to retrieve our custom user object from our server!
+        setUser(cognitoUser);
+        return cognitoUser;
+      })
+      .catch(error => {
+        window.log(`Error Logging In!: ${JSON.stringify(error)}`);
+        if (error.code === "UserNotFoundException") {
+          error.message = "Invalid username or password";
+        } else if (
+          error.code === "InternalErrorException" ||
+          error.code === "InvalidLambdaResponseException" ||
+          error.code === "InvalidParameterException" ||
+          error.code === "UnexpectedLambdaException" ||
+          error.code === "UserLambdaValidationException"
+        ) {
+          error.message = "An internal error occured, please try again later";
+        }
+        //Other checks
+        setLoading(false);
+        setError(error);
+        throw error;
+      });
   };
 
   const logout = async () => {
