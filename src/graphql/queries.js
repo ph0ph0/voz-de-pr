@@ -65,6 +65,43 @@ export const listUsers = `query ListUsers(
   }
 }
 `;
+export const findUsername = `query FindUsername(
+  $username: String
+  $sortDirection: ModelSortDirection
+  $filter: ModelUserFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  findUsername(
+    username: $username
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      username
+      firstName
+      lastName
+      voiceNumber
+      email
+      avatar {
+        bucket
+        region
+        key
+      }
+      location
+      createdAt
+      updatedAt
+      subjects {
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+`;
 export const listSubjects = `query ListSubjects(
   $filter: ModelSubjectFilterInput
   $limit: Int
