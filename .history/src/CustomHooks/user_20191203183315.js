@@ -46,6 +46,8 @@ export const UserProvider = ({ children }) => {
 
     //CHECK USERNAME IS UNIQUE!
 
+    var userObject = null;
+
     try {
       const cognitoUser = await Auth.signUp({
         username: email,
@@ -53,7 +55,7 @@ export const UserProvider = ({ children }) => {
         attributes: { "custom:submittedUsername": username }
       });
       window.log(`Signed Up! User: ${JSON.stringify(cognitoUser)}`);
-      const userObject = {
+      userObject = {
         id: cognitoUser.userSub,
         username: username,
         firstName: firstName,
@@ -62,8 +64,6 @@ export const UserProvider = ({ children }) => {
         email: email,
         location: location
       };
-      const newUser = await createUserObject(userObject);
-      setUser(newUser);
     } catch (error) {
       window.log(`Error signing up!: ${JSON.stringify(error)}`);
       if (error.code === "InvalidParameterException") {
@@ -83,6 +83,14 @@ export const UserProvider = ({ children }) => {
       ) {
         error.message = "An internal error occured, please try again later";
       }
+      setError(error);
+      throw error;
+    }
+    try {
+      const newUser = await createUserObject(userObject);
+      setUser(newUser);
+    } catch (error) {
+      window.log(`Error creating User Object during signup: ${error}`);
       setError(error);
       throw error;
     } finally {

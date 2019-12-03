@@ -1,6 +1,6 @@
 {
     "identityPoolName": "vozdepr2708a77d_identitypool_2708a77d",
-    "allowUnauthenticatedIdentities": true,
+    "allowUnauthenticatedIdentities": false,
     "resourceNameTruncated": "vozdep2708a77d",
     "userPoolName": "vozdepr2708a77d_userpool_2708a77d",
     "autoVerifiedAttributes": [
@@ -53,7 +53,7 @@
             "Arn"
         ]
     },
-    "useDefault": "manual",
+    "useDefault": "default",
     "usernameAttributes": [
         "email"
     ],
@@ -75,6 +75,5 @@
             ]
         }
     ],
-    "hostedUI": false,
-    "thirdPartyAuth": false
+    "hostedUI": false
 }

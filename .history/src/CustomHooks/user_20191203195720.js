@@ -62,6 +62,7 @@ export const UserProvider = ({ children }) => {
         email: email,
         location: location
       };
+      window.log(`currentAuth: ${cU}`);
       const newUser = await createUserObject(userObject);
       setUser(newUser);
     } catch (error) {

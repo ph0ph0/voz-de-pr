@@ -61,7 +61,8 @@
             "function": {
                 "vozdepr2708a77dPostConfirmation": {
                     "GROUP": "everyone"
-                }
+                },
+                "vozdepr2708a77dPreSignup": {}
             }
         }
     }

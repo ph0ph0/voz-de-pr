@@ -46,11 +46,13 @@ export const UserProvider = ({ children }) => {
 
     //CHECK USERNAME IS UNIQUE!
 
+    const submittedUsername = "pTestUserAfdg";
+
     try {
       const cognitoUser = await Auth.signUp({
         username: email,
         password: password,
-        attributes: { "custom:submittedUsername": username }
+        attributes: { "custom:submittedUsername": submittedUsername }
       });
       window.log(`Signed Up! User: ${JSON.stringify(cognitoUser)}`);
       const userObject = {
@@ -63,7 +65,7 @@ export const UserProvider = ({ children }) => {
         location: location
       };
       const newUser = await createUserObject(userObject);
-      setUser(newUser);
+      setUser(newUser); //Remember to create User object in database!
     } catch (error) {
       window.log(`Error signing up!: ${JSON.stringify(error)}`);
       if (error.code === "InvalidParameterException") {

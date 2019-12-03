@@ -46,48 +46,97 @@ export const UserProvider = ({ children }) => {
 
     //CHECK USERNAME IS UNIQUE!
 
-    try {
-      const cognitoUser = await Auth.signUp({
-        username: email,
-        password: password,
-        attributes: { "custom:submittedUsername": username }
+    Auth.signUp({
+      username: email,
+      password: password,
+      attributes: { "custom:submittedUsername": username }
+    })
+      .then(cognitoUser => {
+        const userObject = {
+          id: cognitoUser.userSub,
+          username: username,
+          firstName: firstName,
+          lastName: lastName,
+          voiceNumber: 1,
+          email: email,
+          location: location
+        };
+        return new Promise((resolve, reject) => {
+          resolve(createUserObject(userObject));
+        });
+      })
+      .then(user => {
+        setUser(user);
+      })
+      .catch(error => {
+        window.log(`Error signing up!: ${JSON.stringify(error)}`);
+        if (error.code === "InvalidParameterException") {
+          error.message =
+            "Please ensure that your password has more than 6 characters";
+        } else if (
+          error.code === "UserLambdaValidationException" &&
+          error.message ==
+            "PreSignUp failed with error Username already exists!."
+        ) {
+          error.message = "Username already exists";
+        } else if (
+          error.code === "InternalErrorException" ||
+          error.code === "InvalidLambdaResponseException" ||
+          error.code === "InvalidParameterException" ||
+          error.code === "UnexpectedLambdaException" ||
+          error.code === "UserLambdaValidationException"
+        ) {
+          error.message = "An internal error occured, please try again later";
+        }
+        setError(error);
+        setLoading(false);
+        throw error;
+      })
+      .finally(() => {
+        setLoading(false);
       });
-      window.log(`Signed Up! User: ${JSON.stringify(cognitoUser)}`);
-      const userObject = {
-        id: cognitoUser.userSub,
-        username: username,
-        firstName: firstName,
-        lastName: lastName,
-        voiceNumber: 1,
-        email: email,
-        location: location
-      };
-      const newUser = await createUserObject(userObject);
-      setUser(newUser);
-    } catch (error) {
-      window.log(`Error signing up!: ${JSON.stringify(error)}`);
-      if (error.code === "InvalidParameterException") {
-        error.message =
-          "Please ensure that your password has more than 6 characters";
-      } else if (
-        error.code === "UserLambdaValidationException" &&
-        error.message == "PreSignUp failed with error Username already exists!."
-      ) {
-        error.message = "Username already exists";
-      } else if (
-        error.code === "InternalErrorException" ||
-        error.code === "InvalidLambdaResponseException" ||
-        error.code === "InvalidParameterException" ||
-        error.code === "UnexpectedLambdaException" ||
-        error.code === "UserLambdaValidationException"
-      ) {
-        error.message = "An internal error occured, please try again later";
-      }
-      setError(error);
-      throw error;
-    } finally {
-      setLoading(false);
-    }
+
+    // try {
+    //   const cognitoUser = await Auth.signUp({
+    //     username: email,
+    //     password: password,
+    //     attributes: { "custom:submittedUsername": username }
+    //   });
+    //   window.log(`Signed Up! User: ${JSON.stringify(cognitoUser)}`);
+
+    // } catch (error) {
+    //   window.log(`Error signing up!: ${JSON.stringify(error)}`);
+    //   if (error.code === "InvalidParameterException") {
+    //     error.message =
+    //       "Please ensure that your password has more than 6 characters";
+    //   } else if (
+    //     error.code === "UserLambdaValidationException" &&
+    //     error.message == "PreSignUp failed with error Username already exists!."
+    //   ) {
+    //     error.message = "Username already exists";
+    //   } else if (
+    //     error.code === "InternalErrorException" ||
+    //     error.code === "InvalidLambdaResponseException" ||
+    //     error.code === "InvalidParameterException" ||
+    //     error.code === "UnexpectedLambdaException" ||
+    //     error.code === "UserLambdaValidationException"
+    //   ) {
+    //     error.message = "An internal error occured, please try again later";
+    //   }
+    //   setError(error);
+    //   setLoading(false);
+    //   throw error;
+    // }
+    // try {
+    //   const newUser = await createUserObject(userObject);
+    //   setUser(newUser);
+    // } catch (error) {
+    //   window.log(`Error creating User Object during signup: ${error}`);
+    //   setError(error);
+    //   throw error;
+    // } finally {
+    //   setLoading(false);
+    // }
   };
 
   const confirmSignUp = async (email, password, confirmationCode) => {

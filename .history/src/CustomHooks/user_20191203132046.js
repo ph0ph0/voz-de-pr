@@ -46,12 +46,10 @@ export const UserProvider = ({ children }) => {
 
     //CHECK USERNAME IS UNIQUE!
 
+    const attributes = { attributes: "testUsername" };
+
     try {
-      const cognitoUser = await Auth.signUp({
-        username: email,
-        password: password,
-        attributes: { "custom:submittedUsername": username }
-      });
+      const cognitoUser = await Auth.signUp(email, password, attributes);
       window.log(`Signed Up! User: ${JSON.stringify(cognitoUser)}`);
       const userObject = {
         id: cognitoUser.userSub,
@@ -63,17 +61,12 @@ export const UserProvider = ({ children }) => {
         location: location
       };
       const newUser = await createUserObject(userObject);
-      setUser(newUser);
+      setUser(newUser); //Remember to create User object in database!
     } catch (error) {
       window.log(`Error signing up!: ${JSON.stringify(error)}`);
       if (error.code === "InvalidParameterException") {
         error.message =
           "Please ensure that your password has more than 6 characters";
-      } else if (
-        error.code === "UserLambdaValidationException" &&
-        error.message == "PreSignUp failed with error Username already exists!."
-      ) {
-        error.message = "Username already exists";
       } else if (
         error.code === "InternalErrorException" ||
         error.code === "InvalidLambdaResponseException" ||
