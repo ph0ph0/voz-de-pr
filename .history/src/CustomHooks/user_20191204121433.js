@@ -47,7 +47,7 @@ export const UserProvider = ({ children }) => {
     //CHECK USERNAME IS UNIQUE!
     const emailtest = "test@test.com";
     const pwTest = "1234567890";
-    const usernameTest = "uniqueUsername";
+    const usernameTest = "commonUsername";
     try {
       const cognitoUser = await Auth.signUp({
         username: emailtest,

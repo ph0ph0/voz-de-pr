@@ -31,6 +31,24 @@ export const UserProvider = ({ children }) => {
       });
   }, []);
 
+  const signup = async (email, password, username) => {
+    try {
+      await Auth.signUp({
+        username: email,
+        password: password,
+        attributes: { "custom:submittedUsername": username }
+      });
+    } catch (error) {
+      if (
+        error.code === "UserLambdaValidationException" &&
+        error.message == "PreSignUp failed with error Username already exists!."
+      ) {
+        error.message = "Username already exists";
+      }
+      throw error;
+    }
+  };
+
   //Remember to update the current logged in user!
   const signUp = async (
     email,
@@ -45,14 +63,12 @@ export const UserProvider = ({ children }) => {
     setLoading(true);
 
     //CHECK USERNAME IS UNIQUE!
-    const emailtest = "test@test.com";
-    const pwTest = "1234567890";
-    const usernameTest = "uniqueUsername";
+
     try {
       const cognitoUser = await Auth.signUp({
-        username: emailtest,
-        password: pwTest,
-        attributes: { "custom:submittedUsername": usernameTest }
+        username: email,
+        password: password,
+        attributes: { "custom:submittedUsername": username }
       });
       window.log(`Signed Up! User: ${JSON.stringify(cognitoUser)}`);
       const userObject = {
@@ -64,8 +80,8 @@ export const UserProvider = ({ children }) => {
         email: email,
         location: location
       };
-      // const newUser = await createUserObject(userObject);
-      // setUser(newUser);
+      const newUser = await createUserObject(userObject);
+      setUser(newUser);
     } catch (error) {
       window.log(`Error signing up!: ${JSON.stringify(error)}`);
       if (error.code === "InvalidParameterException") {
