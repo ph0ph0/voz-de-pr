@@ -11733,7 +11733,7 @@ exports[`Storyshots DisplayWrappers|TopOfPage/TopOfPage Standard 1`] = `
 
 exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Cause 1`] = `
 <div
-  className="sc-eerKOB iUrzRV"
+  className="sc-eerKOB cqwsX"
 >
   <div
     className="sc-eilVRo RCxmC"
@@ -11875,7 +11875,7 @@ exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Cause 1`] 
 
 exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Post 1`] = `
 <div
-  className="sc-eerKOB iUrzRV"
+  className="sc-eerKOB cqwsX"
 >
   <div
     className="sc-eilVRo RCxmC"

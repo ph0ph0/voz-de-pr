@@ -6,25 +6,21 @@ import GlobalStyle from "./theme/globalStyle";
 import { ThemeProvider } from "styled-components";
 import theme from "./theme/Theme";
 
-// import NavBar from "./Components/DisplayWrappers/NavBar/NavBar";
-// import Routes from "./Routes/Routes";
-
-// function App() {
-//   return (
-//     <Fragment>
-//       <BrowserRouter>
-//         <GlobalStyle />
-//         <ThemeProvider theme={theme}>
-//           <NavBar />
-//           <Routes />
-//         </ThemeProvider>
-//       </BrowserRouter>
-//     </Fragment>
-//   );
-// }
+import NavBar from "./Components/DisplayWrappers/NavBar/NavBar";
+import Routes from "./Routes/Routes";
 
 function App() {
-  return <p>TEST</p>;
+  return (
+    <Fragment>
+      <BrowserRouter>
+        <GlobalStyle />
+        <ThemeProvider theme={theme}>
+          <NavBar />
+          <Routes />
+        </ThemeProvider>
+      </BrowserRouter>
+    </Fragment>
+  );
 }
 
 // var divStyle = {
