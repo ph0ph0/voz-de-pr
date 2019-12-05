@@ -5,7 +5,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
     html,
     body {
-    font-family: Avenir Book;
+    font-family: Avenir Medium;
     margin: 0px;
     padding: 0px;
     }

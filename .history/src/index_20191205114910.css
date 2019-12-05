@@ -13,7 +13,7 @@ code {
 }
 
 @font-face {
-  font-family: "Avenir Book";
-  src: local("Avenir Book"),
-    url("./Fonts/AvenirLTStd-Book.otf") format("truetype");
+  font-family: "Avenir Medium";
+  src: local("Avenir Medium"),
+    url("./Fonts/AvenirLTStd-Medium.otf") format("truetype");
 }
