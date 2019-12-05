@@ -14,10 +14,10 @@ const SubjectTitle = styled(TitleInputWrapper)`
   height: 37px;
   box-sizing: border-box;
 
-  padding-left: 25px;
+  padding-left: 250px;
   margin-bottom: 20px;
 
-  line-height: 0;
+  line-height: 20em;
   font-size: 20px;
 
   :focus {

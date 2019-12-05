@@ -17,7 +17,7 @@ const SubjectTitle = styled(TitleInputWrapper)`
   padding-left: 25px;
   margin-bottom: 20px;
 
-  line-height: 0;
+  line-height: 20em;
   font-size: 20px;
 
   :focus {
