@@ -6,7 +6,7 @@ import GlobalStyle from "./theme/globalStyle";
 import { ThemeProvider } from "styled-components";
 import theme from "./theme/Theme";
 
-import NavBar from "./components/DisplayWrappers/NavBar/NavBar";
+import NavBar from "./Components/DisplayWrappers/NavBar/NavBar";
 import Routes from "./Routes/Routes";
 
 function App() {
