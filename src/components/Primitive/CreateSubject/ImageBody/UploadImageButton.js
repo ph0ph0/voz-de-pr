@@ -7,7 +7,6 @@ const UploadImageButton = styled.button`
 
   width: 153px;
   height: 49px;
-
   background-color: white;
 
   font-size: 20px;
