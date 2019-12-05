@@ -8,6 +8,8 @@ const UploadImageButton = styled.button`
   width: 153px;
   height: 49px;
 
+  background-color: white;
+
   font-size: 20px;
   color: ${props => (props.secondary ? "#1B4EA0" : "#EC220D")};
 `;
