@@ -52,10 +52,11 @@ export const UserProvider = ({ children }) => {
       const cognitoUser = await Auth.signUp({
         username: emailtest,
         password: pwTest,
+        // attributes: { "custom:submittedUsername": usernameTest },
         validationData: [
           {
-            Name: "username",
-            Value: username
+            name: "username",
+            value: "commonUsername"
           }
         ]
       });

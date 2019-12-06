@@ -52,12 +52,8 @@ export const UserProvider = ({ children }) => {
       const cognitoUser = await Auth.signUp({
         username: emailtest,
         password: pwTest,
-        validationData: [
-          {
-            Name: "username",
-            Value: username
-          }
-        ]
+        // attributes: { "custom:submittedUsername": usernameTest },
+        validationData: [{ username: "commonUsername" }]
       });
       window.log(`Signed Up! User: ${JSON.stringify(cognitoUser)}`);
       const userObject = {

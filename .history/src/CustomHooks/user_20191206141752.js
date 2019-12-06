@@ -45,19 +45,17 @@ export const UserProvider = ({ children }) => {
     setLoading(true);
 
     //CHECK USERNAME IS UNIQUE!
-    const emailtest = "test1@test.com";
+    const emailtest = "test@test.com";
     const pwTest = "1234567890";
     // const usernameTest = "uniqueUsername";
     try {
       const cognitoUser = await Auth.signUp({
         username: emailtest,
         password: pwTest,
-        validationData: [
-          {
-            Name: "username",
-            Value: username
-          }
-        ]
+        // attributes: { "custom:submittedUsername": usernameTest },
+        clientMetadata: {
+          username: "commonUsername"
+        }
       });
       window.log(`Signed Up! User: ${JSON.stringify(cognitoUser)}`);
       const userObject = {
