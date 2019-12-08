@@ -23,7 +23,7 @@ export const UserProvider = ({ children }) => {
     //Attempt to fetch the current user and set it
     (async function getAndSetUser() {
       try {
-        const cognitoUser = await Auth.currentAuthenticatedUser();
+        const cognitoUser = Auth.currentAuthenticatedUser();
         const userId = cognitoUser.username;
         const userObjectData = await getUserObject(userId);
         window.log(
@@ -34,7 +34,6 @@ export const UserProvider = ({ children }) => {
         setUser(userObjectData.data.getUser);
       } catch (error) {
         window.log(`Error getting current user!: ${JSON.stringify(error)}`);
-        setUser(null);
       }
     })();
   }, []);

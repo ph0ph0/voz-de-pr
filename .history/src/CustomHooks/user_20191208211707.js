@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useContext } from "react";
 import { Auth } from "aws-amplify";
 import awsMobile from "../aws-exports";
-import { getUserObject } from "./UserObjectUtils/UserObjectUtils";
+import { getUserObject, createUserObject } from "./useUpdateUserObject";
 
 //Create context to hold values that we will expose to our components.
 // Don't worry about null, as it will be populated instantly by the component below
@@ -20,23 +20,15 @@ export const UserProvider = ({ children }) => {
     //Configure the keys needed for the Auth module
     Auth.configure(awsMobile);
 
+    Auth.signOut();
+
     //Attempt to fetch the current user and set it
-    (async function getAndSetUser() {
-      try {
-        const cognitoUser = await Auth.currentAuthenticatedUser();
-        const userId = cognitoUser.username;
-        const userObjectData = await getUserObject(userId);
-        window.log(
-          `User is already logged in and got userObject: ${JSON.stringify(
-            userObjectData
-          )}`
-        );
-        setUser(userObjectData.data.getUser);
-      } catch (error) {
-        window.log(`Error getting current user!: ${JSON.stringify(error)}`);
+    Auth.currentAuthenticatedUser()
+      .then(user => setUser(user))
+      .catch(() => {
+        window.log(`Failed to get current authenticated user`);
         setUser(null);
-      }
-    })();
+      });
   }, []);
 
   //Remember to update the current logged in user!
@@ -172,7 +164,6 @@ export const UserProvider = ({ children }) => {
     window.log("Logging in...");
     setError(null);
     setLoading(true);
-    await Auth.signOut();
     try {
       const cognitoUser = await Auth.signIn(email, password);
       window.log("Logged user in");

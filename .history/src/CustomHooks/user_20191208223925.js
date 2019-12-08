@@ -23,7 +23,7 @@ export const UserProvider = ({ children }) => {
     //Attempt to fetch the current user and set it
     (async function getAndSetUser() {
       try {
-        const cognitoUser = await Auth.currentAuthenticatedUser();
+        const cognitoUser = await ZAuth.currentAuthenticatedUser();
         const userId = cognitoUser.username;
         const userObjectData = await getUserObject(userId);
         window.log(
