@@ -13,10 +13,10 @@ const Info = styled.p`
   color: rgba(0, 0, 0, 0.54);
   font-size: 14px;
   padding: 0px;
-  margin-bottom: -15px;
+  margin-bottom: 10px;
 
   & + & {
-    margin-bottom: 10px;
+    margin-bottom: 100px;
   }
 `;
 
@@ -35,8 +35,8 @@ const ConfirmSignUpCardBodyWrapper = withRouter(
     return (
       <div {...props}>
         <Logo />
-        <Info>Do not close or navigate away from this page.</Info>
         <Info>Please check your email for your confirmation code.</Info>
+        <Info>Do not close or navigate away from this page.</Info>
         <EmailField
           value={api.codeValue}
           onChange={event => api.updateCodeValue(event.target.value)}

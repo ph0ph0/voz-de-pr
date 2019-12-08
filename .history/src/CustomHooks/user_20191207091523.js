@@ -45,7 +45,7 @@ export const UserProvider = ({ children }) => {
     setLoading(true);
 
     //CHECK USERNAME IS UNIQUE!
-    const emailtest = "test4@test.com";
+    const emailtest = "test2@test.com";
     const pwTest = "1234567890";
     // const usernameTest = "uniqueUsername";
     try {
@@ -55,19 +55,7 @@ export const UserProvider = ({ children }) => {
         validationData: [
           {
             Name: "username",
-            Value: "cUsername"
-          },
-          {
-            Name: "firstName",
-            Value: "testFirstName"
-          },
-          {
-            Name: "lastName",
-            Value: "testLastName"
-          },
-          {
-            Name: "locationValue",
-            Value: "testLocationValue"
+            Value: "uniqueUsername"
           }
         ]
       });

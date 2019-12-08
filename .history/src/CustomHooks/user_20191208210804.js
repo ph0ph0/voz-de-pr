@@ -55,7 +55,7 @@ export const UserProvider = ({ children }) => {
         validationData: [
           {
             Name: "username",
-            Value: "cUsername"
+            Value: "commonUsername"
           },
           {
             Name: "firstName",

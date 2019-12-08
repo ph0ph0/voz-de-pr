@@ -35,8 +35,8 @@ const ConfirmSignUpCardBodyWrapper = withRouter(
     return (
       <div {...props}>
         <Logo />
-        <Info>Do not close or navigate away from this page.</Info>
         <Info>Please check your email for your confirmation code.</Info>
+        <Info>Do not close or navigate away from this page.</Info>
         <EmailField
           value={api.codeValue}
           onChange={event => api.updateCodeValue(event.target.value)}
