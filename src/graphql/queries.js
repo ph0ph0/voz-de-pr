@@ -14,6 +14,7 @@ export const getUser = `query GetUser($id: ID!) {
       region
       key
     }
+    location
     createdAt
     updatedAt
     subjects {
@@ -53,6 +54,44 @@ export const listUsers = `query ListUsers(
         region
         key
       }
+      location
+      createdAt
+      updatedAt
+      subjects {
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+`;
+export const findUsername = `query FindUsername(
+  $username: String
+  $sortDirection: ModelSortDirection
+  $filter: ModelUserFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  findUsername(
+    username: $username
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      username
+      firstName
+      lastName
+      voiceNumber
+      email
+      avatar {
+        bucket
+        region
+        key
+      }
+      location
       createdAt
       updatedAt
       subjects {

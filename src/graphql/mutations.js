@@ -14,6 +14,7 @@ export const createUser = `mutation CreateUser($input: CreateUserInput!) {
       region
       key
     }
+    location
     createdAt
     updatedAt
     subjects {
@@ -48,6 +49,7 @@ export const updateUser = `mutation UpdateUser($input: UpdateUserInput!) {
       region
       key
     }
+    location
     createdAt
     updatedAt
     subjects {
@@ -82,6 +84,7 @@ export const deleteUser = `mutation DeleteUser($input: DeleteUserInput!) {
       region
       key
     }
+    location
     createdAt
     updatedAt
     subjects {

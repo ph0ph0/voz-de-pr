@@ -1,19 +1,19 @@
 {
 	"function": {
-		"vozdepr33ba7441PostConfirmation": {
+		"vozdeprec084b08PostConfirmation": {
 			"service": "Lambda",
 			"providerPlugin": "awscloudformation",
 			"build": true
 		}
 	},
 	"auth": {
-		"vozdepr33ba7441": {
+		"vozdeprec084b08": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": [
 				{
 					"category": "function",
-					"resourceName": "vozdepr33ba7441PostConfirmation",
+					"resourceName": "vozdeprec084b08PostConfirmation",
 					"triggerProvider": "Cognito",
 					"attributes": [
 						"Arn",
@@ -31,14 +31,14 @@
 				"authConfig": {
 					"additionalAuthenticationProviders": [
 						{
-							"authenticationType": "AMAZON_COGNITO_USER_POOLS",
-							"userPoolConfig": {
-								"userPoolId": "authvozdepr33ba7441"
-							}
+							"authenticationType": "AWS_IAM"
 						}
 					],
 					"defaultAuthentication": {
-						"authenticationType": "AWS_IAM"
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authvozdeprec084b08"
+						}
 					}
 				}
 			}
