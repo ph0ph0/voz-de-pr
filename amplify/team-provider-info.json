@@ -30,7 +30,8 @@
             "DeploymentBucketName": "vozdepr-staging-20191203204704-deployment",
             "UnauthRoleName": "vozdepr-staging-20191203204704-unauthRole",
             "StackName": "vozdepr-staging-20191203204704",
-            "StackId": "arn:aws:cloudformation:us-east-1:212785925783:stack/vozdepr-staging-20191203204704/108fe380-160e-11ea-9ee0-0e3259ee6b3b"
+            "StackId": "arn:aws:cloudformation:us-east-1:212785925783:stack/vozdepr-staging-20191203204704/108fe380-160e-11ea-9ee0-0e3259ee6b3b",
+            "AmplifyAppId": "djcj4hv5wm16s"
         },
         "categories": {
             "auth": {
@@ -52,7 +53,8 @@
             "DeploymentBucketName": "vozdepr-dev-20191203210001-deployment",
             "UnauthRoleName": "vozdepr-dev-20191203210001-unauthRole",
             "StackName": "vozdepr-dev-20191203210001",
-            "StackId": "arn:aws:cloudformation:us-east-1:212785925783:stack/vozdepr-dev-20191203210001/dfb67a60-160f-11ea-928c-129cd46a326a"
+            "StackId": "arn:aws:cloudformation:us-east-1:212785925783:stack/vozdepr-dev-20191203210001/dfb67a60-160f-11ea-928c-129cd46a326a",
+            "AmplifyAppId": "djcj4hv5wm16s"
         },
         "categories": {
             "auth": {
