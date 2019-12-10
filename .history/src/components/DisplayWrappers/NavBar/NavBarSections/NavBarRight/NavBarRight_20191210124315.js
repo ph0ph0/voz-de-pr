@@ -8,16 +8,12 @@ import ProfileWrapper from "./ProfileWrapper";
 import LogoutButton from "components/Primitive/NavBar/LogoutButton";
 
 const Wrapper = props => {
-  const { user, logout } = useUser();
+  const { user } = useUser();
 
   return (
     <div {...props}>
-      {user ? (
-        <LogoutButton onClick={logout}>LOG OUT</LogoutButton>
-      ) : (
-        <SignUpInButtonWrapper />
-      )}
-      {user ? <ProfileWrapper /> : null}
+      {user ? <LogoutButton>LOG OUT</LogoutButton> : <SignUpInButtonWrapper />}
+      <ProfileWrapper />
     </div>
   );
 };

@@ -1,23 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-import { useUser } from "CustomHooks/user";
-
 import SignUpInButtonWrapper from "./SignUpInButtonWrapper";
 import ProfileWrapper from "./ProfileWrapper";
-import LogoutButton from "components/Primitive/NavBar/LogoutButton";
 
 const Wrapper = props => {
-  const { user, logout } = useUser();
-
   return (
     <div {...props}>
-      {user ? (
-        <LogoutButton onClick={logout}>LOG OUT</LogoutButton>
-      ) : (
-        <SignUpInButtonWrapper />
-      )}
-      {user ? <ProfileWrapper /> : null}
+      {/* <SignUpInButtonWrapper /> */}
+      <ProfileWrapper />
     </div>
   );
 };

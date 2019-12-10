@@ -17,7 +17,7 @@ const Wrapper = props => {
       ) : (
         <SignUpInButtonWrapper />
       )}
-      {user ? <ProfileWrapper /> : null}
+      <ProfileWrapper />
     </div>
   );
 };

@@ -181,7 +181,7 @@ export const UserProvider = ({ children }) => {
       window.log(
         `Logged in and got userObject: ${JSON.stringify(userObjectData)}`
       );
-      setUser(userObjectData);
+      setUser(userObjectData.data.getUser);
     } catch (error) {
       window.log(`Error logging in or getting user object: ${error.message}`);
       if (user) {
