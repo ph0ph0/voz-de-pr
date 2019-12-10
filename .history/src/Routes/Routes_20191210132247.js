@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import { useUser } from "CustomHooks/user";
+import { user } from "CustomHooks/user";
 
 import MainFeed from "../components/Pages/MainFeed";
 import Causes from "../components/Pages/Causes";
@@ -15,7 +15,6 @@ import ForgotPassword from "../components/Pages/ForgotPassword";
 import ConfirmSignUp from "../components/Pages/ConfirmSignUp";
 
 const Routes = props => {
-  const { user } = useUser();
   return (
     <Switch>
       <Route exact path="/">
@@ -28,13 +27,13 @@ const Routes = props => {
         <Posts />
       </Route>
       <Route path="/profile">
-        {user ? <Profile /> : <Redirect to="/signin" />}
+        {user ? <Profile /> : <Redirect to="/signup" />}
       </Route>
       <Route path="/create-cause">
-        {user ? <CreateCause /> : <Redirect to="/signin" />}
+        <CreateCause />
       </Route>
       <Route path="/create-post">
-        {user ? <CreatePost /> : <Redirect to="/signin" />}
+        <CreatePost />
       </Route>
       <Route exact path="/signup">
         <SignUp />

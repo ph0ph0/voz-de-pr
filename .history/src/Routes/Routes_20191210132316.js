@@ -28,13 +28,13 @@ const Routes = props => {
         <Posts />
       </Route>
       <Route path="/profile">
-        {user ? <Profile /> : <Redirect to="/signin" />}
+        {user ? <Profile /> : <Redirect to="/signup" />}
       </Route>
       <Route path="/create-cause">
-        {user ? <CreateCause /> : <Redirect to="/signin" />}
+        <CreateCause />
       </Route>
       <Route path="/create-post">
-        {user ? <CreatePost /> : <Redirect to="/signin" />}
+        <CreatePost />
       </Route>
       <Route exact path="/signup">
         <SignUp />
