@@ -30,20 +30,17 @@ const submitSubject = async (
     file: fileObject
   };
 
-  const sT = "TEST_TITLE";
-  const sC = "TEST_CONTENT";
-
   const subjectObject = {
     createdBy: user.id,
     author: user.username,
-    title: sT,
-    subjectContent: sC,
+    title: subjectTitle,
+    subjectContent: subjectContent,
     numberOfComments: 0,
     votes: 0,
-    type: subjectType
-    // pictures: await API.graphql(
-    //   graphqlOperation(createPicture, { input: pictureObject })
-    // )
+    type: subjectType,
+    pictures: await API.graphql(
+      graphqlOperation(createPicture, { input: pictureObject })
+    )
   };
 
   try {

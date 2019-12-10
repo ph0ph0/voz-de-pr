@@ -1,4 +1,4 @@
-import { createSubject, createPicture } from "graphql/mutations";
+import { createSubject } from "graphql/mutations";
 import { API, graphqlOperation } from "aws-amplify";
 
 import { useUser } from "CustomHooks/user";
@@ -18,32 +18,15 @@ const submitSubject = async (
     return;
   }
 
-  const fileObject = {
-    bucket: "",
-    region: "",
-    key: ""
-  };
-
-  const pictureObject = {
-    owner: user.id,
-    description: imageDescription,
-    file: fileObject
-  };
-
-  const sT = "TEST_TITLE";
-  const sC = "TEST_CONTENT";
-
   const subjectObject = {
     createdBy: user.id,
     author: user.username,
-    title: sT,
-    subjectContent: sC,
+    title: subjectTitle,
+    subjectContent: subjectContent,
     numberOfComments: 0,
     votes: 0,
-    type: subjectType
-    // pictures: await API.graphql(
-    //   graphqlOperation(createPicture, { input: pictureObject })
-    // )
+    type: subjectType,
+    userSubjectsId: ID
   };
 
   try {
