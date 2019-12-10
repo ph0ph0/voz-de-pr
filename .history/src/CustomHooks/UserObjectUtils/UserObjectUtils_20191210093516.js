@@ -16,7 +16,7 @@ export const getUserObject = async id => {
 const parseUser = user => {
   const unParsedVoiceNumber = user.voiceNumber;
   window.log(`Current voiceNumber: ${unParsedVoiceNumber}`);
-  var vNString = String(unParsedVoiceNumber);
+  var vNString = String(16723);
   while (vNString.length < 7) {
     vNString = "0" + vNString;
     window.log(`new voiceNumber: ${vNString}`);

@@ -4,8 +4,8 @@ import { getUser } from "graphql/queries";
 export const getUserObject = async id => {
   try {
     const user = await API.graphql(graphqlOperation(getUser, { id: id }));
+    window.log(`uO: ${JSON.stringify(user)}`);
     const parsedUser = parseUser(user.data.getUser);
-    window.log(`uO: ${JSON.stringify(parsedUser)}`);
     return parsedUser;
   } catch (error) {
     window.log(`Error getting User Object: ${error.message}`);

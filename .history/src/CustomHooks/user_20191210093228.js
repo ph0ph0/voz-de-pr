@@ -25,13 +25,13 @@ export const UserProvider = ({ children }) => {
       try {
         const cognitoUser = await Auth.currentAuthenticatedUser();
         const userId = cognitoUser.username;
-        const userObject = await getUserObject(userId);
+        const userObjectData = await getUserObject(userId);
         window.log(
           `User is already logged in and got userObject: ${JSON.stringify(
-            userObject
+            userObjectData.data.getUser
           )}`
         );
-        setUser(userObject);
+        setUser(userObjectData.data.getUser);
       } catch (error) {
         window.log(`Error getting current user!: ${JSON.stringify(error)}`);
         setUser(null);
