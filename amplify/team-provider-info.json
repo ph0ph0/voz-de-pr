@@ -1,26 +1,4 @@
 {
-    "master": {
-        "awscloudformation": {
-            "AuthRoleName": "vozdepr-master-20191203202710-authRole",
-            "UnauthRoleArn": "arn:aws:iam::212785925783:role/vozdepr-master-20191203202710-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::212785925783:role/vozdepr-master-20191203202710-authRole",
-            "Region": "us-east-1",
-            "DeploymentBucketName": "vozdepr-master-20191203202710-deployment",
-            "UnauthRoleName": "vozdepr-master-20191203202710-unauthRole",
-            "StackName": "vozdepr-master-20191203202710",
-            "StackId": "arn:aws:cloudformation:us-east-1:212785925783:stack/vozdepr-master-20191203202710/49086640-160b-11ea-a59b-127e9735111e"
-        },
-        "categories": {
-            "function": {
-                "vozdeprec084b08PostConfirmation": {
-                    "GROUP": "everyone"
-                }
-            },
-            "auth": {
-                "vozdeprec084b08": {}
-            }
-        }
-    },
     "staging": {
         "awscloudformation": {
             "AuthRoleName": "vozdepr-staging-20191203204704-authRole",
@@ -54,6 +32,29 @@
             "UnauthRoleName": "vozdepr-dev-20191203210001-unauthRole",
             "StackName": "vozdepr-dev-20191203210001",
             "StackId": "arn:aws:cloudformation:us-east-1:212785925783:stack/vozdepr-dev-20191203210001/dfb67a60-160f-11ea-928c-129cd46a326a",
+            "AmplifyAppId": "djcj4hv5wm16s"
+        },
+        "categories": {
+            "auth": {
+                "vozdeprec084b08": {}
+            },
+            "function": {
+                "vozdeprec084b08PostConfirmation": {
+                    "GROUP": "everyone"
+                }
+            }
+        }
+    },
+    "master": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-vozdepr-master-103339-authRole",
+            "UnauthRoleArn": "arn:aws:iam::212785925783:role/amplify-vozdepr-master-103339-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::212785925783:role/amplify-vozdepr-master-103339-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-vozdepr-master-103339-deployment",
+            "UnauthRoleName": "amplify-vozdepr-master-103339-unauthRole",
+            "StackName": "amplify-vozdepr-master-103339",
+            "StackId": "arn:aws:cloudformation:us-east-1:212785925783:stack/amplify-vozdepr-master-103339/894dd780-1b38-11ea-a619-0aac80a39b9b",
             "AmplifyAppId": "djcj4hv5wm16s"
         },
         "categories": {
