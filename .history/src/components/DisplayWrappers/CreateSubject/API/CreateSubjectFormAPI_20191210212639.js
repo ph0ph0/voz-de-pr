@@ -96,14 +96,13 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
   };
 
   const submit = async secondary => {
-    window.log(`Submitting subject...`);
     if (!user) {
       return;
     }
 
-    // if (inputsAreEmpty(setState, subjectTitle, subjectContent)) {
-    //   return;
-    // }
+    if (inputsAreEmpty(setState, subjectTitle, subjectContent)) {
+      return;
+    }
 
     setState(prevState => {
       return {
@@ -113,6 +112,18 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
     });
 
     const subjectType = secondary ? "post" : "cause";
+
+    const fileObject = {
+      bucket: "",
+      region: "",
+      key: ""
+    };
+
+    const pictureObject = {
+      owner: user.id,
+      description: imageDescription,
+      file: fileObject
+    };
 
     const sT = "TEST_TITLE";
     const sC = "TEST_CONTENT";

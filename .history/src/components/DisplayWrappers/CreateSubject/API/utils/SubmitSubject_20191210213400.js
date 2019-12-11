@@ -15,21 +15,16 @@ const submitSubject = async subject => {
   };
 
   try {
-    // subject["pictures"] = await API.graphql(
-    //   graphqlOperation(createPicture, { input: pictureObject })
-    // );
-
-    window.log(`Attempting to submit...`);
-
-    const picture = await API.graphql(
+    subject["pictures"] = await API.graphql(
       graphqlOperation(createPicture, { input: pictureObject })
     );
 
-    // const subjectObject = await API.graphql(
-    //   graphqlOperation(createSubject, { input: subject })
-    // );
+    window.log(`Attempting to submit...`);
+    const subjectObject = await API.graphql(
+      graphqlOperation(createSubject, { input: subject })
+    );
     window.log(
-      `Successfully created subject: ${JSON.stringify(picture)}`
+      `Successfully created subject: ${JSON.stringify(subjectObject)}`
     );
     //UPDATE USER OBJECT!
   } catch (error) {

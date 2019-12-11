@@ -1,7 +1,5 @@
 import { inputsAreEmpty } from "./utils/InputsAreEmpty";
 import submitSubject from "./utils/SubmitSubject";
-import { useUser } from "CustomHooks/user";
-
 const CreateSubjectFormAPI = ({ state, setState }) => {
   const currentPanel = state.currentPanel;
   const subjectTitle = state.subjectTitle;
@@ -13,8 +11,6 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
   const titleIsErrored = state.titleIsErrored;
   const contentIsErrored = state.contentIsErrored;
   const isLoading = state.isLoading;
-
-  const { user } = useUser();
 
   const showPanel = newValue => {
     setState(prevState => {
@@ -96,23 +92,39 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
   };
 
   const submit = async secondary => {
-    window.log(`Submitting subject...`);
-    if (!user) {
-      return;
-    }
-
-    // if (inputsAreEmpty(setState, subjectTitle, subjectContent)) {
-    //   return;
-    // }
-
     setState(prevState => {
       return {
         ...prevState,
         isLoading: true
       };
     });
+    window.log(
+      `On submit, subjectTitle: ${subjectTitle}, subjectContent ${subjectContent}`
+    );
+
+    if (inputsAreEmpty(setState, subjectTitle, subjectContent)) {
+      return;
+    }
 
     const subjectType = secondary ? "post" : "cause";
+
+    const { user } = useUser();
+
+    if (!user) {
+      return;
+    }
+
+    const fileObject = {
+      bucket: "",
+      region: "",
+      key: ""
+    };
+
+    const pictureObject = {
+      owner: user.id,
+      description: imageDescription,
+      file: fileObject
+    };
 
     const sT = "TEST_TITLE";
     const sC = "TEST_CONTENT";
@@ -131,16 +143,17 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
     };
 
     try {
-      await submitSubject(subjectObject);
+      await submitSubject(
+        subjectTitle,
+        subjectContent,
+        subjectType,
+        subjectImage,
+        imageDescription,
+        linkContent,
+        linkDescription
+      );
     } catch (error) {
       window.log(`Error submitting subject: ${JSON.stringify(error)}`);
-    } finally {
-      setState(prevState => {
-        return {
-          ...prevState,
-          isLoading: false
-        };
-      });
     }
 
     resetAll();

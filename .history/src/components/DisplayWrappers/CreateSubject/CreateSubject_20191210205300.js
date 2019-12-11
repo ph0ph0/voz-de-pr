@@ -54,7 +54,7 @@ const CreateSubjectWrapper = ({ secondary, ...props }) => {
       {loading && <p>Loading</p>}
       {error && <p>Error {`${error.message}`}</p>}
       {called && <p>Called</p>} */}
-      <ActionButton secondary={secondary} onClick={() => api.submit(secondary)}>
+      <ActionButton secondary={secondary} onClick={() => api.submit}>
         {secondary ? "Create Post" : "Create Cause"}
       </ActionButton>
     </div>

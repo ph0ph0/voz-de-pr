@@ -96,14 +96,9 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
   };
 
   const submit = async secondary => {
-    window.log(`Submitting subject...`);
     if (!user) {
       return;
     }
-
-    // if (inputsAreEmpty(setState, subjectTitle, subjectContent)) {
-    //   return;
-    // }
 
     setState(prevState => {
       return {
@@ -111,8 +106,27 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
         isLoading: true
       };
     });
+    window.log(
+      `On submit, subjectTitle: ${subjectTitle}, subjectContent ${subjectContent}`
+    );
+
+    if (inputsAreEmpty(setState, subjectTitle, subjectContent)) {
+      return;
+    }
 
     const subjectType = secondary ? "post" : "cause";
+
+    const fileObject = {
+      bucket: "",
+      region: "",
+      key: ""
+    };
+
+    const pictureObject = {
+      owner: user.id,
+      description: imageDescription,
+      file: fileObject
+    };
 
     const sT = "TEST_TITLE";
     const sC = "TEST_CONTENT";
@@ -131,16 +145,17 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
     };
 
     try {
-      await submitSubject(subjectObject);
+      await submitSubject(
+        subjectTitle,
+        subjectContent,
+        subjectType,
+        subjectImage,
+        imageDescription,
+        linkContent,
+        linkDescription
+      );
     } catch (error) {
       window.log(`Error submitting subject: ${JSON.stringify(error)}`);
-    } finally {
-      setState(prevState => {
-        return {
-          ...prevState,
-          isLoading: false
-        };
-      });
     }
 
     resetAll();

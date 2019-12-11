@@ -29,7 +29,7 @@ const submitSubject = async subject => {
     //   graphqlOperation(createSubject, { input: subject })
     // );
     window.log(
-      `Successfully created subject: ${JSON.stringify(picture)}`
+      `Successfully created subject: ${JSON.stringify(subjectObject)}`
     );
     //UPDATE USER OBJECT!
   } catch (error) {
