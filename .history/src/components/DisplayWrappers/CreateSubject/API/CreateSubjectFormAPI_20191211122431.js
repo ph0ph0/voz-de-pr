@@ -125,6 +125,9 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
       numberOfComments: 0,
       votes: 0,
       type: subjectType
+      // pictures: await API.graphql(
+      //   graphqlOperation(createPicture, { input: pictureObject })
+      // )
     };
 
     try {

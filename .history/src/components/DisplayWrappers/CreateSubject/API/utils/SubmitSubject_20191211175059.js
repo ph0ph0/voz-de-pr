@@ -9,7 +9,7 @@ const submitSubject = async subject => {
   };
 
   const pictureObject = {
-    // owner: "TEST_USER",
+    owner: "TEST_USER",
     description: "TEST_DESCRIPTION",
     file: fileObject
   };
@@ -21,13 +21,13 @@ const submitSubject = async subject => {
 
     window.log(`Attempting to submit...`);
 
-    const picture = await API.graphql(
-      graphqlOperation(createPicture, { input: pictureObject })
-    );
-
-    // const subjectObject = await API.graphql(
-    //   graphqlOperation(createSubject, { input: subject })
+    // const picture = await API.graphql(
+    //   graphqlOperation(createPicture, { input: pictureObject })
     // );
+
+    const subjectObject = await API.graphql(
+      graphqlOperation(createSubject, { input: subject })
+    );
     window.log(`Successfully created subject: ${JSON.stringify(picture)}`);
     //UPDATE USER OBJECT!
   } catch (error) {

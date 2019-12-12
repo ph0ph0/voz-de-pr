@@ -77,7 +77,7 @@ type Picture
       { allow: groups, groups: ["everyone"], operations: [read] }
     ]
   ) {
-  id: ID
+  id: ID!
   description: String
   owner: String
   file: S3Object

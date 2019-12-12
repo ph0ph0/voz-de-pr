@@ -97,9 +97,9 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
 
   const submit = async secondary => {
     window.log(`Submitting subject...`);
-    if (!user) {
-      return;
-    }
+    // if (!user) {
+    //   return;
+    // }
 
     // if (inputsAreEmpty(setState, subjectTitle, subjectContent)) {
     //   return;
@@ -125,6 +125,9 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
       numberOfComments: 0,
       votes: 0,
       type: subjectType
+      // pictures: await API.graphql(
+      //   graphqlOperation(createPicture, { input: pictureObject })
+      // )
     };
 
     try {
