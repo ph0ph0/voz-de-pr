@@ -1,0 +1,102 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "vozdepr-dev-20191203210001-authRole",
+      "UnauthRoleArn": "arn:aws:iam::212785925783:role/vozdepr-dev-20191203210001-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::212785925783:role/vozdepr-dev-20191203210001-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "vozdepr-dev-20191203210001-deployment",
+      "UnauthRoleName": "vozdepr-dev-20191203210001-unauthRole",
+      "StackName": "vozdepr-dev-20191203210001",
+      "StackId": "arn:aws:cloudformation:us-east-1:212785925783:stack/vozdepr-dev-20191203210001/dfb67a60-160f-11ea-928c-129cd46a326a",
+      "AmplifyAppId": "djcj4hv5wm16s"
+    },
+    "categories": {
+      "auth": {
+        "vozdeprec084b08": {}
+      },
+      "function": {
+        "vozdeprec084b08PostConfirmation": {
+          "GROUP": "everyone"
+        }
+      }
+    }
+  },
+  "function": {
+    "vozdeprec084b08PostConfirmation": {
+      "service": "Lambda",
+      "providerPlugin": "awscloudformation",
+      "build": true,
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:212785925783:function:vozdeprec084b08PostConfirmation-dev",
+        "Name": "vozdeprec084b08PostConfirmation-dev"
+      },
+      "lastPushTimeStamp": "2019-12-13T12:50:49.485Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/vozdepr-dev-20191203210001-deployment/amplify-cfn-templates/function/vozdeprec084b08PostConfirmation-cloudformation-template.json",
+        "logicalId": "functionvozdeprec084b08PostConfirmation"
+      },
+      "lastBuildTimeStamp": "2019-12-11T12:00:34.943Z",
+      "lastPackageTimeStamp": "2019-12-11T12:00:35.141Z",
+      "distZipFilename": "vozdeprec084b08PostConfirmation-5644792b436251645245-build.zip"
+    }
+  },
+  "auth": {
+    "vozdeprec084b08": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "vozdeprec084b08PostConfirmation",
+          "triggerProvider": "Cognito",
+          "attributes": ["Arn", "Name"]
+        }
+      ],
+      "output": {
+        "AppClientSecret": "8r31ubf4e5oerbhcjhae0ucd2e961cb049cv21dv8h2iquchmn3",
+        "UserPoolId": "us-east-1_n1rEdU1Pi",
+        "AppClientIDWeb": "716alofscdd9oaegcf5sg0iv97",
+        "AppClientID": "3s5th4h4v1u36o48j6itkk5p30",
+        "IdentityPoolId": "us-east-1:e3e40e23-87ad-477d-ac30-d197868e1086",
+        "IdentityPoolName": "vozdeprec084b08_identitypool_ec084b08__dev",
+        "UserPoolName": "vozdeprec084b08_userpool_ec084b08"
+      },
+      "lastPushTimeStamp": "2019-12-13T12:50:49.487Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/vozdepr-dev-20191203210001-deployment/amplify-cfn-templates/auth/vozdeprec084b08-cloudformation-template.yml",
+        "logicalId": "authvozdeprec084b08"
+      }
+    }
+  },
+  "api": {
+    "vozdepr": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ],
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authvozdeprec084b08"
+            }
+          }
+        },
+        "GraphQLAPIIdOutput": "or2wpavvmbatbhfn7vwoynk4c4",
+        "GraphQLAPIEndpointOutput": "https://gl5nlacfb5hahaxk33osblklcu.appsync-api.us-east-1.amazonaws.com/graphql"
+      },
+      "lastPushTimeStamp": "2019-12-13T12:50:49.488Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/vozdepr-dev-20191203210001-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apivozdepr"
+      },
+      "lastPushDirHash": "4X+aKMEUzRaBETh0l80hSGcCB2c="
+    }
+  }
+}
