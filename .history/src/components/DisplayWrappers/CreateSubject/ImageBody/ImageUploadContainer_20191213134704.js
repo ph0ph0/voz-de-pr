@@ -6,10 +6,8 @@ import styled from "styled-components";
 const ImageUploadWrapper = ({ secondary, ...props }) => {
   return (
     <div {...props}>
-      <UploadImageButton htmlFor="fileinput" secondary={secondary}>
-        Upload Image
-      </UploadImageButton>
-      <FileInput type="file" id="fileinput" />
+      <UploadImageButton secondary={secondary}>Upload Image</UploadImageButton>
+      <FileInput type="file" name="myfile" />
     </div>
   );
 };
@@ -28,7 +26,8 @@ const UploadImageButton = styled.label`
   display: block;
   text-align: center;
 
-  line-height: 50px;
+  /* line-height: 150%; */
+  font-size: 20px;
 
   :hover {
     cursor: pointer;

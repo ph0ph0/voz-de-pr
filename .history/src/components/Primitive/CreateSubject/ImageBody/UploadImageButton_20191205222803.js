@@ -10,10 +10,6 @@ const UploadImageButton = styled.button`
 
   font-size: 20px;
   color: ${props => (props.secondary ? "#1B4EA0" : "#EC220D")};
-
-  :hover {
-    cursor: pointer;
-  }
 `;
 
 export default UploadImageButton;
