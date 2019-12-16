@@ -53,12 +53,6 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
     //If the array length is 0, file picker was cancelled so abort setting state
     if (fileArray.length === 0) return;
     window.log(`Selected image from file, array length: ${newValue.length}`);
-    const filename = fileArray[0].name.split(".")[0];
-    const extension = fileArray[0].name.split(".")[1];
-    const key = new Date().toISOString();
-    window.log(
-      `selectedImage filename: ${filename}, extension: ${extension}, key: ${key}`
-    );
     setState(prevState => {
       return {
         ...prevState,
@@ -105,8 +99,6 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
         currentPanel: "content",
         subjectTitle: "",
         subjectContent: "",
-        selectedImage: null,
-        subjectImage: null,
         imageDescription: "",
         linkDescription: "",
         linkContent: "",
@@ -120,7 +112,6 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
   const submit = async secondary => {
     window.log(`Submitting subject...`);
     if (!user) {
-      window.log(`No user, exiting submit`);
       return;
     }
 
@@ -151,7 +142,7 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
     };
 
     try {
-      await submitSubject(subjectObject, subjectImage);
+      await submitSubject(subjectObject);
     } catch (error) {
       window.log(`Error submitting subject: ${JSON.stringify(error)}`);
     } finally {

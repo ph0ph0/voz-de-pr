@@ -105,8 +105,6 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
         currentPanel: "content",
         subjectTitle: "",
         subjectContent: "",
-        selectedImage: null,
-        subjectImage: null,
         imageDescription: "",
         linkDescription: "",
         linkContent: "",
@@ -120,7 +118,6 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
   const submit = async secondary => {
     window.log(`Submitting subject...`);
     if (!user) {
-      window.log(`No user, exiting submit`);
       return;
     }
 

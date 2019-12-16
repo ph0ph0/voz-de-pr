@@ -28,10 +28,6 @@ const submitSubject = async (subject, image) => {
       graphqlOperation(createPicture, { input: picture })
     );
 
-    const subjectObject = await API.graphql(
-      graphqlOperation(createSubject, { input: subject })
-    );
-
     window.log(`pictureObject uploaded: ${JSON.stringify(pictureObject)}`);
 
     // // subject["pictures"] = await API.graphql(

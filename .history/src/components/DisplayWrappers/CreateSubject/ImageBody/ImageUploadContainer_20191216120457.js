@@ -26,11 +26,8 @@ const UploadImageButton = styled.label`
     props.secondary ? "2px solid #1B4EA0" : "2px solid #EC220D"};
   border-radius: 5px;
 
-  opacity: ${props => (props.api.subjectImage ? 0.0001 : 1)};
-  position: ${props => props.api.subjectImage && "absolute"};
-  width: ${props => (props.api.subjectImage ? "471px" : "153px")};
-  height: ${props => (props.api.subjectImage ? "300px" : "49")};
-  z-index: 10;
+  width: 153px;
+  height: 49px;
 
   font-size: 20px;
   color: ${props => (props.secondary ? "#1B4EA0" : "#EC220D")};
@@ -43,6 +40,11 @@ const UploadImageButton = styled.label`
   :hover {
     cursor: pointer;
   }
+  opacity: ${props => (props.api.subjectImage ? 0.0001 : 1)};
+  position: ${props => props.api.subjectImage && "absolute"};
+  width: ${props => (props.api.subjectImage ? "471px" : "153px")};
+  height: ${props => (props.api.subjectImage ? "300px" : "49")};
+  z-index: 10;
 `;
 
 const FileInput = styled.input`

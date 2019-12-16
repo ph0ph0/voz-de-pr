@@ -9,13 +9,12 @@ const submitSubject = async (subject, image) => {
   try {
     //SKIP IF IMAGE IS NIL!
     window.log(`Sending image to storage`);
-    const s3Output = await Storage.put(`${key}.${extension}`, image);
-    const fileKey = s3Output.key;
+    const file = await Storage.put(`${key}.${extension}`, image);
 
     const fileObject = {
       bucket: "vozdeprsubjectimagesstorages3service",
       region: "us-east-1",
-      key: fileKey
+      key: file
     };
 
     const picture = {
@@ -28,12 +27,9 @@ const submitSubject = async (subject, image) => {
       graphqlOperation(createPicture, { input: picture })
     );
 
-    const subjectObject = await API.graphql(
-      graphqlOperation(createSubject, { input: subject })
-    );
-
     window.log(`pictureObject uploaded: ${JSON.stringify(pictureObject)}`);
 
+    window.log(`Upload complete, key?: ${JSON.stringify(file)}`);
     // // subject["pictures"] = await API.graphql(
     // //   graphqlOperation(createPicture, { input: pictureObject })
     // // );

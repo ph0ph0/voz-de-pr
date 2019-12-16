@@ -105,8 +105,6 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
         currentPanel: "content",
         subjectTitle: "",
         subjectContent: "",
-        selectedImage: null,
-        subjectImage: null,
         imageDescription: "",
         linkDescription: "",
         linkContent: "",
