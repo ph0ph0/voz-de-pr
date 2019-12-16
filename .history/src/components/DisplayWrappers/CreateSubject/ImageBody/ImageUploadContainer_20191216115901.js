@@ -40,7 +40,7 @@ const UploadImageButton = styled.label`
   :hover {
     cursor: pointer;
   }
-  opacity: ${props => (props.api.subjectImage ? 0.0001 : 1)};
+  opacity: ${props => (props.api.subjectImage ? 0.01 : 1)};
   position: ${props => props.api.subjectImage && "absolute"};
   width: ${props => (props.api.subjectImage ? "471px" : "153px")};
   height: ${props => (props.api.subjectImage ? "300px" : "49")};

@@ -7,7 +7,7 @@ import { API } from "aws-amplify";
 const ImageUploadWrapper = ({ api, secondary, ...props }) => {
   return (
     <div {...props}>
-      <UploadImageButton api={api} htmlFor="fileinput" secondary={secondary}>
+      <UploadImageButton htmlFor="fileinput" secondary={secondary}>
         Upload Image
       </UploadImageButton>
       <FileInput
@@ -40,10 +40,10 @@ const UploadImageButton = styled.label`
   :hover {
     cursor: pointer;
   }
-  opacity: ${props => (props.api.subjectImage ? 0.0001 : 1)};
+  /* opacity: 1; */
   position: ${props => props.api.subjectImage && "absolute"};
-  width: ${props => (props.api.subjectImage ? "471px" : "153px")};
-  height: ${props => (props.api.subjectImage ? "300px" : "49")};
+  width: 471px;
+  height: 300px;
   z-index: 10;
 `;
 
