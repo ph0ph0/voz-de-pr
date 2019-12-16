@@ -26,6 +26,7 @@ const CreateSubjectWrapper = ({ secondary, ...props }) => {
     currentPanel: "content",
     subjectTitle: "",
     subjectContent: "",
+    subjectImage: null,
     imageDescription: "",
     linkDescription: "",
     linkContent: "",

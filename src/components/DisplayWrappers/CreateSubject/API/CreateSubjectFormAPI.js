@@ -12,7 +12,6 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
   const linkContent = state.linkContent;
   const titleIsErrored = state.titleIsErrored;
   const contentIsErrored = state.contentIsErrored;
-  const isLoading = state.isLoading;
 
   const { user } = useUser();
 
@@ -46,6 +45,15 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
       };
     });
     window.log(`subjectContent: ${newValue}`);
+  };
+
+  const updateSubjectImage = newValue => {
+    setState(prevState => {
+      return {
+        ...prevState,
+        subjectImage: newValue
+      };
+    });
   };
 
   const updateImageDescription = newValue => {
@@ -148,6 +156,7 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
     showPanel,
     subjectTitle,
     subjectContent,
+    subjectImage,
     imageDescription,
     linkDescription,
     linkContent,
@@ -155,6 +164,7 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
     contentIsErrored,
     updateSubjectTitle,
     updateSubjectContent,
+    updateSubjectImage,
     updateImageDescription,
     updateLinkDescription,
     updateLinkContent,

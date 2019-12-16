@@ -9,7 +9,7 @@ const ImageUploadWrapper = ({ secondary, ...props }) => {
       <UploadImageButton htmlFor="fileinput" secondary={secondary}>
         Upload Image
       </UploadImageButton>
-      <FileInput type="file" accept="image/*" id="fileinput" />
+      <FileInput type="file" id="fileinput" />
     </div>
   );
 };
@@ -25,7 +25,7 @@ const UploadImageButton = styled.label`
   font-size: 20px;
   color: ${props => (props.secondary ? "#1B4EA0" : "#EC220D")};
 
-  /* display: block; */
+  display: block;
   text-align: center;
 
   line-height: 50px;

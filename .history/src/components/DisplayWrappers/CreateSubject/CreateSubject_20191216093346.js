@@ -7,15 +7,26 @@ import ContentBody from "./ContentBody/ContentBody";
 import ImageBody from "./ImageBody/ImageBody";
 import LinkBody from "./LinkBody/LinkBody";
 import TitlesPanel from "./TitlesPanel/TitlesPanel";
+import Button from "../../Primitive/General/ActionButton";
 
 import CreateSubjectFormAPI from "./API/CreateSubjectFormAPI";
 import useAPI from "../../../CustomHooks/useAPI";
 
+const ActionButton = styled(Button)`
+  margin-left: auto;
+  margin-right: 49px;
+`;
+
 const CreateSubjectWrapper = ({ secondary, ...props }) => {
+  // const [addSubject, { data, loading, error, called }] = useMutation(
+  //   gql(createSubject)
+  // );
+
   const api = useAPI(CreateSubjectFormAPI, {
     currentPanel: "content",
     subjectTitle: "",
     subjectContent: "",
+    subjectImage: null,
     imageDescription: "",
     linkDescription: "",
     linkContent: "",
@@ -40,6 +51,13 @@ const CreateSubjectWrapper = ({ secondary, ...props }) => {
     <div {...props}>
       <TitlesPanel secondary={secondary} api={api} />
       {renderSwitch()}
+      {/* {data && <p>GotData</p>}
+      {loading && <p>Loading</p>}
+      {error && <p>Error {`${error.message}`}</p>}
+      {called && <p>Called</p>} */}
+      <ActionButton secondary={secondary} onClick={() => api.submit(secondary)}>
+        {secondary ? "Create Post" : "Create Cause"}
+      </ActionButton>
     </div>
   );
 };

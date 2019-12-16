@@ -9,7 +9,7 @@ const ImageUploadWrapper = ({ secondary, ...props }) => {
       <UploadImageButton htmlFor="fileinput" secondary={secondary}>
         Upload Image
       </UploadImageButton>
-      <FileInput type="file" accept="image/*" id="fileinput" />
+      <FileInput type="file" id="fileinput" />
     </div>
   );
 };
