@@ -14,7 +14,7 @@ const ImageUploadWrapper = ({ api, secondary, ...props }) => {
         type="file"
         accept="image/*"
         id="fileinput"
-        onChange={event => api.updateSubjectImage(event.target.files)}
+        onChange={event => api.updateSubjectImage(event.target.files[0])}
       />
       {api.subjectImage && <ImagePreview src={api.subjectImage} />}
     </div>

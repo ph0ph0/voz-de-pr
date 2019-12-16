@@ -14,9 +14,8 @@ const ImageUploadWrapper = ({ api, secondary, ...props }) => {
         type="file"
         accept="image/*"
         id="fileinput"
-        onChange={event => api.updateSubjectImage(event.target.files)}
+        onChange={api.updateSubjectImage}
       />
-      {api.subjectImage && <ImagePreview src={api.subjectImage} />}
     </div>
   );
 };
@@ -40,7 +39,6 @@ const UploadImageButton = styled.label`
   :hover {
     cursor: pointer;
   }
-  /* opacity: 0.01; */
 `;
 
 const FileInput = styled.input`
@@ -50,11 +48,6 @@ const FileInput = styled.input`
   overflow: hidden;
   position: absolute;
   z-index: -1;
-`;
-
-const ImagePreview = styled.img`
-  max-width: 100%;
-  max-height: 471px;
 `;
 
 const ImageUploadContainer = styled(ImageUploadWrapper)`

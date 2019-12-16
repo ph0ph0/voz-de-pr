@@ -14,7 +14,7 @@ const ImageUploadWrapper = ({ api, secondary, ...props }) => {
         type="file"
         accept="image/*"
         id="fileinput"
-        onChange={event => api.updateSubjectImage(event.target.files)}
+        onChange={event => api.updateSubjectImage(event.target.files[0])}
       />
       {api.subjectImage && <ImagePreview src={api.subjectImage} />}
     </div>
@@ -53,8 +53,8 @@ const FileInput = styled.input`
 `;
 
 const ImagePreview = styled.img`
-  max-width: 100%;
-  max-height: 471px;
+  width: inherit;
+  height: inherit;
 `;
 
 const ImageUploadContainer = styled(ImageUploadWrapper)`

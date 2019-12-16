@@ -48,14 +48,13 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
   };
 
   const updateSubjectImage = newValue => {
-    const fileArray = newValue;
-    //Will we still be able to upload... (need to abort if they tapped cancel)
-    if (fileArray.length === 0) return;
+    if (newValue === null) return;
+    if (newValue === subjectImage) return;
     window.log("Selected image from file");
     setState(prevState => {
       return {
         ...prevState,
-        subjectImage: URL.createObjectURL(newValue[0])
+        subjectImage: URL.createObjectURL(newValue)
       };
     });
   };
