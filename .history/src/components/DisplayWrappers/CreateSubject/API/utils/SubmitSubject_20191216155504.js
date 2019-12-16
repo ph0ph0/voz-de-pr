@@ -1,8 +1,12 @@
+import { createSubject, createPicture } from "graphql/mutations";
+import { API, graphqlOperation, Storage } from "aws-amplify";
 import { savePicture } from "Utils/PictureManager";
 import { saveSubject } from "Utils/SubjectManager";
 
 const submitSubject = async (subject, image) => {
   try {
+    //SKIP IF IMAGE IS NIL!
+
     if (image) {
       await savePicture(image);
     }
