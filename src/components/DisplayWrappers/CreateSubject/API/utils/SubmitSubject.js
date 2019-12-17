@@ -1,11 +1,16 @@
-import { savePicture } from "Utils/PictureManager";
+import { savePictureWithSubjectId } from "Utils/PictureManager";
 import { saveSubject } from "Utils/SubjectManager";
+import uuidv4 from "uuid/v4";
 
 const submitSubject = async (subject, image) => {
+  const subjectId = uuidv4();
+
   try {
     if (image) {
-      await savePicture(image);
+      await savePictureWithSubjectId(image, subjectId);
     }
+
+    subject.id = subjectId;
 
     await saveSubject(subject);
 

@@ -102,6 +102,44 @@ export const findUsername = `query FindUsername(
   }
 }
 `;
+export const getSubject = `query GetSubject($id: ID!) {
+  getSubject(id: $id) {
+    id
+    createdBy
+    createdAt
+    author
+    title
+    subjectContent
+    timePassedSinceCreation
+    numberOfComments
+    votes
+    type
+    owner
+    pictures {
+      items {
+        id
+        description
+        owner
+        subjectId
+      }
+      nextToken
+    }
+    comments {
+      items {
+        id
+        createdBy
+        author
+        createdAt
+        text
+        votes
+        subjectId
+        owner
+      }
+      nextToken
+    }
+  }
+}
+`;
 export const listSubjects = `query ListSubjects(
   $filter: ModelSubjectFilterInput
   $limit: Int
@@ -128,42 +166,6 @@ export const listSubjects = `query ListSubjects(
       }
     }
     nextToken
-  }
-}
-`;
-export const getSubject = `query GetSubject($id: ID!) {
-  getSubject(id: $id) {
-    id
-    createdBy
-    createdAt
-    author
-    title
-    subjectContent
-    timePassedSinceCreation
-    numberOfComments
-    votes
-    type
-    owner
-    pictures {
-      items {
-        id
-        description
-        owner
-      }
-      nextToken
-    }
-    comments {
-      items {
-        id
-        createdBy
-        author
-        createdAt
-        text
-        votes
-        owner
-      }
-      nextToken
-    }
   }
 }
 `;
@@ -253,6 +255,7 @@ export const getPicture = `query GetPicture($id: ID!) {
       region
       key
     }
+    subjectId
   }
 }
 `;
@@ -271,6 +274,7 @@ export const listPictures = `query ListPictures(
         region
         key
       }
+      subjectId
     }
     nextToken
   }
@@ -284,25 +288,7 @@ export const getComment = `query GetComment($id: ID!) {
     createdAt
     text
     votes
-    subject {
-      id
-      createdBy
-      createdAt
-      author
-      title
-      subjectContent
-      timePassedSinceCreation
-      numberOfComments
-      votes
-      type
-      owner
-      pictures {
-        nextToken
-      }
-      comments {
-        nextToken
-      }
-    }
+    subjectId
     owner
   }
 }
@@ -320,19 +306,7 @@ export const listComments = `query ListComments(
       createdAt
       text
       votes
-      subject {
-        id
-        createdBy
-        createdAt
-        author
-        title
-        subjectContent
-        timePassedSinceCreation
-        numberOfComments
-        votes
-        type
-        owner
-      }
+      subjectId
       owner
     }
     nextToken

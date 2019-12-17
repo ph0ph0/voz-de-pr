@@ -124,6 +124,7 @@ export const createSubject = `mutation CreateSubject($input: CreateSubjectInput!
         id
         description
         owner
+        subjectId
       }
       nextToken
     }
@@ -135,6 +136,7 @@ export const createSubject = `mutation CreateSubject($input: CreateSubjectInput!
         createdAt
         text
         votes
+        subjectId
         owner
       }
       nextToken
@@ -160,6 +162,7 @@ export const updateSubject = `mutation UpdateSubject($input: UpdateSubjectInput!
         id
         description
         owner
+        subjectId
       }
       nextToken
     }
@@ -171,6 +174,7 @@ export const updateSubject = `mutation UpdateSubject($input: UpdateSubjectInput!
         createdAt
         text
         votes
+        subjectId
         owner
       }
       nextToken
@@ -196,6 +200,7 @@ export const deleteSubject = `mutation DeleteSubject($input: DeleteSubjectInput!
         id
         description
         owner
+        subjectId
       }
       nextToken
     }
@@ -207,6 +212,7 @@ export const deleteSubject = `mutation DeleteSubject($input: DeleteSubjectInput!
         createdAt
         text
         votes
+        subjectId
         owner
       }
       nextToken
@@ -224,6 +230,7 @@ export const createPicture = `mutation CreatePicture($input: CreatePictureInput!
       region
       key
     }
+    subjectId
   }
 }
 `;
@@ -237,6 +244,7 @@ export const updatePicture = `mutation UpdatePicture($input: UpdatePictureInput!
       region
       key
     }
+    subjectId
   }
 }
 `;
@@ -250,6 +258,7 @@ export const deletePicture = `mutation DeletePicture($input: DeletePictureInput!
       region
       key
     }
+    subjectId
   }
 }
 `;
@@ -261,25 +270,7 @@ export const createComment = `mutation CreateComment($input: CreateCommentInput!
     createdAt
     text
     votes
-    subject {
-      id
-      createdBy
-      createdAt
-      author
-      title
-      subjectContent
-      timePassedSinceCreation
-      numberOfComments
-      votes
-      type
-      owner
-      pictures {
-        nextToken
-      }
-      comments {
-        nextToken
-      }
-    }
+    subjectId
     owner
   }
 }
@@ -292,25 +283,7 @@ export const updateComment = `mutation UpdateComment($input: UpdateCommentInput!
     createdAt
     text
     votes
-    subject {
-      id
-      createdBy
-      createdAt
-      author
-      title
-      subjectContent
-      timePassedSinceCreation
-      numberOfComments
-      votes
-      type
-      owner
-      pictures {
-        nextToken
-      }
-      comments {
-        nextToken
-      }
-    }
+    subjectId
     owner
   }
 }
@@ -323,25 +296,7 @@ export const deleteComment = `mutation DeleteComment($input: DeleteCommentInput!
     createdAt
     text
     votes
-    subject {
-      id
-      createdBy
-      createdAt
-      author
-      title
-      subjectContent
-      timePassedSinceCreation
-      numberOfComments
-      votes
-      type
-      owner
-      pictures {
-        nextToken
-      }
-      comments {
-        nextToken
-      }
-    }
+    subjectId
     owner
   }
 }

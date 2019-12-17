@@ -124,6 +124,7 @@ export const onCreateSubject = `subscription OnCreateSubject($owner: String!) {
         id
         description
         owner
+        subjectId
       }
       nextToken
     }
@@ -135,6 +136,7 @@ export const onCreateSubject = `subscription OnCreateSubject($owner: String!) {
         createdAt
         text
         votes
+        subjectId
         owner
       }
       nextToken
@@ -160,6 +162,7 @@ export const onUpdateSubject = `subscription OnUpdateSubject($owner: String!) {
         id
         description
         owner
+        subjectId
       }
       nextToken
     }
@@ -171,6 +174,7 @@ export const onUpdateSubject = `subscription OnUpdateSubject($owner: String!) {
         createdAt
         text
         votes
+        subjectId
         owner
       }
       nextToken
@@ -196,6 +200,7 @@ export const onDeleteSubject = `subscription OnDeleteSubject($owner: String!) {
         id
         description
         owner
+        subjectId
       }
       nextToken
     }
@@ -207,6 +212,7 @@ export const onDeleteSubject = `subscription OnDeleteSubject($owner: String!) {
         createdAt
         text
         votes
+        subjectId
         owner
       }
       nextToken
@@ -224,6 +230,7 @@ export const onCreatePicture = `subscription OnCreatePicture($owner: String!) {
       region
       key
     }
+    subjectId
   }
 }
 `;
@@ -237,6 +244,7 @@ export const onUpdatePicture = `subscription OnUpdatePicture($owner: String!) {
       region
       key
     }
+    subjectId
   }
 }
 `;
@@ -250,6 +258,7 @@ export const onDeletePicture = `subscription OnDeletePicture($owner: String!) {
       region
       key
     }
+    subjectId
   }
 }
 `;
@@ -261,25 +270,7 @@ export const onCreateComment = `subscription OnCreateComment($owner: String!) {
     createdAt
     text
     votes
-    subject {
-      id
-      createdBy
-      createdAt
-      author
-      title
-      subjectContent
-      timePassedSinceCreation
-      numberOfComments
-      votes
-      type
-      owner
-      pictures {
-        nextToken
-      }
-      comments {
-        nextToken
-      }
-    }
+    subjectId
     owner
   }
 }
@@ -292,25 +283,7 @@ export const onUpdateComment = `subscription OnUpdateComment($owner: String!) {
     createdAt
     text
     votes
-    subject {
-      id
-      createdBy
-      createdAt
-      author
-      title
-      subjectContent
-      timePassedSinceCreation
-      numberOfComments
-      votes
-      type
-      owner
-      pictures {
-        nextToken
-      }
-      comments {
-        nextToken
-      }
-    }
+    subjectId
     owner
   }
 }
@@ -323,25 +296,7 @@ export const onDeleteComment = `subscription OnDeleteComment($owner: String!) {
     createdAt
     text
     votes
-    subject {
-      id
-      createdBy
-      createdAt
-      author
-      title
-      subjectContent
-      timePassedSinceCreation
-      numberOfComments
-      votes
-      type
-      owner
-      pictures {
-        nextToken
-      }
-      comments {
-        nextToken
-      }
-    }
+    subjectId
     owner
   }
 }
