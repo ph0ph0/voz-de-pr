@@ -9,7 +9,10 @@ export const savePictureWithSubjectId = async (image, subjectId) => {
   const extension = image.name.substring(lastDot);
   const key = uuidv4();
 
-  const s3Output = await Storage.put(`${key}${extension}`, image);
+  const s3Output = await Storage.put(
+    `subjectPictures/${key}${extension}`,
+    image
+  );
   const fileKey = s3Output.key;
 
   const picture = {
