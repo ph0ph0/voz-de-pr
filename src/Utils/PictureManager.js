@@ -3,24 +3,21 @@ import { createPicture } from "graphql/mutations";
 import uuidv4 from "uuid/v4";
 
 export const savePictureWithSubjectId = async (image, subjectId) => {
-  window.log(`Sending image to storage`);
+  window.log(`Sending image to storage, name: ${image.name}`);
 
-  const extension = image.name.split(".")[1];
+  const lastDot = image.name.lastIndexOf(".");
+  const extension = image.name.substring(lastDot);
   const key = uuidv4();
 
-  const s3Output = await Storage.put(`${key}.${extension}`, image);
+  const s3Output = await Storage.put(`${key}${extension}`, image);
   const fileKey = s3Output.key;
-
-  const fileObject = {
-    bucket: "vozdeprsubjectimagesstorages3service",
-    region: "us-east-1",
-    key: fileKey
-  };
 
   const picture = {
     id: key,
-    file: fileObject,
-    subjectId: subjectId
+    subjectId: subjectId,
+    bucket: "vozdeprsubjectimagesstorages3service",
+    region: "us-east-1",
+    key: fileKey
   };
 
   const pictureObject = await API.graphql(

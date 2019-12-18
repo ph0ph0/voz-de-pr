@@ -9,29 +9,17 @@ export const createUser = `mutation CreateUser($input: CreateUserInput!) {
     lastName
     voiceNumber
     email
-    avatar {
-      bucket
-      region
-      key
-    }
     location
     createdAt
     updatedAt
-    subjects {
-      items {
-        id
-        createdBy
-        createdAt
-        author
-        title
-        subjectContent
-        timePassedSinceCreation
-        numberOfComments
-        votes
-        type
-        owner
-      }
-      nextToken
+    avatar {
+      id
+      subjectId
+      description
+      owner
+      bucket
+      region
+      key
     }
   }
 }
@@ -44,29 +32,17 @@ export const updateUser = `mutation UpdateUser($input: UpdateUserInput!) {
     lastName
     voiceNumber
     email
-    avatar {
-      bucket
-      region
-      key
-    }
     location
     createdAt
     updatedAt
-    subjects {
-      items {
-        id
-        createdBy
-        createdAt
-        author
-        title
-        subjectContent
-        timePassedSinceCreation
-        numberOfComments
-        votes
-        type
-        owner
-      }
-      nextToken
+    avatar {
+      id
+      subjectId
+      description
+      owner
+      bucket
+      region
+      key
     }
   }
 }
@@ -79,29 +55,17 @@ export const deleteUser = `mutation DeleteUser($input: DeleteUserInput!) {
     lastName
     voiceNumber
     email
-    avatar {
-      bucket
-      region
-      key
-    }
     location
     createdAt
     updatedAt
-    subjects {
-      items {
-        id
-        createdBy
-        createdAt
-        author
-        title
-        subjectContent
-        timePassedSinceCreation
-        numberOfComments
-        votes
-        type
-        owner
-      }
-      nextToken
+    avatar {
+      id
+      subjectId
+      description
+      owner
+      bucket
+      region
+      key
     }
   }
 }
@@ -118,13 +82,17 @@ export const createSubject = `mutation CreateSubject($input: CreateSubjectInput!
     numberOfComments
     votes
     type
+    hasPictures
     owner
     pictures {
       items {
         id
+        subjectId
         description
         owner
-        subjectId
+        bucket
+        region
+        key
       }
       nextToken
     }
@@ -156,13 +124,17 @@ export const updateSubject = `mutation UpdateSubject($input: UpdateSubjectInput!
     numberOfComments
     votes
     type
+    hasPictures
     owner
     pictures {
       items {
         id
+        subjectId
         description
         owner
-        subjectId
+        bucket
+        region
+        key
       }
       nextToken
     }
@@ -194,13 +166,17 @@ export const deleteSubject = `mutation DeleteSubject($input: DeleteSubjectInput!
     numberOfComments
     votes
     type
+    hasPictures
     owner
     pictures {
       items {
         id
+        subjectId
         description
         owner
-        subjectId
+        bucket
+        region
+        key
       }
       nextToken
     }
@@ -223,42 +199,36 @@ export const deleteSubject = `mutation DeleteSubject($input: DeleteSubjectInput!
 export const createPicture = `mutation CreatePicture($input: CreatePictureInput!) {
   createPicture(input: $input) {
     id
+    subjectId
     description
     owner
-    file {
-      bucket
-      region
-      key
-    }
-    subjectId
+    bucket
+    region
+    key
   }
 }
 `;
 export const updatePicture = `mutation UpdatePicture($input: UpdatePictureInput!) {
   updatePicture(input: $input) {
     id
+    subjectId
     description
     owner
-    file {
-      bucket
-      region
-      key
-    }
-    subjectId
+    bucket
+    region
+    key
   }
 }
 `;
 export const deletePicture = `mutation DeletePicture($input: DeletePictureInput!) {
   deletePicture(input: $input) {
     id
+    subjectId
     description
     owner
-    file {
-      bucket
-      region
-      key
-    }
-    subjectId
+    bucket
+    region
+    key
   }
 }
 `;

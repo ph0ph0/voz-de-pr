@@ -7,7 +7,10 @@ const submitSubject = async (subject, image) => {
 
   try {
     if (image) {
+      subject.hasPictures = true;
       await savePictureWithSubjectId(image, subjectId);
+    } else {
+      subject.hasPictures = false;
     }
 
     subject.id = subjectId;

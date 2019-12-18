@@ -9,29 +9,17 @@ export const getUser = `query GetUser($id: ID!) {
     lastName
     voiceNumber
     email
-    avatar {
-      bucket
-      region
-      key
-    }
     location
     createdAt
     updatedAt
-    subjects {
-      items {
-        id
-        createdBy
-        createdAt
-        author
-        title
-        subjectContent
-        timePassedSinceCreation
-        numberOfComments
-        votes
-        type
-        owner
-      }
-      nextToken
+    avatar {
+      id
+      subjectId
+      description
+      owner
+      bucket
+      region
+      key
     }
   }
 }
@@ -49,16 +37,17 @@ export const listUsers = `query ListUsers(
       lastName
       voiceNumber
       email
-      avatar {
-        bucket
-        region
-        key
-      }
       location
       createdAt
       updatedAt
-      subjects {
-        nextToken
+      avatar {
+        id
+        subjectId
+        description
+        owner
+        bucket
+        region
+        key
       }
     }
     nextToken
@@ -86,16 +75,17 @@ export const findUsername = `query FindUsername(
       lastName
       voiceNumber
       email
-      avatar {
-        bucket
-        region
-        key
-      }
       location
       createdAt
       updatedAt
-      subjects {
-        nextToken
+      avatar {
+        id
+        subjectId
+        description
+        owner
+        bucket
+        region
+        key
       }
     }
     nextToken
@@ -114,13 +104,17 @@ export const getSubject = `query GetSubject($id: ID!) {
     numberOfComments
     votes
     type
+    hasPictures
     owner
     pictures {
       items {
         id
+        subjectId
         description
         owner
-        subjectId
+        bucket
+        region
+        key
       }
       nextToken
     }
@@ -157,6 +151,7 @@ export const listSubjects = `query ListSubjects(
       numberOfComments
       votes
       type
+      hasPictures
       owner
       pictures {
         nextToken
@@ -196,6 +191,7 @@ export const subjectsByUserByType = `query SubjectsByUserByType(
       numberOfComments
       votes
       type
+      hasPictures
       owner
       pictures {
         nextToken
@@ -233,6 +229,7 @@ export const subjectsByUser = `query SubjectsByUser(
       numberOfComments
       votes
       type
+      hasPictures
       owner
       pictures {
         nextToken
@@ -248,14 +245,12 @@ export const subjectsByUser = `query SubjectsByUser(
 export const getPicture = `query GetPicture($id: ID!) {
   getPicture(id: $id) {
     id
+    subjectId
     description
     owner
-    file {
-      bucket
-      region
-      key
-    }
-    subjectId
+    bucket
+    region
+    key
   }
 }
 `;
@@ -267,14 +262,12 @@ export const listPictures = `query ListPictures(
   listPictures(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       id
+      subjectId
       description
       owner
-      file {
-        bucket
-        region
-        key
-      }
-      subjectId
+      bucket
+      region
+      key
     }
     nextToken
   }

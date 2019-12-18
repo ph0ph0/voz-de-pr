@@ -17,9 +17,8 @@ type User
   lastName: String
   voiceNumber: Int
   email: AWSEmail!
-  avatar: S3Object
+  avatar: Picture @connection
   location: String
-  subjects: [Subject] @connection
   createdAt: AWSDateTime
   updatedAt: AWSDateTime
 }
@@ -59,6 +58,7 @@ type Subject
   numberOfComments: Int
   votes: Int
   type: SubjectType!
+  hasPictures: Boolean!
 }
 
 enum SubjectType {
@@ -79,10 +79,12 @@ type Picture
   )
   @key(name: "picturesBySubject", fields: ["subjectId"]) {
   id: ID
+  subjectId: ID
   description: String
   owner: String
-  file: S3Object
-  subjectId: ID!
+  bucket: String
+  region: String
+  key: String
 }
 
 type Comment
@@ -127,7 +129,7 @@ type Vote
     queryField: "votesOnSubjectByUser"
   ) {
   """
-  idofvote=userId+post/comment/causeid+post/cause/postComment/causeComment
+  idofvote=userId+post/comment/causeid+post/cause/postComment/causeCommentt
   ieid=12233455_6786758_causeComment
   objectIdistheidoftheobjectbeingvotedon.
   """
@@ -155,12 +157,4 @@ enum VoteType {
 enum VoteOnType {
   post
   cause
-}
-
-#RichMedia
-
-type S3Object {
-  bucket: String!
-  region: String!
-  key: String!
 }

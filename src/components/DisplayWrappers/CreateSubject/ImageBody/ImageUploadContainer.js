@@ -12,7 +12,7 @@ const ImageUploadWrapper = ({ api, secondary, ...props }) => {
       </UploadImageButton>
       <FileInput
         type="file"
-        accept="image/*"
+        accept="image/png, image/jpeg"
         id="fileinput"
         onChange={event => api.updateSubjectImage(event.target.files)}
       />
