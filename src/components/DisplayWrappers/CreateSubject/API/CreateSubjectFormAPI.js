@@ -53,10 +53,7 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
     //If the array length is 0, file picker was cancelled so abort setting state
     if (fileArray.length === 0) return;
     window.log(`Selected image from file, array length: ${newValue.length}`);
-    const filename = fileArray[0].name.split(".")[0];
-    const extension = fileArray[0].name.split(".")[1];
 
-    window.log(`selectedImage filename: ${filename}, extension: ${extension}`);
     setState(prevState => {
       return {
         ...prevState,

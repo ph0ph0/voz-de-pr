@@ -11,7 +11,7 @@ export const savePictureWithSubjectId = async (image, subjectId) => {
   }
 
   window.log(
-    `Sending image to storage, name: ${image.name}, size: ${compressedFile.size}`
+    `Sending image to storage, name: ${image.name}, size: ${image.size}`
   );
 
   //Get the extension (png, jpg), generate a random key and set the folder name
