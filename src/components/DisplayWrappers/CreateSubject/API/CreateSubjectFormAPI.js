@@ -55,10 +55,8 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
     window.log(`Selected image from file, array length: ${newValue.length}`);
     const filename = fileArray[0].name.split(".")[0];
     const extension = fileArray[0].name.split(".")[1];
-    const key = new Date().toISOString();
-    window.log(
-      `selectedImage filename: ${filename}, extension: ${extension}, key: ${key}`
-    );
+
+    window.log(`selectedImage filename: ${filename}, extension: ${extension}`);
     setState(prevState => {
       return {
         ...prevState,
@@ -153,7 +151,7 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
     try {
       await submitSubject(subjectObject, subjectImage);
     } catch (error) {
-      window.log(`Error submitting subject: ${JSON.stringify(error)}`);
+      window.log(`Error submitting subject: ${error}`);
     } finally {
       setState(prevState => {
         return {

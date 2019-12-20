@@ -17,6 +17,7 @@
     "aws-amplify": "^1.2.4",
     "aws-appsync": "^3.0.2",
     "aws-appsync-react": "^3.0.2",
+    "browser-image-compression": "^1.0.6",
     "graphql": "^14.5.8",
     "graphql-tag": "^2.10.1",
     "react": "^16.10.1",

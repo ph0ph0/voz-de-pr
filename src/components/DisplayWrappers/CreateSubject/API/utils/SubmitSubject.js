@@ -19,7 +19,7 @@ const submitSubject = async (subject, image) => {
 
     // //UPDATE USER OBJECT!
   } catch (error) {
-    window.log(`Error creating subject!: ${JSON.stringify(error)}`);
+    window.log(`Error creating subject!: ${error}`);
     throw error;
   }
 };
