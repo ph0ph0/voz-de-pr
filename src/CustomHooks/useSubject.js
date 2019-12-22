@@ -2,6 +2,7 @@ import { useState } from "react";
 import { savePictureWithSubjectId } from "Utils/PictureManager";
 import { API, graphqlOperation } from "aws-amplify";
 import { createSubject } from "graphql/mutations";
+import { getSubject } from "graphql/queries";
 import uuidv4 from "uuid/v4";
 
 const useSubject = () => {
@@ -29,7 +30,9 @@ const useSubject = () => {
 
       return subjectObject;
     } catch (error) {
-      window.log(`Error in saveSubject of useSubject hook: ${error}`);
+      window.log(
+        `Error in saveSubject of useSubject hook: ${JSON.stringify(error)}`
+      );
       setError(error);
       throw error;
     } finally {
@@ -42,7 +45,11 @@ const useSubject = () => {
 
     //get subject, then get picture key and download picture
 
-    const subjectObject = await API.graphql(graphqlOperation());
+    const subjectObject = await API.graphql(
+      graphqlOperation(getSubject, { id: id })
+    );
+
+    // const picture =
   };
 
   return {

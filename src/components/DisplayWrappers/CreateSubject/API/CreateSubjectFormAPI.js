@@ -1,5 +1,4 @@
 import { inputsAreEmpty } from "./utils/InputsAreEmpty";
-import submitSubject from "./utils/SubmitSubject";
 import { useUser } from "CustomHooks/user";
 import useSubject from "CustomHooks/useSubject";
 
@@ -149,9 +148,9 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
 
     try {
       await saveSubject(subjectObject, subjectImage);
-      // await submitSubject(subjectObject, subjectImage);
     } catch (error) {
-      window.log(`Error submitting subject: ${error}`);
+      window.log(`Error submitting subject: ${error.message}`);
+      return;
     } finally {
       setState(prevState => {
         return {
@@ -182,7 +181,9 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
     updateImageDescription,
     updateLinkDescription,
     updateLinkContent,
-    submit
+    submit,
+    error,
+    loading
   };
 };
 

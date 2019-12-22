@@ -8,6 +8,8 @@ import ImageBody from "./ImageBody/ImageBody";
 import LinkBody from "./LinkBody/LinkBody";
 import TitlesPanel from "./TitlesPanel/TitlesPanel";
 import Button from "../../Primitive/General/ActionButton";
+import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
+import ErrorText from "components/Primitive/General/ErrorText";
 
 import CreateSubjectFormAPI from "./API/CreateSubjectFormAPI";
 import useAPI from "../../../CustomHooks/useAPI";
@@ -52,12 +54,15 @@ const CreateSubjectWrapper = ({ secondary, ...props }) => {
     <div {...props}>
       <TitlesPanel secondary={secondary} api={api} />
       {renderSwitch()}
-      {/* {data && <p>GotData</p>}
-      {loading && <p>Loading</p>}
-      {error && <p>Error {`${error.message}`}</p>}
-      {called && <p>Called</p>} */}
+      {api.error && <ErrorText>{api.error.message}</ErrorText>}
       <ActionButton secondary={secondary} onClick={() => api.submit(secondary)}>
-        {secondary ? "Create Post" : "Create Cause"}
+        {api.loading ? (
+          <LoadingSpinner />
+        ) : secondary ? (
+          "Create Post"
+        ) : (
+          "Create Cause"
+        )}
       </ActionButton>
     </div>
   );

@@ -7,7 +7,7 @@ export const savePictureWithSubjectId = async (image, subjectId) => {
   //Check image is not larger than 2 MB
   if (image.size > 2097152) {
     window.log(`Image too large, aborting!`);
-    throw new Error("Image is too large, please select another one");
+    throw new Error("Image is too large, please select another one!");
   }
 
   window.log(
@@ -40,4 +40,10 @@ export const savePictureWithSubjectId = async (image, subjectId) => {
 
   window.log(`image sent!`);
   return pictureObject;
+};
+
+const getPictureWithSubjectId = async key => {
+  const picture = await Storage.get(key);
+
+  return picture;
 };
