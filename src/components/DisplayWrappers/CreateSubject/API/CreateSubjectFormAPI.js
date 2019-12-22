@@ -1,6 +1,7 @@
 import { inputsAreEmpty } from "./utils/InputsAreEmpty";
 import submitSubject from "./utils/SubmitSubject";
 import { useUser } from "CustomHooks/user";
+import useSubject from "CustomHooks/useSubject";
 
 const CreateSubjectFormAPI = ({ state, setState }) => {
   const currentPanel = state.currentPanel;
@@ -15,6 +16,7 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
   const contentIsErrored = state.contentIsErrored;
 
   const { user } = useUser();
+  const { saveSubject, loading, error } = useSubject();
 
   const showPanel = newValue => {
     setState(prevState => {
@@ -146,7 +148,8 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
     };
 
     try {
-      await submitSubject(subjectObject, subjectImage);
+      await saveSubject(subjectObject, subjectImage);
+      // await submitSubject(subjectObject, subjectImage);
     } catch (error) {
       window.log(`Error submitting subject: ${error}`);
     } finally {
