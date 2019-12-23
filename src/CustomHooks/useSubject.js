@@ -33,6 +33,9 @@ const useSubject = () => {
       window.log(
         `Error in saveSubject of useSubject hook: ${JSON.stringify(error)}`
       );
+      if (!error.message) {
+        error.message = "Error saving, please try again!";
+      }
       setError(error);
       throw error;
     } finally {

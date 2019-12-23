@@ -58,7 +58,7 @@ type Subject
   numberOfComments: Int
   votes: Int
   type: SubjectType!
-  hasPictures: Boolean!
+  # hasPictures: Boolean!
 }
 
 enum SubjectType {
