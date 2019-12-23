@@ -82,7 +82,6 @@ export const onCreateSubject = `subscription OnCreateSubject($owner: String!) {
     numberOfComments
     votes
     type
-    hasPictures
     owner
     pictures {
       items {
@@ -124,7 +123,6 @@ export const onUpdateSubject = `subscription OnUpdateSubject($owner: String!) {
     numberOfComments
     votes
     type
-    hasPictures
     owner
     pictures {
       items {
@@ -166,7 +164,6 @@ export const onDeleteSubject = `subscription OnDeleteSubject($owner: String!) {
     numberOfComments
     votes
     type
-    hasPictures
     owner
     pictures {
       items {

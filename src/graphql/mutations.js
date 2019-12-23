@@ -82,7 +82,6 @@ export const createSubject = `mutation CreateSubject($input: CreateSubjectInput!
     numberOfComments
     votes
     type
-    hasPictures
     owner
     pictures {
       items {
@@ -124,7 +123,6 @@ export const updateSubject = `mutation UpdateSubject($input: UpdateSubjectInput!
     numberOfComments
     votes
     type
-    hasPictures
     owner
     pictures {
       items {
@@ -166,7 +164,6 @@ export const deleteSubject = `mutation DeleteSubject($input: DeleteSubjectInput!
     numberOfComments
     votes
     type
-    hasPictures
     owner
     pictures {
       items {

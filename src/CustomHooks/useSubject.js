@@ -9,7 +9,13 @@ const useSubject = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  const resetAll = () => {
+    setLoading(false);
+    setError(null);
+  };
+
   const saveSubject = async (subject, image) => {
+    resetAll();
     setLoading(true);
     //Create subjectId so we can bind it to the picture if there is one
     const subjectId = uuidv4();
@@ -44,6 +50,7 @@ const useSubject = () => {
   };
 
   const downloadSubject = async id => {
+    resetAll();
     window.log(`Downloading subject using id...`);
 
     //get subject, then get picture key and download picture

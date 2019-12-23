@@ -104,7 +104,6 @@ export const getSubject = `query GetSubject($id: ID!) {
     numberOfComments
     votes
     type
-    hasPictures
     owner
     pictures {
       items {
@@ -151,7 +150,6 @@ export const listSubjects = `query ListSubjects(
       numberOfComments
       votes
       type
-      hasPictures
       owner
       pictures {
         nextToken
@@ -191,7 +189,6 @@ export const subjectsByUserByType = `query SubjectsByUserByType(
       numberOfComments
       votes
       type
-      hasPictures
       owner
       pictures {
         nextToken
@@ -229,7 +226,6 @@ export const subjectsByUser = `query SubjectsByUser(
       numberOfComments
       votes
       type
-      hasPictures
       owner
       pictures {
         nextToken
