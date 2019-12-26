@@ -20,10 +20,6 @@ const ActionButton = styled(Button)`
 `;
 
 const CreateSubjectWrapper = ({ secondary, ...props }) => {
-  // const [addSubject, { data, loading, error, called }] = useMutation(
-  //   gql(createSubject)
-  // );
-
   const api = useAPI(CreateSubjectFormAPI, {
     currentPanel: "content",
     subjectTitle: "",

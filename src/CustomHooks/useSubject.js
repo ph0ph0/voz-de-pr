@@ -5,7 +5,7 @@ import { createSubject } from "graphql/mutations";
 import { getSubject } from "graphql/queries";
 import uuidv4 from "uuid/v4";
 
-const useSubject = () => {
+export const useSubject = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -70,4 +70,4 @@ const useSubject = () => {
   };
 };
 
-export default useSubject;
+// export default useSubject;

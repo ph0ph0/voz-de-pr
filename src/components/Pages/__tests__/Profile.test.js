@@ -43,7 +43,7 @@ describe("When clicking on the dropdown (InlineContent component)", () => {
     const ListOfLocations = getByTestId("ListOfLocations");
     expect(ListOfLocations).toBeInTheDocument();
 
-    const selectedLocation = getByText("Rincon");
+    const selectedLocation = getByText("Adjuntas");
 
     fireEvent.click(selectedLocation);
 

@@ -1,6 +1,6 @@
 import { inputsAreEmpty } from "./utils/InputsAreEmpty";
 import { useUser } from "CustomHooks/user";
-import useSubject from "CustomHooks/useSubject";
+import { useSubject } from "CustomHooks/useSubject";
 
 const CreateSubjectFormAPI = ({ state, setState }) => {
   const currentPanel = state.currentPanel;
@@ -120,9 +120,10 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
       return;
     }
 
-    // if (inputsAreEmpty(setState, subjectTitle, subjectContent)) {
-    //   return;
-    // }
+    if (inputsAreEmpty(setState, subjectTitle, subjectContent)) {
+      window.log("inputs Empty:");
+      return;
+    }
 
     setState(prevState => {
       return {
@@ -133,14 +134,14 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
 
     const subjectType = secondary ? "post" : "cause";
 
-    const sT = "TEST_TITLE";
-    const sC = "TEST_CONTENT";
+    // const sT = "TEST_TITLE";
+    // const sC = "TEST_CONTENT";
 
     const subjectObject = {
       createdBy: user.id,
       author: user.username,
-      title: sT,
-      subjectContent: sC,
+      title: subjectTitle,
+      subjectContent: subjectContent,
       numberOfComments: 0,
       votes: 0,
       type: subjectType

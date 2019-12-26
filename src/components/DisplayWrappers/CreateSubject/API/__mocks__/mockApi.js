@@ -2,8 +2,9 @@ export var mockApi = {
   currentPanel: "content",
   subjectTitle: "",
   subjectContent: "",
+  subjectImage: null,
   imageDescription: "",
-  linkDescription: "", 
+  linkDescription: "",
   linkContent: "",
   titleIsErrored: false,
   contentIsErrored: false,
@@ -11,5 +12,5 @@ export var mockApi = {
   updateSubjectContent: () => {},
   updateImageDescription: () => {},
   updateLinkDescription: () => {},
-  updateLinkContent: () => {},
+  updateLinkContent: () => {}
 };

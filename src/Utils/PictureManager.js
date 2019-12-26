@@ -1,7 +1,6 @@
 import { API, graphqlOperation, Storage } from "aws-amplify";
 import { createPicture } from "graphql/mutations";
 import uuidv4 from "uuid/v4";
-import imageCompression from "browser-image-compression";
 
 export const savePictureWithSubjectId = async (image, subjectId) => {
   //Check image is not larger than 2 MB

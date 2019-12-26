@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  render,
-  fireEvent,
-  cleanup,
-  wait,
-  getByText,
-  waitForElementToBeRemoved
-} from "@testing-library/react";
+import { render, fireEvent, cleanup, wait } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 
 import SignUp from "../SignUp";
@@ -85,7 +78,7 @@ describe("Selectable inputs", () => {
     const ListOfLocations = getByTestId("ListOfLocations");
     expect(ListOfLocations).toBeInTheDocument();
 
-    const SelectedLocation = getByText("Rincon");
+    const SelectedLocation = getByText("Adjuntas");
     expect(SelectedLocation).toBeInTheDocument();
 
     fireEvent.click(SelectedLocation);

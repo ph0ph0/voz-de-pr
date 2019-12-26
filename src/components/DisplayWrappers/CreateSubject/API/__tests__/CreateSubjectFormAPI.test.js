@@ -36,6 +36,25 @@ const mockApi = useApiMock(CreateSubjectFormAPI, state);
 //Allows us to ignore window . log calls
 global.log = () => {};
 
+jest.mock("CustomHooks/user", () => ({
+  useUser: () => ({
+    error: null,
+    loading: false,
+    forgotPassword: () => {},
+    submitCodeAndNewPassword: () => {},
+    user: "testUser"
+  })
+}));
+
+jest.mock("CustomHooks/useSubject", () => ({
+  useSubject: () => ({
+    error: null,
+    loading: false,
+    saveSubject: () => {},
+    downloadSubject: () => {}
+  })
+}));
+
 it("updates the panel that is shown to the user", () => {
   mockApi.api.showPanel("content");
   expect(mockApi.api.currentPanel).toEqual("content");
