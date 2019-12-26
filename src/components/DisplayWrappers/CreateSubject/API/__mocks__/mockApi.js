@@ -2,7 +2,7 @@ export var mockApi = {
   currentPanel: "content",
   subjectTitle: "",
   subjectContent: "",
-  subjectImage: null,
+  subjectImage: "Image",
   imageDescription: "",
   linkDescription: "",
   linkContent: "",

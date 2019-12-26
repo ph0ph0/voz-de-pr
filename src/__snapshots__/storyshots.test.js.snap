@@ -338,13 +338,13 @@ exports[`Storyshots DisplayWrappers|CreateSubject/ContentBody/ContentBody Standa
 
 exports[`Storyshots DisplayWrappers|CreateSubject/CreateSubject/CreateSubject Standard 1`] = `
 <div
-  className="sc-jWBwVP gchQqT"
+  className="sc-jAaTju dQRIex"
 >
   <div
-    className="sc-fjdhpX kCRbYR"
+    className="sc-cSHVUG gDEcVa"
   >
     <div
-      className="sc-jTzLTM VcEuF"
+      className="sc-jzJRlG WESTd"
       onClick={[Function]}
     >
       <svg
@@ -359,14 +359,14 @@ exports[`Storyshots DisplayWrappers|CreateSubject/CreateSubject/CreateSubject St
         />
       </svg>
       <p
-        className="sc-VigVT gpndcl"
+        className="sc-fjdhpX gxYigd"
         type="content"
       >
         Cause
       </p>
     </div>
     <div
-      className="sc-jTzLTM cNGYwq"
+      className="sc-jzJRlG kURcdl"
       onClick={[Function]}
     >
       <svg
@@ -381,14 +381,14 @@ exports[`Storyshots DisplayWrappers|CreateSubject/CreateSubject/CreateSubject St
         />
       </svg>
       <p
-        className="sc-VigVT cjkRub"
+        className="sc-fjdhpX gOqFxe"
         type="image"
       >
         Image
       </p>
     </div>
     <div
-      className="sc-jTzLTM cFSwvF"
+      className="sc-jzJRlG jqyqIK"
       onClick={[Function]}
     >
       <svg
@@ -403,7 +403,7 @@ exports[`Storyshots DisplayWrappers|CreateSubject/CreateSubject/CreateSubject St
         />
       </svg>
       <p
-        className="sc-VigVT cjkRub"
+        className="sc-fjdhpX gOqFxe"
         type="link"
       >
         Link
@@ -416,14 +416,14 @@ exports[`Storyshots DisplayWrappers|CreateSubject/CreateSubject/CreateSubject St
     <div
       className="sc-ifAKCX hXQovA"
     >
-      60
+      50
        char
       s
        
       left
     </div>
     <input
-      className="sc-bdVaJa diwNrr"
+      className="sc-bdVaJa cUBMjx"
       onChange={[Function]}
       placeholder="Title"
       value=""
@@ -436,7 +436,8 @@ exports[`Storyshots DisplayWrappers|CreateSubject/CreateSubject/CreateSubject St
     />
   </div>
   <button
-    className="sc-eHgmQL sc-cvbbAY sEePe"
+    className="sc-jWBwVP sc-cMljjf eIFYZX"
+    onClick={[Function]}
   >
     Create Cause
   </button>
@@ -457,7 +458,7 @@ exports[`Storyshots DisplayWrappers|CreateSubject/ImageBody/ImageBody Standard 1
     className="sc-iwsKbI eHYdju"
   >
     <label
-      className="sc-gzVnrw eOoFtH"
+      className="sc-gzVnrw gmAfkP"
       htmlFor="fileinput"
     >
       Upload Image
@@ -468,6 +469,9 @@ exports[`Storyshots DisplayWrappers|CreateSubject/ImageBody/ImageBody Standard 1
       id="fileinput"
       onChange={[Function]}
       type="file"
+    />
+    <img
+      className="sc-dnqmqq jyAXZo"
     />
   </div>
 </div>
@@ -602,13 +606,13 @@ exports[`Storyshots DisplayWrappers|NavBar/LogoWrapper Standard 1`] = `
 
 exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
 <div
-  className="sc-fBuWsC csTkMd"
+  className="sc-fAjcbJ leZaDW"
 >
   <div
-    className="sc-iRbamj dPdNyK"
+    className="sc-csuQGl jKlBMX"
   >
     <div
-      className="sc-gPEVay fSdbmw sc-iRbamj dPdNyK"
+      className="sc-gipzik ictriN sc-csuQGl jKlBMX"
       history={
         Object {
           "action": "POP",
@@ -653,11 +657,11 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
       </svg>
     </div>
     <nav
-      className="sc-jDwBTQ hqLgwf sc-iRbamj dPdNyK"
+      className="sc-jlyJG eeAfaM sc-csuQGl jKlBMX"
     >
       <a
         aria-current="page"
-        className="sc-jAaTju hVDjXu sc-jDwBTQ hqLgwf sc-iRbamj dPdNyK active"
+        className="sc-iRbamj jLwidf sc-jlyJG eeAfaM sc-csuQGl jKlBMX active"
         href="/"
         onClick={[Function]}
         style={Object {}}
@@ -666,7 +670,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
       </a>
       <a
         aria-current={null}
-        className="sc-jAaTju hVDjXu sc-jDwBTQ hqLgwf sc-iRbamj dPdNyK"
+        className="sc-iRbamj jLwidf sc-jlyJG eeAfaM sc-csuQGl jKlBMX"
         href="/causes"
         onClick={[Function]}
       >
@@ -674,7 +678,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
       </a>
       <a
         aria-current={null}
-        className="sc-jAaTju hVDjXu sc-jDwBTQ hqLgwf sc-iRbamj dPdNyK"
+        className="sc-iRbamj jLwidf sc-jlyJG eeAfaM sc-csuQGl jKlBMX"
         href="/posts"
         onClick={[Function]}
       >
@@ -682,7 +686,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
       </a>
       <a
         aria-current={null}
-        className="sc-jAaTju hVDjXu sc-jDwBTQ hqLgwf sc-iRbamj dPdNyK"
+        className="sc-iRbamj jLwidf sc-jlyJG eeAfaM sc-csuQGl jKlBMX"
         href="/profile"
         onClick={[Function]}
       >
@@ -691,100 +695,32 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
     </nav>
   </div>
   <div
-    className="sc-cMljjf lfPBzS"
+    className="sc-gPEVay hsGcMl"
   >
     <input
-      className="sc-brqgnP buQSXE"
+      className="sc-jDwBTQ llmlte"
       placeholder="Search"
       type="text"
     />
   </div>
   <div
-    className="sc-jhAzac dXQhzP"
+    className="sc-eqIVtm dQGSxp"
   >
     <div
-      className="sc-gipzik dEIxIt"
+      className="sc-bRBYWo dmruaP"
     >
       <button
-        className="sc-jlyJG lmlZEL"
+        className="sc-Rmtcm hNewTQ"
         onClick={[Function]}
       >
         SIGN UP
       </button>
       <button
-        className="sc-jlyJG crYcRL"
+        className="sc-Rmtcm eZBoWn"
         onClick={[Function]}
       >
         LOG IN
       </button>
-    </div>
-    <div
-      className="sc-hzDkRC cqSmPu"
-      history={
-        Object {
-          "action": "POP",
-          "block": [Function],
-          "createHref": [Function],
-          "go": [Function],
-          "goBack": [Function],
-          "goForward": [Function],
-          "length": 1,
-          "listen": [Function],
-          "location": Object {
-            "hash": "",
-            "pathname": "/",
-            "search": "",
-            "state": undefined,
-          },
-          "push": [Function],
-          "replace": [Function],
-        }
-      }
-      location={
-        Object {
-          "hash": "",
-          "pathname": "/",
-          "search": "",
-          "state": undefined,
-        }
-      }
-      match={
-        Object {
-          "isExact": true,
-          "params": Object {},
-          "path": "/",
-          "url": "/",
-        }
-      }
-      onClick={[Function]}
-    >
-      <div
-        className="sc-bRBYWo bWZKLW"
-      >
-        <svg>
-          Userpic.svg
-        </svg>
-      </div>
-      <div
-        className="sc-Rmtcm fBUOzj"
-      >
-        <div
-          className="sc-csuQGl iUTRQb"
-          fontSize="16px"
-          height="50%"
-          width="80%"
-        >
-          James Wheeler
-        </div>
-        <div
-          className="sc-csuQGl jiBnbW"
-          fontSize="12px"
-          height="50%"
-          width="80%"
-        >
-          larkin_tr***@yahoo.com
-        </div>
-      </div>
     </div>
   </div>
 </div>
@@ -929,91 +865,23 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarLeft Standard 1`] = `
 
 exports[`Storyshots DisplayWrappers|NavBar/NavBarRight Standard 1`] = `
 <div
-  className="sc-jhAzac dXQhzP"
+  className="sc-eqIVtm dQGSxp"
 >
   <div
-    className="sc-gipzik dEIxIt"
+    className="sc-bRBYWo dmruaP"
   >
     <button
-      className="sc-jlyJG lmlZEL"
+      className="sc-Rmtcm hNewTQ"
       onClick={[Function]}
     >
       SIGN UP
     </button>
     <button
-      className="sc-jlyJG crYcRL"
+      className="sc-Rmtcm eZBoWn"
       onClick={[Function]}
     >
       LOG IN
     </button>
-  </div>
-  <div
-    className="sc-hzDkRC cqSmPu"
-    history={
-      Object {
-        "action": "POP",
-        "block": [Function],
-        "createHref": [Function],
-        "go": [Function],
-        "goBack": [Function],
-        "goForward": [Function],
-        "length": 1,
-        "listen": [Function],
-        "location": Object {
-          "hash": "",
-          "pathname": "/",
-          "search": "",
-          "state": undefined,
-        },
-        "push": [Function],
-        "replace": [Function],
-      }
-    }
-    location={
-      Object {
-        "hash": "",
-        "pathname": "/",
-        "search": "",
-        "state": undefined,
-      }
-    }
-    match={
-      Object {
-        "isExact": true,
-        "params": Object {},
-        "path": "/",
-        "url": "/",
-      }
-    }
-    onClick={[Function]}
-  >
-    <div
-      className="sc-bRBYWo bWZKLW"
-    >
-      <svg>
-        Userpic.svg
-      </svg>
-    </div>
-    <div
-      className="sc-Rmtcm fBUOzj"
-    >
-      <div
-        className="sc-csuQGl iUTRQb"
-        fontSize="16px"
-        height="50%"
-        width="80%"
-      >
-        James Wheeler
-      </div>
-      <div
-        className="sc-csuQGl jiBnbW"
-        fontSize="12px"
-        height="50%"
-        width="80%"
-      >
-        larkin_tr***@yahoo.com
-      </div>
-    </div>
   </div>
 </div>
 `;
@@ -12688,28 +12556,28 @@ exports[`Storyshots DisplayWrappers|TopOfPage/TopOfPage Standard 1`] = `
 
 exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Cause 1`] = `
 <div
-  className="sc-CtfFt beUmxD"
+  className="sc-fjmCvl pYoKM"
 >
   <div
-    className="sc-bMvGRv cEzyBu"
+    className="sc-hGoxap jGNGHn"
   >
     <div
-      className="sc-rBLzX jBJwHV"
+      className="sc-laTMn gQDAtN"
     >
       <h1
-        className="sc-gJWqzi gGzyyq"
+        className="sc-CtfFt fWtKpE"
       >
         Create a Cause
       </h1>
     </div>
     <div
-      className="sc-jWBwVP gchQqT"
+      className="sc-jAaTju dQRIex"
     >
       <div
-        className="sc-fjdhpX kCRbYR"
+        className="sc-cSHVUG gDEcVa"
       >
         <div
-          className="sc-jTzLTM VcEuF"
+          className="sc-jzJRlG WESTd"
           onClick={[Function]}
         >
           <svg
@@ -12724,14 +12592,14 @@ exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Cause 1`] 
             />
           </svg>
           <p
-            className="sc-VigVT gpndcl"
+            className="sc-fjdhpX gxYigd"
             type="content"
           >
             Cause
           </p>
         </div>
         <div
-          className="sc-jTzLTM cNGYwq"
+          className="sc-jzJRlG kURcdl"
           onClick={[Function]}
         >
           <svg
@@ -12746,14 +12614,14 @@ exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Cause 1`] 
             />
           </svg>
           <p
-            className="sc-VigVT cjkRub"
+            className="sc-fjdhpX gOqFxe"
             type="image"
           >
             Image
           </p>
         </div>
         <div
-          className="sc-jTzLTM cFSwvF"
+          className="sc-jzJRlG jqyqIK"
           onClick={[Function]}
         >
           <svg
@@ -12768,7 +12636,7 @@ exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Cause 1`] 
             />
           </svg>
           <p
-            className="sc-VigVT cjkRub"
+            className="sc-fjdhpX gOqFxe"
             type="link"
           >
             Link
@@ -12781,14 +12649,14 @@ exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Cause 1`] 
         <div
           className="sc-ifAKCX hXQovA"
         >
-          60
+          50
            char
           s
            
           left
         </div>
         <input
-          className="sc-bdVaJa diwNrr"
+          className="sc-bdVaJa cUBMjx"
           onChange={[Function]}
           placeholder="Title"
           value=""
@@ -12801,25 +12669,26 @@ exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Cause 1`] 
         />
       </div>
       <button
-        className="sc-eHgmQL sc-cvbbAY sEePe"
+        className="sc-jWBwVP sc-cMljjf eIFYZX"
+        onClick={[Function]}
       >
         Create Cause
       </button>
     </div>
   </div>
   <div
-    className="sc-gisBJw bsvylX"
+    className="sc-kgAjT dhBLht"
   >
     <svg>
       PRFlag.svg
     </svg>
     <svg
-      className="sc-fMiknA dUhQkv"
+      className="sc-caSCKo iwaFUj"
     >
       Logo.svg
     </svg>
     <div
-      className="sc-jzJRlG bCEkcf"
+      className="sc-kAzzGY dniJoZ"
     >
       A Cause in Voz de PR is a request for assistance. It should be used to bring attention to a situation that requires help. Help can be in the form of volunteer work, a donation, or any other type of assistance that would help the Cause to achieve its goal!
     </div>
@@ -12829,28 +12698,28 @@ exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Cause 1`] 
 
 exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Post 1`] = `
 <div
-  className="sc-CtfFt beUmxD"
+  className="sc-fjmCvl pYoKM"
 >
   <div
-    className="sc-bMvGRv cEzyBu"
+    className="sc-hGoxap jGNGHn"
   >
     <div
-      className="sc-rBLzX jBJwHV"
+      className="sc-laTMn gQDAtN"
     >
       <h1
-        className="sc-gJWqzi gGzyyq"
+        className="sc-CtfFt fWtKpE"
       >
         Create a Cause
       </h1>
     </div>
     <div
-      className="sc-jWBwVP gchQqT"
+      className="sc-jAaTju dQRIex"
     >
       <div
-        className="sc-fjdhpX kCRbYR"
+        className="sc-cSHVUG gDEcVa"
       >
         <div
-          className="sc-jTzLTM VcEuF"
+          className="sc-jzJRlG WESTd"
           onClick={[Function]}
         >
           <svg
@@ -12865,14 +12734,14 @@ exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Post 1`] =
             />
           </svg>
           <p
-            className="sc-VigVT gpndcl"
+            className="sc-fjdhpX gxYigd"
             type="content"
           >
             Cause
           </p>
         </div>
         <div
-          className="sc-jTzLTM cNGYwq"
+          className="sc-jzJRlG kURcdl"
           onClick={[Function]}
         >
           <svg
@@ -12887,14 +12756,14 @@ exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Post 1`] =
             />
           </svg>
           <p
-            className="sc-VigVT cjkRub"
+            className="sc-fjdhpX gOqFxe"
             type="image"
           >
             Image
           </p>
         </div>
         <div
-          className="sc-jTzLTM cFSwvF"
+          className="sc-jzJRlG jqyqIK"
           onClick={[Function]}
         >
           <svg
@@ -12909,7 +12778,7 @@ exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Post 1`] =
             />
           </svg>
           <p
-            className="sc-VigVT cjkRub"
+            className="sc-fjdhpX gOqFxe"
             type="link"
           >
             Link
@@ -12922,14 +12791,14 @@ exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Post 1`] =
         <div
           className="sc-ifAKCX hXQovA"
         >
-          60
+          50
            char
           s
            
           left
         </div>
         <input
-          className="sc-bdVaJa diwNrr"
+          className="sc-bdVaJa cUBMjx"
           onChange={[Function]}
           placeholder="Title"
           value=""
@@ -12942,25 +12811,26 @@ exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Post 1`] =
         />
       </div>
       <button
-        className="sc-eHgmQL sc-cvbbAY sEePe"
+        className="sc-jWBwVP sc-cMljjf eIFYZX"
+        onClick={[Function]}
       >
         Create Cause
       </button>
     </div>
   </div>
   <div
-    className="sc-gisBJw bsvylX"
+    className="sc-kgAjT dhBLht"
   >
     <svg>
       PRFlag.svg
     </svg>
     <svg
-      className="sc-fMiknA dUhQkv"
+      className="sc-caSCKo iwaFUj"
     >
       Logo.svg
     </svg>
     <div
-      className="sc-jzJRlG bCEkcf"
+      className="sc-kAzzGY dniJoZ"
     >
       A Cause in Voz de PR is a request for assistance. It should be used to bring attention to a situation that requires help. Help can be in the form of volunteer work, a donation, or any other type of assistance that would help the Cause to achieve its goal!
     </div>
@@ -12970,26 +12840,26 @@ exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Post 1`] =
 
 exports[`Storyshots PageContentWrappers|CreatePages/CreatePageMainContent Cause 1`] = `
 <div
-  className="sc-bMvGRv cEzyBu"
+  className="sc-hGoxap jGNGHn"
   pageTitle="Create Cause"
 >
   <div
-    className="sc-rBLzX jBJwHV"
+    className="sc-laTMn gQDAtN"
   >
     <h1
-      className="sc-gJWqzi gGzyyq"
+      className="sc-CtfFt fWtKpE"
     >
       Create a Cause
     </h1>
   </div>
   <div
-    className="sc-jWBwVP gchQqT"
+    className="sc-jAaTju dQRIex"
   >
     <div
-      className="sc-fjdhpX kCRbYR"
+      className="sc-cSHVUG gDEcVa"
     >
       <div
-        className="sc-jTzLTM VcEuF"
+        className="sc-jzJRlG WESTd"
         onClick={[Function]}
       >
         <svg
@@ -13004,14 +12874,14 @@ exports[`Storyshots PageContentWrappers|CreatePages/CreatePageMainContent Cause 
           />
         </svg>
         <p
-          className="sc-VigVT gpndcl"
+          className="sc-fjdhpX gxYigd"
           type="content"
         >
           Cause
         </p>
       </div>
       <div
-        className="sc-jTzLTM cNGYwq"
+        className="sc-jzJRlG kURcdl"
         onClick={[Function]}
       >
         <svg
@@ -13026,14 +12896,14 @@ exports[`Storyshots PageContentWrappers|CreatePages/CreatePageMainContent Cause 
           />
         </svg>
         <p
-          className="sc-VigVT cjkRub"
+          className="sc-fjdhpX gOqFxe"
           type="image"
         >
           Image
         </p>
       </div>
       <div
-        className="sc-jTzLTM cFSwvF"
+        className="sc-jzJRlG jqyqIK"
         onClick={[Function]}
       >
         <svg
@@ -13048,7 +12918,7 @@ exports[`Storyshots PageContentWrappers|CreatePages/CreatePageMainContent Cause 
           />
         </svg>
         <p
-          className="sc-VigVT cjkRub"
+          className="sc-fjdhpX gOqFxe"
           type="link"
         >
           Link
@@ -13061,14 +12931,14 @@ exports[`Storyshots PageContentWrappers|CreatePages/CreatePageMainContent Cause 
       <div
         className="sc-ifAKCX hXQovA"
       >
-        60
+        50
          char
         s
          
         left
       </div>
       <input
-        className="sc-bdVaJa diwNrr"
+        className="sc-bdVaJa cUBMjx"
         onChange={[Function]}
         placeholder="Title"
         value=""
@@ -13081,7 +12951,8 @@ exports[`Storyshots PageContentWrappers|CreatePages/CreatePageMainContent Cause 
       />
     </div>
     <button
-      className="sc-eHgmQL sc-cvbbAY sEePe"
+      className="sc-jWBwVP sc-cMljjf eIFYZX"
+      onClick={[Function]}
     >
       Create Cause
     </button>
@@ -13091,26 +12962,26 @@ exports[`Storyshots PageContentWrappers|CreatePages/CreatePageMainContent Cause 
 
 exports[`Storyshots PageContentWrappers|CreatePages/CreatePageMainContent Post 1`] = `
 <div
-  className="sc-bMvGRv cEzyBu"
+  className="sc-hGoxap jGNGHn"
   pageTitle="Create Post"
 >
   <div
-    className="sc-rBLzX jBJwHV"
+    className="sc-laTMn gQDAtN"
   >
     <h1
-      className="sc-gJWqzi gGzyyq"
+      className="sc-CtfFt fWtKpE"
     >
       Create a Cause
     </h1>
   </div>
   <div
-    className="sc-jWBwVP gchQqT"
+    className="sc-jAaTju dQRIex"
   >
     <div
-      className="sc-fjdhpX kCRbYR"
+      className="sc-cSHVUG gDEcVa"
     >
       <div
-        className="sc-jTzLTM VcEuF"
+        className="sc-jzJRlG WESTd"
         onClick={[Function]}
       >
         <svg
@@ -13125,14 +12996,14 @@ exports[`Storyshots PageContentWrappers|CreatePages/CreatePageMainContent Post 1
           />
         </svg>
         <p
-          className="sc-VigVT gpndcl"
+          className="sc-fjdhpX gxYigd"
           type="content"
         >
           Cause
         </p>
       </div>
       <div
-        className="sc-jTzLTM cNGYwq"
+        className="sc-jzJRlG kURcdl"
         onClick={[Function]}
       >
         <svg
@@ -13147,14 +13018,14 @@ exports[`Storyshots PageContentWrappers|CreatePages/CreatePageMainContent Post 1
           />
         </svg>
         <p
-          className="sc-VigVT cjkRub"
+          className="sc-fjdhpX gOqFxe"
           type="image"
         >
           Image
         </p>
       </div>
       <div
-        className="sc-jTzLTM cFSwvF"
+        className="sc-jzJRlG jqyqIK"
         onClick={[Function]}
       >
         <svg
@@ -13169,7 +13040,7 @@ exports[`Storyshots PageContentWrappers|CreatePages/CreatePageMainContent Post 1
           />
         </svg>
         <p
-          className="sc-VigVT cjkRub"
+          className="sc-fjdhpX gOqFxe"
           type="link"
         >
           Link
@@ -13182,14 +13053,14 @@ exports[`Storyshots PageContentWrappers|CreatePages/CreatePageMainContent Post 1
       <div
         className="sc-ifAKCX hXQovA"
       >
-        60
+        50
          char
         s
          
         left
       </div>
       <input
-        className="sc-bdVaJa diwNrr"
+        className="sc-bdVaJa cUBMjx"
         onChange={[Function]}
         placeholder="Title"
         value=""
@@ -13202,7 +13073,8 @@ exports[`Storyshots PageContentWrappers|CreatePages/CreatePageMainContent Post 1
       />
     </div>
     <button
-      className="sc-eHgmQL sc-cvbbAY sEePe"
+      className="sc-jWBwVP sc-cMljjf eIFYZX"
+      onClick={[Function]}
     >
       Create Cause
     </button>
@@ -18017,7 +17889,7 @@ exports[`Storyshots Primitive|text/SubjectContent Standard 1`] = `
       "linkContent": "",
       "linkDescription": "",
       "subjectContent": "",
-      "subjectImage": null,
+      "subjectImage": "Image",
       "subjectTitle": "",
       "titleIsErrored": false,
       "updateImageDescription": [Function],
