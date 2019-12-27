@@ -122,6 +122,12 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
 
     if (inputsAreEmpty(setState, subjectTitle, subjectContent)) {
       window.log("inputs Empty:");
+      setState(prevState => {
+        return {
+          ...prevState,
+          currentPanel: "content"
+        };
+      });
       return;
     }
 
