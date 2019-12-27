@@ -2,13 +2,24 @@
 
 exports[`Storyshots "DisplayWrappers|CreateSubject/ImageBody/ImageUploadContainer Standard 1`] = `
 <div
-  className="sc-htoDjs beSrWv"
+  className="sc-iwsKbI eHYdju"
 >
-  <button
-    className="sc-gzVnrw cualqD"
+  <label
+    className="sc-gzVnrw gmAfkP"
+    htmlFor="fileinput"
   >
     Upload Image
-  </button>
+  </label>
+  <input
+    accept="image/png, image/jpeg"
+    className="sc-htoDjs gUpaDV"
+    id="fileinput"
+    onChange={[Function]}
+    type="file"
+  />
+  <img
+    className="sc-dnqmqq jyAXZo"
+  />
 </div>
 `;
 
