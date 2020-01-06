@@ -17,7 +17,7 @@ export const useSubject = () => {
   const saveSubject = async (subject, image) => {
     resetAll();
     setLoading(true);
-    //Create subjectId so we can bind it to the picture if there is one
+    //Create subjectId so we can assign to subject and bind it to the picture if there is one
     const subjectId = uuidv4();
     subject.id = subjectId;
 
