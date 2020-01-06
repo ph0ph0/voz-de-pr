@@ -21,6 +21,7 @@ const SignUpWrapper = ({ staticContext, ...props }) => {
     passwordsMatch: null,
     listOpen: false,
     selectedAvatar: null,
+    avatar: null,
     firstNameInputIsErrored: false,
     lastNameInputIsErrored: false,
     usernameInputIsErrored: false,

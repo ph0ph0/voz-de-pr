@@ -15,6 +15,7 @@ const SignUpCardAPI = ({ state, setState }) => {
   const selectedLocation = state.selectedLocation;
   const listOpen = state.listOpen;
   const selectedAvatar = state.selectedAvatar;
+  const avatar = state.avatar;
   const emailsMatch = state.emailsMatch;
   const passwordsMatch = state.passwordsMatch;
   const firstNameInputIsErrored = state.firstNameInputIsErrored;
@@ -139,15 +140,18 @@ const SignUpCardAPI = ({ state, setState }) => {
     window.log(`locationSelected: ${newValue}`);
   };
 
-  const onClickAv = key => {
-    const selectedKey = key;
+  const updateAvatar = newValue => {
+    const fileArray = newValue;
+    //If the array length is 0, the file picker was cancelled so abort setting the state
+    if (fileArray.length === 0) return;
+    window.log("Selected a profile image");
     setState(prevState => {
       return {
         ...prevState,
-        selectedAvatar: selectedKey
+        selectedAvatar: URL.createObjectURL(newValue[0]),
+        avatar: newValue[0]
       };
     });
-    window.log(`avatar selected: ${selectedKey}`);
   };
 
   //fires when the user clicks the submit button
@@ -296,6 +300,7 @@ const SignUpCardAPI = ({ state, setState }) => {
     listOpen,
     selectedLocation,
     selectedAvatar,
+    avatar,
     firstNameInputIsErrored,
     lastNameInputIsErrored,
     usernameInputIsErrored,
@@ -315,7 +320,7 @@ const SignUpCardAPI = ({ state, setState }) => {
     updateFirstPasswordValue,
     updateSecondPasswordValue,
     onLocationSelected,
-    onClickAv,
+    updateAvatar,
     resetDropdown,
     resetAll,
     locationNotFound,

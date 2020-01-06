@@ -145,7 +145,7 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
       <AvatarInstructionSignUp api={api}>
         Select an Avatar
       </AvatarInstructionSignUp>
-      <ProfPicSelector />
+      <ProfPicSelector api={api} />
       {/* <Avatars api={api} /> */}
       {api.error && <Error>{api.error.message}</Error>}
       <SignUpButton data-testid="submitButton" secondary onClick={api.submit}>
