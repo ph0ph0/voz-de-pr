@@ -9,29 +9,17 @@ export const onCreateUser = `subscription OnCreateUser($id: String!) {
     lastName
     voiceNumber
     email
-    avatar {
-      bucket
-      region
-      key
-    }
     location
     createdAt
     updatedAt
-    subjects {
-      items {
-        id
-        createdBy
-        createdAt
-        author
-        title
-        subjectContent
-        timePassedSinceCreation
-        numberOfComments
-        votes
-        type
-        owner
-      }
-      nextToken
+    avatar {
+      id
+      subjectId
+      description
+      owner
+      bucket
+      region
+      key
     }
   }
 }
@@ -44,29 +32,17 @@ export const onUpdateUser = `subscription OnUpdateUser($id: String!) {
     lastName
     voiceNumber
     email
-    avatar {
-      bucket
-      region
-      key
-    }
     location
     createdAt
     updatedAt
-    subjects {
-      items {
-        id
-        createdBy
-        createdAt
-        author
-        title
-        subjectContent
-        timePassedSinceCreation
-        numberOfComments
-        votes
-        type
-        owner
-      }
-      nextToken
+    avatar {
+      id
+      subjectId
+      description
+      owner
+      bucket
+      region
+      key
     }
   }
 }
@@ -79,29 +55,17 @@ export const onDeleteUser = `subscription OnDeleteUser($id: String!) {
     lastName
     voiceNumber
     email
-    avatar {
-      bucket
-      region
-      key
-    }
     location
     createdAt
     updatedAt
-    subjects {
-      items {
-        id
-        createdBy
-        createdAt
-        author
-        title
-        subjectContent
-        timePassedSinceCreation
-        numberOfComments
-        votes
-        type
-        owner
-      }
-      nextToken
+    avatar {
+      id
+      subjectId
+      description
+      owner
+      bucket
+      region
+      key
     }
   }
 }
@@ -122,8 +86,12 @@ export const onCreateSubject = `subscription OnCreateSubject($owner: String!) {
     pictures {
       items {
         id
+        subjectId
         description
         owner
+        bucket
+        region
+        key
       }
       nextToken
     }
@@ -135,6 +103,7 @@ export const onCreateSubject = `subscription OnCreateSubject($owner: String!) {
         createdAt
         text
         votes
+        subjectId
         owner
       }
       nextToken
@@ -158,8 +127,12 @@ export const onUpdateSubject = `subscription OnUpdateSubject($owner: String!) {
     pictures {
       items {
         id
+        subjectId
         description
         owner
+        bucket
+        region
+        key
       }
       nextToken
     }
@@ -171,6 +144,7 @@ export const onUpdateSubject = `subscription OnUpdateSubject($owner: String!) {
         createdAt
         text
         votes
+        subjectId
         owner
       }
       nextToken
@@ -194,8 +168,12 @@ export const onDeleteSubject = `subscription OnDeleteSubject($owner: String!) {
     pictures {
       items {
         id
+        subjectId
         description
         owner
+        bucket
+        region
+        key
       }
       nextToken
     }
@@ -207,6 +185,7 @@ export const onDeleteSubject = `subscription OnDeleteSubject($owner: String!) {
         createdAt
         text
         votes
+        subjectId
         owner
       }
       nextToken
@@ -217,39 +196,36 @@ export const onDeleteSubject = `subscription OnDeleteSubject($owner: String!) {
 export const onCreatePicture = `subscription OnCreatePicture($owner: String!) {
   onCreatePicture(owner: $owner) {
     id
+    subjectId
     description
     owner
-    file {
-      bucket
-      region
-      key
-    }
+    bucket
+    region
+    key
   }
 }
 `;
 export const onUpdatePicture = `subscription OnUpdatePicture($owner: String!) {
   onUpdatePicture(owner: $owner) {
     id
+    subjectId
     description
     owner
-    file {
-      bucket
-      region
-      key
-    }
+    bucket
+    region
+    key
   }
 }
 `;
 export const onDeletePicture = `subscription OnDeletePicture($owner: String!) {
   onDeletePicture(owner: $owner) {
     id
+    subjectId
     description
     owner
-    file {
-      bucket
-      region
-      key
-    }
+    bucket
+    region
+    key
   }
 }
 `;
@@ -261,25 +237,7 @@ export const onCreateComment = `subscription OnCreateComment($owner: String!) {
     createdAt
     text
     votes
-    subject {
-      id
-      createdBy
-      createdAt
-      author
-      title
-      subjectContent
-      timePassedSinceCreation
-      numberOfComments
-      votes
-      type
-      owner
-      pictures {
-        nextToken
-      }
-      comments {
-        nextToken
-      }
-    }
+    subjectId
     owner
   }
 }
@@ -292,25 +250,7 @@ export const onUpdateComment = `subscription OnUpdateComment($owner: String!) {
     createdAt
     text
     votes
-    subject {
-      id
-      createdBy
-      createdAt
-      author
-      title
-      subjectContent
-      timePassedSinceCreation
-      numberOfComments
-      votes
-      type
-      owner
-      pictures {
-        nextToken
-      }
-      comments {
-        nextToken
-      }
-    }
+    subjectId
     owner
   }
 }
@@ -323,25 +263,7 @@ export const onDeleteComment = `subscription OnDeleteComment($owner: String!) {
     createdAt
     text
     votes
-    subject {
-      id
-      createdBy
-      createdAt
-      author
-      title
-      subjectContent
-      timePassedSinceCreation
-      numberOfComments
-      votes
-      type
-      owner
-      pictures {
-        nextToken
-      }
-      comments {
-        nextToken
-      }
-    }
+    subjectId
     owner
   }
 }
