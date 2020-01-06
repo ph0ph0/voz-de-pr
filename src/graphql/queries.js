@@ -9,29 +9,17 @@ export const getUser = `query GetUser($id: ID!) {
     lastName
     voiceNumber
     email
-    avatar {
-      bucket
-      region
-      key
-    }
     location
     createdAt
     updatedAt
-    subjects {
-      items {
-        id
-        createdBy
-        createdAt
-        author
-        title
-        subjectContent
-        timePassedSinceCreation
-        numberOfComments
-        votes
-        type
-        owner
-      }
-      nextToken
+    avatar {
+      id
+      subjectId
+      description
+      owner
+      bucket
+      region
+      key
     }
   }
 }
@@ -49,16 +37,17 @@ export const listUsers = `query ListUsers(
       lastName
       voiceNumber
       email
-      avatar {
-        bucket
-        region
-        key
-      }
       location
       createdAt
       updatedAt
-      subjects {
-        nextToken
+      avatar {
+        id
+        subjectId
+        description
+        owner
+        bucket
+        region
+        key
       }
     }
     nextToken
@@ -86,19 +75,61 @@ export const findUsername = `query FindUsername(
       lastName
       voiceNumber
       email
+      location
+      createdAt
+      updatedAt
       avatar {
+        id
+        subjectId
+        description
+        owner
         bucket
         region
         key
       }
-      location
-      createdAt
-      updatedAt
-      subjects {
-        nextToken
-      }
     }
     nextToken
+  }
+}
+`;
+export const getSubject = `query GetSubject($id: ID!) {
+  getSubject(id: $id) {
+    id
+    createdBy
+    createdAt
+    author
+    title
+    subjectContent
+    timePassedSinceCreation
+    numberOfComments
+    votes
+    type
+    owner
+    pictures {
+      items {
+        id
+        subjectId
+        description
+        owner
+        bucket
+        region
+        key
+      }
+      nextToken
+    }
+    comments {
+      items {
+        id
+        createdBy
+        author
+        createdAt
+        text
+        votes
+        subjectId
+        owner
+      }
+      nextToken
+    }
   }
 }
 `;
@@ -128,42 +159,6 @@ export const listSubjects = `query ListSubjects(
       }
     }
     nextToken
-  }
-}
-`;
-export const getSubject = `query GetSubject($id: ID!) {
-  getSubject(id: $id) {
-    id
-    createdBy
-    createdAt
-    author
-    title
-    subjectContent
-    timePassedSinceCreation
-    numberOfComments
-    votes
-    type
-    owner
-    pictures {
-      items {
-        id
-        description
-        owner
-      }
-      nextToken
-    }
-    comments {
-      items {
-        id
-        createdBy
-        author
-        createdAt
-        text
-        votes
-        owner
-      }
-      nextToken
-    }
   }
 }
 `;
@@ -246,13 +241,12 @@ export const subjectsByUser = `query SubjectsByUser(
 export const getPicture = `query GetPicture($id: ID!) {
   getPicture(id: $id) {
     id
+    subjectId
     description
     owner
-    file {
-      bucket
-      region
-      key
-    }
+    bucket
+    region
+    key
   }
 }
 `;
@@ -264,13 +258,12 @@ export const listPictures = `query ListPictures(
   listPictures(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       id
+      subjectId
       description
       owner
-      file {
-        bucket
-        region
-        key
-      }
+      bucket
+      region
+      key
     }
     nextToken
   }
@@ -284,25 +277,7 @@ export const getComment = `query GetComment($id: ID!) {
     createdAt
     text
     votes
-    subject {
-      id
-      createdBy
-      createdAt
-      author
-      title
-      subjectContent
-      timePassedSinceCreation
-      numberOfComments
-      votes
-      type
-      owner
-      pictures {
-        nextToken
-      }
-      comments {
-        nextToken
-      }
-    }
+    subjectId
     owner
   }
 }
@@ -320,19 +295,7 @@ export const listComments = `query ListComments(
       createdAt
       text
       votes
-      subject {
-        id
-        createdBy
-        createdAt
-        author
-        title
-        subjectContent
-        timePassedSinceCreation
-        numberOfComments
-        votes
-        type
-        owner
-      }
+      subjectId
       owner
     }
     nextToken

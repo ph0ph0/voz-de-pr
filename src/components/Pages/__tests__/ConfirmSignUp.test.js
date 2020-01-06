@@ -42,7 +42,7 @@ describe("Presenting input errors to the user", () => {
     expect(ConfirmSignUpCard).toBeInTheDocument();
 
     const Info = getByText(
-      "Please check your email for your confirmation code"
+      "Please check your email for your confirmation code."
     );
     expect(Info).toBeInTheDocument();
 

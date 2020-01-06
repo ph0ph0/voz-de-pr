@@ -17,9 +17,8 @@ type User
   lastName: String
   voiceNumber: Int
   email: AWSEmail!
-  avatar: S3Object
+  avatar: Picture @connection
   location: String
-  subjects: [Subject] @connection
   createdAt: AWSDateTime
   updatedAt: AWSDateTime
 }
@@ -53,12 +52,13 @@ type Subject
   author: String
   title: String!
   subjectContent: String!
-  pictures: [Picture] @connection
-  comments: [Comment] @connection
+  pictures: [Picture] @connection(keyName: "picturesBySubject", fields: ["id"])
+  comments: [Comment] @connection(keyName: "commentsBySubject", fields: ["id"])
   timePassedSinceCreation: String
   numberOfComments: Int
   votes: Int
   type: SubjectType!
+  # hasPictures: Boolean!
 }
 
 enum SubjectType {
@@ -76,11 +76,15 @@ type Picture
       { allow: public, provider: iam, operations: [read] }
       { allow: groups, groups: ["everyone"], operations: [read] }
     ]
-  ) {
+  )
+  @key(name: "picturesBySubject", fields: ["subjectId"]) {
   id: ID
+  subjectId: ID
   description: String
   owner: String
-  file: S3Object
+  bucket: String
+  region: String
+  key: String
 }
 
 type Comment
@@ -93,14 +97,15 @@ type Comment
       { allow: public, provider: iam, operations: [read] }
       { allow: groups, groups: ["everyone"], operations: [read] }
     ]
-  ) {
+  )
+  @key(name: "commentsBySubject", fields: ["subjectId"]) {
   id: ID!
   createdBy: ID
   author: String
   createdAt: AWSDateTime
   text: String!
   votes: Int
-  subject: Subject @connection
+  subjectId: ID!
 }
 
 #May need to add a comment type enum ie postComment and causeComment
@@ -124,7 +129,7 @@ type Vote
     queryField: "votesOnSubjectByUser"
   ) {
   """
-  idofvote=userId+post/comment/causeid+post/cause/postComment/causeComment
+  idofvote=userId+post/comment/causeid+post/cause/postComment/causeCommentt
   ieid=12233455_6786758_causeComment
   objectIdistheidoftheobjectbeingvotedon.
   """
@@ -152,12 +157,4 @@ enum VoteType {
 enum VoteOnType {
   post
   cause
-}
-
-#RichMedia
-
-type S3Object {
-  bucket: String!
-  region: String!
-  key: String!
 }
