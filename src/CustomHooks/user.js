@@ -46,12 +46,19 @@ export const UserProvider = ({ children }) => {
     username,
     firstName,
     lastName,
+    avatar,
     location
   ) => {
     window.log(`Signing up...`);
     setError(null);
     setLoading(true);
     try {
+      if (avatar.size > 2097152) {
+        window.log("Profile image is too large");
+        throw new Error(
+          "Profile image is too large, please select an image smaller than 2 MB"
+        );
+      }
       const cognitoUser = await Auth.signUp({
         username: email,
         password: password,
@@ -71,21 +78,14 @@ export const UserProvider = ({ children }) => {
           {
             Name: "locationValue",
             Value: location
+          },
+          {
+            Name: "avatar",
+            Value: avatar
           }
         ]
       });
       window.log(`Signed Up! User: ${JSON.stringify(cognitoUser)}`);
-      const userObject = {
-        id: cognitoUser.userSub,
-        username: username,
-        firstName: firstName,
-        lastName: lastName,
-        voiceNumber: 1,
-        email: email,
-        location: location
-      };
-      // const newUser = await createUserObject(userObject);
-      // setUser(newUser);
     } catch (error) {
       window.log(`Error signing up!: ${JSON.stringify(error)}`);
       if (error.code === "InvalidParameterException") {
