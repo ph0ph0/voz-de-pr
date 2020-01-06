@@ -11,6 +11,7 @@ import PasswordField from "components/Primitive/SignUpCard/PasswordField.js";
 import EmailField from "components/Primitive/SignUpCard/EmailField";
 import Logo from "components/Primitive/SignUpCard/SignUpLogo";
 import AvatarInstruction from "components/Primitive/SidePanel_Profile/Avatars/AvatarInstruction";
+import ProfPicSelector from "../Avatars/ProfPicSelector";
 import Avatars from "../Avatars/Avatars";
 import ActionButton from "components/Primitive/General/ActionButton";
 import BottomLineWrapper from "./SignUpBottomLineWrapper";
@@ -144,8 +145,8 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
       <AvatarInstructionSignUp api={api}>
         Select an Avatar
       </AvatarInstructionSignUp>
-
-      <Avatars api={api} />
+      <ProfPicSelector />
+      {/* <Avatars api={api} /> */}
       {api.error && <Error>{api.error.message}</Error>}
       <SignUpButton data-testid="submitButton" secondary onClick={api.submit}>
         {api.loading ? <LoadingSpinner /> : "SIGN UP"}
