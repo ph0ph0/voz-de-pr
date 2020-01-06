@@ -16516,6 +16516,14 @@ exports[`Storyshots Primitive|Buttons/Filter Standard 1`] = `
 </button>
 `;
 
+exports[`Storyshots Primitive|Buttons/LogoutButton Standard 1`] = `
+<button
+  className="sc-jhAzac gdKBFk"
+>
+  LOG OUT
+</button>
+`;
+
 exports[`Storyshots Primitive|Buttons/SidePanelActionButton Cause 1`] = `
 <a
   className="sc-dVhcbM iZbwyH"
