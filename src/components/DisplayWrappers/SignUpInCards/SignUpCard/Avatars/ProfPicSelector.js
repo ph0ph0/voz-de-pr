@@ -32,8 +32,6 @@ const UploadProfilePicButton = styled.label`
 `;
 
 const FileInput = styled.input`
-  border: 1px solid "purple";
-  background-color: "purple";
   width: 0.1px;
   height: 0.1px;
   opacity: 0;
@@ -43,10 +41,7 @@ const FileInput = styled.input`
 `;
 
 const ProfPicWrapper = styled.div`
-  background-color: yellow;
   clip-path: circle(50px at center);
-  border: 3px solid red;
-  overflow: hidden;
   width: 100px;
   height: 100px;
   display: flex;
