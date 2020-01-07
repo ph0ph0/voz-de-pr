@@ -47,6 +47,7 @@ const SignUpButton = styled(ActionButton)`
 const SignUpCardBodyWrapper = ({ api, ...props }) => {
   const history = useHistory();
   //If signup is successful, `success` in the api will be true
+  //and we can pass over the email, password and avatar file object
   useEffect(() => {
     if (api.success) {
       window.log(`naving to confirm sign up...`);
@@ -54,7 +55,8 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
         pathname: "/confirmsignup",
         state: {
           email: api.secondEmailValue,
-          password: api.secondPasswordValue
+          password: api.secondPasswordValue,
+          avatar: api.avatar
         }
       });
     }

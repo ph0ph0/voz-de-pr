@@ -1,5 +1,5 @@
 import { API, graphqlOperation, Storage } from "aws-amplify";
-import { createPicture } from "graphql/mutations";
+import { createPicture, updatePicture } from "graphql/mutations";
 import uuidv4 from "uuid/v4";
 
 export const savePictureWithSubjectId = async (image, subjectId) => {
@@ -45,4 +45,33 @@ const getPictureWithSubjectId = async key => {
   const picture = await Storage.get(key);
 
   return picture;
+};
+
+export const createUserProfilePic = async (avatar, userId) => {
+  window.log("Saving avatar...");
+  //Get the extension (png, jpg) and set the folder name
+  const lastDot = avatar.name.lastIndexOf(".");
+  const extension = avatar.name.substring(lastDot);
+  const folder = "userAvatars";
+
+  //Save the image to storage and get the returned file key (name of file)
+  const s3Output = await Storage.put(`${folder}/${userId}${extension}`, avatar);
+  const fileKey = s3Output.key;
+
+  //Create the image object to be saved to dDB
+  const picture = {
+    id: userId,
+    bucket: "voz-de-pr-mediastorages3-dev",
+    region: "us-east-1",
+    key: fileKey
+  };
+
+  //Save image object to dDB. We use updatePicture so that this function can be
+  //used during signup or when user changes profile picture
+  const pictureObject = await API.graphql(
+    graphqlOperation(createPicture, { input: picture })
+  );
+
+  window.log(`avatar saved!`);
+  return pictureObject;
 };

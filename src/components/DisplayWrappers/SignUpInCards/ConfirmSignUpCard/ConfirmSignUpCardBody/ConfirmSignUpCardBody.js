@@ -49,7 +49,8 @@ const ConfirmSignUpCardBodyWrapper = withRouter(
           onClick={() =>
             api.submit(
               props.location.state.email,
-              props.location.state.password
+              props.location.state.password,
+              props.location.state.avatar
             )
           }
         >

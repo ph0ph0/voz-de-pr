@@ -16,10 +16,10 @@ const SignInCardApi = ({ state, setState }) => {
     window.log(`new code value: ${newValue}`);
   };
 
-  const submit = async (email, password) => {
+  const submit = async (email, password, avatar) => {
     window.log(`codeValue in API: ${codeValue}`);
     try {
-      await confirmSignUp(email, password, codeValue);
+      await confirmSignUp(email, password, codeValue, avatar);
     } catch {
       return;
     }

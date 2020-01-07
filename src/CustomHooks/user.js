@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo, useContext } from "react";
 import { Auth } from "aws-amplify";
 import awsMobile from "../aws-exports";
 import { getUserObject } from "./UserObjectUtils/UserObjectUtils";
+import { createUserProfilePic } from "Utils/PictureManager";
 
 //Create context to hold values that we will expose to our components.
 // Don't worry about null, as it will be populated instantly by the component below
@@ -59,6 +60,7 @@ export const UserProvider = ({ children }) => {
           "Profile image is too large, please select an image smaller than 2 MB"
         );
       }
+      window.log(`Avatar Data: ${avatar}`);
       const cognitoUser = await Auth.signUp({
         username: email,
         password: password,
@@ -78,16 +80,12 @@ export const UserProvider = ({ children }) => {
           {
             Name: "locationValue",
             Value: location
-          },
-          {
-            Name: "avatar",
-            Value: avatar
           }
         ]
       });
       window.log(`Signed Up! User: ${JSON.stringify(cognitoUser)}`);
     } catch (error) {
-      window.log(`Error signing up!: ${JSON.stringify(error)}`);
+      window.log(`Error signing up in user.js: ${JSON.stringify(error)}`);
       if (error.code === "InvalidParameterException") {
         error.message =
           "Please ensure that your password has more than 6 characters";
@@ -112,7 +110,7 @@ export const UserProvider = ({ children }) => {
     }
   };
 
-  const confirmSignUp = async (email, password, confirmationCode) => {
+  const confirmSignUp = async (email, password, confirmationCode, avatar) => {
     window.log(`Confirming sign up...`);
     setError(null);
     setLoading(true);
@@ -141,7 +139,15 @@ export const UserProvider = ({ children }) => {
 
     try {
       const user = await Auth.signIn(email, password);
-      window.log(`User confirmed AND signed in!`);
+      window.log(
+        `User confirmed AND signed in! User signed in is: ${JSON.stringify(
+          user
+        )}`
+      );
+
+      window.log("Now saving profile picture");
+      const userId = user.attributes.sub;
+      createUserProfilePic(avatar, userId);
       setUser(user);
     } catch (error) {
       window.log(

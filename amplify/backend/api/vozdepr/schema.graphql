@@ -17,7 +17,7 @@ type User
   lastName: String
   voiceNumber: Int
   email: AWSEmail!
-  avatar: Picture @connection
+  avatar: Picture @connection(keyName: "getUsersAvatar", fields: ["id"])
   location: String
   createdAt: AWSDateTime
   updatedAt: AWSDateTime
@@ -77,7 +77,8 @@ type Picture
       { allow: groups, groups: ["everyone"], operations: [read] }
     ]
   )
-  @key(name: "picturesBySubject", fields: ["subjectId"]) {
+  @key(name: "picturesBySubject", fields: ["subjectId"])
+  @key(name: "getUsersAvatar", fields: ["id"]) {
   id: ID
   subjectId: ID
   description: String
