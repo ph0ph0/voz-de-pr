@@ -60,7 +60,7 @@ export const UserProvider = ({ children }) => {
           "Profile image is too large, please select an image smaller than 2 MB"
         );
       }
-      window.log(`Avatar Data: ${avatar}`);
+      window.log(`Location: ${location}`);
       const cognitoUser = await Auth.signUp({
         username: email,
         password: password,

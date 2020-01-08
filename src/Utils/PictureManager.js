@@ -57,6 +57,7 @@ export const createUserProfilePic = async (avatar, userId) => {
   //Save the image to storage and get the returned file key (name of file)
   const s3Output = await Storage.put(`${folder}/${userId}${extension}`, avatar);
   const fileKey = s3Output.key;
+  window.log(`avatar fileKey: ${fileKey}`);
 
   //Create the image object to be saved to dDB
   const picture = {

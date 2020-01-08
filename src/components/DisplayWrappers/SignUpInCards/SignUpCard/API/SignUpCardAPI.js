@@ -271,6 +271,7 @@ const SignUpCardAPI = ({ state, setState }) => {
         usernameValue,
         firstNameValue,
         lastNameValue,
+        avatar,
         selectedLocation
       );
     } catch (error) {
