@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useMemo, useContext } from "react";
 import { Auth } from "aws-amplify";
 import awsMobile from "../aws-exports";
-import { getUserObject } from "./UserObjectUtils/UserObjectUtils";
+import {
+  getUserObject,
+  updateUserObject
+} from "./UserObjectUtils/UserObjectUtils";
 import { createUserProfilePic } from "Utils/PictureManager";
 
 //Create context to hold values that we will expose to our components.
@@ -138,17 +141,17 @@ export const UserProvider = ({ children }) => {
     }
 
     try {
-      const user = await Auth.signIn(email, password);
+      const cognitoUser = await Auth.signIn(email, password);
+      window.log("Logged user in");
+      const userId = cognitoUser.username;
+      const userObjectData = await getUserObject(userId);
       window.log(
-        `User confirmed AND signed in! User signed in is: ${JSON.stringify(
-          user
-        )}`
+        `Logged in and got userObject: ${JSON.stringify(userObjectData)}`
       );
 
       window.log("Now saving profile picture");
-      const userId = user.attributes.sub;
       createUserProfilePic(avatar, userId);
-      setUser(user);
+      setUser(userObjectData);
     } catch (error) {
       window.log(
         `Error signing user in after confirming signUp!: ${JSON.stringify(
@@ -281,6 +284,29 @@ export const UserProvider = ({ children }) => {
       });
   };
 
+  const updateUser = async (data, avatar) => {
+    setLoading(true);
+
+    const userId = user.id;
+    window.log(`userId in updateUser of user.js: ${userId}`);
+    data.id = userId;
+
+    try {
+      await updateUserObject(data);
+
+      if (avatar) {
+        window.log("Avatar was submitted");
+        await createUserProfilePic(avatar, userId);
+      }
+    } catch (error) {
+      window.log(`Error updating user object!: ${JSON.stringify(error)}`);
+      setError(error);
+      throw error;
+    } finally {
+      setLoading(false);
+    }
+  };
+
   //Make sure not to force a re-render of components that are reading these values,
   // unless the user value has changed. This is for optimisation purposes.
   const values = useMemo(
@@ -293,7 +319,8 @@ export const UserProvider = ({ children }) => {
       signUp,
       confirmSignUp,
       forgotPassword,
-      submitCodeAndNewPassword
+      submitCodeAndNewPassword,
+      updateUser
     }),
     [user, error, loading]
   );

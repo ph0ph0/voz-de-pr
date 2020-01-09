@@ -1,4 +1,5 @@
 import { locations } from "Constants/Constants";
+import { useUser } from "CustomHooks/user";
 
 const SidePanelProfileAPI = ({ state, setState }) => {
   const locationValue = state.locationValue;
@@ -7,6 +8,8 @@ const SidePanelProfileAPI = ({ state, setState }) => {
   const dropDownIsErrored = state.dropDownIsErrored;
   const selectedAvatar = state.selectedAvatar;
   const avatar = state.avatar;
+
+  const { updateUser, error, loading } = useUser();
 
   //Fires when the user clicks on the Inline Content wrapper. Opens the drop down and displays the locations
   const toggleList = () => {
@@ -101,7 +104,7 @@ const SidePanelProfileAPI = ({ state, setState }) => {
     return false;
   };
 
-  const submit = () => {
+  const submit = async () => {
     // const newAvatar = selectedAvatar
 
     if (locationNotFound()) {
@@ -118,9 +121,17 @@ const SidePanelProfileAPI = ({ state, setState }) => {
     //Object.assign will skip over null values, allowing us to only update inputs if not empty
     let data = Object.assign(
       {},
-      locationValue === "" ? null : { location: locationValue },
-      avatar === null ? null : { avatar }
+      locationValue === "" ? null : { location: locationValue }
     );
+
+    try {
+      await updateUser(data, avatar);
+
+      //Show success info
+    } catch (error) {
+      //Show error
+      window.log(`ERROR updating user!: ${error}`);
+    }
 
     console.log(`Data!: %j`, data);
 
@@ -141,7 +152,9 @@ const SidePanelProfileAPI = ({ state, setState }) => {
     updateAvatar,
     resetDropdown,
     resetAll,
-    submit
+    submit,
+    error,
+    loading
   };
 };
 
