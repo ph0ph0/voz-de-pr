@@ -12,7 +12,6 @@ import SidePanelProfileAPI from "./API/SidePanelProfileAPI";
 
 const SidePanelWrapper = props => {
   const api = useApi(SidePanelProfileAPI, {
-    name: "",
     locationValue: "",
     selectedLocation: "",
     listOpen: false,

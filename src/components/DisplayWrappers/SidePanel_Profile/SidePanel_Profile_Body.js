@@ -3,7 +3,6 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 import Info from "components/Primitive/SidePanel/Info";
-import Name from "components/Primitive/SidePanel_Profile/NameInput";
 import DropDown from "./DropDown/DropDown";
 import AvatarInstruction from "components/Primitive/SidePanel_Profile/Avatars/AvatarInstruction";
 import ProfPicSelector from "./Avatars/ProfPicSelector";
@@ -22,7 +21,6 @@ const SidePanelProfileBodyWrapper = ({ api, ...props }) => {
   return (
     <div {...props}>
       <ProfileHeader>Change Details</ProfileHeader>
-      <Name api={api} />
       {api.dropDownIsErrored && (
         <ErrorText>Select location from the list</ErrorText>
       )}
