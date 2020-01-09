@@ -6,18 +6,19 @@ import { ReactComponent as PRFlag } from "../../../assets/SidePanel/PRFlag.svg";
 import Logo from "../../Primitive/SidePanel/Logo";
 import SidePanelProfileBody from "./SidePanel_Profile_Body";
 import ActionButton from "../../Primitive/General/ActionButton";
+import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
 
 import useApi from "../../../CustomHooks/useAPI";
 import SidePanelProfileAPI from "./API/SidePanelProfileAPI";
 
 const SidePanelWrapper = props => {
   const api = useApi(SidePanelProfileAPI, {
-    name: "",
     locationValue: "",
     selectedLocation: "",
     listOpen: false,
     dropDownIsErrored: false,
-    selectedAvatar: null
+    selectedAvatar: null,
+    avatar: null
   });
 
   return (
@@ -26,7 +27,7 @@ const SidePanelWrapper = props => {
       <Logo />
       <SidePanelProfileBody api={api} />
       <ActionButton secondary onClick={() => api.submit()}>
-        Change
+        {api.loading ? <LoadingSpinner /> : "Change"}
       </ActionButton>
     </div>
   );

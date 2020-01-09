@@ -47,6 +47,7 @@ const getPictureWithSubjectId = async key => {
   return picture;
 };
 
+//Can be used for both create and update as .put() is only create/update call for S3
 export const createUserProfilePic = async (avatar, userId) => {
   window.log("Saving avatar...");
   //Get the extension (png, jpg) and set the folder name
@@ -58,21 +59,6 @@ export const createUserProfilePic = async (avatar, userId) => {
   const s3Output = await Storage.put(`${folder}/${userId}${extension}`, avatar);
   const fileKey = s3Output.key;
   window.log(`avatar fileKey: ${fileKey}`);
-
-  //Create the image object to be saved to dDB
-  const picture = {
-    id: userId,
-    bucket: "voz-de-pr-mediastorages3-dev",
-    region: "us-east-1",
-    key: fileKey
-  };
-
-  //Save image object to dDB. We use updatePicture so that this function can be
-  //used during signup or when user changes profile picture
-  const pictureObject = await API.graphql(
-    graphqlOperation(createPicture, { input: picture })
-  );
-
   window.log(`avatar saved!`);
-  return pictureObject;
+  return;
 };

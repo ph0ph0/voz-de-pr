@@ -3,16 +3,15 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 import Info from "components/Primitive/SidePanel/Info";
-import Name from "components/Primitive/SidePanel_Profile/NameInput";
 import DropDown from "./DropDown/DropDown";
 import AvatarInstruction from "components/Primitive/SidePanel_Profile/Avatars/AvatarInstruction";
-import Avatars from "./Avatars/Avatars";
+import ProfPicSelector from "./Avatars/ProfPicSelector";
 import ErrorText from "components/Primitive/General/ErrorText";
 
 //Need to modify the Info component a bit for the SP_P
 const ProfileHeader = styled(Info)`
   /* border: 1px solid black; */
-  width: auto;
+  width: 249px;
 
   text-align: center;
   font-size: 18px;
@@ -22,13 +21,12 @@ const SidePanelProfileBodyWrapper = ({ api, ...props }) => {
   return (
     <div {...props}>
       <ProfileHeader>Change Details</ProfileHeader>
-      <Name api={api} />
       {api.dropDownIsErrored && (
         <ErrorText>Select location from the list</ErrorText>
       )}
       <DropDown data-testid="DropDown" api={api} />
       <AvatarInstruction api={api}>Select A New Avatar</AvatarInstruction>
-      <Avatars api={api} />
+      <ProfPicSelector api={api} />
     </div>
   );
 };
