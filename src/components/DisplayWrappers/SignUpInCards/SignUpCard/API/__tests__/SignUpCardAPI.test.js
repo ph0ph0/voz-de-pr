@@ -31,6 +31,11 @@ const state = {
   avatarInputIsErrored: false
 };
 
+//In the updateAvatar call of the api, the below function is called to create a reference
+//to the file object from the file picker input so that a preview can be shown to the user.
+//We need to mock this or we will get errors.
+URL.createObjectURL = input => input;
+
 const useApiMock = (api, defaultValue) => {
   let state = defaultValue;
   let setState = updater => {
@@ -56,10 +61,16 @@ jest.mock("CustomHooks/user", () => ({
   })
 }));
 
-const mockApi = useApiMock(SignUpCardAPI, state);
+var mockApi = useApiMock(SignUpCardAPI, state);
 
 //Allows us to ignore window . log calls
 global.log = () => {};
+
+//Reset the api before each test so that the inputs from previous tests don't
+//affect later tests
+beforeEach(() => {
+  mockApi = useApiMock(SignUpCardAPI, state);
+});
 
 describe("Input field updaters", () => {
   it("updates the first name value", () => {
@@ -121,7 +132,7 @@ describe("Input field updaters", () => {
 
   it("updates the selected avatar", () => {
     expect(mockApi.api.selectedAvatar).toEqual(null);
-    mockApi.api.onClickAv(1);
+    mockApi.api.updateAvatar([1]);
     expect(mockApi.api.selectedAvatar).toEqual(1);
   });
 });
@@ -161,7 +172,7 @@ describe("Form submission", () => {
     mockApi.api.updateSecondPasswordValue("TEST");
     mockApi.api.toggleList();
     mockApi.api.onLocationSelected("TEST");
-    mockApi.api.onClickAv(1);
+    mockApi.api.updateAvatar([1]);
     mockApi.api.submit();
     expect(mockApi.api.firstNameInputIsErrored).toEqual(true);
   });
@@ -177,7 +188,7 @@ describe("Form submission", () => {
     mockApi.api.updateSecondPasswordValue("TEST");
     mockApi.api.toggleList();
     mockApi.api.onLocationSelected("TEST");
-    mockApi.api.onClickAv(1);
+    mockApi.api.updateAvatar([1]);
     mockApi.api.submit();
     expect(mockApi.api.lastNameInputIsErrored).toEqual(true);
   });
@@ -193,7 +204,7 @@ describe("Form submission", () => {
     mockApi.api.updateSecondPasswordValue("TEST");
     mockApi.api.toggleList();
     mockApi.api.onLocationSelected("TEST");
-    mockApi.api.onClickAv(1);
+    mockApi.api.updateAvatar([1]);
     mockApi.api.submit();
     expect(mockApi.api.usernameInputIsErrored).toEqual(true);
   });
@@ -209,7 +220,7 @@ describe("Form submission", () => {
     mockApi.api.updateSecondPasswordValue("TEST");
     mockApi.api.toggleList();
     mockApi.api.onLocationSelected("TEST");
-    mockApi.api.onClickAv(1);
+    mockApi.api.updateAvatar([1]);
     mockApi.api.submit();
     expect(mockApi.api.emailInputIsErrored).toEqual(true);
   });
@@ -225,7 +236,7 @@ describe("Form submission", () => {
     mockApi.api.updateSecondPasswordValue("TEST");
     mockApi.api.toggleList();
     mockApi.api.onLocationSelected("");
-    mockApi.api.onClickAv(1);
+    mockApi.api.updateAvatar([1]);
     mockApi.api.submit();
     expect(mockApi.api.locationInputIsErrored).toEqual(true);
   });
@@ -241,11 +252,12 @@ describe("Form submission", () => {
     mockApi.api.updateSecondPasswordValue("TEST");
     mockApi.api.toggleList();
     mockApi.api.onLocationSelected("TEST");
-    mockApi.api.onClickAv(1);
+    mockApi.api.updateAvatar([1]);
     mockApi.api.submit();
     expect(mockApi.api.passwordInputIsErrored).toEqual(true);
   });
 
+  //Check the avatar first
   it("checks that the avatar is specified on submit", () => {
     expect(mockApi.api.avatarInputIsErrored).toEqual(false);
     mockApi.api.updateFirstNameValue("TEST");
@@ -257,7 +269,7 @@ describe("Form submission", () => {
     mockApi.api.updateSecondPasswordValue("TEST");
     mockApi.api.toggleList();
     mockApi.api.onLocationSelected("TEST");
-    mockApi.api.onClickAv(null);
+    //Avatar should be set to null on initial state
     mockApi.api.submit();
     expect(mockApi.api.avatarInputIsErrored).toEqual(true);
   });
@@ -293,7 +305,7 @@ describe("Submission helpers", () => {
   //     mockApi.api.updateSecondPasswordValue("TEST");
   //     mockApi.api.toggleList();
   //     mockApi.api.onLocationSelected(locations[0].title);
-  //     mockApi.api.onClickAv(1);
+  //     mockApi.api.updateAvatar(1);
   //     mockApi.api.submit();
 
   //     expect(mockApi.api.firstNameValue).toEqual("");
@@ -320,7 +332,7 @@ describe("Submission helpers", () => {
 //     mockApi.api.updateSecondPasswordValue("TEST");
 //     mockApi.api.toggleList();
 //     mockApi.api.onLocationSelected(locations[0].title);
-//     mockApi.api.onClickAv(1);
+//     mockApi.api.updateAvatar(1);
 //     mockApi.api.toggleSignUp();
 
 //     expect(mockApi.api.firstNameValue).toEqual("");

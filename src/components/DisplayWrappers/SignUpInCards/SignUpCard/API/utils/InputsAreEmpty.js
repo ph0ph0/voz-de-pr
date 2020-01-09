@@ -80,7 +80,11 @@ export const inputsAreEmpty = (
     });
     flag = true;
   }
-  if (selectedAvatar === null) {
+  if (
+    selectedAvatar === [] ||
+    selectedAvatar === undefined ||
+    selectedAvatar === null
+  ) {
     setState(prevState => {
       return {
         ...prevState,

@@ -6,7 +6,10 @@ import { ReactComponent as UploadProfPicSVG } from "assets/General/ProfPicSelect
 const ProfilePicSelectorWrapper = ({ api, ...props }) => {
   return (
     <div {...props}>
-      <UploadProfilePicButton htmlFor="fileinput">
+      <UploadProfilePicButton
+        data-testid="uploadProfilePicButton"
+        htmlFor="fileinput"
+      >
         {api.avatar ? (
           <ProfPicWrapper>
             <ProfPic src={api.selectedAvatar} />

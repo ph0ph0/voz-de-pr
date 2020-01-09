@@ -12,7 +12,6 @@ import EmailField from "components/Primitive/SignUpCard/EmailField";
 import Logo from "components/Primitive/SignUpCard/SignUpLogo";
 import AvatarInstruction from "components/Primitive/SidePanel_Profile/Avatars/AvatarInstruction";
 import ProfPicSelector from "../Avatars/ProfPicSelector";
-import Avatars from "../Avatars/Avatars";
 import ActionButton from "components/Primitive/General/ActionButton";
 import BottomLineWrapper from "./SignUpBottomLineWrapper";
 import Error from "components/Primitive/General/ErrorText";

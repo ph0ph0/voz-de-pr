@@ -31,7 +31,7 @@ export const SignUpInCardApiPropTypes = PropTypes.shape({
   updateFirstPasswordValue: PropTypes.func.isRequired,
   updateSecondPasswordValue: PropTypes.func.isRequired,
   onLocationSelected: PropTypes.func.isRequired,
-  onClickAv: PropTypes.func.isRequired,
+  updateAvatar: PropTypes.func.isRequired,
   resetDropdown: PropTypes.func.isRequired,
   resetAll: PropTypes.func.isRequired,
   locationNotFound: PropTypes.func.isRequired,
