@@ -11,8 +11,8 @@ import ErrorText from "components/Primitive/General/ErrorText";
 
 //Need to modify the Info component a bit for the SP_P
 const ProfileHeader = styled(Info)`
-  border: 1px solid black;
-  width: auto;
+  /* border: 1px solid black; */
+  width: 249px;
 
   text-align: center;
   font-size: 18px;
@@ -34,7 +34,7 @@ const SidePanelProfileBodyWrapper = ({ api, ...props }) => {
 };
 
 const SidePanelProfileBody = styled(SidePanelProfileBodyWrapper)`
-  border: 1px solid green;
+  /* border: 1px solid green; */
   width: auto;
   height: auto;
 
