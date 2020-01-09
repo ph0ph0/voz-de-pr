@@ -17,7 +17,8 @@ const SidePanelWrapper = props => {
     selectedLocation: "",
     listOpen: false,
     dropDownIsErrored: false,
-    selectedAvatar: null
+    selectedAvatar: null,
+    avatar: null
   });
 
   return (

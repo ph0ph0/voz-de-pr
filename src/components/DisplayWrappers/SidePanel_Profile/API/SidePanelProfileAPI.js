@@ -7,6 +7,7 @@ const SidePanelProfileAPI = ({ state, setState }) => {
   const listOpen = state.listOpen;
   const dropDownIsErrored = state.dropDownIsErrored;
   const selectedAvatar = state.selectedAvatar;
+  const avatar = state.avatar;
 
   //Called when the user types into the NameInput component
   const updateNameValue = newValue => {
@@ -55,15 +56,18 @@ const SidePanelProfileAPI = ({ state, setState }) => {
     window.log(`locationSelected: ${newValue}`);
   };
 
-  const onClickAv = key => {
-    const selectedKey = key;
+  const updateAvatar = newValue => {
+    const fileArray = newValue;
+    //If the array length is 0, the file picker was cancelled so abort setting the state
+    if (fileArray.length === 0) return;
+    window.log("Selected a profile image");
     setState(prevState => {
       return {
         ...prevState,
-        selectedAvatar: selectedKey
+        selectedAvatar: URL.createObjectURL(newValue[0]),
+        avatar: newValue[0]
       };
     });
-    window.log(`avatar selected: ${selectedKey}`);
   };
 
   //fires when the user clicks the submit button
@@ -134,11 +138,12 @@ const SidePanelProfileAPI = ({ state, setState }) => {
     dropDownIsErrored,
     selectedLocation,
     selectedAvatar,
+    avatar,
     updateNameValue,
     toggleList,
     updateLocationValue,
     onLocationSelected,
-    onClickAv,
+    updateAvatar,
     resetDropdown,
     resetAll,
     submit
