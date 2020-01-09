@@ -7,29 +7,29 @@ const NameInputWrapper = ({ api, ...props }) => {
     <input
       placeholder="Name"
       value={api.name}
-      onChange={(event) => api.updateNameValue(event.target.value)}
+      onChange={event => api.updateNameValue(event.target.value)}
       {...props}
     />
   );
 };
-  
+
 const NameInput = styled(NameInputWrapper)`
-    border-radius: 5px;
-    border: 1px solid #d8d8d8;
-    width: auto;
-    height: 37px;
+  border-radius: 5px;
+  border: 1px solid #d8d8d8;
+  width: auto;
+  height: 37px;
 
-    margin-top: 0px;
-    margin-bottom: 13px;
+  margin-top: 0px;
+  margin-bottom: 13px;
 
-    line-height: 2.4em;
-    font-size: 16px;
+  line-height: 2.4em;
+  font-size: 16px;
 
-    padding-left: 25px;
+  padding-left: 25px;
 
-    :focus {
-        outline: 0;
-    }
+  :focus {
+    outline: 0;
+  }
 `;
 
 NameInput.propTypes = {

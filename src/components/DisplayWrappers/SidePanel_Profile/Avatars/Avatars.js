@@ -20,11 +20,10 @@ const AvatarsArray = [
   Person,
   Person
 ];
-  
-const AvatarsWrapper = ({ api, ...props }) => {
 
+const AvatarsWrapper = ({ api, ...props }) => {
   //Note that objects can only have string keys, so the keys are converted to a string.
-  
+
   const RowOfThree_One = {
     0: AvatarsArray[0],
     1: AvatarsArray[1],
@@ -43,40 +42,28 @@ const AvatarsWrapper = ({ api, ...props }) => {
     8: AvatarsArray[8],
     9: AvatarsArray[9]
   };
-  
+
   return (
     <div {...props}>
-      <AvatarRowWithThree
-        avatars={RowOfThree_One}
-        api = {api}
-      />
-      <AvatarRowWithTwo
-        avatars={RowOfTwo_One}
-        api = {api}
-      />
-      <AvatarRowWithThree
-        avatars={RowOfThree_Two}
-        api = {api}
-      />
-      <AvatarRowWithTwo
-        avatars={RowOfTwo_Two}
-        api = {api}
-      />
+      <AvatarRowWithThree avatars={RowOfThree_One} api={api} />
+      <AvatarRowWithTwo avatars={RowOfTwo_One} api={api} />
+      <AvatarRowWithThree avatars={RowOfThree_Two} api={api} />
+      <AvatarRowWithTwo avatars={RowOfTwo_Two} api={api} />
     </div>
   );
 };
-  
+
 const Avatars = styled(AvatarsWrapper)`
-    /* border: 1px solid red; */
-    width: auto;
-    height: auto;
-  
-    padding: 0px;
-    margin: 0px;
-  
-    display: flex;
-    flex-direction: column;
-  `;
+  /* border: 1px solid red; */
+  width: auto;
+  height: auto;
+
+  padding: 0px;
+  margin: 0px;
+
+  display: flex;
+  flex-direction: column;
+`;
 
 Avatars.propTypes = {
   api: PropTypes.shape({
@@ -92,6 +79,5 @@ Avatars.propTypes = {
     resetDropdown: PropTypes.func.isRequired
   })
 };
-
 
 export default Avatars;
