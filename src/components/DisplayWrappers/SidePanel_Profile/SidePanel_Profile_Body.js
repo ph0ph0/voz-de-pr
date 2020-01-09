@@ -6,6 +6,7 @@ import Info from "components/Primitive/SidePanel/Info";
 import Name from "components/Primitive/SidePanel_Profile/NameInput";
 import DropDown from "./DropDown/DropDown";
 import AvatarInstruction from "components/Primitive/SidePanel_Profile/Avatars/AvatarInstruction";
+import ProfPicSelector from "./Avatars/ProfPicSelector";
 import Avatars from "./Avatars/Avatars";
 import ErrorText from "components/Primitive/General/ErrorText";
 
@@ -28,7 +29,7 @@ const SidePanelProfileBodyWrapper = ({ api, ...props }) => {
       )}
       <DropDown data-testid="DropDown" api={api} />
       <AvatarInstruction api={api}>Select A New Avatar</AvatarInstruction>
-      <Avatars api={api} />
+      <ProfPicSelector api={api} />
     </div>
   );
 };
