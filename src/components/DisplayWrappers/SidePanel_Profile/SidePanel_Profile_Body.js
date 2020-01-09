@@ -7,12 +7,11 @@ import Name from "components/Primitive/SidePanel_Profile/NameInput";
 import DropDown from "./DropDown/DropDown";
 import AvatarInstruction from "components/Primitive/SidePanel_Profile/Avatars/AvatarInstruction";
 import ProfPicSelector from "./Avatars/ProfPicSelector";
-import Avatars from "./Avatars/Avatars";
 import ErrorText from "components/Primitive/General/ErrorText";
 
 //Need to modify the Info component a bit for the SP_P
 const ProfileHeader = styled(Info)`
-  /* border: 1px solid black; */
+  border: 1px solid black;
   width: auto;
 
   text-align: center;
@@ -35,7 +34,7 @@ const SidePanelProfileBodyWrapper = ({ api, ...props }) => {
 };
 
 const SidePanelProfileBody = styled(SidePanelProfileBodyWrapper)`
-  /* border: 1px solid green; */
+  border: 1px solid green;
   width: auto;
   height: auto;
 
