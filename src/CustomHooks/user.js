@@ -338,6 +338,7 @@ export const UserProvider = ({ children }) => {
   const values = useMemo(
     () => ({
       user,
+      refreshUser,
       error,
       loading,
       login,
