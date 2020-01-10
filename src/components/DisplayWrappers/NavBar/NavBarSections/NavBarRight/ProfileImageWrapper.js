@@ -14,20 +14,33 @@ const Wrapper = props => {
   useEffect(() => {
     window.log("Fetching avatar...");
 
-    retry(5, checkAvatarAndFetch, async (error, _) => {
-      if (error) {
-        window.log(`Error, retried max number of times: ${error}`);
-        throw error;
+    retry(
+      { times: 10, interval: 5000 },
+      checkAvatarAndFetch,
+      async (error, _) => {
+        if (error) {
+          window.log(`Error, retried max number of times: ${error}`);
+          throw error;
+        }
+        if (user.avatar && user.avatar.key) {
+          const userAvatarKey = user.avatar.key;
+          fetchAvatarURL(userAvatarKey);
+        }
       }
-      const userAvatarKey = user.avatar.key;
-      fetchAvatarURL(userAvatarKey);
-    });
-  }, []);
+    );
+  }, [user]);
 
   const checkAvatarAndFetch = async () => {
+    window.log(`Checking and/or fetching avatar`);
+    if (user.avatar && user.avatar.key) {
+      window.log(`User has an avatar, exiting check and refresh user`);
+      return;
+    }
     try {
+      window.log("User did not have an avatar key");
       await refreshUser();
-      if (user.avatar === null) {
+      if (user.avatar && user.avatar.key === null) {
+        window.log(`User avatar was null...`);
         throw Error("User avatar is null...");
       }
       return;
@@ -37,6 +50,10 @@ const Wrapper = props => {
   };
 
   const fetchAvatarURL = async userAvatarKey => {
+    if (!userAvatarKey) {
+      window.log("No key to fetch avatar picture, aborting!");
+      return;
+    }
     try {
       window.log(`Getting avatar for userAvatarKey...: ${userAvatarKey}`);
       const userAvatarURL = await getUserAvatar(userAvatarKey);

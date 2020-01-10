@@ -9,7 +9,7 @@ const SidePanelProfileAPI = ({ state, setState }) => {
   const selectedAvatar = state.selectedAvatar;
   const avatar = state.avatar;
 
-  const { updateUser, error, loading } = useUser();
+  const { updateUserLocationAndAvatar, error, loading } = useUser();
 
   //Fires when the user clicks on the Inline Content wrapper. Opens the drop down and displays the locations
   const toggleList = () => {
@@ -125,15 +125,13 @@ const SidePanelProfileAPI = ({ state, setState }) => {
     );
 
     try {
-      await updateUser(data, avatar);
+      await updateUserLocationAndAvatar(data, avatar);
 
       //Show success info
     } catch (error) {
       //Show error
       window.log(`ERROR updating user!: ${error}`);
     }
-
-    console.log(`Data!: %j`, data);
 
     resetAll();
     // window.log(`newLocation: ${newLocation}, newAvatar: ${newAvatar}`)

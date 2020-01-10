@@ -5,7 +5,11 @@ import {
   getUserObject,
   updateUserObject
 } from "./UserObjectUtils/UserObjectUtils";
-import { createUserProfilePic, getPicture } from "Utils/PictureManager";
+import {
+  createUserProfilePic,
+  getPicture,
+  nullPictureKey
+} from "Utils/PictureManager";
 
 //Create context to hold values that we will expose to our components.
 // Don't worry about null, as it will be populated instantly by the component below
@@ -44,11 +48,12 @@ export const UserProvider = ({ children }) => {
   }, []);
 
   const refreshUser = async () => {
+    window.log("refreshing user...");
     try {
       const cognitoUser = await Auth.currentAuthenticatedUser();
       const userId = cognitoUser.username;
       const userObject = await getUserObject(userId);
-      window.log(`Got user after refresh: ${userObject}`);
+      window.log("Got user after refresh");
       setUser(userObject);
     } catch (error) {
       window.log(`Error refreshing user: ${error}`);
@@ -297,20 +302,28 @@ export const UserProvider = ({ children }) => {
       });
   };
 
-  const updateUser = async (data, avatar) => {
+  const updateUserLocationAndAvatar = async (data, avatar) => {
     setLoading(true);
 
     const userId = user.id;
     window.log(`userId in updateUser of user.js: ${userId}`);
+    //Set data.id so that dDB knows which User object to update
     data.id = userId;
 
     try {
-      await updateUserObject(data);
+      //update the location on the User object only
 
+      //Set avatar property to null so that it gets refreshed in the app (see ProfileImageWrapper component in NavBar)
       if (avatar) {
-        window.log("Avatar was submitted");
+        window.log("Avatar was submitted, nulling avatar avatar key...");
+        await nullPictureKey(userId);
+        window.log("Avatar key nulled, saving userProfilePic to S3...");
         await createUserProfilePic(avatar, userId);
+        window.log("Saved new avatar to S3!");
       }
+
+      const updatedUser = await updateUserObject(data);
+      setUser(updatedUser);
     } catch (error) {
       window.log(`Error updating user object!: ${JSON.stringify(error)}`);
       setError(error);
@@ -347,7 +360,7 @@ export const UserProvider = ({ children }) => {
       confirmSignUp,
       forgotPassword,
       submitCodeAndNewPassword,
-      updateUser,
+      updateUserLocationAndAvatar,
       getUserAvatar
     }),
     [user, error, loading]

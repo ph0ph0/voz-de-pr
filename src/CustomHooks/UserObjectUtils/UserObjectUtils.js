@@ -31,6 +31,9 @@ export const updateUserObject = async data => {
   const updatedUser = await API.graphql(
     graphqlOperation(updateUser, { input: data })
   );
-  window.log(`Successfully updated user object! User: ${updatedUser}`);
-  return updatedUser;
+  const parsedUser = parseUser(updatedUser.data.updateUser);
+  window.log(
+    `Successfully updated user object! User: ${JSON.stringify(updatedUser)}`
+  );
+  return parsedUser;
 };

@@ -69,3 +69,15 @@ export const createUserProfilePic = async (avatar, userId) => {
   window.log(`avatar saved!`);
   return;
 };
+
+//Used to null the properties of a picture if we want to force a refresh
+export const nullPictureKey = async id => {
+  const nulledPicture = {
+    id: id,
+    key: null
+  };
+
+  const pictureObject = await API.graphql(
+    graphqlOperation(updatePicture, { input: nulledPicture })
+  );
+};
