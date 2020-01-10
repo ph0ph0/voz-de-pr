@@ -11,15 +11,9 @@ const Wrapper = props => {
 
   const { loading, user, getUserAvatar } = useUser();
 
-  const userAvatarKey = user && user.avatar && user.avatar.key;
-
-  // const userAvatar = await getUserAvatar(userAvatarKey);
-
-  console.log(`LOADING COMPONENT, got av? ${avatarURL} xxx`);
-
-  const fetchAvatarURL = async avatarKey => {
+  const fetchAvatarURL = async userAvatarKey => {
     try {
-      window.log("Getting avatar...");
+      window.log(`Getting avatar for userAvatarKey...: ${userAvatarKey}`);
       const userAvatarURL = await getUserAvatar(userAvatarKey);
       setAvatarURL(userAvatarURL);
       window.log("Got avatar!");
@@ -30,7 +24,8 @@ const Wrapper = props => {
 
   useEffect(() => {
     window.log("Fetching avatar...");
-    fetchAvatarURL();
+    const userAvatarKey = user && user.avatar && user.avatar.key;
+    fetchAvatarURL(userAvatarKey);
   }, []);
 
   return (

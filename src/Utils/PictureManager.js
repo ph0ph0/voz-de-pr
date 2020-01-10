@@ -44,8 +44,8 @@ export const savePictureWithSubjectId = async (image, subjectId) => {
 export const getPicture = async key => {
   window.log("Getting picture from storage...");
 
-  const tempKey = "userAvatars/e510d7b1-9e29-4965-848b-1709d3291d36.png";
-  const picture = await Storage.get(tempKey);
+  // const tempKey = "userAvatars/e510d7b1-9e29-4965-848b-1709d3291d36.png";
+  const picture = await Storage.get(key);
 
   window.log(`Got Picture!: ${picture}`);
 
