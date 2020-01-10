@@ -43,6 +43,19 @@ export const UserProvider = ({ children }) => {
     })();
   }, []);
 
+  const refreshUser = async () => {
+    try {
+      const cognitoUser = await Auth.currentAuthenticatedUser();
+      const userId = cognitoUser.username;
+      const userObject = await getUserObject(userId);
+      window.log(`Got user after refresh: ${userObject}`);
+      setUser(userObject);
+    } catch (error) {
+      window.log(`Error refreshing user: ${error}`);
+      setUser(null);
+    }
+  };
+
   //Remember to update the current logged in user!
   const signUp = async (
     email,

@@ -15,7 +15,7 @@ import ForgotPassword from "../components/Pages/ForgotPassword";
 import ConfirmSignUp from "../components/Pages/ConfirmSignUp";
 
 const Routes = props => {
-  const { user } = useUser();
+  const { user, loading } = useUser();
   return (
     <Switch>
       <Route exact path="/">
