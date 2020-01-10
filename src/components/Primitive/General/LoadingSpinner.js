@@ -11,8 +11,14 @@ const rotate = keyframes`
     }
 `;
 
-const LoadingSpinnerWrapper = ({ ...props }) => {
-  return <FontAwesomeIcon {...props} icon={faCircleNotch} color="#FFF" />;
+const LoadingSpinnerWrapper = ({ colour, ...props }) => {
+  return (
+    <FontAwesomeIcon
+      {...props}
+      icon={faCircleNotch}
+      color={colour ? colour : "#FFF"}
+    />
+  );
 };
 
 const LoadingSpinner = styled(LoadingSpinnerWrapper)`

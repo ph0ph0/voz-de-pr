@@ -41,8 +41,13 @@ export const savePictureWithSubjectId = async (image, subjectId) => {
   return pictureObject;
 };
 
-const getPictureWithSubjectId = async key => {
-  const picture = await Storage.get(key);
+export const getPicture = async key => {
+  window.log("Getting picture from storage...");
+
+  const tempKey = "userAvatars/e510d7b1-9e29-4965-848b-1709d3291d36.png";
+  const picture = await Storage.get(tempKey);
+
+  window.log(`Got Picture!: ${picture}`);
 
   return picture;
 };
@@ -54,9 +59,11 @@ export const createUserProfilePic = async (avatar, userId) => {
   const lastDot = avatar.name.lastIndexOf(".");
   const extension = avatar.name.substring(lastDot);
   const folder = "userAvatars";
+  const fileName = `${folder}/${userId}${extension}`;
+  window.log(`Saving profile pic: ${fileName}`);
 
   //Save the image to storage and get the returned file key (name of file)
-  const s3Output = await Storage.put(`${folder}/${userId}${extension}`, avatar);
+  const s3Output = await Storage.put(fileName, avatar);
   const fileKey = s3Output.key;
   window.log(`avatar fileKey: ${fileKey}`);
   window.log(`avatar saved!`);

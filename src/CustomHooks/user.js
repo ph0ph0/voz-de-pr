@@ -5,7 +5,7 @@ import {
   getUserObject,
   updateUserObject
 } from "./UserObjectUtils/UserObjectUtils";
-import { createUserProfilePic } from "Utils/PictureManager";
+import { createUserProfilePic, getPicture } from "Utils/PictureManager";
 
 //Create context to hold values that we will expose to our components.
 // Don't worry about null, as it will be populated instantly by the component below
@@ -150,7 +150,7 @@ export const UserProvider = ({ children }) => {
       );
 
       window.log("Now saving profile picture");
-      createUserProfilePic(avatar, userId);
+      await createUserProfilePic(avatar, userId);
       setUser(userObjectData);
     } catch (error) {
       window.log(
@@ -307,6 +307,19 @@ export const UserProvider = ({ children }) => {
     }
   };
 
+  const getUserAvatar = async avatarKey => {
+    setLoading(true);
+    try {
+      const avatar = await getPicture(avatarKey);
+      return avatar;
+    } catch (error) {
+      window.log(`Failed to get user avatar: ${error}`);
+      throw error;
+    } finally {
+      setLoading(false);
+    }
+  };
+
   //Make sure not to force a re-render of components that are reading these values,
   // unless the user value has changed. This is for optimisation purposes.
   const values = useMemo(
@@ -320,7 +333,8 @@ export const UserProvider = ({ children }) => {
       confirmSignUp,
       forgotPassword,
       submitCodeAndNewPassword,
-      updateUser
+      updateUser,
+      getUserAvatar
     }),
     [user, error, loading]
   );

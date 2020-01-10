@@ -1,12 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-import { ReactComponent as ProfileImage } from "../../../../../assets/NavBar/Userpic.svg";
+import { Storage } from "aws-amplify";
+
+import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
+import { useUser } from "CustomHooks/user";
 
 const Wrapper = props => {
+  const [avatarURL, setAvatarURL] = useState("");
+
+  const { loading, user, getUserAvatar } = useUser();
+
+  const userAvatarKey = user && user.avatar && user.avatar.key;
+
+  // const userAvatar = await getUserAvatar(userAvatarKey);
+
+  console.log(`LOADING COMPONENT, got av? ${avatarURL} xxx`);
+
+  const fetchAvatarURL = async avatarKey => {
+    try {
+      window.log("Getting avatar...");
+      const userAvatarURL = await getUserAvatar(userAvatarKey);
+      setAvatarURL(userAvatarURL);
+      window.log("Got avatar!");
+    } catch (error) {
+      window.log(`Error fetching avatar url in ProfileImageWrapper: ${error}`);
+    }
+  };
+
+  useEffect(() => {
+    window.log("Fetching avatar...");
+    fetchAvatarURL();
+  }, []);
+
   return (
     <div {...props}>
-      <ProfileImage />
+      {loading ? (
+        <LoadingSpinner colour={"#1B4EA0"} />
+      ) : (
+        <img src={avatarURL} />
+      )}
     </div>
   );
 };

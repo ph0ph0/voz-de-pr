@@ -20,7 +20,8 @@ const SignInCardApi = ({ state, setState }) => {
     window.log(`codeValue in API: ${codeValue}`);
     try {
       await confirmSignUp(email, password, codeValue, avatar);
-    } catch {
+    } catch (error) {
+      window.log(`Error confirming signup: ${error}`);
       return;
     }
 
