@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  render,
-  fireEvent,
-  cleanup,
-  wait,
-  getByText,
-  waitForElement,
-  waitForElementToBeRemoved
-} from "@testing-library/react";
+import { render, fireEvent, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 
 import Profile from "../Profile";
@@ -19,6 +11,17 @@ afterEach(cleanup);
 
 //Allows us to ignore window . log calls
 global.log = () => {};
+
+jest.mock("CustomHooks/user", () => ({
+  useUser: () => ({
+    error: null,
+    loading: false,
+    forgotPassword: () => {},
+    submitCodeAndNewPassword: () => {},
+    user: "testUser",
+    updateUserLocationAndAvatar: () => {}
+  })
+}));
 
 describe("When clicking on the dropdown (InlineContent component)", () => {
   it("if closed, it opens, if open, it closes", async () => {

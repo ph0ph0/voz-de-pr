@@ -1,4 +1,4 @@
-import CreateSubjectFormAPI from "../SidePanelProfileAPI";
+import SidePanelProfileAPI from "../SidePanelProfileAPI";
 
 const state = {
   name: "",
@@ -25,15 +25,30 @@ const useApiMock = (api, defaultValue) => {
   return ref;
 };
 
-const mockApi = useApiMock(CreateSubjectFormAPI, state);
+var mockApi = useApiMock(SidePanelProfileAPI, state);
 
 //Allows us to ignore window . log calls
 global.log = () => {};
 
-it("updates name", () => {
-  mockApi.api.updateNameValue("new name");
-  expect(mockApi.api.name).toEqual("new name");
+jest.mock("CustomHooks/user", () => ({
+  useUser: () => ({
+    error: null,
+    loading: false,
+    forgotPassword: () => {},
+    submitCodeAndNewPassword: () => {},
+    user: "testUser",
+    updateUserLocationAndAvatar: () => {}
+  })
+}));
+
+beforeEach(() => {
+  mockApi = useApiMock(SidePanelProfileAPI, state);
 });
+
+//In the updateAvatar call of the api, the below function is called to create a reference
+//to the file object from the file picker input so that a preview can be shown to the user.
+//We need to mock this or we will get errors.
+URL.createObjectURL = input => input;
 
 it("toggles the list open and close", () => {
   mockApi.api.toggleList();
@@ -56,7 +71,7 @@ it("updates the selected location value", () => {
 });
 
 it("updates the selected avatar", () => {
-  mockApi.api.onClickAv("1");
+  mockApi.api.updateAvatar("1");
   expect(mockApi.api.selectedAvatar).toEqual("1");
 });
 
@@ -69,7 +84,6 @@ it("resets the dropdown", () => {
 
 it("resets the side panel", () => {
   mockApi.api.resetAll();
-  expect(mockApi.api.name).toEqual("");
   expect(mockApi.api.locationValue).toEqual("");
   expect(mockApi.api.selectedLocation).toEqual("");
   expect(mockApi.api.listOpen).toEqual(false);

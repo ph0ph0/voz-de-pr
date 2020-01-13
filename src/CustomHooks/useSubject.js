@@ -49,6 +49,7 @@ export const useSubject = () => {
     }
   };
 
+  //Not used yet?
   const downloadSubject = async id => {
     resetAll();
     window.log(`Downloading subject using id...`);

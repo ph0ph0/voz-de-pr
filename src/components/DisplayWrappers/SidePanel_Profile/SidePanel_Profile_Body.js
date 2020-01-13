@@ -42,12 +42,10 @@ const SidePanelProfileBody = styled(SidePanelProfileBodyWrapper)`
 
 SidePanelProfileBody.propTypes = {
   api: PropTypes.shape({
-    name: PropTypes.string.isRequired,
     locationValue: PropTypes.string.isRequired,
     listOpen: PropTypes.bool.isRequired,
     selectedLocation: PropTypes.string.isRequired,
     selectedAvatar: PropTypes.string,
-    updateNameValue: PropTypes.func.isRequired,
     toggleList: PropTypes.func.isRequired,
     updateLocationValue: PropTypes.func.isRequired,
     onLocationSelected: PropTypes.func.isRequired,
