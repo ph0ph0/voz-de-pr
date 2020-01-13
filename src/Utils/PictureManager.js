@@ -49,7 +49,7 @@ export const getPicture = async key => {
   // const tempKey = "userAvatars/e510d7b1-9e29-4965-848b-1709d3291d36.png";
   const picture = await Storage.get(key);
 
-  window.log(`Got Picture!: ${picture}`);
+  // window.log(`Got Picture!: ${picture}`);
 
   return picture;
 };

@@ -12,7 +12,6 @@ import { parseTime } from "Utils/TimePassedCalculator";
 const Wrapper = ({
   author,
   isOwner,
-  timePassed,
   createdAt,
   title,
   subjectContent,
@@ -48,8 +47,8 @@ const LeftContent = styled(Wrapper)`
 
 LeftContent.propTypes = {
   author: PropTypes.string.isRequired,
-  timePassedSinceCreation: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  createdAt: PropTypes.string.isRequired,
   subjectContent: PropTypes.string.isRequired,
   numberOfComments: PropTypes.number.isRequired
 };

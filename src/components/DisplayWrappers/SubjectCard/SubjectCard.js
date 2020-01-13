@@ -14,7 +14,7 @@ const Wrapper = ({
   numberOfComments,
   numberOfVotes,
   secondary,
-  src,
+  pictures,
   ...props
 }) => {
   const userID = "USERID2";
@@ -23,14 +23,13 @@ const Wrapper = ({
 
   const leftProps = {
     author,
-    timePassed,
     createdAt,
     title,
     subjectContent,
     numberOfComments,
     isOwner
   };
-  const rightProps = { numberOfVotes, secondary, src };
+  const rightProps = { numberOfVotes, secondary, pictures };
 
   return (
     <div {...props}>

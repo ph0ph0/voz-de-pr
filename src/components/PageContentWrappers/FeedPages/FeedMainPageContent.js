@@ -39,12 +39,14 @@ const FeedMainPageContentWrapper = ({
   // const subjectCardData = getSubjectCards(queryType);
 
   const [subjectCardData, setSubjectCardData] = useState([]);
+  const [nextToken, setNextToken] = useState(null);
 
   const { listAllSubjects } = useSubject();
 
   useEffect(() => {
     (async function getAllSubjects() {
       const subjects = await listAllSubjects();
+      window.log(`Got subjects! pic1: ${subjects[0].pictures.items[0].key}`);
       setSubjectCardData(subjects);
     })();
   }, []);

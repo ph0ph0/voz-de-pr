@@ -38,7 +38,7 @@ const SubjectCardsWrapper = ({
           numberOfComments={subject.numberOfComments}
           numberOfVotes={subject.votes}
           secondary={subject.type === "post" ? true : false}
-          src={subject.subjectImage}
+          pictures={subject.pictures}
           onClick={() => onClick(index)}
         />
       ))}

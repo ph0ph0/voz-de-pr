@@ -5,7 +5,6 @@ import BubbleWrapper from "./BubbleWrapper";
 import CommentsIndicator from "../../../Primitive/SubjectCard/CommentsIndicator";
 
 const Wrapper = ({ numberOfComments, ...props }) => {
-  window.log(`numberOfComments: ${numberOfComments}`);
   return (
     <div {...props}>
       <BubbleWrapper />

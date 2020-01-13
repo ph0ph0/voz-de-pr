@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { savePictureWithSubjectId } from "Utils/PictureManager";
+import { savePictureWithSubjectId, getPicture } from "Utils/PictureManager";
 import { API, graphqlOperation } from "aws-amplify";
 import { createSubject } from "graphql/mutations";
-import { getSubject, listSubjects } from "graphql/queries";
+import { getSubject } from "graphql/queries";
+import { listSubjects } from "graphql-custom/queries";
 import uuidv4 from "uuid/v4";
 
 export const useSubject = () => {
@@ -49,7 +50,7 @@ export const useSubject = () => {
     }
   };
 
-  //Not used yet?
+  //NOT USED YET!!
   const downloadSubject = async id => {
     resetAll();
     window.log(`Downloading subject using id...`);
@@ -63,19 +64,40 @@ export const useSubject = () => {
     // const picture =
   };
 
+  const getSubjectPicture = async key => {
+    if (key === null) return;
+    setLoading(true);
+    try {
+      const subjectPictureURL = await getPicture(key);
+      return subjectPictureURL;
+    } catch (error) {
+      window.log(`Eror in useSubject getting subject picture: ${error}`);
+      throw error;
+    } finally {
+      setLoading(false);
+    }
+  };
+
   //Should show all subjects irrespective of whether user is signed in or not
-  const listAllSubjects = async () => {
+  const listAllSubjects = async (limit = 10, nextToken = null) => {
     //Download all subjects.
-    const allSubjectsData = await API.graphql({
-      query: listSubjects,
-      variables: {},
-      authMode: "AWS_IAM"
-    });
-    window.log(`****** allSubjects: ${JSON.stringify(allSubjectsData)}`);
+    setLoading(true);
+    try {
+      const allSubjectsData = await API.graphql({
+        query: listSubjects,
+        variables: { limit: limit, nextToken: nextToken },
+        authMode: "AWS_IAM"
+      });
+      // window.log(`****** allSubjects: ${JSON.stringify(allSubjectsData)}`);
 
-    const allSubjects = allSubjectsData.data.listSubjects.items;
+      const allSubjects = allSubjectsData.data.listSubjects.items;
 
-    return allSubjects;
+      return allSubjects;
+    } catch (error) {
+      window.log(`!!!!Error getting subjects!!: ${JSON.stringify(error)}`);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return {
@@ -83,7 +105,8 @@ export const useSubject = () => {
     loading,
     saveSubject,
     downloadSubject,
-    listAllSubjects
+    listAllSubjects,
+    getSubjectPicture
   };
 };
 
