@@ -24,10 +24,17 @@ const Wrapper = ({ numberOfVotes, secondary, pictures, ...props }) => {
   };
 
   useEffect(() => {
+    if (pictures.items[0].key == undefined) {
+      window.log(`pictures key was undefined*********************`);
+      return;
+    }
     window.log(
-      `Picture: ${JSON.stringify(pictures.items[0] && pictures.items[0].key)}`
+      `Picture passed RightContent of SubjectCard: ${JSON.stringify(
+        pictures.items[0] && pictures.items[0].key
+      )}`
     );
-    const key = pictures.items[0] && pictures.items[0].key;
+    var key = pictures.items[0] && pictures.items[0].key;
+    window.log(`KEYYYYYYYYYYY: ${key}`);
     fetchPictures(key);
   }, []);
 
@@ -38,7 +45,7 @@ const Wrapper = ({ numberOfVotes, secondary, pictures, ...props }) => {
         secondary={secondary}
       ></SubjectInfo>
       {loading ? (
-        "LOADING"
+        <LoadingSpinner colour={"#EC220D"} />
       ) : (
         <SubjectImage src={pictureURL ? pictureURL : Placeholder} />
       )}

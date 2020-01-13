@@ -6,9 +6,9 @@ const SubjectImage = styled.img`
   /* border: 1px solid bisque; */
   /* background-color: red; */
   object-fit: cover;
-  width: 175px;
-  height: 123px;
-  /* width: 100%; */
+  max-width: 175px;
+  max-height: 123px;
+  width: 100%;
   height: auto;
 
   border-radius: 5px;
