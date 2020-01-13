@@ -2,7 +2,7 @@ import { useState } from "react";
 import { savePictureWithSubjectId } from "Utils/PictureManager";
 import { API, graphqlOperation } from "aws-amplify";
 import { createSubject } from "graphql/mutations";
-import { getSubject } from "graphql/queries";
+import { getSubject, listSubjects } from "graphql/queries";
 import uuidv4 from "uuid/v4";
 
 export const useSubject = () => {
@@ -63,11 +63,26 @@ export const useSubject = () => {
     // const picture =
   };
 
+  //Should show all subjects irrespective of whether user is signed in or not
+  const listAllSubjects = async () => {
+    //Download all subjects.
+    const allSubjectsData = await API.graphql(
+      graphqlOperation(listSubjects, { limit: 100 })
+    );
+
+    // window.log(`****** allSubjects: ${JSON.stringify(allSubjects)}`);
+
+    const allSubjects = allSubjectsData.data.listSubjects.items;
+
+    return allSubjects;
+  };
+
   return {
     error,
     loading,
     saveSubject,
-    downloadSubject
+    downloadSubject,
+    listAllSubjects
   };
 };
 
