@@ -69,15 +69,20 @@ const Wrapper = props => {
       {loading ? (
         <LoadingSpinner colour={"#1B4EA0"} />
       ) : (
-        <img src={avatarURL} />
+        <ProfileImage src={avatarURL} />
       )}
     </div>
   );
 };
 
+const ProfileImage = styled.img`
+  clip-path: circle(20px at center);
+  height: 45px;
+`;
+
 const ProfileImageWrapper = styled(Wrapper)`
   /* border: 1px solid red; */
-  width: 40px;
+  /* width: 200px; */
   height: 95%;
 
   display: flex;

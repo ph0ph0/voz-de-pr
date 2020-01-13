@@ -32,7 +32,7 @@ const Wrapper = ({ user, ...props }) => {
         height={"50%"}
         paddingBottom={"15px"}
       >
-        {emailToDisplay}
+        #{user.voiceNumber}
       </ProfileInfoNavBar>
     </div>
   );
@@ -40,7 +40,7 @@ const Wrapper = ({ user, ...props }) => {
 
 const ProfileInfoWrapper = styled(Wrapper)`
   /* background-color: yellow; */
-  width: 140px;
+  width: 200px;
   height: 95%;
 
   display: flex;

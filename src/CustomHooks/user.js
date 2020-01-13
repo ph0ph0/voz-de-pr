@@ -311,8 +311,6 @@ export const UserProvider = ({ children }) => {
     data.id = userId;
 
     try {
-      //update the location on the User object only
-
       //Set avatar property to null so that it gets refreshed in the app (see ProfileImageWrapper component in NavBar)
       if (avatar) {
         window.log("Avatar was submitted, nulling avatar avatar key...");

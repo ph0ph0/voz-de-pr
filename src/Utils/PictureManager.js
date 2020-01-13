@@ -6,7 +6,9 @@ export const savePictureWithSubjectId = async (image, subjectId) => {
   //Check image is not larger than 2 MB
   if (image.size > 2097152) {
     window.log(`Image too large, aborting!`);
-    throw new Error("Image is too large, please an image smaller than 2 MB");
+    throw new Error(
+      "Image is too large, please use an image smaller than 2 MB"
+    );
   }
 
   window.log(
@@ -77,7 +79,5 @@ export const nullPictureKey = async id => {
     key: null
   };
 
-  const pictureObject = await API.graphql(
-    graphqlOperation(updatePicture, { input: nulledPicture })
-  );
+  await API.graphql(graphqlOperation(updatePicture, { input: nulledPicture }));
 };

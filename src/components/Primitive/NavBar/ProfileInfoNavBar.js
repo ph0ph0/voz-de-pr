@@ -10,6 +10,8 @@ const ProfileInfoNavBar = styled.div`
   padding-top: ${props => (props.paddingTop ? props.paddingTop : "0px")};
   padding-bottom: ${props => (props.paddingBottom ? props.paddingBottom : 0)};
   padding-left: "100px";
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export default ProfileInfoNavBar;
