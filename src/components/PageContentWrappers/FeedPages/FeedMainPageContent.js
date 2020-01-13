@@ -1,8 +1,10 @@
 //MainPageContent houses the Title/Filters (TopOfPage) and the SubjectCards in a column flex box.
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+
+import { useSubject } from "CustomHooks/useSubject";
 
 import TopOfPage from "../TopOfPage/TopOfPage";
 import SubjectCards from "components/DisplayWrappers/SubjectCards/SubjectCards";
@@ -34,7 +36,18 @@ const FeedMainPageContentWrapper = ({
   queryType,
   ...props
 }) => {
-  const subjectCardData = getSubjectCards(queryType);
+  // const subjectCardData = getSubjectCards(queryType);
+
+  const [subjectCardData, setSubjectCardData] = useState([]);
+
+  const { listAllSubjects } = useSubject();
+
+  useEffect(() => {
+    (async function getAllSubjects() {
+      const subjects = await listAllSubjects();
+      setSubjectCardData(subjects);
+    })();
+  }, []);
 
   return (
     <div {...props}>

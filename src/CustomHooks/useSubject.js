@@ -66,11 +66,12 @@ export const useSubject = () => {
   //Should show all subjects irrespective of whether user is signed in or not
   const listAllSubjects = async () => {
     //Download all subjects.
-    const allSubjectsData = await API.graphql(
-      graphqlOperation(listSubjects, { limit: 100 })
-    );
-
-    // window.log(`****** allSubjects: ${JSON.stringify(allSubjects)}`);
+    const allSubjectsData = await API.graphql({
+      query: listSubjects,
+      variables: {},
+      authMode: "AWS_IAM"
+    });
+    window.log(`****** allSubjects: ${JSON.stringify(allSubjectsData)}`);
 
     const allSubjects = allSubjectsData.data.listSubjects.items;
 

@@ -1,19 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import FeedPageContent from "../PageContentWrappers/FeedPages/FeedPageContent";
 
-import { useSubject } from "CustomHooks/useSubject";
-
 const Page = ({ ...props }) => {
-  const { listAllSubjects } = useSubject();
-
-  useEffect(() => {
-    (async function getAllSubjects() {
-      await listAllSubjects();
-    })();
-  }, []);
-
   return (
     <div {...props}>
       <FeedPageContent pageType={"Home"} profileType={false} />
