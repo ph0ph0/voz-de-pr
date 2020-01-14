@@ -85,7 +85,11 @@ export const useSubject = () => {
     try {
       const allSubjectsData = await API.graphql({
         query: listSubjects,
-        variables: { limit: limit, nextToken: nextToken },
+        variables: {
+          limit: limit,
+          nextToken: nextToken,
+          scanDirection: "DESC"
+        },
         authMode: "AWS_IAM"
       });
       window.log(`****** allSubjects: ${JSON.stringify(allSubjectsData)}`);

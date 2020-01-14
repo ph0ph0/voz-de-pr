@@ -45,7 +45,8 @@ type Subject
     name: "subjectsByUser"
     fields: ["createdBy"]
     queryField: "subjectsByUser"
-  ) {
+  )
+  @key(name: "orderedByNoOfVotes", fields: ["votes"]) {
   id: ID!
   createdBy: ID
   createdAt: AWSDateTime
