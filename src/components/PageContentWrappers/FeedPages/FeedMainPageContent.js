@@ -14,6 +14,7 @@ import {
   PostOnly,
   Profile
 } from "Constants/MockSubjectsData";
+import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
 
 const getSubjectCards = queryType => {
   switch (queryType) {
@@ -41,7 +42,7 @@ const FeedMainPageContentWrapper = ({
   const [subjectCardData, setSubjectCardData] = useState([]);
   const [nextToken, setNextToken] = useState(null);
 
-  const { listAllSubjects } = useSubject();
+  const { listAllSubjects, loading } = useSubject();
 
   useEffect(() => {
     let isMounted = true;
@@ -49,9 +50,14 @@ const FeedMainPageContentWrapper = ({
     (async function getAllSubjects() {
       const subjects = await listAllSubjects();
       window.log(`Got subjects! pic1: ${subjects[0].pictures.items[0].key}`);
+      if (!isMounted) {
+        return;
+      }
       setSubjectCardData(subjects);
     })();
-    return () => (isMounted = false);
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (
@@ -59,7 +65,11 @@ const FeedMainPageContentWrapper = ({
       <TopOfPage profileType={profileType} shouldShowFilters={true}>
         {pageTitle}
       </TopOfPage>
-      <SubjectCards arrayOfSubjectCardData={subjectCardData} />
+      {loading ? (
+        <LoadingSpinner colour="#1B4EA0" center />
+      ) : (
+        <SubjectCards arrayOfSubjectCardData={subjectCardData} />
+      )}
     </div>
   );
 };
@@ -68,6 +78,7 @@ const FeedMainPageContent = styled(FeedMainPageContentWrapper)`
   /* border: 1px solid green; */
   /* background-color: red; */
 
+  width: 739px;
   margin-right: 30px;
   padding-right: 0px;
 

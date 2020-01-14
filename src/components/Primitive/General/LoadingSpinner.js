@@ -23,6 +23,8 @@ const LoadingSpinnerWrapper = ({ colour, ...props }) => {
 
 const LoadingSpinner = styled(LoadingSpinnerWrapper)`
   animation: ${rotate} infinite 2s linear;
+  margin-left: ${props => props.center && "auto"};
+  margin-right: ${props => props.center && "auto"};
 `;
 
 export default LoadingSpinner;
