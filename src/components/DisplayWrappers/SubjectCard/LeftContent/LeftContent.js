@@ -13,6 +13,7 @@ const Wrapper = ({
   author,
   isOwner,
   createdAt,
+  createdBy,
   title,
   subjectContent,
   numberOfComments,
@@ -26,6 +27,7 @@ const Wrapper = ({
         author={author}
         timePassed={timeSinceCreated}
         isOwner={isOwner}
+        createdBy={createdBy}
       />
       <SubjectTitle>{title}</SubjectTitle>
       <SubjectSummary>{subjectContent}</SubjectSummary>

@@ -6,7 +6,7 @@ import retry from "async/retry";
 import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
 import { useUser } from "CustomHooks/user";
 
-import Placeholder from "assets/General/Logo.svg";
+import Logo from "assets/General/Logo.svg";
 
 const Wrapper = props => {
   const [avatarURL, setAvatarURL] = useState("");
@@ -73,7 +73,7 @@ const Wrapper = props => {
       ) : (
         <ProfileImage
           src={avatarURL}
-          onError={event => (event.target.src = Placeholder)}
+          onError={event => (event.target.src = Logo)}
         />
       )}
     </div>

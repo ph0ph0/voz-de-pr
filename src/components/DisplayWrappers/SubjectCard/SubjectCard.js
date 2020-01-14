@@ -4,11 +4,12 @@ import styled from "styled-components";
 import LeftContent from "./LeftContent/LeftContent";
 import RightContent from "./RightContent/RightContent";
 
+import { useUser } from "CustomHooks/user";
+
 const Wrapper = ({
   author,
   createdBy,
   createdAt,
-  timePassed,
   title,
   subjectContent,
   numberOfComments,
@@ -17,13 +18,13 @@ const Wrapper = ({
   pictures,
   ...props
 }) => {
-  const userID = "USERID2";
-
-  const isOwner = userID === createdBy ? true : false;
+  const { user } = useUser();
+  const isOwner = user && user.id === createdBy ? true : false;
 
   const leftProps = {
     author,
     createdAt,
+    createdBy,
     title,
     subjectContent,
     numberOfComments,

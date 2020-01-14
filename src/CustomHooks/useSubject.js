@@ -88,7 +88,7 @@ export const useSubject = () => {
         variables: { limit: limit, nextToken: nextToken },
         authMode: "AWS_IAM"
       });
-      // window.log(`****** allSubjects: ${JSON.stringify(allSubjectsData)}`);
+      window.log(`****** allSubjects: ${JSON.stringify(allSubjectsData)}`);
 
       const allSubjects = allSubjectsData.data.listSubjects.items;
 
