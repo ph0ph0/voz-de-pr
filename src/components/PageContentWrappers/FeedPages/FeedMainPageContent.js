@@ -44,11 +44,14 @@ const FeedMainPageContentWrapper = ({
   const { listAllSubjects } = useSubject();
 
   useEffect(() => {
+    let isMounted = true;
+
     (async function getAllSubjects() {
       const subjects = await listAllSubjects();
       window.log(`Got subjects! pic1: ${subjects[0].pictures.items[0].key}`);
       setSubjectCardData(subjects);
     })();
+    return () => (isMounted = false);
   }, []);
 
   return (

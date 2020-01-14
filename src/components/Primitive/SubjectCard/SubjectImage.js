@@ -6,21 +6,12 @@ const SubjectImage = styled.img`
   /* border: 1px solid bisque; */
   /* background-color: red; */
   object-fit: cover;
-  max-width: 175px;
-  max-height: 123px;
-  width: 100%;
-  height: auto;
+  width: 175px;
+  height: 123px;
+  /* width: 100%;
+  height: auto; */
 
   border-radius: 5px;
-
-  :before {
-    content: url("assets/General/placeholder.gif");
-    display: block;
-  }
-  :after {
-    content: url("assets/General/placeholder.gif");
-    display: block;
-  }
 `;
 
 export default SubjectImage;
