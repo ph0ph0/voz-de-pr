@@ -12,6 +12,15 @@ const SubjectImage = styled.img`
   height: auto;
 
   border-radius: 5px;
+
+  :before {
+    content: url("assets/General/placeholder.gif");
+    display: block;
+  }
+  :after {
+    content: url("assets/General/placeholder.gif");
+    display: block;
+  }
 `;
 
 export default SubjectImage;

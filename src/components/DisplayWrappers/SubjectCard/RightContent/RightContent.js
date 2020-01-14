@@ -20,22 +20,21 @@ const Wrapper = ({ numberOfVotes, secondary, pictures, ...props }) => {
       setPictureURL(pictures);
     } catch (error) {
       window.log(`Error fetching pictures for subject: ${error}`);
+      setPictureURL(null);
     }
   };
 
   useEffect(() => {
-    if (pictures.items[0].key == undefined) {
-      window.log(`pictures key was undefined*********************`);
+    if (pictures.items[0] == undefined || pictures.items[0].key == undefined) {
+      window.log(`pictures key undefined, aborting Right Content useEffect`);
       return;
     }
-    window.log(
-      `Picture passed RightContent of SubjectCard: ${JSON.stringify(
-        pictures.items[0] && pictures.items[0].key
-      )}`
-    );
     var key = pictures.items[0] && pictures.items[0].key;
-    window.log(`KEYYYYYYYYYYY: ${key}`);
-    fetchPictures(key);
+    var compressedImageKey = key.replace(
+      "subjectPictures",
+      "subjectPictures-thumbnails_350x246"
+    );
+    fetchPictures(compressedImageKey);
   }, []);
 
   return (
@@ -47,7 +46,10 @@ const Wrapper = ({ numberOfVotes, secondary, pictures, ...props }) => {
       {loading ? (
         <LoadingSpinner colour={"#EC220D"} />
       ) : (
-        <SubjectImage src={pictureURL ? pictureURL : Placeholder} />
+        <SubjectImage
+          src={pictureURL ? pictureURL : Placeholder}
+          onError={event => (event.target.src = Placeholder)}
+        />
       )}
       {/* {src ? null : <LoadingSpinner colour={"black"} />} */}
     </div>
