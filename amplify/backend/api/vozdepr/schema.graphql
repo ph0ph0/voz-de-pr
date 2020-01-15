@@ -46,7 +46,16 @@ type Subject
     fields: ["createdBy"]
     queryField: "subjectsByUser"
   )
-  @key(name: "orderedByNoOfVotes", fields: ["votes"]) {
+  @key(
+    name: "byVotes"
+    fields: ["staticKey", "votes"]
+    queryField: "getSubjectsByNoOfVotes"
+  )
+  @key(
+    name: "byComments"
+    fields: ["staticKey", "numberOfComments"]
+    queryField: "getSubjectsByNoOfComments"
+  ) {
   id: ID!
   createdBy: ID
   createdAt: AWSDateTime
@@ -58,8 +67,9 @@ type Subject
   timePassedSinceCreation: String
   numberOfComments: Int
   votes: Int
+  # the staticKey is used as the primary key for the GSI and should always have the same value (set as 1)!
+  staticKey: Int
   type: SubjectType!
-  # hasPictures: Boolean!
 }
 
 enum SubjectType {

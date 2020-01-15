@@ -81,6 +81,7 @@ export const onCreateSubject = `subscription OnCreateSubject($owner: String!) {
     timePassedSinceCreation
     numberOfComments
     votes
+    staticKey
     type
     owner
     pictures {
@@ -122,6 +123,7 @@ export const onUpdateSubject = `subscription OnUpdateSubject($owner: String!) {
     timePassedSinceCreation
     numberOfComments
     votes
+    staticKey
     type
     owner
     pictures {
@@ -163,6 +165,7 @@ export const onDeleteSubject = `subscription OnDeleteSubject($owner: String!) {
     timePassedSinceCreation
     numberOfComments
     votes
+    staticKey
     type
     owner
     pictures {

@@ -81,6 +81,7 @@ export const createSubject = `mutation CreateSubject($input: CreateSubjectInput!
     timePassedSinceCreation
     numberOfComments
     votes
+    staticKey
     type
     owner
     pictures {
@@ -122,6 +123,7 @@ export const updateSubject = `mutation UpdateSubject($input: UpdateSubjectInput!
     timePassedSinceCreation
     numberOfComments
     votes
+    staticKey
     type
     owner
     pictures {
@@ -163,6 +165,7 @@ export const deleteSubject = `mutation DeleteSubject($input: DeleteSubjectInput!
     timePassedSinceCreation
     numberOfComments
     votes
+    staticKey
     type
     owner
     pictures {

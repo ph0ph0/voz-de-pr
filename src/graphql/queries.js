@@ -103,6 +103,7 @@ export const getSubject = `query GetSubject($id: ID!) {
     timePassedSinceCreation
     numberOfComments
     votes
+    staticKey
     type
     owner
     pictures {
@@ -149,6 +150,7 @@ export const listSubjects = `query ListSubjects(
       timePassedSinceCreation
       numberOfComments
       votes
+      staticKey
       type
       owner
       pictures {
@@ -188,6 +190,7 @@ export const subjectsByUserByType = `query SubjectsByUserByType(
       timePassedSinceCreation
       numberOfComments
       votes
+      staticKey
       type
       owner
       pictures {
@@ -225,6 +228,87 @@ export const subjectsByUser = `query SubjectsByUser(
       timePassedSinceCreation
       numberOfComments
       votes
+      staticKey
+      type
+      owner
+      pictures {
+        nextToken
+      }
+      comments {
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+`;
+export const getSubjectsByNoOfVotes = `query GetSubjectsByNoOfVotes(
+  $staticKey: Int
+  $votes: ModelIntKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelSubjectFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  getSubjectsByNoOfVotes(
+    staticKey: $staticKey
+    votes: $votes
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      createdBy
+      createdAt
+      author
+      title
+      subjectContent
+      timePassedSinceCreation
+      numberOfComments
+      votes
+      staticKey
+      type
+      owner
+      pictures {
+        nextToken
+      }
+      comments {
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+`;
+export const getSubjectsByNoOfComments = `query GetSubjectsByNoOfComments(
+  $staticKey: Int
+  $numberOfComments: ModelIntKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelSubjectFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  getSubjectsByNoOfComments(
+    staticKey: $staticKey
+    numberOfComments: $numberOfComments
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      createdBy
+      createdAt
+      author
+      title
+      subjectContent
+      timePassedSinceCreation
+      numberOfComments
+      votes
+      staticKey
       type
       owner
       pictures {
