@@ -55,6 +55,11 @@ type Subject
     name: "byComments"
     fields: ["staticKey", "numberOfComments"]
     queryField: "getSubjectsByNoOfComments"
+  )
+  @key(
+    name: "byCreatedAt"
+    fields: ["staticKey", "createdAt"]
+    queryField: "getSubjectsByCreatedAt"
   ) {
   id: ID!
   createdBy: ID

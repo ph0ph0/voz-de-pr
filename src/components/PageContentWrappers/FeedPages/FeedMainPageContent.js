@@ -42,15 +42,21 @@ const FeedMainPageContentWrapper = ({
   const [subjectCardData, setSubjectCardData] = useState([]);
   const [nextToken, setNextToken] = useState(null);
 
-  const { listAllSubjects, loading } = useSubject();
+  const {
+    listAllSubjectsOrderedByCreatedAt,
+    listAllSubjectsOrderedByVotes,
+    listAllSubjectsOrderedByComments,
+    loading
+  } = useSubject();
 
   useEffect(() => {
     let isMounted = true;
 
     (async function getAllSubjects() {
-      const subjects = await listAllSubjects();
+      const subjects = await listAllSubjectsOrderedByComments();
       window.log(`Got subjects! pic1: ${subjects[0].pictures.items[0].key}`);
       if (!isMounted) {
+        window.log("Component not mounted, aborting setting subjects");
         return;
       }
       setSubjectCardData(subjects);
@@ -66,7 +72,7 @@ const FeedMainPageContentWrapper = ({
         {pageTitle}
       </TopOfPage>
       {loading ? (
-        <LoadingSpinner colour="#1B4EA0" center />
+        <LoadingSpinner colour="#1B4EA0" center={true} />
       ) : (
         <SubjectCards arrayOfSubjectCardData={subjectCardData} />
       )}

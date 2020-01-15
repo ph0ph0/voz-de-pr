@@ -322,6 +322,46 @@ export const getSubjectsByNoOfComments = `query GetSubjectsByNoOfComments(
   }
 }
 `;
+export const getSubjectsByCreatedAt = `query GetSubjectsByCreatedAt(
+  $staticKey: Int
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelSubjectFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  getSubjectsByCreatedAt(
+    staticKey: $staticKey
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      createdBy
+      createdAt
+      author
+      title
+      subjectContent
+      timePassedSinceCreation
+      numberOfComments
+      votes
+      staticKey
+      type
+      owner
+      pictures {
+        nextToken
+      }
+      comments {
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+`;
 export const getPicture = `query GetPicture($id: ID!) {
   getPicture(id: $id) {
     id

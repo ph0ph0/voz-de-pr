@@ -3,7 +3,12 @@ import { savePictureWithSubjectId, getPicture } from "Utils/PictureManager";
 import { API, graphqlOperation } from "aws-amplify";
 import { createSubject } from "graphql/mutations";
 import { getSubject } from "graphql/queries";
-import { listSubjects } from "graphql-custom/queries";
+import {
+  listSubjects,
+  getSubjectsByCreatedAt,
+  getSubjectsByNoOfVotes,
+  getSubjectsByNoOfComments
+} from "graphql-custom/queries";
 import uuidv4 from "uuid/v4";
 
 export const useSubject = () => {
@@ -83,22 +88,125 @@ export const useSubject = () => {
     //Download all subjects.
     setLoading(true);
     try {
-      const allSubjectsData = await API.graphql({
+      const allSubjectData = await API.graphql({
         query: listSubjects,
         variables: {
           limit: limit,
-          nextToken: nextToken,
-          scanDirection: "DESC"
+          nextToken: nextToken
         },
         authMode: "AWS_IAM"
       });
-      window.log(`****** allSubjects: ${JSON.stringify(allSubjectsData)}`);
+      window.log(`****** allSubjects: ${JSON.stringify(allSubjectData)}`);
 
-      const allSubjects = allSubjectsData.data.listSubjects.items;
+      const allSubjects = allSubjectData.data.listSubjects.items;
 
       return allSubjects;
     } catch (error) {
       window.log(`!!!!Error getting subjects!!: ${JSON.stringify(error)}`);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const listAllSubjectsOrderedByCreatedAt = async (
+    limit = 10,
+    nextToken = null,
+    sortDirection = "DESC"
+  ) => {
+    setLoading(true);
+    try {
+      const allSubjectData = await API.graphql({
+        query: getSubjectsByCreatedAt,
+        variables: {
+          staticKey: 1,
+          limit: limit,
+          nextToken: nextToken,
+          sortDirection: sortDirection
+        },
+        authMode: "AWS_IAM"
+      });
+      window.log(
+        `****** allSubjects ordered by createdAt: ${JSON.stringify(
+          allSubjectData
+        )}`
+      );
+
+      const allSubjects = allSubjectData.data.getSubjectsByCreatedAt.items;
+
+      return allSubjects;
+    } catch (error) {
+      window.log(
+        `Error getting subjects orderd by createdAt: ${JSON.stringify(error)}`
+      );
+      throw error;
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const listAllSubjectsOrderedByVotes = async (
+    limit = 10,
+    nextToken = null,
+    sortDirection = "DESC"
+  ) => {
+    setLoading(true);
+    try {
+      const allSubjectData = await API.graphql({
+        query: getSubjectsByNoOfVotes,
+        variables: {
+          staticKey: 1,
+          limit: limit,
+          nextToken: nextToken,
+          sortDirection: sortDirection
+        },
+        authMode: "AWS_IAM"
+      });
+      window.log(
+        `****** allSubjects ordered by votes: ${JSON.stringify(allSubjectData)}`
+      );
+
+      const allSubjects = allSubjectData.data.getSubjectsByNoOfVotes.items;
+
+      return allSubjects;
+    } catch (error) {
+      window.log(
+        `Error getting subjects orderd by votes: ${JSON.stringify(error)}`
+      );
+      throw error;
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const listAllSubjectsOrderedByComments = async (
+    limit = 10,
+    nextToken = null,
+    sortDirection = "DESC"
+  ) => {
+    setLoading(true);
+    try {
+      const allSubjectData = await API.graphql({
+        query: getSubjectsByNoOfComments,
+        variables: {
+          staticKey: 1,
+          limit: limit,
+          nextToken: nextToken,
+          sortDirection: sortDirection
+        },
+        authMode: "AWS_IAM"
+      });
+      window.log(
+        `****** allSubjects ordered by votes: ${JSON.stringify(allSubjectData)}`
+      );
+
+      const allSubjects = allSubjectData.data.getSubjectsByNoOfComments.items;
+
+      return allSubjects;
+    } catch (error) {
+      window.log(
+        `Error getting subjects orderd by votes: ${JSON.stringify(error)}`
+      );
+      throw error;
     } finally {
       setLoading(false);
     }
@@ -110,7 +218,10 @@ export const useSubject = () => {
     saveSubject,
     downloadSubject,
     listAllSubjects,
-    getSubjectPicture
+    getSubjectPicture,
+    listAllSubjectsOrderedByCreatedAt,
+    listAllSubjectsOrderedByVotes,
+    listAllSubjectsOrderedByComments
   };
 };
 
