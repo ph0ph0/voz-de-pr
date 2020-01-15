@@ -11,7 +11,7 @@ const rotate = keyframes`
     }
 `;
 
-const LoadingSpinnerWrapper = ({ colour, ...props }) => {
+const LoadingSpinnerWrapper = ({ colour, center, ...props }) => {
   return (
     <FontAwesomeIcon
       {...props}
