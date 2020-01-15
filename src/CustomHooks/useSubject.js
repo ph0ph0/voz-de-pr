@@ -108,28 +108,36 @@ export const useSubject = () => {
     }
   };
 
-  const listAllSubjectsOrderedByCreatedAt = async (
+  function myFor({ start = 5, end = 1, step = -1 } = {}) {
+    // (A)
+    // Use the variables `start`, `end` and `step` here
+  }
+
+  const listAllSubjectsOrderedByCreatedAt = async ({
     limit = 10,
     nextToken = null,
-    sortDirection = "DESC"
-  ) => {
+    sortDirection = "DESC",
+    filter = null
+  } = {}) => {
     setLoading(true);
     try {
+      window.log(`FILTER passed through: ${JSON.stringify(filter)}`);
       const allSubjectData = await API.graphql({
         query: getSubjectsByCreatedAt,
         variables: {
           staticKey: 1,
           limit: limit,
           nextToken: nextToken,
-          sortDirection: sortDirection
+          sortDirection: sortDirection,
+          filter: filter
         },
         authMode: "AWS_IAM"
       });
-      window.log(
-        `****** allSubjects ordered by createdAt: ${JSON.stringify(
-          allSubjectData
-        )}`
-      );
+      // window.log(
+      //   `****** allSubjects ordered by createdAt: ${JSON.stringify(
+      //     allSubjectData
+      //   )}`
+      // );
 
       const allSubjects = allSubjectData.data.getSubjectsByCreatedAt.items;
 
@@ -144,11 +152,12 @@ export const useSubject = () => {
     }
   };
 
-  const listAllSubjectsOrderedByVotes = async (
+  const listAllSubjectsOrderedByVotes = async ({
     limit = 10,
     nextToken = null,
-    sortDirection = "DESC"
-  ) => {
+    sortDirection = "DESC",
+    filter = null
+  } = {}) => {
     setLoading(true);
     try {
       const allSubjectData = await API.graphql({
@@ -157,7 +166,8 @@ export const useSubject = () => {
           staticKey: 1,
           limit: limit,
           nextToken: nextToken,
-          sortDirection: sortDirection
+          sortDirection: sortDirection,
+          filter: filter
         },
         authMode: "AWS_IAM"
       });
@@ -178,11 +188,12 @@ export const useSubject = () => {
     }
   };
 
-  const listAllSubjectsOrderedByComments = async (
+  const listAllSubjectsOrderedByComments = async ({
     limit = 10,
     nextToken = null,
-    sortDirection = "DESC"
-  ) => {
+    sortDirection = "DESC",
+    filter = null
+  } = {}) => {
     setLoading(true);
     try {
       const allSubjectData = await API.graphql({
@@ -191,7 +202,8 @@ export const useSubject = () => {
           staticKey: 1,
           limit: limit,
           nextToken: nextToken,
-          sortDirection: sortDirection
+          sortDirection: sortDirection,
+          filter: filter
         },
         authMode: "AWS_IAM"
       });
@@ -204,7 +216,7 @@ export const useSubject = () => {
       return allSubjects;
     } catch (error) {
       window.log(
-        `Error getting subjects orderd by votes: ${JSON.stringify(error)}`
+        `Error getting subjects orderd by comments: ${JSON.stringify(error)}`
       );
       throw error;
     } finally {

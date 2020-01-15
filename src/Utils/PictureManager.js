@@ -48,7 +48,7 @@ export const getPicture = async key => {
     window.log("Aborting, no key to get picture");
     return;
   }
-  window.log(`Getting picture from storage, key: ${key}`);
+  // window.log(`Getting picture from storage, key: ${key}`);
 
   const picture = await Storage.get(key);
 

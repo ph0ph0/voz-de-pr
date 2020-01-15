@@ -5,29 +5,114 @@ import {
   Filter,
   FilterRedProfile,
   FilterBlueProfile
-} from "../../Primitive/TopOfPage/Filter";
+} from "components/Primitive/TopOfPage/Filter";
 
-const FiltersWrapper = ({ profileType, ...props }) => {
+const FiltersWrapper = ({
+  profileType,
+  updateSortOrderState,
+  sortOrderState,
+  ...props
+}) => {
   //If the filters should be shown on a profile page, then they are slightly different
 
   if (profileType) {
     return (
       <div {...props}>
-        <FilterRedProfile>My Causes</FilterRedProfile>
-        <FilterBlueProfile>My Posts</FilterBlueProfile>
-        <FilterRedProfile>All</FilterRedProfile>
+        <MyCausesFilter
+          onClick={() => updateSortOrderState("myCauses")}
+          sortOrderState={sortOrderState}
+        >
+          My Causes
+        </MyCausesFilter>
+        <MyPostsFilter
+          onClick={() => updateSortOrderState("myPosts")}
+          sortOrderState={sortOrderState}
+        >
+          My Posts
+        </MyPostsFilter>
+        <MyAllFilter
+          onClick={() => updateSortOrderState("all")}
+          sortOrderState={sortOrderState}
+        >
+          All
+        </MyAllFilter>
       </div>
     );
   }
 
   return (
     <div {...props}>
-      <Filter>Most Votes</Filter>
-      <Filter>Most Comments</Filter>
-      <Filter>Reset</Filter>
+      <MostVotesFilter
+        onClick={() => updateSortOrderState("mostVotes")}
+        sortOrderState={sortOrderState}
+      >
+        Most Votes
+      </MostVotesFilter>
+      <MostCommentsFilter
+        onClick={() => updateSortOrderState("mostComments")}
+        sortOrderState={sortOrderState}
+      >
+        Most Comments
+      </MostCommentsFilter>
+      <ResetFilter
+        onClick={() => updateSortOrderState("all")}
+        sortOrderState={sortOrderState}
+      >
+        All
+      </ResetFilter>
     </div>
   );
 };
+
+const MyCausesFilter = styled(FilterRedProfile)`
+  color: ${props =>
+    props.sortOrderState === "myCauses"
+      ? props.theme.primaryColour
+      : "#6e6f70"};
+`;
+
+const MyAllFilter = styled(FilterRedProfile)`
+  color: ${props =>
+    props.sortOrderState === "all" ? props.theme.primaryColour : "#6e6f70"};
+`;
+
+const MyPostsFilter = styled(FilterRedProfile)`
+  color: ${props =>
+    props.sortOrderState === "myPosts"
+      ? props.theme.secondaryColour
+      : "#6e6f70"};
+`;
+
+const MostVotesFilter = styled(FilterRedProfile)`
+  color: ${props =>
+    props.sortOrderState === "mostVotes"
+      ? props.theme.secondaryColour
+      : "#6e6f70"};
+
+  :hover {
+    color: "#1B4EA0";
+  }
+`;
+
+const MostCommentsFilter = styled(FilterRedProfile)`
+  color: ${props =>
+    props.sortOrderState === "mostComments"
+      ? props.theme.primaryColour
+      : "#6e6f70"};
+
+  :hover {
+    color: "#EC220D";
+  }
+`;
+
+const ResetFilter = styled(FilterRedProfile)`
+  color: ${props =>
+    props.sortOrderState === "all" ? props.theme.secondaryColour : "#6e6f70"};
+
+  :hover {
+    color: "#1B4EA0";
+  }
+`;
 
 const Filters = styled(FiltersWrapper)`
   /* border: 1px solid teal; */

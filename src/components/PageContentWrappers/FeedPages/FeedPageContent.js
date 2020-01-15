@@ -16,7 +16,7 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
           <MainPageContent
             pageTitle={"Home Feed"}
             profileType={profileType}
-            queryType={"Mixed"}
+            pageFilter={"Mixed"}
           />
           <SidePanel type={"Standard"} />
         </div>
@@ -27,7 +27,7 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
           <MainPageContent
             pageTitle={"Cause Lobby"}
             profileType={profileType}
-            queryType={"CauseOnly"}
+            pageFilter={"CauseOnly"}
           />
           <SidePanel type={"CauseOnly"} />
         </div>
@@ -38,7 +38,7 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
           <MainPageContent
             pageTitle={"Posts Lobby"}
             profileType={profileType}
-            queryType={"PostOnly"}
+            pageFilter={"PostOnly"}
           />
           <SidePanel type={"PostOnly"} />
         </div>
@@ -49,7 +49,7 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
           <MainPageContent
             pageTitle={"My Profile"}
             profileType={profileType}
-            queryType={"Profile"}
+            pageFilter={"Profile"}
           />
           <SidePanelProfile />
         </div>

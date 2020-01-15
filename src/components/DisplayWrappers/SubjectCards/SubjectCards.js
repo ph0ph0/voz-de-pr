@@ -26,9 +26,9 @@ const SubjectCardsWrapper = ({
 
   return (
     <div {...props}>
-      {arrayOfSubjectCardData.map((subject, index) => (
+      {arrayOfSubjectCardData.map(subject => (
         <SubjectCard
-          key={index}
+          key={subject.id}
           author={subject.author}
           createdBy={subject.createdBy}
           createdAt={subject.createdAt}
@@ -39,7 +39,7 @@ const SubjectCardsWrapper = ({
           numberOfVotes={subject.votes}
           secondary={subject.type === "post" ? true : false}
           pictures={subject.pictures}
-          onClick={() => onClick(index)}
+          onClick={() => onClick(subject.id)}
         />
       ))}
     </div>
