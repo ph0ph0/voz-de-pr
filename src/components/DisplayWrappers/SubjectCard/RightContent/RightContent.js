@@ -13,6 +13,7 @@ const Wrapper = ({ numberOfVotes, secondary, pictures, ...props }) => {
   const [pictureURL, setPictureURL] = useState(null);
 
   const { getSubjectPicture, loading } = useSubject();
+  let isMounted = true;
 
   const fetchPictures = async key => {
     try {
@@ -25,16 +26,18 @@ const Wrapper = ({ numberOfVotes, secondary, pictures, ...props }) => {
   };
 
   useEffect(() => {
-    if (pictures.items[0] == undefined || pictures.items[0].key == undefined) {
-      window.log(`pictures key undefined, aborting Right Content useEffect`);
-      return;
+    try {
+      var key = pictures.items[0] && pictures.items[0].key;
+      var compressedImageKey = key.replace(
+        "subjectPictures",
+        "subjectPictures-thumbnails_350x246"
+      );
+      fetchPictures(compressedImageKey);
+    } catch (error) {
+      window.log(
+        `Error getting subject picture in useEffect of RightContent: ${error}`
+      );
     }
-    var key = pictures.items[0] && pictures.items[0].key;
-    var compressedImageKey = key.replace(
-      "subjectPictures",
-      "subjectPictures-thumbnails_350x246"
-    );
-    fetchPictures(compressedImageKey);
   }, []);
 
   return (

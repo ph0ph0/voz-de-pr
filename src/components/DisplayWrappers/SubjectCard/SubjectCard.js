@@ -57,6 +57,11 @@ const SubjectCard = styled(Wrapper)`
     margin-top: 15px;
   }
 
+  /* Ensures that there is a spacing beneath the last subejct card */
+  :last-of-type {
+    margin-bottom: 20px;
+  }
+
   :hover {
     cursor: pointer;
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.12);

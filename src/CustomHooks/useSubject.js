@@ -122,6 +122,7 @@ export const useSubject = () => {
     setLoading(true);
     try {
       window.log(`FILTER passed through: ${JSON.stringify(filter)}`);
+      window.log(`nextToken passed to useSubject: ${nextToken}`);
       const allSubjectData = await API.graphql({
         query: getSubjectsByCreatedAt,
         variables: {
@@ -133,15 +134,17 @@ export const useSubject = () => {
         },
         authMode: "AWS_IAM"
       });
-      // window.log(
-      //   `****** allSubjects ordered by createdAt: ${JSON.stringify(
-      //     allSubjectData
-      //   )}`
-      // );
+      window.log(
+        `****** allSubjects ordered by createdAt: ${JSON.stringify(
+          allSubjectData.data.getSubjectsByCreatedAt.items
+        )}`
+      );
 
       const allSubjects = allSubjectData.data.getSubjectsByCreatedAt.items;
+      const token = allSubjectData.data.getSubjectsByCreatedAt.nextToken;
+      window.log(`****Next token extracted from data: ${token}`);
 
-      return allSubjects;
+      return { subjects: allSubjects, nextToken: token };
     } catch (error) {
       window.log(
         `Error getting subjects orderd by createdAt: ${JSON.stringify(error)}`
@@ -171,13 +174,16 @@ export const useSubject = () => {
         },
         authMode: "AWS_IAM"
       });
-      window.log(
-        `****** allSubjects ordered by votes: ${JSON.stringify(allSubjectData)}`
-      );
+      window
+        .log
+        // `****** allSubjects ordered by votes: ${JSON.stringify(allSubjectData)}`
+        ();
 
       const allSubjects = allSubjectData.data.getSubjectsByNoOfVotes.items;
+      const token = allSubjectData.data.getSubjectsByNoOfVotes.nextToken;
+      window.log(`********************Next token: ${token}`);
 
-      return allSubjects;
+      return { subjects: allSubjects, nextToken: token };
     } catch (error) {
       window.log(
         `Error getting subjects orderd by votes: ${JSON.stringify(error)}`
@@ -212,8 +218,10 @@ export const useSubject = () => {
       );
 
       const allSubjects = allSubjectData.data.getSubjectsByNoOfComments.items;
+      const token = allSubjectData.data.getSubjectsByNoOfComments.nextToken;
+      window.log(`********************Next token: ${token}`);
 
-      return allSubjects;
+      return { subjects: allSubjects, nextToken: token };
     } catch (error) {
       window.log(
         `Error getting subjects orderd by comments: ${JSON.stringify(error)}`
