@@ -9,6 +9,7 @@ import { useSubject } from "CustomHooks/useSubject";
 import TopOfPage from "../TopOfPage/TopOfPage";
 import SubjectCards from "components/DisplayWrappers/SubjectCards/SubjectCards";
 import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
+import LoadMore from "components/Primitive/SubjectCard/LoadMore";
 import { useUser } from "CustomHooks/user";
 
 const FeedMainPageContentWrapper = ({
@@ -17,7 +18,7 @@ const FeedMainPageContentWrapper = ({
   pageFilter,
   ...props
 }) => {
-  // const subjectCardData = getSubjectCards(queryType);
+  // pageFilter can be mixed, causeOnly, postsOnly or profile
 
   const [subjectCardData, setSubjectCardData] = useState([]);
   const [nextToken, setNextToken] = useState(null);
@@ -34,6 +35,8 @@ const FeedMainPageContentWrapper = ({
 
   const updateSortOrderState = newValue => {
     window.log(`new filter state: ${newValue}`);
+    setSubjectCardData([]);
+    setNextToken(null);
     setSortOrderState(newValue);
   };
 
@@ -219,26 +222,5 @@ FeedMainPageContent.propTypes = {
   pageTitle: PropTypes.string.isRequired,
   profileType: PropTypes.bool.isRequired
 };
-
-const LoadMore = styled.button`
-  /* border: 1px solid black; */
-  width: auto;
-  height: 40px;
-  border-radius: 40px;
-
-  margin-top: 10px;
-  margin-bottom: 40px;
-
-  /* background-color: #919191; */
-  color: rgba(0, 0, 0, 0.54);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
-
-  font-size: 16px;
-  text-align: center;
-
-  :focus {
-    outline: none;
-  }
-`;
 
 export default FeedMainPageContent;
