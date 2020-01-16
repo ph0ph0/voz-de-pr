@@ -10,8 +10,9 @@ import TopOfPage from "../TopOfPage/TopOfPage";
 import SubjectCards from "components/DisplayWrappers/SubjectCards/SubjectCards";
 import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
 import LoadMore from "components/Primitive/SubjectCard/LoadMore";
-import { useUser } from "CustomHooks/user";
 
+import { useUser } from "CustomHooks/user";
+import { useSearch } from "CustomHooks/useSearch";
 const FeedMainPageContentWrapper = ({
   pageTitle,
   profileType,
@@ -33,6 +34,8 @@ const FeedMainPageContentWrapper = ({
     loading
   } = useSubject();
 
+  const { shouldSearch, updateShouldSearch, searchTerm } = useSearch();
+
   const updateSortOrderState = newValue => {
     window.log(`new filter state: ${newValue}`);
     setSubjectCardData([]);
@@ -43,28 +46,50 @@ const FeedMainPageContentWrapper = ({
   const { user } = useUser();
   const userId = user && user.id;
 
-  const queryConstructor = (pageFilter, sortOrder, nextToken) => {
-    const causeOnlyFilter = { type: { eq: "cause" } };
-    const postOnlyFilter = { type: { eq: "post" } };
-    const myAllFilter = {
-      createdBy: {
-        eq: userId
+  const queryConstructor = (pageFilter, sortOrder, nextToken, searchTerm) => {
+    const titleSearchObject = searchTerm ? { contains: searchTerm } : null;
+
+    const causeOnlyFilter = Object.assign(
+      {},
+      {
+        type: { eq: "cause" },
+        title: titleSearchObject
       }
-    };
-    const myCausesFilter = {
-      createdBy: {
-        eq: userId
-      },
-      type: {
-        eq: "cause"
+    );
+
+    const postOnlyFilter = Object.assign(
+      {},
+      {
+        type: { eq: "post" },
+        title: titleSearchObject
       }
-    };
-    const myPostsFilter = {
-      createdBy: { eq: userId },
-      type: {
-        eq: "post"
+    );
+
+    const myAllFilter = Object.assign(
+      {},
+      {
+        createdBy: { eq: userId },
+        title: titleSearchObject
       }
-    };
+    );
+
+    const myCausesFilter = Object.assign(
+      {},
+      {
+        createdBy: { eq: userId },
+        type: { eq: "cause" },
+        title: titleSearchObject
+      }
+    );
+
+    const myPostsFilter = Object.assign(
+      {},
+      {
+        createdBy: { eq: userId },
+        type: { eq: "post" },
+        title: titleSearchObject
+      }
+    );
 
     window.log(`nextToken passed to queryConstructor: ${nextToken}`);
 
@@ -138,6 +163,7 @@ const FeedMainPageContentWrapper = ({
     }
   };
 
+  //Get subjects on mount, or when the sortOrder changes
   useEffect(() => {
     let isMounted = true;
 
@@ -165,7 +191,35 @@ const FeedMainPageContentWrapper = ({
     };
   }, [sortOrderState]);
 
-  //maybe another useEffect to watch the sortOrderState?
+  //Search when the user hits enter in the search bar
+  useEffect(() => {
+    if (!shouldSearch) {
+      window.log(`Should search was false, aborting`);
+      return;
+    }
+    (async function searchSubjects() {
+      try {
+        if (shouldSearch) {
+          setSubjectCardData([]);
+          setNextToken(null);
+          const data = await queryConstructor(
+            pageFilter,
+            sortOrderState,
+            nextToken,
+            searchTerm
+          );
+          const subjects = data.subjects;
+          const token = data.nextToken;
+          setSubjectCardData(subjects);
+          window.log(`newSubjects array: ${JSON.stringify(subjectCardData)}`);
+          setNextToken(token);
+          updateShouldSearch(false);
+        }
+      } catch (error) {
+        window.log(`Error searching on submit in search bar: ${error}`);
+      }
+    })();
+  }, [shouldSearch]);
 
   const getMoreSubjects = async nextToken => {
     window.log(`Getting more subjects with nextToken: ${nextToken}`);

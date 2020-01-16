@@ -345,7 +345,7 @@ export const UserProvider = ({ children }) => {
   };
 
   //Make sure not to force a re-render of components that are reading these values,
-  // unless the user value has changed. This is for optimisation purposes.
+  // unless the user, error, or loading values have changed. This is for optimisation purposes.
   const values = useMemo(
     () => ({
       user,

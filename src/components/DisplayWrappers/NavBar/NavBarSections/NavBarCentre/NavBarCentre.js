@@ -1,23 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import SearchBar from "../../../../Primitive/NavBar/SearchBar";
 
-const Wrapper = ({ placeholder, ...props }) => {
-  const submit = event => {
-    window.log(`PRINT HIT`);
-    event.preventDefault();
-  };
+import { useSearch } from "CustomHooks/useSearch";
 
-  const onChange = event => {
-    const searchText = event.target.value;
-    window.log(`searchText ${searchText}`);
+const Wrapper = ({ placeholder, ...props }) => {
+  const { updateSearchText, updateShouldSearch, searchText } = useSearch();
+
+  const submit = event => {
+    window.log("Submitted search");
+    event.preventDefault();
+    updateShouldSearch(true);
   };
 
   return (
     <div {...props}>
       <form onSubmit={event => submit(event)}>
-        <SearchBar placeholder={placeholder} type="text" onChange={onChange} />
+        <SearchBar
+          placeholder={placeholder}
+          type="text"
+          onChange={event => updateSearchText(event.target.value)}
+        />
       </form>
     </div>
   );

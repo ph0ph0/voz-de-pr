@@ -121,7 +121,7 @@ export const useSubject = () => {
   } = {}) => {
     setLoading(true);
     try {
-      window.log(`FILTER passed through: ${JSON.stringify(filter)}`);
+      window.log(`FILTER passed to useSubject: ${JSON.stringify(filter)}`);
       window.log(`nextToken passed to useSubject: ${nextToken}`);
       const allSubjectData = await API.graphql({
         query: getSubjectsByCreatedAt,
