@@ -6,7 +6,7 @@ import SearchBar from "../../../../Primitive/NavBar/SearchBar";
 import { useSearch } from "CustomHooks/useSearch";
 
 const Wrapper = ({ placeholder, ...props }) => {
-  const { updateSearchText, updateShouldSearch, searchText } = useSearch();
+  const { updateSearchText, updateShouldSearch, searchBarText } = useSearch();
 
   const submit = event => {
     window.log("Submitted search");
@@ -20,6 +20,7 @@ const Wrapper = ({ placeholder, ...props }) => {
         <SearchBar
           placeholder={placeholder}
           type="text"
+          value={searchBarText}
           onChange={event => updateSearchText(event.target.value)}
         />
       </form>

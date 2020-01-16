@@ -91,7 +91,7 @@ const FeedMainPageContentWrapper = ({
       }
     );
 
-    window.log(`nextToken passed to queryConstructor: ${nextToken}`);
+    // window.log(`nextToken passed to queryConstructor: ${nextToken}`);
 
     switch (true) {
       case sortOrder === "all" && pageFilter === "CauseOnly":
@@ -211,7 +211,7 @@ const FeedMainPageContentWrapper = ({
           const subjects = data.subjects;
           const token = data.nextToken;
           setSubjectCardData(subjects);
-          window.log(`newSubjects array: ${JSON.stringify(subjectCardData)}`);
+          // window.log(`newSubjects array: ${JSON.stringify(subjectCardData)}`);
           setNextToken(token);
           updateShouldSearch(false);
         }

@@ -7,30 +7,46 @@ export const SearchProvider = ({ children }) => {
   const [searchTerm, setSearchTerm] = useState(null);
   const [shouldSearch, setShouldSearch] = useState(false);
 
-  const updateSearchText = searchText => {
-    window.log(`Updating search text: ${searchText}`);
-    setSearchBarText(searchText);
-    if (searchText === "") {
+  const updateSearchText = inputtedText => {
+    window.log(`Updating search text: ${inputtedText}`);
+    setSearchBarText(inputtedText);
+    if (inputtedText === "") {
+      window.log(
+        "inputted text by user was empty, setting search term to null"
+      );
       setSearchTerm(null);
     } else {
-      if (!shouldSearch) return;
-      const inputText = searchText.toLowerCase();
+      // if (!shouldSearch) {
+      //   window.log(
+      //     `shouldSearch was false in updateSearchText, aborting: ${shouldSearch}`
+      //   );
+      //   return;
+      // }
+      const inputText = inputtedText.toLowerCase();
       setSearchTerm(inputText);
     }
   };
 
   const updateShouldSearch = bool => {
     window.log(`new shouldSearch value: ${bool}`);
+    if (!searchBarText) {
+      window.log(`No search bar text, aborting: ${searchBarText}`);
+      setShouldSearch(false);
+      return;
+    }
     setShouldSearch(bool);
   };
 
-  const values = {
-    searchBarText,
-    searchTerm,
-    shouldSearch,
-    updateSearchText,
-    updateShouldSearch
-  };
+  const values = useMemo(
+    () => ({
+      searchBarText,
+      searchTerm,
+      shouldSearch,
+      updateSearchText,
+      updateShouldSearch
+    }),
+    [shouldSearch, searchBarText, searchTerm]
+  );
 
   return (
     <SearchContext.Provider value={values}>{children}</SearchContext.Provider>
