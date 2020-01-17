@@ -31,8 +31,7 @@ const Routes = props => {
         {user ? <Profile /> : <Redirect to="/signin" />}
       </Route>
       <Route path="/create-cause">
-        {/* {user ? <CreateCause /> : <Redirect to="/signin" />} */}
-        <CreateCause />
+        {user ? <CreateCause /> : <Redirect to="/signin" />}
       </Route>
       <Route path="/create-post">
         {user ? <CreatePost /> : <Redirect to="/signin" />}

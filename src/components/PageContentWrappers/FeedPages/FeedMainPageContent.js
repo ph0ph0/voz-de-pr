@@ -47,7 +47,13 @@ const FeedMainPageContentWrapper = ({
   const { user } = useUser();
   const userId = user && user.id;
 
-  const queryConstructor = (pageFilter, sortOrder, nextToken, searchTerm) => {
+  const queryConstructor = (
+    pageFilter,
+    sortOrder,
+    nextToken,
+    searchTerm,
+    limit
+  ) => {
     const titleSearchObject = searchTerm
       ? { title: { contains: searchTerm } }
       : null;
@@ -106,67 +112,85 @@ const FeedMainPageContentWrapper = ({
         window.log("sO=all, pF=cO");
         return listAllSubjectsOrderedByCreatedAt({
           filter: causeOnlyFilter,
-          nextToken
+          nextToken,
+          limit
         });
       case sortOrder === "all" && pageFilter === "PostOnly":
         window.log("sO=all, pF=pO");
         return listAllSubjectsOrderedByCreatedAt({
           filter: postOnlyFilter,
-          nextToken: nextToken
+          nextToken: nextToken,
+          limit
         });
       case sortOrder === "all" && pageFilter === "Mixed":
         window.log("sO=all, pF=M");
         return listAllSubjectsOrderedByCreatedAt({
           nextToken: nextToken,
-          filter: mainFeedFilter
+          filter: mainFeedFilter,
+          limit
         });
       case sortOrder === "mostVotes" && pageFilter === "CauseOnly":
         window.log("sO=mostVotes, pF=cO");
         return listAllSubjectsOrderedByVotes({
           filter: causeOnlyFilter,
-          nextToken: nextToken
+          nextToken: nextToken,
+          limit
         });
       case sortOrder === "mostVotes" && pageFilter === "PostOnly":
         window.log("sO=mostVotes, pF=pO");
         return listAllSubjectsOrderedByVotes({
           filter: postOnlyFilter,
-          nextToken: nextToken
+          nextToken: nextToken,
+          limit
         });
       case sortOrder === "mostVotes" && pageFilter === "Mixed":
         window.log("sO=mostVotes, pF=M");
-        return listAllSubjectsOrderedByVotes({ nextToken: nextToken });
+        return listAllSubjectsOrderedByVotes({
+          nextToken: nextToken,
+          filter: mainFeedFilter,
+          limit
+        });
       case sortOrder === "mostComments" && pageFilter === "CauseOnly":
         window.log("sO=mostComments, pF=cO");
         return listAllSubjectsOrderedByComments({
           filter: causeOnlyFilter,
-          nextToken: nextToken
+          nextToken: nextToken,
+          limit
         });
       case sortOrder === "mostComments" && pageFilter === "PostOnly":
         window.log("sO=mostComments, pF=pO");
         return listAllSubjectsOrderedByComments({
           filter: postOnlyFilter,
-          nextToken: nextToken
+          nextToken: nextToken,
+          limit
         });
       case sortOrder === "mostComments" && pageFilter === "Mixed":
         window.log("sO=mostComments, pF=M");
-        return listAllSubjectsOrderedByComments({ nextToken: nextToken });
+        return listAllSubjectsOrderedByComments({
+          nextToken: nextToken,
+          filter: mainFeedFilter,
+          limit
+        });
       case sortOrder === "all" && pageFilter === "Profile":
         window.log("sO=myAll, pF=Prof");
         return listAllSubjectsOrderedByCreatedAt({
           filter: myAllFilter,
-          nextToken: nextToken
+          nextToken: nextToken,
+          limit
         });
       case sortOrder === "myCauses" && pageFilter === "Profile":
         window.log("sO=myCauses, pF=Prof");
         return listAllSubjectsOrderedByCreatedAt({
           filter: myCausesFilter,
-          nextToken: nextToken
+          nextToken: nextToken,
+          limit
         });
       case sortOrder === "myPosts" && pageFilter === "Profile":
         window.log("sO=myPosts, pF=Prof");
         return listAllSubjectsOrderedByCreatedAt({
           filter: myPostsFilter,
-          nextToken: nextToken
+          nextToken: nextToken,
+          limit
         });
       default:
         window.log("default sO=all, pF=M");
@@ -204,42 +228,42 @@ const FeedMainPageContentWrapper = ({
     };
   }, [sortOrderState]);
 
-  //Search when the user hits enter in the search bar
-  // window.log(`***nextToken in compo: ${nextToken}`);
-
-  //Null nextToken when search initiated
-  // useEffect(() => {
-
-  // }, [shouldSearch]);
-
+  //Search useEffect
   useEffect(() => {
-    window.log(`nextToken is not null: ${!!nextToken}`);
+    window.log(`nextToken?: ${!!nextToken}`);
 
     let isMounted = true;
 
-    window.log(`search was initiated: ${shouldSearch}`);
-    setNextToken(null);
+    //First null the nextToken, as we dont want to send this with the search query
+    //By nulling it, this useEffect will be called again, as it watches nextToken
+    if (shouldSearch) {
+      window.log("nulling token in useEffect");
+      setNextToken(null);
+    }
 
+    //When called the second time, shouldSearch will be true, nextToken will be null
     if (shouldSearch && nextToken == null) {
       window.log("Starting search...");
       (async function searchSubjects() {
         try {
           if (shouldSearch) {
             window.log("searching subjects...");
-            window.log(`Next token after nulling in search: ${nextToken}`);
+
+            //Set a high limit, as limit applied before filter in dDB (see dev notes)
+            const limit = 100000;
+
             if (!isMounted) return;
             const data = await queryConstructor(
               pageFilter,
               sortOrderState,
               nextToken,
-              searchTerm
+              searchTerm,
+              limit
             );
             const subjects = data.subjects;
             const token = data.nextToken;
-            setSubjectCardData(() => [...subjects]);
-            // window.log(`newSubjects array: ${JSON.stringify(subjectCardData)}`);
-            setNextToken(() => token);
-            window.log(`NEXT TOKEN: ${nextToken}`);
+            setSubjectCardData(subjects);
+            setNextToken(token);
             updateShouldSearch(false);
           }
         } catch (error) {
@@ -248,10 +272,7 @@ const FeedMainPageContentWrapper = ({
       })();
     }
     return () => (isMounted = false);
-  }, [shouldSearch, nextToken]);
-
-  // window.log(`&&&&Should search in fucking comp: ${shouldSearch}`);
-  // window.log(`&&&&next token in fucking comp: ${!!nextToken}`);
+  }, [nextToken, shouldSearch]);
 
   const getMoreSubjects = async nextToken => {
     window.log(`Getting MORE subjects with nextToken: ${nextToken}`);

@@ -108,11 +108,6 @@ export const useSubject = () => {
     }
   };
 
-  function myFor({ start = 5, end = 1, step = -1 } = {}) {
-    // (A)
-    // Use the variables `start`, `end` and `step` here
-  }
-
   const listAllSubjectsOrderedByCreatedAt = async ({
     limit = 10,
     nextToken = null,
@@ -123,6 +118,7 @@ export const useSubject = () => {
     try {
       window.log(`FILTER passed to useSubject: ${JSON.stringify(filter)}`);
       window.log(`nextToken passed to useSubject: ${nextToken}`);
+      //null the search filter, as it can't have an empty string value
       if (
         Object.entries(filter).length === 0 &&
         filter.constructor === Object
@@ -134,7 +130,7 @@ export const useSubject = () => {
         query: getSubjectsByCreatedAt,
         variables: {
           staticKey: 1,
-          limit: 100,
+          limit: limit,
           nextToken: nextToken,
           sortDirection: sortDirection,
           filter: filter
@@ -149,8 +145,8 @@ export const useSubject = () => {
 
       const allSubjects = allSubjectData.data.getSubjectsByCreatedAt.items;
       const token = allSubjectData.data.getSubjectsByCreatedAt.nextToken;
-      window.log(`****Next token extracted from data: ${token}`);
-      window.log(`ERRYTING: ${JSON.stringify(allSubjectData)}`);
+      window.log(`****Next token extracted from data: ${!!token}`);
+      // window.log(`ERRYTING: ${JSON.stringify(allSubjectData)}`);
 
       return { subjects: allSubjects, nextToken: token };
     } catch (error) {
@@ -170,6 +166,11 @@ export const useSubject = () => {
     filter = null
   } = {}) => {
     setLoading(true);
+    //null the search filter, as it can't have an empty string value
+    if (Object.entries(filter).length === 0 && filter.constructor === Object) {
+      window.log(`Filter was empty, nulling`);
+      filter = null;
+    }
     try {
       const allSubjectData = await API.graphql({
         query: getSubjectsByNoOfVotes,
@@ -205,6 +206,11 @@ export const useSubject = () => {
     filter = null
   } = {}) => {
     setLoading(true);
+    //null the search filter, as it can't have an empty string value
+    if (Object.entries(filter).length === 0 && filter.constructor === Object) {
+      window.log(`Filter was empty, nulling`);
+      filter = null;
+    }
     try {
       const allSubjectData = await API.graphql({
         query: getSubjectsByNoOfComments,
