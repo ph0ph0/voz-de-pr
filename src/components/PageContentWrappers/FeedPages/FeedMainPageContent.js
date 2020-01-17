@@ -35,12 +35,22 @@ const FeedMainPageContentWrapper = ({
     loading
   } = useSubject();
 
-  const { shouldSearch, updateShouldSearch, searchTerm } = useSearch();
+  const {
+    shouldSearch,
+    updateShouldSearch,
+    searchTerm,
+    updateSearchText
+  } = useSearch();
 
   const updateSortOrderState = newValue => {
     window.log(`new filter state: ${newValue}`);
+    if (newValue === sortOrderState) {
+      window.log("sortOrderState was the same, aborting");
+      return;
+    }
     setSubjectCardData([]);
-    setNextToken(() => null);
+    setNextToken(null);
+    updateSearchText("");
     setSortOrderState(newValue);
   };
 
@@ -235,10 +245,12 @@ const FeedMainPageContentWrapper = ({
     let isMounted = true;
 
     //First null the nextToken, as we dont want to send this with the search query
-    //By nulling it, this useEffect will be called again, as it watches nextToken
+    //By nulling it, this useEffect will be called again, as it watches nextToken.
+    //Also null subjects
     if (shouldSearch) {
       window.log("nulling token in useEffect");
       setNextToken(null);
+      setSubjectCardData([]);
     }
 
     //When called the second time, shouldSearch will be true, nextToken will be null
