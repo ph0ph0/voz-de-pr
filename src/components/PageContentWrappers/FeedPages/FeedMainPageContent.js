@@ -23,6 +23,7 @@ const FeedMainPageContentWrapper = ({
 
   const [subjectCardData, setSubjectCardData] = useState([]);
   const [nextToken, setNextToken] = useState(null);
+  const [data, setData] = useState([]);
 
   //Can be all, mostVotes, mostComments, myCauses, myPosts, myAll
   const [sortOrderState, setSortOrderState] = useState("all");
@@ -39,7 +40,7 @@ const FeedMainPageContentWrapper = ({
   const updateSortOrderState = newValue => {
     window.log(`new filter state: ${newValue}`);
     setSubjectCardData([]);
-    setNextToken(null);
+    setNextToken(() => null);
     setSortOrderState(newValue);
   };
 
@@ -47,7 +48,14 @@ const FeedMainPageContentWrapper = ({
   const userId = user && user.id;
 
   const queryConstructor = (pageFilter, sortOrder, nextToken, searchTerm) => {
-    const titleSearchObject = searchTerm ? { contains: searchTerm } : null;
+    const titleSearchObject = searchTerm
+      ? { title: { contains: searchTerm } }
+      : null;
+
+    const mainFeedFilter = Object.assign(
+      {},
+      titleSearchObject ? titleSearchObject : null
+    );
 
     const causeOnlyFilter = Object.assign(
       {},
@@ -91,7 +99,7 @@ const FeedMainPageContentWrapper = ({
       }
     );
 
-    // window.log(`nextToken passed to queryConstructor: ${nextToken}`);
+    window.log(`nextToken passed to queryConstructor: ${nextToken}`);
 
     switch (true) {
       case sortOrder === "all" && pageFilter === "CauseOnly":
@@ -108,7 +116,10 @@ const FeedMainPageContentWrapper = ({
         });
       case sortOrder === "all" && pageFilter === "Mixed":
         window.log("sO=all, pF=M");
-        return listAllSubjectsOrderedByCreatedAt({ nextToken: nextToken });
+        return listAllSubjectsOrderedByCreatedAt({
+          nextToken: nextToken,
+          filter: mainFeedFilter
+        });
       case sortOrder === "mostVotes" && pageFilter === "CauseOnly":
         window.log("sO=mostVotes, pF=cO");
         return listAllSubjectsOrderedByVotes({
@@ -167,6 +178,8 @@ const FeedMainPageContentWrapper = ({
   useEffect(() => {
     let isMounted = true;
 
+    window.log("Getting subjects on mount or when sO changes");
+
     (async function getAllSubjects() {
       window.log(`********PAGE FILTER: ${pageFilter}`);
       window.log(`********sortOrderState: ${sortOrderState}`);
@@ -181,7 +194,7 @@ const FeedMainPageContentWrapper = ({
           return;
         }
         setSubjectCardData(subjects);
-        setNextToken(nextToken);
+        setNextToken(() => nextToken);
       } catch (error) {
         window.log(`Error getting subjects on mount: ${error}`);
       }
@@ -192,16 +205,27 @@ const FeedMainPageContentWrapper = ({
   }, [sortOrderState]);
 
   //Search when the user hits enter in the search bar
+  // window.log(`***nextToken in compo: ${nextToken}`);
+
   useEffect(() => {
+    window.log(`Searching..., nextToken: ${nextToken}`);
+    let isMounted = true;
     if (!shouldSearch) {
-      window.log(`Should search was false, aborting`);
+      window.log("Should search was false, aborting");
+      return;
+    }
+    setNextToken(() => null);
+    setSubjectCardData([]);
+    if (nextToken !== null) {
+      window.log("nextToken hasn't been nulled yet, aborting");
       return;
     }
     (async function searchSubjects() {
       try {
         if (shouldSearch) {
-          setSubjectCardData([]);
-          setNextToken(null);
+          window.log("searching subjects...");
+          window.log(`Next token after nulling in search: ${nextToken}`);
+          if (!isMounted) return;
           const data = await queryConstructor(
             pageFilter,
             sortOrderState,
@@ -210,19 +234,25 @@ const FeedMainPageContentWrapper = ({
           );
           const subjects = data.subjects;
           const token = data.nextToken;
-          setSubjectCardData(subjects);
+          setData(() => [...subjects]);
           // window.log(`newSubjects array: ${JSON.stringify(subjectCardData)}`);
-          setNextToken(token);
+          setNextToken(() => token);
           updateShouldSearch(false);
         }
       } catch (error) {
         window.log(`Error searching on submit in search bar: ${error}`);
       }
     })();
-  }, [shouldSearch]);
+    return () => (isMounted = false);
+  }, [shouldSearch, nextToken]);
+
+  useEffect(() => {
+    window.log(`Setting sub by data: ${JSON.stringify(data)}`);
+    setSubjectCardData(data);
+  }, [data]);
 
   const getMoreSubjects = async nextToken => {
-    window.log(`Getting more subjects with nextToken: ${nextToken}`);
+    window.log(`Getting MORE subjects with nextToken: ${nextToken}`);
     try {
       const data = await queryConstructor(
         pageFilter,
@@ -233,7 +263,7 @@ const FeedMainPageContentWrapper = ({
       const token = data.nextToken;
       setSubjectCardData(prevState => [...prevState, ...subjects]);
       window.log(`newSubjects array: ${JSON.stringify(subjectCardData)}`);
-      setNextToken(token);
+      setNextToken(() => token);
     } catch (error) {
       window.log(`Error getting more subjects: ${error}`);
     }

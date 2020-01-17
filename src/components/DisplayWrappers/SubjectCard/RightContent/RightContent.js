@@ -9,7 +9,12 @@ import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
 
 import { useSubject } from "CustomHooks/useSubject";
 
-const Wrapper = ({ numberOfVotes, secondary, pictures, ...props }) => {
+const RightContentWrapper = ({
+  numberOfVotes,
+  secondary,
+  pictures,
+  ...props
+}) => {
   const [pictureURL, setPictureURL] = useState(null);
 
   const { getSubjectPicture, loading } = useSubject();
@@ -59,7 +64,7 @@ const Wrapper = ({ numberOfVotes, secondary, pictures, ...props }) => {
   );
 };
 
-const RightContent = styled(Wrapper)`
+const RightContent = styled(RightContentWrapper)`
   /* border: 1px solid rosybrown; */
   width: 50%;
   height: 100%;

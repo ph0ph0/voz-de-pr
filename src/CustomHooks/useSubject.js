@@ -122,7 +122,15 @@ export const useSubject = () => {
     setLoading(true);
     try {
       window.log(`FILTER passed to useSubject: ${JSON.stringify(filter)}`);
-      // window.log(`nextToken passed to useSubject: ${nextToken}`);
+      window.log(`nextToken passed to useSubject: ${nextToken}`);
+      if (
+        Object.entries(filter).length === 0 &&
+        filter.constructor === Object
+      ) {
+        window.log(`Filter was empty, nulling`);
+        filter = null;
+      }
+      window.log(`Filter after nulling: ${JSON.stringify(filter)}`);
       const allSubjectData = await API.graphql({
         query: getSubjectsByCreatedAt,
         variables: {
@@ -134,11 +142,11 @@ export const useSubject = () => {
         },
         authMode: "AWS_IAM"
       });
-      // window.log(
-      //   `****** allSubjects ordered by createdAt: ${JSON.stringify(
-      //     allSubjectData.data.getSubjectsByCreatedAt.items
-      //   )}`
-      // );
+      window.log(
+        `****** allSubjects ordered by createdAt: ${JSON.stringify(
+          allSubjectData.data.getSubjectsByCreatedAt.items
+        )}`
+      );
 
       const allSubjects = allSubjectData.data.getSubjectsByCreatedAt.items;
       const token = allSubjectData.data.getSubjectsByCreatedAt.nextToken;
