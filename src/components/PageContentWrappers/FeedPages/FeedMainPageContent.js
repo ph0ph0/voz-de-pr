@@ -193,7 +193,7 @@ const FeedMainPageContentWrapper = ({
           window.log("Component not mounted, aborting setting subjects");
           return;
         }
-        setSubjectCardData(subjects);
+        setSubjectCardData(() => [...subjects]);
         setNextToken(() => nextToken);
       } catch (error) {
         window.log(`Error getting subjects on mount: ${error}`);
@@ -207,49 +207,51 @@ const FeedMainPageContentWrapper = ({
   //Search when the user hits enter in the search bar
   // window.log(`***nextToken in compo: ${nextToken}`);
 
+  //Null nextToken when search initiated
+  // useEffect(() => {
+
+  // }, [shouldSearch]);
+
   useEffect(() => {
-    window.log(`Searching..., nextToken: ${nextToken}`);
+    window.log(`nextToken is not null: ${!!nextToken}`);
+
     let isMounted = true;
-    if (!shouldSearch) {
-      window.log("Should search was false, aborting");
-      return;
-    }
-    setNextToken(() => null);
-    setSubjectCardData([]);
-    if (nextToken !== null) {
-      window.log("nextToken hasn't been nulled yet, aborting");
-      return;
-    }
-    (async function searchSubjects() {
-      try {
-        if (shouldSearch) {
-          window.log("searching subjects...");
-          window.log(`Next token after nulling in search: ${nextToken}`);
-          if (!isMounted) return;
-          const data = await queryConstructor(
-            pageFilter,
-            sortOrderState,
-            nextToken,
-            searchTerm
-          );
-          const subjects = data.subjects;
-          const token = data.nextToken;
-          setData(() => [...subjects]);
-          // window.log(`newSubjects array: ${JSON.stringify(subjectCardData)}`);
-          setNextToken(() => token);
-          updateShouldSearch(false);
+
+    window.log(`search was initiated: ${shouldSearch}`);
+    setNextToken(null);
+
+    if (shouldSearch && nextToken == null) {
+      window.log("Starting search...");
+      (async function searchSubjects() {
+        try {
+          if (shouldSearch) {
+            window.log("searching subjects...");
+            window.log(`Next token after nulling in search: ${nextToken}`);
+            if (!isMounted) return;
+            const data = await queryConstructor(
+              pageFilter,
+              sortOrderState,
+              nextToken,
+              searchTerm
+            );
+            const subjects = data.subjects;
+            const token = data.nextToken;
+            setSubjectCardData(() => [...subjects]);
+            // window.log(`newSubjects array: ${JSON.stringify(subjectCardData)}`);
+            setNextToken(() => token);
+            window.log(`NEXT TOKEN: ${nextToken}`);
+            updateShouldSearch(false);
+          }
+        } catch (error) {
+          window.log(`Error searching on submit in search bar: ${error}`);
         }
-      } catch (error) {
-        window.log(`Error searching on submit in search bar: ${error}`);
-      }
-    })();
+      })();
+    }
     return () => (isMounted = false);
   }, [shouldSearch, nextToken]);
 
-  useEffect(() => {
-    window.log(`Setting sub by data: ${JSON.stringify(data)}`);
-    setSubjectCardData(data);
-  }, [data]);
+  // window.log(`&&&&Should search in fucking comp: ${shouldSearch}`);
+  // window.log(`&&&&next token in fucking comp: ${!!nextToken}`);
 
   const getMoreSubjects = async nextToken => {
     window.log(`Getting MORE subjects with nextToken: ${nextToken}`);
@@ -279,7 +281,11 @@ const FeedMainPageContentWrapper = ({
       >
         {pageTitle}
       </TopOfPage>
-      <SubjectCards arrayOfSubjectCardData={subjectCardData} />
+      {subjectCardData.length === 0 && !loading ? (
+        <p>subjectCardData is empty</p>
+      ) : (
+        <SubjectCards arrayOfSubjectCardData={subjectCardData} />
+      )}
       {loading && <LoadingSpinner colour="#1B4EA0" center={true} />}
       {nextToken && (
         <LoadMore onClick={() => getMoreSubjects(nextToken)}>

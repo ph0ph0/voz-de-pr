@@ -16,24 +16,15 @@ export const SearchProvider = ({ children }) => {
       );
       setSearchTerm(null);
     } else {
-      // if (!shouldSearch) {
-      //   window.log(
-      //     `shouldSearch was false in updateSearchText, aborting: ${shouldSearch}`
-      //   );
-      //   return;
-      // }
-      const inputText = inputtedText.toLowerCase();
+      //MAKE THE input text lowercase when we have added the search property to the Subject
+      //const inputText = inputtedText.toLowercase()
+      const inputText = inputtedText;
       setSearchTerm(inputText);
     }
   };
 
   const updateShouldSearch = bool => {
     window.log(`new shouldSearch value: ${bool}`);
-    if (!searchBarText) {
-      window.log(`No search bar text, aborting: ${searchBarText}`);
-      setShouldSearch(false);
-      return;
-    }
     setShouldSearch(bool);
   };
 

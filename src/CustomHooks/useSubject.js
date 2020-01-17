@@ -130,12 +130,11 @@ export const useSubject = () => {
         window.log(`Filter was empty, nulling`);
         filter = null;
       }
-      window.log(`Filter after nulling: ${JSON.stringify(filter)}`);
       const allSubjectData = await API.graphql({
         query: getSubjectsByCreatedAt,
         variables: {
           staticKey: 1,
-          limit: limit,
+          limit: 100,
           nextToken: nextToken,
           sortDirection: sortDirection,
           filter: filter
@@ -150,7 +149,8 @@ export const useSubject = () => {
 
       const allSubjects = allSubjectData.data.getSubjectsByCreatedAt.items;
       const token = allSubjectData.data.getSubjectsByCreatedAt.nextToken;
-      // window.log(`****Next token extracted from data: ${token}`);
+      window.log(`****Next token extracted from data: ${token}`);
+      window.log(`ERRYTING: ${JSON.stringify(allSubjectData)}`);
 
       return { subjects: allSubjects, nextToken: token };
     } catch (error) {
@@ -182,10 +182,6 @@ export const useSubject = () => {
         },
         authMode: "AWS_IAM"
       });
-      window
-        .log
-        // `****** allSubjects ordered by votes: ${JSON.stringify(allSubjectData)}`
-        ();
 
       const allSubjects = allSubjectData.data.getSubjectsByNoOfVotes.items;
       const token = allSubjectData.data.getSubjectsByNoOfVotes.nextToken;
