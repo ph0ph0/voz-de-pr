@@ -30,7 +30,6 @@ export const SearchProvider = ({ children }) => {
 
   const values = useMemo(
     () => ({
-      updateSearchText,
       searchBarText,
       searchTerm,
       shouldSearch,

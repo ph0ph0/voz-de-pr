@@ -123,6 +123,7 @@ export const useSubject = () => {
       window.log(`nextToken passed to useSubject: ${nextToken}`);
       //null the search filter and remove null values, as it can't have an empty string value
       let strippedFilter = filterStripper(filter);
+      window.log(`strippedFilter passed to orderByComments: ${strippedFilter}`);
 
       const allSubjectData = await API.graphql({
         query: getSubjectsByCreatedAt,
@@ -167,6 +168,7 @@ export const useSubject = () => {
     setLoading(true);
     //null the search filter and remove null values, as it can't have an empty string value
     const strippedFilter = filterStripper(filter);
+    window.log(`strippedFilter passed to orderByComments: ${strippedFilter}`);
     try {
       const allSubjectData = await API.graphql({
         query: getSubjectsByNoOfVotes,
@@ -204,6 +206,7 @@ export const useSubject = () => {
     setLoading(true);
     //null the search filter and remove null values, as it can't have an empty string value
     const strippedFilter = filterStripper(filter);
+    window.log(`strippedFilter passed to orderByComments: ${strippedFilter}`);
     try {
       const allSubjectData = await API.graphql({
         query: getSubjectsByNoOfComments,

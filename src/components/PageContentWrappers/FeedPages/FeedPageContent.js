@@ -8,7 +8,20 @@ import MainPageContent from "./FeedMainPageContent";
 import SidePanel from "components/DisplayWrappers/SidePanel/SidePanel";
 import SidePanelProfile from "components/DisplayWrappers/SidePanel_Profile/SidePanel_Profile";
 
+import FeedMainPageContentAPI from "./API/FeedMainPageContentAPI";
+import useAPI from "CustomHooks/useAPI";
+
 const PageContentWrapper = ({ pageType, profileType, ...props }) => {
+  window.log(`@@@@@Loading fPCW`);
+  const api = useAPI(FeedMainPageContentAPI, {
+    subjectCardData: [],
+    sortOrderState: "all",
+    nextToken: null
+  });
+  window.log(
+    `@@@@@@@@@After useAPI, sCD, nT, sOS: ${api.subjectCardData}, ${api.nextToken}, ${api.sortOrderState}`
+  );
+
   switch (pageType) {
     case "Home":
       return (
@@ -17,6 +30,7 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
             pageTitle={"Home Feed"}
             profileType={profileType}
             pageFilter={"Mixed"}
+            api={api}
           />
           <SidePanel type={"Standard"} />
         </div>
@@ -28,6 +42,7 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
             pageTitle={"Cause Lobby"}
             profileType={profileType}
             pageFilter={"CauseOnly"}
+            api={api}
           />
           <SidePanel type={"CauseOnly"} />
         </div>
@@ -39,6 +54,7 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
             pageTitle={"Posts Lobby"}
             profileType={profileType}
             pageFilter={"PostOnly"}
+            api={api}
           />
           <SidePanel type={"PostOnly"} />
         </div>
@@ -50,6 +66,7 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
             pageTitle={"My Profile"}
             profileType={profileType}
             pageFilter={"Profile"}
+            api={api}
           />
           <SidePanelProfile />
         </div>
@@ -57,7 +74,11 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
     default:
       return (
         <div {...props}>
-          <MainPageContent pageTitle={"Home Feed"} profileType={profileType} />
+          <MainPageContent
+            pageTitle={"Home Feed"}
+            profileType={profileType}
+            api={api}
+          />
           <SidePanel type={"Standard"} />
         </div>
       );

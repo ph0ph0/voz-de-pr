@@ -14,6 +14,9 @@ const SubjectCardsWrapper = ({
 
   const onClick = index => {
     window.log(`clicked card with index: ${index}`);
+    window.log(
+      `())()(()())()(()())SubjectCards data passed in: ${arrayOfSubjectCardData}`
+    );
 
     const subject = arrayOfSubjectCardData[index];
     const subjectID = subject.id;
@@ -26,22 +29,23 @@ const SubjectCardsWrapper = ({
 
   return (
     <div {...props}>
-      {arrayOfSubjectCardData.map(subject => (
-        <SubjectCard
-          key={subject.id}
-          author={subject.author}
-          createdBy={subject.createdBy}
-          createdAt={subject.createdAt}
-          owner={subject.owner}
-          title={subject.title}
-          subjectContent={subject.subjectContent}
-          numberOfComments={subject.numberOfComments}
-          numberOfVotes={subject.votes}
-          secondary={subject.type === "post" ? true : false}
-          pictures={subject.pictures}
-          onClick={() => onClick(subject.id)}
-        />
-      ))}
+      {arrayOfSubjectCardData &&
+        arrayOfSubjectCardData.map(subject => (
+          <SubjectCard
+            key={subject.id}
+            author={subject.author}
+            createdBy={subject.createdBy}
+            createdAt={subject.createdAt}
+            owner={subject.owner}
+            title={subject.title}
+            subjectContent={subject.subjectContent}
+            numberOfComments={subject.numberOfComments}
+            numberOfVotes={subject.votes}
+            secondary={subject.type === "post" ? true : false}
+            pictures={subject.pictures}
+            onClick={() => onClick(subject.id)}
+          />
+        ))}
     </div>
   );
 };
