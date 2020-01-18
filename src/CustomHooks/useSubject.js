@@ -9,6 +9,9 @@ import {
   getSubjectsByNoOfVotes,
   getSubjectsByNoOfComments
 } from "graphql-custom/queries";
+
+import { filterStripper } from "./UseSubjectUtils/FilterStripper";
+
 import uuidv4 from "uuid/v4";
 
 export const useSubject = () => {
@@ -119,17 +122,8 @@ export const useSubject = () => {
       window.log(`FILTER passed to useSubject: ${JSON.stringify(filter)}`);
       window.log(`nextToken passed to useSubject: ${nextToken}`);
       //null the search filter and remove null values, as it can't have an empty string value
-      let strippedFilter = Object.entries(filter).reduce(
-        (acc, [k, v]) => (v == null ? acc : { ...acc, [k]: v }),
-        {}
-      );
-      if (
-        Object.entries(strippedFilter).length === 0 &&
-        strippedFilter.constructor === Object
-      ) {
-        window.log(`Filter was empty, nulling`);
-        strippedFilter = null;
-      }
+      let strippedFilter = filterStripper(filter);
+
       const allSubjectData = await API.graphql({
         query: getSubjectsByCreatedAt,
         variables: {
@@ -172,17 +166,7 @@ export const useSubject = () => {
   } = {}) => {
     setLoading(true);
     //null the search filter and remove null values, as it can't have an empty string value
-    let strippedFilter = Object.entries(filter).reduce(
-      (acc, [k, v]) => (v == null ? acc : { ...acc, [k]: v }),
-      {}
-    );
-    if (
-      Object.entries(strippedFilter).length === 0 &&
-      strippedFilter.constructor === Object
-    ) {
-      window.log(`Filter was empty, nulling`);
-      strippedFilter = null;
-    }
+    const strippedFilter = filterStripper(filter);
     try {
       const allSubjectData = await API.graphql({
         query: getSubjectsByNoOfVotes,
@@ -219,17 +203,7 @@ export const useSubject = () => {
   } = {}) => {
     setLoading(true);
     //null the search filter and remove null values, as it can't have an empty string value
-    let strippedFilter = Object.entries(filter).reduce(
-      (acc, [k, v]) => (v == null ? acc : { ...acc, [k]: v }),
-      {}
-    );
-    if (
-      Object.entries(strippedFilter).length === 0 &&
-      strippedFilter.constructor === Object
-    ) {
-      window.log(`Filter was empty, nulling`);
-      strippedFilter = null;
-    }
+    const strippedFilter = filterStripper(filter);
     try {
       const allSubjectData = await API.graphql({
         query: getSubjectsByNoOfComments,

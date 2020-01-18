@@ -23,7 +23,6 @@ const FeedMainPageContentWrapper = ({
 
   const [subjectCardData, setSubjectCardData] = useState([]);
   const [nextToken, setNextToken] = useState(null);
-  const [data, setData] = useState([]);
 
   //Can be all, mostVotes, mostComments, myCauses, myPosts, myAll
   const [sortOrderState, setSortOrderState] = useState("all");
