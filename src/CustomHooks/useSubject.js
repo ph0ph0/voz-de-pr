@@ -118,13 +118,17 @@ export const useSubject = () => {
     try {
       window.log(`FILTER passed to useSubject: ${JSON.stringify(filter)}`);
       window.log(`nextToken passed to useSubject: ${nextToken}`);
-      //null the search filter, as it can't have an empty string value
+      //null the search filter and remove null values, as it can't have an empty string value
+      let strippedFilter = Object.entries(filter).reduce(
+        (acc, [k, v]) => (v == null ? acc : { ...acc, [k]: v }),
+        {}
+      );
       if (
-        Object.entries(filter).length === 0 &&
-        filter.constructor === Object
+        Object.entries(strippedFilter).length === 0 &&
+        strippedFilter.constructor === Object
       ) {
         window.log(`Filter was empty, nulling`);
-        filter = null;
+        strippedFilter = null;
       }
       const allSubjectData = await API.graphql({
         query: getSubjectsByCreatedAt,
@@ -133,7 +137,7 @@ export const useSubject = () => {
           limit: limit,
           nextToken: nextToken,
           sortDirection: sortDirection,
-          filter: filter
+          filter: strippedFilter
         },
         authMode: "AWS_IAM"
       });
@@ -153,6 +157,7 @@ export const useSubject = () => {
       window.log(
         `Error getting subjects orderd by createdAt: ${JSON.stringify(error)}`
       );
+      window.log(`Other error: ${error}`);
       throw error;
     } finally {
       setLoading(false);
@@ -166,10 +171,17 @@ export const useSubject = () => {
     filter = null
   } = {}) => {
     setLoading(true);
-    //null the search filter, as it can't have an empty string value
-    if (Object.entries(filter).length === 0 && filter.constructor === Object) {
+    //null the search filter and remove null values, as it can't have an empty string value
+    let strippedFilter = Object.entries(filter).reduce(
+      (acc, [k, v]) => (v == null ? acc : { ...acc, [k]: v }),
+      {}
+    );
+    if (
+      Object.entries(strippedFilter).length === 0 &&
+      strippedFilter.constructor === Object
+    ) {
       window.log(`Filter was empty, nulling`);
-      filter = null;
+      strippedFilter = null;
     }
     try {
       const allSubjectData = await API.graphql({
@@ -179,7 +191,7 @@ export const useSubject = () => {
           limit: limit,
           nextToken: nextToken,
           sortDirection: sortDirection,
-          filter: filter
+          filter: strippedFilter
         },
         authMode: "AWS_IAM"
       });
@@ -206,10 +218,17 @@ export const useSubject = () => {
     filter = null
   } = {}) => {
     setLoading(true);
-    //null the search filter, as it can't have an empty string value
-    if (Object.entries(filter).length === 0 && filter.constructor === Object) {
+    //null the search filter and remove null values, as it can't have an empty string value
+    let strippedFilter = Object.entries(filter).reduce(
+      (acc, [k, v]) => (v == null ? acc : { ...acc, [k]: v }),
+      {}
+    );
+    if (
+      Object.entries(strippedFilter).length === 0 &&
+      strippedFilter.constructor === Object
+    ) {
       window.log(`Filter was empty, nulling`);
-      filter = null;
+      strippedFilter = null;
     }
     try {
       const allSubjectData = await API.graphql({
@@ -219,7 +238,7 @@ export const useSubject = () => {
           limit: limit,
           nextToken: nextToken,
           sortDirection: sortDirection,
-          filter: filter
+          filter: strippedFilter
         },
         authMode: "AWS_IAM"
       });
