@@ -67,6 +67,7 @@ type Subject
   author: String
   title: String!
   subjectContent: String!
+  searchField: String
   pictures: [Picture] @connection(keyName: "picturesBySubject", fields: ["id"])
   comments: [Comment] @connection(keyName: "commentsBySubject", fields: ["id"])
   timePassedSinceCreation: String

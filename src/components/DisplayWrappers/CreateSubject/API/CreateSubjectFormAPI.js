@@ -140,13 +140,18 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
 
     const subjectType = secondary ? "post" : "cause";
 
-    // const sT = "TEST_TITLE";
-    // const sC = "TEST_CONTENT";
+    //Create the searchField value
+    const searchField = subjectTitle
+      .concat(subjectContent)
+      .trim()
+      .replace(/ /g, "")
+      .toLowerCase();
 
     const subjectObject = {
       createdBy: user.id,
       author: user.username,
       title: subjectTitle,
+      searchField: searchField,
       subjectContent: subjectContent,
       numberOfComments: 0,
       votes: 0,

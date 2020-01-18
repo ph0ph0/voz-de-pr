@@ -313,7 +313,7 @@ const FeedMainPageContentWrapper = ({
         {pageTitle}
       </TopOfPage>
       {subjectCardData.length === 0 && !loading ? (
-        <p>subjectCardData is empty</p>
+        <NoResults>No results found...</NoResults>
       ) : (
         <SubjectCards arrayOfSubjectCardData={subjectCardData} />
       )}
@@ -326,6 +326,13 @@ const FeedMainPageContentWrapper = ({
     </div>
   );
 };
+
+const NoResults = styled.p`
+  margin-left: auto;
+  margin-right: auto;
+  color: #919191;
+  font-size: 16px;
+`;
 
 const FeedMainPageContent = styled(FeedMainPageContentWrapper)`
   /* border: 1px solid green; */
