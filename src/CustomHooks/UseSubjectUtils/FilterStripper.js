@@ -13,5 +13,10 @@ export const filterStripper = filter => {
     window.log(`Filter was empty, nulling`);
     strippedFilter = null;
   }
+  window.log(
+    `stripped the filter in FilterStripper.js: ${JSON.stringify(
+      strippedFilter
+    )}`
+  );
   return strippedFilter;
 };

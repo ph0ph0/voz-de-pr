@@ -63,20 +63,19 @@ const FeedMainPageContentWrapper = ({
     searchTerm,
     limit
   ) => {
-    const titleSearchObject = searchTerm
-      ? { title: { contains: searchTerm } }
-      : null;
+    window.log(`Search term passed to queryConstructor: ${searchTerm}`);
+    const titleSearchObject = searchTerm ? { contains: searchTerm } : null;
 
     const mainFeedFilter = Object.assign(
       {},
-      titleSearchObject ? titleSearchObject : null
+      { title: titleSearchObject ? titleSearchObject : null }
     );
 
     const causeOnlyFilter = Object.assign(
       {},
       {
         type: { eq: "cause" },
-        title: titleSearchObject
+        title: titleSearchObject ? titleSearchObject : null
       }
     );
 
@@ -84,7 +83,7 @@ const FeedMainPageContentWrapper = ({
       {},
       {
         type: { eq: "post" },
-        title: titleSearchObject
+        title: titleSearchObject ? titleSearchObject : null
       }
     );
 
@@ -92,7 +91,7 @@ const FeedMainPageContentWrapper = ({
       {},
       {
         createdBy: { eq: userId },
-        title: titleSearchObject
+        title: titleSearchObject ? titleSearchObject : null
       }
     );
 
@@ -101,7 +100,7 @@ const FeedMainPageContentWrapper = ({
       {
         createdBy: { eq: userId },
         type: { eq: "cause" },
-        title: titleSearchObject
+        title: titleSearchObject ? titleSearchObject : null
       }
     );
 
@@ -110,7 +109,7 @@ const FeedMainPageContentWrapper = ({
       {
         createdBy: { eq: userId },
         type: { eq: "post" },
-        title: titleSearchObject
+        title: titleSearchObject ? titleSearchObject : null
       }
     );
 
