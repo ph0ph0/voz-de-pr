@@ -64,18 +64,25 @@ const FeedMainPageContentWrapper = ({
     limit
   ) => {
     window.log(`Search term passed to queryConstructor: ${searchTerm}`);
-    const titleSearchObject = searchTerm ? { contains: searchTerm } : null;
+    const searchObject = searchTerm
+      ? {
+          contains: searchTerm
+            .trim()
+            .toLowerCase()
+            .replace(/ /g, "")
+        }
+      : null;
 
     const mainFeedFilter = Object.assign(
       {},
-      { title: titleSearchObject ? titleSearchObject : null }
+      { searchField: searchObject ? searchObject : null }
     );
 
     const causeOnlyFilter = Object.assign(
       {},
       {
         type: { eq: "cause" },
-        title: titleSearchObject ? titleSearchObject : null
+        searchField: searchObject ? searchObject : null
       }
     );
 
@@ -83,7 +90,7 @@ const FeedMainPageContentWrapper = ({
       {},
       {
         type: { eq: "post" },
-        title: titleSearchObject ? titleSearchObject : null
+        searchField: searchObject ? searchObject : null
       }
     );
 
@@ -91,7 +98,7 @@ const FeedMainPageContentWrapper = ({
       {},
       {
         createdBy: { eq: userId },
-        title: titleSearchObject ? titleSearchObject : null
+        searchField: searchObject ? searchObject : null
       }
     );
 
@@ -100,7 +107,7 @@ const FeedMainPageContentWrapper = ({
       {
         createdBy: { eq: userId },
         type: { eq: "cause" },
-        title: titleSearchObject ? titleSearchObject : null
+        searchField: searchObject ? searchObject : null
       }
     );
 
@@ -109,7 +116,7 @@ const FeedMainPageContentWrapper = ({
       {
         createdBy: { eq: userId },
         type: { eq: "post" },
-        title: titleSearchObject ? titleSearchObject : null
+        searchField: searchObject ? searchObject : null
       }
     );
 

@@ -147,11 +147,14 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
       .replace(/ /g, "")
       .toLowerCase();
 
+    const staticKey = 1;
+
     const subjectObject = {
       createdBy: user.id,
       author: user.username,
       title: subjectTitle,
       searchField: searchField,
+      staticKey: staticKey,
       subjectContent: subjectContent,
       numberOfComments: 0,
       votes: 0,

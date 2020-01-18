@@ -78,6 +78,7 @@ export const createSubject = `mutation CreateSubject($input: CreateSubjectInput!
     author
     title
     subjectContent
+    searchField
     timePassedSinceCreation
     numberOfComments
     votes
@@ -120,6 +121,7 @@ export const updateSubject = `mutation UpdateSubject($input: UpdateSubjectInput!
     author
     title
     subjectContent
+    searchField
     timePassedSinceCreation
     numberOfComments
     votes
@@ -162,6 +164,7 @@ export const deleteSubject = `mutation DeleteSubject($input: DeleteSubjectInput!
     author
     title
     subjectContent
+    searchField
     timePassedSinceCreation
     numberOfComments
     votes
