@@ -15,16 +15,14 @@ const Wrapper = ({ placeholder, ...props }) => {
   };
 
   return (
-    <div {...props}>
-      <form onSubmit={event => submit(event)}>
-        <SearchBar
-          placeholder={placeholder}
-          type="text"
-          value={searchBarText}
-          onChange={event => updateSearchText(event.target.value)}
-        />
-      </form>
-    </div>
+    <form onSubmit={event => submit(event)} {...props}>
+      <SearchBar
+        placeholder={placeholder}
+        type="text"
+        value={searchBarText}
+        onChange={event => updateSearchText(event.target.value)}
+      />
+    </form>
   );
 };
 
@@ -35,7 +33,7 @@ const NavBarCentre = styled(Wrapper)`
   flex-shrink: 5;
   flex-basis: 33.33333%;
   /* flex-shrink: 2; */
-  /* width: 33.3333%; */
+  /* width: auto; */
 
   display: flex;
   justify-content: center;
