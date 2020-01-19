@@ -34,7 +34,6 @@ export const SearchProvider = ({ children }) => {
       searchBarText,
       searchTerm,
       shouldSearch,
-      updateSearchText,
       updateShouldSearch
     }),
     [shouldSearch, searchBarText, searchTerm]

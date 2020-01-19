@@ -92,6 +92,16 @@ jest.mock("CustomHooks/useSubject", () => ({
   })
 }));
 
+jest.mock("CustomHooks/useSearch", () => ({
+  useSearch: () => ({
+    updateSearchText: () => {},
+    searchBarText: "",
+    searchTerm: "",
+    shouldSearch: false,
+    updateShouldSearch: () => {}
+  })
+}));
+
 describe("When clicking on the dropdown (InlineContent component)", () => {
   it("if closed, it opens, if open, it closes", async () => {
     const { getByTestId, getByText, debug } = render(

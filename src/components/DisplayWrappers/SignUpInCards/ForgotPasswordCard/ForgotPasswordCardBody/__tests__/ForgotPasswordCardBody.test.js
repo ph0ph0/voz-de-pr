@@ -11,9 +11,9 @@ import "@testing-library/jest-dom/extend-expect";
 
 import ForgotPasswordCardBody from "../ForgotPasswordCardBody";
 import { MemoryRouter as Router } from "react-router-dom";
-import { UserProvider } from "../../../../../../CustomHooks/user";
+import { UserProvider } from "CustomHooks/user";
 import { ThemeProvider } from "styled-components";
-import theme from "../../../../../../theme/Theme";
+import theme from "theme/Theme";
 
 import api from "../../API/ForgotPasswordApi";
 
@@ -23,7 +23,7 @@ import api from "../../API/ForgotPasswordApi";
 //   Auth: { forgotPassword: () => ({ data: {} }) }
 // }));
 
-jest.mock("../../../../../../CustomHooks/user", () => ({
+jest.mock("CustomHooks/user", () => ({
   useUser: () => ({
     error: "Test Error",
     loading: false,
