@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useContext } from "react";
+import React, { useState, useMemo, useContext } from "react";
 
 export const SearchContext = React.createContext(null);
 
@@ -16,8 +16,6 @@ export const SearchProvider = ({ children }) => {
       );
       setSearchTerm(null);
     } else {
-      //MAKE THE input text lowercase when we have added the search property to the Subject
-      //const inputText = inputtedText.toLowercase()
       const inputText = inputtedText;
       setSearchTerm(inputText);
     }
@@ -34,7 +32,6 @@ export const SearchProvider = ({ children }) => {
       searchBarText,
       searchTerm,
       shouldSearch,
-      updateSearchText,
       updateShouldSearch
     }),
     [shouldSearch, searchBarText, searchTerm]
