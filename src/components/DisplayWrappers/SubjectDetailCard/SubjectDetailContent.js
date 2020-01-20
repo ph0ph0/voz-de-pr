@@ -56,6 +56,9 @@ const SubjectDetailContentWrapper = ({ secondary, subject, ...props }) => {
     return () => (isMounted = false);
   }, []);
 
+  const noOfComments =
+    subject.comments && subject.comments.items && subject.comments.items.length;
+
   return (
     <div {...props}>
       <DetailHeader secondary={secondary} subject={subject} />
@@ -64,12 +67,9 @@ const SubjectDetailContentWrapper = ({ secondary, subject, ...props }) => {
         secondary={secondary}
         subjectID={subject.id}
         votesOnSubject={subject.votes}
-        noOfComments={subject.numberOfComments}
+        noOfComments={noOfComments}
       />
-      <DetailBody
-        secondary={secondary}
-        subjectContent={subject.subjectContent}
-      />
+      <DetailBody secondary={secondary} subject={subject} />
       {subject.comments &&
         subject.comments.items &&
         subject.comments.items.length !== 0 && (

@@ -8,29 +8,27 @@ import SubjectSummary from "../../../Primitive/SubjectCard/SubjectSummary";
 import BottomWrapper from "./BottomWrapper";
 
 import { parseTime } from "Utils/TimePassedCalculator";
+import { useUser } from "CustomHooks/user";
 
-const Wrapper = ({
-  author,
-  isOwner,
-  createdAt,
-  createdBy,
-  title,
-  subjectContent,
-  numberOfComments,
-  ...props
-}) => {
-  const timeSinceCreated = parseTime(createdAt);
+const Wrapper = ({ subject, ...props }) => {
+  const timeSinceCreated = parseTime(subject.createdAt);
+  const numberOfComments =
+    subject.comments && subject.comments.items && subject.comments.items.length;
+
+  const { user } = useUser();
+
+  const isOwner = user && user.id === subject.createdBy ? true : false;
 
   return (
     <div {...props}>
       <SubjectCardTopLineWrapper
-        author={author}
+        author={subject.author}
         timePassed={timeSinceCreated}
         isOwner={isOwner}
-        createdBy={createdBy}
+        createdBy={subject.createdBy}
       />
-      <SubjectTitle>{title}</SubjectTitle>
-      <SubjectSummary>{subjectContent}</SubjectSummary>
+      <SubjectTitle>{subject.title}</SubjectTitle>
+      <SubjectSummary>{subject.subjectContent}</SubjectSummary>
       <BottomWrapper numberOfComments={numberOfComments} />
     </div>
   );

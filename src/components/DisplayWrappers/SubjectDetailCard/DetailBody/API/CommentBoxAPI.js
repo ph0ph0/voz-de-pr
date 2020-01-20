@@ -1,18 +1,19 @@
-import { useState } from "react";
-import useComment from "CustomHooks/useComment";
+import { useComment } from "CustomHooks/useComment";
+import { useUser } from "CustomHooks/user";
 
 const CommentBoxAPI = ({ state, setState }) => {
-  const { createComment, loading } = useComment();
-
   const commentText = state.commentText;
   const commentError = state.commentError;
 
+  const { saveComment, loading } = useComment();
+  const { user } = useUser();
+
   const updateCommentText = newValue => {
-    const comment = newValue.trim();
+    window.log(`new comment text: ${newValue}`);
     setState(prevState => {
       return {
         ...prevState,
-        commentText: comment
+        commentText: newValue
       };
     });
   };
@@ -26,9 +27,28 @@ const CommentBoxAPI = ({ state, setState }) => {
     });
   };
 
-  const submitComment = async () => {
+  const submitComment = async subjectId => {
+    window.log("Creating comment...");
+    setState(prevState => {
+      return {
+        ...prevState,
+        commentError: ""
+      };
+    });
+    if (commentText.trim() === "") {
+      window.log("Comment text was empty!");
+      setState(prevState => {
+        return {
+          ...prevState,
+          commentError: "Please add some text to your comment!"
+        };
+      });
+      return;
+    }
     try {
-      await createComment(commentText);
+      const userId = user && user.id;
+      const username = user && user.username;
+      await saveComment(userId, username, commentText, subjectId);
       window.log("Successfully createdComment!");
       resetAll();
     } catch (error) {

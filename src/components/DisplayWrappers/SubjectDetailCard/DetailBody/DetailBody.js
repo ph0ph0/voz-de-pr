@@ -9,19 +9,19 @@ import CommentBox from "./CommentBox";
 
 import { useUser } from "CustomHooks/user.js";
 
-const DetailBodyWrapper = ({ subjectContent, secondary, ...props }) => {
+const DetailBodyWrapper = ({ subject, secondary, ...props }) => {
   const { user } = useUser();
-  window.log(`THIS HERE USER: ${user}`);
+
   const username = user && user.username;
 
   return (
     <div {...props}>
-      <SubjectContent>{subjectContent}</SubjectContent>
+      <SubjectContent>{subject.subjectContent}</SubjectContent>
       <SubjectLink secondary={secondary}>
         http://www.fideicomiso.org/home.html
       </SubjectLink>
       <CommentInfo secondary={secondary} username={username} />
-      <CommentBox secondary={secondary} />
+      <CommentBox secondary={secondary} subject={subject} />
     </div>
   );
 };
