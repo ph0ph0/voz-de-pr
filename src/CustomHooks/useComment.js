@@ -19,6 +19,7 @@ export const useComment = () => {
         graphqlOperation(createComment, { input: commentInput })
       );
       window.log(`Saved comment!: ${JSON.stringify(commentObject)}`);
+      return commentObject;
     } catch (error) {
       window.log(
         `Error creating comment in useComment!: ${JSON.stringify(error)}`

@@ -9,12 +9,7 @@ import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
 
 import { useSubject } from "CustomHooks/useSubject";
 
-const RightContentWrapper = ({
-  numberOfVotes,
-  secondary,
-  pictures,
-  ...props
-}) => {
+const RightContentWrapper = ({ subject, secondary, ...props }) => {
   const [pictureURL, setPictureURL] = useState(null);
 
   const { getSubjectPicture, loading } = useSubject();
@@ -32,7 +27,10 @@ const RightContentWrapper = ({
   useEffect(() => {
     let isMounted = true;
     try {
-      var key = pictures.items[0] && pictures.items[0].key;
+      var key =
+        subject.pictures &&
+        subject.pictures.items[0] &&
+        subject.pictures.items[0].key;
       var compressedImageKey = key.replace(
         "subjectPictures",
         "subjectPictures-thumbnails_350x246"
@@ -57,7 +55,7 @@ const RightContentWrapper = ({
   return (
     <div {...props}>
       <SubjectInfo
-        numberOfVotes={numberOfVotes}
+        numberOfVotes={subject.votes}
         secondary={secondary}
       ></SubjectInfo>
       {loading ? (

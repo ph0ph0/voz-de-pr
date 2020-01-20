@@ -6,29 +6,23 @@ import CommentButton from "components/Primitive/SubjectDetail/DetailBody/Comment
 import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
 import ErrorText from "components/Primitive/General/ErrorText";
 
-import CommentBoxAPI from "./API/CommentBoxAPI";
-import useAPI from "CustomHooks/useAPI";
-
-const CommentBoxWrapper = ({ secondary, subject, ...props }) => {
+const CommentBoxWrapper = ({ secondary, subject, commentApi, ...props }) => {
   const subjectId = subject.id;
-
-  const api = useAPI(CommentBoxAPI, {
-    commentText: "",
-    commentError: ""
-  });
 
   return (
     <div {...props}>
       <CommentTextArea
-        value={api.commentText}
-        onChange={event => api.updateCommentText(event.target.value)}
+        value={commentApi.commentText}
+        onChange={event => commentApi.updateCommentText(event.target.value)}
       />
-      {api.commentError && <ErrorText>{api.commentError}</ErrorText>}
+      {commentApi.commentError && (
+        <ErrorText>{commentApi.commentError}</ErrorText>
+      )}
       <CommentButton
         secondary={secondary}
-        onClick={() => api.submitComment(subjectId)}
+        onClick={() => commentApi.submitComment(subjectId)}
       >
-        {api.loading ? <LoadingSpinner /> : "Comment"}
+        {commentApi.loading ? <LoadingSpinner /> : "Comment"}
       </CommentButton>
     </div>
   );

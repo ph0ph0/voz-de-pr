@@ -15,6 +15,10 @@ const CommentWrapper = ({
 }) => {
   const timePassed = parseTime(createdAt);
 
+  window.log(
+    `^^^^^^^commentText in a single comment component: ${commentContent}`
+  );
+
   return (
     <div {...props}>
       <CommentHeading

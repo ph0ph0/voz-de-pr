@@ -1,9 +1,11 @@
 import { useComment } from "CustomHooks/useComment";
 import { useUser } from "CustomHooks/user";
 
-const CommentBoxAPI = ({ state, setState }) => {
+const CommentAPI = ({ state, setState }) => {
   const commentText = state.commentText;
   const commentError = state.commentError;
+  const comments = state.comments;
+  window.log(`COMMENTS in commentAPI: ${JSON.stringify(comments)}`);
 
   const { saveComment, loading } = useComment();
   const { user } = useUser();
@@ -19,8 +21,9 @@ const CommentBoxAPI = ({ state, setState }) => {
   };
 
   const resetAll = () => {
-    setState(() => {
+    setState(prevState => {
       return {
+        ...prevState,
         commentText: "",
         commentError: ""
       };
@@ -29,12 +32,14 @@ const CommentBoxAPI = ({ state, setState }) => {
 
   const submitComment = async subjectId => {
     window.log("Creating comment...");
-    setState(prevState => {
-      return {
-        ...prevState,
-        commentError: ""
-      };
-    });
+    if (commentError !== "") {
+      setState(prevState => {
+        return {
+          ...prevState,
+          commentError: ""
+        };
+      });
+    }
     if (commentText.trim() === "") {
       window.log("Comment text was empty!");
       setState(prevState => {
@@ -48,8 +53,28 @@ const CommentBoxAPI = ({ state, setState }) => {
     try {
       const userId = user && user.id;
       const username = user && user.username;
-      await saveComment(userId, username, commentText, subjectId);
-      window.log("Successfully createdComment!");
+      window.log("Awaiting save...");
+      const result = await saveComment(
+        userId,
+        username,
+        commentText,
+        subjectId
+      );
+      const newComment = result.data.createComment;
+      window.log(
+        `&&&&&&&&&&&Adding new comment to array: ${JSON.stringify(newComment)}`
+      );
+      setState(prevState => {
+        return {
+          ...prevState,
+          comments: [newComment, ...comments]
+        };
+      });
+      window.log(
+        `@@@@@@@@@@@Successfully createdComment! New array: ${JSON.stringify(
+          comments
+        )}`
+      );
       resetAll();
     } catch (error) {
       window.log(`Error submitting comment: ${error}`);
@@ -64,13 +89,16 @@ const CommentBoxAPI = ({ state, setState }) => {
     }
   };
 
+  // WHY IS IT GOING FROM POPULATED AT THE TOP OF THIS FILE TO INSTANTLY UNDEFINED?
+
   return {
     commentText,
     commentError,
+    comments,
     loading,
     updateCommentText,
     submitComment
   };
 };
 
-export default CommentBoxAPI;
+export default CommentAPI;

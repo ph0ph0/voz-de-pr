@@ -10,13 +10,28 @@ import CommentsSection from "./CommentsSection/CommentsSection";
 import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
 
 import { useSubject } from "CustomHooks/useSubject";
+import CommentAPI from "./API/CommentAPI";
+import useAPI from "CustomHooks/useAPI";
 
 const SubjectDetailContentWrapper = ({ secondary, subject, ...props }) => {
-  const numberOfComments = subject.comments && subject.comments.length;
+  const comments = subject.comments && subject.comments.items;
+
+  window.log("...........Running subjectDetailWrapper");
+  const commentApi = useAPI(CommentAPI, {
+    commentText: "",
+    commentError: "",
+    comments: comments
+  });
+
+  window.log(
+    `Comments in sDW after useAPI: ${JSON.stringify(
+      JSON.stringify(commentApi.comments)
+    )}`
+  );
 
   const [pictureURL, setPictureURL] = useState(null);
 
-  const { getSubjectPicture, loading } = useSubject();
+  const { getSubjectPicture, loading: pictureLoading } = useSubject();
 
   const fetchPictures = async key => {
     try {
@@ -57,24 +72,26 @@ const SubjectDetailContentWrapper = ({ secondary, subject, ...props }) => {
   }, []);
 
   const noOfComments =
-    subject.comments && subject.comments.items && subject.comments.items.length;
+    commentApi && commentApi.comments && commentApi.comments.length;
 
   return (
     <div {...props}>
       <DetailHeader secondary={secondary} subject={subject} />
-      {loading ? <LoadingSpinner /> : <DetailImage src={pictureURL} />}
+      {pictureLoading ? <LoadingSpinner /> : <DetailImage src={pictureURL} />}
       <DetailSummary
         secondary={secondary}
         subjectID={subject.id}
         votesOnSubject={subject.votes}
         noOfComments={noOfComments}
       />
-      <DetailBody secondary={secondary} subject={subject} />
-      {subject.comments &&
-        subject.comments.items &&
-        subject.comments.items.length !== 0 && (
-          <CommentsSection comments={subject.comments.items} />
-        )}
+      <DetailBody
+        secondary={secondary}
+        subject={subject}
+        commentApi={commentApi}
+      />
+      {commentApi.comments && (
+        <CommentsSection comments={commentApi.comments} />
+      )}
     </div>
   );
 };

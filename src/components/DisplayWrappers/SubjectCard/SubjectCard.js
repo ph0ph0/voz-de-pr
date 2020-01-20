@@ -4,11 +4,11 @@ import styled from "styled-components";
 import LeftContent from "./LeftContent/LeftContent";
 import RightContent from "./RightContent/RightContent";
 
-const Wrapper = ({ subject, ...props }) => {
+const Wrapper = ({ subject, secondary, ...props }) => {
   return (
     <div {...props}>
       <LeftContent subject={subject} />
-      <RightContent subject={subject} />
+      <RightContent secondary={secondary} subject={subject} />
     </div>
   );
 };
