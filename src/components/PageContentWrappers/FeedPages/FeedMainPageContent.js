@@ -269,7 +269,6 @@ const FeedMainPageContentWrapper = ({
             //Set a high limit, as limit applied before filter in dDB (see dev notes)
             const limit = 100000;
 
-            if (!isMounted) return;
             const data = await queryConstructor(
               pageFilter,
               sortOrderState,
@@ -277,6 +276,7 @@ const FeedMainPageContentWrapper = ({
               searchTerm,
               limit
             );
+            if (!isMounted) return;
             const subjects = data.subjects;
             const token = data.nextToken;
             setSubjectCardData(subjects);
