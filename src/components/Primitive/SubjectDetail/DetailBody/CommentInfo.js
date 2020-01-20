@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 const Name = styled.p`
   font-size: 12px;
-  color: ${props => props.secondary ? props.theme.secondaryColour : props.theme.primaryColour};
+  color: ${props =>
+    props.secondary ? props.theme.secondaryColour : props.theme.primaryColour};
   font-family: Avenir;
 
   margin-left: 5px;
@@ -15,11 +16,11 @@ const Info = styled.p`
   font-family: Avenir;
 `;
 
-const CommentInfoWrapper = ({ secondary, ...props }) => {
+const CommentInfoWrapper = ({ secondary, username, ...props }) => {
   return (
     <div {...props}>
       <Info>Comment as</Info>
-      <Name secondary = {secondary}>James Wheeler</Name>
+      <Name secondary={secondary}>{username}</Name>
     </div>
   );
 };

@@ -18,7 +18,7 @@ export const fetchSubject = subjectID => {
 };
 
 const SubjectDetailPageWrapper = withRouter(({ staticContext, ...props }) => {
-  window.log(`props for SDPW: ${JSON.stringify(props)}`);
+  // window.log(`props for SDPW: ${JSON.stringify(props)}`);
 
   var passedSubject =
     props.location && props.location.state && props.location.state.subject
