@@ -18,31 +18,40 @@ const RightContentWrapper = ({
   const [pictureURL, setPictureURL] = useState(null);
 
   const { getSubjectPicture, loading } = useSubject();
-  let isMounted = true;
 
   const fetchPictures = async key => {
     try {
       const pictures = await getSubjectPicture(key);
-      setPictureURL(pictures);
+      return pictures;
     } catch (error) {
       window.log(`Error fetching pictures for subject: ${error}`);
-      setPictureURL(null);
+      throw error;
     }
   };
 
   useEffect(() => {
+    let isMounted = true;
     try {
       var key = pictures.items[0] && pictures.items[0].key;
       var compressedImageKey = key.replace(
         "subjectPictures",
         "subjectPictures-thumbnails_350x246"
       );
-      fetchPictures(compressedImageKey);
+      (async function fetchAndGetPictures() {
+        const pictures = await fetchPictures(compressedImageKey);
+        if (isMounted === false) {
+          window.log("Subject Card was not mounted, aborting setting picture");
+          return;
+        }
+        setPictureURL(pictures);
+      })();
     } catch (error) {
       window.log(
         `Error getting subject picture in useEffect of RightContent: ${error}`
       );
+      setPictureURL(null);
     }
+    return () => (isMounted = false);
   }, []);
 
   return (

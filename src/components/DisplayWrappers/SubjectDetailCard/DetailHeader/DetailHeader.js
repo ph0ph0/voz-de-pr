@@ -5,14 +5,11 @@ import PropTypes from "prop-types";
 import DetailHeaderTopLineWrapper from "./TopLine/DetailHeaderTopLine";
 import DetailHeaderBottomLineWrapper from "./BottomLine/DetailHeaderBottomLine";
 
-const DetailHeaderWrapper = ({ secondary, votesOnSubject, ...props }) => {
+const DetailHeaderWrapper = ({ secondary, subject, ...props }) => {
   return (
     <div {...props}>
-      <DetailHeaderTopLineWrapper />
-      <DetailHeaderBottomLineWrapper
-        secondary={secondary}
-        votesOnSubject={votesOnSubject}
-      />
+      <DetailHeaderTopLineWrapper subject={subject} />
+      <DetailHeaderBottomLineWrapper secondary={secondary} subject={subject} />
     </div>
   );
 };

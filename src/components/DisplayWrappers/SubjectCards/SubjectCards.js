@@ -13,10 +13,11 @@ const SubjectCardsWrapper = ({
   let history = useHistory();
 
   const onClick = index => {
-    window.log(`clicked card with index: ${index}`);
-
     const subject = arrayOfSubjectCardData[index];
     const subjectID = subject.id;
+
+    window.log(`clicked on card with index (id): ${subjectID}`);
+    window.log(`clicked on subject: ${JSON.stringify(subject)}`);
 
     history.push({
       pathname: `/${subjectID}`,
@@ -26,7 +27,7 @@ const SubjectCardsWrapper = ({
 
   return (
     <div {...props}>
-      {arrayOfSubjectCardData.map(subject => (
+      {arrayOfSubjectCardData.map((subject, index) => (
         <SubjectCard
           key={subject.id}
           author={subject.author}
@@ -39,7 +40,7 @@ const SubjectCardsWrapper = ({
           numberOfVotes={subject.votes}
           secondary={subject.type === "post" ? true : false}
           pictures={subject.pictures}
-          onClick={() => onClick(subject.id)}
+          onClick={() => onClick(index)}
         />
       ))}
     </div>
