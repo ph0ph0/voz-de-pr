@@ -85,7 +85,7 @@ export const getSubjectsByCreatedAt = `query GetSubjectsByCreatedAt(
               owner
             }
           }
-          comments {
+          comments(limit: 10000) {
             items {
               id
               createdBy

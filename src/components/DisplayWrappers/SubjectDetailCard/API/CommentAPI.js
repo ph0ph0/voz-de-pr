@@ -61,9 +61,7 @@ const CommentAPI = ({ state, setState }) => {
         subjectId
       );
       const newComment = result.data.createComment;
-      window.log(
-        `&&&&&&&&&&&Adding new comment to array: ${JSON.stringify(newComment)}`
-      );
+      window.log(`Adding new comment to array: ${JSON.stringify(newComment)}`);
       setState(prevState => {
         return {
           ...prevState,
@@ -71,9 +69,7 @@ const CommentAPI = ({ state, setState }) => {
         };
       });
       window.log(
-        `@@@@@@@@@@@Successfully createdComment! New array: ${JSON.stringify(
-          comments
-        )}`
+        `Successfully createdComment! New array: ${JSON.stringify(comments)}`
       );
       resetAll();
     } catch (error) {
@@ -88,8 +84,6 @@ const CommentAPI = ({ state, setState }) => {
       });
     }
   };
-
-  // WHY IS IT GOING FROM POPULATED AT THE TOP OF THIS FILE TO INSTANTLY UNDEFINED?
 
   return {
     commentText,

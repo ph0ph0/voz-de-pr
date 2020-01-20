@@ -16,18 +16,11 @@ import useAPI from "CustomHooks/useAPI";
 const SubjectDetailContentWrapper = ({ secondary, subject, ...props }) => {
   const comments = subject.comments && subject.comments.items;
 
-  window.log("...........Running subjectDetailWrapper");
   const commentApi = useAPI(CommentAPI, {
     commentText: "",
     commentError: "",
     comments: comments
   });
-
-  window.log(
-    `Comments in sDW after useAPI: ${JSON.stringify(
-      JSON.stringify(commentApi.comments)
-    )}`
-  );
 
   const [pictureURL, setPictureURL] = useState(null);
 
@@ -71,8 +64,7 @@ const SubjectDetailContentWrapper = ({ secondary, subject, ...props }) => {
     return () => (isMounted = false);
   }, []);
 
-  const noOfComments =
-    commentApi && commentApi.comments && commentApi.comments.length;
+  const noOfComments = commentApi.comments && commentApi.comments.length;
 
   return (
     <div {...props}>
