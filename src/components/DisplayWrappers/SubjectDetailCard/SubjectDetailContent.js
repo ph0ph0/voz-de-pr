@@ -64,7 +64,7 @@ const SubjectDetailContentWrapper = ({ secondary, subject, ...props }) => {
         secondary={secondary}
         subjectID={subject.id}
         votesOnSubject={subject.votes}
-        noOfComments={numberOfComments}
+        noOfComments={subject.numberOfComments}
       />
       <DetailBody
         secondary={secondary}
