@@ -14,7 +14,7 @@ export const fetchSubject = subjectID => {
 };
 
 const SubjectDetailPageWrapper = withRouter(({ staticContext, ...props }) => {
-  const { downloadSubject, loading, error } = useSubject();
+  const { downloadSubject, loading } = useSubject();
   const [subject, setSubject] = useState(null);
   //if isSecondary is true, show Post config, if false, Cause config
   const [isSecondary, setIsSecondary] = useState(false);
