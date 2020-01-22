@@ -14,7 +14,11 @@ import CommentAPI from "./API/CommentAPI";
 import useAPI from "CustomHooks/useAPI";
 
 const SubjectDetailContentWrapper = ({ secondary, subject, ...props }) => {
-  const comments = subject.comments && subject.comments.items;
+  let comments = [];
+
+  if (subject && subject.comments && subject.comments.items) {
+    comments = subject.comments.items;
+  }
 
   const commentApi = useAPI(CommentAPI, {
     commentText: "",

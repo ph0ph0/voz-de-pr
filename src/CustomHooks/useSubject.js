@@ -15,7 +15,7 @@ import { filterStripper } from "./UseSubjectUtils/FilterStripper";
 import uuidv4 from "uuid/v4";
 
 export const useSubject = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const resetAll = () => {
@@ -60,7 +60,7 @@ export const useSubject = () => {
   };
 
   const downloadSubject = async id => {
-    resetAll();
+    // resetAll();
     window.log(`Downloading subject using id...`);
 
     //get subject, then get picture key and download picture
