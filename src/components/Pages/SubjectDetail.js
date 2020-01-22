@@ -3,8 +3,7 @@ import styled from "styled-components";
 
 import SubjectDetailPageContent from "../PageContentWrappers/DetailPages/DetailPageContent";
 import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
-
-import { SubjectsMixed } from "../../Constants/MockSubjectsData";
+import { ReactComponent as LogoSVG } from "assets/SignUpInCard/SignUpInLogo.svg";
 
 import { withRouter } from "react-router-dom";
 
@@ -61,9 +60,7 @@ const SubjectDetailPageWrapper = withRouter(({ staticContext, ...props }) => {
       {loading && subject === null ? (
         <LoadingSpinnerDetail />
       ) : !loading && subject === null ? (
-        <NoSubjectsText>
-          Subject not found, it either no longer exists or was recently deleted
-        </NoSubjectsText>
+        <SubjectNotFound />
       ) : (
         <SubjectDetailPageContent subject={subject} secondary={isSecondary} />
       )}
@@ -71,8 +68,35 @@ const SubjectDetailPageWrapper = withRouter(({ staticContext, ...props }) => {
   );
 });
 
+const SubjectNotFoundWrapper = ({ ...props }) => {
+  return (
+    <div {...props}>
+      <Logo />
+      <NoSubjectsText>
+        Subject not found, it either no longer exists or was recently deleted
+      </NoSubjectsText>
+    </div>
+  );
+};
+
+const SubjectNotFound = styled(SubjectNotFoundWrapper)`
+  /* border: 1px solid black; */
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+`;
+
+const Logo = styled(LogoSVG)`
+  /* border: 1px solid orange; */
+  width: 100px;
+  height: 100px;
+
+  margin-left: auto;
+  margin-right: auto;
+`;
+
 const NoSubjectsText = styled.p`
-  margin-top: 200px;
+  margin-top: 20px;
   font-size: 20px;
 `;
 
