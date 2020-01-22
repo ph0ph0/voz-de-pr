@@ -21,7 +21,6 @@ const SubjectDetailPageWrapper = withRouter(({ staticContext, ...props }) => {
 
   useEffect(() => {
     let isMounted = true;
-    window.log(`Loading SubjectDetail`);
     (async function fetchSubject() {
       const subjectId = props.match.params.subjectId;
       window.log(`Received this subjectId from url: ${subjectId}`);

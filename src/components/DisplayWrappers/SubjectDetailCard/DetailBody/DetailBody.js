@@ -20,12 +20,16 @@ const DetailBodyWrapper = ({ subject, secondary, commentApi, ...props }) => {
       <SubjectLink secondary={secondary}>
         http://www.fideicomiso.org/home.html
       </SubjectLink>
-      <CommentInfo secondary={secondary} username={username} />
-      <CommentBox
-        secondary={secondary}
-        subject={subject}
-        commentApi={commentApi}
-      />
+      {user && (
+        <>
+          <CommentInfo secondary={secondary} username={username} />
+          <CommentBox
+            secondary={secondary}
+            subject={subject}
+            commentApi={commentApi}
+          />
+        </>
+      )}
     </div>
   );
 };

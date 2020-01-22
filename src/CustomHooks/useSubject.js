@@ -66,9 +66,13 @@ export const useSubject = () => {
     //get subject, then get picture key and download picture
     setLoading(true);
     try {
-      const subjectObject = await API.graphql(
-        graphqlOperation(getSubject, { id: id })
-      );
+      const subjectObject = await API.graphql({
+        query: getSubject,
+        variables: {
+          id: id
+        },
+        authMode: "AWS_IAM"
+      });
 
       window.log(`Got Subject object: ${subjectObject}`);
 

@@ -185,14 +185,17 @@ exports[`Storyshots DisplayWrappers/SignUpInCards/SignUpCard/Avatars/AvatarRowWi
 
 exports[`Storyshots DisplayWrappers/SubjectDetail/DetailBody/CommentBox Cause 1`] = `
 <div
-  className="sc-eilVRo dMZKIE"
+  className="sc-eilVRo chYUuJ"
 >
   <textarea
-    className="sc-dUjcNx gwyAGA"
+    className="sc-dUjcNx bkslMx"
+    onChange={[Function]}
     placeholder="What are your thoughts?"
+    value=""
   />
   <button
-    className="sc-jWBwVP bxySJh sc-gHboQg jKGuAp"
+    className="sc-jWBwVP bxySJh sc-gHboQg iYDuFe"
+    onClick={[Function]}
   >
     Comment
   </button>
@@ -201,14 +204,17 @@ exports[`Storyshots DisplayWrappers/SubjectDetail/DetailBody/CommentBox Cause 1`
 
 exports[`Storyshots DisplayWrappers/SubjectDetail/DetailBody/CommentBox Post 1`] = `
 <div
-  className="sc-eilVRo dMZKIE"
+  className="sc-eilVRo chYUuJ"
 >
   <textarea
-    className="sc-dUjcNx gwyAGA"
+    className="sc-dUjcNx bkslMx"
+    onChange={[Function]}
     placeholder="What are your thoughts?"
+    value=""
   />
   <button
-    className="sc-jWBwVP brZSDK sc-gHboQg jmIqYS"
+    className="sc-jWBwVP brZSDK sc-gHboQg ekUlI"
+    onClick={[Function]}
   >
     Comment
   </button>
@@ -217,105 +223,35 @@ exports[`Storyshots DisplayWrappers/SubjectDetail/DetailBody/CommentBox Post 1`]
 
 exports[`Storyshots DisplayWrappers/SubjectDetail/DetailBody/DetailBody Cause 1`] = `
 <div
-  className="sc-gFaPwZ dWlkmi"
+  className="sc-gFaPwZ eiknPA"
 >
   <p
     className="sc-eerKOB fSrSef"
   >
-    
-In its mission to protect functional ecosystems in the islands of Puerto Rico and to secure the essential services they provide, the Conservation Trust of Puerto Rico has focused its land acquisition and ecosystem management strategies on a regional approach, based on Puerto Rico’s main watersheds. As such, 5 distinct Regions have been established and labeled according to their cardinal direction. The Conservation Trust’s natural protected areas are managed and supervised according to this regional network. 
-
-Tours through the nurseries in Río Piedras and Barranquitas are interesting and educational, while emphasizing that each and every person can have a positive impact on the environment, to the benefit of current and future generations of Puerto Ricans.
-
-With your donation, you support Para la Naturaleza's efforts towards environmental conservation and historical preservation as well as promote the rehabilitation of our habitats. 
-
-For your convenience, you can also make your donation by calling (787) 722-5834 or sending a check to Para la Naturaleza, PO Box 9023554, San Juan, PR 00902-3554.
-
+    Another multitap
   </p>
   <a
     className="sc-emmjRN fKFmR"
   >
     http://www.fideicomiso.org/home.html
   </a>
-  <div
-    className="sc-bnXvFD gLPeIL"
-  >
-    <p
-      className="sc-dymIpo gUDXIK"
-    >
-      Comment as
-    </p>
-    <p
-      className="sc-cpmLhU dmfwbN"
-    >
-      James Wheeler
-    </p>
-  </div>
-  <div
-    className="sc-eilVRo dMZKIE"
-  >
-    <textarea
-      className="sc-dUjcNx gwyAGA"
-      placeholder="What are your thoughts?"
-    />
-    <button
-      className="sc-jWBwVP bxySJh sc-gHboQg jKGuAp"
-    >
-      Comment
-    </button>
-  </div>
 </div>
 `;
 
 exports[`Storyshots DisplayWrappers/SubjectDetail/DetailBody/DetailBody Post 1`] = `
 <div
-  className="sc-gFaPwZ dWlkmi"
+  className="sc-gFaPwZ eiknPA"
 >
   <p
     className="sc-eerKOB fSrSef"
   >
-    
-In its mission to protect functional ecosystems in the islands of Puerto Rico and to secure the essential services they provide, the Conservation Trust of Puerto Rico has focused its land acquisition and ecosystem management strategies on a regional approach, based on Puerto Rico’s main watersheds. As such, 5 distinct Regions have been established and labeled according to their cardinal direction. The Conservation Trust’s natural protected areas are managed and supervised according to this regional network. 
-
-Tours through the nurseries in Río Piedras and Barranquitas are interesting and educational, while emphasizing that each and every person can have a positive impact on the environment, to the benefit of current and future generations of Puerto Ricans.
-
-With your donation, you support Para la Naturaleza's efforts towards environmental conservation and historical preservation as well as promote the rehabilitation of our habitats. 
-
-For your convenience, you can also make your donation by calling (787) 722-5834 or sending a check to Para la Naturaleza, PO Box 9023554, San Juan, PR 00902-3554.
-
+    Another multitap
   </p>
   <a
     className="sc-emmjRN fZQaMq"
   >
     http://www.fideicomiso.org/home.html
   </a>
-  <div
-    className="sc-bnXvFD gLPeIL"
-  >
-    <p
-      className="sc-dymIpo gUDXIK"
-    >
-      Comment as
-    </p>
-    <p
-      className="sc-cpmLhU cYreMq"
-    >
-      James Wheeler
-    </p>
-  </div>
-  <div
-    className="sc-eilVRo dMZKIE"
-  >
-    <textarea
-      className="sc-dUjcNx gwyAGA"
-      placeholder="What are your thoughts?"
-    />
-    <button
-      className="sc-jWBwVP brZSDK sc-gHboQg jmIqYS"
-    >
-      Comment
-    </button>
-  </div>
 </div>
 `;
 
@@ -448,6 +384,7 @@ exports[`Storyshots DisplayWrappers|CreateSubject/CreateSubject/CreateSubject St
   </div>
   <button
     className="sc-jWBwVP sc-cMljjf eIFYZX"
+    disabled={false}
     onClick={[Function]}
   >
     Create Cause
@@ -617,7 +554,7 @@ exports[`Storyshots DisplayWrappers|NavBar/LogoWrapper Standard 1`] = `
 
 exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
 <div
-  className="sc-caSCKo INSvr"
+  className="sc-caSCKo knOmBz"
 >
   <div
     className="sc-csuQGl jKlBMX"
@@ -705,15 +642,17 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
       </a>
     </nav>
   </div>
-  <div
-    className="sc-gPEVay hsGcMl"
+  <form
+    className="sc-gPEVay bsaIBs"
+    onSubmit={[Function]}
   >
     <input
-      className="sc-jDwBTQ llmlte"
+      className="sc-jDwBTQ iYvYRr"
+      onChange={[Function]}
       placeholder="Search"
       type="text"
     />
-  </div>
+  </form>
   <div
     className="sc-fAjcbJ gvKzDv"
   >
@@ -738,51 +677,59 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
 `;
 
 exports[`Storyshots DisplayWrappers|NavBar/NavBarCentre C 1`] = `
-<div
-  className="sc-gPEVay hsGcMl"
+<form
+  className="sc-gPEVay bsaIBs"
+  onSubmit={[Function]}
 >
   <input
-    className="sc-jDwBTQ llmlte"
+    className="sc-jDwBTQ iYvYRr"
+    onChange={[Function]}
     placeholder="Search Causes"
     type="text"
   />
-</div>
+</form>
 `;
 
 exports[`Storyshots DisplayWrappers|NavBar/NavBarCentre C&P 1`] = `
-<div
-  className="sc-gPEVay hsGcMl"
+<form
+  className="sc-gPEVay bsaIBs"
+  onSubmit={[Function]}
 >
   <input
-    className="sc-jDwBTQ llmlte"
+    className="sc-jDwBTQ iYvYRr"
+    onChange={[Function]}
     placeholder="Search Causes and Posts"
     type="text"
   />
-</div>
+</form>
 `;
 
 exports[`Storyshots DisplayWrappers|NavBar/NavBarCentre P 1`] = `
-<div
-  className="sc-gPEVay hsGcMl"
+<form
+  className="sc-gPEVay bsaIBs"
+  onSubmit={[Function]}
 >
   <input
-    className="sc-jDwBTQ llmlte"
+    className="sc-jDwBTQ iYvYRr"
+    onChange={[Function]}
     placeholder="Search Posts"
     type="text"
   />
-</div>
+</form>
 `;
 
 exports[`Storyshots DisplayWrappers|NavBar/NavBarCentre Standard 1`] = `
-<div
-  className="sc-gPEVay hsGcMl"
+<form
+  className="sc-gPEVay bsaIBs"
+  onSubmit={[Function]}
 >
   <input
-    className="sc-jDwBTQ llmlte"
+    className="sc-jDwBTQ iYvYRr"
+    onChange={[Function]}
     placeholder="Search"
     type="text"
   />
-</div>
+</form>
 `;
 
 exports[`Storyshots DisplayWrappers|NavBar/NavBarLeft Standard 1`] = `
@@ -1969,6 +1916,7 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/SidePanelProfile Standard 
   </div>
   <button
     className="sc-jWBwVP brZSDK"
+    disabled={false}
     onClick={[Function]}
   >
     Change
@@ -4276,8 +4224,6 @@ exports[`Storyshots DisplayWrappers|SubjectCard/BubbleWrapper Standard 1`] = `
 exports[`Storyshots DisplayWrappers|SubjectCard/LeftContent Standard 1`] = `
 <div
   className="sc-bAeIUo kwnzts"
-  timeAgo="1 Hour Ago"
-  timePassed="1 hour"
 >
   <div
     className="sc-gqPbQI kbiXAT"
@@ -4296,24 +4242,25 @@ exports[`Storyshots DisplayWrappers|SubjectCard/LeftContent Standard 1`] = `
     >
       
        
-      James Wheeler Montgommery McGuiness
+      ph0ph0
     </div>
     <div
       className="sc-hMFtBS jzWWyr"
     >
       ·
        
+      2 hours ago
     </div>
   </div>
   <div
     className="sc-hORach bbJpPK"
   >
-    Puerto Rico - Cherish Its Natural Wonders
+    Another multitap
   </div>
   <p
     className="sc-bMVAic iRHvba"
   >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor lacus luctus accumsan tortor posuere ac ut consequat semper. Magna ac placerat vestibulum lectus mauris ultrices eros in. Tellus id interdum velit laoreet. Sit amet luctus venenatis lectus magna fringilla urna porttitor. Tincidunt augue interdum velit euismod in pellentesque massa. Justo eget magna fermentum iaculis eu non diam phasellus vestibulum. Egestas erat imperdiet sed euismod nisi. Vulputate eu scelerisque felis imperdiet. Ante in nibh mauris cursus mattis molestie. Tincidunt praesent semper feugiat nibh sed pulvinar proin. Tortor at auctor urna nunc id cursus. Est ante in nibh mauris cursus mattis molestie a iaculis. Vel pharetra vel turpis nunc eget. Sed pulvinar proin gravida hendrerit. Facilisis leo vel fringilla est ullamcorper eget nulla. Tempus imperdiet nulla malesuada pellentesque. Proin libero nunc consequat interdum varius sit amet mattis. Urna cursus eget nunc scelerisque viverra mauris. Nec feugiat in fermentum posuere urna nec tincidunt praesent. Metus vulputate eu scelerisque felis imperdiet proin. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Id leo in vitae turpis massa sed elementum. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Vel pharetra vel turpis nunc eget lorem. Tellus cras adipiscing enim eu turpis egestas. Tellus in metus vulputate eu. Lacus sed turpis tincidunt id. Neque sodales ut etiam sit amet. Mauris sit amet massa vitae tortor condimentum lacinia quis vel.
+    Another multitap
   </p>
   <div
     className="sc-iuJeZd kcIoHc"
@@ -4328,7 +4275,7 @@ exports[`Storyshots DisplayWrappers|SubjectCard/LeftContent Standard 1`] = `
     <div
       className="sc-cMhqgX bZIoGq"
     >
-      12
+      0
        
       Comments
     </div>
@@ -4351,7 +4298,6 @@ exports[`Storyshots DisplayWrappers|SubjectCard/ProfPicSubjectCard Standard 1`] 
 exports[`Storyshots DisplayWrappers|SubjectCard/RightContent C 1`] = `
 <div
   className="sc-gojNiO hfcJOO"
-  src="PuertoRico_VdPR.jpg"
 >
   <div
     className="sc-exAgwC bBVNdm"
@@ -4359,7 +4305,7 @@ exports[`Storyshots DisplayWrappers|SubjectCard/RightContent C 1`] = `
     <div
       className="sc-iujRgT kHCpmE"
     >
-      147
+      0
        
       VOTES
     </div>
@@ -4380,7 +4326,6 @@ exports[`Storyshots DisplayWrappers|SubjectCard/RightContent C 1`] = `
 exports[`Storyshots DisplayWrappers|SubjectCard/RightContent P 1`] = `
 <div
   className="sc-gojNiO hfcJOO"
-  src="PuertoRico_VdPR.jpg"
 >
   <div
     className="sc-exAgwC bBVNdm"
@@ -4388,7 +4333,7 @@ exports[`Storyshots DisplayWrappers|SubjectCard/RightContent P 1`] = `
     <div
       className="sc-iujRgT Auokj"
     >
-      147
+      0
        
       VOTES
     </div>
@@ -4416,7 +4361,7 @@ exports[`Storyshots DisplayWrappers|SubjectCard/RightContent Standard 1`] = `
     <div
       className="sc-iujRgT kHCpmE"
     >
-      147
+      0
        
       VOTES
     </div>
@@ -4436,9 +4381,7 @@ exports[`Storyshots DisplayWrappers|SubjectCard/RightContent Standard 1`] = `
 
 exports[`Storyshots DisplayWrappers|SubjectCard/SubjectCard C 1`] = `
 <div
-  className="sc-daURTG eusQog"
-  src="PuertoRico_VdPR.jpg"
-  timePassed="1 day ago"
+  className="sc-daURTG eRvJfc"
 >
   <div
     className="sc-bAeIUo kwnzts"
@@ -4460,24 +4403,25 @@ exports[`Storyshots DisplayWrappers|SubjectCard/SubjectCard C 1`] = `
       >
         
          
-        James Wheeler Montgommery McGuiness 
+        ph0ph0
       </div>
       <div
         className="sc-hMFtBS jzWWyr"
       >
         ·
          
+        2 hours ago
       </div>
     </div>
     <div
       className="sc-hORach bbJpPK"
     >
-      Puerto Rico - Cherish Its Natural Wonders
+      Another multitap
     </div>
     <p
       className="sc-bMVAic iRHvba"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor lacus luctus accumsan tortor posuere ac ut consequat semper. Magna ac placerat vestibulum lectus mauris ultrices eros in. Tellus id interdum velit laoreet. Sit amet luctus venenatis lectus magna fringilla urna porttitor. Tincidunt augue interdum velit euismod in pellentesque massa. Justo eget magna fermentum iaculis eu non diam phasellus vestibulum. Egestas erat imperdiet sed euismod nisi. Vulputate eu scelerisque felis imperdiet. Ante in nibh mauris cursus mattis molestie. Tincidunt praesent semper feugiat nibh sed pulvinar proin. Tortor at auctor urna nunc id cursus. Est ante in nibh mauris cursus mattis molestie a iaculis. Vel pharetra vel turpis nunc eget. Sed pulvinar proin gravida hendrerit. Facilisis leo vel fringilla est ullamcorper eget nulla. Tempus imperdiet nulla malesuada pellentesque. Proin libero nunc consequat interdum varius sit amet mattis. Urna cursus eget nunc scelerisque viverra mauris. Nec feugiat in fermentum posuere urna nec tincidunt praesent. Metus vulputate eu scelerisque felis imperdiet proin. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Id leo in vitae turpis massa sed elementum. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Vel pharetra vel turpis nunc eget lorem. Tellus cras adipiscing enim eu turpis egestas. Tellus in metus vulputate eu. Lacus sed turpis tincidunt id. Neque sodales ut etiam sit amet. Mauris sit amet massa vitae tortor condimentum lacinia quis vel.
+      Another multitap
     </p>
     <div
       className="sc-iuJeZd kcIoHc"
@@ -4492,7 +4436,7 @@ exports[`Storyshots DisplayWrappers|SubjectCard/SubjectCard C 1`] = `
       <div
         className="sc-cMhqgX bZIoGq"
       >
-        12
+        0
          
         Comments
       </div>
@@ -4507,7 +4451,7 @@ exports[`Storyshots DisplayWrappers|SubjectCard/SubjectCard C 1`] = `
       <div
         className="sc-iujRgT kHCpmE"
       >
-        12
+        0
          
         VOTES
       </div>
@@ -4528,9 +4472,7 @@ exports[`Storyshots DisplayWrappers|SubjectCard/SubjectCard C 1`] = `
 
 exports[`Storyshots DisplayWrappers|SubjectCard/SubjectCard P 1`] = `
 <div
-  className="sc-daURTG eusQog"
-  src="PuertoRico_VdPR.jpg"
-  timePassed="1 day ago"
+  className="sc-daURTG eRvJfc"
 >
   <div
     className="sc-bAeIUo kwnzts"
@@ -4552,24 +4494,25 @@ exports[`Storyshots DisplayWrappers|SubjectCard/SubjectCard P 1`] = `
       >
         
          
-        James Wheeler Montgommery McGuiness 
+        ph0ph0
       </div>
       <div
         className="sc-hMFtBS jzWWyr"
       >
         ·
          
+        2 hours ago
       </div>
     </div>
     <div
       className="sc-hORach bbJpPK"
     >
-      Puerto Rico - Cherish Its Natural Wonders
+      Another multitap
     </div>
     <p
       className="sc-bMVAic iRHvba"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor lacus luctus accumsan tortor posuere ac ut consequat semper. Magna ac placerat vestibulum lectus mauris ultrices eros in. Tellus id interdum velit laoreet. Sit amet luctus venenatis lectus magna fringilla urna porttitor. Tincidunt augue interdum velit euismod in pellentesque massa. Justo eget magna fermentum iaculis eu non diam phasellus vestibulum. Egestas erat imperdiet sed euismod nisi. Vulputate eu scelerisque felis imperdiet. Ante in nibh mauris cursus mattis molestie. Tincidunt praesent semper feugiat nibh sed pulvinar proin. Tortor at auctor urna nunc id cursus. Est ante in nibh mauris cursus mattis molestie a iaculis. Vel pharetra vel turpis nunc eget. Sed pulvinar proin gravida hendrerit. Facilisis leo vel fringilla est ullamcorper eget nulla. Tempus imperdiet nulla malesuada pellentesque. Proin libero nunc consequat interdum varius sit amet mattis. Urna cursus eget nunc scelerisque viverra mauris. Nec feugiat in fermentum posuere urna nec tincidunt praesent. Metus vulputate eu scelerisque felis imperdiet proin. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Id leo in vitae turpis massa sed elementum. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Vel pharetra vel turpis nunc eget lorem. Tellus cras adipiscing enim eu turpis egestas. Tellus in metus vulputate eu. Lacus sed turpis tincidunt id. Neque sodales ut etiam sit amet. Mauris sit amet massa vitae tortor condimentum lacinia quis vel.
+      Another multitap
     </p>
     <div
       className="sc-iuJeZd kcIoHc"
@@ -4584,7 +4527,7 @@ exports[`Storyshots DisplayWrappers|SubjectCard/SubjectCard P 1`] = `
       <div
         className="sc-cMhqgX bZIoGq"
       >
-        12
+        0
          
         Comments
       </div>
@@ -4597,16 +4540,16 @@ exports[`Storyshots DisplayWrappers|SubjectCard/SubjectCard P 1`] = `
       className="sc-exAgwC bBVNdm"
     >
       <div
-        className="sc-iujRgT Auokj"
+        className="sc-iujRgT kHCpmE"
       >
-        12
+        0
          
         VOTES
       </div>
       <div
-        className="sc-GMQeP ezXIfy"
+        className="sc-GMQeP cuVOCf"
       >
-        Post
+        Cause
       </div>
     </div>
     <img
@@ -4710,7 +4653,7 @@ exports[`Storyshots DisplayWrappers|SubjectCards/SubjectCards Standard 1`] = `
   className="sc-bXGyLb coKiLz"
 >
   <div
-    className="sc-daURTG eusQog"
+    className="sc-daURTG eRvJfc"
     onClick={[Function]}
   >
     <div
@@ -4797,7 +4740,7 @@ exports[`Storyshots DisplayWrappers|SubjectCards/SubjectCards Standard 1`] = `
     </div>
   </div>
   <div
-    className="sc-daURTG eusQog"
+    className="sc-daURTG eRvJfc"
     onClick={[Function]}
   >
     <div
@@ -4884,7 +4827,7 @@ exports[`Storyshots DisplayWrappers|SubjectCards/SubjectCards Standard 1`] = `
     </div>
   </div>
   <div
-    className="sc-daURTG eusQog"
+    className="sc-daURTG eRvJfc"
     onClick={[Function]}
   >
     <div
@@ -4971,7 +4914,7 @@ exports[`Storyshots DisplayWrappers|SubjectCards/SubjectCards Standard 1`] = `
     </div>
   </div>
   <div
-    className="sc-daURTG eusQog"
+    className="sc-daURTG eRvJfc"
     onClick={[Function]}
   >
     <div
@@ -5058,7 +5001,7 @@ exports[`Storyshots DisplayWrappers|SubjectCards/SubjectCards Standard 1`] = `
     </div>
   </div>
   <div
-    className="sc-daURTG eusQog"
+    className="sc-daURTG eRvJfc"
     onClick={[Function]}
   >
     <div
@@ -5145,7 +5088,7 @@ exports[`Storyshots DisplayWrappers|SubjectCards/SubjectCards Standard 1`] = `
     </div>
   </div>
   <div
-    className="sc-daURTG eusQog"
+    className="sc-daURTG eRvJfc"
     onClick={[Function]}
   >
     <div
@@ -5232,7 +5175,7 @@ exports[`Storyshots DisplayWrappers|SubjectCards/SubjectCards Standard 1`] = `
     </div>
   </div>
   <div
-    className="sc-daURTG eusQog"
+    className="sc-daURTG eRvJfc"
     onClick={[Function]}
   >
     <div
@@ -5319,7 +5262,7 @@ exports[`Storyshots DisplayWrappers|SubjectCards/SubjectCards Standard 1`] = `
     </div>
   </div>
   <div
-    className="sc-daURTG eusQog"
+    className="sc-daURTG eRvJfc"
     onClick={[Function]}
   >
     <div
@@ -5406,7 +5349,7 @@ exports[`Storyshots DisplayWrappers|SubjectCards/SubjectCards Standard 1`] = `
     </div>
   </div>
   <div
-    className="sc-daURTG eusQog"
+    className="sc-daURTG eRvJfc"
     onClick={[Function]}
   >
     <div
@@ -5493,7 +5436,7 @@ exports[`Storyshots DisplayWrappers|SubjectCards/SubjectCards Standard 1`] = `
     </div>
   </div>
   <div
-    className="sc-daURTG eusQog"
+    className="sc-daURTG eRvJfc"
     onClick={[Function]}
   >
     <div
@@ -5585,6 +5528,7 @@ exports[`Storyshots DisplayWrappers|SubjectCards/SubjectCards Standard 1`] = `
 exports[`Storyshots DisplayWrappers|SubjectDetail/CommentsSection/Comment Standard 1`] = `
 <div
   className="sc-fYiAbW isVHhR"
+  timePassed="1 hour ago"
 >
   <div
     className="sc-cbkKFq eXXgbI"
@@ -5601,7 +5545,6 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/CommentsSection/Comment Standa
     >
       ·
        
-      1 hour ago
     </div>
     <p
       className="sc-lkqHmb jFaJDg"
@@ -5745,7 +5688,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/CommentsSection/CommentHeading
 
 exports[`Storyshots DisplayWrappers|SubjectDetail/CommentsSection/CommentsSection Standard 1`] = `
 <div
-  className="sc-fOKMvo ePHExU"
+  className="sc-fOKMvo dvBRsC"
   noOfComments={1}
 >
   <div
@@ -5765,7 +5708,6 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/CommentsSection/CommentsSectio
       >
         ·
          
-        1 hour ago
       </div>
       <p
         className="sc-lkqHmb jFaJDg"
@@ -5834,7 +5776,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/DetailHeader/DetailHeader Caus
   className="sc-bMvGRv gfrxfP"
 >
   <div
-    className="sc-rBLzX QrHaI"
+    className="sc-rBLzX lcCOct"
   >
     <div
       className="sc-cmthru exAcPQ"
@@ -5850,28 +5792,28 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/DetailHeader/DetailHeader Caus
     >
       
        
-      James Montgommery Wheeler Mcguiness
+      ph0ph0
     </div>
     <div
       className="sc-hMFtBS jzWWyr"
     >
       ·
        
-      1 hour ago
+      2 hours ago
     </div>
   </div>
   <div
-    className="sc-gJWqzi fiqOtF"
+    className="sc-gJWqzi kGJKPY"
   >
     <p
       className="sc-fhYwyz kKXIUW"
     >
-      Puerto Rico - Cherish Its Natural Wonders
+      Another multitap
     </p>
     <p
-      className="sc-jzgbtB gRHGvI"
+      className="sc-jzgbtB eSlebr"
     >
-      22312
+      0
        
       VOTES
     </p>
@@ -5884,7 +5826,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/DetailHeader/DetailHeader Post
   className="sc-bMvGRv gfrxfP"
 >
   <div
-    className="sc-rBLzX QrHaI"
+    className="sc-rBLzX lcCOct"
   >
     <div
       className="sc-cmthru exAcPQ"
@@ -5900,28 +5842,28 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/DetailHeader/DetailHeader Post
     >
       
        
-      James Montgommery Wheeler Mcguiness
+      ph0ph0
     </div>
     <div
       className="sc-hMFtBS jzWWyr"
     >
       ·
        
-      1 hour ago
+      2 hours ago
     </div>
   </div>
   <div
-    className="sc-gJWqzi fiqOtF"
+    className="sc-gJWqzi kGJKPY"
   >
     <p
       className="sc-fhYwyz kKXIUW"
     >
-      Puerto Rico - Cherish Its Natural Wonders
+      Another multitap
     </p>
     <p
-      className="sc-jzgbtB hXlfVe"
+      className="sc-jzgbtB dqLGrt"
     >
-      22312
+      0
        
       VOTES
     </p>
@@ -5931,17 +5873,22 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/DetailHeader/DetailHeader Post
 
 exports[`Storyshots DisplayWrappers|SubjectDetail/DetailHeader/DetailHeaderBottomLine Cause 1`] = `
 <div
-  className="sc-gJWqzi fiqOtF"
+  className="sc-gJWqzi kGJKPY"
+  commentApi={
+    Object {
+      "commentText": "",
+    }
+  }
 >
   <p
     className="sc-fhYwyz kKXIUW"
   >
-    Puerto Rico - Cherish Its Natural Wonders
+    Another multitap
   </p>
   <p
-    className="sc-jzgbtB gRHGvI"
+    className="sc-jzgbtB eSlebr"
   >
-    5678
+    0
      
     VOTES
   </p>
@@ -5950,17 +5897,22 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/DetailHeader/DetailHeaderBotto
 
 exports[`Storyshots DisplayWrappers|SubjectDetail/DetailHeader/DetailHeaderBottomLine Post 1`] = `
 <div
-  className="sc-gJWqzi fiqOtF"
+  className="sc-gJWqzi kGJKPY"
+  commentApi={
+    Object {
+      "commentText": "",
+    }
+  }
 >
   <p
     className="sc-fhYwyz kKXIUW"
   >
-    Puerto Rico - Cherish Its Natural Wonders
+    Another multitap
   </p>
   <p
-    className="sc-jzgbtB hXlfVe"
+    className="sc-jzgbtB dqLGrt"
   >
-    786
+    0
      
     VOTES
   </p>
@@ -5969,7 +5921,12 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/DetailHeader/DetailHeaderBotto
 
 exports[`Storyshots DisplayWrappers|SubjectDetail/DetailHeader/DetailHeaderTopLine Standard 1`] = `
 <div
-  className="sc-rBLzX QrHaI"
+  className="sc-rBLzX lcCOct"
+  commentApi={
+    Object {
+      "commentText": "",
+    }
+  }
 >
   <div
     className="sc-cmthru exAcPQ"
@@ -5985,21 +5942,21 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/DetailHeader/DetailHeaderTopLi
   >
     
      
-    James Montgommery Wheeler Mcguiness
+    ph0ph0
   </div>
   <div
     className="sc-hMFtBS jzWWyr"
   >
     ·
      
-    1 hour ago
+    2 hours ago
   </div>
 </div>
 `;
 
 exports[`Storyshots DisplayWrappers|SubjectDetail/DetailSummary/DetailSummary Cause 1`] = `
 <div
-  className="sc-fjmCvl bUkkTW"
+  className="sc-fjmCvl hdlOKb"
 >
   <div
     className="sc-hZSUBg kUQDla"
@@ -6009,7 +5966,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/DetailSummary/DetailSummary Ca
     </svg>
   </div>
   <div
-    className="sc-CtfFt GsWdW"
+    className="sc-CtfFt eLblHV"
   >
     12
      
@@ -6022,7 +5979,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/DetailSummary/DetailSummary Ca
     1234567890
   </div>
   <p
-    className="sc-jzgbtB sc-hGoxap btoqhK"
+    className="sc-jzgbtB sc-hGoxap cnXItZ"
   >
     37
      
@@ -6081,7 +6038,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/DetailSummary/DetailSummary Ca
 
 exports[`Storyshots DisplayWrappers|SubjectDetail/DetailSummary/DetailSummary Post 1`] = `
 <div
-  className="sc-fjmCvl bUkkTW"
+  className="sc-fjmCvl hdlOKb"
 >
   <div
     className="sc-hZSUBg kUQDla"
@@ -6091,7 +6048,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/DetailSummary/DetailSummary Po
     </svg>
   </div>
   <div
-    className="sc-CtfFt GsWdW"
+    className="sc-CtfFt eLblHV"
   >
     12
      
@@ -6104,7 +6061,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/DetailSummary/DetailSummary Po
     1234567890
   </div>
   <p
-    className="sc-jzgbtB sc-hGoxap cyZTgV"
+    className="sc-jzgbtB sc-hGoxap cVGHVe"
   >
     37
      
@@ -6163,16 +6120,16 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/DetailSummary/DetailSummary Po
 
 exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetail Cause 1`] = `
 <div
-  className="sc-krDsej bWrHcm"
+  className="sc-krDsej kxPVy"
 >
   <div
-    className="sc-bHwgHz ihdQdC"
+    className="sc-bHwgHz DiLdU"
   >
     <div
       className="sc-bMvGRv gfrxfP"
     >
       <div
-        className="sc-rBLzX QrHaI"
+        className="sc-rBLzX lcCOct"
       >
         <div
           className="sc-cmthru exAcPQ"
@@ -6188,18 +6145,17 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetail Cause 1`] = `
         >
           
            
-          James Montgommery Wheeler Mcguiness
+          James Wheeler Montgommery McGuiness
         </div>
         <div
           className="sc-hMFtBS jzWWyr"
         >
           ·
            
-          1 hour ago
         </div>
       </div>
       <div
-        className="sc-gJWqzi fiqOtF"
+        className="sc-gJWqzi kGJKPY"
       >
         <p
           className="sc-fhYwyz kKXIUW"
@@ -6207,7 +6163,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetail Cause 1`] = `
           Puerto Rico - Cherish Its Natural Wonders
         </p>
         <p
-          className="sc-jzgbtB gRHGvI"
+          className="sc-jzgbtB eSlebr"
         >
           147
            
@@ -6215,12 +6171,8 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetail Cause 1`] = `
         </p>
       </div>
     </div>
-    <img
-      className="sc-cQFLBn sc-TFwJa gFIBEH"
-      src="PuertoRico_VdPR.jpg"
-    />
     <div
-      className="sc-fjmCvl bUkkTW"
+      className="sc-fjmCvl hdlOKb"
     >
       <div
         className="sc-hZSUBg kUQDla"
@@ -6230,9 +6182,9 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetail Cause 1`] = `
         </svg>
       </div>
       <div
-        className="sc-CtfFt GsWdW"
+        className="sc-CtfFt eLblHV"
       >
-        10
+        0
          
         Comments
       </div>
@@ -6243,7 +6195,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetail Cause 1`] = `
         1ABC
       </div>
       <p
-        className="sc-jzgbtB sc-hGoxap btoqhK"
+        className="sc-jzgbtB sc-hGoxap cnXItZ"
       >
         147
          
@@ -6299,7 +6251,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetail Cause 1`] = `
       </svg>
     </div>
     <div
-      className="sc-gFaPwZ dWlkmi"
+      className="sc-gFaPwZ eiknPA"
     >
       <p
         className="sc-eerKOB fSrSef"
@@ -6311,874 +6263,26 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetail Cause 1`] = `
       >
         http://www.fideicomiso.org/home.html
       </a>
-      <div
-        className="sc-bnXvFD gLPeIL"
-      >
-        <p
-          className="sc-dymIpo gUDXIK"
-        >
-          Comment as
-        </p>
-        <p
-          className="sc-cpmLhU dmfwbN"
-        >
-          James Wheeler
-        </p>
-      </div>
-      <div
-        className="sc-eilVRo dMZKIE"
-      >
-        <textarea
-          className="sc-dUjcNx gwyAGA"
-          placeholder="What are your thoughts?"
-        />
-        <button
-          className="sc-jWBwVP bxySJh sc-gHboQg jKGuAp"
-        >
-          Comment
-        </button>
-      </div>
     </div>
     <div
-      className="sc-fOKMvo ePHExU"
-    >
-      <div
-        className="sc-fYiAbW isVHhR"
-      >
-        <div
-          className="sc-cbkKFq eXXgbI"
-        >
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            
-             
-            James Wheeler
-          </div>
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            ·
-             
-            1 hour ago
-          </div>
-          <p
-            className="sc-lkqHmb jFaJDg"
-          >
-            456
-             
-            VOTES
-          </p>
-          <svg
-            className="sc-eLExRp gQKCDm"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-          <svg
-            className="sc-eLExRp fCuDeL"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-        </div>
-        <p
-          className="sc-krvtoX fbFKGf"
-        >
-          We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-        </p>
-      </div>
-      <div
-        className="sc-fYiAbW isVHhR"
-      >
-        <div
-          className="sc-cbkKFq eXXgbI"
-        >
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            
-             
-            James Wheeler
-          </div>
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            ·
-             
-            1 hour ago
-          </div>
-          <p
-            className="sc-lkqHmb jFaJDg"
-          >
-            456
-             
-            VOTES
-          </p>
-          <svg
-            className="sc-eLExRp gQKCDm"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-          <svg
-            className="sc-eLExRp fCuDeL"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-        </div>
-        <p
-          className="sc-krvtoX fbFKGf"
-        >
-          We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-        </p>
-      </div>
-      <div
-        className="sc-fYiAbW isVHhR"
-      >
-        <div
-          className="sc-cbkKFq eXXgbI"
-        >
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            
-             
-            James Wheeler
-          </div>
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            ·
-             
-            1 hour ago
-          </div>
-          <p
-            className="sc-lkqHmb jFaJDg"
-          >
-            456
-             
-            VOTES
-          </p>
-          <svg
-            className="sc-eLExRp gQKCDm"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-          <svg
-            className="sc-eLExRp fCuDeL"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-        </div>
-        <p
-          className="sc-krvtoX fbFKGf"
-        >
-          We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-        </p>
-      </div>
-      <div
-        className="sc-fYiAbW isVHhR"
-      >
-        <div
-          className="sc-cbkKFq eXXgbI"
-        >
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            
-             
-            James Wheeler
-          </div>
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            ·
-             
-            1 hour ago
-          </div>
-          <p
-            className="sc-lkqHmb jFaJDg"
-          >
-            456
-             
-            VOTES
-          </p>
-          <svg
-            className="sc-eLExRp gQKCDm"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-          <svg
-            className="sc-eLExRp fCuDeL"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-        </div>
-        <p
-          className="sc-krvtoX fbFKGf"
-        >
-          We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-        </p>
-      </div>
-      <div
-        className="sc-fYiAbW isVHhR"
-      >
-        <div
-          className="sc-cbkKFq eXXgbI"
-        >
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            
-             
-            James Wheeler
-          </div>
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            ·
-             
-            1 hour ago
-          </div>
-          <p
-            className="sc-lkqHmb jFaJDg"
-          >
-            456
-             
-            VOTES
-          </p>
-          <svg
-            className="sc-eLExRp gQKCDm"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-          <svg
-            className="sc-eLExRp fCuDeL"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-        </div>
-        <p
-          className="sc-krvtoX fbFKGf"
-        >
-          We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-        </p>
-      </div>
-      <div
-        className="sc-fYiAbW isVHhR"
-      >
-        <div
-          className="sc-cbkKFq eXXgbI"
-        >
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            
-             
-            James Wheeler
-          </div>
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            ·
-             
-            1 hour ago
-          </div>
-          <p
-            className="sc-lkqHmb jFaJDg"
-          >
-            456
-             
-            VOTES
-          </p>
-          <svg
-            className="sc-eLExRp gQKCDm"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-          <svg
-            className="sc-eLExRp fCuDeL"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-        </div>
-        <p
-          className="sc-krvtoX fbFKGf"
-        >
-          We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-        </p>
-      </div>
-      <div
-        className="sc-fYiAbW isVHhR"
-      >
-        <div
-          className="sc-cbkKFq eXXgbI"
-        >
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            
-             
-            James Wheeler
-          </div>
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            ·
-             
-            1 hour ago
-          </div>
-          <p
-            className="sc-lkqHmb jFaJDg"
-          >
-            456
-             
-            VOTES
-          </p>
-          <svg
-            className="sc-eLExRp gQKCDm"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-          <svg
-            className="sc-eLExRp fCuDeL"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-        </div>
-        <p
-          className="sc-krvtoX fbFKGf"
-        >
-          We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-        </p>
-      </div>
-      <div
-        className="sc-fYiAbW isVHhR"
-      >
-        <div
-          className="sc-cbkKFq eXXgbI"
-        >
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            
-             
-            James Wheeler
-          </div>
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            ·
-             
-            1 hour ago
-          </div>
-          <p
-            className="sc-lkqHmb jFaJDg"
-          >
-            456
-             
-            VOTES
-          </p>
-          <svg
-            className="sc-eLExRp gQKCDm"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-          <svg
-            className="sc-eLExRp fCuDeL"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-        </div>
-        <p
-          className="sc-krvtoX fbFKGf"
-        >
-          We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-        </p>
-      </div>
-      <div
-        className="sc-fYiAbW isVHhR"
-      >
-        <div
-          className="sc-cbkKFq eXXgbI"
-        >
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            
-             
-            James Wheeler
-          </div>
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            ·
-             
-            1 hour ago
-          </div>
-          <p
-            className="sc-lkqHmb jFaJDg"
-          >
-            456
-             
-            VOTES
-          </p>
-          <svg
-            className="sc-eLExRp gQKCDm"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-          <svg
-            className="sc-eLExRp fCuDeL"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-        </div>
-        <p
-          className="sc-krvtoX fbFKGf"
-        >
-          We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-        </p>
-      </div>
-      <div
-        className="sc-fYiAbW isVHhR"
-      >
-        <div
-          className="sc-cbkKFq eXXgbI"
-        >
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            
-             
-            James Wheeler
-          </div>
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            ·
-             
-            1 hour ago
-          </div>
-          <p
-            className="sc-lkqHmb jFaJDg"
-          >
-            456
-             
-            VOTES
-          </p>
-          <svg
-            className="sc-eLExRp gQKCDm"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-          <svg
-            className="sc-eLExRp fCuDeL"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-        </div>
-        <p
-          className="sc-krvtoX fbFKGf"
-        >
-          We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-        </p>
-      </div>
-    </div>
+      className="sc-fOKMvo dvBRsC"
+    />
   </div>
 </div>
 `;
 
 exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetail Post 1`] = `
 <div
-  className="sc-krDsej bWrHcm"
+  className="sc-krDsej kxPVy"
 >
   <div
-    className="sc-bHwgHz ihdQdC"
+    className="sc-bHwgHz DiLdU"
   >
     <div
       className="sc-bMvGRv gfrxfP"
     >
       <div
-        className="sc-rBLzX QrHaI"
+        className="sc-rBLzX lcCOct"
       >
         <div
           className="sc-cmthru exAcPQ"
@@ -7194,18 +6298,17 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetail Post 1`] = `
         >
           
            
-          James Montgommery Wheeler Mcguiness
+          James Wheeler Montgommery McGuiness
         </div>
         <div
           className="sc-hMFtBS jzWWyr"
         >
           ·
            
-          1 hour ago
         </div>
       </div>
       <div
-        className="sc-gJWqzi fiqOtF"
+        className="sc-gJWqzi kGJKPY"
       >
         <p
           className="sc-fhYwyz kKXIUW"
@@ -7213,7 +6316,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetail Post 1`] = `
           Puerto Rico - Cherish Its Natural Wonders
         </p>
         <p
-          className="sc-jzgbtB hXlfVe"
+          className="sc-jzgbtB dqLGrt"
         >
           147
            
@@ -7221,12 +6324,8 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetail Post 1`] = `
         </p>
       </div>
     </div>
-    <img
-      className="sc-cQFLBn sc-TFwJa gFIBEH"
-      src="PuertoRico_VdPR.jpg"
-    />
     <div
-      className="sc-fjmCvl bUkkTW"
+      className="sc-fjmCvl hdlOKb"
     >
       <div
         className="sc-hZSUBg kUQDla"
@@ -7236,9 +6335,9 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetail Post 1`] = `
         </svg>
       </div>
       <div
-        className="sc-CtfFt GsWdW"
+        className="sc-CtfFt eLblHV"
       >
-        10
+        0
          
         Comments
       </div>
@@ -7249,7 +6348,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetail Post 1`] = `
         1ABC
       </div>
       <p
-        className="sc-jzgbtB sc-hGoxap cyZTgV"
+        className="sc-jzgbtB sc-hGoxap cVGHVe"
       >
         147
          
@@ -7305,7 +6404,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetail Post 1`] = `
       </svg>
     </div>
     <div
-      className="sc-gFaPwZ dWlkmi"
+      className="sc-gFaPwZ eiknPA"
     >
       <p
         className="sc-eerKOB fSrSef"
@@ -7317,871 +6416,23 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetail Post 1`] = `
       >
         http://www.fideicomiso.org/home.html
       </a>
-      <div
-        className="sc-bnXvFD gLPeIL"
-      >
-        <p
-          className="sc-dymIpo gUDXIK"
-        >
-          Comment as
-        </p>
-        <p
-          className="sc-cpmLhU cYreMq"
-        >
-          James Wheeler
-        </p>
-      </div>
-      <div
-        className="sc-eilVRo dMZKIE"
-      >
-        <textarea
-          className="sc-dUjcNx gwyAGA"
-          placeholder="What are your thoughts?"
-        />
-        <button
-          className="sc-jWBwVP brZSDK sc-gHboQg jmIqYS"
-        >
-          Comment
-        </button>
-      </div>
     </div>
     <div
-      className="sc-fOKMvo ePHExU"
-    >
-      <div
-        className="sc-fYiAbW isVHhR"
-      >
-        <div
-          className="sc-cbkKFq eXXgbI"
-        >
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            
-             
-            James Wheeler
-          </div>
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            ·
-             
-            1 hour ago
-          </div>
-          <p
-            className="sc-lkqHmb jFaJDg"
-          >
-            456
-             
-            VOTES
-          </p>
-          <svg
-            className="sc-eLExRp gQKCDm"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-          <svg
-            className="sc-eLExRp fCuDeL"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-        </div>
-        <p
-          className="sc-krvtoX fbFKGf"
-        >
-          We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-        </p>
-      </div>
-      <div
-        className="sc-fYiAbW isVHhR"
-      >
-        <div
-          className="sc-cbkKFq eXXgbI"
-        >
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            
-             
-            James Wheeler
-          </div>
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            ·
-             
-            1 hour ago
-          </div>
-          <p
-            className="sc-lkqHmb jFaJDg"
-          >
-            456
-             
-            VOTES
-          </p>
-          <svg
-            className="sc-eLExRp gQKCDm"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-          <svg
-            className="sc-eLExRp fCuDeL"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-        </div>
-        <p
-          className="sc-krvtoX fbFKGf"
-        >
-          We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-        </p>
-      </div>
-      <div
-        className="sc-fYiAbW isVHhR"
-      >
-        <div
-          className="sc-cbkKFq eXXgbI"
-        >
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            
-             
-            James Wheeler
-          </div>
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            ·
-             
-            1 hour ago
-          </div>
-          <p
-            className="sc-lkqHmb jFaJDg"
-          >
-            456
-             
-            VOTES
-          </p>
-          <svg
-            className="sc-eLExRp gQKCDm"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-          <svg
-            className="sc-eLExRp fCuDeL"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-        </div>
-        <p
-          className="sc-krvtoX fbFKGf"
-        >
-          We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-        </p>
-      </div>
-      <div
-        className="sc-fYiAbW isVHhR"
-      >
-        <div
-          className="sc-cbkKFq eXXgbI"
-        >
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            
-             
-            James Wheeler
-          </div>
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            ·
-             
-            1 hour ago
-          </div>
-          <p
-            className="sc-lkqHmb jFaJDg"
-          >
-            456
-             
-            VOTES
-          </p>
-          <svg
-            className="sc-eLExRp gQKCDm"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-          <svg
-            className="sc-eLExRp fCuDeL"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-        </div>
-        <p
-          className="sc-krvtoX fbFKGf"
-        >
-          We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-        </p>
-      </div>
-      <div
-        className="sc-fYiAbW isVHhR"
-      >
-        <div
-          className="sc-cbkKFq eXXgbI"
-        >
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            
-             
-            James Wheeler
-          </div>
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            ·
-             
-            1 hour ago
-          </div>
-          <p
-            className="sc-lkqHmb jFaJDg"
-          >
-            456
-             
-            VOTES
-          </p>
-          <svg
-            className="sc-eLExRp gQKCDm"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-          <svg
-            className="sc-eLExRp fCuDeL"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-        </div>
-        <p
-          className="sc-krvtoX fbFKGf"
-        >
-          We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-        </p>
-      </div>
-      <div
-        className="sc-fYiAbW isVHhR"
-      >
-        <div
-          className="sc-cbkKFq eXXgbI"
-        >
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            
-             
-            James Wheeler
-          </div>
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            ·
-             
-            1 hour ago
-          </div>
-          <p
-            className="sc-lkqHmb jFaJDg"
-          >
-            456
-             
-            VOTES
-          </p>
-          <svg
-            className="sc-eLExRp gQKCDm"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-          <svg
-            className="sc-eLExRp fCuDeL"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-        </div>
-        <p
-          className="sc-krvtoX fbFKGf"
-        >
-          We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-        </p>
-      </div>
-      <div
-        className="sc-fYiAbW isVHhR"
-      >
-        <div
-          className="sc-cbkKFq eXXgbI"
-        >
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            
-             
-            James Wheeler
-          </div>
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            ·
-             
-            1 hour ago
-          </div>
-          <p
-            className="sc-lkqHmb jFaJDg"
-          >
-            456
-             
-            VOTES
-          </p>
-          <svg
-            className="sc-eLExRp gQKCDm"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-          <svg
-            className="sc-eLExRp fCuDeL"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-        </div>
-        <p
-          className="sc-krvtoX fbFKGf"
-        >
-          We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-        </p>
-      </div>
-      <div
-        className="sc-fYiAbW isVHhR"
-      >
-        <div
-          className="sc-cbkKFq eXXgbI"
-        >
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            
-             
-            James Wheeler
-          </div>
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            ·
-             
-            1 hour ago
-          </div>
-          <p
-            className="sc-lkqHmb jFaJDg"
-          >
-            456
-             
-            VOTES
-          </p>
-          <svg
-            className="sc-eLExRp gQKCDm"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-          <svg
-            className="sc-eLExRp fCuDeL"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-        </div>
-        <p
-          className="sc-krvtoX fbFKGf"
-        >
-          We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-        </p>
-      </div>
-      <div
-        className="sc-fYiAbW isVHhR"
-      >
-        <div
-          className="sc-cbkKFq eXXgbI"
-        >
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            
-             
-            James Wheeler
-          </div>
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            ·
-             
-            1 hour ago
-          </div>
-          <p
-            className="sc-lkqHmb jFaJDg"
-          >
-            456
-             
-            VOTES
-          </p>
-          <svg
-            className="sc-eLExRp gQKCDm"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-          <svg
-            className="sc-eLExRp fCuDeL"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-        </div>
-        <p
-          className="sc-krvtoX fbFKGf"
-        >
-          We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-        </p>
-      </div>
-      <div
-        className="sc-fYiAbW isVHhR"
-      >
-        <div
-          className="sc-cbkKFq eXXgbI"
-        >
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            
-             
-            James Wheeler
-          </div>
-          <div
-            className="sc-hMFtBS jzWWyr"
-          >
-            ·
-             
-            1 hour ago
-          </div>
-          <p
-            className="sc-lkqHmb jFaJDg"
-          >
-            456
-             
-            VOTES
-          </p>
-          <svg
-            className="sc-eLExRp gQKCDm"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-          <svg
-            className="sc-eLExRp fCuDeL"
-            height="17px"
-            viewBox="0 0 14 20"
-            width="14px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g
-              fill="#979797"
-              transform="translate(4, 0.000000)"
-            >
-              <path
-                d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-                id="Line"
-              />
-              <rect
-                height="6.66666667"
-                id="Rectangle"
-                width="6"
-                x="0"
-                y="12.8571429"
-              />
-            </g>
-          </svg>
-        </div>
-        <p
-          className="sc-krvtoX fbFKGf"
-        >
-          We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-        </p>
-      </div>
-    </div>
+      className="sc-fOKMvo dvBRsC"
+    />
   </div>
 </div>
 `;
 
 exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDetailContent Cause_withComments 1`] = `
 <div
-  className="sc-bHwgHz ihdQdC"
+  className="sc-bHwgHz DiLdU"
 >
   <div
     className="sc-bMvGRv gfrxfP"
   >
     <div
-      className="sc-rBLzX QrHaI"
+      className="sc-rBLzX lcCOct"
     >
       <div
         className="sc-cmthru exAcPQ"
@@ -8197,18 +6448,17 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
       >
         
          
-        James Montgommery Wheeler Mcguiness
+        James Wheeler Montgommery McGuiness
       </div>
       <div
         className="sc-hMFtBS jzWWyr"
       >
         ·
          
-        1 hour ago
       </div>
     </div>
     <div
-      className="sc-gJWqzi fiqOtF"
+      className="sc-gJWqzi kGJKPY"
     >
       <p
         className="sc-fhYwyz kKXIUW"
@@ -8216,7 +6466,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
         Puerto Rico - Cherish Its Natural Wonders
       </p>
       <p
-        className="sc-jzgbtB gRHGvI"
+        className="sc-jzgbtB eSlebr"
       >
         147
          
@@ -8224,12 +6474,8 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
       </p>
     </div>
   </div>
-  <img
-    className="sc-cQFLBn sc-TFwJa gFIBEH"
-    src="PuertoRico_VdPR.jpg"
-  />
   <div
-    className="sc-fjmCvl bUkkTW"
+    className="sc-fjmCvl hdlOKb"
   >
     <div
       className="sc-hZSUBg kUQDla"
@@ -8239,9 +6485,9 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
       </svg>
     </div>
     <div
-      className="sc-CtfFt GsWdW"
+      className="sc-CtfFt eLblHV"
     >
-      10
+      0
        
       Comments
     </div>
@@ -8252,7 +6498,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
       1ABC
     </div>
     <p
-      className="sc-jzgbtB sc-hGoxap btoqhK"
+      className="sc-jzgbtB sc-hGoxap cnXItZ"
     >
       147
        
@@ -8308,7 +6554,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
     </svg>
   </div>
   <div
-    className="sc-gFaPwZ dWlkmi"
+    className="sc-gFaPwZ eiknPA"
   >
     <p
       className="sc-eerKOB fSrSef"
@@ -8320,870 +6566,22 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
     >
       http://www.fideicomiso.org/home.html
     </a>
-    <div
-      className="sc-bnXvFD gLPeIL"
-    >
-      <p
-        className="sc-dymIpo gUDXIK"
-      >
-        Comment as
-      </p>
-      <p
-        className="sc-cpmLhU dmfwbN"
-      >
-        James Wheeler
-      </p>
-    </div>
-    <div
-      className="sc-eilVRo dMZKIE"
-    >
-      <textarea
-        className="sc-dUjcNx gwyAGA"
-        placeholder="What are your thoughts?"
-      />
-      <button
-        className="sc-jWBwVP bxySJh sc-gHboQg jKGuAp"
-      >
-        Comment
-      </button>
-    </div>
   </div>
   <div
-    className="sc-fOKMvo ePHExU"
-  >
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-  </div>
+    className="sc-fOKMvo dvBRsC"
+  />
 </div>
 `;
 
 exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDetailContent Cause_withoutComments 1`] = `
 <div
-  className="sc-bHwgHz ihdQdC"
+  className="sc-bHwgHz DiLdU"
 >
   <div
     className="sc-bMvGRv gfrxfP"
   >
     <div
-      className="sc-rBLzX QrHaI"
+      className="sc-rBLzX lcCOct"
     >
       <div
         className="sc-cmthru exAcPQ"
@@ -9199,18 +6597,17 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
       >
         
          
-        James Montgommery Wheeler Mcguiness
+        James Wheeler Montgommery McGuiness
       </div>
       <div
         className="sc-hMFtBS jzWWyr"
       >
         ·
          
-        1 hour ago
       </div>
     </div>
     <div
-      className="sc-gJWqzi fiqOtF"
+      className="sc-gJWqzi kGJKPY"
     >
       <p
         className="sc-fhYwyz kKXIUW"
@@ -9218,7 +6615,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
         Puerto Rico - Cherish Its Natural Wonders
       </p>
       <p
-        className="sc-jzgbtB gRHGvI"
+        className="sc-jzgbtB eSlebr"
       >
         147
          
@@ -9226,12 +6623,8 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
       </p>
     </div>
   </div>
-  <img
-    className="sc-cQFLBn sc-TFwJa gFIBEH"
-    src="PuertoRico_VdPR.jpg"
-  />
   <div
-    className="sc-fjmCvl bUkkTW"
+    className="sc-fjmCvl hdlOKb"
   >
     <div
       className="sc-hZSUBg kUQDla"
@@ -9241,9 +6634,9 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
       </svg>
     </div>
     <div
-      className="sc-CtfFt GsWdW"
+      className="sc-CtfFt eLblHV"
     >
-      10
+      0
        
       Comments
     </div>
@@ -9254,7 +6647,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
       1ABC
     </div>
     <p
-      className="sc-jzgbtB sc-hGoxap btoqhK"
+      className="sc-jzgbtB sc-hGoxap cnXItZ"
     >
       147
        
@@ -9310,7 +6703,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
     </svg>
   </div>
   <div
-    className="sc-gFaPwZ dWlkmi"
+    className="sc-gFaPwZ eiknPA"
   >
     <p
       className="sc-eerKOB fSrSef"
@@ -9322,870 +6715,22 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
     >
       http://www.fideicomiso.org/home.html
     </a>
-    <div
-      className="sc-bnXvFD gLPeIL"
-    >
-      <p
-        className="sc-dymIpo gUDXIK"
-      >
-        Comment as
-      </p>
-      <p
-        className="sc-cpmLhU dmfwbN"
-      >
-        James Wheeler
-      </p>
-    </div>
-    <div
-      className="sc-eilVRo dMZKIE"
-    >
-      <textarea
-        className="sc-dUjcNx gwyAGA"
-        placeholder="What are your thoughts?"
-      />
-      <button
-        className="sc-jWBwVP bxySJh sc-gHboQg jKGuAp"
-      >
-        Comment
-      </button>
-    </div>
   </div>
   <div
-    className="sc-fOKMvo ePHExU"
-  >
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-  </div>
+    className="sc-fOKMvo dvBRsC"
+  />
 </div>
 `;
 
 exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDetailContent Post_withComments 1`] = `
 <div
-  className="sc-bHwgHz ihdQdC"
+  className="sc-bHwgHz DiLdU"
 >
   <div
     className="sc-bMvGRv gfrxfP"
   >
     <div
-      className="sc-rBLzX QrHaI"
+      className="sc-rBLzX lcCOct"
     >
       <div
         className="sc-cmthru exAcPQ"
@@ -10201,18 +6746,17 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
       >
         
          
-        James Montgommery Wheeler Mcguiness
+        James Wheeler Montgommery McGuiness
       </div>
       <div
         className="sc-hMFtBS jzWWyr"
       >
         ·
          
-        1 hour ago
       </div>
     </div>
     <div
-      className="sc-gJWqzi fiqOtF"
+      className="sc-gJWqzi kGJKPY"
     >
       <p
         className="sc-fhYwyz kKXIUW"
@@ -10220,7 +6764,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
         Puerto Rico - Cherish Its Natural Wonders
       </p>
       <p
-        className="sc-jzgbtB hXlfVe"
+        className="sc-jzgbtB dqLGrt"
       >
         147
          
@@ -10228,12 +6772,8 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
       </p>
     </div>
   </div>
-  <img
-    className="sc-cQFLBn sc-TFwJa gFIBEH"
-    src="PuertoRico_VdPR.jpg"
-  />
   <div
-    className="sc-fjmCvl bUkkTW"
+    className="sc-fjmCvl hdlOKb"
   >
     <div
       className="sc-hZSUBg kUQDla"
@@ -10243,9 +6783,9 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
       </svg>
     </div>
     <div
-      className="sc-CtfFt GsWdW"
+      className="sc-CtfFt eLblHV"
     >
-      10
+      0
        
       Comments
     </div>
@@ -10256,7 +6796,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
       1ABC
     </div>
     <p
-      className="sc-jzgbtB sc-hGoxap cyZTgV"
+      className="sc-jzgbtB sc-hGoxap cVGHVe"
     >
       147
        
@@ -10312,7 +6852,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
     </svg>
   </div>
   <div
-    className="sc-gFaPwZ dWlkmi"
+    className="sc-gFaPwZ eiknPA"
   >
     <p
       className="sc-eerKOB fSrSef"
@@ -10324,870 +6864,22 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
     >
       http://www.fideicomiso.org/home.html
     </a>
-    <div
-      className="sc-bnXvFD gLPeIL"
-    >
-      <p
-        className="sc-dymIpo gUDXIK"
-      >
-        Comment as
-      </p>
-      <p
-        className="sc-cpmLhU cYreMq"
-      >
-        James Wheeler
-      </p>
-    </div>
-    <div
-      className="sc-eilVRo dMZKIE"
-    >
-      <textarea
-        className="sc-dUjcNx gwyAGA"
-        placeholder="What are your thoughts?"
-      />
-      <button
-        className="sc-jWBwVP brZSDK sc-gHboQg jmIqYS"
-      >
-        Comment
-      </button>
-    </div>
   </div>
   <div
-    className="sc-fOKMvo ePHExU"
-  >
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-  </div>
+    className="sc-fOKMvo dvBRsC"
+  />
 </div>
 `;
 
 exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDetailContent Post_withoutComments 1`] = `
 <div
-  className="sc-bHwgHz ihdQdC"
+  className="sc-bHwgHz DiLdU"
 >
   <div
     className="sc-bMvGRv gfrxfP"
   >
     <div
-      className="sc-rBLzX QrHaI"
+      className="sc-rBLzX lcCOct"
     >
       <div
         className="sc-cmthru exAcPQ"
@@ -11203,18 +6895,17 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
       >
         
          
-        James Montgommery Wheeler Mcguiness
+        James Wheeler Montgommery McGuiness
       </div>
       <div
         className="sc-hMFtBS jzWWyr"
       >
         ·
          
-        1 hour ago
       </div>
     </div>
     <div
-      className="sc-gJWqzi fiqOtF"
+      className="sc-gJWqzi kGJKPY"
     >
       <p
         className="sc-fhYwyz kKXIUW"
@@ -11222,7 +6913,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
         Puerto Rico - Cherish Its Natural Wonders
       </p>
       <p
-        className="sc-jzgbtB hXlfVe"
+        className="sc-jzgbtB dqLGrt"
       >
         147
          
@@ -11230,12 +6921,8 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
       </p>
     </div>
   </div>
-  <img
-    className="sc-cQFLBn sc-TFwJa gFIBEH"
-    src="PuertoRico_VdPR.jpg"
-  />
   <div
-    className="sc-fjmCvl bUkkTW"
+    className="sc-fjmCvl hdlOKb"
   >
     <div
       className="sc-hZSUBg kUQDla"
@@ -11245,9 +6932,9 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
       </svg>
     </div>
     <div
-      className="sc-CtfFt GsWdW"
+      className="sc-CtfFt eLblHV"
     >
-      10
+      0
        
       Comments
     </div>
@@ -11258,7 +6945,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
       1ABC
     </div>
     <p
-      className="sc-jzgbtB sc-hGoxap cyZTgV"
+      className="sc-jzgbtB sc-hGoxap cVGHVe"
     >
       147
        
@@ -11314,7 +7001,7 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
     </svg>
   </div>
   <div
-    className="sc-gFaPwZ dWlkmi"
+    className="sc-gFaPwZ eiknPA"
   >
     <p
       className="sc-eerKOB fSrSef"
@@ -11326,858 +7013,10 @@ exports[`Storyshots DisplayWrappers|SubjectDetail/SubjectDetailContent/SubjectDe
     >
       http://www.fideicomiso.org/home.html
     </a>
-    <div
-      className="sc-bnXvFD gLPeIL"
-    >
-      <p
-        className="sc-dymIpo gUDXIK"
-      >
-        Comment as
-      </p>
-      <p
-        className="sc-cpmLhU cYreMq"
-      >
-        James Wheeler
-      </p>
-    </div>
-    <div
-      className="sc-eilVRo dMZKIE"
-    >
-      <textarea
-        className="sc-dUjcNx gwyAGA"
-        placeholder="What are your thoughts?"
-      />
-      <button
-        className="sc-jWBwVP brZSDK sc-gHboQg jmIqYS"
-      >
-        Comment
-      </button>
-    </div>
   </div>
   <div
-    className="sc-fOKMvo ePHExU"
-  >
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-    <div
-      className="sc-fYiAbW isVHhR"
-    >
-      <div
-        className="sc-cbkKFq eXXgbI"
-      >
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          
-           
-          James Wheeler
-        </div>
-        <div
-          className="sc-hMFtBS jzWWyr"
-        >
-          ·
-           
-          1 hour ago
-        </div>
-        <p
-          className="sc-lkqHmb jFaJDg"
-        >
-          456
-           
-          VOTES
-        </p>
-        <svg
-          className="sc-eLExRp gQKCDm"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-        <svg
-          className="sc-eLExRp fCuDeL"
-          height="17px"
-          viewBox="0 0 14 20"
-          width="14px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            fill="#979797"
-            transform="translate(4, 0.000000)"
-          >
-            <path
-              d="M3,0.476190476 L10,14.4761905 L4,14.476 L4,16.7142857 L2,16.7142857 L2,14.476 L-4,14.4761905 L3,0.476190476 Z"
-              id="Line"
-            />
-            <rect
-              height="6.66666667"
-              id="Rectangle"
-              width="6"
-              x="0"
-              y="12.8571429"
-            />
-          </g>
-        </svg>
-      </div>
-      <p
-        className="sc-krvtoX fbFKGf"
-      >
-        We believe in conservation, not only because it protects native plants, birds and animals, but also because it protects us. After all, you simply can't be healthy in an unhealthy environment. By acting now to protect nature and prevent extinction, we can secure a better future for all.
-      </p>
-    </div>
-  </div>
+    className="sc-fOKMvo dvBRsC"
+  />
 </div>
 `;
 
@@ -12427,6 +7266,7 @@ exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Cause 1`] 
       </div>
       <button
         className="sc-jWBwVP sc-cMljjf eIFYZX"
+        disabled={false}
         onClick={[Function]}
       >
         Create Cause
@@ -12569,6 +7409,7 @@ exports[`Storyshots PageContentWrappers/CreatePages/CreatePageContent Post 1`] =
       </div>
       <button
         className="sc-jWBwVP sc-cMljjf eIFYZX"
+        disabled={false}
         onClick={[Function]}
       >
         Create Cause
@@ -12709,6 +7550,7 @@ exports[`Storyshots PageContentWrappers|CreatePages/CreatePageMainContent Cause 
     </div>
     <button
       className="sc-jWBwVP sc-cMljjf eIFYZX"
+      disabled={false}
       onClick={[Function]}
     >
       Create Cause
@@ -12831,6 +7673,7 @@ exports[`Storyshots PageContentWrappers|CreatePages/CreatePageMainContent Post 1
     </div>
     <button
       className="sc-jWBwVP sc-cMljjf eIFYZX"
+      disabled={false}
       onClick={[Function]}
     >
       Create Cause
@@ -12841,7 +7684,7 @@ exports[`Storyshots PageContentWrappers|CreatePages/CreatePageMainContent Post 1
 
 exports[`Storyshots PageContentWrappers|FeedPages/FeedMainPageContent Profile 1`] = `
 <div
-  className="sc-kLIISr hxcfeX"
+  className="sc-iqzUVk bvpMbL"
 >
   <div
     className="sc-hmXxxW lchCYv"
@@ -12874,15 +7717,17 @@ exports[`Storyshots PageContentWrappers|FeedPages/FeedMainPageContent Profile 1`
       </button>
     </div>
   </div>
-  <div
-    className="sc-bXGyLb coKiLz"
-  />
+  <p
+    className="sc-qrIAp geigJr"
+  >
+    No results found...
+  </p>
 </div>
 `;
 
 exports[`Storyshots PageContentWrappers|FeedPages/FeedMainPageContent Standard 1`] = `
 <div
-  className="sc-kLIISr hxcfeX"
+  className="sc-iqzUVk bvpMbL"
 >
   <div
     className="sc-hmXxxW lchCYv"
@@ -12915,20 +7760,22 @@ exports[`Storyshots PageContentWrappers|FeedPages/FeedMainPageContent Standard 1
       </button>
     </div>
   </div>
-  <div
-    className="sc-bXGyLb coKiLz"
-  />
+  <p
+    className="sc-qrIAp geigJr"
+  >
+    No results found...
+  </p>
 </div>
 `;
 
 exports[`Storyshots PageContentWrappers|FeedPages/FeedPageContent Standard 1`] = `
 <div
-  className="sc-qrIAp hjjrbs"
+  className="sc-ipZHIp cxbnfY"
   pageTitle="Test"
   sidePanelType="Standard"
 >
   <div
-    className="sc-kLIISr hxcfeX"
+    className="sc-iqzUVk bvpMbL"
   >
     <div
       className="sc-hmXxxW lchCYv"
@@ -12961,9 +7808,11 @@ exports[`Storyshots PageContentWrappers|FeedPages/FeedPageContent Standard 1`] =
         </button>
       </div>
     </div>
-    <div
-      className="sc-bXGyLb coKiLz"
-    />
+    <p
+      className="sc-qrIAp geigJr"
+    >
+      No results found...
+    </p>
   </div>
   <div
     className="sc-cHGsZl eWSRSv"
@@ -13009,13 +7858,13 @@ exports[`Storyshots PageContentWrappers|FeedPages/FeedPageContent Standard 1`] =
 
 exports[`Storyshots Pages|MainFeed/MainFeed Standard 1`] = `
 <div
-  className="sc-iqzUVk eFYfCu"
+  className="sc-iGrrsa hVOdgL"
 >
   <div
-    className="sc-qrIAp hjjrbs"
+    className="sc-ipZHIp cxbnfY"
   >
     <div
-      className="sc-kLIISr hxcfeX"
+      className="sc-iqzUVk bvpMbL"
     >
       <div
         className="sc-hmXxxW lchCYv"
@@ -13048,9 +7897,11 @@ exports[`Storyshots Pages|MainFeed/MainFeed Standard 1`] = `
           </button>
         </div>
       </div>
-      <div
-        className="sc-bXGyLb coKiLz"
-      />
+      <p
+        className="sc-qrIAp geigJr"
+      >
+        No results found...
+      </p>
     </div>
     <div
       className="sc-cHGsZl eWSRSv"
@@ -13097,18 +7948,14 @@ exports[`Storyshots Pages|MainFeed/MainFeed Standard 1`] = `
 
 exports[`Storyshots Primitive/Buttons/CommentButton Cause 1`] = `
 <button
-  className="sc-jWBwVP bxySJh sc-gHboQg jKGuAp"
->
-  Comment
-</button>
+  className="sc-jWBwVP bxySJh sc-gHboQg iYDuFe"
+/>
 `;
 
 exports[`Storyshots Primitive/Buttons/CommentButton Post 1`] = `
 <button
-  className="sc-jWBwVP brZSDK sc-gHboQg jmIqYS"
->
-  Comment
-</button>
+  className="sc-jWBwVP brZSDK sc-gHboQg ekUlI"
+/>
 `;
 
 exports[`Storyshots Primitive/Images/VoteArrow Small 1`] = `
@@ -13230,9 +8077,7 @@ exports[`Storyshots Primitive/text/SubjectDetailCommentInfo Cause 1`] = `
   </p>
   <p
     className="sc-cpmLhU dmfwbN"
-  >
-    James Wheeler
-  </p>
+  />
 </div>
 `;
 
@@ -13247,15 +8092,13 @@ exports[`Storyshots Primitive/text/SubjectDetailCommentInfo Post 1`] = `
   </p>
   <p
     className="sc-cpmLhU cYreMq"
-  >
-    James Wheeler
-  </p>
+  />
 </div>
 `;
 
 exports[`Storyshots Primitive/text/SubjectDetailCommentTextAreaInput Standard 1`] = `
 <textarea
-  className="sc-dUjcNx gwyAGA"
+  className="sc-dUjcNx bkslMx"
   placeholder="What are your thoughts?"
 />
 `;
@@ -13530,7 +8373,7 @@ exports[`Storyshots Primitive|Buttons/SignUpInCard/SwitchStateButton Sign Up Car
 
 exports[`Storyshots Primitive|Buttons/UploadImageButton Cause 1`] = `
 <button
-  className="sc-ipZHIp dtanZS"
+  className="sc-bmyXtO eKEHXD"
 >
   Upload Image
 </button>
@@ -13538,7 +8381,7 @@ exports[`Storyshots Primitive|Buttons/UploadImageButton Cause 1`] = `
 
 exports[`Storyshots Primitive|Buttons/UploadImageButton Profile 1`] = `
 <button
-  className="sc-ipZHIp dXPcyf"
+  className="sc-bmyXtO dozvEn"
 >
   Upload Image
 </button>
@@ -13872,7 +8715,7 @@ exports[`Storyshots Primitive|Images/StateTitleSVGs Link_Post 1`] = `
 
 exports[`Storyshots Primitive|Images/SubjectDetailImage Standard 1`] = `
 <img
-  className="sc-cQFLBn sc-TFwJa gFIBEH"
+  className="sc-cQFLBn sc-TFwJa jqrxgT"
   src="PuertoRico_VdPR.jpg"
 />
 `;
@@ -13895,7 +8738,7 @@ exports[`Storyshots Primitive|Inputs/LocationInput Standard 1`] = `
 
 exports[`Storyshots Primitive|Inputs/NameInput Standard 1`] = `
 <input
-  className="sc-iGrrsa igCyfT"
+  className="sc-dEoRIm jGDHBB"
   onChange={[Function]}
   placeholder="Name"
   value=""
@@ -13904,28 +8747,28 @@ exports[`Storyshots Primitive|Inputs/NameInput Standard 1`] = `
 
 exports[`Storyshots Primitive|Inputs/SearchBar C 1`] = `
 <input
-  className="sc-jDwBTQ llmlte"
+  className="sc-jDwBTQ iYvYRr"
   placeholder="Search Causes"
 />
 `;
 
 exports[`Storyshots Primitive|Inputs/SearchBar C&P 1`] = `
 <input
-  className="sc-jDwBTQ llmlte"
+  className="sc-jDwBTQ iYvYRr"
   placeholder="Search Causes and Posts"
 />
 `;
 
 exports[`Storyshots Primitive|Inputs/SearchBar P 1`] = `
 <input
-  className="sc-jDwBTQ llmlte"
+  className="sc-jDwBTQ iYvYRr"
   placeholder="Search Posts"
 />
 `;
 
 exports[`Storyshots Primitive|Inputs/SearchBar Standard 1`] = `
 <input
-  className="sc-jDwBTQ llmlte"
+  className="sc-jDwBTQ iYvYRr"
   placeholder="Search"
 />
 `;
@@ -14230,16 +9073,16 @@ exports[`Storyshots Primitive|text/SubjectContent Standard 1`] = `
 
 exports[`Storyshots Primitive|text/SubjectDetailCommentsIndicator 0Comments 1`] = `
 <div
-  className="sc-CtfFt GsWdW"
+  className="sc-CtfFt eLblHV"
 >
    
-  0 Comments
+  Comments
 </div>
 `;
 
 exports[`Storyshots Primitive|text/SubjectDetailCommentsIndicator 1Comment 1`] = `
 <div
-  className="sc-CtfFt GsWdW"
+  className="sc-CtfFt eLblHV"
 >
   1
    
@@ -14249,7 +9092,7 @@ exports[`Storyshots Primitive|text/SubjectDetailCommentsIndicator 1Comment 1`] =
 
 exports[`Storyshots Primitive|text/SubjectDetailCommentsIndicator ManyComments 1`] = `
 <div
-  className="sc-CtfFt GsWdW"
+  className="sc-CtfFt eLblHV"
 >
   30
    
@@ -14301,16 +9144,16 @@ exports[`Storyshots Primitive|text/SubjectDetailTitle Standard 1`] = `
 
 exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject 0Votes 1`] = `
 <p
-  className="sc-jzgbtB sc-hGoxap cyZTgV"
+  className="sc-jzgbtB sc-hGoxap cVGHVe"
 >
    
-  0 VOTES
+  VOTES
 </p>
 `;
 
 exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject 1Vote 1`] = `
 <p
-  className="sc-jzgbtB sc-hGoxap cyZTgV"
+  className="sc-jzgbtB sc-hGoxap cVGHVe"
 >
   1
    
@@ -14320,7 +9163,7 @@ exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject 1Vote 1`] = `
 
 exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject DetailHeading_Cause 1`] = `
 <p
-  className="sc-jzgbtB gRHGvI"
+  className="sc-jzgbtB eSlebr"
 >
   1234
    
@@ -14330,7 +9173,7 @@ exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject DetailHeading_Cau
 
 exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject DetailHeading_Post 1`] = `
 <p
-  className="sc-jzgbtB hXlfVe"
+  className="sc-jzgbtB dqLGrt"
 >
   1234
    
@@ -14340,7 +9183,7 @@ exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject DetailHeading_Pos
 
 exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject DetailSummary_Cause 1`] = `
 <p
-  className="sc-jzgbtB sc-hGoxap cyZTgV"
+  className="sc-jzgbtB sc-hGoxap cVGHVe"
 >
   1234
    
@@ -14350,7 +9193,7 @@ exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject DetailSummary_Cau
 
 exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject DetailSummary_Post 1`] = `
 <p
-  className="sc-jzgbtB sc-hGoxap cyZTgV"
+  className="sc-jzgbtB sc-hGoxap cVGHVe"
 >
   1234
    
@@ -14360,7 +9203,7 @@ exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject DetailSummary_Pos
 
 exports[`Storyshots Primitive|text/SubjectDetailVotesOnSubject ManyVotes 1`] = `
 <p
-  className="sc-jzgbtB sc-hGoxap cyZTgV"
+  className="sc-jzgbtB sc-hGoxap cVGHVe"
 >
   100
    
