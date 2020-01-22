@@ -51,7 +51,11 @@ const CreateSubjectWrapper = ({ secondary, ...props }) => {
       <TitlesPanel secondary={secondary} api={api} />
       {renderSwitch()}
       {api.error && <ErrorText>{api.error.message}</ErrorText>}
-      <ActionButton secondary={secondary} onClick={() => api.submit(secondary)}>
+      <ActionButton
+        secondary={secondary}
+        onClick={() => api.submit(secondary)}
+        disabled={api.loading && "disabled"}
+      >
         {api.loading ? (
           <LoadingSpinner />
         ) : secondary ? (

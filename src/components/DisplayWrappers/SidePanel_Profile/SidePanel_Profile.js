@@ -26,7 +26,11 @@ const SidePanelWrapper = props => {
       <PRFlag />
       <Logo />
       <SidePanelProfileBody api={api} />
-      <ActionButton secondary onClick={() => api.submit()}>
+      <ActionButton
+        secondary
+        onClick={() => api.submit()}
+        disabled={api.loading && "disabled"}
+      >
         {api.loading ? <LoadingSpinner /> : "Change"}
       </ActionButton>
     </div>

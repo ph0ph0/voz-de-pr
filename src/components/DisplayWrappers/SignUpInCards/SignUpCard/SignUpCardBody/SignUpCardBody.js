@@ -149,7 +149,12 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
       <ProfPicSelector api={api} />
       {/* <Avatars api={api} /> */}
       {api.error && <Error>{api.error.message}</Error>}
-      <SignUpButton data-testid="submitButton" secondary onClick={api.submit}>
+      <SignUpButton
+        data-testid="submitButton"
+        secondary
+        onClick={api.submit}
+        disabled={api.loading && "disabled"}
+      >
         {api.loading ? <LoadingSpinner /> : "SIGN UP"}
       </SignUpButton>
       <BottomLineWrapper api={api} />

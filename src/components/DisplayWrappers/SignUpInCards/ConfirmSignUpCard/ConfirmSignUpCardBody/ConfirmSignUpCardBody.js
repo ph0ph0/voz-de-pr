@@ -45,6 +45,7 @@ const ConfirmSignUpCardBodyWrapper = withRouter(
         />
         {api.error && <Error>{api.error.message}</Error>}
         <ActionButton
+          disabled={api.loading && "disabled"}
           data-testid="submitButton"
           onClick={() =>
             api.submit(

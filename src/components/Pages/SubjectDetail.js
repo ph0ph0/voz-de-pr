@@ -27,13 +27,8 @@ const SubjectDetailPageWrapper = withRouter(({ staticContext, ...props }) => {
       window.log(`Received this subjectId from url: ${subjectId}`);
 
       const result = await downloadSubject(subjectId);
-      window.log(
-        `*************************Got downloaded subject data: ${JSON.stringify(
-          result
-        )}`
-      );
       const subject = result.data.getSubject;
-      window.log(`!!!!!!!!!!!!!!!!!Got subject: ${JSON.stringify(subject)}`);
+      window.log(`Got subject: ${JSON.stringify(subject)}`);
       if (!isMounted) {
         window.log(
           "Subject detail was no longer mounted, aborting setting state"
@@ -52,13 +47,10 @@ const SubjectDetailPageWrapper = withRouter(({ staticContext, ...props }) => {
     return () => (isMounted = false);
   }, []);
 
-  window.log(`&&&&&&&&&&LOADING????: ${loading}`);
-  window.log(`&&&&&&&&&&SUBJECT: ${JSON.stringify(subject)}`);
-
   return (
     <div {...props}>
       {loading && subject === null ? (
-        <LoadingSpinnerDetail />
+        <LoadingSpinnerDetail colour={"#1B4EA0"} />
       ) : !loading && subject === null ? (
         <SubjectNotFound />
       ) : (
@@ -98,10 +90,11 @@ const Logo = styled(LogoSVG)`
 const NoSubjectsText = styled.p`
   margin-top: 20px;
   font-size: 20px;
+  color: #919191;
 `;
 
 const LoadingSpinnerDetail = styled(LoadingSpinner)`
-  margin-top: 300px;
+  margin-top: 20px;
 `;
 
 const SubjectDetailPage = styled(SubjectDetailPageWrapper)`

@@ -93,7 +93,11 @@ const ForgotPasswordCardBodyWrapper = ({ api, ...props }) => {
         return (
           <Fragment>
             <p data-testid="SuccessText">Success! Please log in</p>
-            <ActionButton onClick={navigateToLogin} data-testid="SuccessButton">
+            <ActionButton
+              onClick={navigateToLogin}
+              data-testid="SuccessButton"
+              disabled={api.loading && "disabled"}
+            >
               GO TO LOGIN
             </ActionButton>
           </Fragment>

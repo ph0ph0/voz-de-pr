@@ -73,7 +73,11 @@ const SubjectDetailContentWrapper = ({ secondary, subject, ...props }) => {
   return (
     <div {...props}>
       <DetailHeader secondary={secondary} subject={subject} />
-      {pictureLoading ? <LoadingSpinner /> : <DetailImage src={pictureURL} />}
+      {pictureLoading ? (
+        <LoadingSpinner />
+      ) : (
+        pictureURL && <DetailImage src={pictureURL} />
+      )}
       <DetailSummary
         secondary={secondary}
         subjectID={subject.id}

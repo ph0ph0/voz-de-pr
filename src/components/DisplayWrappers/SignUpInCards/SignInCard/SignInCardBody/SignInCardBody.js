@@ -103,7 +103,11 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
         </LoginErrorText>
       )}
       {/* {api.loading && <p>Loading...</p>} */}
-      <SignInButton onClick={api.submit} data-testid="SignInButton">
+      <SignInButton
+        onClick={api.submit}
+        data-testid="SignInButton"
+        disabled={api.loading && "disabled"}
+      >
         {api.loading ? <LoadingSpinner /> : "LOG IN"}
       </SignInButton>
       <BottomLineWrapper />
