@@ -45,6 +45,50 @@ export const listSubjects = `query ListSubjects(
   }
   `;
 
+export const getSubject = `query GetSubject($id: ID!) {
+    getSubject(id: $id) {
+      id
+      createdBy
+      createdAt
+      author
+      title
+      subjectContent
+      searchField
+      timePassedSinceCreation
+      numberOfComments
+      votes
+      staticKey
+      type
+      owner
+      pictures {
+        items {
+          id
+          subjectId
+          description
+          owner
+          bucket
+          region
+          key
+        }
+        nextToken
+      }
+      comments(limit: 10000) {
+        items {
+          id
+          createdBy
+          author
+          createdAt
+          text
+          votes
+          subjectId
+          owner
+        }
+        nextToken
+      }
+    }
+  }
+  `;
+
 export const getSubjectsByCreatedAt = `query GetSubjectsByCreatedAt(
     $staticKey: Int
     $createdAt: ModelStringKeyConditionInput

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 import SubjectDetailPageContent from "../PageContentWrappers/DetailPages/DetailPageContent";
@@ -7,29 +7,40 @@ import { SubjectsMixed } from "../../Constants/MockSubjectsData";
 
 import { withRouter } from "react-router-dom";
 
+import { useSubject } from "CustomHooks/useSubject";
+
 export const fetchSubject = subjectID => {
-  window.log(`fetching subject: ${subjectID}`);
-
-  //This is meant to be equivalent to going to the server to get the subject. Replace with a server call
-  let subject = SubjectsMixed.filter(subject => subjectID === subject.id);
-  window.log(`subject retrieved: ${JSON.stringify(subject[0].id)}`);
-
-  return subject[0];
+  window.log(`fetching subject for subjectDetail: ${subjectID}`);
 };
 
 const SubjectDetailPageWrapper = withRouter(({ staticContext, ...props }) => {
-  // window.log(`props for SDPW: ${JSON.stringify(props)}`);
+  const { downloadSubject, loading, error } = useSubject();
+  const [subject, setSubject] = useState(null);
 
-  var passedSubject =
-    props.location && props.location.state && props.location.state.subject
-      ? props.location.state.subject
-      : fetchSubject(props.match.params.subjectID);
+  useEffect(() => {
+    let isMounted = true;
 
-  const subject = passedSubject;
-  window.log(`subject to show is: ${JSON.stringify(subject.id)}`);
+    (async function fetchSubject() {
+      const subjectId = props.match.params.subjectId;
+      window.log(`Received this subjectId from url: ${subjectId}`);
+
+      const data = await downloadSubject(subjectId);
+      window.log(`Got downloaded subject data: ${data}`);
+      const subject = "";
+      if (!isMounted) {
+        window.log(
+          "Subject detail was no longer mounted, aborting setting state"
+        );
+        return;
+      }
+      setSubject(subject);
+    })();
+
+    return () => (isMounted = false);
+  }, []);
 
   //secondary here determines which side panel should be shown; the post one or the cause one.
-  const secondary = subject.type === "post" ? true : false;
+  const secondary = subject.type && subject.type === "post" ? true : false;
 
   return (
     <div {...props}>

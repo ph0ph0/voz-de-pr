@@ -48,7 +48,7 @@ const Routes = props => {
       <Route exact path="/confirmsignup">
         <ConfirmSignUp />
       </Route>
-      <Route path="/:subjectID">
+      <Route path="/:subjectId">
         <SubjectDetail />
       </Route>
     </Switch>

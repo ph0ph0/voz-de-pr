@@ -20,8 +20,7 @@ const SubjectCardsWrapper = ({
     window.log(`clicked on subject: ${JSON.stringify(subject)}`);
 
     history.push({
-      pathname: `/${subjectID}`,
-      state: { subject: subject }
+      pathname: `/${subjectID}`
     });
   };
 

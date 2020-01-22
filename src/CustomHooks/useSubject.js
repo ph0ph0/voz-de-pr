@@ -2,9 +2,9 @@ import { useState } from "react";
 import { savePictureWithSubjectId, getPicture } from "Utils/PictureManager";
 import { API, graphqlOperation } from "aws-amplify";
 import { createSubject } from "graphql/mutations";
-import { getSubject } from "graphql/queries";
 import {
   listSubjects,
+  getSubject,
   getSubjectsByCreatedAt,
   getSubjectsByNoOfVotes,
   getSubjectsByNoOfComments
@@ -19,6 +19,7 @@ export const useSubject = () => {
   const [error, setError] = useState(null);
 
   const resetAll = () => {
+    window.log("Resetting loading and error in useSubject");
     setLoading(false);
     setError(null);
   };
@@ -58,18 +59,29 @@ export const useSubject = () => {
     }
   };
 
-  //NOT USED YET!!
   const downloadSubject = async id => {
     resetAll();
     window.log(`Downloading subject using id...`);
 
     //get subject, then get picture key and download picture
+    setLoading(true);
+    try {
+      const subjectObject = await API.graphql(
+        graphqlOperation(getSubject, { id: id })
+      );
 
-    const subjectObject = await API.graphql(
-      graphqlOperation(getSubject, { id: id })
-    );
+      window.log(`Got Subject object: ${subjectObject}`);
 
-    // const picture =
+      return subjectObject;
+    } catch (error) {
+      window.log(`Error downloading subject: ${JSON.stringify(error)}`);
+      setError(
+        "Error downloading the subject, it either doesn't exist or was recently deleted"
+      );
+      throw error;
+    } finally {
+      setLoading(false);
+    }
   };
 
   const getSubjectPicture = async key => {
