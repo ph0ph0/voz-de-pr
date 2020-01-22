@@ -12,8 +12,8 @@ import { useUser } from "CustomHooks/user";
 
 const Wrapper = ({ subject, ...props }) => {
   const timeSinceCreated = parseTime(subject.createdAt);
-  const numberOfComments =
-    subject.comments && subject.comments.items && subject.comments.items.length;
+  // const numberOfComments =
+  //   subject.comments && subject.comments.items && subject.comments.items.length;
 
   const { user } = useUser();
 
@@ -29,7 +29,7 @@ const Wrapper = ({ subject, ...props }) => {
       />
       <SubjectTitle>{subject.title}</SubjectTitle>
       <SubjectSummary>{subject.subjectContent}</SubjectSummary>
-      <BottomWrapper numberOfComments={numberOfComments} />
+      <BottomWrapper numberOfComments={subject.numberOfComments} />
     </div>
   );
 };

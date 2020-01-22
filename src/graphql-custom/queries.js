@@ -143,7 +143,7 @@ export const getSubjectsByNoOfVotes = `query GetSubjectsByNoOfVotes(
               owner
             }
           }
-          comments {
+          comments(limit: 10000)  {
             items {
               id
               createdBy
@@ -201,7 +201,7 @@ export const getSubjectsByNoOfComments = `query GetSubjectsByNoOfComments(
               owner
             }
           }
-          comments {
+          comments(limit: 10000)  {
             items {
               id
               createdBy
