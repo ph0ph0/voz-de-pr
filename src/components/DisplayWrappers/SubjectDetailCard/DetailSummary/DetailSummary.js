@@ -37,6 +37,16 @@ const DetailSummaryWrapper = ({
     }
   };
 
+  const clickedDownVote = async () => {
+    window.log("Clicked up vote!");
+    const userId = user.id;
+    try {
+      await userVoteOnSubject("down", userId, subjectID);
+    } catch (error) {
+      window.log(`Error voting: ${error}`);
+    }
+  };
+
   return (
     <div {...props}>
       <BubbleWrapper />
@@ -47,7 +57,7 @@ const DetailSummaryWrapper = ({
         votesOnSubject={votesOnSubject}
       />
       <VoteArrow onClick={clickedUpVote} />
-      <VoteArrow pointDown />
+      <VoteArrow pointDown onClick={clickedDownVote} />
     </div>
   );
 };
