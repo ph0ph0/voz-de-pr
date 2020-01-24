@@ -1,6 +1,49 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const voteOnSubject = `mutation VoteOnSubject($input: VoteInput!) {
+  voteOnSubject(input: $input) {
+    id
+    createdBy
+    createdAt
+    author
+    title
+    subjectContent
+    searchField
+    timePassedSinceCreation
+    numberOfComments
+    votes
+    staticKey
+    type
+    owner
+    pictures {
+      items {
+        id
+        subjectId
+        description
+        owner
+        bucket
+        region
+        key
+      }
+      nextToken
+    }
+    comments {
+      items {
+        id
+        createdBy
+        author
+        createdAt
+        text
+        votes
+        subjectId
+        owner
+      }
+      nextToken
+    }
+  }
+}
+`;
 export const createUser = `mutation CreateUser($input: CreateUserInput!) {
   createUser(input: $input) {
     id
@@ -277,7 +320,7 @@ export const deleteComment = `mutation DeleteComment($input: DeleteCommentInput!
 export const createVote = `mutation CreateVote($input: CreateVoteInput!) {
   createVote(input: $input) {
     id
-    subjectVotedOnId
+    objectVotedOnId
     createdBy
     createdAt
     vote
@@ -289,7 +332,7 @@ export const createVote = `mutation CreateVote($input: CreateVoteInput!) {
 export const updateVote = `mutation UpdateVote($input: UpdateVoteInput!) {
   updateVote(input: $input) {
     id
-    subjectVotedOnId
+    objectVotedOnId
     createdBy
     createdAt
     vote
@@ -301,7 +344,7 @@ export const updateVote = `mutation UpdateVote($input: UpdateVoteInput!) {
 export const deleteVote = `mutation DeleteVote($input: DeleteVoteInput!) {
   deleteVote(input: $input) {
     id
-    subjectVotedOnId
+    objectVotedOnId
     createdBy
     createdAt
     vote

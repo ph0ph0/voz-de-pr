@@ -277,7 +277,7 @@ export const onDeleteComment = `subscription OnDeleteComment($owner: String!) {
 export const onCreateVote = `subscription OnCreateVote($owner: String!) {
   onCreateVote(owner: $owner) {
     id
-    subjectVotedOnId
+    objectVotedOnId
     createdBy
     createdAt
     vote
@@ -289,7 +289,7 @@ export const onCreateVote = `subscription OnCreateVote($owner: String!) {
 export const onUpdateVote = `subscription OnUpdateVote($owner: String!) {
   onUpdateVote(owner: $owner) {
     id
-    subjectVotedOnId
+    objectVotedOnId
     createdBy
     createdAt
     vote
@@ -301,7 +301,7 @@ export const onUpdateVote = `subscription OnUpdateVote($owner: String!) {
 export const onDeleteVote = `subscription OnDeleteVote($owner: String!) {
   onDeleteVote(owner: $owner) {
     id
-    subjectVotedOnId
+    objectVotedOnId
     createdBy
     createdAt
     vote

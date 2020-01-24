@@ -436,7 +436,7 @@ export const listComments = `query ListComments(
 export const getVote = `query GetVote($id: ID!) {
   getVote(id: $id) {
     id
-    subjectVotedOnId
+    objectVotedOnId
     createdBy
     createdAt
     vote
@@ -453,7 +453,7 @@ export const listVotes = `query ListVotes(
   listVotes(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       id
-      subjectVotedOnId
+      objectVotedOnId
       createdBy
       createdAt
       vote
@@ -464,16 +464,16 @@ export const listVotes = `query ListVotes(
   }
 }
 `;
-export const votesOnSubjectByUser = `query VotesOnSubjectByUser(
-  $subjectVotedOnId: ID
+export const votesOnObjectByUser = `query VotesOnObjectByUser(
+  $objectVotedOnId: ID
   $createdBy: ModelIDKeyConditionInput
   $sortDirection: ModelSortDirection
   $filter: ModelVoteFilterInput
   $limit: Int
   $nextToken: String
 ) {
-  votesOnSubjectByUser(
-    subjectVotedOnId: $subjectVotedOnId
+  votesOnObjectByUser(
+    objectVotedOnId: $objectVotedOnId
     createdBy: $createdBy
     sortDirection: $sortDirection
     filter: $filter
@@ -482,7 +482,7 @@ export const votesOnSubjectByUser = `query VotesOnSubjectByUser(
   ) {
     items {
       id
-      subjectVotedOnId
+      objectVotedOnId
       createdBy
       createdAt
       vote

@@ -8,6 +8,9 @@ import SubjectID from "components/Primitive/SubjectDetail/DetailSummary/SubjectI
 import VotesOnSubject from "components/Primitive/SubjectDetail/General/VotesOnSubject";
 import VoteArrow from "components/Primitive/SubjectDetail/DetailSummary/VoteArrow";
 
+import { useSubject } from "CustomHooks/useSubject";
+import { useUser } from "CustomHooks/user";
+
 // Imported into Primitive/SubjectDetail/General/VotesOnSubject story
 export const VotesOnSubjectInSummary = styled(VotesOnSubject)`
   /* border: 1px solid purple; */
@@ -21,6 +24,19 @@ const DetailSummaryWrapper = ({
   votesOnSubject,
   ...props
 }) => {
+  const { userVoteOnSubject, voteLoading } = useSubject();
+  const { user } = useUser();
+
+  const clickedUpVote = async () => {
+    window.log("Clicked up vote!");
+    const userId = user.id;
+    try {
+      await userVoteOnSubject("up", userId, subjectID);
+    } catch (error) {
+      window.log(`Error voting: ${error}`);
+    }
+  };
+
   return (
     <div {...props}>
       <BubbleWrapper />
@@ -30,7 +46,7 @@ const DetailSummaryWrapper = ({
         secondary={secondary}
         votesOnSubject={votesOnSubject}
       />
-      <VoteArrow />
+      <VoteArrow onClick={clickedUpVote} />
       <VoteArrow pointDown />
     </div>
   );

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { savePictureWithSubjectId, getPicture } from "Utils/PictureManager";
 import { API, graphqlOperation } from "aws-amplify";
-import { createSubject } from "graphql/mutations";
+import { createSubject, voteOnSubject } from "graphql/mutations";
 import {
   listSubjects,
   getSubject,
@@ -16,6 +16,7 @@ import uuidv4 from "uuid/v4";
 
 export const useSubject = () => {
   const [loading, setLoading] = useState(false);
+  const [voteLoading, setVoteLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const resetAll = () => {
@@ -251,6 +252,31 @@ export const useSubject = () => {
     }
   };
 
+  const userVoteOnSubject = async (type, userId, subjectId) => {
+    const voteInput = {
+      id: `${userId}_${subjectId}`,
+      userId: userId,
+      objectId: subjectId,
+      vote: type === "up" ? "up" : "down",
+      voteOn: "subject"
+    };
+
+    window.log("Voting on subject...");
+    setVoteLoading(true);
+    try {
+      const data = await API.graphql(
+        graphqlOperation(voteOnSubject, { input: voteInput })
+      );
+      window.log(`Voted on subject!: ${JSON.stringify(data)}`);
+      return data;
+    } catch (error) {
+      window.log(`Error voting on subject!: ${JSON.stringify(error)}`);
+      throw error;
+    } finally {
+      setVoteLoading(false);
+    }
+  };
+
   return {
     error,
     loading,
@@ -260,7 +286,9 @@ export const useSubject = () => {
     getSubjectPicture,
     listAllSubjectsOrderedByCreatedAt,
     listAllSubjectsOrderedByVotes,
-    listAllSubjectsOrderedByComments
+    listAllSubjectsOrderedByComments,
+    voteLoading,
+    userVoteOnSubject
   };
 };
 
