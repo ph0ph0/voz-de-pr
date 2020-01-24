@@ -7,6 +7,7 @@ import CommentsIndicator from "components/Primitive/SubjectDetail/DetailSummary/
 import SubjectID from "components/Primitive/SubjectDetail/DetailSummary/SubjectID";
 import VotesOnSubject from "components/Primitive/SubjectDetail/General/VotesOnSubject";
 import VoteArrow from "components/Primitive/SubjectDetail/DetailSummary/VoteArrow";
+import Spinner from "components/Primitive/General/LoadingSpinner";
 
 import { useSubject } from "CustomHooks/useSubject";
 import { useUser } from "CustomHooks/user";
@@ -18,6 +19,7 @@ export const VotesOnSubjectInSummary = styled(VotesOnSubject)`
 `;
 
 const DetailSummaryWrapper = ({ secondary, api, ...props }) => {
+  const spinnerColour = secondary ? "#1B4EA0" : "#EC220D";
   return (
     <div {...props}>
       <BubbleWrapper />
@@ -27,11 +29,21 @@ const DetailSummaryWrapper = ({ secondary, api, ...props }) => {
         secondary={secondary}
         votesOnSubject={api.votes}
       />
-      <VoteArrow onClick={api.clickedUpVote} />
-      <VoteArrow pointDown onClick={api.clickedDownVote} />
+      {api.voteLoading ? (
+        <LoadingSpinner colour={spinnerColour} />
+      ) : (
+        <>
+          <VoteArrow onClick={api.clickedSubjectUpVote} />
+          <VoteArrow pointDown onClick={api.clickedSubjectDownVote} />
+        </>
+      )}
     </div>
   );
 };
+
+const LoadingSpinner = styled(Spinner)`
+  margin-left: 10px;
+`;
 
 const DetailSummary = styled(DetailSummaryWrapper)`
   /* border: 1px solid blue; */

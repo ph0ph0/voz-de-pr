@@ -120,12 +120,12 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
   }, [subject]);
 
   //VOTE API
-  const clickedUpVote = async () => {
+  const clickedSubjectUpVote = async () => {
     window.log("Clicked up vote!");
     const userId = user.id;
     try {
       const subject = await userVoteOnSubject("up", userId, subjectId);
-      window.log(`^^^^^^^^^SUB FROM VOTE: ${JSON.stringify(subject)}`);
+      window.log(`SUB FROM VOTE: ${JSON.stringify(subject)}`);
       setState(prevState => {
         return {
           ...prevState,
@@ -137,7 +137,7 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     }
   };
 
-  const clickedDownVote = async () => {
+  const clickedSubjectDownVote = async () => {
     window.log("Clicked up vote!");
     const userId = user.id;
     try {
@@ -241,8 +241,9 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     commentLoading,
     pictureLoading,
     subjectLoading,
-    clickedUpVote,
-    clickedDownVote,
+    voteLoading,
+    clickedSubjectUpVote,
+    clickedSubjectDownVote,
     updateCommentText,
     submitComment
   };
