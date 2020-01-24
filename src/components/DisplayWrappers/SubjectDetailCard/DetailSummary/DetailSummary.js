@@ -17,47 +17,18 @@ export const VotesOnSubjectInSummary = styled(VotesOnSubject)`
   font-size: 12px;
 `;
 
-const DetailSummaryWrapper = ({
-  secondary,
-  noOfComments,
-  subjectID,
-  votesOnSubject,
-  ...props
-}) => {
-  const { userVoteOnSubject, voteLoading } = useSubject();
-  const { user } = useUser();
-
-  const clickedUpVote = async () => {
-    window.log("Clicked up vote!");
-    const userId = user.id;
-    try {
-      await userVoteOnSubject("up", userId, subjectID);
-    } catch (error) {
-      window.log(`Error voting: ${error}`);
-    }
-  };
-
-  const clickedDownVote = async () => {
-    window.log("Clicked up vote!");
-    const userId = user.id;
-    try {
-      await userVoteOnSubject("down", userId, subjectID);
-    } catch (error) {
-      window.log(`Error voting: ${error}`);
-    }
-  };
-
+const DetailSummaryWrapper = ({ secondary, api, ...props }) => {
   return (
     <div {...props}>
       <BubbleWrapper />
-      <CommentsIndicator noOfComments={noOfComments} />
-      <SubjectID secondary={secondary} subjectID={subjectID} />
+      <CommentsIndicator noOfComments={api.comments.length} />
+      <SubjectID secondary={secondary} subjectID={api.subjectId} />
       <VotesOnSubjectInSummary
         secondary={secondary}
-        votesOnSubject={votesOnSubject}
+        votesOnSubject={api.votes}
       />
-      <VoteArrow onClick={clickedUpVote} />
-      <VoteArrow pointDown onClick={clickedDownVote} />
+      <VoteArrow onClick={api.clickedUpVote} />
+      <VoteArrow pointDown onClick={api.clickedDownVote} />
     </div>
   );
 };
@@ -78,11 +49,11 @@ const DetailSummary = styled(DetailSummaryWrapper)`
   align-items: center;
 `;
 
-DetailSummary.propTypes = {
-  noOfComments: PropTypes.number.isRequired,
-  secondary: PropTypes.bool,
-  subjectID: PropTypes.string.isRequired,
-  votesOnSubject: PropTypes.number.isRequired
-};
+// DetailSummary.propTypes = {
+//   noOfComments: PropTypes.number.isRequired,
+//   secondary: PropTypes.bool,
+//   subjectID: PropTypes.string.isRequired,
+//   votesOnSubject: PropTypes.number.isRequired
+// };
 
 export default DetailSummary;

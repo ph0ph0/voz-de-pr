@@ -6,22 +6,22 @@ import styled from "styled-components";
 import SubjectDetailCard from "../../DisplayWrappers/SubjectDetailCard/SubjectDetailCard";
 import SidePanel from "../../DisplayWrappers/SidePanel/SidePanel";
 
-const SubjectDetailPageContentWrapper = ({ subject, secondary, ...props}) => {
+const SubjectDetailPageContentWrapper = ({ api, secondary, ...props }) => {
   return (
     <div {...props}>
-      <SubjectDetailCard secondary = {secondary} subject = {subject}/>
-      <SidePanel type = {"Detail"} secondary = {secondary}/>
+      <SubjectDetailCard secondary={secondary} api={api} />
+      <SidePanel type={"Detail"} secondary={secondary} />
     </div>
   );
 };
 
 const SubjectDetailPageContent = styled(SubjectDetailPageContentWrapper)`
-    /* border: 1px solid green; */
+  /* border: 1px solid green; */
 
-    margin-top: 23px;
+  margin-top: 23px;
 
-    display: flex;
-    align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
 `;
 
 export default SubjectDetailPageContent;

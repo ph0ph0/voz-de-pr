@@ -6,23 +6,19 @@ import CommentButton from "components/Primitive/SubjectDetail/DetailBody/Comment
 import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
 import ErrorText from "components/Primitive/General/ErrorText";
 
-const CommentBoxWrapper = ({ secondary, subject, commentApi, ...props }) => {
-  const subjectId = subject.id;
-
+const CommentBoxWrapper = ({ secondary, api, ...props }) => {
   return (
     <div {...props}>
       <CommentTextArea
-        value={commentApi.commentText}
-        onChange={event => commentApi.updateCommentText(event.target.value)}
+        value={api.commentText}
+        onChange={event => api.updateCommentText(event.target.value)}
       />
-      {commentApi.commentError && (
-        <ErrorText>{commentApi.commentError}</ErrorText>
-      )}
+      {api.commentError && <ErrorText>{api.commentError}</ErrorText>}
       <CommentButton
         secondary={secondary}
-        onClick={() => commentApi.submitComment(subjectId)}
+        onClick={() => api.submitComment(api.subjectId)}
       >
-        {commentApi.loading ? <LoadingSpinner /> : "Comment"}
+        {api.commentLoading ? <LoadingSpinner /> : "Comment"}
       </CommentButton>
     </div>
   );

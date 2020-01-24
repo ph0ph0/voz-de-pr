@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useComment } from "CustomHooks/useComment";
 import { useUser } from "CustomHooks/user";
+import { useSubject } from "CustomHooks/useSubject";
 
 const SubjectDetailContentAPI = ({ state, setState }) => {
   const commentText = state.commentText;
@@ -11,11 +12,16 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
   //Used to download the subject
   const subjectId = state.subjectId;
   const isSecondary = state.isSecondary;
-  window.log(`COMMENTS in commentAPI: ${JSON.stringify(comments)}`);
+  // window.log(`COMMENTS in commentAPI: ${JSON.stringify(comments)}`);
 
   const { saveComment, loading: commentLoading } = useComment();
   const { user } = useUser();
-  const { getSubjectPicture, loading: pictureLoading } = useSubject();
+  const {
+    getSubjectPicture,
+    loading: pictureLoading,
+    userVoteOnSubject,
+    voteLoading
+  } = useSubject();
 
   //From SubjectDetailPage
   const { downloadSubject, loading: subjectLoading } = useSubject();
@@ -35,9 +41,13 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
         );
         return;
       }
-      const comments =
-        (subject && subject.comments && subject.comments.items) || [];
-      setState((...prevState) => {
+      const comments = subject && subject.comments && subject.comments.items;
+      setState(prevState => {
+        window.log(
+          `Previous state before setting subject/comments: ${JSON.stringify(
+            prevState
+          )}`
+        );
         return {
           ...prevState,
           subject: subject,
@@ -48,7 +58,7 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
         //secondary here determines which side panel should be shown; the post one or the cause one.
         const secondary =
           subject.type && subject.type === "post" ? true : false;
-        setState((...prevState) => {
+        setState(prevState => {
           return {
             ...prevState,
             isSecondary: secondary
@@ -59,13 +69,6 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
 
     return () => (isMounted = false);
   }, []);
-
-  //Between is from SubjectDetail
-  //   let comments = [];
-
-  //   if (subject && subject.comments && subject.comments.items) {
-  //     comments = subject.comments.items;
-  //   }
 
   //Once the subject has downloaded, download the picture
   const fetchPictures = async key => {
@@ -115,6 +118,27 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     }
     return () => (isMounted = false);
   }, [subject]);
+
+  //VOTE API
+  const clickedUpVote = async () => {
+    window.log("Clicked up vote!");
+    const userId = user.id;
+    try {
+      await userVoteOnSubject("up", userId, subjectId);
+    } catch (error) {
+      window.log(`Error voting: ${error}`);
+    }
+  };
+
+  const clickedDownVote = async () => {
+    window.log("Clicked up vote!");
+    const userId = user.id;
+    try {
+      await userVoteOnSubject("down", userId, subjectId);
+    } catch (error) {
+      window.log(`Error voting: ${error}`);
+    }
+  };
 
   //COMMENT API
 
@@ -204,6 +228,8 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     commentLoading,
     pictureLoading,
     subjectLoading,
+    clickedUpVote,
+    clickedDownVote,
     updateCommentText,
     submitComment
   };

@@ -6,13 +6,13 @@ import ProfPicSubjectCard from "../../../SubjectCard/LeftContent/ProfPicSubjectC
 
 import { parseTime } from "Utils/TimePassedCalculator";
 
-const DetailHeaderTopLineWrapper = ({ subject, ...props }) => {
-  const timePassed = parseTime(subject.createdAt);
+const DetailHeaderTopLineWrapper = ({ api, ...props }) => {
+  const timePassed = parseTime(api.subject.createdAt);
 
   return (
     <div {...props}>
-      <ProfPicSubjectCard createdBy={subject.createdBy} />
-      <NameTimeAgo>{subject.author}</NameTimeAgo>
+      <ProfPicSubjectCard createdBy={api.subject.createdBy} />
+      <NameTimeAgo>{api.subject.author}</NameTimeAgo>
       <NameTimeAgo isTimeAgo>{timePassed}</NameTimeAgo>
     </div>
   );

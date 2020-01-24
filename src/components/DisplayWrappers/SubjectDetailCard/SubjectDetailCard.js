@@ -4,10 +4,10 @@ import PropTypes from "prop-types";
 
 import SubjectDetailContent from "./SubjectDetailContent";
 
-const SubjectDetailWrapper = ({ subject, secondary, ...props }) => {
+const SubjectDetailWrapper = ({ api, secondary, ...props }) => {
   return (
     <div {...props}>
-      <SubjectDetailContent subject={subject} secondary={secondary} />
+      <SubjectDetailContent api={api} secondary={secondary} />
     </div>
   );
 };

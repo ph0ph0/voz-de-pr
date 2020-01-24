@@ -9,25 +9,21 @@ import CommentBox from "./CommentBox";
 
 import { useUser } from "CustomHooks/user.js";
 
-const DetailBodyWrapper = ({ subject, secondary, commentApi, ...props }) => {
+const DetailBodyWrapper = ({ api, secondary, ...props }) => {
   const { user } = useUser();
 
   const username = user && user.username;
 
   return (
     <div {...props}>
-      <SubjectContent>{subject.subjectContent}</SubjectContent>
+      <SubjectContent>{api.subject.subjectContent}</SubjectContent>
       <SubjectLink secondary={secondary}>
         http://www.fideicomiso.org/home.html
       </SubjectLink>
       {user && (
         <>
           <CommentInfo secondary={secondary} username={username} />
-          <CommentBox
-            secondary={secondary}
-            subject={subject}
-            commentApi={commentApi}
-          />
+          <CommentBox secondary={secondary} api={api} />
         </>
       )}
     </div>
@@ -44,9 +40,9 @@ const DetailBody = styled(DetailBodyWrapper)`
   /* margin: 0 21px 20px 21px; */
 `;
 
-DetailBody.propTypes = {
-  secondary: PropTypes.bool,
-  subjectContent: PropTypes.string.isRequired
-};
+// DetailBody.propTypes = {
+//   secondary: PropTypes.bool,
+//   subjectContent: PropTypes.string.isRequired
+// };
 
 export default DetailBody;

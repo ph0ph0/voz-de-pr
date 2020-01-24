@@ -7,7 +7,8 @@ import { ReactComponent as LogoSVG } from "assets/SignUpInCard/SignUpInLogo.svg"
 
 import { withRouter } from "react-router-dom";
 
-import { useSubject } from "CustomHooks/useSubject";
+import useAPI from "CustomHooks/useAPI";
+import SubjectDetailAPI from "components/DisplayWrappers/SubjectDetailCard/API/SubjectDetailContentAPI";
 
 export const fetchSubject = subjectID => {
   window.log(`fetching subject for subjectDetail: ${subjectID}`);
@@ -15,47 +16,28 @@ export const fetchSubject = subjectID => {
 
 const SubjectDetailPageWrapper = withRouter(({ staticContext, ...props }) => {
   //DONT FORGET TO PASS THE subjectId from props into the state!
+  const subjectId = props.match.params.subjectId;
 
-  const { downloadSubject, loading } = useSubject();
-  const [subject, setSubject] = useState(null);
-  //if isSecondary is true, show Post config, if false, Cause config
-  const [isSecondary, setIsSecondary] = useState(false);
-
-  useEffect(() => {
-    let isMounted = true;
-    (async function fetchSubject() {
-      const subjectId = props.match.params.subjectId;
-      window.log(`Received this subjectId from url: ${subjectId}`);
-
-      const result = await downloadSubject(subjectId);
-      const subject = result.data.getSubject;
-      window.log(`Got subject: ${JSON.stringify(subject)}`);
-      if (!isMounted) {
-        window.log(
-          "Subject detail was no longer mounted, aborting setting state"
-        );
-        return;
-      }
-      setSubject(subject);
-      if (subject !== null) {
-        //secondary here determines which side panel should be shown; the post one or the cause one.
-        const secondary =
-          subject.type && subject.type === "post" ? true : false;
-        setIsSecondary(secondary);
-      }
-    })();
-
-    return () => (isMounted = false);
-  }, []);
+  const api = useAPI(SubjectDetailAPI, {
+    commentText: "",
+    commentError: "",
+    comments: [],
+    pictureURL: null,
+    subject: null,
+    subjectId: subjectId,
+    isSecondary: false
+  });
 
   return (
     <div {...props}>
-      {loading && subject === null ? (
+      {api.subjectLoading && api.subject === null ? (
         <LoadingSpinnerDetail colour={"#1B4EA0"} />
-      ) : !loading && subject === null ? (
+      ) : !api.subjectLoading && api.subject === null ? (
         <SubjectNotFound />
       ) : (
-        <SubjectDetailPageContent subject={subject} secondary={isSecondary} />
+        api.subject && (
+          <SubjectDetailPageContent api={api} secondary={api.isSecondary} />
+        )
       )}
     </div>
   );
