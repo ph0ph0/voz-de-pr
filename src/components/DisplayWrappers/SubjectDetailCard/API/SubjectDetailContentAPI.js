@@ -124,7 +124,14 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     window.log("Clicked up vote!");
     const userId = user.id;
     try {
-      await userVoteOnSubject("up", userId, subjectId);
+      const subject = await userVoteOnSubject("up", userId, subjectId);
+      window.log(`^^^^^^^^^SUB FROM VOTE: ${JSON.stringify(subject)}`);
+      setState(prevState => {
+        return {
+          ...prevState,
+          subject
+        };
+      });
     } catch (error) {
       window.log(`Error voting: ${error}`);
     }
@@ -134,7 +141,13 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     window.log("Clicked up vote!");
     const userId = user.id;
     try {
-      await userVoteOnSubject("down", userId, subjectId);
+      const subject = await userVoteOnSubject("down", userId, subjectId);
+      setState(prevState => {
+        return {
+          ...prevState,
+          subject
+        };
+      });
     } catch (error) {
       window.log(`Error voting: ${error}`);
     }

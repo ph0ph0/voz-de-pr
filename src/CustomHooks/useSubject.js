@@ -264,11 +264,11 @@ export const useSubject = () => {
     window.log("Voting on subject...");
     setVoteLoading(true);
     try {
-      const data = await API.graphql(
+      const result = await API.graphql(
         graphqlOperation(voteOnSubject, { input: voteInput })
       );
-      window.log(`Voted on subject!: ${JSON.stringify(data)}`);
-      return data;
+      window.log(`Voted on subject!: ${JSON.stringify(result)}`);
+      return result.data.voteOnSubject;
     } catch (error) {
       window.log(`Error voting on subject!: ${JSON.stringify(error)}`);
       throw error;
