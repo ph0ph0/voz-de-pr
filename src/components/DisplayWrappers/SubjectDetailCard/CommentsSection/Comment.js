@@ -4,25 +4,11 @@ import styled from "styled-components";
 import CommentHeading from "./CommentHeading";
 import CommentContent from "../../../Primitive/SubjectDetail/CommentsSection/CommentContent";
 
-import { parseTime } from "Utils/TimePassedCalculator";
-
-const CommentWrapper = ({
-  votesOnComment,
-  commentContent,
-  author,
-  createdAt,
-  ...props
-}) => {
-  const timePassed = parseTime(createdAt);
-
+const CommentWrapper = ({ api, comment, ...props }) => {
   return (
     <div {...props}>
-      <CommentHeading
-        votesOnComment={votesOnComment}
-        author={author}
-        timePassed={timePassed}
-      />
-      <CommentContent commentContent={commentContent} />
+      <CommentHeading comment={comment} api={api} />
+      <CommentContent commentContent={comment.text} />
     </div>
   );
 };

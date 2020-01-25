@@ -5,19 +5,21 @@ import NameTimeAgo from "../../../Primitive/SubjectCard/NameTimeAgo";
 import VotesOnComment from "../../../Primitive/SubjectDetail/CommentsSection/VotesOnComment";
 import VoteArrow from "../../../Primitive/SubjectDetail/DetailSummary/VoteArrow";
 
-const CommentHeadingWrapper = ({
-  votesOnComment,
-  author,
-  timePassed,
-  ...props
-}) => {
+import { parseTime } from "Utils/TimePassedCalculator";
+
+const CommentHeadingWrapper = ({ comment, api, ...props }) => {
+  const timePassed = parseTime(comment.createdAt);
   return (
     <div {...props}>
-      <NameTimeAgo>{author}</NameTimeAgo>
+      <NameTimeAgo>{comment.author}</NameTimeAgo>
       <NameTimeAgo isTimeAgo>{timePassed}</NameTimeAgo>
-      <VotesOnComment votesOnComment={votesOnComment} />
-      <VoteArrow small />
-      <VoteArrow small pointDown />
+      <VotesOnComment votesOnComment={comment.votes} />
+      <VoteArrow small onClick={() => api.clickedCommentUpVote(comment.id)} />
+      <VoteArrow
+        small
+        pointDown
+        onClick={() => api.clickedCommentDownVote(comment.id)}
+      />
     </div>
   );
 };

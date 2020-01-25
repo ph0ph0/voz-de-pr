@@ -14,7 +14,12 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
   const isSecondary = state.isSecondary;
   // window.log(`COMMENTS in commentAPI: ${JSON.stringify(comments)}`);
 
-  const { saveComment, loading: commentLoading } = useComment();
+  const {
+    saveComment,
+    loading: commentLoading,
+    userVoteOnComment
+  } = useComment();
+
   const { user } = useUser();
   const {
     getSubjectPicture,
@@ -153,6 +158,43 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     }
   };
 
+  const clickedCommentUpVote = async commentId => {
+    window.log("Clicked up vote!");
+    const userId = user.id;
+    try {
+      const comment = await userVoteOnComment("up", userId, commentId);
+      window.log(`Comment FROM VOTE: ${JSON.stringify(comment)}`);
+      const updatedComments = comments.map(c => c.id === comment.id);
+      window.log(`Updated comments: ${updatedComments}`);
+      setState(prevState => {
+        return {
+          ...prevState,
+          comments: [...updatedComments]
+        };
+      });
+    } catch (error) {
+      window.log(`Error voting: ${error}`);
+    }
+  };
+
+  const clickedCommentDownVote = async commentId => {
+    window.log("Clicked up vote!");
+    const userId = user.id;
+    try {
+      const comment = await userVoteOnComment("up", userId, commentId);
+      window.log(`Comment FROM VOTE: ${JSON.stringify(comment)}`);
+      const updatedComments = comments.map(c => c.id === comment.id);
+      setState(prevState => {
+        return {
+          ...prevState,
+          comments: [...updatedComments]
+        };
+      });
+    } catch (error) {
+      window.log(`Error voting: ${error}`);
+    }
+  };
+
   //COMMENT API
 
   const updateCommentText = newValue => {
@@ -244,6 +286,8 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     voteLoading,
     clickedSubjectUpVote,
     clickedSubjectDownVote,
+    clickedCommentUpVote,
+    clickedCommentDownVote,
     updateCommentText,
     submitComment
   };

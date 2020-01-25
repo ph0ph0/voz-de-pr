@@ -13,7 +13,8 @@ export const useComment = () => {
       createdBy: userId,
       author: username,
       text: commentText,
-      subjectId: subjectId
+      subjectId: subjectId,
+      votes: 0
     };
     try {
       const commentObject = await API.graphql(
@@ -40,16 +41,16 @@ export const useComment = () => {
       voteOn: "comment"
     };
 
-    window.log("Voting on subject...");
+    window.log("Voting on comment...");
     setLoading(true);
     try {
       const result = await API.graphql(
         graphqlOperation(voteOnComment, { input: voteInput })
       );
-      window.log(`Voted on subject!: ${JSON.stringify(result)}`);
-      return result.data.voteOnSubject;
+      window.log(`Voted on comment!: ${JSON.stringify(result)}`);
+      return result.data.voteOnComment;
     } catch (error) {
-      window.log(`Error voting on subject!: ${JSON.stringify(error)}`);
+      window.log(`Error voting on comment!: ${JSON.stringify(error)}`);
       throw error;
     } finally {
       setLoading(false);

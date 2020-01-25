@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 import Comment from "./Comment";
 
-const CommentsSectionWrapper = ({ comments, ...props }) => {
+const CommentsSectionWrapper = ({ api, ...props }) => {
   // window.log(`Comments in commentSection: ${JSON.stringify(comments)}`);
-  const timeOrderedComments = comments
+  const timeOrderedComments = api.comments
     .sort((a, b) => {
       return new Date(a.createdAt) - new Date(b.createdAt);
     })
@@ -15,10 +15,8 @@ const CommentsSectionWrapper = ({ comments, ...props }) => {
       {timeOrderedComments.map((comment, index) => (
         <Comment
           key={index}
-          votesOnComment={comment.votes}
-          commentContent={comment.text}
-          author={comment.author}
-          createdAt={comment.createdAt}
+          api={api}
+          comment={comment}
         />
       ))}
     </div>
