@@ -176,7 +176,6 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
         );
         return {
           ...prevState,
-          subject: subject,
           comments: comments
         };
       });
@@ -202,7 +201,6 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
         );
         return {
           ...prevState,
-          subject: subject,
           comments: comments
         };
       });
@@ -257,18 +255,20 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
       const userId = user && user.id;
       const username = user && user.username;
       window.log("Awaiting save...");
-      const result = await saveComment(
-        userId,
-        username,
-        commentText,
-        subjectId
-      );
-      const newComment = result.data.createComment;
-      window.log(`Adding new comment to array: ${JSON.stringify(newComment)}`);
+      await saveComment(userId, username, commentText, subjectId);
+      const result = await downloadSubject(subjectId);
+      const subject = result.data.getSubject;
+      window.log(`Got subject: ${JSON.stringify(subject)}`);
+      const comments = subject && subject.comments && subject.comments.items;
       setState(prevState => {
+        window.log(
+          `Previous state before setting subject/comments: ${JSON.stringify(
+            prevState
+          )}`
+        );
         return {
           ...prevState,
-          comments: [newComment, ...comments]
+          comments: comments
         };
       });
       window.log(
