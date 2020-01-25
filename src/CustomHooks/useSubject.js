@@ -2,6 +2,7 @@ import { useState } from "react";
 import { savePictureWithSubjectId, getPicture } from "Utils/PictureManager";
 import { API, graphqlOperation } from "aws-amplify";
 import { createSubject, voteOnSubject } from "graphql/mutations";
+import { onUpdateSubject } from "graphql/subscriptions";
 import {
   listSubjects,
   getSubject,
@@ -87,6 +88,10 @@ export const useSubject = () => {
     } finally {
       setLoading(false);
     }
+  };
+
+  const subscribeToSubject = subjectId => {
+    const subscription = API.graphql(graphqlOperation(onUpdateSubject));
   };
 
   const getSubjectPicture = async key => {

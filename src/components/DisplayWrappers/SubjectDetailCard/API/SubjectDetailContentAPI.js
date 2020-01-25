@@ -25,7 +25,8 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     getSubjectPicture,
     loading: pictureLoading,
     userVoteOnSubject,
-    voteLoading
+    voteLoading,
+    subscribeToSubject
   } = useSubject();
 
   //From SubjectDetailPage
@@ -162,14 +163,21 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     window.log("Clicked up vote!");
     const userId = user.id;
     try {
-      const comment = await userVoteOnComment("up", userId, commentId);
-      window.log(`Comment FROM VOTE: ${JSON.stringify(comment)}`);
-      const updatedComments = comments.map(c => c.id === comment.id);
-      window.log(`Updated comments: ${updatedComments}`);
+      await userVoteOnComment("up", userId, commentId);
+      const result = await downloadSubject(subjectId);
+      const subject = result.data.getSubject;
+      window.log(`Got subject: ${JSON.stringify(subject)}`);
+      const comments = subject && subject.comments && subject.comments.items;
       setState(prevState => {
+        window.log(
+          `Previous state before setting subject/comments: ${JSON.stringify(
+            prevState
+          )}`
+        );
         return {
           ...prevState,
-          comments: [...updatedComments]
+          subject: subject,
+          comments: comments
         };
       });
     } catch (error) {
@@ -181,13 +189,21 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     window.log("Clicked up vote!");
     const userId = user.id;
     try {
-      const comment = await userVoteOnComment("up", userId, commentId);
-      window.log(`Comment FROM VOTE: ${JSON.stringify(comment)}`);
-      const updatedComments = comments.map(c => c.id === comment.id);
+      await userVoteOnComment("up", userId, commentId);
+      const result = await downloadSubject(subjectId);
+      const subject = result.data.getSubject;
+      window.log(`Got subject: ${JSON.stringify(subject)}`);
+      const comments = subject && subject.comments && subject.comments.items;
       setState(prevState => {
+        window.log(
+          `Previous state before setting subject/comments: ${JSON.stringify(
+            prevState
+          )}`
+        );
         return {
           ...prevState,
-          comments: [...updatedComments]
+          subject: subject,
+          comments: comments
         };
       });
     } catch (error) {

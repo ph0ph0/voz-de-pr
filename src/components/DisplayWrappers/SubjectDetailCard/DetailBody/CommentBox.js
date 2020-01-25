@@ -17,6 +17,7 @@ const CommentBoxWrapper = ({ secondary, api, ...props }) => {
       <CommentButton
         secondary={secondary}
         onClick={() => api.submitComment(api.subjectId)}
+        disabled={api.commentLoading && "disabled"}
       >
         {api.commentLoading ? <LoadingSpinner /> : "Comment"}
       </CommentButton>
