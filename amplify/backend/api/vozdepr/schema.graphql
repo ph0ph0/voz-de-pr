@@ -180,4 +180,5 @@ enum VoteOnType {
 
 type Mutation {
   voteOnSubject(input: VoteInput!): Subject!
+  voteOnComment(input: VoteInput!): Comment!
 }
