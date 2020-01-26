@@ -9,9 +9,6 @@ import VotesOnSubject from "components/Primitive/SubjectDetail/General/VotesOnSu
 import VoteArrow from "components/Primitive/SubjectDetail/DetailSummary/VoteArrow";
 import Spinner from "components/Primitive/General/LoadingSpinner";
 
-import { useSubject } from "CustomHooks/useSubject";
-import { useUser } from "CustomHooks/user";
-
 // Imported into Primitive/SubjectDetail/General/VotesOnSubject story
 export const VotesOnSubjectInSummary = styled(VotesOnSubject)`
   /* border: 1px solid purple; */
@@ -20,6 +17,20 @@ export const VotesOnSubjectInSummary = styled(VotesOnSubject)`
 
 const DetailSummaryWrapper = ({ secondary, api, ...props }) => {
   const spinnerColour = secondary ? "#1B4EA0" : "#EC220D";
+
+  const upArrowColour =
+    api.currentVoteOnSubject === "up" && secondary
+      ? "#1B4EA0"
+      : api.currentVoteOnSubject === "up"
+      ? "#EC220D"
+      : "#919191";
+  const downArrowColour =
+    api.currentVoteOnSubject === "down" && secondary
+      ? "#1B4EA0"
+      : api.currentVoteOnSubject === "down"
+      ? "#EC220D"
+      : "#919191";
+
   return (
     <div {...props}>
       <BubbleWrapper />
@@ -33,8 +44,15 @@ const DetailSummaryWrapper = ({ secondary, api, ...props }) => {
         <LoadingSpinner colour={spinnerColour} />
       ) : (
         <>
-          <VoteArrow onClick={api.clickedSubjectUpVote} />
-          <VoteArrow pointDown onClick={api.clickedSubjectDownVote} />
+          <VoteArrow
+            onClick={api.clickedSubjectUpVote}
+            colour={upArrowColour}
+          />
+          <VoteArrow
+            pointDown
+            onClick={api.clickedSubjectDownVote}
+            colour={downArrowColour}
+          />
         </>
       )}
     </div>

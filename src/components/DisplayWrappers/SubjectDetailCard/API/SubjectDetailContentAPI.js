@@ -139,7 +139,7 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
       window.log("************Checking user vote on subject");
       const voteObject = await getUserVoteOnSubject();
       window.log(`Got voteObject in uE: ${JSON.stringify(voteObject)}`);
-      if (voteObject === []) {
+      if (voteObject === undefined) {
         window.log(
           `User hasn't voted on subject yet, nulling current vote on subject...`
         );

@@ -282,6 +282,7 @@ export const useSubject = () => {
     window.log(
       `Getting votes on subject using sID, uID: ${subjectId}, ${userId}`
     );
+    setVoteLoading(true);
     try {
       const result = await API.graphql({
         query: votesOnObjectByUser,
@@ -296,6 +297,8 @@ export const useSubject = () => {
     } catch (error) {
       window.log(`Error getting votes on subject: ${JSON.stringify(error)}`);
       throw error;
+    } finally {
+      setVoteLoading(false);
     }
   };
 
