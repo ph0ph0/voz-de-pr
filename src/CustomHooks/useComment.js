@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { API, graphqlOperation } from "aws-amplify";
 import { createComment } from "graphql/mutations";
+import { votesOnObjectByUser } from "graphql/queries";
 import { voteOnComment } from "graphql-custom/mutations.js";
 
 export const useComment = () => {
   const [loading, setLoading] = useState(false);
+  const [commentVoteLoading, setCommentVoteLoading] = useState(false);
 
   const saveComment = async (userId, username, commentText, subjectId) => {
     setLoading(true);
@@ -57,9 +59,35 @@ export const useComment = () => {
     }
   };
 
+  const votesOnCommentByUser = async (commentId, userId) => {
+    window.log(
+      `Getting votes on comment using sID, uID: ${commentId}, ${userId}`
+    );
+    setCommentVoteLoading(true);
+    try {
+      const result = await API.graphql({
+        query: votesOnObjectByUser,
+        variables: {
+          objectVotedOnId: commentId,
+          createdBy: { eq: userId }
+        }
+      });
+      window.log(`votesOnCommentByUser: ${JSON.stringify(result)}`);
+      const voteOnObject = result.data.votesOnObjectByUser.items;
+      return voteOnObject;
+    } catch (error) {
+      window.log(`Error getting votes on comment: ${JSON.stringify(error)}`);
+      throw error;
+    } finally {
+      setCommentVoteLoading(false);
+    }
+  };
+
   return {
     userVoteOnComment,
+    votesOnCommentByUser,
     loading,
+    commentVoteLoading,
     saveComment
   };
 };

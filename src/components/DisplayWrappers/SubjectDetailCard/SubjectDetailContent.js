@@ -20,7 +20,7 @@ const SubjectDetailContentWrapper = ({ api, secondary, ...props }) => {
       )}
       <DetailSummary secondary={secondary} api={api} />
       <DetailBody secondary={secondary} api={api} />
-      {api.comments && <CommentsSection api={api} />}
+      {api.comments && <CommentsSection api={api} secondary={secondary} />}
     </div>
   );
 };

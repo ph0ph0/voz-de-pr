@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import Comment from "./Comment";
 
-const CommentsSectionWrapper = ({ api, ...props }) => {
+const CommentsSectionWrapper = ({ api, secondary, ...props }) => {
   // window.log(`Comments in commentSection: ${JSON.stringify(comments)}`);
   const timeOrderedComments = api.comments
     .sort((a, b) => {
@@ -17,6 +17,7 @@ const CommentsSectionWrapper = ({ api, ...props }) => {
           key={index}
           api={api}
           comment={comment}
+          secondary={secondary}
         />
       ))}
     </div>

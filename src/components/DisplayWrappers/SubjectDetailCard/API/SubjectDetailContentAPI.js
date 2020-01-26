@@ -17,7 +17,9 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
   const {
     saveComment,
     loading: commentLoading,
-    userVoteOnComment
+    userVoteOnComment,
+    votesOnCommentByUser,
+    commentVoteLoading
   } = useComment();
 
   const { user } = useUser();
@@ -128,15 +130,15 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
   //Once picture has been downloaded, check if the user has voted on the subject yet
 
   useEffect(() => {
-    window.log("************Getting user vote on subject");
+    window.log("Getting user vote on subject");
     let isMounted = true;
     if (!user) {
-      window.log("***********No user, aborting getting votes on subject");
+      window.log("No user, aborting getting votes on subject");
       return;
     }
 
     (async function checkSubjectVotes() {
-      window.log("************Checking user vote on subject");
+      window.log("Checking user vote on subject");
       const voteObject = await getUserVoteOnSubject();
       window.log(`Got voteObject in uE: ${JSON.stringify(voteObject)}`);
       if (voteObject === undefined) {
@@ -210,7 +212,7 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     try {
       const userVoteObject = await votesOnSubjectByUser(subjectId, user.id);
       window.log(
-        `**************userVoteObject: ${JSON.stringify(userVoteObject)}`
+        `userVoteObject on subject: ${JSON.stringify(userVoteObject)}`
       );
       return userVoteObject[0];
     } catch (error) {
@@ -247,7 +249,7 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     window.log("Clicked up vote!");
     const userId = user.id;
     try {
-      await userVoteOnComment("up", userId, commentId);
+      await userVoteOnComment("down", userId, commentId);
       const result = await downloadSubject(subjectId);
       const subject = result.data.getSubject;
       window.log(`Got subject: ${JSON.stringify(subject)}`);
@@ -265,6 +267,24 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
       });
     } catch (error) {
       window.log(`Error voting: ${error}`);
+    }
+  };
+
+  const getUserVoteOnComment = async commentId => {
+    if (!user || !user.id) {
+      window.log("No user, aborting getting votes on comment");
+      return;
+    }
+    try {
+      const userVoteObject = await votesOnCommentByUser(commentId, user.id);
+      window.log(
+        `**************userVoteObject on comment: ${JSON.stringify(
+          userVoteObject
+        )}`
+      );
+      return userVoteObject[0];
+    } catch (error) {
+      window.log(`Error getting user votes on subject: ${error}`);
     }
   };
 
@@ -356,6 +376,7 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     subjectId,
     isSecondary,
     currentVoteOnSubject,
+    commentVoteLoading,
     commentLoading,
     pictureLoading,
     subjectLoading,
@@ -365,7 +386,9 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     clickedCommentUpVote,
     clickedCommentDownVote,
     updateCommentText,
-    submitComment
+    getUserVoteOnComment,
+    submitComment,
+    user
   };
 };
 
