@@ -2,7 +2,7 @@ import { useState } from "react";
 import { savePictureWithSubjectId, getPicture } from "Utils/PictureManager";
 import { API, graphqlOperation } from "aws-amplify";
 import { createSubject, voteOnSubject } from "graphql/mutations";
-import { onUpdateSubject } from "graphql/subscriptions";
+import { votesOnObjectByUser } from "graphql/queries";
 import {
   listSubjects,
   getSubject,
@@ -88,10 +88,6 @@ export const useSubject = () => {
     } finally {
       setLoading(false);
     }
-  };
-
-  const subscribeToSubject = subjectId => {
-    const subscription = API.graphql(graphqlOperation(onUpdateSubject));
   };
 
   const getSubjectPicture = async key => {
@@ -282,6 +278,27 @@ export const useSubject = () => {
     }
   };
 
+  const votesOnSubjectByUser = async (subjectId, userId) => {
+    window.log(
+      `Getting votes on subject using sID, uID: ${subjectId}, ${userId}`
+    );
+    try {
+      const result = await API.graphql({
+        query: votesOnObjectByUser,
+        variables: {
+          objectVotedOnId: subjectId,
+          createdBy: { eq: userId }
+        }
+      });
+      window.log(`votesOnObjectByUser: ${JSON.stringify(result)}`);
+      const voteOnObject = result.data.votesOnObjectByUser.items;
+      return voteOnObject;
+    } catch (error) {
+      window.log(`Error getting votes on subject: ${JSON.stringify(error)}`);
+      throw error;
+    }
+  };
+
   return {
     error,
     loading,
@@ -293,7 +310,8 @@ export const useSubject = () => {
     listAllSubjectsOrderedByVotes,
     listAllSubjectsOrderedByComments,
     voteLoading,
-    userVoteOnSubject
+    userVoteOnSubject,
+    votesOnSubjectByUser
   };
 };
 

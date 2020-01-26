@@ -12,7 +12,7 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
   //Used to download the subject
   const subjectId = state.subjectId;
   const isSecondary = state.isSecondary;
-  // window.log(`COMMENTS in commentAPI: ${JSON.stringify(comments)}`);
+  const currentVoteOnSubject = state.currentVoteOnSubject;
 
   const {
     saveComment,
@@ -26,7 +26,7 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     loading: pictureLoading,
     userVoteOnSubject,
     voteLoading,
-    subscribeToSubject
+    votesOnSubjectByUser
   } = useSubject();
 
   //From SubjectDetailPage
@@ -125,6 +125,49 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     return () => (isMounted = false);
   }, [subject]);
 
+  //Once picture has been downloaded, check if the user has voted on the subject yet
+
+  useEffect(() => {
+    window.log("************Getting user vote on subject");
+    let isMounted = true;
+    if (!user) {
+      window.log("***********No user, aborting getting votes on subject");
+      return;
+    }
+
+    (async function checkSubjectVotes() {
+      window.log("************Checking user vote on subject");
+      const voteObject = await getUserVoteOnSubject();
+      window.log(`Got voteObject in uE: ${JSON.stringify(voteObject)}`);
+      if (voteObject === []) {
+        window.log(
+          `User hasn't voted on subject yet, nulling current vote on subject...`
+        );
+        if (!isMounted) return;
+        setState(prevState => {
+          return {
+            ...prevState,
+            currentVoteOnSubject: null
+          };
+        });
+        return;
+      }
+      const currentVote = voteObject.vote;
+      window.log(
+        `User has voted on subject, setting current vote: ${currentVote}`
+      );
+      if (!isMounted) return;
+      setState(prevState => {
+        return {
+          ...prevState,
+          currentVoteOnSubject: currentVote
+        };
+      });
+    })();
+
+    return () => (isMounted = false);
+  }, [subject]);
+
   //VOTE API
   const clickedSubjectUpVote = async () => {
     window.log("Clicked up vote!");
@@ -156,6 +199,22 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
       });
     } catch (error) {
       window.log(`Error voting: ${error}`);
+    }
+  };
+
+  const getUserVoteOnSubject = async () => {
+    if (!user || !user.id) {
+      window.log("No user, aborting getting votes on subject");
+      return;
+    }
+    try {
+      const userVoteObject = await votesOnSubjectByUser(subjectId, user.id);
+      window.log(
+        `**************userVoteObject: ${JSON.stringify(userVoteObject)}`
+      );
+      return userVoteObject[0];
+    } catch (error) {
+      window.log(`Error getting user votes on subject: ${error}`);
     }
   };
 
@@ -296,6 +355,7 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     subject,
     subjectId,
     isSecondary,
+    currentVoteOnSubject,
     commentLoading,
     pictureLoading,
     subjectLoading,

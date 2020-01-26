@@ -25,7 +25,8 @@ const SubjectDetailPageWrapper = withRouter(({ staticContext, ...props }) => {
     pictureURL: null,
     subject: null,
     subjectId: subjectId,
-    isSecondary: false
+    isSecondary: false,
+    currentVoteOnSubject: null
   });
 
   return (

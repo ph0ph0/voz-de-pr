@@ -27,7 +27,7 @@ const DetailSummaryWrapper = ({ secondary, api, ...props }) => {
       <SubjectID secondary={secondary} subjectID={api.subjectId} />
       <VotesOnSubjectInSummary
         secondary={secondary}
-        votesOnSubject={api.votes}
+        votesOnSubject={api.subject.votes}
       />
       {api.voteLoading ? (
         <LoadingSpinner colour={spinnerColour} />
