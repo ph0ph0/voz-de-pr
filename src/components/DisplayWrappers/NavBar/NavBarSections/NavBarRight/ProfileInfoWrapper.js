@@ -42,11 +42,12 @@ const ProfileInfoWrapper = styled(Wrapper)`
   /* background-color: yellow; */
   width: 200px;
   height: 95%;
+  margin-left: 15px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 export default ProfileInfoWrapper;

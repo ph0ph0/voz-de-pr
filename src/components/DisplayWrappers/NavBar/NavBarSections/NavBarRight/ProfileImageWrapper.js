@@ -81,8 +81,11 @@ const Wrapper = props => {
 };
 
 const ProfileImage = styled.img`
-  clip-path: circle(20px at center);
-  height: 45px;
+  /* border: 1px solid green; */
+  object-fit: cover;
+  height: 40px;
+  width: 40px;
+  /* overflow: hidden; */
 `;
 
 const ProfileImageWrapper = styled(Wrapper)`
@@ -93,6 +96,8 @@ const ProfileImageWrapper = styled(Wrapper)`
   display: flex;
   justify-content: center;
   align-items: center;
+  clip-path: circle(20px at center);
+  margin-left: 24px;
 `;
 
 export default ProfileImageWrapper;
