@@ -100,6 +100,7 @@ export const getSubject = `query GetSubject($id: ID!) {
     author
     title
     subjectContent
+    link
     searchField
     timePassedSinceCreation
     numberOfComments
@@ -148,6 +149,7 @@ export const listSubjects = `query ListSubjects(
       author
       title
       subjectContent
+      link
       searchField
       timePassedSinceCreation
       numberOfComments
@@ -189,6 +191,7 @@ export const subjectsByUserByType = `query SubjectsByUserByType(
       author
       title
       subjectContent
+      link
       searchField
       timePassedSinceCreation
       numberOfComments
@@ -228,6 +231,7 @@ export const subjectsByUser = `query SubjectsByUser(
       author
       title
       subjectContent
+      link
       searchField
       timePassedSinceCreation
       numberOfComments
@@ -269,6 +273,7 @@ export const getSubjectsByNoOfVotes = `query GetSubjectsByNoOfVotes(
       author
       title
       subjectContent
+      link
       searchField
       timePassedSinceCreation
       numberOfComments
@@ -310,6 +315,7 @@ export const getSubjectsByNoOfComments = `query GetSubjectsByNoOfComments(
       author
       title
       subjectContent
+      link
       searchField
       timePassedSinceCreation
       numberOfComments
@@ -351,6 +357,7 @@ export const getSubjectsByCreatedAt = `query GetSubjectsByCreatedAt(
       author
       title
       subjectContent
+      link
       searchField
       timePassedSinceCreation
       numberOfComments

@@ -53,6 +53,7 @@ export const getSubject = `query GetSubject($id: ID!) {
       author
       title
       subjectContent
+      link
       searchField
       timePassedSinceCreation
       numberOfComments

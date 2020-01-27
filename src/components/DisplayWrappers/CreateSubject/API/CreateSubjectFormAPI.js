@@ -13,6 +13,7 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
   const linkContent = state.linkContent;
   const titleIsErrored = state.titleIsErrored;
   const contentIsErrored = state.contentIsErrored;
+  const linkIsErrored = state.linkIsErrored;
 
   const { user } = useUser();
   const { saveSubject, loading, error } = useSubject();
@@ -120,7 +121,7 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
       return;
     }
 
-    if (inputsAreEmpty(setState, subjectTitle, subjectContent)) {
+    if (inputsAreEmpty(setState, subjectTitle, subjectContent, linkContent)) {
       window.log("inputs Empty:");
       setState(prevState => {
         return {
@@ -128,6 +129,14 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
           currentPanel: "content"
         };
       });
+      if (linkIsErrored) {
+        setState(prevState => {
+          return {
+            ...prevState,
+            currentPanel: "link"
+          };
+        });
+      }
       return;
     }
 
@@ -161,6 +170,10 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
       type: subjectType
     };
 
+    if (linkContent.trim()) {
+      subjectObject.link = linkContent.trim();
+    }
+
     try {
       await saveSubject(subjectObject, subjectImage);
     } catch (error) {
@@ -190,6 +203,7 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
     linkContent,
     titleIsErrored,
     contentIsErrored,
+    linkIsErrored,
     updateSubjectTitle,
     updateSubjectContent,
     updateSubjectImage,

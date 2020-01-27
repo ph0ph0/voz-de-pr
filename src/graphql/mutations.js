@@ -9,6 +9,7 @@ export const voteOnSubject = `mutation VoteOnSubject($input: VoteInput!) {
     author
     title
     subjectContent
+    link
     searchField
     timePassedSinceCreation
     numberOfComments
@@ -41,6 +42,19 @@ export const voteOnSubject = `mutation VoteOnSubject($input: VoteInput!) {
       }
       nextToken
     }
+  }
+}
+`;
+export const voteOnComment = `mutation VoteOnComment($input: VoteInput!) {
+  voteOnComment(input: $input) {
+    id
+    createdBy
+    author
+    createdAt
+    text
+    votes
+    subjectId
+    owner
   }
 }
 `;
@@ -121,6 +135,7 @@ export const createSubject = `mutation CreateSubject($input: CreateSubjectInput!
     author
     title
     subjectContent
+    link
     searchField
     timePassedSinceCreation
     numberOfComments
@@ -164,6 +179,7 @@ export const updateSubject = `mutation UpdateSubject($input: UpdateSubjectInput!
     author
     title
     subjectContent
+    link
     searchField
     timePassedSinceCreation
     numberOfComments
@@ -207,6 +223,7 @@ export const deleteSubject = `mutation DeleteSubject($input: DeleteSubjectInput!
     author
     title
     subjectContent
+    link
     searchField
     timePassedSinceCreation
     numberOfComments

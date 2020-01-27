@@ -30,7 +30,8 @@ const CreateSubjectWrapper = ({ secondary, ...props }) => {
     linkDescription: "",
     linkContent: "",
     titleIsErrored: false,
-    contentIsErrored: false
+    contentIsErrored: false,
+    linkIsErrored: false
   });
 
   function renderSwitch() {

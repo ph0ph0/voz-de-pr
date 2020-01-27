@@ -78,6 +78,7 @@ export const onCreateSubject = `subscription OnCreateSubject($owner: String!) {
     author
     title
     subjectContent
+    link
     searchField
     timePassedSinceCreation
     numberOfComments
@@ -121,6 +122,7 @@ export const onUpdateSubject = `subscription OnUpdateSubject($owner: String!) {
     author
     title
     subjectContent
+    link
     searchField
     timePassedSinceCreation
     numberOfComments
@@ -164,6 +166,7 @@ export const onDeleteSubject = `subscription OnDeleteSubject($owner: String!) {
     author
     title
     subjectContent
+    link
     searchField
     timePassedSinceCreation
     numberOfComments

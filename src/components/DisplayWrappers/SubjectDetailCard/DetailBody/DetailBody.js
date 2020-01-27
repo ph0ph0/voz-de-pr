@@ -17,9 +17,16 @@ const DetailBodyWrapper = ({ api, secondary, ...props }) => {
   return (
     <div {...props}>
       <SubjectContent>{api.subject.subjectContent}</SubjectContent>
-      <SubjectLink secondary={secondary}>
-        http://www.fideicomiso.org/home.html
-      </SubjectLink>
+      {api.subject && api.subject.link && (
+        <SubjectLink
+          secondary={secondary}
+          href={api.subject.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {api.subject.link}
+        </SubjectLink>
+      )}
       {user && (
         <>
           <CommentInfo secondary={secondary} username={username} />
