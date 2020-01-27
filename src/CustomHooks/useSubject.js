@@ -253,6 +253,7 @@ export const useSubject = () => {
     }
   };
 
+  //Used to cast a user's vote on a subject
   const userVoteOnSubject = async (type, userId, subjectId) => {
     const voteInput = {
       id: `${userId}_${subjectId}`,
@@ -278,6 +279,7 @@ export const useSubject = () => {
     }
   };
 
+  //Determines if a user has voted on a subject yet
   const votesOnSubjectByUser = async (subjectId, userId) => {
     window.log(
       `Getting votes on subject using sID, uID: ${subjectId}, ${userId}`

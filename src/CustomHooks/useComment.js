@@ -34,6 +34,7 @@ export const useComment = () => {
     }
   };
 
+  //Called to cast a user's vote on a comment
   const userVoteOnComment = async (type, userId, commentId) => {
     const voteInput = {
       id: `${userId}_${commentId}`,
@@ -44,7 +45,7 @@ export const useComment = () => {
     };
 
     window.log("Voting on comment...");
-    setLoading(true);
+    setCommentVoteLoading(true);
     try {
       const result = await API.graphql(
         graphqlOperation(voteOnComment, { input: voteInput })
@@ -55,7 +56,7 @@ export const useComment = () => {
       window.log(`Error voting on comment!: ${JSON.stringify(error)}`);
       throw error;
     } finally {
-      setLoading(false);
+      setCommentVoteLoading(false);
     }
   };
 

@@ -128,7 +128,6 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
   }, [subject]);
 
   //Once picture has been downloaded, check if the user has voted on the subject yet
-
   useEffect(() => {
     window.log("Getting user vote on subject");
     let isMounted = true;
@@ -173,6 +172,7 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
   //VOTE API
   const clickedSubjectUpVote = async () => {
     window.log("Clicked up vote!");
+    if (!user) return;
     const userId = user.id;
     try {
       const subject = await userVoteOnSubject("up", userId, subjectId);
@@ -190,6 +190,7 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
 
   const clickedSubjectDownVote = async () => {
     window.log("Clicked up vote!");
+    if (!user) return;
     const userId = user.id;
     try {
       const subject = await userVoteOnSubject("down", userId, subjectId);
@@ -222,6 +223,7 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
 
   const clickedCommentUpVote = async commentId => {
     window.log("Clicked up vote!");
+    if (!user) return;
     const userId = user.id;
     try {
       await userVoteOnComment("up", userId, commentId);
@@ -247,6 +249,7 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
 
   const clickedCommentDownVote = async commentId => {
     window.log("Clicked up vote!");
+    if (!user) return;
     const userId = user.id;
     try {
       await userVoteOnComment("down", userId, commentId);
