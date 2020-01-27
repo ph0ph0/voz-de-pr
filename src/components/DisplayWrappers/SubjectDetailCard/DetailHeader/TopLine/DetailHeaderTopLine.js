@@ -5,15 +5,22 @@ import NameTimeAgo from "../../../../Primitive/SubjectCard/NameTimeAgo";
 import ProfPicSubjectCard from "../../../SubjectCard/LeftContent/ProfPicSubjectCard";
 
 import { parseTime } from "Utils/TimePassedCalculator";
+import DeleteButton from "components/Primitive/SubjectCard/DeleteSubjectButton";
 
 const DetailHeaderTopLineWrapper = ({ api, ...props }) => {
   const timePassed = parseTime(api.subject.createdAt);
+
+  const isOwner =
+    api.user && api.user.id === api.subject.createdBy ? true : false;
 
   return (
     <div {...props}>
       <ProfPicSubjectCard createdBy={api.subject.createdBy} />
       <NameTimeAgo>{api.subject.author}</NameTimeAgo>
       <NameTimeAgo isTimeAgo>{timePassed}</NameTimeAgo>
+      {isOwner && (
+        <DeleteButton onClick={() => api.deleteSubject(api.subjectId)} />
+      )}
     </div>
   );
 };

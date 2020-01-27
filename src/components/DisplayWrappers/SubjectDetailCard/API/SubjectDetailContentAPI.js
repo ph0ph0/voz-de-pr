@@ -28,7 +28,8 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     loading: pictureLoading,
     userVoteOnSubject,
     voteLoading,
-    votesOnSubjectByUser
+    votesOnSubjectByUser,
+    deleteSingleSubject
   } = useSubject();
 
   //From SubjectDetailPage
@@ -144,7 +145,12 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
         window.log(
           `User hasn't voted on subject yet, nulling current vote on subject...`
         );
-        if (!isMounted) return;
+        if (!isMounted) {
+          window.log(
+            "sD no longer mounted, aborting setting currentVoteOnSubject state"
+          );
+          return;
+        }
         setState(prevState => {
           return {
             ...prevState,
@@ -157,7 +163,12 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
       window.log(
         `User has voted on subject, setting current vote: ${currentVote}`
       );
-      if (!isMounted) return;
+      if (!isMounted) {
+        window.log(
+          "sD no longer mounted, aborting setting currentVoteOnSubject state"
+        );
+        return;
+      }
       setState(prevState => {
         return {
           ...prevState,
@@ -168,6 +179,24 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
 
     return () => (isMounted = false);
   }, [subject]);
+
+  const deleteSubject = async subjectId => {
+    window.log("Deleting subject...");
+    if (!user) return;
+
+    try {
+      await deleteSingleSubject(subjectId);
+      window.log(`Deleted subject: ${subjectId}`);
+      setState(prevState => {
+        return {
+          ...prevState,
+          subject: null
+        };
+      });
+    } catch (error) {
+      window.log(`Error deleting subject: ${error}`);
+    }
+  };
 
   //VOTE API
   const clickedSubjectUpVote = async () => {
@@ -384,6 +413,7 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     pictureLoading,
     subjectLoading,
     voteLoading,
+    deleteSubject,
     clickedSubjectUpVote,
     clickedSubjectDownVote,
     clickedCommentUpVote,

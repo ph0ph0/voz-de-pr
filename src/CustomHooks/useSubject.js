@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { savePictureWithSubjectId, getPicture } from "Utils/PictureManager";
 import { API, graphqlOperation } from "aws-amplify";
-import { createSubject, voteOnSubject } from "graphql/mutations";
+import { createSubject, voteOnSubject, deleteSubject } from "graphql/mutations";
 import { votesOnObjectByUser } from "graphql/queries";
 import {
   listSubjects,
@@ -87,6 +87,24 @@ export const useSubject = () => {
       throw error;
     } finally {
       setLoading(false);
+    }
+  };
+
+  const deleteSingleSubject = async subjectId => {
+    window.log(`Deleting subject: ${subjectId}`);
+
+    setLoading(true);
+    try {
+      const subjectObject = await API.graphql(
+        graphqlOperation(deleteSubject, { input: { id: subjectId } })
+      );
+      window.log("Deleted subject!");
+      return subjectObject;
+    } catch (error) {
+      window.log(
+        `Error deleting subject in useSubject: ${JSON.stringify(error)}`
+      );
+      throw error;
     }
   };
 
@@ -309,6 +327,7 @@ export const useSubject = () => {
     loading,
     saveSubject,
     downloadSubject,
+    deleteSingleSubject,
     listAllSubjects,
     getSubjectPicture,
     listAllSubjectsOrderedByCreatedAt,

@@ -3,8 +3,8 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 import ProfPicSubjectCard from "./ProfPicSubjectCard";
-import NameTimeAgo from "../../../Primitive/SubjectCard/NameTimeAgo";
-import DeleteButton from "../../../Primitive/SubjectCard/DeleteSubjectButton";
+import NameTimeAgo from "components/Primitive/SubjectCard/NameTimeAgo";
+import DeleteButton from "components/Primitive/SubjectCard/DeleteSubjectButton";
 
 const Wrapper = ({ author, createdBy, isOwner, timePassed, ...props }) => {
   return (
