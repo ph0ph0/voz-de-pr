@@ -5,6 +5,9 @@ const LoadMore = styled.button`
   width: auto;
   height: 40px;
   border-radius: 40px;
+  background-color: white;
+  /* Remove border style for safari */
+  border-style: none;
 
   margin-top: 10px;
   margin-bottom: 40px;

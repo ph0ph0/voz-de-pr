@@ -42,6 +42,10 @@ const VoteArrow = styled(VoteArrowWrapper)`
   & + & {
     margin-left: ${props => (props.small ? "2px" : "16px")};
   }
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export default VoteArrow;

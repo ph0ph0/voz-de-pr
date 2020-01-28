@@ -31,6 +31,10 @@ const SignUpCardAPI = ({ state, setState }) => {
 
   //Fires when the user types in the name field
   const updateFirstNameValue = newValue => {
+    if (newValue.length >= 20) {
+      window.log("First name is too long, aborting");
+      return;
+    }
     setState(prevState => {
       return {
         ...prevState,
@@ -41,6 +45,10 @@ const SignUpCardAPI = ({ state, setState }) => {
   };
 
   const updateLastNameValue = newValue => {
+    if (newValue.length > 20) {
+      window.log("Last name is too long, aborting");
+      return;
+    }
     setState(prevState => {
       return {
         ...prevState,
@@ -51,6 +59,10 @@ const SignUpCardAPI = ({ state, setState }) => {
   };
 
   const updateUsernameValue = newValue => {
+    if (newValue.length > 25) {
+      window.log("Username is too long, aborting");
+      return;
+    }
     setState(prevState => {
       return {
         ...prevState,

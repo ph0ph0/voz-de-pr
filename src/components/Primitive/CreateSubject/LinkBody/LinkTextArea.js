@@ -28,6 +28,10 @@ const SubjectLinkTextArea = styled(SubjectLinkTextWrapper)`
   padding-left: 25px;
 
   line-height: 2.4em;
+  /* Mozilla takes font parameters from browser instead of style sheet for TextAreas... */
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
   font-size: 20px;
   margin-right: auto;
 

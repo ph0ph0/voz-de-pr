@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useComment } from "CustomHooks/useComment";
 import { useUser } from "CustomHooks/user";
 import { useSubject } from "CustomHooks/useSubject";
+import { useHistory } from "react-router-dom";
 
 const SubjectDetailContentAPI = ({ state, setState }) => {
   const commentText = state.commentText;
@@ -34,6 +35,15 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
 
   //From SubjectDetailPage
   const { downloadSubject, loading: subjectLoading } = useSubject();
+
+  let history = useHistory();
+
+  const showLoginScreen = () => {
+    window.log(`Showing signin screen...`);
+    history.push({
+      pathname: `/signin`
+    });
+  };
 
   //Firstly, get Subject
   useEffect(() => {
@@ -201,7 +211,10 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
   //VOTE API
   const clickedSubjectUpVote = async () => {
     window.log("Clicked up vote!");
-    if (!user) return;
+    if (!user) {
+      showLoginScreen();
+      return;
+    }
     const userId = user.id;
     try {
       const subject = await userVoteOnSubject("up", userId, subjectId);
@@ -219,7 +232,10 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
 
   const clickedSubjectDownVote = async () => {
     window.log("Clicked up vote!");
-    if (!user) return;
+    if (!user) {
+      showLoginScreen();
+      return;
+    }
     const userId = user.id;
     try {
       const subject = await userVoteOnSubject("down", userId, subjectId);
@@ -252,7 +268,10 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
 
   const clickedCommentUpVote = async commentId => {
     window.log("Clicked up vote!");
-    if (!user) return;
+    if (!user) {
+      showLoginScreen();
+      return;
+    }
     const userId = user.id;
     try {
       await userVoteOnComment("up", userId, commentId);
@@ -278,7 +297,10 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
 
   const clickedCommentDownVote = async commentId => {
     window.log("Clicked up vote!");
-    if (!user) return;
+    if (!user) {
+      showLoginScreen();
+      return;
+    }
     const userId = user.id;
     try {
       await userVoteOnComment("down", userId, commentId);
