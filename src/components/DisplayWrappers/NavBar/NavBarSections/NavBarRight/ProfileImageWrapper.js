@@ -32,7 +32,7 @@ const Wrapper = props => {
     }
   };
 
-  useMemo(() => {
+  useEffect(() => {
     window.log("Fetching avatar...");
 
     retry(
