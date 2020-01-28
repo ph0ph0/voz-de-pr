@@ -13,7 +13,7 @@ const Wrapper = props => {
 
   const { loading, user, getUserAvatar, refreshUser } = useUser();
 
-  const checkAvatarAndFetch = async () => {
+  const checkAvatarAndFetch = async callback => {
     window.log(`Checking and/or fetching avatar`);
     if (user.avatar && user.avatar.key) {
       window.log(`User has an avatar, exiting check and refresh user`);
@@ -24,11 +24,11 @@ const Wrapper = props => {
       await refreshUser();
       if (user.avatar && user.avatar.key === null) {
         window.log(`User avatar was null...`);
-        throw Error("User avatar is null...");
+        throw new Error("User av was null");
       }
-      return;
     } catch (error) {
       window.log(`Error checking the avatar: ${error}`);
+      throw new Error("Error getting av");
     }
   };
 
@@ -36,12 +36,12 @@ const Wrapper = props => {
     window.log("Fetching avatar...");
 
     retry(
-      { times: 10, interval: 5000 },
+      { times: 25, interval: 1000 },
       checkAvatarAndFetch,
       async (error, _) => {
         if (error) {
           window.log(`Error, retried max number of times: ${error}`);
-          throw error;
+          //Do nothing
         }
         if (user.avatar && user.avatar.key) {
           window.log(`Fetching avatar url...`);
