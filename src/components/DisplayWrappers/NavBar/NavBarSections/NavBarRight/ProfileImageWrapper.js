@@ -10,6 +10,7 @@ import Logo from "assets/General/Logo.svg";
 
 const Wrapper = props => {
   const [avatarURL, setAvatarURL] = useState("");
+  const [userAvatarKey, setUserAvatarKey] = useState(null);
 
   const { loading, user, getUserAvatar, refreshUser } = useUser();
 
@@ -53,6 +54,9 @@ const Wrapper = props => {
   }, [user]);
 
   const fetchAvatarURL = async userAvatarKey => {
+    window.log(
+      `$$$$$$$$$$$$$$$$$$$$$$$$$$$fetchAvatarURL initiated with key: ${userAvatarKey}`
+    );
     if (!userAvatarKey) {
       window.log("No key to fetch avatar picture, aborting!");
       return;
