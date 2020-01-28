@@ -39,7 +39,7 @@ const NavBarRight = styled(Wrapper)`
   flex-basis: 33.3333%;
 
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 `;
 
