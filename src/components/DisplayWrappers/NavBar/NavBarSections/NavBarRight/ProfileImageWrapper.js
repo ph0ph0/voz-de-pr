@@ -18,7 +18,7 @@ const Wrapper = props => {
     window.log(`Checking and/or fetching avatar`);
     if (user.avatar && user.avatar.key) {
       window.log(`User has an avatar, exiting check and refresh user`);
-      return;
+      throw new Error("CUNT");
     }
     try {
       window.log("User did not have an avatar key");
@@ -51,7 +51,7 @@ const Wrapper = props => {
         if (user.avatar && user.avatar.key) {
           window.log(`Fetching avatar url...`);
           const userAvatarKey = user.avatar.key;
-          fetchAvatarURL(userAvatarKey);
+          await fetchAvatarURL(userAvatarKey);
         } else {
           window.log(`Couldn't retry fetchAvatarURL: ${user.avatar.key}`);
         }
