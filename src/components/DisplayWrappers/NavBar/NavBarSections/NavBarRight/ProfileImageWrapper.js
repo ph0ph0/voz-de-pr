@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useMemo } from "react";
 import styled from "styled-components";
 
-// import retry from "async/retry";
 import retry from "async-retry";
 
 import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
@@ -11,7 +10,6 @@ import Logo from "assets/General/Logo.svg";
 
 const Wrapper = props => {
   const [avatarURL, setAvatarURL] = useState("");
-  const [userAvatarKey, setUserAvatarKey] = useState(null);
 
   const { loading, user, getUserAvatar, refreshUser } = useUser();
 
@@ -51,34 +49,10 @@ const Wrapper = props => {
 
       await fetchAvatarURL(key);
     })();
-
-    // retry(
-    //   { times: 25, interval: 1000 },
-    //   checkAvatarAndFetch,
-    //   async (error, _) => {
-    //     if (error) {
-    //       window.log(`Error, retried max number of times: ${error}`);
-    //       //Do nothing
-    //     }
-    //     window.log(
-    //       `%%%%%%%%%%%%%%Fell through error in retry, will try fetch with userAv: ${user.avatar.key}`
-    //     );
-    //     // await refreshUser();
-    //     if (user.avatar && user.avatar.key) {
-    //       window.log(`Fetching avatar url...`);
-    //       const userAvatarKey = user.avatar.key;
-    //       await fetchAvatarURL(userAvatarKey);
-    //     } else {
-    //       window.log(`Couldn't retry fetchAvatarURL: ${user.avatar.key}`);
-    //     }
-    //   }
-    // );
   }, [user]);
 
   const fetchAvatarURL = async userAvatarKey => {
-    window.log(
-      `$$$$$$$$$$$$$$$$$$$$$$$$$$$fetchAvatarURL initiated with key: ${userAvatarKey}`
-    );
+    window.log(`fetchAvatarURL initiated with key: ${userAvatarKey}`);
     if (!userAvatarKey) {
       window.log("No key to fetch avatar picture, aborting!");
       return;
