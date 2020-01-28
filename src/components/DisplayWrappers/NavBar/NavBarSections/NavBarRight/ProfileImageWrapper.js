@@ -44,10 +44,16 @@ const Wrapper = props => {
           window.log(`Error, retried max number of times: ${error}`);
           //Do nothing
         }
+        window.log(
+          `%%%%%%%%%%%%%%Fell through error in retry, will try fetch with userAv: ${user.avatar.key}`
+        );
+        // await refreshUser();
         if (user.avatar && user.avatar.key) {
           window.log(`Fetching avatar url...`);
           const userAvatarKey = user.avatar.key;
           fetchAvatarURL(userAvatarKey);
+        } else {
+          window.log(`Couldn't retry fetchAvatarURL: ${user.avatar.key}`);
         }
       }
     );
