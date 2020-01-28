@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import styled from "styled-components";
 
 import retry from "async/retry";
@@ -12,25 +12,6 @@ const Wrapper = props => {
   const [avatarURL, setAvatarURL] = useState("");
 
   const { loading, user, getUserAvatar, refreshUser } = useUser();
-
-  useEffect(() => {
-    window.log("Fetching avatar...");
-
-    retry(
-      { times: 10, interval: 5000 },
-      checkAvatarAndFetch,
-      async (error, _) => {
-        if (error) {
-          window.log(`Error, retried max number of times: ${error}`);
-          throw error;
-        }
-        if (user.avatar && user.avatar.key) {
-          const userAvatarKey = user.avatar.key;
-          fetchAvatarURL(userAvatarKey);
-        }
-      }
-    );
-  }, [user]);
 
   const checkAvatarAndFetch = async () => {
     window.log(`Checking and/or fetching avatar`);
@@ -50,6 +31,25 @@ const Wrapper = props => {
       window.log(`Error checking the avatar: ${error}`);
     }
   };
+
+  useMemo(() => {
+    window.log("Fetching avatar...");
+
+    retry(
+      { times: 10, interval: 5000 },
+      checkAvatarAndFetch,
+      async (error, _) => {
+        if (error) {
+          window.log(`Error, retried max number of times: ${error}`);
+          throw error;
+        }
+        if (user.avatar && user.avatar.key) {
+          const userAvatarKey = user.avatar.key;
+          fetchAvatarURL(userAvatarKey);
+        }
+      }
+    );
+  }, [user]);
 
   const fetchAvatarURL = async userAvatarKey => {
     if (!userAvatarKey) {

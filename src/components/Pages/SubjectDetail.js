@@ -23,6 +23,7 @@ const SubjectDetailPageWrapper = withRouter(({ staticContext, ...props }) => {
     commentError: "",
     comments: [],
     pictureURL: null,
+    pictureKey: null,
     subject: null,
     subjectId: subjectId,
     isSecondary: false,

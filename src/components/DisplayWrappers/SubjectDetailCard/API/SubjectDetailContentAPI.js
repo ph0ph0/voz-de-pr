@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { useComment } from "CustomHooks/useComment";
 import { useUser } from "CustomHooks/user";
 import { useSubject } from "CustomHooks/useSubject";
@@ -8,6 +8,7 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
   const commentText = state.commentText;
   const commentError = state.commentError;
   const comments = state.comments;
+  const pictureKey = state.pictureKey;
   const pictureURL = state.pictureURL;
   const subject = state.subject;
   //Used to download the subject
@@ -61,6 +62,11 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
         return;
       }
       const comments = subject && subject.comments && subject.comments.items;
+      var key =
+        (subject.pictures &&
+          subject.pictures.items[0] &&
+          subject.pictures.items[0].key) ||
+        null;
       setState(prevState => {
         window.log(
           `Previous state before setting subject/comments: ${JSON.stringify(
@@ -70,7 +76,8 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
         return {
           ...prevState,
           subject: subject,
-          comments: comments
+          comments: comments,
+          pictureKey: key
         };
       });
       if (subject !== null) {
@@ -100,14 +107,16 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
     }
   };
 
-  useEffect(() => {
+  //We use useMemo as we don't want to reload the picture everytime
+  useMemo(() => {
     let isMounted = true;
+    if (pictureKey == null) {
+      window.log(
+        `Picture key was null, aborting downloading image: ${pictureKey}`
+      );
+    }
     try {
-      var key =
-        subject.pictures &&
-        subject.pictures.items[0] &&
-        subject.pictures.items[0].key;
-      var compressedImageKey = key.replace(
+      var compressedImageKey = pictureKey.replace(
         "subjectPictures",
         "subjectPictures-detailImages_670x460"
       );
@@ -136,7 +145,7 @@ const SubjectDetailContentAPI = ({ state, setState }) => {
       });
     }
     return () => (isMounted = false);
-  }, [subject]);
+  }, [pictureKey]);
 
   //Once picture has been downloaded, check if the user has voted on the subject yet
   useEffect(() => {
