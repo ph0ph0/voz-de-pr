@@ -68,7 +68,6 @@ const RightContentWrapper = ({ subject, secondary, ...props }) => {
           onError={event => (event.target.src = Placeholder)}
         />
       )}
-      {/* {src ? null : <LoadingSpinner colour={"black"} />} */}
     </div>
   );
 };
@@ -85,6 +84,6 @@ const RightContent = styled(RightContentWrapper)`
   align-items: center;
 `;
 
-// RightContent.propTypes = SubjectPropTypes;
+RightContent.propTypes = SubjectPropTypes;
 
 export default RightContent;

@@ -48,6 +48,5 @@ const LeftContent = styled(Wrapper)`
 `;
 
 LeftContent.propTypes = SubjectPropTypes;
-// LeftContent.defaultProps = {}
 
 export default LeftContent;
