@@ -8,7 +8,8 @@ import useApi from "../../CustomHooks/useAPI";
 const ConfirmSignUpWrapper = ({ ...props }) => {
   const api = useApi(ConfirmSignUpCardAPI, {
     codeValue: "",
-    success: false
+    success: false,
+    loading: false
   });
   return (
     <div {...props}>
