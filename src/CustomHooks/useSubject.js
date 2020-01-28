@@ -172,14 +172,14 @@ export const useSubject = () => {
         authMode: "AWS_IAM"
       });
       window.log(
-        `****** allSubjects ordered by createdAt: ${JSON.stringify(
+        `allSubjects ordered by createdAt: ${JSON.stringify(
           allSubjectData.data.getSubjectsByCreatedAt.items
         )}`
       );
 
       const allSubjects = allSubjectData.data.getSubjectsByCreatedAt.items;
       const token = allSubjectData.data.getSubjectsByCreatedAt.nextToken;
-      window.log(`****Next token extracted from data: ${!!token}`);
+      window.log(`Next token extracted from data: ${!!token}`);
       // window.log(`ERRYTING: ${JSON.stringify(allSubjectData)}`);
 
       return { subjects: allSubjects, nextToken: token };

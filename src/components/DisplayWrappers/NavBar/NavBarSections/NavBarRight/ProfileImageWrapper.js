@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useMemo } from "react";
 import styled from "styled-components";
 
-import retry from "async/retry";
+// import retry from "async/retry";
+import retry from "async-retry";
 
 import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
 import { useUser } from "CustomHooks/user";
@@ -18,7 +19,7 @@ const Wrapper = props => {
     window.log(`Checking and/or fetching avatar`);
     if (user.avatar && user.avatar.key) {
       window.log(`User has an avatar, exiting check and refresh user`);
-      throw new Error("CUNT");
+      return user.avatar.key;
     }
     try {
       window.log("User did not have an avatar key");
@@ -36,27 +37,42 @@ const Wrapper = props => {
   useEffect(() => {
     window.log("Fetching avatar...");
 
-    retry(
-      { times: 25, interval: 1000 },
-      checkAvatarAndFetch,
-      async (error, _) => {
-        if (error) {
-          window.log(`Error, retried max number of times: ${error}`);
-          //Do nothing
-        }
-        window.log(
-          `%%%%%%%%%%%%%%Fell through error in retry, will try fetch with userAv: ${user.avatar.key}`
-        );
-        // await refreshUser();
-        if (user.avatar && user.avatar.key) {
-          window.log(`Fetching avatar url...`);
-          const userAvatarKey = user.avatar.key;
-          await fetchAvatarURL(userAvatarKey);
-        } else {
-          window.log(`Couldn't retry fetchAvatarURL: ${user.avatar.key}`);
-        }
-      }
-    );
+    (async function getAv() {
+      const key = await retry(
+        async bail => {
+          const key = await checkAvatarAndFetch();
+          window.log(`KEY: ${key}`);
+          return key;
+        },
+        { retries: 15, factor: 1 }
+      );
+
+      window.log(`Got the muthafucking key: ${key}`);
+
+      await fetchAvatarURL(key);
+    })();
+
+    // retry(
+    //   { times: 25, interval: 1000 },
+    //   checkAvatarAndFetch,
+    //   async (error, _) => {
+    //     if (error) {
+    //       window.log(`Error, retried max number of times: ${error}`);
+    //       //Do nothing
+    //     }
+    //     window.log(
+    //       `%%%%%%%%%%%%%%Fell through error in retry, will try fetch with userAv: ${user.avatar.key}`
+    //     );
+    //     // await refreshUser();
+    //     if (user.avatar && user.avatar.key) {
+    //       window.log(`Fetching avatar url...`);
+    //       const userAvatarKey = user.avatar.key;
+    //       await fetchAvatarURL(userAvatarKey);
+    //     } else {
+    //       window.log(`Couldn't retry fetchAvatarURL: ${user.avatar.key}`);
+    //     }
+    //   }
+    // );
   }, [user]);
 
   const fetchAvatarURL = async userAvatarKey => {
