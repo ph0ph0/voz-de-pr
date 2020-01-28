@@ -80,7 +80,6 @@ export const onCreateSubject = `subscription OnCreateSubject($owner: String!) {
     subjectContent
     link
     searchField
-    timePassedSinceCreation
     numberOfComments
     votes
     staticKey
@@ -124,7 +123,6 @@ export const onUpdateSubject = `subscription OnUpdateSubject($owner: String!) {
     subjectContent
     link
     searchField
-    timePassedSinceCreation
     numberOfComments
     votes
     staticKey
@@ -168,7 +166,6 @@ export const onDeleteSubject = `subscription OnDeleteSubject($owner: String!) {
     subjectContent
     link
     searchField
-    timePassedSinceCreation
     numberOfComments
     votes
     staticKey

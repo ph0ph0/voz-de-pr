@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
+import { SubjectPropTypes } from "Constants/__PropTypes__/SubjectPropTypes";
+
 import SubjectCardTopLineWrapper from "./SubjectCardTopLineWrapper";
 import SubjectTitle from "../../../Primitive/SubjectCard/SubjectTitle";
 import SubjectSummary from "../../../Primitive/SubjectCard/SubjectSummary";
@@ -45,12 +47,7 @@ const LeftContent = styled(Wrapper)`
   justify-content: flex-start;
 `;
 
-LeftContent.propTypes = {
-  author: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  createdAt: PropTypes.string.isRequired,
-  subjectContent: PropTypes.string.isRequired,
-  numberOfComments: PropTypes.number.isRequired
-};
+LeftContent.propTypes = SubjectPropTypes;
+// LeftContent.defaultProps = {}
 
 export default LeftContent;

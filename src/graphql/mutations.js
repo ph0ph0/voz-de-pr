@@ -11,7 +11,6 @@ export const voteOnSubject = `mutation VoteOnSubject($input: VoteInput!) {
     subjectContent
     link
     searchField
-    timePassedSinceCreation
     numberOfComments
     votes
     staticKey
@@ -137,7 +136,6 @@ export const createSubject = `mutation CreateSubject($input: CreateSubjectInput!
     subjectContent
     link
     searchField
-    timePassedSinceCreation
     numberOfComments
     votes
     staticKey
@@ -181,7 +179,6 @@ export const updateSubject = `mutation UpdateSubject($input: UpdateSubjectInput!
     subjectContent
     link
     searchField
-    timePassedSinceCreation
     numberOfComments
     votes
     staticKey
@@ -225,7 +222,6 @@ export const deleteSubject = `mutation DeleteSubject($input: DeleteSubjectInput!
     subjectContent
     link
     searchField
-    timePassedSinceCreation
     numberOfComments
     votes
     staticKey

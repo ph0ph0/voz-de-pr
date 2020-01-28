@@ -71,7 +71,6 @@ type Subject
   searchField: String
   pictures: [Picture] @connection(keyName: "picturesBySubject", fields: ["id"])
   comments: [Comment] @connection(keyName: "commentsBySubject", fields: ["id"])
-  timePassedSinceCreation: String
   numberOfComments: Int
   votes: Int
   # the staticKey is used as the primary key for the GSI and should always have the same value (set as 1)!

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
+import { SubjectPropTypes } from "Constants/__PropTypes__/SubjectPropTypes";
+
 import SubjectInfo from "./SubjectinfoWrapper";
 import SubjectImage from "../../../Primitive/SubjectCard/SubjectImage";
 import Placeholder from "assets/General/placeholder.gif";
@@ -83,9 +85,6 @@ const RightContent = styled(RightContentWrapper)`
   align-items: center;
 `;
 
-RightContent.propTypes = {
-  numberOfVotes: PropTypes.number.isRequired,
-  secondary: PropTypes.bool.isRequired
-};
+// RightContent.propTypes = SubjectPropTypes;
 
 export default RightContent;

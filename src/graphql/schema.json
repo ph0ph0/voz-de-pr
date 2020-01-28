@@ -1590,17 +1590,6 @@
           "isDeprecated" : false,
           "deprecationReason" : null
         }, {
-          "name" : "timePassedSinceCreation",
-          "description" : null,
-          "args" : [ ],
-          "type" : {
-            "kind" : "SCALAR",
-            "name" : "String",
-            "ofType" : null
-          },
-          "isDeprecated" : false,
-          "deprecationReason" : null
-        }, {
           "name" : "numberOfComments",
           "description" : null,
           "args" : [ ],
@@ -2275,15 +2264,6 @@
           "defaultValue" : null
         }, {
           "name" : "searchField",
-          "description" : null,
-          "type" : {
-            "kind" : "INPUT_OBJECT",
-            "name" : "ModelStringFilterInput",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "timePassedSinceCreation",
           "description" : null,
           "type" : {
             "kind" : "INPUT_OBJECT",
@@ -3744,15 +3724,6 @@
           },
           "defaultValue" : null
         }, {
-          "name" : "timePassedSinceCreation",
-          "description" : null,
-          "type" : {
-            "kind" : "SCALAR",
-            "name" : "String",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
           "name" : "numberOfComments",
           "description" : null,
           "type" : {
@@ -3870,15 +3841,6 @@
           "defaultValue" : null
         }, {
           "name" : "searchField",
-          "description" : null,
-          "type" : {
-            "kind" : "SCALAR",
-            "name" : "String",
-            "ofType" : null
-          },
-          "defaultValue" : null
-        }, {
-          "name" : "timePassedSinceCreation",
           "description" : null,
           "type" : {
             "kind" : "SCALAR",
