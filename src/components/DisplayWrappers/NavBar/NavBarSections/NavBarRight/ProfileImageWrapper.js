@@ -44,6 +44,7 @@ const Wrapper = props => {
           throw error;
         }
         if (user.avatar && user.avatar.key) {
+          window.log(`Fetching avatar url...`);
           const userAvatarKey = user.avatar.key;
           fetchAvatarURL(userAvatarKey);
         }
