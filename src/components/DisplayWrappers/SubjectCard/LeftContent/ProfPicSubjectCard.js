@@ -36,9 +36,10 @@ const Wrapper = ({ createdBy, ...props }) => {
 const ProfPicSubjectCard = styled(Wrapper)`
   /* border: 1px solid green; */
   /* background-color: red; */
-  max-width: 24px;
+  clip-path: circle(13px at center);
+  /* max-width: 24px;
   width: auto;
-  height: 24px;
+  height: 24px; */
 
   display: flex;
   justify-content: center;

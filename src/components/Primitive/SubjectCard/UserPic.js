@@ -6,8 +6,9 @@ const UserPicWrapper = ({ src, ...props }) => {
 };
 
 const UserPic = styled(UserPicWrapper)`
-  clip-path: circle(13px at center);
   height: 28px;
+  width: 28px;
+  object-fit: cover;
 `;
 
 export default UserPic;

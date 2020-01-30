@@ -1,6 +1,7 @@
 import { inputsAreEmpty } from "./utils/InputsAreEmpty";
 import { useUser } from "CustomHooks/user";
 import { useSubject } from "CustomHooks/useSubject";
+import { useHistory } from "react-router-dom";
 
 const CreateSubjectFormAPI = ({ state, setState }) => {
   const currentPanel = state.currentPanel;
@@ -17,6 +18,7 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
 
   const { user } = useUser();
   const { saveSubject, loading, error } = useSubject();
+  let history = useHistory();
 
   const showPanel = newValue => {
     setState(prevState => {
@@ -189,6 +191,15 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
     }
 
     resetAll();
+    navigateToFeed(secondary);
+  };
+
+  const navigateToFeed = secondary => {
+    const path = secondary ? "posts" : "causes";
+    window.log(`Showing screen...`);
+    history.push({
+      pathname: `/${path}`
+    });
   };
 
   return {

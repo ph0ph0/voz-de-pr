@@ -25,7 +25,7 @@ const LinkDescription = styled(DescriptionInputWrapper)`
 
   padding-left: 25px;
 
-  line-height: 2.4em;
+  /* line-height: 2.4em; */
   font-size: 20px;
 
   :focus {
