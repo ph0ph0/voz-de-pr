@@ -9,7 +9,7 @@ const Wrapper = props => {
   return (
     <div {...props}>
       <NavBarLeft />
-      <NavBarCentre placeholder={"Search"} />
+      <NavBarCentre placeholder={"Búsqueda"} />
       <NavBarRight />
     </div>
   );

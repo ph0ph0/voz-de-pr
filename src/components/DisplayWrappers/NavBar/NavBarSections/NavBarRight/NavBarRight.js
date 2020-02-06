@@ -22,7 +22,7 @@ const Wrapper = props => {
   return (
     <div {...props}>
       {user ? (
-        <LogoutButton onClick={logUserOut}>LOG OUT</LogoutButton>
+        <LogoutButton onClick={logUserOut}>CERRAR SESIÓN</LogoutButton>
       ) : (
         <SignUpInButtonWrapper />
       )}

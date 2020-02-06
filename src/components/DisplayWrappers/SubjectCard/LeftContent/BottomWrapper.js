@@ -11,10 +11,10 @@ const Wrapper = ({ numberOfComments, ...props }) => {
       <CommentsIndicator>
         {numberOfComments}{" "}
         {numberOfComments > 1
-          ? "Comments"
+          ? "Comentarios"
           : numberOfComments === 1
-          ? "Comment"
-          : "Comments"}
+          ? "Comentario"
+          : "Comentarios"}
       </CommentsIndicator>
     </div>
   );

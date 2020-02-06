@@ -46,19 +46,19 @@ const FiltersWrapper = ({
         onClick={() => updateSortOrderState("mostVotes")}
         sortOrderState={sortOrderState}
       >
-        Most Votes
+        Más Votos
       </MostVotesFilter>
       <MostCommentsFilter
         onClick={() => updateSortOrderState("mostComments")}
         sortOrderState={sortOrderState}
       >
-        Most Comments
+        Más Comentado
       </MostCommentsFilter>
       <ResetFilter
         onClick={() => updateSortOrderState("all")}
         sortOrderState={sortOrderState}
       >
-        All
+        Todo
       </ResetFilter>
     </div>
   );

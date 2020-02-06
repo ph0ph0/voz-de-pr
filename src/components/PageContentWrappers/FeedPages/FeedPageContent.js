@@ -14,7 +14,7 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
       return (
         <div {...props}>
           <MainPageContent
-            pageTitle={"Home Feed"}
+            pageTitle={"Causas y Publicaciones"}
             profileType={profileType}
             pageFilter={"Mixed"}
           />
@@ -25,7 +25,7 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
       return (
         <div {...props}>
           <MainPageContent
-            pageTitle={"Cause Lobby"}
+            pageTitle={"Página de Causas "}
             profileType={profileType}
             pageFilter={"CauseOnly"}
           />
@@ -36,7 +36,7 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
       return (
         <div {...props}>
           <MainPageContent
-            pageTitle={"Posts Lobby"}
+            pageTitle={"Página de Publicaciones"}
             profileType={profileType}
             pageFilter={"PostOnly"}
           />

@@ -17,20 +17,20 @@ const parseTimeSinceCreation = dateCreated => {
   if (secondsSinceCreation <= 59) {
     //60 seconds in a minute
     const seconds = Math.floor(secondsSinceCreation);
-    return `${seconds} seconds ago`;
+    return `${seconds} segundo hace`;
   } else if (secondsSinceCreation <= 3599) {
     //3600 seconds in an hour
     const s = secondsSinceCreation < 120 ? "" : "s";
     const minutes = Math.round(secondsSinceCreation / 60);
-    return `${minutes} minute${s} ago`;
+    return `${minutes} minuto${s} hace`;
   } else if (secondsSinceCreation <= 86399) {
     //86,400 seconds in a day
     const s = secondsSinceCreation < 7200 ? "" : "s";
     const hours = Math.floor(secondsSinceCreation / 3600);
-    return `${hours} hour${s} ago`;
+    return `${hours} hora${s} hace`;
   } else if (86400 <= secondsSinceCreation) {
     const days = Math.floor(secondsSinceCreation / 86400);
     const s = secondsSinceCreation < 172800 ? "" : "s";
-    return `${days} day${s} ago`;
+    return `${days} día${s} hace`;
   }
 };
