@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-import LocationInput from "../../../Primitive/SidePanel_Profile/DropDown/LocationInput";
-import DropDownArrow from "../../../Primitive/SidePanel_Profile/DropDown/DropDownArrow";
-import ClearInput from "../../../Primitive/SidePanel_Profile/DropDown/ClearInput";
+import LocationInput from "components/Primitive/SidePanel_Profile/DropDown/LocationInput";
+import DropDownArrow from "components/Primitive/SidePanel_Profile/DropDown/DropDownArrow";
+import ClearInput from "components/Primitive/SidePanel_Profile/DropDown/ClearInput";
 
 const InlineWrapper = ({ api, ...props }) => {
   return (

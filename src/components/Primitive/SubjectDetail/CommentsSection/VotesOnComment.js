@@ -5,7 +5,7 @@ const CommentNumberOfVotesWrapper = ({ votesOnComment, ...props }) => {
   return (
     <p {...props}>
       {votesOnComment}{" "}
-      {votesOnComment > 1 ? "VOTES" : votesOnComment === 1 ? "VOTE" : "VOTES"}
+      {votesOnComment > 1 ? "VOTOS" : votesOnComment === 1 ? "VOTO" : "VOTOS"}
     </p>
   );
 };

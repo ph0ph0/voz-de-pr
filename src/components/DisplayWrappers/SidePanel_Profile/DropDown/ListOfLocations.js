@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-import { locations } from "../../../../Constants/Constants";
-import Location from "../../../Primitive/SidePanel_Profile/DropDown/Location";
+import { locations } from "Constants/Constants";
+import Location from "components/Primitive/SidePanel_Profile/DropDown/Location";
 
 const ListOfLocationsWrapper = ({ api, ...props }) => {
   return (

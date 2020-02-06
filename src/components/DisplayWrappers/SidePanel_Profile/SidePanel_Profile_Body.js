@@ -20,12 +20,12 @@ const ProfileHeader = styled(Info)`
 const SidePanelProfileBodyWrapper = ({ api, ...props }) => {
   return (
     <div {...props}>
-      <ProfileHeader>Change Details</ProfileHeader>
+      <ProfileHeader>Cambiar Detalles</ProfileHeader>
       {api.dropDownIsErrored && (
-        <ErrorText>Select location from the list</ErrorText>
+        <ErrorText>Seleccionar ubicación de la lista</ErrorText>
       )}
       <DropDown data-testid="DropDown" api={api} />
-      <AvatarInstruction api={api}>Select A New Avatar</AvatarInstruction>
+      <AvatarInstruction api={api}>Seleccione Nueva Imagen</AvatarInstruction>
       <ProfPicSelector api={api} />
     </div>
   );

@@ -47,7 +47,7 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
       return (
         <div {...props}>
           <MainPageContent
-            pageTitle={"My Profile"}
+            pageTitle={"Mi Perfil"}
             profileType={profileType}
             pageFilter={"Profile"}
           />

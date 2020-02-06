@@ -65,40 +65,42 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
     <div {...props}>
       <Logo />
       {api.firstNameInputIsErrored && (
-        <ErrorText>Please provide a first name</ErrorText>
+        <ErrorText>Por favor proporcione un nombre</ErrorText>
       )}
 
       <TextField
-        placeholder={"First Name"}
+        placeholder={"Nombre"}
         data-testid="FirstNameInput"
         value={api.firstNameValue}
         onChange={event => api.updateFirstNameValue(event.target.value)}
       />
 
       {api.lastNameInputIsErrored && (
-        <ErrorText>Please provide a last name</ErrorText>
+        <ErrorText>Por favor proporcione un apellido</ErrorText>
       )}
 
       <TextField
-        placeholder={"Last Name"}
+        placeholder={"Apellido"}
         data-testid="LastNameInput"
         value={api.lastNameValue}
         onChange={event => api.updateLastNameValue(event.target.value)}
       />
 
       {api.usernameInputIsErrored && (
-        <ErrorText>Please provide a username</ErrorText>
+        <ErrorText>Por favor proporcione un nombre de usuario</ErrorText>
       )}
 
       <TextField
-        placeholder={"Username"}
+        placeholder={"Nombre de Usuario"}
         data-testid="UserNameInput"
         value={api.usernameValue}
         onChange={event => api.updateUsernameValue(event.target.value)}
       />
 
       {api.emailInputIsErrored && (
-        <ErrorText>Please provide a valid email</ErrorText>
+        <ErrorText>
+          Por favor proporcione un correo electrónico válido
+        </ErrorText>
       )}
       <EmailField
         api={api}
@@ -110,21 +112,21 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
 
       <EmailField
         api={api}
-        placeholder={"Re-type Email"}
+        placeholder={"Escriba nuevamente el correo electrónico "}
         data-testid="SecondEmailInput"
         value={api.secondEmailValue}
         onChange={event => api.updateSecondEmailValue(event.target.value)}
       />
 
       {api.locationInputIsErrored && (
-        <ErrorText>Please select a location from the dropdown</ErrorText>
+        <ErrorText>Seleccione una ubicación del menú desplegable</ErrorText>
       )}
       <DropDown api={api} />
       {api.passwordInputIsErrored && (
-        <ErrorText>Please provide a password</ErrorText>
+        <ErrorText>Por favor proporcione una contraseña</ErrorText>
       )}
       <PasswordField
-        placeholder={"Password"}
+        placeholder={"Contraseña"}
         data-testid="FirstPasswordInput"
         value={api.firstPasswordValue}
         onChange={event => api.updateFirstPasswordValue(event.target.value)}
@@ -132,7 +134,7 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
       />
 
       <PasswordField
-        placeholder={"Re-type Password"}
+        placeholder={"Escriba Nuevamente la Contraseña"}
         data-testid="SecondPasswordInput"
         value={api.secondPasswordValue}
         onChange={event => api.updateSecondPasswordValue(event.target.value)}
@@ -140,11 +142,11 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
       />
 
       {api.avatarInputIsErrored && (
-        <ErrorText>Please select an avatar</ErrorText>
+        <ErrorText>Por favor seleccione una imagen</ErrorText>
       )}
 
       <AvatarInstructionSignUp api={api}>
-        Select an Avatar
+        Selecciona una imagen
       </AvatarInstructionSignUp>
       <ProfPicSelector api={api} />
       {/* <Avatars api={api} /> */}
@@ -155,7 +157,7 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
         onClick={api.submit}
         disabled={api.loading && "disabled"}
       >
-        {api.loading ? <LoadingSpinner /> : "SIGN UP"}
+        {api.loading ? <LoadingSpinner /> : "CREAR CUENTA"}
       </SignUpButton>
       <BottomLineWrapper api={api} />
     </div>

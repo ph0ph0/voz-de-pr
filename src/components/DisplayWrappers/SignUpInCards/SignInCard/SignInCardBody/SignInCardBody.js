@@ -116,7 +116,9 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
         Button
         onClick={navToForgotPassword}
       >
-        {api.forgotPasswordIsVisible ? "Show log in" : "Forgot your password?"}
+        {api.forgotPasswordIsVisible
+          ? "Mostrar iniciar sesión"
+          : "¿Olvidaste tu contraseña?"}
       </ForgotPasswordText>
     </div>
   );

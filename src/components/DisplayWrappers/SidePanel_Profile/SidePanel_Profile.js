@@ -31,7 +31,7 @@ const SidePanelWrapper = props => {
         onClick={() => api.submit()}
         disabled={api.loading && "disabled"}
       >
-        {api.loading ? <LoadingSpinner /> : "Change"}
+        {api.loading ? <LoadingSpinner /> : "Cambiar"}
       </ActionButton>
     </div>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 
-import SwitchStateButton from "../../../../Primitive/SignUpCard/SwitchStateButton";
+import SwitchStateButton from "components/Primitive/SignUpCard/SwitchStateButton";
 
 const BottomLineWrapperWrapper = ({ api, ...props }) => {
   const history = useHistory();
@@ -15,7 +15,7 @@ const BottomLineWrapperWrapper = ({ api, ...props }) => {
 
   return (
     <div {...props}>
-      Already got a voice on Voz de Puerto Rico?
+      ¿Ya tienes perfil? Iniciar Sesión?
       <SwitchStateButton onClick={nagivateToLogIn} isSignUp={true} />
     </div>
   );

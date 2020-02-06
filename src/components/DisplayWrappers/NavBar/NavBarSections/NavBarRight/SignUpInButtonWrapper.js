@@ -22,9 +22,9 @@ const Wrapper = ({ staticContext, ...props }) => {
   return (
     <div {...props}>
       <SignUpInButton secondary onClick={navigateToSignUp}>
-        SIGN UP
+        CREAR CUENTA
       </SignUpInButton>
-      <SignUpInButton onClick={nagivateToSignIn}>LOG IN</SignUpInButton>
+      <SignUpInButton onClick={nagivateToSignIn}>INCIAR SESIÓN</SignUpInButton>
     </div>
   );
 };

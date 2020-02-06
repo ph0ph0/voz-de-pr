@@ -4,7 +4,7 @@ import styled from "styled-components";
 const InputWrapper = ({ api, ...props }) => {
   return (
     <input
-      placeholder={"Location"}
+      placeholder={"Localización"}
       value={api.locationValue}
       onChange={event => api.updateLocationValue(event.target.value)}
       {...props}

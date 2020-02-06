@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const CommentTextAreaWrapper = ({ ...props }) => {
-  return <textarea {...props} placeholder={"What are your thoughts?"} />;
+  return <textarea {...props} placeholder={"¿Cuál es su opinión?"} />;
 };
 
 const CommentTextArea = styled(CommentTextAreaWrapper)`

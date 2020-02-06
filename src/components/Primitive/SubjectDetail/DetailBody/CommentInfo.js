@@ -19,7 +19,7 @@ const Info = styled.p`
 const CommentInfoWrapper = ({ secondary, username, ...props }) => {
   return (
     <div {...props}>
-      <Info>Comment as</Info>
+      <Info>Comentar como</Info>
       <Name secondary={secondary}>{username}</Name>
     </div>
   );

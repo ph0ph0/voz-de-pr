@@ -5,7 +5,7 @@ const VotesOnSubjectWrapper = ({ votesOnSubject, secondary, ...props }) => {
   return (
     <p {...props}>
       {votesOnSubject}{" "}
-      {votesOnSubject > 1 ? "VOTES" : votesOnSubject === 1 ? "VOTE" : "VOTES"}
+      {votesOnSubject > 1 ? "VOTOS" : votesOnSubject === 1 ? "VOTO" : "VOTOS"}
     </p>
   );
 };

@@ -2,7 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 const SwitchStateButtonWrapper = ({ isSignUp, ...props }) => {
-  return <button {...props}>{isSignUp ? "LOG IN" : "SIGN UP"}</button>;
+  return (
+    <button {...props}>{isSignUp ? "INCIAR SESIÓN" : "CREAR CUENTA"}</button>
+  );
 };
 
 const SwitchStateButton = styled(SwitchStateButtonWrapper)`

@@ -22,19 +22,19 @@ const FiltersWrapper = ({
           onClick={() => updateSortOrderState("myCauses")}
           sortOrderState={sortOrderState}
         >
-          My Causes
+          Mis causas
         </MyCausesFilter>
         <MyPostsFilter
           onClick={() => updateSortOrderState("myPosts")}
           sortOrderState={sortOrderState}
         >
-          My Posts
+          Mis publicaciones
         </MyPostsFilter>
         <MyAllFilter
           onClick={() => updateSortOrderState("all")}
           sortOrderState={sortOrderState}
         >
-          All
+          Todos
         </MyAllFilter>
       </div>
     );

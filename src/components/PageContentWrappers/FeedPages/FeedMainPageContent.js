@@ -326,9 +326,7 @@ const FeedMainPageContentWrapper = ({
       )}
       {loading && <LoadingSpinner colour="#1B4EA0" center={true} />}
       {nextToken && (
-        <LoadMore onClick={() => getMoreSubjects(nextToken)}>
-          Load More
-        </LoadMore>
+        <LoadMore onClick={() => getMoreSubjects(nextToken)}>Ver Más</LoadMore>
       )}
     </div>
   );

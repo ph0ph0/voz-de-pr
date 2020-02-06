@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import NameTimeAgo from "../../../Primitive/SubjectCard/NameTimeAgo";
-import VotesOnComment from "../../../Primitive/SubjectDetail/CommentsSection/VotesOnComment";
-import VoteArrow from "../../../Primitive/SubjectDetail/DetailSummary/VoteArrow";
+import NameTimeAgo from "components/Primitive/SubjectCard/NameTimeAgo";
+import VotesOnComment from "components/Primitive/SubjectDetail/CommentsSection/VotesOnComment";
+import VoteArrow from "components/Primitive/SubjectDetail/DetailSummary/VoteArrow";
 
 import { parseTime } from "Utils/TimePassedCalculator";
 import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
