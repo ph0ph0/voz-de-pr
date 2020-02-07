@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import Microlink from "@microlink/react";
 
 import SubjectContent from "components/Primitive/SubjectDetail/DetailBody/SubjectContent";
 import SubjectLink from "components/Primitive/SubjectDetail/DetailBody/SubjectLink";
@@ -8,6 +9,10 @@ import CommentInfo from "components/Primitive/SubjectDetail/DetailBody/CommentIn
 import CommentBox from "./CommentBox";
 
 import { useUser } from "CustomHooks/user.js";
+
+const RichLink = styled(Microlink)`
+  margin-top: 20px;
+`;
 
 const DetailBodyWrapper = ({ api, secondary, ...props }) => {
   const { user } = useUser();
@@ -18,14 +23,15 @@ const DetailBodyWrapper = ({ api, secondary, ...props }) => {
     <div {...props}>
       <SubjectContent>{api.subject.subjectContent}</SubjectContent>
       {api.subject && api.subject.link && (
-        <SubjectLink
-          secondary={secondary}
-          href={api.subject.link}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {api.subject.link}
-        </SubjectLink>
+        <RichLink url={api.subject.link} />
+        // <SubjectLink
+        //   secondary={secondary}
+        //   href={api.subject.link}
+        //   target="_blank"
+        //   rel="noopener noreferrer"
+        // >
+        //   {api.subject.link}
+        // </SubjectLink>
       )}
       {user && (
         <>
