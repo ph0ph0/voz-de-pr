@@ -67,6 +67,17 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
     });
   };
 
+  const removeSubjectImage = () => {
+    window.log(`Removing subject image...`);
+    setState(prevState => {
+      return {
+        ...prevState,
+        selectedImage: null,
+        subjectImage: null
+      };
+    });
+  };
+
   const updateImageDescription = newValue => {
     setState(prevState => {
       return {
@@ -218,6 +229,7 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
     updateSubjectTitle,
     updateSubjectContent,
     updateSubjectImage,
+    removeSubjectImage,
     updateImageDescription,
     updateLinkDescription,
     updateLinkContent,

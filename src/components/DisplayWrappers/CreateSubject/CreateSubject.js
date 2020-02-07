@@ -60,7 +60,7 @@ const CreateSubjectWrapper = ({ secondary, ...props }) => {
       <TitlesPanel secondary={secondary} api={api} />
       {renderSwitch()}
       {api.subjectImage && api.currentPanel === "image" && (
-        <DeleteSubjectImageButton />
+        <DeleteSubjectImageButton onClick={api.removeSubjectImage} />
       )}
       {api.error && <ErrorText>{api.error.message}</ErrorText>}
       <ActionButton
