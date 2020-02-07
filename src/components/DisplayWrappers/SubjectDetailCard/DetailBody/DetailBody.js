@@ -12,6 +12,7 @@ import { useUser } from "CustomHooks/user.js";
 
 const RichLink = styled(Microlink)`
   margin-top: 20px;
+  border-radius: 5px;
 `;
 
 const DetailBodyWrapper = ({ api, secondary, ...props }) => {
@@ -22,17 +23,7 @@ const DetailBodyWrapper = ({ api, secondary, ...props }) => {
   return (
     <div {...props}>
       <SubjectContent>{api.subject.subjectContent}</SubjectContent>
-      {api.subject && api.subject.link && (
-        <RichLink url={api.subject.link} />
-        // <SubjectLink
-        //   secondary={secondary}
-        //   href={api.subject.link}
-        //   target="_blank"
-        //   rel="noopener noreferrer"
-        // >
-        //   {api.subject.link}
-        // </SubjectLink>
-      )}
+      {api.subject && api.subject.link && <RichLink url={api.subject.link} />}
       {user && (
         <>
           <CommentInfo secondary={secondary} username={username} />

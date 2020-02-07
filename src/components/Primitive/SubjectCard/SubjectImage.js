@@ -1,4 +1,41 @@
 import styled from "styled-components";
+import React from "react";
+import Microlink from "@microlink/react";
+
+import Placeholder from "assets/General/placeholder.gif";
+
+const Sub = (pictureURL, subjectLink) => {
+  if (pictureURL) {
+    return (
+      <SubjectImage
+        src={pictureURL ? pictureURL : Placeholder}
+        onError={event => (event.target.src = Placeholder)}
+      />
+    );
+  }
+
+  return pictureURL ? (
+    <SubjectImage
+      src={pictureURL ? pictureURL : Placeholder}
+      onError={event => (event.target.src = Placeholder)}
+    />
+  ) : subjectLink ? (
+    <SubjectLinkImage
+      url={subjectLink}
+      setData={{
+        title: null,
+        description: null,
+        publisher: null,
+        url: null
+      }}
+    />
+  ) : (
+    <SubjectImage
+      src={pictureURL ? pictureURL : Placeholder}
+      onError={event => (event.target.src = Placeholder)}
+    />
+  );
+};
 
 const SubjectImage = styled.img`
   /* Note that image should be jpg, png wouldnt work for some reason.
@@ -14,4 +51,14 @@ const SubjectImage = styled.img`
   border-radius: 5px;
 `;
 
-export default SubjectImage;
+const SubjectLinkImage = styled(Microlink)`
+  border-radius: 5px;
+  width: 175px;
+  /* height: 123px; */
+  ${".microlink_card__media"} {
+    flex: none;
+    width: 175px;
+    height: 123px;
+`;
+
+export default Sub;

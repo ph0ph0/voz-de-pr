@@ -16,6 +16,8 @@ const RightContentWrapper = ({ subject, secondary, ...props }) => {
 
   const { getSubjectPicture, loading } = useSubject();
 
+  const subjectLink = subject.link;
+
   const fetchPictures = async key => {
     try {
       const pictures = await getSubjectPicture(key);
@@ -63,10 +65,7 @@ const RightContentWrapper = ({ subject, secondary, ...props }) => {
       {loading ? (
         <LoadingSpinner colour={"#EC220D"} />
       ) : (
-        <SubjectImage
-          src={pictureURL ? pictureURL : Placeholder}
-          onError={event => (event.target.src = Placeholder)}
-        />
+        <SubjectImage pictureURL={pictureURL} subjectLink={subjectLink} />
       )}
     </div>
   );
