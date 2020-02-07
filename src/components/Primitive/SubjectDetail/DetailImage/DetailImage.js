@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-import SubjectImage from "../../SubjectCard/SubjectImage";
+import { SubjectImage } from "../../SubjectCard/SubjectImage";
 
 const DetailImage = styled(SubjectImage)`
   width: 670px;

@@ -4,16 +4,7 @@ import Microlink from "@microlink/react";
 
 import Placeholder from "assets/General/placeholder.gif";
 
-const Sub = (pictureURL, subjectLink) => {
-  if (pictureURL) {
-    return (
-      <SubjectImage
-        src={pictureURL ? pictureURL : Placeholder}
-        onError={event => (event.target.src = Placeholder)}
-      />
-    );
-  }
-
+const Sub = ({ pictureURL, subjectLink }) => {
   return pictureURL ? (
     <SubjectImage
       src={pictureURL ? pictureURL : Placeholder}
@@ -31,13 +22,13 @@ const Sub = (pictureURL, subjectLink) => {
     />
   ) : (
     <SubjectImage
-      src={pictureURL ? pictureURL : Placeholder}
+      src={Placeholder}
       onError={event => (event.target.src = Placeholder)}
     />
   );
 };
 
-const SubjectImage = styled.img`
+export const SubjectImage = styled.img`
   /* Note that image should be jpg, png wouldnt work for some reason.
     By setting the width to 100% */
   /* border: 1px solid bisque; */
