@@ -17,7 +17,7 @@ const SignInBottomLineWrapper = ({ api, ...props }) => {
 
   return (
     <div {...props}>
-      New to Voz de Puerto Rico?
+      ¿Nuevo en voz de puerto rico?
       <SwitchStateButton onClick={navigateToSignUp} isSignUp={false} />
     </div>
   );

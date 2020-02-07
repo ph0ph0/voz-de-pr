@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { API } from "aws-amplify";
 
 // import UploadImageButton from "../../../Primitive/CreateSubject/ImageBody/UploadImageButton";
 

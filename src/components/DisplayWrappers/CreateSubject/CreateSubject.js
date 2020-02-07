@@ -10,6 +10,7 @@ import TitlesPanel from "./TitlesPanel/TitlesPanel";
 import Button from "../../Primitive/General/ActionButton";
 import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
 import ErrorText from "components/Primitive/General/ErrorText";
+import DeleteButton from "components/Primitive/SubjectCard/DeleteSubjectButton";
 
 import CreateSubjectFormAPI from "./API/CreateSubjectFormAPI";
 import useAPI from "../../../CustomHooks/useAPI";
@@ -17,6 +18,13 @@ import useAPI from "../../../CustomHooks/useAPI";
 const ActionButton = styled(Button)`
   margin-left: auto;
   margin-right: 49px;
+`;
+
+const DeleteSubjectImageButton = styled(DeleteButton)`
+  margin-top: -10px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: 50px;
 `;
 
 const CreateSubjectWrapper = ({ secondary, ...props }) => {
@@ -51,6 +59,9 @@ const CreateSubjectWrapper = ({ secondary, ...props }) => {
     <div {...props}>
       <TitlesPanel secondary={secondary} api={api} />
       {renderSwitch()}
+      {api.subjectImage && api.currentPanel === "image" && (
+        <DeleteSubjectImageButton />
+      )}
       {api.error && <ErrorText>{api.error.message}</ErrorText>}
       <ActionButton
         secondary={secondary}
