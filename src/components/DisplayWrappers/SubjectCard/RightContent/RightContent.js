@@ -5,8 +5,7 @@ import PropTypes from "prop-types";
 import { SubjectPropTypes } from "Constants/__PropTypes__/SubjectPropTypes";
 
 import SubjectInfo from "./SubjectinfoWrapper";
-import SubjectImage from "../../../Primitive/SubjectCard/SubjectImage";
-import Placeholder from "assets/General/placeholder.gif";
+import SubjectImage from "components/Primitive/SubjectCard/SubjectImage";
 import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
 
 import { useSubject } from "CustomHooks/useSubject";
@@ -58,10 +57,7 @@ const RightContentWrapper = ({ subject, secondary, ...props }) => {
 
   return (
     <div {...props}>
-      <SubjectInfo
-        numberOfVotes={subject.votes}
-        secondary={secondary}
-      ></SubjectInfo>
+      <SubjectInfo numberOfVotes={subject.votes} secondary={secondary} />
       {loading ? (
         <LoadingSpinner colour={"#EC220D"} />
       ) : (

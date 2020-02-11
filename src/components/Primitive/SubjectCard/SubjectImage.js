@@ -20,12 +20,7 @@ const Sub = ({ pictureURL, subjectLink }) => {
         url: null
       }}
     />
-  ) : (
-    <SubjectImage
-      src={Placeholder}
-      onError={event => (event.target.src = Placeholder)}
-    />
-  );
+  ) : null;
 };
 
 export const SubjectImage = styled.img`

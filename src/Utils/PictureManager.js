@@ -3,11 +3,11 @@ import { createPicture, updatePicture } from "graphql/mutations";
 import uuidv4 from "uuid/v4";
 
 export const savePictureWithSubjectId = async (image, subjectId) => {
-  //Check image is not larger than 2 MB
-  if (image.size > 2097152) {
+  //Check image is not larger than 6 MB
+  if (image.size > 6291456) {
     window.log(`Image too large, aborting!`);
     throw new Error(
-      "Image is too large, please use an image smaller than 2 MB"
+      "Image is too large, please use an image smaller than 6 MB"
     );
   }
 
