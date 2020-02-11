@@ -7,7 +7,7 @@ import Logo from "../../Primitive/SidePanel/Logo";
 import SidePanelProfileBody from "./SidePanel_Profile_Body";
 import ActionButton from "../../Primitive/General/ActionButton";
 import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
-import TranslationSwitch from "./TranslationSwitch";
+import TranslationSwitch from "./TranslationSwitch/TranslationSwitch";
 
 import useApi from "../../../CustomHooks/useAPI";
 import SidePanelProfileAPI from "./API/SidePanelProfileAPI";

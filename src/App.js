@@ -14,6 +14,7 @@ import { clientConfig } from "./clientConfig";
 
 import { UserProvider } from "./CustomHooks/user";
 import { SearchProvider } from "CustomHooks/useSearch";
+import { LanguageProvider } from "CustomHooks/useLanguage";
 
 function App() {
   return (
@@ -23,8 +24,10 @@ function App() {
           <GlobalStyle />
           <ThemeProvider theme={theme}>
             <SearchProvider>
-              <NavBar />
-              <Routes />
+              <LanguageProvider>
+                <NavBar />
+                <Routes />
+              </LanguageProvider>
             </SearchProvider>
           </ThemeProvider>
         </BrowserRouter>

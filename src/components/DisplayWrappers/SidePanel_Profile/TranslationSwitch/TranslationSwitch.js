@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import UISwitch from "react-switch";
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const displayText = {
+  en: "Select language",
+  sp: "Seleccione el idioma"
+};
 
 const HorizontalRule = styled.div`
   width: 160px;
@@ -59,24 +65,23 @@ const Switch = styled(SwitchWrapper)`
 `;
 
 const TranslationSwitchWrapper = ({ ...props }) => {
-  const [on, setOn] = useState(false);
+  const [isOn, setOn] = useState(false);
+  const { language, switchLanguage } = useLanguage();
 
   const change = () => {
-    window.log(`CHANGING`);
-    setOn(!on);
-  };
-
-  const displayText = {
-    en: "Select a language",
-    sp: "Selecciona un idioma"
+    window.log(`TranslationSwitch Tapped...`);
+    switchLanguage(isOn ? "spanish" : "english");
+    setOn(!isOn);
   };
 
   return (
     <div {...props}>
       <HorizontalRule />
       <SwitchLabel>
-        <SwitchTitle>Select language</SwitchTitle>
-        <Switch change={change} state={on} />
+        <SwitchTitle>
+          {language == "spanish" ? displayText.sp : displayText.en}
+        </SwitchTitle>
+        <Switch change={change} state={isOn} />
       </SwitchLabel>
     </div>
   );
