@@ -39,10 +39,10 @@ const SwitchLabel = styled.label`
   align-items: center;
 `;
 
-const SwitchWrapper = ({ change, state, ...props }) => {
+const SwitchWrapper = ({ change, state, large, ...props }) => {
   return (
     <div {...props}>
-      <LanguageText>Español</LanguageText>
+      <LanguageText>{large ? "Español" : "Esp"}</LanguageText>
       <UISwitch
         onChange={change}
         checked={state}
@@ -51,7 +51,7 @@ const SwitchWrapper = ({ change, state, ...props }) => {
         checkedIcon={false}
         uncheckedIcon={false}
       />
-      <LanguageText>English</LanguageText>
+      <LanguageText>{large ? "English" : "En"}</LanguageText>
     </div>
   );
 };
@@ -64,9 +64,9 @@ const Switch = styled(SwitchWrapper)`
   align-items: center;
 `;
 
-const TranslationSwitchWrapper = ({ ...props }) => {
-  const [isOn, setOn] = useState(false);
+const TranslationSwitchWrapper = ({ large, ...props }) => {
   const { language, switchLanguage } = useLanguage();
+  const [isOn, setOn] = useState(language == "spanish" ? false : true);
 
   const change = () => {
     window.log(`TranslationSwitch Tapped...`);
@@ -76,12 +76,12 @@ const TranslationSwitchWrapper = ({ ...props }) => {
 
   return (
     <div {...props}>
-      <HorizontalRule />
+      {large && <HorizontalRule />}
       <SwitchLabel>
         <SwitchTitle>
           {language == "spanish" ? displayText.sp : displayText.en}
         </SwitchTitle>
-        <Switch change={change} state={isOn} />
+        <Switch change={change} state={isOn} large={large} />
       </SwitchLabel>
     </div>
   );

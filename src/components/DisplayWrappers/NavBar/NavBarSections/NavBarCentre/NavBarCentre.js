@@ -4,9 +4,17 @@ import styled from "styled-components";
 import SearchBar from "../../../../Primitive/NavBar/SearchBar";
 
 import { useSearch } from "CustomHooks/useSearch";
+import { useLanguage } from "CustomHooks/useLanguage";
 
-const Wrapper = ({ placeholder, ...props }) => {
+const displayText = {
+  en: "Search",
+  sp: "Búsqueda"
+};
+
+const Wrapper = ({ ...props }) => {
   const { updateSearchText, updateShouldSearch, searchBarText } = useSearch();
+
+  const { language } = useLanguage();
 
   const submit = event => {
     window.log("Submitted search");
@@ -17,7 +25,7 @@ const Wrapper = ({ placeholder, ...props }) => {
   return (
     <form onSubmit={event => submit(event)} {...props}>
       <SearchBar
-        placeholder={placeholder}
+        placeholder={language == "spanish" ? displayText.sp : displayText.en}
         type="text"
         value={searchBarText}
         onChange={event => updateSearchText(event.target.value)}

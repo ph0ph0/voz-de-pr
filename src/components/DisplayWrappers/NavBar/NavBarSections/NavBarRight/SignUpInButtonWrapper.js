@@ -4,6 +4,17 @@ import { useHistory } from "react-router-dom";
 
 import SignUpInButton from "components/Primitive/NavBar/SignUpInButton";
 
+const displayText = {
+  en: {
+    login: "LOG IN",
+    signup: "SIGN UP"
+  },
+  sp: {
+    login: "LOG IN",
+    signup: "CREAR CUENTA"
+  }
+};
+
 const Wrapper = ({ staticContext, ...props }) => {
   let history = useHistory();
 
