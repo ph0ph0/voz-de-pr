@@ -20,6 +20,7 @@ const SwitchTitle = styled.span`
   /* border: 1px solid red; */
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: -10px;
   color: rgba(0, 0, 0, 0.54);
   font-size: 14px;
   justify-self: center;
@@ -66,7 +67,7 @@ const Switch = styled(SwitchWrapper)`
 
 const TranslationSwitchWrapper = ({ large, ...props }) => {
   const { language, switchLanguage } = useLanguage();
-  const [isOn, setOn] = useState(language == "spanish" ? false : true);
+  const [isOn, setOn] = useState(language === "spanish" ? false : true);
 
   const change = () => {
     window.log(`TranslationSwitch Tapped...`);
@@ -79,7 +80,7 @@ const TranslationSwitchWrapper = ({ large, ...props }) => {
       {large && <HorizontalRule />}
       <SwitchLabel>
         <SwitchTitle>
-          {language == "spanish" ? displayText.sp : displayText.en}
+          {language === "spanish" ? displayText.sp : displayText.en}
         </SwitchTitle>
         <Switch change={change} state={isOn} large={large} />
       </SwitchLabel>
@@ -88,8 +89,8 @@ const TranslationSwitchWrapper = ({ large, ...props }) => {
 };
 
 const TranslationSwitch = styled(TranslationSwitchWrapper)`
-  /* border: 1px solid green; */
-  margin-top: 15px;
+  /* background-color: red; */
+  margin-top: 10px;
 
   display: flex;
   flex-direction: column;

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 
 import SignUpInButton from "components/Primitive/NavBar/SignUpInButton";
+import { useLanguage } from "CustomHooks/useLanguage";
 
 const displayText = {
   en: {
@@ -10,12 +11,14 @@ const displayText = {
     signup: "SIGN UP"
   },
   sp: {
-    login: "LOG IN",
+    login: "INCIAR SESIÓN",
     signup: "CREAR CUENTA"
   }
 };
 
 const Wrapper = ({ staticContext, ...props }) => {
+  const { language } = useLanguage();
+
   let history = useHistory();
 
   function navigateToSignUp() {
@@ -33,9 +36,11 @@ const Wrapper = ({ staticContext, ...props }) => {
   return (
     <div {...props}>
       <SignUpInButton secondary onClick={navigateToSignUp}>
-        CREAR CUENTA
+        {language === "spanish" ? displayText.sp.signup : displayText.en.signup}
       </SignUpInButton>
-      <SignUpInButton onClick={nagivateToSignIn}>INCIAR SESIÓN</SignUpInButton>
+      <SignUpInButton onClick={nagivateToSignIn}>
+        {language === "spanish" ? displayText.sp.login : displayText.en.login}
+      </SignUpInButton>
     </div>
   );
 };
@@ -49,7 +54,7 @@ const SignUpInButtonWrapper = styled(Wrapper)`
   margin-left: 15px;
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
 `;
 

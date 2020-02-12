@@ -25,16 +25,16 @@ const Wrapper = props => {
   return (
     <nav {...props}>
       <LinkNavBar to={"/"} {...props}>
-        {language == "spanish" ? displayText.sp.home : displayText.en.home}
+        {language === "spanish" ? displayText.sp.home : displayText.en.home}
       </LinkNavBar>
       <LinkNavBar to={"/causes"} {...props}>
-        {language == "spanish" ? displayText.sp.causes : displayText.en.causes}
+        {language === "spanish" ? displayText.sp.causes : displayText.en.causes}
       </LinkNavBar>
       <LinkNavBar to={"/posts"} {...props}>
-        {language == "spanish" ? displayText.sp.posts : displayText.en.posts}
+        {language === "spanish" ? displayText.sp.posts : displayText.en.posts}
       </LinkNavBar>
       <LinkNavBar to={"/profile"} {...props}>
-        {language == "spanish"
+        {language === "spanish"
           ? displayText.sp.profile
           : displayText.en.profile}
       </LinkNavBar>

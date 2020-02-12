@@ -25,6 +25,8 @@ const LogoWrapper = styled(Wrapper)`
   height: 100%;
   width: 80%;
 
+  margin-left: 15px;
+
   display: flex;
   align-items: center;
 

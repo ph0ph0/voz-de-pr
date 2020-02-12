@@ -7,14 +7,34 @@ import PropTypes from "prop-types";
 import MainPageContent from "./FeedMainPageContent";
 import SidePanel from "components/DisplayWrappers/SidePanel/SidePanel";
 import SidePanelProfile from "components/DisplayWrappers/SidePanel_Profile/SidePanel_Profile";
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const displayText = {
+  en: {
+    home: "Home Feed",
+    causes: "Cause Lobby",
+    posts: "Post Lobby",
+    profile: "My Profile"
+  },
+  sp: {
+    home: "Causas y Publicaciones",
+    causes: "Página de Causas",
+    posts: "Página de Publicaciones",
+    profile: "Mi Perfil"
+  }
+};
 
 const PageContentWrapper = ({ pageType, profileType, ...props }) => {
+  const { language } = useLanguage();
+
   switch (pageType) {
     case "Home":
       return (
         <div {...props}>
           <MainPageContent
-            pageTitle={"Causas y Publicaciones"}
+            pageTitle={
+              language === "spanish" ? displayText.sp.home : displayText.en.home
+            }
             profileType={profileType}
             pageFilter={"Mixed"}
           />
@@ -25,7 +45,11 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
       return (
         <div {...props}>
           <MainPageContent
-            pageTitle={"Página de Causas "}
+            pageTitle={
+              language === "spanish"
+                ? displayText.sp.causes
+                : displayText.en.causes
+            }
             profileType={profileType}
             pageFilter={"CauseOnly"}
           />
@@ -36,7 +60,11 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
       return (
         <div {...props}>
           <MainPageContent
-            pageTitle={"Página de Publicaciones"}
+            pageTitle={
+              language === "spanish"
+                ? displayText.sp.posts
+                : displayText.en.posts
+            }
             profileType={profileType}
             pageFilter={"PostOnly"}
           />
@@ -47,7 +75,11 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
       return (
         <div {...props}>
           <MainPageContent
-            pageTitle={"Mi Perfil"}
+            pageTitle={
+              language === "spanish"
+                ? displayText.sp.profile
+                : displayText.en.profile
+            }
             profileType={profileType}
             pageFilter={"Profile"}
           />
@@ -57,7 +89,12 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
     default:
       return (
         <div {...props}>
-          <MainPageContent pageTitle={"Home Feed"} profileType={profileType} />
+          <MainPageContent
+            pageTitle={
+              language === "spanish" ? displayText.sp.home : displayText.en.home
+            }
+            profileType={profileType}
+          />
           <SidePanel type={"Standard"} />
         </div>
       );

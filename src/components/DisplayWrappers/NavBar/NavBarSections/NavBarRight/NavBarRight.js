@@ -8,6 +8,7 @@ import SignUpInButtonWrapper from "./SignUpInButtonWrapper";
 import ProfileWrapper from "./ProfileWrapper";
 import LogoutButton from "components/Primitive/NavBar/LogoutButton";
 import { useLanguage } from "CustomHooks/useLanguage";
+import TranslationSwitch from "components/DisplayWrappers/TranslationSwitch/TranslationSwitch";
 
 const displayText = {
   en: "LOG OUT",
@@ -31,10 +32,13 @@ const Wrapper = props => {
     <div {...props}>
       {user ? (
         <LogoutButton onClick={logUserOut}>
-          {language == "spanish" ? displayText.sp : displayText.en}
+          {language === "spanish" ? displayText.sp : displayText.en}
         </LogoutButton>
       ) : (
-        <SignUpInButtonWrapper />
+        <>
+          <TranslationSwitch />
+          <SignUpInButtonWrapper />
+        </>
       )}
       {user ? <ProfileWrapper user={user} /> : null}
     </div>
