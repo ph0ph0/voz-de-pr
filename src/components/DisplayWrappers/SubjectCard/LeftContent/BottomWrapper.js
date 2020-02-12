@@ -2,19 +2,28 @@ import React from "react";
 import styled from "styled-components";
 
 import BubbleWrapper from "./BubbleWrapper";
-import CommentsIndicator from "../../../Primitive/SubjectCard/CommentsIndicator";
+import CommentsIndicator from "components/Primitive/SubjectCard/CommentsIndicator";
+
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const displayText = {
+  en: "comment",
+  sp: "Comentarios"
+};
 
 const Wrapper = ({ numberOfComments, ...props }) => {
+  const { language } = useLanguage();
+
   return (
     <div {...props}>
       <BubbleWrapper />
       <CommentsIndicator>
         {numberOfComments}{" "}
         {numberOfComments > 1
-          ? "Comentarios"
+          ? `${language === "spanish" ? displayText.sp : displayText.en}s`
           : numberOfComments === 1
-          ? "Comentario"
-          : "Comentarios"}
+          ? `${language === "spanish" ? displayText.sp : displayText.en}`
+          : `${language === "spanish" ? displayText.sp : displayText.en}s`}
       </CommentsIndicator>
     </div>
   );
