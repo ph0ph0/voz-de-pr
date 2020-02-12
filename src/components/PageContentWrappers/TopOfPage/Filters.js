@@ -6,6 +6,24 @@ import {
   FilterRedProfile,
   FilterBlueProfile
 } from "components/Primitive/TopOfPage/Filter";
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const displayText = {
+  en: {
+    myCauses: "My Causes",
+    myPosts: "My Posts",
+    mostVotes: "Most Votes",
+    mostComments: "Most Comments",
+    all: "All"
+  },
+  sp: {
+    myCauses: "Mis causas",
+    myPosts: "Mis publicaciones",
+    mostVotes: "Más Votos",
+    mostComments: "Más Comentado",
+    all: "Todo"
+  }
+};
 
 const FiltersWrapper = ({
   profileType,
@@ -13,6 +31,8 @@ const FiltersWrapper = ({
   sortOrderState,
   ...props
 }) => {
+  const { language } = useLanguage();
+
   //If the filters should be shown on a profile page, then they are slightly different
 
   if (profileType) {
@@ -22,19 +42,23 @@ const FiltersWrapper = ({
           onClick={() => updateSortOrderState("myCauses")}
           sortOrderState={sortOrderState}
         >
-          Mis causas
+          {language === "spanish"
+            ? displayText.sp.myCauses
+            : displayText.en.myCauses}
         </MyCausesFilter>
         <MyPostsFilter
           onClick={() => updateSortOrderState("myPosts")}
           sortOrderState={sortOrderState}
         >
-          Mis publicaciones
+          {language === "spanish"
+            ? displayText.sp.myPosts
+            : displayText.en.myPosts}
         </MyPostsFilter>
         <MyAllFilter
           onClick={() => updateSortOrderState("all")}
           sortOrderState={sortOrderState}
         >
-          Todos
+          {language === "spanish" ? displayText.sp.all : displayText.en.all}
         </MyAllFilter>
       </div>
     );
@@ -46,19 +70,23 @@ const FiltersWrapper = ({
         onClick={() => updateSortOrderState("mostVotes")}
         sortOrderState={sortOrderState}
       >
-        Más Votos
+        {language === "spanish"
+          ? displayText.sp.mostVotes
+          : displayText.en.mostVotes}
       </MostVotesFilter>
       <MostCommentsFilter
         onClick={() => updateSortOrderState("mostComments")}
         sortOrderState={sortOrderState}
       >
-        Más Comentado
+        {language === "spanish"
+          ? displayText.sp.mostComments
+          : displayText.en.mostComments}
       </MostCommentsFilter>
       <ResetFilter
         onClick={() => updateSortOrderState("all")}
         sortOrderState={sortOrderState}
       >
-        Todo
+        {language === "spanish" ? displayText.sp.all : displayText.en.all}
       </ResetFilter>
     </div>
   );

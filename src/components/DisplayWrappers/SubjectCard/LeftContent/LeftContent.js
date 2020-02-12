@@ -11,9 +11,12 @@ import BottomWrapper from "./BottomWrapper";
 
 import { parseTime } from "Utils/TimePassedCalculator";
 import { useUser } from "CustomHooks/user";
+import { useLanguage } from "CustomHooks/useLanguage";
 
 const Wrapper = ({ subject, ...props }) => {
-  const timeSinceCreated = parseTime(subject.createdAt);
+  const { language } = useLanguage();
+
+  const timeSinceCreated = parseTime(subject.createdAt, language);
   // const numberOfComments =
   //   subject.comments && subject.comments.items && subject.comments.items.length;
 
