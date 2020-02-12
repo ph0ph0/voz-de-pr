@@ -6,6 +6,9 @@ import Logo from "components/Primitive/SidePanel/Logo";
 import Info from "components/Primitive/SidePanel/Info";
 import CreateSubjectButton from "components/Primitive/SidePanel/SidePanelActionButton";
 
+import { sidePanelText as displayText } from "./SidePanelText";
+import { useLanguage } from "CustomHooks/useLanguage";
+
 const SidePanel = ({ type, secondary, props }) => {
   switch (type) {
     case "Standard":
@@ -51,11 +54,17 @@ const EnglishStandard =
 const SpanishStandard =
   "Voz de Puerto Rico es una plataforma social que permite a los usuarios tomar acción en la progresión de las necesidades humanas, el mejoramiento social y el desarrollo de Puerto Rico.  Está basado en la comunidad y facilita el acceso a la voz de aquellos que desean implementar un cambio en toda la sociedad.";
 const StandardWrapper = props => {
+  const { language } = useLanguage();
+
   return (
     <div {...props}>
       <PRFlag />
       <Logo />
-      <Info>{SpanishStandard}</Info>
+      <Info>
+        {language === "spanish"
+          ? displayText.sp.standard
+          : displayText.en.standard}
+      </Info>
       <CreateSubjectButton />
       <CreateSubjectButton secondary />
     </div>
@@ -72,11 +81,17 @@ const SpanishCauseOnly =
   "Una causa en Voz de PR es una solicitud de asistencia.  Se utiliza únicamente para crear atención a situaciones donde ayuda es necesaria.  La ayuda puede ser trabajo voluntario, una donación, o cualquier tipo de asistencia que ayude a la causa lograr su meta.  Si deseas donar dinero, grabe el ID de la causa y realice su donación a través de ATH Móvil.";
 
 const CauseOnlyWrapper = props => {
+  const { language } = useLanguage();
+
   return (
     <div {...props}>
       <PRFlag />
       <Logo />
-      <Info>{SpanishCauseOnly}</Info>
+      <Info>
+        {language === "spanish"
+          ? displayText.sp.causeOnly
+          : displayText.en.causeOnly}
+      </Info>
       <CreateSubjectButton />
     </div>
   );
@@ -92,11 +107,17 @@ const SpanishPostOnly =
   "Una publicación en Voz de PR es información o contenido creativo dirigido a la población puertorriqueña.  El objetivo de la publicación es informar sobre conocimientos, hechos, cifras, artículos de noticias, información general, o entretenimiento, que pueda beneficiar a otros usuarios.  ¡Se puede utilizar como punto de partida para una conversación relevante para Puerto Rico!";
 
 const PostOnlyWrapper = props => {
+  const { language } = useLanguage();
+
   return (
     <div {...props}>
       <PRFlag />
       <Logo />
-      <Info>{SpanishPostOnly}</Info>
+      <Info>
+        {language === "spanish"
+          ? displayText.sp.postOnly
+          : displayText.en.postOnly}
+      </Info>
       <CreateSubjectButton secondary />
     </div>
   );
@@ -106,15 +127,16 @@ const SidePanelPostOnly = styled(PostOnlyWrapper)`
   ${sidePanelStyle}
 `;
 const CauseInfoWrapper = props => {
+  const { language } = useLanguage();
+
   return (
     <div {...props}>
       <PRFlag />
       <Logo />
       <Info>
-        A Cause in Voz de PR is a request for assistance. It should be used to
-        bring attention to a situation that requires help. Help can be in the
-        form of volunteer work, a donation, or any other type of assistance that
-        would help the Cause to achieve its goal!
+        {language === "spanish"
+          ? displayText.sp.causeInfo
+          : displayText.en.causeInfo}
       </Info>
     </div>
   );
@@ -125,16 +147,16 @@ const SidePanelCauseInfo = styled(CauseInfoWrapper)`
 `;
 
 const PostInfoWrapper = props => {
+  const { language } = useLanguage();
+
   return (
     <div {...props}>
       <PRFlag />
       <Logo />
       <Info>
-        A Post in Voz de PR is curated information that will be useful to the
-        people of Puerto Rico. It’s aim is to inform using knowledge, facts,
-        figures, news articles, or general information that may benefit other
-        users. The goal of a Post is to provide information that may benefit
-        another user!
+        {language === "spanish"
+          ? displayText.sp.postInfo
+          : displayText.en.postInfo}
       </Info>
     </div>
   );
