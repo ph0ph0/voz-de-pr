@@ -41,6 +41,7 @@ const NavBarCentre = styled(Wrapper)`
   flex-shrink: 5;
   flex-basis: 33.33333%;
   margin-right: 15px;
+  margin-left: 15px;
   /* flex-shrink: 2; */
   /* width: auto; */
 
