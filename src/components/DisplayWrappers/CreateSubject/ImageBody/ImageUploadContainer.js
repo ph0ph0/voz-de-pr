@@ -1,13 +1,21 @@
 import React from "react";
 import styled from "styled-components";
+import { useLanguage } from "CustomHooks/useLanguage";
 
 // import UploadImageButton from "../../../Primitive/CreateSubject/ImageBody/UploadImageButton";
 
+const displayText = {
+  en: "Upload Image",
+  sp: "Cargar Imagen"
+};
+
 const ImageUploadWrapper = ({ api, secondary, ...props }) => {
+  const { language } = useLanguage();
+
   return (
     <div {...props}>
       <UploadImageButton api={api} htmlFor="fileinput" secondary={secondary}>
-        Upload Image
+        {language === "spanish" ? displayText.sp : displayText.en}
       </UploadImageButton>
       <FileInput
         type="file"

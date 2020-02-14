@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import ImageDescription from "../../../Primitive/CreateSubject/ImageBody/ImageDescription";
+import ImageDescription from "components/Primitive/CreateSubject/ImageBody/ImageDescription";
 import ImageUploadContainer from "./ImageUploadContainer";
 
 const ImageBodyWrapper = ({ secondary, api, ...props }) => {

@@ -1,12 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const displayText = {
+  en: "Description",
+  sp: "Descripción"
+};
 
 const DescriptionInputWrapper = ({ api, ...props }) => {
+  const { language } = useLanguage();
+
   return (
     <input
       {...props}
-      placeholder={"Description"}
+      placeholder={language === "spanish" ? displayText.sp : displayText.en}
       value={api.linkDescription}
       onChange={event => api.updateLinkDescription(event.target.value)}
     />
