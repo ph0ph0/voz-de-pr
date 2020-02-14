@@ -7,6 +7,7 @@ import VoteArrow from "components/Primitive/SubjectDetail/DetailSummary/VoteArro
 
 import { parseTime } from "Utils/TimePassedCalculator";
 import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
+import { useLanguage } from "CustomHooks/useLanguage";
 
 const CommentHeadingWrapper = ({
   comment,
@@ -15,7 +16,9 @@ const CommentHeadingWrapper = ({
   api,
   ...props
 }) => {
-  const timePassed = parseTime(comment.createdAt);
+  const { language } = useLanguage();
+
+  const timePassed = parseTime(comment.createdAt, language);
 
   const upArrowColour =
     currentVoteOnComment === "up" && secondary

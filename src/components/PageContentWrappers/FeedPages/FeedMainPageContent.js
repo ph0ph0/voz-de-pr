@@ -13,6 +13,17 @@ import LoadMore from "components/Primitive/SubjectCard/LoadMore";
 
 import { useUser } from "CustomHooks/user";
 import { useSearch } from "CustomHooks/useSearch";
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const displayText = {
+  en: {
+    loadMore: "Load More"
+  },
+  sp: {
+    loadMore: "Ver Más"
+  }
+};
+
 const FeedMainPageContentWrapper = ({
   pageTitle,
   profileType,
@@ -40,6 +51,8 @@ const FeedMainPageContentWrapper = ({
     searchTerm,
     updateSearchText
   } = useSearch();
+
+  const { language } = useLanguage();
 
   const updateSortOrderState = newValue => {
     window.log(`new filter state: ${newValue}`);
@@ -326,7 +339,11 @@ const FeedMainPageContentWrapper = ({
       )}
       {loading && <LoadingSpinner colour="#1B4EA0" center={true} />}
       {nextToken && (
-        <LoadMore onClick={() => getMoreSubjects(nextToken)}>Ver Más</LoadMore>
+        <LoadMore onClick={() => getMoreSubjects(nextToken)}>
+          {language === "spanish"
+            ? displayText.sp.loadMore
+            : displayText.en.loadMore}
+        </LoadMore>
       )}
     </div>
   );

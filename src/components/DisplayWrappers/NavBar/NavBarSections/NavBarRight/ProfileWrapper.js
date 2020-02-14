@@ -22,11 +22,12 @@ const Wrapper = ({ staticContext, user, ...props }) => {
 
 const ProfileWrapper = styled(Wrapper)`
   /* background-color: blue; */
-  width: 60%;
+  max-width: 60%;
   height: 100%;
+  flex-shrink: 5;
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
 
   :hover {

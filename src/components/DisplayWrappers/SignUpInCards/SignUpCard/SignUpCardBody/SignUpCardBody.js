@@ -17,6 +17,9 @@ import BottomLineWrapper from "./SignUpBottomLineWrapper";
 import Error from "components/Primitive/General/ErrorText";
 import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
 
+import { displayText } from "./SignUpDisplayText";
+import { useLanguage } from "CustomHooks/useLanguage";
+
 const ErrorText = styled(Error)`
   margin: 0px;
   margin-right: auto;
@@ -44,6 +47,8 @@ const SignUpButton = styled(ActionButton)`
 `;
 
 const SignUpCardBodyWrapper = ({ api, ...props }) => {
+  const { language } = useLanguage();
+
   const history = useHistory();
   //If signup is successful, `success` in the api will be true
   //and we can pass over the email, password and avatar file object
@@ -65,33 +70,55 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
     <div {...props}>
       <Logo />
       {api.firstNameInputIsErrored && (
-        <ErrorText>Por favor proporcione un nombre</ErrorText>
+        <ErrorText>
+          {language === "spanish"
+            ? displayText.sp.nameError
+            : displayText.en.nameError}
+        </ErrorText>
       )}
 
       <TextField
-        placeholder={"Nombre"}
+        placeholder={
+          language === "spanish" ? displayText.sp.name : displayText.en.name
+        }
         data-testid="FirstNameInput"
         value={api.firstNameValue}
         onChange={event => api.updateFirstNameValue(event.target.value)}
       />
 
       {api.lastNameInputIsErrored && (
-        <ErrorText>Por favor proporcione un apellido</ErrorText>
+        <ErrorText>
+          {language === "spanish"
+            ? displayText.sp.lastNameError
+            : displayText.en.lastNameError}
+        </ErrorText>
       )}
 
       <TextField
-        placeholder={"Apellido"}
+        placeholder={
+          language === "spanish"
+            ? displayText.sp.lastName
+            : displayText.en.lastName
+        }
         data-testid="LastNameInput"
         value={api.lastNameValue}
         onChange={event => api.updateLastNameValue(event.target.value)}
       />
 
       {api.usernameInputIsErrored && (
-        <ErrorText>Por favor proporcione un nombre de usuario</ErrorText>
+        <ErrorText>
+          {language === "spanish"
+            ? displayText.sp.usernameError
+            : displayText.en.usernameError}
+        </ErrorText>
       )}
 
       <TextField
-        placeholder={"Nombre de Usuario"}
+        placeholder={
+          language === "spanish"
+            ? displayText.sp.username
+            : displayText.en.username
+        }
         data-testid="UserNameInput"
         value={api.usernameValue}
         onChange={event => api.updateUsernameValue(event.target.value)}
@@ -99,7 +126,9 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
 
       {api.emailInputIsErrored && (
         <ErrorText>
-          Por favor proporcione un correo electrónico válido
+          {language === "spanish"
+            ? displayText.sp.emailError
+            : displayText.en.emailError}
         </ErrorText>
       )}
       <EmailField
@@ -112,21 +141,37 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
 
       <EmailField
         api={api}
-        placeholder={"Escriba nuevamente el correo electrónico "}
+        placeholder={
+          language === "spanish"
+            ? displayText.sp.retypeEmail
+            : displayText.en.retypeEmail
+        }
         data-testid="SecondEmailInput"
         value={api.secondEmailValue}
         onChange={event => api.updateSecondEmailValue(event.target.value)}
       />
 
       {api.locationInputIsErrored && (
-        <ErrorText>Seleccione una ubicación del menú desplegable</ErrorText>
+        <ErrorText>
+          {language === "spanish"
+            ? displayText.sp.locationError
+            : displayText.en.locationError}
+        </ErrorText>
       )}
       <DropDown api={api} />
       {api.passwordInputIsErrored && (
-        <ErrorText>Por favor proporcione una contraseña</ErrorText>
+        <ErrorText>
+          {language === "spanish"
+            ? displayText.sp.passwordError
+            : displayText.en.passwordError}
+        </ErrorText>
       )}
       <PasswordField
-        placeholder={"Contraseña"}
+        placeholder={
+          language === "spanish"
+            ? displayText.sp.password
+            : displayText.en.password
+        }
         data-testid="FirstPasswordInput"
         value={api.firstPasswordValue}
         onChange={event => api.updateFirstPasswordValue(event.target.value)}
@@ -134,7 +179,11 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
       />
 
       <PasswordField
-        placeholder={"Escriba Nuevamente la Contraseña"}
+        placeholder={
+          language === "spanish"
+            ? displayText.sp.retypePassword
+            : displayText.en.retypePassword
+        }
         data-testid="SecondPasswordInput"
         value={api.secondPasswordValue}
         onChange={event => api.updateSecondPasswordValue(event.target.value)}
@@ -142,11 +191,17 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
       />
 
       {api.avatarInputIsErrored && (
-        <ErrorText>Por favor seleccione una imagen</ErrorText>
+        <ErrorText>
+          {language === "spanish"
+            ? displayText.sp.profPicError
+            : displayText.en.profPicError}
+        </ErrorText>
       )}
 
       <AvatarInstructionSignUp api={api}>
-        Selecciona una imagen
+        {language === "spanish"
+          ? displayText.sp.profPic
+          : displayText.en.profPic}
       </AvatarInstructionSignUp>
       <ProfPicSelector api={api} />
       {/* <Avatars api={api} /> */}
@@ -157,7 +212,13 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
         onClick={api.submit}
         disabled={api.loading && "disabled"}
       >
-        {api.loading ? <LoadingSpinner /> : "CREAR CUENTA"}
+        {api.loading ? (
+          <LoadingSpinner />
+        ) : language === "spanish" ? (
+          displayText.sp.signUp
+        ) : (
+          displayText.en.signUp
+        )}
       </SignUpButton>
       <BottomLineWrapper api={api} />
     </div>

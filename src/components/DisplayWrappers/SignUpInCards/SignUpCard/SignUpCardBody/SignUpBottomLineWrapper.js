@@ -4,7 +4,12 @@ import { useHistory } from "react-router-dom";
 
 import SwitchStateButton from "components/Primitive/SignUpCard/SwitchStateButton";
 
+import { displayText } from "./SignUpDisplayText";
+import { useLanguage } from "CustomHooks/useLanguage";
+
 const BottomLineWrapperWrapper = ({ api, ...props }) => {
+  const { language } = useLanguage();
+
   const history = useHistory();
 
   function nagivateToLogIn() {
@@ -15,7 +20,9 @@ const BottomLineWrapperWrapper = ({ api, ...props }) => {
 
   return (
     <div {...props}>
-      ¿Ya tienes perfil? Iniciar Sesión?
+      {language === "spanish"
+        ? displayText.sp.alreadyHaveProfile
+        : displayText.en.alreadyHaveProfile}
       <SwitchStateButton onClick={nagivateToLogIn} isSignUp={true} />
     </div>
   );

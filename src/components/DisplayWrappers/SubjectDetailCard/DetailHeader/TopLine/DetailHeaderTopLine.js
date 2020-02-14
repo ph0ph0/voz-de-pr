@@ -6,9 +6,12 @@ import ProfPicSubjectCard from "../../../SubjectCard/LeftContent/ProfPicSubjectC
 
 import { parseTime } from "Utils/TimePassedCalculator";
 import DeleteButton from "components/Primitive/SubjectCard/DeleteSubjectButton";
+import { useLanguage } from "CustomHooks/useLanguage";
 
 const DetailHeaderTopLineWrapper = ({ api, ...props }) => {
-  const timePassed = parseTime(api.subject.createdAt);
+  const { language } = useLanguage();
+
+  const timePassed = parseTime(api.subject.createdAt, language);
 
   const isOwner =
     api.user && api.user.id === api.subject.createdBy ? true : false;

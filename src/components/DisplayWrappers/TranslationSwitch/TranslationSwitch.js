@@ -18,6 +18,8 @@ const HorizontalRule = styled.div`
 
 const SwitchTitle = styled.span`
   /* border: 1px solid red; */
+  /* background-color: purple; */
+  width: 130px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: -10px;
@@ -25,15 +27,18 @@ const SwitchTitle = styled.span`
   font-size: 14px;
   justify-self: center;
   align-self: center;
+  text-align: center;
 `;
 
 const LanguageText = styled.p`
+  /* background-color: yellow; */
   font-size: 12px;
   color: rgba(0, 0, 0, 0.54);
   padding: 5px;
 `;
 
 const SwitchLabel = styled.label`
+  /* background-color: orange; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,6 +63,7 @@ const SwitchWrapper = ({ change, state, large, ...props }) => {
 };
 
 const Switch = styled(SwitchWrapper)`
+  /* background-color: green; */
   display: flex;
   flex-direction: row;
 

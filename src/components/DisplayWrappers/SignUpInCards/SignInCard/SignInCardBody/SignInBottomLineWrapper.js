@@ -4,10 +4,21 @@ import { useHistory } from "react-router-dom";
 
 import SignInCardApiPropTypes from "../API/proptypes/SignUpCardApiPropTypes";
 
-import SwitchStateButton from "../../../../Primitive/SignUpCard/SwitchStateButton";
+import SwitchStateButton from "components/Primitive/SignUpCard/SwitchStateButton";
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const displayText = {
+  en: {
+    newToVdPR: "New to Voz de Puerto Rico?"
+  },
+  sp: {
+    newToVdPR: "¿Nuevo en voz de puerto rico?"
+  }
+};
 
 const SignInBottomLineWrapper = ({ api, ...props }) => {
   const history = useHistory();
+  const { language } = useLanguage();
 
   function navigateToSignUp() {
     history.push({
@@ -17,7 +28,9 @@ const SignInBottomLineWrapper = ({ api, ...props }) => {
 
   return (
     <div {...props}>
-      ¿Nuevo en voz de puerto rico?
+      {language === "spanish"
+        ? displayText.sp.newToVdPR
+        : displayText.en.newToVdPR}
       <SwitchStateButton onClick={navigateToSignUp} isSignUp={false} />
     </div>
   );

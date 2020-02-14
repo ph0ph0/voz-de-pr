@@ -12,6 +12,28 @@ import ActionButton from "../../../../Primitive/General/ActionButton";
 import BottomLineWrapper from "../SignInCardBody/SignInBottomLineWrapper";
 import Error from "../../../../Primitive/General/ErrorText";
 import LoadingSpinner from "../../../../Primitive/General/LoadingSpinner";
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const displayText = {
+  en: {
+    emptyErrorText: "Please provide your email",
+    emailPlaceholder: "Email",
+    passwordEmptyErrorText: "Please provide your password",
+    passwordPlaceholder: "Password",
+    login: "LOG IN",
+    showLogin: "Show login",
+    forgotPassword: "Forgot your password?"
+  },
+  sp: {
+    emptyErrorText: "Por favor proporcione su correo electrónico",
+    emailPlaceholder: "Email",
+    passwordEmptyErrorText: "Por favor proporcione su contraseña",
+    passwordPlaceholder: "Contraseña",
+    login: "INICIAR SESIÓN",
+    showLogin: "Mostrar inicio de sesión",
+    forgotPassword: "¿Olvidaste tu contraseña?"
+  }
+};
 
 const ErrorText = styled(Error)`
   margin-right: auto;
@@ -52,6 +74,7 @@ const ForgotPasswordText = styled.button`
 
 const SignInCardBodyWrapper = ({ api, ...props }) => {
   const history = useHistory();
+  const { language } = useLanguage();
 
   //Nav to the main feed if sign in was successful
   useEffect(() => {
@@ -75,7 +98,9 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
       <Logo />
       {api.emailInputIsErrored && (
         <ErrorText data-testid="EmailEmptyErrorText">
-          Please provide your email
+          {language === "spanish"
+            ? displayText.sp.emptyErrorText
+            : displayText.en.emptyErrorText}
         </ErrorText>
       )}
       <EmailField
@@ -87,12 +112,18 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
       />
       {api.passwordInputIsErrored && (
         <ErrorText data-testid="PasswordEmptyErrorText">
-          Please provide your password
+          {language === "spanish"
+            ? displayText.sp.passwordEmptyErrorText
+            : displayText.en.passwordEmptyErrorText}
         </ErrorText>
       )}
       <PasswordField
         data-testid="PasswordInput"
-        placeholder={"Password"}
+        placeholder={
+          language === "spanish"
+            ? displayText.sp.passwordPlaceholder
+            : displayText.en.passwordPlaceholder
+        }
         value={api.passwordValue}
         onChange={event => api.updatePasswordValue(event.target.value)}
         api={api}
@@ -108,7 +139,13 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
         data-testid="SignInButton"
         disabled={api.loading && "disabled"}
       >
-        {api.loading ? <LoadingSpinner /> : "LOG IN"}
+        {api.loading ? (
+          <LoadingSpinner />
+        ) : language === "spanish" ? (
+          displayText.sp.login
+        ) : (
+          displayText.en.login
+        )}
       </SignInButton>
       <BottomLineWrapper />
       <ForgotPasswordText
@@ -117,8 +154,12 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
         onClick={navToForgotPassword}
       >
         {api.forgotPasswordIsVisible
-          ? "Mostrar iniciar sesión"
-          : "¿Olvidaste tu contraseña?"}
+          ? language === "spanish"
+            ? displayText.sp.showLogin
+            : displayText.en.showLogin
+          : language === "spanish"
+          ? displayText.sp.forgotPassword
+          : displayText.en.forgotPassword}
       </ForgotPasswordText>
     </div>
   );

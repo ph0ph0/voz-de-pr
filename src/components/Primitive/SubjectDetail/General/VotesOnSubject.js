@@ -1,11 +1,33 @@
 import React from "react";
 import styled from "styled-components";
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const displayText = {
+  en: {
+    votes: "VOTE"
+  },
+  sp: {
+    votes: "VOTO"
+  }
+};
 
 const VotesOnSubjectWrapper = ({ votesOnSubject, secondary, ...props }) => {
+  const { language } = useLanguage();
+
   return (
     <p {...props}>
       {votesOnSubject}{" "}
-      {votesOnSubject > 1 ? "VOTOS" : votesOnSubject === 1 ? "VOTO" : "VOTOS"}
+      {votesOnSubject > 1
+        ? language === "spanish"
+          ? `${displayText.sp.votes}S`
+          : `${displayText.en.votes}S`
+        : votesOnSubject === 1
+        ? language === "spanish"
+          ? displayText.sp.votes
+          : displayText.en.votes
+        : language === "spanish"
+        ? `${displayText.sp.votes}S`
+        : `${displayText.en.votes}S`}
     </p>
   );
 };

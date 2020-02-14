@@ -1,15 +1,33 @@
 import styled from "styled-components";
 import React from "react";
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const displayText = {
+  en: {
+    comment: "Comment"
+  },
+  sp: {
+    comment: "Comentario"
+  }
+};
 
 const CommentsIndicatorWrapper = ({ noOfComments, ...props }) => {
+  const { language } = useLanguage();
+
   return (
     <div {...props}>
       {noOfComments}{" "}
       {noOfComments > 1
-        ? "Comments"
+        ? language === "spanish"
+          ? `${displayText.sp.comment}s`
+          : `${displayText.en.comment}s`
         : noOfComments === 1
-        ? "Comment"
-        : "Comments"}
+        ? language === "spanish"
+          ? displayText.sp.comment
+          : displayText.en.comment
+        : language === "spanish"
+        ? `${displayText.sp.comment}s`
+        : `${displayText.en.comment}s`}
     </div>
   );
 };

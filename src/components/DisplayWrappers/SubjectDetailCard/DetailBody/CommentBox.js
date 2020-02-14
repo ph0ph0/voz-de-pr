@@ -5,8 +5,16 @@ import CommentTextArea from "components/Primitive/SubjectDetail/DetailBody/Comme
 import CommentButton from "components/Primitive/SubjectDetail/DetailBody/CommentButton";
 import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
 import ErrorText from "components/Primitive/General/ErrorText";
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const displayText = {
+  en: "Comment",
+  sp: "Comentario"
+};
 
 const CommentBoxWrapper = ({ secondary, api, ...props }) => {
+  const { language } = useLanguage();
+
   return (
     <div {...props}>
       <CommentTextArea
@@ -19,7 +27,13 @@ const CommentBoxWrapper = ({ secondary, api, ...props }) => {
         onClick={() => api.submitComment(api.subjectId)}
         disabled={api.commentLoading && "disabled"}
       >
-        {api.commentLoading ? <LoadingSpinner /> : "Comment"}
+        {api.commentLoading ? (
+          <LoadingSpinner />
+        ) : language === "spanish" ? (
+          displayText.sp
+        ) : (
+          displayText.en
+        )}
       </CommentButton>
     </div>
   );

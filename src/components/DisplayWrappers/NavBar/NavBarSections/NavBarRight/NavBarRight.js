@@ -30,13 +30,13 @@ const Wrapper = props => {
 
   return (
     <div {...props}>
+      <TranslationSwitch />
       {user ? (
         <LogoutButton onClick={logUserOut}>
           {language === "spanish" ? displayText.sp : displayText.en}
         </LogoutButton>
       ) : (
         <>
-          <TranslationSwitch />
           <SignUpInButtonWrapper />
         </>
       )}

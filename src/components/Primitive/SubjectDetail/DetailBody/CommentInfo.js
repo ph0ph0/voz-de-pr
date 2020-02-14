@@ -1,5 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const displayText = {
+  en: {
+    commentAs: "Comment as"
+  },
+  sp: {
+    commentAs: "Comentar como"
+  }
+};
 
 const Name = styled.p`
   font-size: 12px;
@@ -17,9 +27,15 @@ const Info = styled.p`
 `;
 
 const CommentInfoWrapper = ({ secondary, username, ...props }) => {
+  const { language } = useLanguage();
+
   return (
     <div {...props}>
-      <Info>Comentar como</Info>
+      <Info>
+        {language === "spanish"
+          ? displayText.sp.commentAs
+          : displayText.en.commentAs}
+      </Info>
       <Name secondary={secondary}>{username}</Name>
     </div>
   );

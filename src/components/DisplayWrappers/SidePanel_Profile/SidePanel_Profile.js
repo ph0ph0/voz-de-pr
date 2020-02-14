@@ -11,6 +11,16 @@ import TranslationSwitch from "../TranslationSwitch/TranslationSwitch";
 
 import useApi from "../../../CustomHooks/useAPI";
 import SidePanelProfileAPI from "./API/SidePanelProfileAPI";
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const displayText = {
+  en: {
+    actionButton: "Change"
+  },
+  sp: {
+    actionButton: "Cambiar"
+  }
+};
 
 const SidePanelWrapper = props => {
   const api = useApi(SidePanelProfileAPI, {
@@ -22,6 +32,8 @@ const SidePanelWrapper = props => {
     avatar: null
   });
 
+  const { language } = useLanguage();
+
   return (
     <div {...props}>
       <PRFlag />
@@ -32,9 +44,15 @@ const SidePanelWrapper = props => {
         onClick={() => api.submit()}
         disabled={api.loading && "disabled"}
       >
-        {api.loading ? <LoadingSpinner /> : "Cambiar"}
+        {api.loading ? (
+          <LoadingSpinner />
+        ) : language === "spanish" ? (
+          displayText.sp.actionButton
+        ) : (
+          displayText.en.actionButton
+        )}
       </ActionButton>
-      <TranslationSwitch />
+      {/* <TranslationSwitch /> */}
     </div>
   );
 };

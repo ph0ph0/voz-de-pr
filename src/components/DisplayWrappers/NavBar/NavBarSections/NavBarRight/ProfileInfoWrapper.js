@@ -20,7 +20,7 @@ const Wrapper = ({ user, ...props }) => {
     <div className={props.className}>
       <ProfileInfoNavBar
         fontSize={"16px"}
-        width={"80%"}
+        width={"90%"}
         height={"50%"}
         paddingTop={"15px"}
       >
@@ -28,7 +28,7 @@ const Wrapper = ({ user, ...props }) => {
       </ProfileInfoNavBar>
       <ProfileInfoNavBar
         fontSize={"12px"}
-        width={"80%"}
+        width={"90%"}
         height={"50%"}
         paddingBottom={"15px"}
       >

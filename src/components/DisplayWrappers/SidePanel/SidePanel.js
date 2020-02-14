@@ -167,14 +167,20 @@ const SidePanelPostInfo = styled(PostInfoWrapper)`
 `;
 
 const SidePanelDetailWrapper = ({ secondary, ...props }) => {
+  const { language } = useLanguage();
+
   return (
     <div {...props}>
       <PRFlag />
       <Logo />
       <Info>
         {secondary
-          ? "A Post in Voz de PR is curated information that will be useful to the people of Puerto Rico. A  Post aims to inform using knowledge, facts, figures, news articles, or general information that may benefit other users. It can be used as the starting point for a conversation relevant to Puerto Rico!"
-          : "A Cause in Voz de PR is a request for assistance. It should be used to bring attention to a situation that requires help. Help can be in the form of volunteer work, a donation, or any other type of assistance that would help the Cause to achieve its goal! If you would like to make a donation, please make a note of the Cause ID and donate via ATH MOVIL."}
+          ? language === "spanish"
+            ? displayText.sp.detailPost
+            : displayText.en.detailPost
+          : language === "spanish"
+          ? displayText.sp.detailPost
+          : displayText.en.detailPost}
       </Info>
       <CreateSubjectButton secondary={secondary} />
     </div>

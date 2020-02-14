@@ -1,8 +1,27 @@
 import React from "react";
 import styled from "styled-components";
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const displayText = {
+  en: {
+    opinion: "What's your opinion?"
+  },
+  sp: {
+    opinion: "¿Cuál es su opinión?"
+  }
+};
 
 const CommentTextAreaWrapper = ({ ...props }) => {
-  return <textarea {...props} placeholder={"¿Cuál es su opinión?"} />;
+  const { language } = useLanguage();
+
+  return (
+    <textarea
+      {...props}
+      placeholder={
+        language === "spanish" ? displayText.sp.opinion : displayText.en.opinion
+      }
+    />
+  );
 };
 
 const CommentTextArea = styled(CommentTextAreaWrapper)`
