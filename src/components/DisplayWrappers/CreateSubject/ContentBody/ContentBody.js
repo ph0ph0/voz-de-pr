@@ -17,8 +17,8 @@ const displayText = {
     content: "Post for all of Puerto Rico to hear!"
   },
   sp: {
-    char: "cara",
-    left: "Izquierdo",
+    char: "caractere",
+    left: "Quedan",
     title: "Título",
     titleError: "Por favor elige un título",
     contentCauseError: "Por favor describa su causa",
@@ -42,6 +42,7 @@ const ContentBodyWrapper = ({ secondary, api, ...props }) => {
   return (
     <div {...props}>
       <Counter>
+        {language === "spanish" && displayText.sp.left}{" "}
         {50 - api.subjectTitle.length}{" "}
         {language === "spanish" ? displayText.sp.char : displayText.en.char}
         {50 - api.subjectTitle.length > 1
@@ -49,7 +50,7 @@ const ContentBodyWrapper = ({ secondary, api, ...props }) => {
           : 50 - api.subjectTitle.length < 1
           ? "s"
           : ""}{" "}
-        {language === "spanish" ? displayText.sp.left : displayText.en.left}
+        {language !== "spanish" && displayText.en.left}
       </Counter>
       {api.titleIsErrored && (
         <ErrorText>
