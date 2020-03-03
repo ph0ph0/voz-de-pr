@@ -1,6 +1,7 @@
 import { inputsAreEmpty } from "./utils/InputsAreEmpty";
 import { useUser } from "CustomHooks/user";
 import { useSubject } from "CustomHooks/useSubject";
+import { useHistory } from "react-router-dom";
 
 const CreateSubjectFormAPI = ({ state, setState }) => {
   const currentPanel = state.currentPanel;
@@ -13,9 +14,11 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
   const linkContent = state.linkContent;
   const titleIsErrored = state.titleIsErrored;
   const contentIsErrored = state.contentIsErrored;
+  const linkIsErrored = state.linkIsErrored;
 
   const { user } = useUser();
   const { saveSubject, loading, error } = useSubject();
+  let history = useHistory();
 
   const showPanel = newValue => {
     setState(prevState => {
@@ -60,6 +63,17 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
         ...prevState,
         selectedImage: URL.createObjectURL(newValue[0]),
         subjectImage: newValue[0]
+      };
+    });
+  };
+
+  const removeSubjectImage = () => {
+    window.log(`Removing subject image...`);
+    setState(prevState => {
+      return {
+        ...prevState,
+        selectedImage: null,
+        subjectImage: null
       };
     });
   };
@@ -120,7 +134,7 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
       return;
     }
 
-    if (inputsAreEmpty(setState, subjectTitle, subjectContent)) {
+    if (inputsAreEmpty(setState, subjectTitle, subjectContent, linkContent)) {
       window.log("inputs Empty:");
       setState(prevState => {
         return {
@@ -128,6 +142,14 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
           currentPanel: "content"
         };
       });
+      if (linkIsErrored) {
+        setState(prevState => {
+          return {
+            ...prevState,
+            currentPanel: "link"
+          };
+        });
+      }
       return;
     }
 
@@ -140,18 +162,30 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
 
     const subjectType = secondary ? "post" : "cause";
 
-    // const sT = "TEST_TITLE";
-    // const sC = "TEST_CONTENT";
+    //Create the searchField value
+    const searchField = subjectTitle
+      .concat(subjectContent)
+      .trim()
+      .replace(/ /g, "")
+      .toLowerCase();
+
+    const staticKey = 1;
 
     const subjectObject = {
       createdBy: user.id,
       author: user.username,
       title: subjectTitle,
+      searchField: searchField,
+      staticKey: staticKey,
       subjectContent: subjectContent,
       numberOfComments: 0,
       votes: 0,
       type: subjectType
     };
+
+    if (linkContent.trim()) {
+      subjectObject.link = linkContent.trim();
+    }
 
     try {
       await saveSubject(subjectObject, subjectImage);
@@ -168,6 +202,15 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
     }
 
     resetAll();
+    navigateToFeed(secondary);
+  };
+
+  const navigateToFeed = secondary => {
+    const path = secondary ? "posts" : "causes";
+    window.log(`Showing screen...`);
+    history.push({
+      pathname: `/${path}`
+    });
   };
 
   return {
@@ -182,9 +225,11 @@ const CreateSubjectFormAPI = ({ state, setState }) => {
     linkContent,
     titleIsErrored,
     contentIsErrored,
+    linkIsErrored,
     updateSubjectTitle,
     updateSubjectContent,
     updateSubjectImage,
+    removeSubjectImage,
     updateImageDescription,
     updateLinkDescription,
     updateLinkContent,

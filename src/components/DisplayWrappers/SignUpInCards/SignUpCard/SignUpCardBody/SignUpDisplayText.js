@@ -1,0 +1,42 @@
+export const displayText = {
+  en: {
+    nameError: "Please provide a first name",
+    name: "First Name",
+    lastNameError: "Please provide a last name",
+    lastName: "Last Name",
+    usernameError: "Please provide a username",
+    username: "Username",
+    emailError: "Please provide an email",
+    email: "email",
+    retypeEmail: "Re-type email",
+    locationError: "Please select a location from the dropdown",
+    passwordError: "Please provide a password",
+    password: "Password",
+    retypePassword: "Re-type Password",
+    profPicError: "Please select a profile picture",
+    profPic: "Select a Profile Pic",
+    signUp: "SIGN UP",
+    voiceOnVdPR: "Already got a voice on Voz de Puerto Rico?",
+    alreadyHaveProfile: "Already have a profile?"
+  },
+  sp: {
+    nameError: "Por favor proporcione un nombre",
+    name: "Nombre",
+    lastNameError: "Por favor proporcione un apellido",
+    lastName: "Apellido",
+    usernameError: "Por favor proporcione un nombre de usuario",
+    username: "Nombre de Usuario",
+    emailError: "Por favor incluya su correo electrónico",
+    email: "email",
+    retypeEmail: "Escriba nuevamente el correo electrónico",
+    locationError: "Seleccione una ubicación del menú desplegable",
+    passwordError: "Por favor incluya su contraseña",
+    password: "Contraseña",
+    retypePassword: "Escriba Nuevamente la Contraseña",
+    profPicError: "Por favor seleccione una imagen",
+    profPic: "Selecciona una imagen",
+    signUp: "CREAR CUENTA",
+    voiceOnVdPR: "¿Ya tienes voz en Voz de Puerto Rico?",
+    alreadyHaveProfile: "¿Ya tienes perfil?"
+  }
+};

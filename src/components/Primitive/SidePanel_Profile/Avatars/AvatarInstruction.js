@@ -7,9 +7,10 @@ import DropDown from "../../../DisplayWrappers/SidePanel_Profile/DropDown/DropDo
 
 const AvatarInstruction = styled.div`
   /* border: 1px solid red; */
-
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 5px;
-  padding-left: 15px;
+  /* padding-left: 15px; */
 
   font-size: 14px;
   text-align: left;

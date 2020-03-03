@@ -5,14 +5,11 @@ import PropTypes from "prop-types";
 import DetailHeaderTopLineWrapper from "./TopLine/DetailHeaderTopLine";
 import DetailHeaderBottomLineWrapper from "./BottomLine/DetailHeaderBottomLine";
 
-const DetailHeaderWrapper = ({ secondary, votesOnSubject, ...props }) => {
+const DetailHeaderWrapper = ({ secondary, api, ...props }) => {
   return (
     <div {...props}>
-      <DetailHeaderTopLineWrapper />
-      <DetailHeaderBottomLineWrapper
-        secondary={secondary}
-        votesOnSubject={votesOnSubject}
-      />
+      <DetailHeaderTopLineWrapper api={api} />
+      <DetailHeaderBottomLineWrapper secondary={secondary} api={api} />
     </div>
   );
 };
@@ -27,9 +24,9 @@ const DetailHeader = styled(DetailHeaderWrapper)`
   margin-bottom: 25px;
   padding: 0px;
 `;
-DetailHeader.propTypes = {
-  secondary: PropTypes.bool,
-  votesOnSubject: PropTypes.number.isRequired
-};
+// DetailHeader.propTypes = {
+//   secondary: PropTypes.bool,
+//   votesOnSubject: PropTypes.number.isRequired
+// };
 
 export default DetailHeader;

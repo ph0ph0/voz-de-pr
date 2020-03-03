@@ -1,8 +1,32 @@
 import React from "react";
 import styled from "styled-components";
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const displayText = {
+  en: {
+    login: "LOG IN",
+    signUp: "SIGN UP"
+  },
+  sp: {
+    login: "INCIAR SESIÓN",
+    signUp: "CREAR CUENTA"
+  }
+};
 
 const SwitchStateButtonWrapper = ({ isSignUp, ...props }) => {
-  return <button {...props}>{isSignUp ? "LOG IN" : "SIGN UP"}</button>;
+  const { language } = useLanguage();
+
+  return (
+    <button {...props}>
+      {isSignUp
+        ? language === "spanish"
+          ? displayText.sp.login
+          : displayText.en.login
+        : language === "spanish"
+        ? displayText.sp.signUp
+        : displayText.en.signUp}
+    </button>
+  );
 };
 
 const SwitchStateButton = styled(SwitchStateButtonWrapper)`

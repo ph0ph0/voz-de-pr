@@ -7,10 +7,19 @@ import { useHistory } from "react-router-dom";
 import SignUpInButtonWrapper from "./SignUpInButtonWrapper";
 import ProfileWrapper from "./ProfileWrapper";
 import LogoutButton from "components/Primitive/NavBar/LogoutButton";
+import { useLanguage } from "CustomHooks/useLanguage";
+import TranslationSwitch from "components/DisplayWrappers/TranslationSwitch/TranslationSwitch";
+
+const displayText = {
+  en: "LOG OUT",
+  sp: "CERRAR SESIÓN"
+};
 
 const Wrapper = props => {
   const { user, logout } = useUser();
   const history = useHistory();
+
+  const { language } = useLanguage();
 
   const logUserOut = () => {
     history.push({
@@ -21,12 +30,17 @@ const Wrapper = props => {
 
   return (
     <div {...props}>
+      <TranslationSwitch />
       {user ? (
-        <LogoutButton onClick={logUserOut}>LOG OUT</LogoutButton>
+        <LogoutButton onClick={logUserOut}>
+          {language === "spanish" ? displayText.sp : displayText.en}
+        </LogoutButton>
       ) : (
-        <SignUpInButtonWrapper />
+        <>
+          <SignUpInButtonWrapper />
+        </>
       )}
-      {user ? <ProfileWrapper /> : null}
+      {user ? <ProfileWrapper user={user} /> : null}
     </div>
   );
 };
@@ -39,7 +53,7 @@ const NavBarRight = styled(Wrapper)`
   flex-basis: 33.3333%;
 
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 `;
 

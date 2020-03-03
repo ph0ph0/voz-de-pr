@@ -15,6 +15,7 @@ const SignUpCardAPI = ({ state, setState }) => {
   const selectedLocation = state.selectedLocation;
   const listOpen = state.listOpen;
   const selectedAvatar = state.selectedAvatar;
+  const avatar = state.avatar;
   const emailsMatch = state.emailsMatch;
   const passwordsMatch = state.passwordsMatch;
   const firstNameInputIsErrored = state.firstNameInputIsErrored;
@@ -30,6 +31,10 @@ const SignUpCardAPI = ({ state, setState }) => {
 
   //Fires when the user types in the name field
   const updateFirstNameValue = newValue => {
+    if (newValue.length >= 20) {
+      window.log("First name is too long, aborting");
+      return;
+    }
     setState(prevState => {
       return {
         ...prevState,
@@ -40,6 +45,10 @@ const SignUpCardAPI = ({ state, setState }) => {
   };
 
   const updateLastNameValue = newValue => {
+    if (newValue.length > 20) {
+      window.log("Last name is too long, aborting");
+      return;
+    }
     setState(prevState => {
       return {
         ...prevState,
@@ -50,6 +59,10 @@ const SignUpCardAPI = ({ state, setState }) => {
   };
 
   const updateUsernameValue = newValue => {
+    if (newValue.length > 25) {
+      window.log("Username is too long, aborting");
+      return;
+    }
     setState(prevState => {
       return {
         ...prevState,
@@ -139,15 +152,18 @@ const SignUpCardAPI = ({ state, setState }) => {
     window.log(`locationSelected: ${newValue}`);
   };
 
-  const onClickAv = key => {
-    const selectedKey = key;
+  const updateAvatar = newValue => {
+    const fileArray = newValue;
+    //If the array length is 0, the file picker was cancelled so abort setting the state
+    if (fileArray.length === 0) return;
+    window.log("Selected a profile image");
     setState(prevState => {
       return {
         ...prevState,
-        selectedAvatar: selectedKey
+        selectedAvatar: URL.createObjectURL(newValue[0]),
+        avatar: newValue[0]
       };
     });
-    window.log(`avatar selected: ${selectedKey}`);
   };
 
   //fires when the user clicks the submit button
@@ -267,6 +283,7 @@ const SignUpCardAPI = ({ state, setState }) => {
         usernameValue,
         firstNameValue,
         lastNameValue,
+        avatar,
         selectedLocation
       );
     } catch (error) {
@@ -296,6 +313,7 @@ const SignUpCardAPI = ({ state, setState }) => {
     listOpen,
     selectedLocation,
     selectedAvatar,
+    avatar,
     firstNameInputIsErrored,
     lastNameInputIsErrored,
     usernameInputIsErrored,
@@ -315,7 +333,7 @@ const SignUpCardAPI = ({ state, setState }) => {
     updateFirstPasswordValue,
     updateSecondPasswordValue,
     onLocationSelected,
-    onClickAv,
+    updateAvatar,
     resetDropdown,
     resetAll,
     locationNotFound,

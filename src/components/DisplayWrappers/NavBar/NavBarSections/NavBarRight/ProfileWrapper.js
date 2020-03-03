@@ -5,7 +5,7 @@ import { withRouter } from "react-router-dom";
 import ProfileInfoWrapper from "./ProfileInfoWrapper";
 import ProfileImageWrapper from "./ProfileImageWrapper";
 
-const Wrapper = ({ staticContext, ...props }) => {
+const Wrapper = ({ staticContext, user, ...props }) => {
   //staticContext allows props.history.push()
   function onClick() {
     console.log("Clicked Profile Wrapper");
@@ -13,25 +13,26 @@ const Wrapper = ({ staticContext, ...props }) => {
   }
 
   return (
-    <div {...props} onClick = {onClick}>
+    <div {...props} onClick={onClick}>
       <ProfileImageWrapper />
-      <ProfileInfoWrapper />
+      <ProfileInfoWrapper user={user} />
     </div>
   );
 };
 
 const ProfileWrapper = styled(Wrapper)`
-    /* background-color: blue; */
-    width: 60%;
-    height: 100%;
+  /* background-color: blue; */
+  max-width: 60%;
+  height: 100%;
+  flex-shrink: 5;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
-    :hover {
-        cursor: pointer;
-    }
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export default withRouter(ProfileWrapper);

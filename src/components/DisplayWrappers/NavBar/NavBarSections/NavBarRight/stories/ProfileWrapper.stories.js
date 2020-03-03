@@ -3,7 +3,17 @@ import { storiesOf } from "@storybook/react";
 
 import ProfileWrapper from "../ProfileWrapper";
 
-storiesOf("DisplayWrappers|NavBar/ProfileWrapper", module)
-  .add("Standard", () => <ProfileWrapper />, {
-    notes: "This wraps around the ProfileInfoWrapper and the ProfileImageWrapper"
-  });
+const user = {
+  firstName: "fN",
+  lastName: "lN",
+  email: "p@p.com"
+};
+
+storiesOf("DisplayWrappers|NavBar/ProfileWrapper", module).add(
+  "Standard",
+  () => <ProfileWrapper user={user} />,
+  {
+    notes:
+      "This wraps around the ProfileInfoWrapper and the ProfileImageWrapper"
+  }
+);

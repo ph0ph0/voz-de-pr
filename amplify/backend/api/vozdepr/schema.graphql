@@ -45,6 +45,21 @@ type Subject
     name: "subjectsByUser"
     fields: ["createdBy"]
     queryField: "subjectsByUser"
+  )
+  @key(
+    name: "byVotes"
+    fields: ["staticKey", "votes"]
+    queryField: "getSubjectsByNoOfVotes"
+  )
+  @key(
+    name: "byComments"
+    fields: ["staticKey", "numberOfComments"]
+    queryField: "getSubjectsByNoOfComments"
+  )
+  @key(
+    name: "byCreatedAt"
+    fields: ["staticKey", "createdAt"]
+    queryField: "getSubjectsByCreatedAt"
   ) {
   id: ID!
   createdBy: ID
@@ -52,13 +67,15 @@ type Subject
   author: String
   title: String!
   subjectContent: String!
+  link: String
+  searchField: String
   pictures: [Picture] @connection(keyName: "picturesBySubject", fields: ["id"])
   comments: [Comment] @connection(keyName: "commentsBySubject", fields: ["id"])
-  timePassedSinceCreation: String
   numberOfComments: Int
   votes: Int
+  # the staticKey is used as the primary key for the GSI and should always have the same value (set as 1)!
+  staticKey: Int
   type: SubjectType!
-  # hasPictures: Boolean!
 }
 
 enum SubjectType {
@@ -124,17 +141,17 @@ type Vote
     ]
   )
   @key(
-    name: "votesOnSubjectByUser"
-    fields: ["subjectVotedOnId", "createdBy"]
-    queryField: "votesOnSubjectByUser"
+    name: "votesOnObjectByUser"
+    fields: ["objectVotedOnId", "createdBy"]
+    queryField: "votesOnObjectByUser"
   ) {
   """
-  idofvote=userId+post/comment/causeid+post/cause/postComment/causeCommentt
-  ieid=12233455_6786758_causeComment
+  idofvote=userid_objectId
+  ieid=12233455_6786758
   objectIdistheidoftheobjectbeingvotedon.
   """
   id: ID!
-  subjectVotedOnId: ID!
+  objectVotedOnId: ID!
   createdBy: ID
   createdAt: AWSDateTime
   vote: VoteType
@@ -145,6 +162,8 @@ type Vote
 
 input VoteInput {
   id: ID!
+  userId: ID!
+  objectId: ID!
   vote: VoteType!
   voteOn: VoteOnType!
 }
@@ -155,6 +174,11 @@ enum VoteType {
 }
 
 enum VoteOnType {
-  post
-  cause
+  subject
+  comment
+}
+
+type Mutation {
+  voteOnSubject(input: VoteInput!): Subject!
+  voteOnComment(input: VoteInput!): Comment!
 }

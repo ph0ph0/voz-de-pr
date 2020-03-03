@@ -1,23 +1,15 @@
 import { locations } from "Constants/Constants";
+import { useUser } from "CustomHooks/user";
 
 const SidePanelProfileAPI = ({ state, setState }) => {
-  const name = state.name;
   const locationValue = state.locationValue;
   const selectedLocation = state.selectedLocation;
   const listOpen = state.listOpen;
   const dropDownIsErrored = state.dropDownIsErrored;
   const selectedAvatar = state.selectedAvatar;
+  const avatar = state.avatar;
 
-  //Called when the user types into the NameInput component
-  const updateNameValue = newValue => {
-    setState(prevState => {
-      return {
-        ...prevState,
-        name: newValue
-      };
-    });
-    window.log(`nameValue: ${newValue}`);
-  };
+  const { updateUserLocationAndAvatar, error, loading } = useUser();
 
   //Fires when the user clicks on the Inline Content wrapper. Opens the drop down and displays the locations
   const toggleList = () => {
@@ -25,6 +17,7 @@ const SidePanelProfileAPI = ({ state, setState }) => {
     setState(prevState => {
       return {
         ...prevState,
+        dropDownIsErrored: false,
         listOpen: newValue
       };
     });
@@ -55,15 +48,18 @@ const SidePanelProfileAPI = ({ state, setState }) => {
     window.log(`locationSelected: ${newValue}`);
   };
 
-  const onClickAv = key => {
-    const selectedKey = key;
+  const updateAvatar = newValue => {
+    const fileArray = newValue;
+    //If the array length is 0, the file picker was cancelled so abort setting the state
+    if (fileArray.length === 0) return;
+    window.log("Selected a profile image");
     setState(prevState => {
       return {
         ...prevState,
-        selectedAvatar: selectedKey
+        selectedAvatar: URL.createObjectURL(newValue[0]),
+        avatar: newValue[0]
       };
     });
-    window.log(`avatar selected: ${selectedKey}`);
   };
 
   //fires when the user clicks the submit button
@@ -77,7 +73,7 @@ const SidePanelProfileAPI = ({ state, setState }) => {
       };
     });
     window.log(
-      `dropDownReset; name: ${name}, locationValue: ${locationValue}, selectedLocation: ${selectedLocation}, listOpen: ${listOpen}, selectedAvatar: ${selectedAvatar}`
+      `dropDownReset; locationValue: ${locationValue}, selectedLocation: ${selectedLocation}, listOpen: ${listOpen}, selectedAvatar: ${selectedAvatar}`
     );
   };
 
@@ -85,12 +81,12 @@ const SidePanelProfileAPI = ({ state, setState }) => {
     setState(prevState => {
       return {
         ...prevState,
-        name: "",
         locationValue: "",
         selectedLocation: "",
         listOpen: false,
         dropDownIsErrored: false,
-        selectedAvatar: null
+        selectedAvatar: null,
+        avatar: null
       };
     });
   };
@@ -108,40 +104,55 @@ const SidePanelProfileAPI = ({ state, setState }) => {
     return false;
   };
 
-  const submit = () => {
-    // const newName = name
+  const submit = async () => {
     // const newAvatar = selectedAvatar
 
     if (locationNotFound()) {
       setState(prevState => {
         return {
           ...prevState,
+          locationValue: "",
           dropDownIsErrored: true
         };
       });
+      return;
     }
 
-    //new location should be a location object, not the input text, as the object contained in the locations constant contains more info!
+    //Object.assign will skip over null values, allowing us to only update inputs if not empty
+    let data = Object.assign(
+      {},
+      locationValue === "" ? null : { location: locationValue }
+    );
+
+    try {
+      await updateUserLocationAndAvatar(data, avatar);
+
+      //Show success info
+    } catch (error) {
+      //Show error
+      window.log(`ERROR updating user!: ${error}`);
+    }
 
     resetAll();
-    // window.log(`newName: ${newName}, newLocation: ${newLocation}, newAvatar: ${newAvatar}`)
+    // window.log(`newLocation: ${newLocation}, newAvatar: ${newAvatar}`)
   };
 
   return {
-    name,
     locationValue,
     listOpen,
     dropDownIsErrored,
     selectedLocation,
     selectedAvatar,
-    updateNameValue,
+    avatar,
     toggleList,
     updateLocationValue,
     onLocationSelected,
-    onClickAv,
+    updateAvatar,
     resetDropdown,
     resetAll,
-    submit
+    submit,
+    error,
+    loading
   };
 };
 

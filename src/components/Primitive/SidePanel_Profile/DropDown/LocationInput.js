@@ -1,10 +1,26 @@
 import React from "react";
 import styled from "styled-components";
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const displayText = {
+  en: {
+    location: "Location"
+  },
+  sp: {
+    location: "Localización"
+  }
+};
 
 const InputWrapper = ({ api, ...props }) => {
+  const { language } = useLanguage();
+
   return (
     <input
-      placeholder={"Location"}
+      placeholder={
+        language === "spanish"
+          ? displayText.sp.location
+          : displayText.en.location
+      }
       value={api.locationValue}
       onChange={event => api.updateLocationValue(event.target.value)}
       {...props}

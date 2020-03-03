@@ -2,39 +2,54 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
+import { SubjectPropTypes } from "Constants/__PropTypes__/SubjectPropTypes";
+
 import SubjectCardTopLineWrapper from "./SubjectCardTopLineWrapper";
 import SubjectTitle from "../../../Primitive/SubjectCard/SubjectTitle";
 import SubjectSummary from "../../../Primitive/SubjectCard/SubjectSummary";
 import BottomWrapper from "./BottomWrapper";
 
-const Wrapper = ({author, isOwner, timePassed, title, subjectContent, numberOfComments, ...props}) => {
+import { parseTime } from "Utils/TimePassedCalculator";
+import { useUser } from "CustomHooks/user";
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const Wrapper = ({ subject, ...props }) => {
+  const { language } = useLanguage();
+
+  const timeSinceCreated = parseTime(subject.createdAt, language);
+  // const numberOfComments =
+  //   subject.comments && subject.comments.items && subject.comments.items.length;
+
+  const { user } = useUser();
+
+  const isOwner = user && user.id === subject.createdBy ? true : false;
+
   return (
     <div {...props}>
-      <SubjectCardTopLineWrapper author = {author} timePassed = {timePassed} isOwner = {isOwner}/>
-      <SubjectTitle>{title}</SubjectTitle>
-      <SubjectSummary>{subjectContent}</SubjectSummary>
-      <BottomWrapper numberOfComments = {numberOfComments}/>
+      <SubjectCardTopLineWrapper
+        author={subject.author}
+        timePassed={timeSinceCreated}
+        isOwner={isOwner}
+        createdBy={subject.createdBy}
+      />
+      <SubjectTitle>{subject.title}</SubjectTitle>
+      <SubjectSummary>{subject.subjectContent}</SubjectSummary>
+      <BottomWrapper numberOfComments={subject.numberOfComments} />
     </div>
   );
 };
 
 const LeftContent = styled(Wrapper)`
-    /* border: 1px solid gold; */
-    height: 100%;
-    width: 100%;
-    margin-left: 24px;
+  /* border: 1px solid gold; */
+  height: 100%;
+  width: 100%;
+  margin-left: 24px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 `;
 
-LeftContent.propTypes = {
-  author: PropTypes.string.isRequired,
-  timePassed: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  subjectContent: PropTypes.string.isRequired,
-  numberOfComments: PropTypes.number.isRequired,
-};
+LeftContent.propTypes = SubjectPropTypes;
 
 export default LeftContent;

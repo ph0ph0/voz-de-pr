@@ -15,7 +15,7 @@ import ForgotPassword from "../components/Pages/ForgotPassword";
 import ConfirmSignUp from "../components/Pages/ConfirmSignUp";
 
 const Routes = props => {
-  const { user } = useUser();
+  const { user, loading } = useUser();
   return (
     <Switch>
       <Route exact path="/">
@@ -31,8 +31,7 @@ const Routes = props => {
         {user ? <Profile /> : <Redirect to="/signin" />}
       </Route>
       <Route path="/create-cause">
-        {/* {user ? <CreateCause /> : <Redirect to="/signin" />} */}
-        <CreateCause />
+        {user ? <CreateCause /> : <Redirect to="/signin" />}
       </Route>
       <Route path="/create-post">
         {user ? <CreatePost /> : <Redirect to="/signin" />}
@@ -49,7 +48,7 @@ const Routes = props => {
       <Route exact path="/confirmsignup">
         <ConfirmSignUp />
       </Route>
-      <Route path="/:subjectID">
+      <Route path="/:subjectId">
         <SubjectDetail />
       </Route>
     </Switch>

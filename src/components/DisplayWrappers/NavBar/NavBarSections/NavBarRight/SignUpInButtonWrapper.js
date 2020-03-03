@@ -2,9 +2,23 @@ import React from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 
-import SignUpInButton from "../../../../Primitive/NavBar/SignUpInButton";
+import SignUpInButton from "components/Primitive/NavBar/SignUpInButton";
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const displayText = {
+  en: {
+    login: "LOG IN",
+    signup: "SIGN UP"
+  },
+  sp: {
+    login: "INCIAR SESIÓN",
+    signup: "CREAR CUENTA"
+  }
+};
 
 const Wrapper = ({ staticContext, ...props }) => {
+  const { language } = useLanguage();
+
   let history = useHistory();
 
   function navigateToSignUp() {
@@ -22,9 +36,11 @@ const Wrapper = ({ staticContext, ...props }) => {
   return (
     <div {...props}>
       <SignUpInButton secondary onClick={navigateToSignUp}>
-        SIGN UP
+        {language === "spanish" ? displayText.sp.signup : displayText.en.signup}
       </SignUpInButton>
-      <SignUpInButton onClick={nagivateToSignIn}>LOG IN</SignUpInButton>
+      <SignUpInButton onClick={nagivateToSignIn}>
+        {language === "spanish" ? displayText.sp.login : displayText.en.login}
+      </SignUpInButton>
     </div>
   );
 };
@@ -32,12 +48,13 @@ const Wrapper = ({ staticContext, ...props }) => {
 const SignUpInButtonWrapper = styled(Wrapper)`
   /* background-color: blue; */
   height: 100%;
-  width: 40%;
-  padding-left: 10px;
-  margin-right: -15px;
+  width: 50%;
+  /* padding-left: 10px; */
+  /* margin-right: -15px; */
+  margin-left: 15px;
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
 `;
 

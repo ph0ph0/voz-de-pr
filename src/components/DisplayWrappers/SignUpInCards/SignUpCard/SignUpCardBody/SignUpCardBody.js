@@ -11,11 +11,14 @@ import PasswordField from "components/Primitive/SignUpCard/PasswordField.js";
 import EmailField from "components/Primitive/SignUpCard/EmailField";
 import Logo from "components/Primitive/SignUpCard/SignUpLogo";
 import AvatarInstruction from "components/Primitive/SidePanel_Profile/Avatars/AvatarInstruction";
-import Avatars from "../Avatars/Avatars";
+import ProfPicSelector from "../Avatars/ProfPicSelector";
 import ActionButton from "components/Primitive/General/ActionButton";
 import BottomLineWrapper from "./SignUpBottomLineWrapper";
 import Error from "components/Primitive/General/ErrorText";
 import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
+
+import { displayText } from "./SignUpDisplayText";
+import { useLanguage } from "CustomHooks/useLanguage";
 
 const ErrorText = styled(Error)`
   margin: 0px;
@@ -44,8 +47,11 @@ const SignUpButton = styled(ActionButton)`
 `;
 
 const SignUpCardBodyWrapper = ({ api, ...props }) => {
+  const { language } = useLanguage();
+
   const history = useHistory();
   //If signup is successful, `success` in the api will be true
+  //and we can pass over the email, password and avatar file object
   useEffect(() => {
     if (api.success) {
       window.log(`naving to confirm sign up...`);
@@ -53,7 +59,8 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
         pathname: "/confirmsignup",
         state: {
           email: api.secondEmailValue,
-          password: api.secondPasswordValue
+          password: api.secondPasswordValue,
+          avatar: api.avatar
         }
       });
     }
@@ -63,40 +70,66 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
     <div {...props}>
       <Logo />
       {api.firstNameInputIsErrored && (
-        <ErrorText>Please provide a first name</ErrorText>
+        <ErrorText>
+          {language === "spanish"
+            ? displayText.sp.nameError
+            : displayText.en.nameError}
+        </ErrorText>
       )}
 
       <TextField
-        placeholder={"First Name"}
+        placeholder={
+          language === "spanish" ? displayText.sp.name : displayText.en.name
+        }
         data-testid="FirstNameInput"
         value={api.firstNameValue}
         onChange={event => api.updateFirstNameValue(event.target.value)}
       />
 
       {api.lastNameInputIsErrored && (
-        <ErrorText>Please provide a last name</ErrorText>
+        <ErrorText>
+          {language === "spanish"
+            ? displayText.sp.lastNameError
+            : displayText.en.lastNameError}
+        </ErrorText>
       )}
 
       <TextField
-        placeholder={"Last Name"}
+        placeholder={
+          language === "spanish"
+            ? displayText.sp.lastName
+            : displayText.en.lastName
+        }
         data-testid="LastNameInput"
         value={api.lastNameValue}
         onChange={event => api.updateLastNameValue(event.target.value)}
       />
 
       {api.usernameInputIsErrored && (
-        <ErrorText>Please provide a username</ErrorText>
+        <ErrorText>
+          {language === "spanish"
+            ? displayText.sp.usernameError
+            : displayText.en.usernameError}
+        </ErrorText>
       )}
 
       <TextField
-        placeholder={"Username"}
+        placeholder={
+          language === "spanish"
+            ? displayText.sp.username
+            : displayText.en.username
+        }
         data-testid="UserNameInput"
         value={api.usernameValue}
         onChange={event => api.updateUsernameValue(event.target.value)}
       />
 
       {api.emailInputIsErrored && (
-        <ErrorText>Please provide a valid email</ErrorText>
+        <ErrorText>
+          {language === "spanish"
+            ? displayText.sp.emailError
+            : displayText.en.emailError}
+        </ErrorText>
       )}
       <EmailField
         api={api}
@@ -108,21 +141,37 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
 
       <EmailField
         api={api}
-        placeholder={"Re-type Email"}
+        placeholder={
+          language === "spanish"
+            ? displayText.sp.retypeEmail
+            : displayText.en.retypeEmail
+        }
         data-testid="SecondEmailInput"
         value={api.secondEmailValue}
         onChange={event => api.updateSecondEmailValue(event.target.value)}
       />
 
       {api.locationInputIsErrored && (
-        <ErrorText>Please select a location from the dropdown</ErrorText>
+        <ErrorText>
+          {language === "spanish"
+            ? displayText.sp.locationError
+            : displayText.en.locationError}
+        </ErrorText>
       )}
       <DropDown api={api} />
       {api.passwordInputIsErrored && (
-        <ErrorText>Please provide a password</ErrorText>
+        <ErrorText>
+          {language === "spanish"
+            ? displayText.sp.passwordError
+            : displayText.en.passwordError}
+        </ErrorText>
       )}
       <PasswordField
-        placeholder={"Password"}
+        placeholder={
+          language === "spanish"
+            ? displayText.sp.password
+            : displayText.en.password
+        }
         data-testid="FirstPasswordInput"
         value={api.firstPasswordValue}
         onChange={event => api.updateFirstPasswordValue(event.target.value)}
@@ -130,7 +179,11 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
       />
 
       <PasswordField
-        placeholder={"Re-type Password"}
+        placeholder={
+          language === "spanish"
+            ? displayText.sp.retypePassword
+            : displayText.en.retypePassword
+        }
         data-testid="SecondPasswordInput"
         value={api.secondPasswordValue}
         onChange={event => api.updateSecondPasswordValue(event.target.value)}
@@ -138,17 +191,34 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
       />
 
       {api.avatarInputIsErrored && (
-        <ErrorText>Please select an avatar</ErrorText>
+        <ErrorText>
+          {language === "spanish"
+            ? displayText.sp.profPicError
+            : displayText.en.profPicError}
+        </ErrorText>
       )}
 
       <AvatarInstructionSignUp api={api}>
-        Select an Avatar
+        {language === "spanish"
+          ? displayText.sp.profPic
+          : displayText.en.profPic}
       </AvatarInstructionSignUp>
-
-      <Avatars api={api} />
+      <ProfPicSelector api={api} />
+      {/* <Avatars api={api} /> */}
       {api.error && <Error>{api.error.message}</Error>}
-      <SignUpButton data-testid="submitButton" secondary onClick={api.submit}>
-        {api.loading ? <LoadingSpinner /> : "SIGN UP"}
+      <SignUpButton
+        data-testid="submitButton"
+        secondary
+        onClick={api.submit}
+        disabled={api.loading && "disabled"}
+      >
+        {api.loading ? (
+          <LoadingSpinner />
+        ) : language === "spanish" ? (
+          displayText.sp.signUp
+        ) : (
+          displayText.en.signUp
+        )}
       </SignUpButton>
       <BottomLineWrapper api={api} />
     </div>

@@ -100,9 +100,11 @@ export const getSubject = `query GetSubject($id: ID!) {
     author
     title
     subjectContent
-    timePassedSinceCreation
+    link
+    searchField
     numberOfComments
     votes
+    staticKey
     type
     owner
     pictures {
@@ -146,9 +148,11 @@ export const listSubjects = `query ListSubjects(
       author
       title
       subjectContent
-      timePassedSinceCreation
+      link
+      searchField
       numberOfComments
       votes
+      staticKey
       type
       owner
       pictures {
@@ -185,9 +189,11 @@ export const subjectsByUserByType = `query SubjectsByUserByType(
       author
       title
       subjectContent
-      timePassedSinceCreation
+      link
+      searchField
       numberOfComments
       votes
+      staticKey
       type
       owner
       pictures {
@@ -222,9 +228,134 @@ export const subjectsByUser = `query SubjectsByUser(
       author
       title
       subjectContent
-      timePassedSinceCreation
+      link
+      searchField
       numberOfComments
       votes
+      staticKey
+      type
+      owner
+      pictures {
+        nextToken
+      }
+      comments {
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+`;
+export const getSubjectsByNoOfVotes = `query GetSubjectsByNoOfVotes(
+  $staticKey: Int
+  $votes: ModelIntKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelSubjectFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  getSubjectsByNoOfVotes(
+    staticKey: $staticKey
+    votes: $votes
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      createdBy
+      createdAt
+      author
+      title
+      subjectContent
+      link
+      searchField
+      numberOfComments
+      votes
+      staticKey
+      type
+      owner
+      pictures {
+        nextToken
+      }
+      comments {
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+`;
+export const getSubjectsByNoOfComments = `query GetSubjectsByNoOfComments(
+  $staticKey: Int
+  $numberOfComments: ModelIntKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelSubjectFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  getSubjectsByNoOfComments(
+    staticKey: $staticKey
+    numberOfComments: $numberOfComments
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      createdBy
+      createdAt
+      author
+      title
+      subjectContent
+      link
+      searchField
+      numberOfComments
+      votes
+      staticKey
+      type
+      owner
+      pictures {
+        nextToken
+      }
+      comments {
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+`;
+export const getSubjectsByCreatedAt = `query GetSubjectsByCreatedAt(
+  $staticKey: Int
+  $createdAt: ModelStringKeyConditionInput
+  $sortDirection: ModelSortDirection
+  $filter: ModelSubjectFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  getSubjectsByCreatedAt(
+    staticKey: $staticKey
+    createdAt: $createdAt
+    sortDirection: $sortDirection
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      createdBy
+      createdAt
+      author
+      title
+      subjectContent
+      link
+      searchField
+      numberOfComments
+      votes
+      staticKey
       type
       owner
       pictures {
@@ -305,7 +436,7 @@ export const listComments = `query ListComments(
 export const getVote = `query GetVote($id: ID!) {
   getVote(id: $id) {
     id
-    subjectVotedOnId
+    objectVotedOnId
     createdBy
     createdAt
     vote
@@ -322,7 +453,7 @@ export const listVotes = `query ListVotes(
   listVotes(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       id
-      subjectVotedOnId
+      objectVotedOnId
       createdBy
       createdAt
       vote
@@ -333,16 +464,16 @@ export const listVotes = `query ListVotes(
   }
 }
 `;
-export const votesOnSubjectByUser = `query VotesOnSubjectByUser(
-  $subjectVotedOnId: ID
+export const votesOnObjectByUser = `query VotesOnObjectByUser(
+  $objectVotedOnId: ID
   $createdBy: ModelIDKeyConditionInput
   $sortDirection: ModelSortDirection
   $filter: ModelVoteFilterInput
   $limit: Int
   $nextToken: String
 ) {
-  votesOnSubjectByUser(
-    subjectVotedOnId: $subjectVotedOnId
+  votesOnObjectByUser(
+    objectVotedOnId: $objectVotedOnId
     createdBy: $createdBy
     sortDirection: $sortDirection
     filter: $filter
@@ -351,7 +482,7 @@ export const votesOnSubjectByUser = `query VotesOnSubjectByUser(
   ) {
     items {
       id
-      subjectVotedOnId
+      objectVotedOnId
       createdBy
       createdAt
       vote

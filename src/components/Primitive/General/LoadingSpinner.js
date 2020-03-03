@@ -11,12 +11,20 @@ const rotate = keyframes`
     }
 `;
 
-const LoadingSpinnerWrapper = ({ ...props }) => {
-  return <FontAwesomeIcon {...props} icon={faCircleNotch} color="#FFF" />;
+const LoadingSpinnerWrapper = ({ colour, center, ...props }) => {
+  return (
+    <FontAwesomeIcon
+      {...props}
+      icon={faCircleNotch}
+      color={colour ? colour : "#FFF"}
+    />
+  );
 };
 
 const LoadingSpinner = styled(LoadingSpinnerWrapper)`
   animation: ${rotate} infinite 2s linear;
+  margin-left: ${props => props.center && "auto"};
+  margin-right: ${props => props.center && "auto"};
 `;
 
 export default LoadingSpinner;

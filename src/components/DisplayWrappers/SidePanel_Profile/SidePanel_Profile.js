@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 // import PRFlag from '../../../assets/SidePanel/FuckingFlag.png'
@@ -6,28 +6,53 @@ import { ReactComponent as PRFlag } from "../../../assets/SidePanel/PRFlag.svg";
 import Logo from "../../Primitive/SidePanel/Logo";
 import SidePanelProfileBody from "./SidePanel_Profile_Body";
 import ActionButton from "../../Primitive/General/ActionButton";
+import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
+import TranslationSwitch from "../TranslationSwitch/TranslationSwitch";
 
 import useApi from "../../../CustomHooks/useAPI";
 import SidePanelProfileAPI from "./API/SidePanelProfileAPI";
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const displayText = {
+  en: {
+    actionButton: "Change"
+  },
+  sp: {
+    actionButton: "Cambiar"
+  }
+};
 
 const SidePanelWrapper = props => {
   const api = useApi(SidePanelProfileAPI, {
-    name: "",
     locationValue: "",
     selectedLocation: "",
     listOpen: false,
     dropDownIsErrored: false,
-    selectedAvatar: null
+    selectedAvatar: null,
+    avatar: null
   });
+
+  const { language } = useLanguage();
 
   return (
     <div {...props}>
       <PRFlag />
       <Logo />
       <SidePanelProfileBody api={api} />
-      <ActionButton secondary onClick={() => api.submit()}>
-        Change
+      <ActionButton
+        secondary
+        onClick={() => api.submit()}
+        disabled={api.loading && "disabled"}
+      >
+        {api.loading ? (
+          <LoadingSpinner />
+        ) : language === "spanish" ? (
+          displayText.sp.actionButton
+        ) : (
+          displayText.en.actionButton
+        )}
       </ActionButton>
+      {/* <TranslationSwitch /> */}
     </div>
   );
 };

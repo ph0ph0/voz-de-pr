@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-import SubjectImage from "../../SubjectCard/SubjectImage";
+import { SubjectImage } from "../../SubjectCard/SubjectImage";
 
 const DetailImage = styled(SubjectImage)`
-    max-width: 670px;
-    max-height: 460px;
+  width: 670px;
+  height: 460px;
 `;
 
 DetailImage.propTypes = {

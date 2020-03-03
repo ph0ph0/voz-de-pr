@@ -1,7 +1,15 @@
 import React, { useState, useEffect, useMemo, useContext } from "react";
 import { Auth } from "aws-amplify";
 import awsMobile from "../aws-exports";
-import { getUserObject } from "./UserObjectUtils/UserObjectUtils";
+import {
+  getUserObject,
+  updateUserObject
+} from "./UserObjectUtils/UserObjectUtils";
+import {
+  createUserProfilePic,
+  getPicture,
+  nullPictureKey
+} from "Utils/PictureManager";
 
 //Create context to hold values that we will expose to our components.
 // Don't worry about null, as it will be populated instantly by the component below
@@ -39,6 +47,20 @@ export const UserProvider = ({ children }) => {
     })();
   }, []);
 
+  const refreshUser = async () => {
+    window.log("refreshing user...");
+    try {
+      const cognitoUser = await Auth.currentAuthenticatedUser();
+      const userId = cognitoUser.username;
+      const userObject = await getUserObject(userId);
+      window.log("Got user after refresh");
+      setUser(userObject);
+    } catch (error) {
+      window.log(`Error refreshing user: ${error}`);
+      setUser(null);
+    }
+  };
+
   //Remember to update the current logged in user!
   const signUp = async (
     email,
@@ -46,12 +68,20 @@ export const UserProvider = ({ children }) => {
     username,
     firstName,
     lastName,
+    avatar,
     location
   ) => {
     window.log(`Signing up...`);
     setError(null);
     setLoading(true);
     try {
+      if (avatar.size > 2097152) {
+        window.log("Profile image is too large");
+        throw new Error(
+          "Profile image is too large, please select an image smaller than 2 MB"
+        );
+      }
+      window.log(`Location: ${location}`);
       const cognitoUser = await Auth.signUp({
         username: email,
         password: password,
@@ -75,19 +105,8 @@ export const UserProvider = ({ children }) => {
         ]
       });
       window.log(`Signed Up! User: ${JSON.stringify(cognitoUser)}`);
-      const userObject = {
-        id: cognitoUser.userSub,
-        username: username,
-        firstName: firstName,
-        lastName: lastName,
-        voiceNumber: 1,
-        email: email,
-        location: location
-      };
-      // const newUser = await createUserObject(userObject);
-      // setUser(newUser);
     } catch (error) {
-      window.log(`Error signing up!: ${JSON.stringify(error)}`);
+      window.log(`Error signing up in user.js: ${JSON.stringify(error)}`);
       if (error.code === "InvalidParameterException") {
         error.message =
           "Please ensure that your password has more than 6 characters";
@@ -112,7 +131,7 @@ export const UserProvider = ({ children }) => {
     }
   };
 
-  const confirmSignUp = async (email, password, confirmationCode) => {
+  const confirmSignUp = async (email, password, confirmationCode, avatar) => {
     window.log(`Confirming sign up...`);
     setError(null);
     setLoading(true);
@@ -140,9 +159,17 @@ export const UserProvider = ({ children }) => {
     }
 
     try {
-      const user = await Auth.signIn(email, password);
-      window.log(`User confirmed AND signed in!`);
-      setUser(user);
+      const cognitoUser = await Auth.signIn(email, password);
+      window.log("Logged user in");
+      const userId = cognitoUser.username;
+      const userObjectData = await getUserObject(userId);
+      window.log(
+        `Logged in and got userObject: ${JSON.stringify(userObjectData)}`
+      );
+
+      window.log("Now saving profile picture");
+      await createUserProfilePic(avatar, userId);
+      setUser(userObjectData);
     } catch (error) {
       window.log(
         `Error signing user in after confirming signUp!: ${JSON.stringify(
@@ -275,11 +302,54 @@ export const UserProvider = ({ children }) => {
       });
   };
 
+  const updateUserLocationAndAvatar = async (data, avatar) => {
+    setLoading(true);
+
+    const userId = user.id;
+    window.log(`userId in updateUser of user.js: ${userId}`);
+    //Set data.id so that dDB knows which User object to update
+    data.id = userId;
+
+    try {
+      //Set avatar property to null so that it gets refreshed in the app (see ProfileImageWrapper component in NavBar)
+      if (avatar) {
+        window.log("Avatar was submitted, nulling avatar avatar key...");
+        await nullPictureKey(userId);
+        window.log("Avatar key nulled, saving userProfilePic to S3...");
+        await createUserProfilePic(avatar, userId);
+        window.log("Saved new avatar to S3!");
+      }
+
+      const updatedUser = await updateUserObject(data);
+      setUser(updatedUser);
+    } catch (error) {
+      window.log(`Error updating user object!: ${JSON.stringify(error)}`);
+      setError(error);
+      throw error;
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const getUserAvatar = async avatarKey => {
+    setLoading(true);
+    try {
+      const avatar = await getPicture(avatarKey);
+      return avatar;
+    } catch (error) {
+      window.log(`Failed to get user avatar: ${error}`);
+      throw error;
+    } finally {
+      setLoading(false);
+    }
+  };
+
   //Make sure not to force a re-render of components that are reading these values,
-  // unless the user value has changed. This is for optimisation purposes.
+  // unless the user, error, or loading values have changed. This is for optimisation purposes.
   const values = useMemo(
     () => ({
       user,
+      refreshUser,
       error,
       loading,
       login,
@@ -287,7 +357,9 @@ export const UserProvider = ({ children }) => {
       signUp,
       confirmSignUp,
       forgotPassword,
-      submitCodeAndNewPassword
+      submitCodeAndNewPassword,
+      updateUserLocationAndAvatar,
+      getUserAvatar
     }),
     [user, error, loading]
   );

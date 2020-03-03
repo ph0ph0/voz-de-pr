@@ -7,6 +7,9 @@ export const Filter = styled.button`
   font-size: 14px;
   color: #6e6f70;
   background-color: #fff;
+  :focus {
+    outline: none;
+  }
 
   :hover {
     color: #1b4ea0;

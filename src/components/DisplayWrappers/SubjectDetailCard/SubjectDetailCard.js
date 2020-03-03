@@ -4,31 +4,30 @@ import PropTypes from "prop-types";
 
 import SubjectDetailContent from "./SubjectDetailContent";
 
-const SubjectDetailWrapper = ({subject, secondary, ...props}) => {
-
+const SubjectDetailWrapper = ({ api, secondary, ...props }) => {
   return (
     <div {...props}>
-      <SubjectDetailContent subject = {subject} secondary = {secondary} />
+      <SubjectDetailContent api={api} secondary={secondary} />
     </div>
   );
 };
 
 const SubjectDetailCard = styled(SubjectDetailWrapper)`
-     /* border: 1px solid black; */
-    display: flex;
-    flex-direction: column;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
 
-    width: 738px;
-    height: auto;
+  width: 738px;
+  height: auto;
 
-    margin: 0px;
-    margin-right: 30px;
-    padding: 0px;
-    padding-bottom: 20px;
+  margin: 0px;
+  margin-right: 30px;
+  padding: 0px;
+  padding-bottom: 20px;
 
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
 `;
 
 SubjectDetailCard.propTypes = {
@@ -43,9 +42,7 @@ SubjectDetailCard.propTypes = {
     subjectImage: PropTypes.string.isRequired,
     votes: PropTypes.number.isRequired,
     type: PropTypes.string.isRequired,
-    comments: PropTypes.arrayOf(
-      PropTypes.object.isRequired
-    ),
+    comments: PropTypes.arrayOf(PropTypes.object.isRequired),
     timePassed: PropTypes.string.isRequired
   })
 };

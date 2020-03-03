@@ -1,14 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const displayText = {
+  en: "Description",
+  sp: "Descripción"
+};
 
 const DescriptionInputWrapper = ({ api, ...props }) => {
+  const { language } = useLanguage();
+
   return (
-    <input 
-      {...props} 
-      placeholder={"Description"} 
-      value = {api.imageDescription}
-      onChange = {(event) => api.updateImageDescription(event.target.value)}
+    <input
+      {...props}
+      placeholder={language === "spanish" ? displayText.sp : displayText.en}
+      value={api.imageDescription}
+      onChange={event => api.updateImageDescription(event.target.value)}
     />
   );
 };
@@ -24,7 +32,7 @@ const ImageDescription = styled(DescriptionInputWrapper)`
 
   padding-left: 25px;
 
-  line-height: 2.4em;
+  /* line-height: 2.4em; */
   font-size: 20px;
 
   :focus {

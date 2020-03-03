@@ -1,8 +1,8 @@
 export const mockApi = {
-  emailvalue: "",
+  emailValue: "",
   passwordValue: "",
-  emailIsErrored: false,
-  passwordIsErrored: false,
+  emailInputIsErrored: false,
+  passwordInputIsErrored: false,
   updateEmailValue: () => {},
   updatePasswordValue: () => {},
   submit: () => {}

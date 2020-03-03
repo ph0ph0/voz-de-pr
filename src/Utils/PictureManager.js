@@ -1,12 +1,14 @@
 import { API, graphqlOperation, Storage } from "aws-amplify";
-import { createPicture } from "graphql/mutations";
+import { createPicture, updatePicture } from "graphql/mutations";
 import uuidv4 from "uuid/v4";
 
 export const savePictureWithSubjectId = async (image, subjectId) => {
-  //Check image is not larger than 2 MB
-  if (image.size > 2097152) {
+  //Check image is not larger than 6 MB
+  if (image.size > 6291456) {
     window.log(`Image too large, aborting!`);
-    throw new Error("Image is too large, please select another one!");
+    throw new Error(
+      "Image is too large, please use an image smaller than 6 MB"
+    );
   }
 
   window.log(
@@ -41,8 +43,44 @@ export const savePictureWithSubjectId = async (image, subjectId) => {
   return pictureObject;
 };
 
-const getPictureWithSubjectId = async key => {
+export const getPicture = async key => {
+  if (!key) {
+    window.log("Aborting, no key to get picture");
+    return;
+  }
+  // window.log(`Getting picture from storage, key: ${key}`);
+
   const picture = await Storage.get(key);
 
+  // window.log(`Got Picture!: ${picture}`);
+
   return picture;
+};
+
+//Can be used for both create and update as .put() is only create/update call for S3
+export const createUserProfilePic = async (avatar, userId) => {
+  window.log("Saving avatar...");
+  //Get the extension (png, jpg) and set the folder name
+  const lastDot = avatar.name.lastIndexOf(".");
+  const extension = avatar.name.substring(lastDot);
+  const folder = "userAvatars";
+  const fileName = `${folder}/${userId}${extension}`;
+  window.log(`Saving profile pic: ${fileName}`);
+
+  //Save the image to storage and get the returned file key (name of file)
+  const s3Output = await Storage.put(fileName, avatar);
+  const fileKey = s3Output.key;
+  window.log(`avatar fileKey: ${fileKey}`);
+  window.log(`avatar saved!`);
+  return;
+};
+
+//Used to null the properties of a picture if we want to force a refresh
+export const nullPictureKey = async id => {
+  const nulledPicture = {
+    id: id,
+    key: null
+  };
+
+  await API.graphql(graphqlOperation(updatePicture, { input: nulledPicture }));
 };

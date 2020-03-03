@@ -13,6 +13,8 @@ import { ApolloProvider } from "react-apollo";
 import { clientConfig } from "./clientConfig";
 
 import { UserProvider } from "./CustomHooks/user";
+import { SearchProvider } from "CustomHooks/useSearch";
+import { LanguageProvider } from "CustomHooks/useLanguage";
 
 function App() {
   return (
@@ -21,8 +23,12 @@ function App() {
         <BrowserRouter>
           <GlobalStyle />
           <ThemeProvider theme={theme}>
-            <NavBar />
-            <Routes />
+            <SearchProvider>
+              <LanguageProvider>
+                <NavBar />
+                <Routes />
+              </LanguageProvider>
+            </SearchProvider>
           </ThemeProvider>
         </BrowserRouter>
       </UserProvider>

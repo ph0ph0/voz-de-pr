@@ -7,16 +7,36 @@ import PropTypes from "prop-types";
 import MainPageContent from "./FeedMainPageContent";
 import SidePanel from "components/DisplayWrappers/SidePanel/SidePanel";
 import SidePanelProfile from "components/DisplayWrappers/SidePanel_Profile/SidePanel_Profile";
+import { useLanguage } from "CustomHooks/useLanguage";
+
+const displayText = {
+  en: {
+    home: "Home Feed",
+    causes: "Cause Lobby",
+    posts: "Post Lobby",
+    profile: "My Profile"
+  },
+  sp: {
+    home: "Causas y Publicaciones",
+    causes: "Página de Causas",
+    posts: "Página de Publicaciones",
+    profile: "Mi Perfil"
+  }
+};
 
 const PageContentWrapper = ({ pageType, profileType, ...props }) => {
+  const { language } = useLanguage();
+
   switch (pageType) {
     case "Home":
       return (
         <div {...props}>
           <MainPageContent
-            pageTitle={"Home Feed"}
+            pageTitle={
+              language === "spanish" ? displayText.sp.home : displayText.en.home
+            }
             profileType={profileType}
-            queryType={"Mixed"}
+            pageFilter={"Mixed"}
           />
           <SidePanel type={"Standard"} />
         </div>
@@ -25,9 +45,13 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
       return (
         <div {...props}>
           <MainPageContent
-            pageTitle={"Cause Lobby"}
+            pageTitle={
+              language === "spanish"
+                ? displayText.sp.causes
+                : displayText.en.causes
+            }
             profileType={profileType}
-            queryType={"CauseOnly"}
+            pageFilter={"CauseOnly"}
           />
           <SidePanel type={"CauseOnly"} />
         </div>
@@ -36,9 +60,13 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
       return (
         <div {...props}>
           <MainPageContent
-            pageTitle={"Posts Lobby"}
+            pageTitle={
+              language === "spanish"
+                ? displayText.sp.posts
+                : displayText.en.posts
+            }
             profileType={profileType}
-            queryType={"PostOnly"}
+            pageFilter={"PostOnly"}
           />
           <SidePanel type={"PostOnly"} />
         </div>
@@ -47,9 +75,13 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
       return (
         <div {...props}>
           <MainPageContent
-            pageTitle={"My Profile"}
+            pageTitle={
+              language === "spanish"
+                ? displayText.sp.profile
+                : displayText.en.profile
+            }
             profileType={profileType}
-            queryType={"Profile"}
+            pageFilter={"Profile"}
           />
           <SidePanelProfile />
         </div>
@@ -57,7 +89,12 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
     default:
       return (
         <div {...props}>
-          <MainPageContent pageTitle={"Home Feed"} profileType={profileType} />
+          <MainPageContent
+            pageTitle={
+              language === "spanish" ? displayText.sp.home : displayText.en.home
+            }
+            profileType={profileType}
+          />
           <SidePanel type={"Standard"} />
         </div>
       );

@@ -52,7 +52,7 @@ const DropDown = styled(DropDownWrapper)`
   padding: 0px;
   margin-bottom: 20px;
   /* Keeps the DropDown in place when it opens as its position will now be absolute */
-  margin-top: ${props => (props.api.listOpen ? "120px" : "0px")};
+  margin-top: ${props => (props.api.listOpen ? "66px" : "0px")};
   border-style: solid;
   border-width: 1px;
   border-color: ${props => (props.api.listOpen ? "#96C8DA" : "#d8d8d8")};
@@ -70,12 +70,10 @@ const DropDown = styled(DropDownWrapper)`
 
 DropDown.propTypes = {
   api: PropTypes.shape({
-    name: PropTypes.string.isRequired,
     locationValue: PropTypes.string.isRequired,
     listOpen: PropTypes.bool.isRequired,
     selectedLocation: PropTypes.string.isRequired,
     selectedAvatar: PropTypes.string,
-    updateNameValue: PropTypes.func.isRequired,
     toggleList: PropTypes.func.isRequired,
     updateLocationValue: PropTypes.func.isRequired,
     onLocationSelected: PropTypes.func.isRequired,

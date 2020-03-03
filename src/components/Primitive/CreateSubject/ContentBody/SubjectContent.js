@@ -18,9 +18,14 @@ const SubjectContent = styled(SubjectContentWrapper)`
   padding: 0px;
   margin-bottom: 30px;
   padding-left: 25px;
-
-  line-height: 2.4em;
+  padding-top: 10px;
+  /* line-height: 2.4em; */
+  /* Mozilla takes font parameters from browser instead of style sheet for TextAreas... */
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
   font-size: 20px;
+
   margin-right: auto;
 
   resize: none;
