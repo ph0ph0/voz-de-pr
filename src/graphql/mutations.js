@@ -1,23 +1,77 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const voteOnSubject = `mutation VoteOnSubject($input: VoteInput!) {
-  voteOnSubject(input: $input) {
-    id
-    createdBy
-    createdAt
-    author
-    title
-    subjectContent
-    link
-    searchField
-    numberOfComments
-    votes
-    staticKey
-    type
-    owner
-    pictures {
-      items {
+export const voteOnSubject = /* GraphQL */ `
+  mutation VoteOnSubject($input: VoteInput!) {
+    voteOnSubject(input: $input) {
+      id
+      createdBy
+      createdAt
+      author
+      title
+      subjectContent
+      link
+      searchField
+      numberOfComments
+      votes
+      staticKey
+      type
+      owner
+      pictures {
+        items {
+          id
+          subjectId
+          description
+          owner
+          bucket
+          region
+          key
+        }
+        nextToken
+      }
+      comments {
+        items {
+          id
+          createdBy
+          author
+          createdAt
+          text
+          votes
+          subjectId
+          owner
+        }
+        nextToken
+      }
+    }
+  }
+`;
+export const voteOnComment = /* GraphQL */ `
+  mutation VoteOnComment($input: VoteInput!) {
+    voteOnComment(input: $input) {
+      id
+      createdBy
+      author
+      createdAt
+      text
+      votes
+      subjectId
+      owner
+    }
+  }
+`;
+export const createUser = /* GraphQL */ `
+  mutation CreateUser($input: CreateUserInput!) {
+    createUser(input: $input) {
+      id
+      username
+      firstName
+      lastName
+      voiceNumber
+      email
+      location
+      createdAt
+      updatedAt
+      avatar {
         id
         subjectId
         description
@@ -26,49 +80,192 @@ export const voteOnSubject = `mutation VoteOnSubject($input: VoteInput!) {
         region
         key
       }
-      nextToken
     }
-    comments {
-      items {
+  }
+`;
+export const updateUser = /* GraphQL */ `
+  mutation UpdateUser($input: UpdateUserInput!) {
+    updateUser(input: $input) {
+      id
+      username
+      firstName
+      lastName
+      voiceNumber
+      email
+      location
+      createdAt
+      updatedAt
+      avatar {
         id
-        createdBy
-        author
-        createdAt
-        text
-        votes
         subjectId
+        description
         owner
+        bucket
+        region
+        key
       }
-      nextToken
     }
   }
-}
 `;
-export const voteOnComment = `mutation VoteOnComment($input: VoteInput!) {
-  voteOnComment(input: $input) {
-    id
-    createdBy
-    author
-    createdAt
-    text
-    votes
-    subjectId
-    owner
+export const deleteUser = /* GraphQL */ `
+  mutation DeleteUser($input: DeleteUserInput!) {
+    deleteUser(input: $input) {
+      id
+      username
+      firstName
+      lastName
+      voiceNumber
+      email
+      location
+      createdAt
+      updatedAt
+      avatar {
+        id
+        subjectId
+        description
+        owner
+        bucket
+        region
+        key
+      }
+    }
   }
-}
 `;
-export const createUser = `mutation CreateUser($input: CreateUserInput!) {
-  createUser(input: $input) {
-    id
-    username
-    firstName
-    lastName
-    voiceNumber
-    email
-    location
-    createdAt
-    updatedAt
-    avatar {
+export const createSubject = /* GraphQL */ `
+  mutation CreateSubject($input: CreateSubjectInput!) {
+    createSubject(input: $input) {
+      id
+      createdBy
+      createdAt
+      author
+      title
+      subjectContent
+      link
+      searchField
+      numberOfComments
+      votes
+      staticKey
+      type
+      owner
+      pictures {
+        items {
+          id
+          subjectId
+          description
+          owner
+          bucket
+          region
+          key
+        }
+        nextToken
+      }
+      comments {
+        items {
+          id
+          createdBy
+          author
+          createdAt
+          text
+          votes
+          subjectId
+          owner
+        }
+        nextToken
+      }
+    }
+  }
+`;
+export const updateSubject = /* GraphQL */ `
+  mutation UpdateSubject($input: UpdateSubjectInput!) {
+    updateSubject(input: $input) {
+      id
+      createdBy
+      createdAt
+      author
+      title
+      subjectContent
+      link
+      searchField
+      numberOfComments
+      votes
+      staticKey
+      type
+      owner
+      pictures {
+        items {
+          id
+          subjectId
+          description
+          owner
+          bucket
+          region
+          key
+        }
+        nextToken
+      }
+      comments {
+        items {
+          id
+          createdBy
+          author
+          createdAt
+          text
+          votes
+          subjectId
+          owner
+        }
+        nextToken
+      }
+    }
+  }
+`;
+export const deleteSubject = /* GraphQL */ `
+  mutation DeleteSubject($input: DeleteSubjectInput!) {
+    deleteSubject(input: $input) {
+      id
+      createdBy
+      createdAt
+      author
+      title
+      subjectContent
+      link
+      searchField
+      numberOfComments
+      votes
+      staticKey
+      type
+      owner
+      pictures {
+        items {
+          id
+          subjectId
+          description
+          owner
+          bucket
+          region
+          key
+        }
+        nextToken
+      }
+      comments {
+        items {
+          id
+          createdBy
+          author
+          createdAt
+          text
+          votes
+          subjectId
+          owner
+        }
+        nextToken
+      }
+    }
+  }
+`;
+export const createPicture = /* GraphQL */ `
+  mutation CreatePicture($input: CreatePictureInput!) {
+    createPicture(input: $input) {
       id
       subjectId
       description
@@ -78,20 +275,10 @@ export const createUser = `mutation CreateUser($input: CreateUserInput!) {
       key
     }
   }
-}
 `;
-export const updateUser = `mutation UpdateUser($input: UpdateUserInput!) {
-  updateUser(input: $input) {
-    id
-    username
-    firstName
-    lastName
-    voiceNumber
-    email
-    location
-    createdAt
-    updatedAt
-    avatar {
+export const updatePicture = /* GraphQL */ `
+  mutation UpdatePicture($input: UpdatePictureInput!) {
+    updatePicture(input: $input) {
       id
       subjectId
       description
@@ -101,20 +288,10 @@ export const updateUser = `mutation UpdateUser($input: UpdateUserInput!) {
       key
     }
   }
-}
 `;
-export const deleteUser = `mutation DeleteUser($input: DeleteUserInput!) {
-  deleteUser(input: $input) {
-    id
-    username
-    firstName
-    lastName
-    voiceNumber
-    email
-    location
-    createdAt
-    updatedAt
-    avatar {
+export const deletePicture = /* GraphQL */ `
+  mutation DeletePicture($input: DeletePictureInput!) {
+    deletePicture(input: $input) {
       id
       subjectId
       description
@@ -124,245 +301,85 @@ export const deleteUser = `mutation DeleteUser($input: DeleteUserInput!) {
       key
     }
   }
-}
 `;
-export const createSubject = `mutation CreateSubject($input: CreateSubjectInput!) {
-  createSubject(input: $input) {
-    id
-    createdBy
-    createdAt
-    author
-    title
-    subjectContent
-    link
-    searchField
-    numberOfComments
-    votes
-    staticKey
-    type
-    owner
-    pictures {
-      items {
-        id
-        subjectId
-        description
-        owner
-        bucket
-        region
-        key
-      }
-      nextToken
-    }
-    comments {
-      items {
-        id
-        createdBy
-        author
-        createdAt
-        text
-        votes
-        subjectId
-        owner
-      }
-      nextToken
+export const createComment = /* GraphQL */ `
+  mutation CreateComment($input: CreateCommentInput!) {
+    createComment(input: $input) {
+      id
+      createdBy
+      author
+      createdAt
+      text
+      votes
+      subjectId
+      owner
     }
   }
-}
 `;
-export const updateSubject = `mutation UpdateSubject($input: UpdateSubjectInput!) {
-  updateSubject(input: $input) {
-    id
-    createdBy
-    createdAt
-    author
-    title
-    subjectContent
-    link
-    searchField
-    numberOfComments
-    votes
-    staticKey
-    type
-    owner
-    pictures {
-      items {
-        id
-        subjectId
-        description
-        owner
-        bucket
-        region
-        key
-      }
-      nextToken
-    }
-    comments {
-      items {
-        id
-        createdBy
-        author
-        createdAt
-        text
-        votes
-        subjectId
-        owner
-      }
-      nextToken
+export const updateComment = /* GraphQL */ `
+  mutation UpdateComment($input: UpdateCommentInput!) {
+    updateComment(input: $input) {
+      id
+      createdBy
+      author
+      createdAt
+      text
+      votes
+      subjectId
+      owner
     }
   }
-}
 `;
-export const deleteSubject = `mutation DeleteSubject($input: DeleteSubjectInput!) {
-  deleteSubject(input: $input) {
-    id
-    createdBy
-    createdAt
-    author
-    title
-    subjectContent
-    link
-    searchField
-    numberOfComments
-    votes
-    staticKey
-    type
-    owner
-    pictures {
-      items {
-        id
-        subjectId
-        description
-        owner
-        bucket
-        region
-        key
-      }
-      nextToken
-    }
-    comments {
-      items {
-        id
-        createdBy
-        author
-        createdAt
-        text
-        votes
-        subjectId
-        owner
-      }
-      nextToken
+export const deleteComment = /* GraphQL */ `
+  mutation DeleteComment($input: DeleteCommentInput!) {
+    deleteComment(input: $input) {
+      id
+      createdBy
+      author
+      createdAt
+      text
+      votes
+      subjectId
+      owner
     }
   }
-}
 `;
-export const createPicture = `mutation CreatePicture($input: CreatePictureInput!) {
-  createPicture(input: $input) {
-    id
-    subjectId
-    description
-    owner
-    bucket
-    region
-    key
+export const createVote = /* GraphQL */ `
+  mutation CreateVote($input: CreateVoteInput!) {
+    createVote(input: $input) {
+      id
+      objectVotedOnId
+      createdBy
+      createdAt
+      vote
+      voteOn
+      owner
+    }
   }
-}
 `;
-export const updatePicture = `mutation UpdatePicture($input: UpdatePictureInput!) {
-  updatePicture(input: $input) {
-    id
-    subjectId
-    description
-    owner
-    bucket
-    region
-    key
+export const updateVote = /* GraphQL */ `
+  mutation UpdateVote($input: UpdateVoteInput!) {
+    updateVote(input: $input) {
+      id
+      objectVotedOnId
+      createdBy
+      createdAt
+      vote
+      voteOn
+      owner
+    }
   }
-}
 `;
-export const deletePicture = `mutation DeletePicture($input: DeletePictureInput!) {
-  deletePicture(input: $input) {
-    id
-    subjectId
-    description
-    owner
-    bucket
-    region
-    key
+export const deleteVote = /* GraphQL */ `
+  mutation DeleteVote($input: DeleteVoteInput!) {
+    deleteVote(input: $input) {
+      id
+      objectVotedOnId
+      createdBy
+      createdAt
+      vote
+      voteOn
+      owner
+    }
   }
-}
-`;
-export const createComment = `mutation CreateComment($input: CreateCommentInput!) {
-  createComment(input: $input) {
-    id
-    createdBy
-    author
-    createdAt
-    text
-    votes
-    subjectId
-    owner
-  }
-}
-`;
-export const updateComment = `mutation UpdateComment($input: UpdateCommentInput!) {
-  updateComment(input: $input) {
-    id
-    createdBy
-    author
-    createdAt
-    text
-    votes
-    subjectId
-    owner
-  }
-}
-`;
-export const deleteComment = `mutation DeleteComment($input: DeleteCommentInput!) {
-  deleteComment(input: $input) {
-    id
-    createdBy
-    author
-    createdAt
-    text
-    votes
-    subjectId
-    owner
-  }
-}
-`;
-export const createVote = `mutation CreateVote($input: CreateVoteInput!) {
-  createVote(input: $input) {
-    id
-    objectVotedOnId
-    createdBy
-    createdAt
-    vote
-    voteOn
-    owner
-  }
-}
-`;
-export const updateVote = `mutation UpdateVote($input: UpdateVoteInput!) {
-  updateVote(input: $input) {
-    id
-    objectVotedOnId
-    createdBy
-    createdAt
-    vote
-    voteOn
-    owner
-  }
-}
-`;
-export const deleteVote = `mutation DeleteVote($input: DeleteVoteInput!) {
-  deleteVote(input: $input) {
-    id
-    objectVotedOnId
-    createdBy
-    createdAt
-    vote
-    voteOn
-    owner
-  }
-}
 `;
