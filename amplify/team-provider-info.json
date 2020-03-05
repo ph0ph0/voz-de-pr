@@ -1,25 +1,25 @@
 {
-	"dev": {
-		"awscloudformation": {
-			"AuthRoleName": "vozdepr-dev-20191203210001-authRole",
-			"UnauthRoleArn": "arn:aws:iam::212785925783:role/vozdepr-dev-20191203210001-unauthRole",
-			"AuthRoleArn": "arn:aws:iam::212785925783:role/vozdepr-dev-20191203210001-authRole",
-			"Region": "us-east-1",
-			"DeploymentBucketName": "vozdepr-dev-20191203210001-deployment",
-			"UnauthRoleName": "vozdepr-dev-20191203210001-unauthRole",
-			"StackName": "vozdepr-dev-20191203210001",
-			"StackId": "arn:aws:cloudformation:us-east-1:212785925783:stack/vozdepr-dev-20191203210001/dfb67a60-160f-11ea-928c-129cd46a326a",
-			"AmplifyAppId": "djcj4hv5wm16s"
-		},
-		"categories": {
-			"auth": {
-				"vozdeprec084b08": {}
-			},
-			"function": {
-				"vozdeprec084b08PostConfirmation": {
-					"GROUP": "everyone"
-				}
-			}
-		}
-	}
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "vozdepr-dev-20191203210001-authRole",
+            "UnauthRoleArn": "arn:aws:iam::212785925783:role/vozdepr-dev-20191203210001-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::212785925783:role/vozdepr-dev-20191203210001-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "vozdepr-dev-20191203210001-deployment",
+            "UnauthRoleName": "vozdepr-dev-20191203210001-unauthRole",
+            "StackName": "vozdepr-dev-20191203210001",
+            "StackId": "arn:aws:cloudformation:us-east-1:212785925783:stack/vozdepr-dev-20191203210001/dfb67a60-160f-11ea-928c-129cd46a326a",
+            "AmplifyAppId": "djcj4hv5wm16s"
+        },
+        "categories": {
+            "auth": {
+                "vozdeprec084b08": {}
+            },
+            "function": {
+                "vozdeprec084b08PostConfirmation": {
+                    "GROUP": "everyone"
+                }
+            }
+        }
+    }
 }
