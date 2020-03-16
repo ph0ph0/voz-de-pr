@@ -29,7 +29,7 @@ export const savePictureWithSubjectId = async (image, subjectId) => {
   const picture = {
     id: key,
     subjectId: subjectId,
-    bucket: "voz-de-pr-mediastorages3-dev",
+    bucket: "voz-de-pr-mediastorages3-masterenv",
     region: "us-east-1",
     key: fileKey
   };

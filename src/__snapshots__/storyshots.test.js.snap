@@ -2,33 +2,22 @@
 
 exports[`Storyshots "DisplayWrappers|CreateSubject/ImageBody/ImageUploadContainer Standard 1`] = `
 <div
-  className="sc-iwsKbI eHYdju"
+  className="sc-htoDjs beSrWv"
 >
-  <label
-    className="sc-gzVnrw gmAfkP"
-    htmlFor="fileinput"
+  <button
+    className="sc-gzVnrw cualqD"
   >
     Upload Image
-  </label>
-  <input
-    accept="image/png, image/jpeg"
-    className="sc-htoDjs gUpaDV"
-    id="fileinput"
-    onChange={[Function]}
-    type="file"
-  />
-  <img
-    className="sc-dnqmqq jyAXZo"
-  />
+  </button>
 </div>
 `;
 
 exports[`Storyshots DisplayWrappers/CreateSubject/TitlesPanel/TitlesPanel Standard 1`] = `
 <div
-  className="sc-cSHVUG gDEcVa"
+  className="sc-fjdhpX kCRbYR"
 >
   <div
-    className="sc-jzJRlG WESTd"
+    className="sc-jTzLTM VcEuF"
     onClick={[Function]}
   >
     <svg
@@ -43,14 +32,14 @@ exports[`Storyshots DisplayWrappers/CreateSubject/TitlesPanel/TitlesPanel Standa
       />
     </svg>
     <p
-      className="sc-fjdhpX gxYigd"
+      className="sc-VigVT gpndcl"
       type="content"
     >
       Cause
     </p>
   </div>
   <div
-    className="sc-jzJRlG kURcdl"
+    className="sc-jTzLTM cNGYwq"
     onClick={[Function]}
   >
     <svg
@@ -65,14 +54,14 @@ exports[`Storyshots DisplayWrappers/CreateSubject/TitlesPanel/TitlesPanel Standa
       />
     </svg>
     <p
-      className="sc-fjdhpX gOqFxe"
+      className="sc-VigVT cjkRub"
       type="image"
     >
       Image
     </p>
   </div>
   <div
-    className="sc-jzJRlG jqyqIK"
+    className="sc-jTzLTM cFSwvF"
     onClick={[Function]}
   >
     <svg
@@ -87,7 +76,7 @@ exports[`Storyshots DisplayWrappers/CreateSubject/TitlesPanel/TitlesPanel Standa
       />
     </svg>
     <p
-      className="sc-fjdhpX gOqFxe"
+      className="sc-VigVT cjkRub"
       type="link"
     >
       Link
@@ -262,14 +251,14 @@ exports[`Storyshots DisplayWrappers|CreateSubject/ContentBody/ContentBody Standa
   <div
     className="sc-ifAKCX hXQovA"
   >
-    50
+    60
      char
     s
      
     left
   </div>
   <input
-    className="sc-bdVaJa cUBMjx"
+    className="sc-bdVaJa diwNrr"
     onChange={[Function]}
     placeholder="Title"
     value=""
@@ -285,13 +274,13 @@ exports[`Storyshots DisplayWrappers|CreateSubject/ContentBody/ContentBody Standa
 
 exports[`Storyshots DisplayWrappers|CreateSubject/CreateSubject/CreateSubject Standard 1`] = `
 <div
-  className="sc-jAaTju dQRIex"
+  className="sc-jWBwVP gchQqT"
 >
   <div
-    className="sc-cSHVUG gDEcVa"
+    className="sc-fjdhpX kCRbYR"
   >
     <div
-      className="sc-jzJRlG WESTd"
+      className="sc-jTzLTM VcEuF"
       onClick={[Function]}
     >
       <svg
@@ -306,14 +295,14 @@ exports[`Storyshots DisplayWrappers|CreateSubject/CreateSubject/CreateSubject St
         />
       </svg>
       <p
-        className="sc-fjdhpX gxYigd"
+        className="sc-VigVT gpndcl"
         type="content"
       >
         Cause
       </p>
     </div>
     <div
-      className="sc-jzJRlG kURcdl"
+      className="sc-jTzLTM cNGYwq"
       onClick={[Function]}
     >
       <svg
@@ -328,14 +317,14 @@ exports[`Storyshots DisplayWrappers|CreateSubject/CreateSubject/CreateSubject St
         />
       </svg>
       <p
-        className="sc-fjdhpX gOqFxe"
+        className="sc-VigVT cjkRub"
         type="image"
       >
         Image
       </p>
     </div>
     <div
-      className="sc-jzJRlG jqyqIK"
+      className="sc-jTzLTM cFSwvF"
       onClick={[Function]}
     >
       <svg
@@ -350,7 +339,7 @@ exports[`Storyshots DisplayWrappers|CreateSubject/CreateSubject/CreateSubject St
         />
       </svg>
       <p
-        className="sc-fjdhpX gOqFxe"
+        className="sc-VigVT cjkRub"
         type="link"
       >
         Link
@@ -363,14 +352,14 @@ exports[`Storyshots DisplayWrappers|CreateSubject/CreateSubject/CreateSubject St
     <div
       className="sc-ifAKCX hXQovA"
     >
-      50
+      60
        char
       s
        
       left
     </div>
     <input
-      className="sc-bdVaJa cUBMjx"
+      className="sc-bdVaJa diwNrr"
       onChange={[Function]}
       placeholder="Title"
       value=""
@@ -394,7 +383,7 @@ exports[`Storyshots DisplayWrappers|CreateSubject/CreateSubject/CreateSubject St
 
 exports[`Storyshots DisplayWrappers|CreateSubject/ImageBody/ImageBody Standard 1`] = `
 <div
-  className="sc-gZMcBi dpWYEB"
+  className="sc-dnqmqq glmdVh"
 >
   <input
     className="sc-bZQynM kqgNqf"
@@ -403,40 +392,29 @@ exports[`Storyshots DisplayWrappers|CreateSubject/ImageBody/ImageBody Standard 1
     value=""
   />
   <div
-    className="sc-iwsKbI eHYdju"
+    className="sc-htoDjs beSrWv"
   >
-    <label
-      className="sc-gzVnrw gmAfkP"
-      htmlFor="fileinput"
+    <button
+      className="sc-gzVnrw cualqD"
     >
       Upload Image
-    </label>
-    <input
-      accept="image/png, image/jpeg"
-      className="sc-htoDjs gUpaDV"
-      id="fileinput"
-      onChange={[Function]}
-      type="file"
-    />
-    <img
-      className="sc-dnqmqq jyAXZo"
-    />
+    </button>
   </div>
 </div>
 `;
 
 exports[`Storyshots DisplayWrappers|CreateSubject/LinkBody/LinkBody Cause 1`] = `
 <div
-  className="sc-jTzLTM hscEeT"
+  className="sc-gqjmRU OOnMn"
 >
   <input
-    className="sc-gqjmRU eTXqeH"
+    className="sc-iwsKbI bCtPbP"
     onChange={[Function]}
     placeholder="Description"
     value=""
   />
   <textarea
-    className="sc-VigVT fcTrds"
+    className="sc-gZMcBi gHpvOr"
     onChange={[Function]}
     placeholder="URL"
     value=""
@@ -446,16 +424,16 @@ exports[`Storyshots DisplayWrappers|CreateSubject/LinkBody/LinkBody Cause 1`] = 
 
 exports[`Storyshots DisplayWrappers|CreateSubject/LinkBody/LinkBody Post 1`] = `
 <div
-  className="sc-jTzLTM hscEeT"
+  className="sc-gqjmRU OOnMn"
 >
   <input
-    className="sc-gqjmRU eTXqeH"
+    className="sc-iwsKbI bCtPbP"
     onChange={[Function]}
     placeholder="Description"
     value=""
   />
   <textarea
-    className="sc-VigVT wmsBD"
+    className="sc-gZMcBi koWovd"
     onChange={[Function]}
     placeholder="URL"
     value=""
@@ -465,11 +443,11 @@ exports[`Storyshots DisplayWrappers|CreateSubject/LinkBody/LinkBody Post 1`] = `
 
 exports[`Storyshots DisplayWrappers|NavBar/LinkWrapper Standard 1`] = `
 <nav
-  className="sc-jlyJG eeAfaM"
+  className="sc-jDwBTQ hqLgwf"
 >
   <a
     aria-current="page"
-    className="sc-iRbamj jLwidf sc-jlyJG eeAfaM active"
+    className="sc-jAaTju hVDjXu sc-jDwBTQ hqLgwf active"
     href="/"
     onClick={[Function]}
     style={Object {}}
@@ -478,7 +456,7 @@ exports[`Storyshots DisplayWrappers|NavBar/LinkWrapper Standard 1`] = `
   </a>
   <a
     aria-current={null}
-    className="sc-iRbamj jLwidf sc-jlyJG eeAfaM"
+    className="sc-jAaTju hVDjXu sc-jDwBTQ hqLgwf"
     href="/causes"
     onClick={[Function]}
   >
@@ -486,7 +464,7 @@ exports[`Storyshots DisplayWrappers|NavBar/LinkWrapper Standard 1`] = `
   </a>
   <a
     aria-current={null}
-    className="sc-iRbamj jLwidf sc-jlyJG eeAfaM"
+    className="sc-jAaTju hVDjXu sc-jDwBTQ hqLgwf"
     href="/posts"
     onClick={[Function]}
   >
@@ -494,7 +472,7 @@ exports[`Storyshots DisplayWrappers|NavBar/LinkWrapper Standard 1`] = `
   </a>
   <a
     aria-current={null}
-    className="sc-iRbamj jLwidf sc-jlyJG eeAfaM"
+    className="sc-jAaTju hVDjXu sc-jDwBTQ hqLgwf"
     href="/profile"
     onClick={[Function]}
   >
@@ -505,7 +483,7 @@ exports[`Storyshots DisplayWrappers|NavBar/LinkWrapper Standard 1`] = `
 
 exports[`Storyshots DisplayWrappers|NavBar/LogoWrapper Standard 1`] = `
 <div
-  className="sc-gipzik ictriN"
+  className="sc-gPEVay fSdbmw"
   history={
     Object {
       "action": "POP",
@@ -557,10 +535,10 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
   className="sc-caSCKo knOmBz"
 >
   <div
-    className="sc-csuQGl jKlBMX"
+    className="sc-iRbamj dPdNyK"
   >
     <div
-      className="sc-gipzik ictriN sc-csuQGl jKlBMX"
+      className="sc-gPEVay fSdbmw sc-iRbamj dPdNyK"
       history={
         Object {
           "action": "POP",
@@ -605,11 +583,11 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
       </svg>
     </div>
     <nav
-      className="sc-jlyJG eeAfaM sc-csuQGl jKlBMX"
+      className="sc-jDwBTQ hqLgwf sc-iRbamj dPdNyK"
     >
       <a
         aria-current="page"
-        className="sc-iRbamj jLwidf sc-jlyJG eeAfaM sc-csuQGl jKlBMX active"
+        className="sc-jAaTju hVDjXu sc-jDwBTQ hqLgwf sc-iRbamj dPdNyK active"
         href="/"
         onClick={[Function]}
         style={Object {}}
@@ -618,7 +596,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
       </a>
       <a
         aria-current={null}
-        className="sc-iRbamj jLwidf sc-jlyJG eeAfaM sc-csuQGl jKlBMX"
+        className="sc-jAaTju hVDjXu sc-jDwBTQ hqLgwf sc-iRbamj dPdNyK"
         href="/causes"
         onClick={[Function]}
       >
@@ -626,7 +604,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
       </a>
       <a
         aria-current={null}
-        className="sc-iRbamj jLwidf sc-jlyJG eeAfaM sc-csuQGl jKlBMX"
+        className="sc-jAaTju hVDjXu sc-jDwBTQ hqLgwf sc-iRbamj dPdNyK"
         href="/posts"
         onClick={[Function]}
       >
@@ -634,7 +612,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
       </a>
       <a
         aria-current={null}
-        className="sc-iRbamj jLwidf sc-jlyJG eeAfaM sc-csuQGl jKlBMX"
+        className="sc-jAaTju hVDjXu sc-jDwBTQ hqLgwf sc-iRbamj dPdNyK"
         href="/profile"
         onClick={[Function]}
       >
@@ -657,20 +635,88 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBar Standard 1`] = `
     className="sc-fAjcbJ gvKzDv"
   >
     <div
-      className="sc-bRBYWo dmruaP"
+      className="sc-gipzik dEIxIt"
     >
       <button
-        className="sc-Rmtcm hNewTQ"
+        className="sc-jlyJG lmlZEL"
         onClick={[Function]}
       >
         SIGN UP
       </button>
       <button
-        className="sc-Rmtcm eZBoWn"
+        className="sc-jlyJG crYcRL"
         onClick={[Function]}
       >
         LOG IN
       </button>
+    </div>
+    <div
+      className="sc-hzDkRC cqSmPu"
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+      location={
+        Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        }
+      }
+      match={
+        Object {
+          "isExact": true,
+          "params": Object {},
+          "path": "/",
+          "url": "/",
+        }
+      }
+      onClick={[Function]}
+    >
+      <div
+        className="sc-bRBYWo bWZKLW"
+      >
+        <svg>
+          Userpic.svg
+        </svg>
+      </div>
+      <div
+        className="sc-Rmtcm fBUOzj"
+      >
+        <div
+          className="sc-csuQGl iUTRQb"
+          fontSize="16px"
+          height="50%"
+          width="80%"
+        >
+          James Wheeler
+        </div>
+        <div
+          className="sc-csuQGl jiBnbW"
+          fontSize="12px"
+          height="50%"
+          width="80%"
+        >
+          larkin_tr***@yahoo.com
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -734,10 +780,10 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarCentre Standard 1`] = `
 
 exports[`Storyshots DisplayWrappers|NavBar/NavBarLeft Standard 1`] = `
 <div
-  className="sc-csuQGl jKlBMX"
+  className="sc-iRbamj dPdNyK"
 >
   <div
-    className="sc-gipzik ictriN sc-csuQGl jKlBMX"
+    className="sc-gPEVay fSdbmw sc-iRbamj dPdNyK"
     history={
       Object {
         "action": "POP",
@@ -782,11 +828,11 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarLeft Standard 1`] = `
     </svg>
   </div>
   <nav
-    className="sc-jlyJG eeAfaM sc-csuQGl jKlBMX"
+    className="sc-jDwBTQ hqLgwf sc-iRbamj dPdNyK"
   >
     <a
       aria-current="page"
-      className="sc-iRbamj jLwidf sc-jlyJG eeAfaM sc-csuQGl jKlBMX active"
+      className="sc-jAaTju hVDjXu sc-jDwBTQ hqLgwf sc-iRbamj dPdNyK active"
       href="/"
       onClick={[Function]}
       style={Object {}}
@@ -795,7 +841,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarLeft Standard 1`] = `
     </a>
     <a
       aria-current={null}
-      className="sc-iRbamj jLwidf sc-jlyJG eeAfaM sc-csuQGl jKlBMX"
+      className="sc-jAaTju hVDjXu sc-jDwBTQ hqLgwf sc-iRbamj dPdNyK"
       href="/causes"
       onClick={[Function]}
     >
@@ -803,7 +849,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarLeft Standard 1`] = `
     </a>
     <a
       aria-current={null}
-      className="sc-iRbamj jLwidf sc-jlyJG eeAfaM sc-csuQGl jKlBMX"
+      className="sc-jAaTju hVDjXu sc-jDwBTQ hqLgwf sc-iRbamj dPdNyK"
       href="/posts"
       onClick={[Function]}
     >
@@ -811,7 +857,7 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarLeft Standard 1`] = `
     </a>
     <a
       aria-current={null}
-      className="sc-iRbamj jLwidf sc-jlyJG eeAfaM sc-csuQGl jKlBMX"
+      className="sc-jAaTju hVDjXu sc-jDwBTQ hqLgwf sc-iRbamj dPdNyK"
       href="/profile"
       onClick={[Function]}
     >
@@ -826,20 +872,88 @@ exports[`Storyshots DisplayWrappers|NavBar/NavBarRight Standard 1`] = `
   className="sc-fAjcbJ gvKzDv"
 >
   <div
-    className="sc-bRBYWo dmruaP"
+    className="sc-gipzik dEIxIt"
   >
     <button
-      className="sc-Rmtcm hNewTQ"
+      className="sc-jlyJG lmlZEL"
       onClick={[Function]}
     >
       SIGN UP
     </button>
     <button
-      className="sc-Rmtcm eZBoWn"
+      className="sc-jlyJG crYcRL"
       onClick={[Function]}
     >
       LOG IN
     </button>
+  </div>
+  <div
+    className="sc-hzDkRC cqSmPu"
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+    location={
+      Object {
+        "hash": "",
+        "pathname": "/",
+        "search": "",
+        "state": undefined,
+      }
+    }
+    match={
+      Object {
+        "isExact": true,
+        "params": Object {},
+        "path": "/",
+        "url": "/",
+      }
+    }
+    onClick={[Function]}
+  >
+    <div
+      className="sc-bRBYWo bWZKLW"
+    >
+      <svg>
+        Userpic.svg
+      </svg>
+    </div>
+    <div
+      className="sc-Rmtcm fBUOzj"
+    >
+      <div
+        className="sc-csuQGl iUTRQb"
+        fontSize="16px"
+        height="50%"
+        width="80%"
+      >
+        James Wheeler
+      </div>
+      <div
+        className="sc-csuQGl jiBnbW"
+        fontSize="12px"
+        height="50%"
+        width="80%"
+      >
+        larkin_tr***@yahoo.com
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -958,16 +1072,16 @@ exports[`Storyshots DisplayWrappers|NavBar/ProfileWrapper Standard 1`] = `
 
 exports[`Storyshots DisplayWrappers|NavBar/SignUpInButtonWrapper Standard 1`] = `
 <div
-  className="sc-bRBYWo dmruaP"
+  className="sc-gipzik dEIxIt"
 >
   <button
-    className="sc-Rmtcm hNewTQ"
+    className="sc-jlyJG lmlZEL"
     onClick={[Function]}
   >
     SIGN UP
   </button>
   <button
-    className="sc-Rmtcm eZBoWn"
+    className="sc-jlyJG crYcRL"
     onClick={[Function]}
   >
     LOG IN
@@ -988,7 +1102,7 @@ exports[`Storyshots DisplayWrappers|SidePanel/SidePanel CauseInfo 1`] = `
     Logo.svg
   </svg>
   <div
-    className="sc-kAzzGY dniJoZ"
+    className="sc-jzJRlG bCEkcf"
   >
     A Cause in Voz de PR is a request for assistance. It should be used to bring attention to a situation that requires help. Help can be in the form of volunteer work, a donation, or any other type of assistance that would help the Cause to achieve its goal!
   </div>
@@ -1008,7 +1122,7 @@ exports[`Storyshots DisplayWrappers|SidePanel/SidePanel CauseOnly 1`] = `
     Logo.svg
   </svg>
   <div
-    className="sc-kAzzGY dniJoZ"
+    className="sc-jzJRlG bCEkcf"
   >
     A Cause in Voz de PR is a request for assistance. It should be used to bring attention to a situation that requires help. Help can be in the form of volunteer work, a donation, or any other type of assistance that would help the Cause to achieve its goal! If you would like to make a donation, please make a note of the Cause ID and donate via ATH MOVIL.
   </div>
@@ -1039,7 +1153,7 @@ exports[`Storyshots DisplayWrappers|SidePanel/SidePanel PostInfo 1`] = `
     Logo.svg
   </svg>
   <div
-    className="sc-kAzzGY dniJoZ"
+    className="sc-jzJRlG bCEkcf"
   >
     A Post in Voz de PR is curated information that will be useful to the people of Puerto Rico. It’s aim is to inform using knowledge, facts, figures, news articles, or general information that may benefit other users. The goal of a Post is to provide information that may benefit another user!
   </div>
@@ -1059,7 +1173,7 @@ exports[`Storyshots DisplayWrappers|SidePanel/SidePanel PostOnly 1`] = `
     Logo.svg
   </svg>
   <div
-    className="sc-kAzzGY dniJoZ"
+    className="sc-jzJRlG bCEkcf"
   >
     A Post in Voz de PR is curated information that will be useful to the people of Puerto Rico. A  Post aims to inform using knowledge, facts, figures, news articles, or general information that may benefit other users. It can be used as the starting point for a conversation relevant to Puerto Rico!
   </div>
@@ -1090,7 +1204,7 @@ exports[`Storyshots DisplayWrappers|SidePanel/SidePanel Standard 1`] = `
     Logo.svg
   </svg>
   <div
-    className="sc-kAzzGY dniJoZ"
+    className="sc-jzJRlG bCEkcf"
   >
     Voz de Puerto Rico (Voz de PR) is a social platform that allows users to take an active role in the progression of human needs, social betterment and national development of Puerto Rico. It is community based, and provides a voice to those who wish to enact change across society.
   </div>
@@ -1304,19 +1418,19 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/DropDown/ListOfLocations S
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Aguas Buenas
+    Rincon
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Aibonito
+    Mayagüez
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Añasco
+    Boqueron
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
@@ -1658,13 +1772,13 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/DropDown/ListOfLocations S
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Salinas
+    Cayey
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    San Germán
+    Caguas
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
@@ -1676,13 +1790,13 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/DropDown/ListOfLocations S
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    San Lorenzo
+    Yuaco
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    San Sebastián
+    Guanica
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
@@ -1718,44 +1832,44 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/DropDown/ListOfLocations S
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Vega Alta
+    Salinas
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Vega Baja
+    Guayama
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Vieques
+    Luquillo
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Villalba
+    Fajardo
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Yabucoa
+    Dewey
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Yauco
+    Isabel Segunda
   </li>
 </ul>
 `;
 
 exports[`Storyshots DisplayWrappers|SidePanel_Profile/SidePanel_Profile_Body Standard 1`] = `
 <div
-  className="sc-cvbbAY fXySjo"
+  className="sc-hSdWYo dkTPGT"
 >
   <div
     className="sc-kAzzGY sc-eHgmQL iHolbg"
@@ -1842,7 +1956,7 @@ exports[`Storyshots DisplayWrappers|SidePanel_Profile/SidePanelProfile Standard 
     Logo.svg
   </svg>
   <div
-    className="sc-cvbbAY fXySjo"
+    className="sc-hSdWYo dkTPGT"
   >
     <div
       className="sc-kAzzGY sc-eHgmQL iHolbg"
@@ -2027,7 +2141,7 @@ exports[`Storyshots DisplayWrappers|SignUpInCards/ConfirmSignUpCard/ConfirmSignU
       <p
         className="sc-jnlKLf jlcLYt"
       >
-        Please check your email for your confirmation code.
+        Please check your email for your confirmation code
       </p>
       <input
         className="sc-gGBfsJ gtlQVq"
@@ -2036,7 +2150,7 @@ exports[`Storyshots DisplayWrappers|SignUpInCards/ConfirmSignUpCard/ConfirmSignU
         type="email"
       />
       <button
-        className="sc-jWBwVP bxySJh"
+        className="sc-eHgmQL dCteUp"
         data-testid="submitButton"
         onClick={[Function]}
       >
@@ -2903,19 +3017,19 @@ exports[`Storyshots DisplayWrappers|SignUpInCards/SignUpCard/DropDown/ListOfLoca
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Aguas Buenas
+    Rincon
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Aibonito
+    Mayagüez
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Añasco
+    Boqueron
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
@@ -3029,7 +3143,7 @@ exports[`Storyshots DisplayWrappers|SignUpInCards/SignUpCard/DropDown/ListOfLoca
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Culebra
+    Vega Baja
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
@@ -3191,37 +3305,37 @@ exports[`Storyshots DisplayWrappers|SignUpInCards/SignUpCard/DropDown/ListOfLoca
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Morovis
+    Aibonito
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Naguabo
+    Cayey
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Naranjito
+    Caguas
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Orocovis
+    San Juan
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Patillas
+    Yuaco
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Peñuelas
+    Guanica
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
@@ -3329,25 +3443,25 @@ exports[`Storyshots DisplayWrappers|SignUpInCards/SignUpCard/DropDown/ListOfLoca
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Vieques
+    Luquillo
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Villalba
+    Fajardo
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Yabucoa
+    Dewey
   </li>
   <li
     className="sc-dxgOiQ hGNRja"
     onClick={[Function]}
   >
-    Yauco
+    Isabel Segunda
   </li>
 </ul>
 `;
@@ -7826,7 +7940,7 @@ exports[`Storyshots PageContentWrappers|FeedPages/FeedPageContent Standard 1`] =
       Logo.svg
     </svg>
     <div
-      className="sc-kAzzGY dniJoZ"
+      className="sc-jzJRlG bCEkcf"
     >
       Voz de Puerto Rico (Voz de PR) is a social platform that allows users to take an active role in the progression of human needs, social betterment and national development of Puerto Rico. It is community based, and provides a voice to those who wish to enact change across society.
     </div>
@@ -7915,7 +8029,7 @@ exports[`Storyshots Pages|MainFeed/MainFeed Standard 1`] = `
         Logo.svg
       </svg>
       <div
-        className="sc-kAzzGY dniJoZ"
+        className="sc-jzJRlG bCEkcf"
       >
         Voz de Puerto Rico (Voz de PR) is a social platform that allows users to take an active role in the progression of human needs, social betterment and national development of Puerto Rico. It is community based, and provides a voice to those who wish to enact change across society.
       </div>
@@ -8134,7 +8248,7 @@ exports[`Storyshots Primitive/text/VotesOnComment ManyVotes 1`] = `
 
 exports[`Storyshots Primitive|/Buttons/SignUpInButton Login 1`] = `
 <button
-  className="sc-Rmtcm eZBoWn"
+  className="sc-jlyJG crYcRL"
   onClick={[Function]}
 >
   LOG IN
@@ -8143,7 +8257,7 @@ exports[`Storyshots Primitive|/Buttons/SignUpInButton Login 1`] = `
 
 exports[`Storyshots Primitive|/Buttons/SignUpInButton SignUp 1`] = `
 <button
-  className="sc-Rmtcm hNewTQ"
+  className="sc-jlyJG lmlZEL"
   onClick={[Function]}
 >
   SIGN UP
@@ -8152,7 +8266,7 @@ exports[`Storyshots Primitive|/Buttons/SignUpInButton SignUp 1`] = `
 
 exports[`Storyshots Primitive|/Buttons/SignUpInButton Standard 1`] = `
 <button
-  className="sc-Rmtcm eZBoWn"
+  className="sc-jlyJG crYcRL"
   onClick={[Function]}
 />
 `;
@@ -8189,7 +8303,7 @@ exports[`Storyshots Primitive|/Text/ProfileInfoNavBar Standard 1`] = `
 
 exports[`Storyshots Primitive|Buttons/ActionButton C 1`] = `
 <button
-  className="sc-jWBwVP bxySJh"
+  className="sc-eHgmQL dCteUp"
 >
   Create Cause
 </button>
@@ -8197,7 +8311,7 @@ exports[`Storyshots Primitive|Buttons/ActionButton C 1`] = `
 
 exports[`Storyshots Primitive|Buttons/ActionButton P 1`] = `
 <button
-  className="sc-jWBwVP brZSDK"
+  className="sc-eHgmQL tgfjq"
 >
   Create Post
 </button>
@@ -8205,7 +8319,7 @@ exports[`Storyshots Primitive|Buttons/ActionButton P 1`] = `
 
 exports[`Storyshots Primitive|Buttons/ActionButton Standard 1`] = `
 <button
-  className="sc-jWBwVP bxySJh"
+  className="sc-eHgmQL dCteUp"
 />
 `;
 
@@ -8776,7 +8890,7 @@ exports[`Storyshots Primitive|Inputs/SearchBar Standard 1`] = `
 exports[`Storyshots Primitive|Links/LinkNavBar Causes 1`] = `
 <a
   aria-current={null}
-  className="sc-iRbamj jLwidf"
+  className="sc-jAaTju hVDjXu"
   href="/causes"
   onClick={[Function]}
 >
@@ -8787,7 +8901,7 @@ exports[`Storyshots Primitive|Links/LinkNavBar Causes 1`] = `
 exports[`Storyshots Primitive|Links/LinkNavBar Home 1`] = `
 <a
   aria-current="page"
-  className="sc-iRbamj jLwidf active"
+  className="sc-jAaTju hVDjXu active"
   href="/"
   onClick={[Function]}
   style={Object {}}
@@ -8799,7 +8913,7 @@ exports[`Storyshots Primitive|Links/LinkNavBar Home 1`] = `
 exports[`Storyshots Primitive|Links/LinkNavBar Posts 1`] = `
 <a
   aria-current={null}
-  className="sc-iRbamj jLwidf"
+  className="sc-jAaTju hVDjXu"
   href="/posts"
   onClick={[Function]}
 >
@@ -8810,7 +8924,7 @@ exports[`Storyshots Primitive|Links/LinkNavBar Posts 1`] = `
 exports[`Storyshots Primitive|Links/LinkNavBar Profile 1`] = `
 <a
   aria-current={null}
-  className="sc-iRbamj jLwidf"
+  className="sc-jAaTju hVDjXu"
   href="/profile"
   onClick={[Function]}
 >
@@ -8821,7 +8935,7 @@ exports[`Storyshots Primitive|Links/LinkNavBar Profile 1`] = `
 exports[`Storyshots Primitive|Links/LinkNavBar Standard 1`] = `
 <a
   aria-current="page"
-  className="sc-iRbamj jLwidf active"
+  className="sc-jAaTju hVDjXu active"
   href="/"
   onClick={[Function]}
   style={Object {}}
@@ -8916,7 +9030,7 @@ exports[`Storyshots Primitive|text/CommentsIndicator Standard 1`] = `
 
 exports[`Storyshots Primitive|text/CreateSubjectSubjectTitle Standard 1`] = `
 <input
-  className="sc-bdVaJa cUBMjx"
+  className="sc-bdVaJa diwNrr"
 />
 `;
 
@@ -8946,7 +9060,7 @@ exports[`Storyshots Primitive|text/ImageDescription Standard 1`] = `
 
 exports[`Storyshots Primitive|text/Info Standard 1`] = `
 <div
-  className="sc-kAzzGY dniJoZ"
+  className="sc-jzJRlG bCEkcf"
 >
   Voz de Puerto Rico (Voz de PR) is a social platform that allows users to take an active role in the progression of human needs, social betterment and national development of Puerto Rico. It is community based, and provides a voice to those who wish to enact change across society.
 </div>
@@ -8954,7 +9068,7 @@ exports[`Storyshots Primitive|text/Info Standard 1`] = `
 
 exports[`Storyshots Primitive|text/LinkDescription Standard 1`] = `
 <input
-  className="sc-gqjmRU eTXqeH"
+  className="sc-iwsKbI bCtPbP"
   onChange={[Function]}
   placeholder="Description"
   value=""
@@ -8963,7 +9077,7 @@ exports[`Storyshots Primitive|text/LinkDescription Standard 1`] = `
 
 exports[`Storyshots Primitive|text/LinkTextArea Cause 1`] = `
 <textarea
-  className="sc-VigVT fcTrds"
+  className="sc-gZMcBi gHpvOr"
   onChange={[Function]}
   placeholder="URL"
   value=""
@@ -8972,7 +9086,7 @@ exports[`Storyshots Primitive|text/LinkTextArea Cause 1`] = `
 
 exports[`Storyshots Primitive|text/LinkTextArea Post 1`] = `
 <textarea
-  className="sc-VigVT wmsBD"
+  className="sc-gZMcBi koWovd"
   onChange={[Function]}
   placeholder="URL"
   value=""
@@ -9057,7 +9171,6 @@ exports[`Storyshots Primitive|text/SubjectContent Standard 1`] = `
       "linkContent": "",
       "linkDescription": "",
       "subjectContent": "",
-      "subjectImage": "Image",
       "subjectTitle": "",
       "titleIsErrored": false,
       "updateImageDescription": [Function],
@@ -9073,6 +9186,7 @@ exports[`Storyshots Primitive|text/SubjectContent Standard 1`] = `
 
 exports[`Storyshots Primitive|text/SubjectDetailCommentsIndicator 0Comments 1`] = `
 <div
+  className="sc-dUjcNx kJLhFd"
   className="sc-CtfFt eLblHV"
 >
    
@@ -9301,7 +9415,7 @@ exports[`Storyshots Primitive|text/SubjectVotes Standard 1`] = `
 
 exports[`Storyshots Primitive|text/TitlesPanel Cause 1`] = `
 <p
-  className="sc-fjdhpX gOqFxe"
+  className="sc-VigVT cjkRub"
 >
   Edit
 </p>
@@ -9309,7 +9423,7 @@ exports[`Storyshots Primitive|text/TitlesPanel Cause 1`] = `
 
 exports[`Storyshots Primitive|text/TitlesPanel Post 1`] = `
 <p
-  className="sc-fjdhpX gOqFxe"
+  className="sc-VigVT cjkRub"
 >
   Edit
 </p>

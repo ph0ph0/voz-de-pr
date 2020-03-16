@@ -101,7 +101,7 @@
 				"Runtime": "nodejs10.x",
 				"Timeout": "25",
 				"Code": {
-					"S3Bucket": "vozdepr-dev-20191203210001-deployment",
+					"S3Bucket": "amplify-vozdepr-masterenv-91355-deployment",
 					"S3Key": "amplify-builds/vozdeprec084b08PostConfirmation-5644792b436251645245-build.zip"
 				}
 			}
