@@ -21,8 +21,6 @@
                 }
             }
         }
-<<<<<<< HEAD
-=======
     },
     "masterenv": {
         "awscloudformation": {
@@ -46,6 +44,5 @@
                 }
             }
         }
->>>>>>> master
     }
 }
