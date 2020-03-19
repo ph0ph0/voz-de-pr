@@ -4,9 +4,26 @@ import PropTypes from "prop-types";
 
 import SubjectDetailContent from "./SubjectDetailContent";
 
+import { Helmet } from "react-helmet";
+
+const Header = () => {
+  return (
+    <Helmet>
+      <title>Voz de Puerto Rico | `${}`</title>
+    </Helmet>
+  );
+};
+
 const SubjectDetailWrapper = ({ api, secondary, ...props }) => {
+  const title = "Voz de Puerto Rico | ".concat(api.subject.title);
   return (
     <div {...props}>
+      <Helmet>
+        <title>{title}</title>
+        {api.pictureURL && (
+          <meta property="og:image" content={api.pictureURL} />
+        )}
+      </Helmet>
       <SubjectDetailContent api={api} secondary={secondary} />
     </div>
   );
