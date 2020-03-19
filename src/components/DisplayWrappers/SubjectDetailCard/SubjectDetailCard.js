@@ -6,14 +6,6 @@ import SubjectDetailContent from "./SubjectDetailContent";
 
 import { Helmet } from "react-helmet";
 
-const Header = () => {
-  return (
-    <Helmet>
-      <title>Voz de Puerto Rico | `${}`</title>
-    </Helmet>
-  );
-};
-
 const SubjectDetailWrapper = ({ api, secondary, ...props }) => {
   const title = "Voz de Puerto Rico | ".concat(api.subject.title);
   return (

@@ -9,6 +9,8 @@ import SidePanel from "components/DisplayWrappers/SidePanel/SidePanel";
 import SidePanelProfile from "components/DisplayWrappers/SidePanel_Profile/SidePanel_Profile";
 import { useLanguage } from "CustomHooks/useLanguage";
 
+import { Helmet } from "react-helmet";
+
 const displayText = {
   en: {
     home: "Home Feed",
@@ -27,10 +29,28 @@ const displayText = {
 const PageContentWrapper = ({ pageType, profileType, ...props }) => {
   const { language } = useLanguage();
 
+  const homeTitle = `Voz de Puerto Rico | `.concat(
+    language === "spanish" ? displayText.sp.home : displayText.en.home
+  );
+  const causesTitle = `Voz de Puerto Rico | `.concat(
+    language === "spanish" ? displayText.sp.causes : displayText.en.causes
+  );
+
+  const postsTitle = `Voz de Puerto Rico | `.concat(
+    language === "spanish" ? displayText.sp.posts : displayText.en.posts
+  );
+
+  const profileTitle = `Voz de Puerto Rico | `.concat(
+    language === "spanish" ? displayText.sp.profile : displayText.en.profile
+  );
+
   switch (pageType) {
     case "Home":
       return (
         <div {...props}>
+          <Helmet>
+            <title>{homeTitle}</title>
+          </Helmet>
           <MainPageContent
             pageTitle={
               language === "spanish" ? displayText.sp.home : displayText.en.home
@@ -44,6 +64,9 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
     case "Causes":
       return (
         <div {...props}>
+          <Helmet>
+            <title>{causesTitle}</title>
+          </Helmet>
           <MainPageContent
             pageTitle={
               language === "spanish"
@@ -59,6 +82,9 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
     case "Posts":
       return (
         <div {...props}>
+          <Helmet>
+            <title>{postsTitle}</title>
+          </Helmet>
           <MainPageContent
             pageTitle={
               language === "spanish"
@@ -74,6 +100,9 @@ const PageContentWrapper = ({ pageType, profileType, ...props }) => {
     case "Profile":
       return (
         <div {...props}>
+          <Helmet>
+            <title>{profileTitle}</title>
+          </Helmet>
           <MainPageContent
             pageTitle={
               language === "spanish"
