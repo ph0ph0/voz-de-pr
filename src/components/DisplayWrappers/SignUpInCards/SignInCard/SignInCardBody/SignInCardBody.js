@@ -1,18 +1,17 @@
+import { useLanguage } from "CustomHooks/useLanguage";
 import React, { useEffect } from "react";
-import styled from "styled-components";
-
 import { useHistory } from "react-router-dom";
-
-import SignInCardApiPropTypes from "../API/proptypes/SignUpCardApiPropTypes";
-
-import Logo from "../../../../Primitive/SignInCard/SignInLogo";
-import EmailField from "../../../../Primitive/SignInCard/EmailField";
-import PasswordField from "../../../../Primitive/SignInCard/PasswordField";
+import styled from "styled-components";
 import ActionButton from "../../../../Primitive/General/ActionButton";
-import BottomLineWrapper from "../SignInCardBody/SignInBottomLineWrapper";
 import Error from "../../../../Primitive/General/ErrorText";
 import LoadingSpinner from "../../../../Primitive/General/LoadingSpinner";
-import { useLanguage } from "CustomHooks/useLanguage";
+import EmailField from "../../../../Primitive/SignInCard/EmailField";
+import PasswordField from "../../../../Primitive/SignInCard/PasswordField";
+import Logo from "../../../../Primitive/SignInCard/SignInLogo";
+import SignInCardApiPropTypes from "../API/proptypes/SignUpCardApiPropTypes";
+import BottomLineWrapper from "../SignInCardBody/SignInBottomLineWrapper";
+
+import { Helmet } from "react-helmet";
 
 const displayText = {
   en: {
@@ -95,6 +94,13 @@ const SignInCardBodyWrapper = ({ api, ...props }) => {
 
   return (
     <div {...props}>
+      <Helmet>
+        <title>
+          {language === "spanish"
+            ? "Voz de Puerto Rico | Iniciar Sesión"
+            : "Voz de Puerto Rico | Login"}
+        </title>
+      </Helmet>
       <Logo />
       {api.emailInputIsErrored && (
         <ErrorText data-testid="EmailEmptyErrorText">
