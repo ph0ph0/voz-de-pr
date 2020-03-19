@@ -2,9 +2,10 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 export const MetaTags = (title, description, url, image) => {
+  const t = `${title}`;
   return (
     <Helmet>
-      <title>{title}</title>
+      <title>{t}</title>
       <meta name="description" content={description} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
