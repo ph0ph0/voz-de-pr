@@ -31,7 +31,10 @@ function App() {
           <ThemeProvider theme={theme}>
             <SearchProvider>
               <LanguageProvider>
-                <MetaTags title={title} description={description} />
+                <MetaTags
+                  title={"Horse Poo"}
+                  description={"A big bit of horse poo"}
+                />
                 <NavBar />
                 <Routes />
               </LanguageProvider>
