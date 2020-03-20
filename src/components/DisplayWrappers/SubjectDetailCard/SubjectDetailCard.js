@@ -8,13 +8,14 @@ import { Helmet } from "react-helmet";
 
 const SubjectDetailWrapper = ({ api, secondary, ...props }) => {
   const title = "Voz de Puerto Rico | ".concat(api.subject.title);
-  const description = api.subject.subjectContent.substring(0, 50).concat("...");
+  const description = api.subject.subjectContent;
   const url = "https://www.vozdepuertorico.com/".concat(api.subjectId);
   return (
     <div {...props}>
       <Helmet>
         <title>{title}</title>
         <meta property="description" content={description} />
+        <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={api.pictureURL} />
         <meta property="og:url" content={url} />

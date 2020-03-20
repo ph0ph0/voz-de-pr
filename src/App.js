@@ -6,7 +6,6 @@ import GlobalStyle from "./theme/globalStyle";
 import { ThemeProvider } from "styled-components";
 import theme from "./theme/Theme";
 
-import { MetaTags } from "./components/Primitive/General/MetaTags";
 import { Helmet } from "react-helmet";
 
 import NavBar from "./components/DisplayWrappers/NavBar/NavBar";
@@ -36,6 +35,10 @@ const MasterHeader = () => {
         rel="shortcut icon"
         href="./assets/General/Logo.svg"
         type="image/svg"
+      />
+      <meta
+        name="google-site-verification"
+        content="eV5RrsRcUUVreRTgaWLFS6SMUv0DeAP-1y5u9WsjgWw"
       />
       {/* {image && <meta property="og:image" content={image} />} */}
     </Helmet>

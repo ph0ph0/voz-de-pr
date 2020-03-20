@@ -17,6 +17,8 @@ import BottomLineWrapper from "./SignUpBottomLineWrapper";
 import Error from "components/Primitive/General/ErrorText";
 import LoadingSpinner from "components/Primitive/General/LoadingSpinner";
 
+import { Helmet } from "react-helmet";
+
 import { displayText } from "./SignUpDisplayText";
 import { useLanguage } from "CustomHooks/useLanguage";
 
@@ -49,6 +51,11 @@ const SignUpButton = styled(ActionButton)`
 const SignUpCardBodyWrapper = ({ api, ...props }) => {
   const { language } = useLanguage();
 
+  const metaTitle =
+    language === "spanish"
+      ? "Voz de Puerto Rico | Crear Cuenta"
+      : "Voz de Puerto Rico | Sign Up";
+
   const history = useHistory();
   //If signup is successful, `success` in the api will be true
   //and we can pass over the email, password and avatar file object
@@ -68,6 +75,9 @@ const SignUpCardBodyWrapper = ({ api, ...props }) => {
 
   return (
     <div {...props}>
+      <Helmet>
+        <title>{metaTitle}</title>
+      </Helmet>
       <Logo />
       {api.firstNameInputIsErrored && (
         <ErrorText>
