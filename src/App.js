@@ -48,13 +48,13 @@ const MasterHeader = () => {
 function App() {
   return (
     <ApolloProvider client={clientConfig}>
+      <MasterHeader />
       <UserProvider>
         <BrowserRouter>
           <GlobalStyle />
           <ThemeProvider theme={theme}>
             <SearchProvider>
               <LanguageProvider>
-                <MasterHeader />
                 <NavBar />
                 <Routes />
               </LanguageProvider>
