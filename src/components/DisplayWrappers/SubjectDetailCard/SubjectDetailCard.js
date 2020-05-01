@@ -9,7 +9,9 @@ import { Helmet } from "react-helmet";
 const SubjectDetailWrapper = ({ api, secondary, ...props }) => {
   const title = "Voz de Puerto Rico | ".concat(api.subject.title);
   const description = api.subject.subjectContent;
-  const url = "https://www.vozdepuertorico.com/".concat(api.subjectId);
+  const url = "https://pedantic-elion-17a978.netlify.app/".concat(
+    api.subjectId
+  );
   return (
     <div {...props}>
       <Helmet>
@@ -56,8 +58,8 @@ SubjectDetailCard.propTypes = {
     votes: PropTypes.number.isRequired,
     type: PropTypes.string.isRequired,
     comments: PropTypes.arrayOf(PropTypes.object.isRequired),
-    timePassed: PropTypes.string.isRequired
-  })
+    timePassed: PropTypes.string.isRequired,
+  }),
 };
 
 export default SubjectDetailCard;
