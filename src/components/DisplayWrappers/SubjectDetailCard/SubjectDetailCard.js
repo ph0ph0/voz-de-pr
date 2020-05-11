@@ -9,9 +9,7 @@ import { Helmet } from "react-helmet";
 const SubjectDetailWrapper = ({ api, secondary, ...props }) => {
   const title = "Voz de Puerto Rico | ".concat(api.subject.title);
   const description = api.subject.subjectContent;
-  const url = "https://pedantic-elion-17a978.netlify.app/".concat(
-    api.subjectId
-  );
+  const url = "https://www.vozdepuertorico.com/".concat(api.subjectId);
   return (
     <div {...props}>
       <Helmet>
