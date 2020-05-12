@@ -10,8 +10,8 @@ const Wrapper = ({ createdBy, ...props }) => {
 
   const { getUserAvatar } = useUser();
 
-  const fetchUserPic = async id => {
-    const key = `userAvatars-small-150x150/${id}`;
+  const fetchUserPic = async (id) => {
+    const key = `userAvatars-small-23x23/${id}`;
     const avatar = await getUserAvatar(key);
     setUserPic(avatar);
   };
@@ -24,7 +24,7 @@ const Wrapper = ({ createdBy, ...props }) => {
     <div {...props}>
       <UserPic
         src={userPic}
-        onError={event => {
+        onError={(event) => {
           event.target.src = Logo;
           event.target.style = "height: 24px; width: 24px";
         }}
