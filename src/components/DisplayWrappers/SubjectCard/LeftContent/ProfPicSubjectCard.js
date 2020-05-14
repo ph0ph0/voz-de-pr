@@ -11,7 +11,7 @@ const Wrapper = ({ createdBy, ...props }) => {
   const { getUserAvatar } = useUser();
 
   const fetchUserPic = async (id) => {
-    const key = `userAvatars-small-23x23/${id}`;
+    const key = `userAvatars-small-150x150/${id}`;
     const avatar = await getUserAvatar(key);
     setUserPic(avatar);
   };
