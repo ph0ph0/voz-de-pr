@@ -6,7 +6,7 @@ import { useLanguage } from "CustomHooks/useLanguage";
 
 const displayText = {
   en: "Select language",
-  sp: "Seleccione el idioma"
+  sp: "Seleccione el idioma",
 };
 
 const HorizontalRule = styled.div`
@@ -48,7 +48,7 @@ const SwitchLabel = styled.label`
 const SwitchWrapper = ({ change, state, large, ...props }) => {
   return (
     <div {...props}>
-      <LanguageText>{large ? "Español" : "Esp"}</LanguageText>
+      <LanguageText> {large ? "Español" : "Esp"} </LanguageText>{" "}
       <UISwitch
         onChange={change}
         checked={state}
@@ -56,8 +56,8 @@ const SwitchWrapper = ({ change, state, large, ...props }) => {
         onColor={"#CC162B"}
         checkedIcon={false}
         uncheckedIcon={false}
-      />
-      <LanguageText>{large ? "English" : "En"}</LanguageText>
+      />{" "}
+      <LanguageText> {large ? "English" : "En"} </LanguageText>{" "}
     </div>
   );
 };
@@ -76,20 +76,22 @@ const TranslationSwitchWrapper = ({ large, ...props }) => {
   const [isOn, setOn] = useState(language === "spanish" ? false : true);
 
   const change = () => {
-    window.log(`TranslationSwitch Tapped...`);
+    window.log("TranslationSwitch Tapped...");
     switchLanguage(isOn ? "spanish" : "english");
     setOn(!isOn);
   };
 
   return (
     <div {...props}>
-      {large && <HorizontalRule />}
+      {" "}
+      {large && <HorizontalRule />}{" "}
       <SwitchLabel>
         <SwitchTitle>
-          {language === "spanish" ? displayText.sp : displayText.en}
-        </SwitchTitle>
-        <Switch change={change} state={isOn} large={large} />
-      </SwitchLabel>
+          {" "}
+          {language === "spanish" ? displayText.sp : displayText.en}{" "}
+        </SwitchTitle>{" "}
+        <Switch change={change} state={isOn} large={large} />{" "}
+      </SwitchLabel>{" "}
     </div>
   );
 };
