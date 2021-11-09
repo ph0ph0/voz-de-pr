@@ -1,4 +1,4 @@
-[![PR Flag](./src/assets/SidePanel/PRFlag.svg)]
+![PR Flag](./src/assets/SidePanel/PRFlag.svg)
 
 ## Overview
 
